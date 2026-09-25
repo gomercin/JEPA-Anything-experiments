@@ -201,3 +201,13 @@ final head and dependency on still-unmerged preservation PR #1. This publication
 adds no new science and changes no conclusion, criterion, floor or exposure split.
 The original report and pending Atlas paragraph remain intact. Earlier archives,
 PR #1 and AB20/C32 are unchanged; no Atlas edit, merge or successor is selected.
+
+Publication verified in [draft PR #2](https://github.com/gomercin/JEPA-Anything-experiments/pull/2),
+targeting `codex/preserve-completed-experiments`. The source snapshot is
+`f1b6f2c62000e4eb415711653ab7ba973f8ab762`; a fresh GitHub clone and separate
+restoration matched all 163 member hashes and loaded the saved configuration,
+gain fits, floors, preparations and table without science or experiment imports.
+See the [retrieval receipt](../../evidence/organization-response-2026-09-25/remote-verification.json)
+and PR body for the distinct final pushed head. All new evidence is in Git;
+no new release asset or inherited-archive download was needed. No extant
+substantive new evidence remains local-only.

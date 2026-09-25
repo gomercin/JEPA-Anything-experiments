@@ -6,6 +6,13 @@ scientific execution or interpretation. The snapshot identifier comes from the
 2026-09-25 prospective contract and completed report; its original freeze SHA-256
 is `8404178d212d31bcefb435152c8a4d0ef99c667e87c7581f14a59661cd79375e`.
 
+Published in [draft PR #2](https://github.com/gomercin/JEPA-Anything-experiments/pull/2),
+based on `codex/preserve-completed-experiments`. Source-snapshot commit:
+`f1b6f2c62000e4eb415711653ab7ba973f8ab762`. The [remote verification receipt](remote-verification.json)
+records a fresh HTTPS clone, all 163 restored hashes and isolated saved-data
+inspection. A later documentation-only head is pinned in the PR body; neither
+publication revision is assigned retrospectively to the dirty-worktree execution.
+
 ## Result and review entry points
 
 > No practical selectivity met the declared 5% criterion. Across three fresh
@@ -162,3 +169,12 @@ data readability. A final documentation commit may follow; its exact pushed
 head and matching PR head/base are pinned externally in the draft PR body,
 avoiding a self-referential Git hash. Final remote verification is recorded there
 and in the publication handoff. Stop after publication; no successor is selected.
+
+Remote source-snapshot verification **passed**: all 163 members / 8,853,052 bytes,
+four source records and 110 captured-source hash references matched. The original
+report and pending Atlas paragraph matched their recorded hashes. Ten preparation
+arrays and six fresh trace records loaded with pickle disabled. Inspection used
+`-I -S`, disabled all site/editable-install initialization, and confirmed that no
+experiment code was imported. The [saved-data receipt](remote-saved-data-smoke.json)
+records the actual read values. Repeating restoration into the populated temporary
+destination was refused as intended. There is no local-only substantive remainder.

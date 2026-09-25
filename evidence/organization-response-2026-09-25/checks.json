@@ -75,7 +75,26 @@
       "wall_seconds": 0.04320695798378438
     }
   ],
-  "hosted_ci": "NOT_YET_PUSHED",
+  "hosted_ci": {
+    "at_commit": "f1b6f2c62000e4eb415711653ab7ba973f8ab762",
+    "push_check": "SUCCESS",
+    "pull_request_check": "IN_PROGRESS",
+    "push_run": "https://github.com/gomercin/JEPA-Anything-experiments/actions/runs/36156594720",
+    "pull_request_run": "https://github.com/gomercin/JEPA-Anything-experiments/actions/runs/36156682356",
+    "note": "Observed source-snapshot status; later final-head status is reported externally in the PR body/handoff. Pending is not PASS."
+  },
   "new_science_executed": false,
-  "review_scope": "No substantive scientific review; no old archive restoration or broad historical audit."
+  "review_scope": "No substantive scientific review; no old archive restoration or broad historical audit.",
+  "remote_retrieval": {
+    "status": "PASS",
+    "receipt": "remote-verification.json",
+    "verified_members": 163,
+    "saved_data_only": true
+  },
+  "staged_review": {
+    "source_snapshot_paths": 185,
+    "new_index_bytes_at_source_snapshot": 8943204,
+    "credential_signature_findings": 0,
+    "scope": "Only reviewed implementation/result, new incremental index, and scoped test discovery/generated-data attribute changes."
+  }
 }

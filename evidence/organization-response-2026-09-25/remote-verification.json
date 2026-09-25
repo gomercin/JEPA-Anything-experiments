@@ -1,0 +1,44 @@
+{
+  "repository": "gomercin/JEPA-Anything-experiments",
+  "source_snapshot_commit": "f1b6f2c62000e4eb415711653ab7ba973f8ab762",
+  "clone_transport": "Fresh HTTPS git clone from https://github.com/gomercin/JEPA-Anything-experiments.git",
+  "shared_local_worktree_or_object_database": false,
+  "clone_head_verified": true,
+  "pr_url": "https://github.com/gomercin/JEPA-Anything-experiments/pull/2",
+  "pr_head_at_source_verification": "f1b6f2c62000e4eb415711653ab7ba973f8ab762",
+  "pr_base": "codex/preserve-completed-experiments",
+  "pr_base_sha": "1c555d5aab826418c81e0a9005a85200e3f8fd65",
+  "pr_state": "OPEN",
+  "draft": true,
+  "merged": false,
+  "new_archive_count": 0,
+  "new_archive_bytes": 0,
+  "evidence_delivery": "All new bytes fetched as committed Git blobs, no release asset or local archive cache.",
+  "verified_members": 163,
+  "verified_original_bytes": 8853052,
+  "artifacts_manifest_sha256": "bd14ad7d0b4443828a5511c0322d8095a1baa6d9442b1efe1e13dab2a1c70438",
+  "completed_report_sha256": "4d9e8cf04b475b844c6713ee009df252f94d8559984a6161bbe1d805d9d5e433",
+  "source_record_files_verified": 4,
+  "executed_source_hash_references_verified": 110,
+  "pending_Atlas_paragraph_hash_verified": true,
+  "restoration": "Copied from fresh GitHub clone to separate initially empty destination; every size/hash matched; second restore refused existing files as expected.",
+  "saved_data_readability": "10 prepared arrays and 6 fresh response traces plus config, frozen gains, thresholds, floors and saved comparator table loaded.",
+  "isolation": "Python -I -S disables site/.pth/editable hooks. Only NumPy dependency directory exposed. Module guard confirmed no experiments or jepa_anything imports, and no original-checkout code outside dependency wheels.",
+  "saved_data_receipt": "remote-saved-data-smoke.json",
+  "new_science_executed": false,
+  "independent_scientific_reproduction": false,
+  "final_documentation_head": "A later bookkeeping-only commit may follow this verified source snapshot. Its exact pushed/PR head is externally pinned in PR #2 body after fresh-clone fetch verification; no self-referential hash is required.",
+  "transport_events": [
+    {
+      "command_class": "git ls-remote in restricted shell",
+      "error": "Could not resolve host: github.com",
+      "resolution": "Succeeded through authorized network-enabled execution; no TLS change."
+    },
+    {
+      "command_class": "gh api annotated-tag read in restricted shell",
+      "error": "error connecting to api.github.com",
+      "resolution": "Succeeded through authorized network-enabled execution; no TLS change."
+    }
+  ],
+  "local_only_substantive_remainder": []
+}
