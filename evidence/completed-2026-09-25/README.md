@@ -9,7 +9,9 @@ experiment is part of this publication.
 Destination: [gomercin/JEPA-Anything-experiments](https://github.com/gomercin/JEPA-Anything-experiments),
 public repository, default branch `main`. Preservation branch:
 `codex/preserve-completed-experiments`. The immutable evidence tag is
-`evidence-completed-2026-09-25`. Publication identity and verification are recorded
+`evidence-completed-2026-09-25`. [Draft PR #1](https://github.com/gomercin/JEPA-Anything-experiments/pull/1) is open
+and unmerged. Source snapshot: `e17fe41d07a03d3a7fe67955054112773e8344be`.
+Publication identity and verification are recorded
 in [publication.json](publication.json); the tag identifies the source-snapshot
 commit, while the later PR head adds the publication handoff. Neither is claimed
 to be the historical execution revision of dirty/uncommitted runs.
@@ -151,6 +153,12 @@ verifies archive sizes and SHA-256, rejects unsafe paths, symlinks, duplicate or
 unexpected members, refuses existing result files, restores original relative
 paths, and verifies every member. A failed partial restore stays visible and is
 never silently reused. Allow roughly 1.4 GB free space for download plus restore.
+The direct Python downloader could not find a trusted issuer certificate in the
+preservation host environment. TLS verification was not disabled. The documented
+GitHub downloader was used; after a partial-download timeout, TLS-verified curl
+HTTP range resume completed the large asset and its full hash matched. These
+transport failures did not change any evidence bytes.
+
 To predownload with authenticated GitHub tooling, into a **new** directory:
 
 ```bash
@@ -197,6 +205,22 @@ or scientific failures. The two historical SVG review copies retain their
 2,120 path-data trailing-space lines under a scoped `.gitattributes` whitespace
 exemption; source/documentation checks remain enabled. Historical statements about then-run checks remain
 literal. This PR is not labelled ready to merge.
+
+## Independent remote verification
+
+A fresh HTTPS clone at the source-snapshot commit was obtained from GitHub, not
+from a local worktree. Both assets were downloaded from the published release
+into a separate directory. All archive hashes and 2,250 restored member hashes
+matched; 1,009,289,031 original bytes were restored. The fresh-checkout smoke
+script loaded AB20/C32, their configuration and the time-6 checkpoint, and read
+the saved 12/12 RR table. It used Python `-I`, stdlib and NumPy; no simulator or
+editable experiment module was imported. This verifies persistence and saved
+serialization, not scientific replication.
+
+The final documentation head is pinned outside its own Git content in the
+[immutable remote verification receipt](https://github.com/gomercin/JEPA-Anything-experiments/releases/download/evidence-completed-2026-09-25/remote-verification.json)
+and the PR body. The receipt is a small additional release asset, separate from
+the two scientific archives and their manifest. No existing asset or tag is moved.
 
 ## Pending Atlas ownership and next task
 

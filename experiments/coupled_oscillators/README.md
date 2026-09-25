@@ -233,13 +233,3 @@ isometric physical frame. Its small named panels are invoked separately with
 All outputs are exploratory and separate from earlier runs. The note records
 successive controls, exact commands, adverse SGD rollout behavior and the
 fixed-basis explanation for much of the apparent OPF coordinate-sensitivity benefit.
-
-## Remote preservation handoff
-
-The completed A–D lineage, including negative baselines, failed qualifications,
-executed-source snapshots and saved model/result data, is indexed in
-[the completed evidence snapshot](../../evidence/completed-2026-09-25/README.md).
-Historical report text and artifacts are unchanged. Follow that index to restore
-ignored `work/` data; a code clone alone does not contain the numerical archive.
-Its environment inventory describes preservation time, not every historical run.
-No oscillator panel was rerun for this publication.

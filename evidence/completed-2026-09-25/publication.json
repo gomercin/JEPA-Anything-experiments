@@ -1,11 +1,60 @@
 {
-  "status": "prepared; publication and remote retrieval verification pending",
+  "status": "published; source snapshot independently cloned and both remote archives restored and verified",
   "repository": "gomercin/JEPA-Anything-experiments",
+  "visibility": "PUBLIC",
   "default_branch": "main",
   "preservation_branch": "codex/preserve-completed-experiments",
-  "tag": "evidence-completed-2026-09-25",
+  "pr_url": "https://github.com/gomercin/JEPA-Anything-experiments/pull/1",
+  "pr_state_at_handoff": "OPEN",
+  "draft": true,
+  "merged": false,
   "base_revision": "c6e6c88f3ef75a4ce7acd660d6fa5779d995512c",
-  "source_snapshot_commit": "tag target, to be recorded after source commit",
-  "next_experiment_executed": false,
-  "merged": false
+  "source_snapshot_commit": "e17fe41d07a03d3a7fe67955054112773e8344be",
+  "tag": "evidence-completed-2026-09-25",
+  "prerelease": true,
+  "latest": false,
+  "release_url": "https://github.com/gomercin/JEPA-Anything-experiments/releases/tag/evidence-completed-2026-09-25",
+  "final_head_identity": "Commit containing this handoff; its exact SHA is externally pinned in the receipt below and the PR body, avoiding a self-referential Git hash. Resolve with git rev-parse HEAD after checking out this handoff commit.",
+  "final_head_receipt": "https://github.com/gomercin/JEPA-Anything-experiments/releases/download/evidence-completed-2026-09-25/remote-verification.json",
+  "archive_bytes": 346031945,
+  "restored_bytes": 1009289031,
+  "verified_members": 2250,
+  "verification": {
+    "source": "fresh HTTPS clone from owner repository, no shared worktree",
+    "download": "remote gh release download; one timed-out asset resumed by TLS-verified curl HTTP range; not copied from original archive/cache",
+    "archive_hashes": "all matched",
+    "restored_member_hashes": "all matched",
+    "saved_data_smoke": "fresh-checkout script under Python -I; standard library and NumPy only; no experiment imports or evolution",
+    "model_shapes": {
+      "AB": [
+        248,
+        20
+      ],
+      "C": [
+        72,
+        32
+      ]
+    },
+    "checkpoint_shapes": {
+      "spectral_coordinates": [
+        500
+      ],
+      "mediator_complex": [
+        385
+      ],
+      "static_template": [
+        320
+      ]
+    },
+    "recorded_table": "RR 12/12, no accuracy-gate failures; reading saved outcomes is not independent science reproduction"
+  },
+  "gaps": [
+    "One historical oscillator README version missing (two hash references).",
+    "Early pilots retain retrospective/partial provenance and environments are not reconstructed.",
+    "Historical source style findings retained; implementation review remains required."
+  ],
+  "substantive_extant_work_files_local_only": 0,
+  "atlas": "unchanged; exact historical paragraph remains pending under Effective Motif Dynamics / persistence-to-composability",
+  "next_experiment": "organization-conditioned-response: separately chosen; unexecuted here; separate branch required",
+  "next_experiment_executed": false
 }

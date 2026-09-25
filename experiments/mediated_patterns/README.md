@@ -147,7 +147,7 @@ Dual-reduction cycle completed locally: successful composition-informed C-only r
 
 ## Remote preservation handoff
 
-The completed field lineage and oscillator lineage are being preserved on
+The completed field lineage and oscillator lineage are remotely preserved on
 `codex/preserve-completed-experiments` in `gomercin/JEPA-Anything-experiments`.
 See the [portable evidence index](../../evidence/completed-2026-09-25/README.md)
 and [publication receipt](../../evidence/completed-2026-09-25/publication.json)
@@ -161,3 +161,7 @@ The closed AB20/C32 cycle remains frozen. The separately chosen
 organization-conditioned-response investigation is unexecuted by this task and
 must start on a separate branch from the verified preservation head. No science
 is to be appended to the preservation PR.
+
+Publication verified: [draft PR #1](https://github.com/gomercin/JEPA-Anything-experiments/pull/1) is open and unmerged. Source-snapshot commit: `e17fe41d07a03d3a7fe67955054112773e8344be`; evidence tag: `evidence-completed-2026-09-25`. Both remote archives (346,031,945 bytes) were restored into a fresh GitHub clone: all 2,250 member hashes matched, and saved AB20/C32 models, checkpoint and table loaded without simulation. All extant substantive run files are archived; one older oscillator README version is unavailable, and historical provenance/style limits are listed in the index. The exact final pushed head is pinned in the [remote verification receipt](https://github.com/gomercin/JEPA-Anything-experiments/releases/download/evidence-completed-2026-09-25/remote-verification.json) and PR body. That head adds publication bookkeeping to the source snapshot; neither revision is retrospectively assigned to old runs.
+
+Safe next-task start: fetch this preservation branch, verify its head against the receipt, then `git switch -c codex/organization-conditioned-response <verified-final-head>`. While preservation is unmerged, the next branch depends on this PR; keep its scientific changes separate and adjust its PR base when appropriate. No branch for that next task was created here.

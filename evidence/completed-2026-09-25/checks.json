@@ -25,5 +25,17 @@
     "initial": "2120 trailing-space lines in two byte-identical historical Matplotlib SVG review copies",
     "handling": "Scoped .gitattributes whitespace exemption for those generated SVG copies; no bytes changed",
     "source_and_documentation": "passed"
-  }
+  },
+  "remote_restoration": {
+    "archive_bytes": 346031945,
+    "verified_members": 2250,
+    "restored_bytes": 1009289031,
+    "saved_model_checkpoint_table_smoke": "passed",
+    "download_failures_retained": [
+      "Python TLS issuer certificate unavailable; did not disable verification",
+      "gh download timed out after partial large asset; verified curl range resume succeeded"
+    ]
+  },
+  "preservation_regression_after_handoff": "passed; unnecessary new oscillator README appendix removed to retain its exact historical bytes",
+  "source_snapshot_hosted_ci": "three completed SUCCESS checks observed at e17fe41d07a03d3a7fe67955054112773e8344be"
 }
