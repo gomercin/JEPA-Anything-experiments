@@ -13,6 +13,21 @@ records a fresh HTTPS clone, all 163 restored hashes and isolated saved-data
 inspection. A later documentation-only head is pinned in the PR body; neither
 publication revision is assigned retrospectively to the dirty-worktree execution.
 
+## Current integration status
+
+[PR #2](https://github.com/gomercin/JEPA-Anything-experiments/pull/2) records the
+critical implementation review, exact checked head/base and authoritative merge
+status. The draft, base-branch and unmerged statements above and in publication
+receipts describe publication time. The stacked review integrates PR #1 first
+and retargets this change to main; it does not rewrite either source snapshot.
+
+Review retains the bounded negative: the reported percentages are gain-fit
+residuals, not gain magnitudes; a resolved return does not make its change across
+organizations resolved. No thresholds, arrays, executed sources, models or frozen
+reports changed. The corrected checkpoint writer inherited from PR #1 is separate
+from this full-field experiment, which does not load the reduced models. No new
+scientific panel or Atlas update is part of integration.
+
 ## Result and review entry points
 
 > No practical selectivity met the declared 5% criterion. Across three fresh
