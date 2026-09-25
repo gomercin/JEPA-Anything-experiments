@@ -43,18 +43,26 @@ def score(truth, prediction, floor):
     }
 
 
-def geometry(meta):
+def geometry(meta, arrays=None):
     g = meta["sham_geometry"]
     centers = np.array([x["center"] for x in g])
     end = np.array([x["center"] for x in meta["final_geometry"]])
     all_centers = np.concatenate([centers, end])
     anchors = np.array([A, meta["b"], C])
+    # The fixed mass and signed moment give the centroid for every branch.
+    if arrays is not None:
+        mass = arrays["absolute"][..., 0]
+        moment = arrays["absolute"][..., 1]
+        branch_centers = anchors + 8 * moment / mass
+        all_centers = np.concatenate([all_centers, branch_centers.reshape(-1, 3)])
     widths = np.array(
         [x["width"] for x in g] + [x["width"] for x in meta["final_geometry"]]
     )
     masses = np.array(
         [x["mass"] for x in g] + [x["mass"] for x in meta["final_geometry"]]
     )
+    if arrays is not None:
+        masses = np.concatenate([masses, mass.reshape(-1, 3)])
     minimum_gap = float(np.diff(all_centers, axis=-1).min())
     anchor_offset = float(abs(all_centers - anchors).max())
     drift = float(abs(all_centers - centers[0]).max())
@@ -120,7 +128,7 @@ def freeze(out, data, refinement, mask):
         pred = fit["gain"] * shifted(x, dev[0][0]["time"], fit["delay"])
         comparisons.append(dict(kind=kind, fit=fit, **score(y, pred, floors[2, :2])))
     for b, (arr, meta) in zip(POSITIONS, dev, strict=True):
-        if not geometry(meta)["qualified"] or meta["sham_field_max"] > 1e-12:
+        if not geometry(meta, arr)["qualified"] or meta["sham_field_max"] > 1e-12:
             raise RuntimeError("Preparation or matched sham did not qualify")
         for j, amplitude in enumerate(meta["amplitudes"]):
             for kind in KINDS:
@@ -206,7 +214,7 @@ def analyze(out, data, frozen):
                 {
                     "seed": seed,
                     "b": b,
-                    "geometry": geometry(meta),
+                    "geometry": geometry(meta, arr),
                     "jumps": meta["jumps"],
                     "sham_max": meta["sham_field_max"],
                 }
