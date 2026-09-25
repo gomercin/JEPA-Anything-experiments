@@ -238,3 +238,30 @@ See the [retrieval receipt](../../evidence/organization-response-2026-09-25/remo
 and PR body for the distinct final pushed head. All new evidence is in Git;
 no new release asset or inherited-archive download was needed. No extant
 substantive new evidence remains local-only.
+
+## Source-to-receiver relay — completed science, publication in progress
+
+[Source-to-receiver report](SOURCE_RECEIVER_RELAY.md) and
+[new portable evidence](../../evidence/source-receiver-relay-2026-09-25/README.md)
+start from merged integration `bf21ecb` (PRs #1 and #2 are merged; earlier
+local/unmerged handoffs above are historical). With A/C fixed and only B moved,
+three fresh seeds resolve both total transmission change and the selected
+B-feedback contribution's change. C mass-response RMS rises 1.701–1.711x;
+the selected contribution is about 6% of total RMS and includes loop feedback
+to A. This is supplied organization, not spontaneous interface production.
+
+The ordinary interacting tangent explains the .02 input; its prospective .03
+prediction fails the 2% total-response gate at B=0 on all three fresh seeds,
+while B=-4 and all selected-contribution predictions pass their respective
+gates. Static conditioning and direct propagation remain in the control.
+AB20/C32 stays frozen, and the completed C-probe selectivity negative is unchanged.
+
+Science is closed; software checks and explicit critical review passed. This
+branch is not yet merged at this handoff revision; authoritative publication,
+retrieval and merge status is recorded in the evidence receipt and linked PR.
+The accumulated Atlas catch-up targets only the existing Effective Motif
+Dynamics and persistence-to-composability homes. Pending delta if inaccessible:
+carry the merged adapted AB20/C32 success and retained C24 failures; the preserved
+C-probe 5% selectivity negative; and this bounded loop-wide forward-response
+result with its .03 approximation failure. No new route, stop change or automatic
+scientific successor is selected.

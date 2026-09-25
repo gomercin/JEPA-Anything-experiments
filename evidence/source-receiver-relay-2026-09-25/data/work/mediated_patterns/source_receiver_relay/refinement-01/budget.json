@@ -1,0 +1,29 @@
+{
+  "cpu_seconds": 84.01896,
+  "wall_seconds": 84.24122287498903,
+  "previous_cpu_seconds": 75.571594,
+  "limit_cpu_seconds": 1200,
+  "sections": [
+    {
+      "task": "s8101-b0-half-dt",
+      "cpu_seconds": 22.801361,
+      "wall_seconds": 22.84484850001172
+    },
+    {
+      "task": "s8101-b0-double-n",
+      "cpu_seconds": 19.193321,
+      "wall_seconds": 19.211352207988966
+    },
+    {
+      "task": "s8101-b-4-half-dt",
+      "cpu_seconds": 22.765208,
+      "wall_seconds": 22.789010750013404
+    },
+    {
+      "task": "s8101-b-4-double-n",
+      "cpu_seconds": 19.235989000000004,
+      "wall_seconds": 19.27628408302553
+    }
+  ],
+  "status": "COMPLETE"
+}

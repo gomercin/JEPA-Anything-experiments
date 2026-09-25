@@ -1,0 +1,16 @@
+{
+  "state": "READY_FOR_SCOPED_PR",
+  "remote_verified": false,
+  "members": 77,
+  "data_bytes": 6599030,
+  "release_assets_created": 0,
+  "integration_base": "bf21ecbe9e940c0ab0c2adce2d994ff732bc50f5",
+  "source_revisions": [
+    "3d63b96",
+    "3b9e2cf",
+    "74a001b",
+    "02760ba"
+  ],
+  "scientific_status": "RESOLVED_PATHWAY_AND_ORGANIZATION_DIFFERENCE_WITH_PARTIAL_AMPLITUDE_PREDICTION_FAILURE",
+  "software_status": "make check and focused lint passed; critical review in review.md"
+}

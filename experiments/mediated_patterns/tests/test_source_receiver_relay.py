@@ -88,3 +88,17 @@ def test_preparation_split_and_safe_outputs(tmp_path, monkeypatch):
     link.symlink_to(tmp_path / "absent")
     with pytest.raises(ValueError, match="nonsymlink"):
         relay.start_output(link, "test")
+
+
+def test_every_sample_centroid_is_qualified_without_tracking():
+    from experiments.mediated_patterns.relay_analysis import geometry
+
+    f = Field(relay.CFG)
+    state = f.seed(centers=(relay.A, 0, relay.C))
+    d = relay.descriptors(f, state, 0)
+    meta = {"b": 0, "sham_geometry": [d], "final_geometry": [d]}
+    absolute = relay.read(f, state, 0)[None, None].copy()
+    assert geometry(meta, {"absolute": absolute})["qualified"]
+    # A transient centroid excursion is caught even if all endpoints look good.
+    absolute[0, 0, 2, 1] += absolute[0, 0, 2, 0] / 8
+    assert not geometry(meta, {"absolute": absolute})["qualified"]

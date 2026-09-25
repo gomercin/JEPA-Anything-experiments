@@ -1,0 +1,15 @@
+{
+  "stages": {
+    "frozen-01": 0.07140000000000002,
+    "fresh-01": 173.170815,
+    "refinement-01": 84.01896,
+    "development-01": 47.953065,
+    "mask-01": 23.185003000000002,
+    "pilot-01": 27.618529,
+    "analysis-01": 1.020912
+  },
+  "timed_cpu_seconds": 357.038684,
+  "untimed_inspection_allowance_seconds": 15,
+  "charged_cpu_seconds": 372.038684,
+  "limit_cpu_seconds": 1800
+}

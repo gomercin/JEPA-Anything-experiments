@@ -7,6 +7,7 @@ testpaths = [
   "experiments/mediated_patterns/tests",
   "evidence/completed-2026-09-25/tests",
   "evidence/organization-response-2026-09-25/tests",
+  "evidence/source-receiver-relay-2026-09-25/tests",
 ]
 pythonpath = [
   ".",

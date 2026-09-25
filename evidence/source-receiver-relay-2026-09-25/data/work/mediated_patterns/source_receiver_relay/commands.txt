@@ -1,0 +1,17 @@
+# Executed from /private/tmp/jepa-source-receiver-relay
+# Python: /Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/.venv/bin/python
+# All stages: OPENBLAS_NUM_THREADS=1
+# revision 3d63b9685ab513a6c2885783c202bbed312171fb
+OPENBLAS_NUM_THREADS=1 /Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/.venv/bin/python -m experiments.mediated_patterns.source_receiver_relay pilot --output work/mediated_patterns/source_receiver_relay/pilot-01
+# revision 3d63b9685ab513a6c2885783c202bbed312171fb
+OPENBLAS_NUM_THREADS=1 /Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/.venv/bin/python -m experiments.mediated_patterns.source_receiver_relay develop --data work/mediated_patterns/source_receiver_relay/pilot-01 --output work/mediated_patterns/source_receiver_relay/development-01
+# revision 3b9e2cf67b54df7106da35498ffdfa36891ebc36
+OPENBLAS_NUM_THREADS=1 /Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/.venv/bin/python -m experiments.mediated_patterns.source_receiver_relay refine --data work/mediated_patterns/source_receiver_relay/pilot-01 --output work/mediated_patterns/source_receiver_relay/refinement-01
+# revision 74a001bf19395c579e2ab82b2af3d715755612a1
+OPENBLAS_NUM_THREADS=1 /Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/.venv/bin/python -m experiments.mediated_patterns.source_receiver_relay mask --data work/mediated_patterns/source_receiver_relay/pilot-01 --output work/mediated_patterns/source_receiver_relay/mask-01
+# revision 02760baa1b0ac5c76da1104443abddeff78e3798
+OPENBLAS_NUM_THREADS=1 /Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/.venv/bin/python -m experiments.mediated_patterns.relay_analysis freeze --data work/mediated_patterns/source_receiver_relay/development-01 --refinement work/mediated_patterns/source_receiver_relay/refinement-01 --mask work/mediated_patterns/source_receiver_relay/mask-01 --output work/mediated_patterns/source_receiver_relay/frozen-01
+# revision 02760baa1b0ac5c76da1104443abddeff78e3798
+OPENBLAS_NUM_THREADS=1 /Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/.venv/bin/python -m experiments.mediated_patterns.source_receiver_relay fresh --freeze work/mediated_patterns/source_receiver_relay/frozen-01 --output work/mediated_patterns/source_receiver_relay/fresh-01
+# revision 02760baa1b0ac5c76da1104443abddeff78e3798
+OPENBLAS_NUM_THREADS=1 /Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/.venv/bin/python -m experiments.mediated_patterns.relay_analysis analyze --data work/mediated_patterns/source_receiver_relay/fresh-01 --freeze work/mediated_patterns/source_receiver_relay/frozen-01 --output work/mediated_patterns/source_receiver_relay/analysis-01
