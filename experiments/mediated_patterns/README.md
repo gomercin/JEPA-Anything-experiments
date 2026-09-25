@@ -145,13 +145,31 @@ Saved-result interpretation check: **Original AB + C24** means **FULL_AB+C24** (
 
 Dual-reduction cycle completed locally: successful composition-informed C-only repair, not first-freeze independent-composition success. AB20/C32 retained as the frozen result. No successor selected.
 
-## Remote preservation handoff
+## Integration review status
+
+Implementation review and integration are recorded in [PR #1](https://github.com/gomercin/JEPA-Anything-experiments/pull/1)
+and the dependent [PR #2](https://github.com/gomercin/JEPA-Anything-experiments/pull/2).
+Their discussions record exact reviewed revisions, checks and confirmed merge status.
+The publication-time draft/unreviewed statements below and in frozen reports are
+historical. Integration does not independently reproduce the scientific panels or
+expand their stated limits. Atlas remains unchanged; no research continuation is
+part of this review.
+
+Review found a checkpoint file-safety defect: a suffixless save could overwrite
+an existing `.npz`, and a dangling destination symlink could be followed. Current
+`PairHybrid.save` and `DualHybrid.save` now create the actual NumPy destination
+exclusively. Only serialization changed; stepping, initialization, bases, event
+maps, readouts and saved evidence did not. Six file-only regressions cover both
+classes. Historical execution identity continues to use the archived source and
+pinned publication revisions, not the corrected live files.
+
+## Remote preservation handoff (publication-time record)
 
 The completed field lineage and oscillator lineage are remotely preserved on
 `codex/preserve-completed-experiments` in `gomercin/JEPA-Anything-experiments`.
 See the [portable evidence index](../../evidence/completed-2026-09-25/README.md)
 and [publication receipt](../../evidence/completed-2026-09-25/publication.json)
-for the source-snapshot revision, review PR, immutable evidence tag/assets,
+for the source-snapshot revision, review PR, checksum-pinned evidence tag/assets,
 retrieval verification, and provenance gaps. Publication is not merge approval.
 The original pending Atlas paragraph stays unchanged in DUAL_REDUCTION.md;
 these remote pointers belong with the existing Effective Motif Dynamics and

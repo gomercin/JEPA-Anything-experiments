@@ -6,12 +6,17 @@ replaced by an independent C basis on C's rows. No joint basis is fitted.
 
 import json
 from dataclasses import asdict
-from pathlib import Path
 
 import numpy as np
 from scipy.linalg import eigh
 
-from .hybrid_pair import PairHybrid, etd_coefficients, pair_indices, pulse_window
+from .hybrid_pair import (
+    PairHybrid,
+    etd_coefficients,
+    pair_indices,
+    pulse_window,
+    save_npz_exclusive,
+)
 from .simulator import Config
 
 
@@ -115,9 +120,7 @@ class DualHybrid(PairHybrid):
         return np.r_[self.c.feedback * b.T @ (m[idx] * u[idx]), b.T @ force]
 
     def save(self, path):
-        if Path(path).exists():
-            raise FileExistsError(path)
-        np.savez_compressed(
+        save_npz_exclusive(
             path,
             config=json.dumps(asdict(self.c)),
             c_position=self.c_position,
