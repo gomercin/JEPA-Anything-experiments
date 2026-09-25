@@ -1,0 +1,20 @@
+{
+  "checked_source_references": 1764,
+  "matched_references": 1762,
+  "unmatched_references": [
+    {
+      "protocol": "work/coupled_oscillators/interrogation/panel-01/protocol.json",
+      "recorded_source": "experiments/coupled_oscillators/README.md",
+      "sha256": "5ca62c3da07e74d801a0dc0af8eec283d03df6fe6381c9228b000617b06e11b4",
+      "status": "hash recorded; exact historical bytes not found in present checkout/archive"
+    },
+    {
+      "protocol": "work/coupled_oscillators/phase-a-quick/protocol.json",
+      "recorded_source": "experiments/coupled_oscillators/README.md",
+      "sha256": "5ca62c3da07e74d801a0dc0af8eec283d03df6fe6381c9228b000617b06e11b4",
+      "status": "hash recorded; exact historical bytes not found in present checkout/archive"
+    }
+  ],
+  "unique_unmatched_digests": 1,
+  "not_claimed": "This is a byte-availability check, not independent scientific reproduction or validation of retrospective snapshots."
+}

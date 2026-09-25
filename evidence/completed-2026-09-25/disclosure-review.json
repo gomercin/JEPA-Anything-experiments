@@ -1,0 +1,9 @@
+{
+  "destination": "PUBLIC gomercin/JEPA-Anything-experiments",
+  "included": "Only repository experiment source and its two generated work trees; all successes and failures included.",
+  "credential_pattern_hits": 0,
+  "symlinks": 0,
+  "historical_paths": "155 text files contain original local Python/cwd paths. These provenance strings are retained byte-for-byte; portable instructions do not require those paths.",
+  "excluded": "Python/macOS caches; no environments, Git internals, external documents, conversations or unrelated project material.",
+  "next_experiment": "No organization-conditioned-response prompt or implementation found in the scoped source/evidence inventory; not executed by preservation."
+}

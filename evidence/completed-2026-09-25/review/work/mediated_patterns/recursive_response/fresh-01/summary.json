@@ -1,0 +1,172 @@
+[
+  {
+    "role": "primary",
+    "model": "kernel",
+    "runs": 27,
+    "pooled": {
+      "signal_rms": 1.741270562321513e-05,
+      "rmse": 3.5710331086259626e-07,
+      "max_absolute": 1.8072769140415338e-06,
+      "nrmse": 0.020508203526193865
+    },
+    "worst_run": "fresh-s411-d25-unequal_wait30",
+    "worst_nrmse": 0.028386420237927045,
+    "failed_runs": []
+  },
+  {
+    "role": "primary",
+    "model": "recursive",
+    "runs": 27,
+    "pooled": {
+      "signal_rms": 1.741270562321513e-05,
+      "rmse": 3.5923928557934706e-07,
+      "max_absolute": 1.8076743641280344e-06,
+      "nrmse": 0.020630871120935892
+    },
+    "worst_run": "fresh-s411-d25-unequal_wait30",
+    "worst_nrmse": 0.028429852348053758,
+    "failed_runs": []
+  },
+  {
+    "role": "short_wait_challenge",
+    "model": "kernel",
+    "runs": 9,
+    "pooled": {
+      "signal_rms": 4.094380054864649e-06,
+      "rmse": 1.3816308671976737e-07,
+      "max_absolute": 4.2561479876781027e-07,
+      "nrmse": 0.03374456813202084
+    },
+    "worst_run": "fresh-s633-d29-opposite_wait3",
+    "worst_nrmse": 0.06037340427033294,
+    "failed_runs": [
+      {
+        "run_id": "fresh-s411-d29-opposite_wait3",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run_id": "fresh-s411-d31-opposite_wait3",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run_id": "fresh-s522-d29-opposite_wait3",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run_id": "fresh-s522-d31-opposite_wait3",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run_id": "fresh-s633-d29-opposite_wait3",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run_id": "fresh-s633-d31-opposite_wait3",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "short_wait_challenge",
+    "model": "recursive",
+    "runs": 9,
+    "pooled": {
+      "signal_rms": 4.094380054864649e-06,
+      "rmse": 1.3794700435526401e-07,
+      "max_absolute": 4.24279697416181e-07,
+      "nrmse": 0.033691792776140865
+    },
+    "worst_run": "fresh-s633-d29-opposite_wait3",
+    "worst_nrmse": 0.06028120075086789,
+    "failed_runs": [
+      {
+        "run_id": "fresh-s411-d29-opposite_wait3",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run_id": "fresh-s411-d31-opposite_wait3",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run_id": "fresh-s522-d29-opposite_wait3",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run_id": "fresh-s522-d31-opposite_wait3",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run_id": "fresh-s633-d29-opposite_wait3",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run_id": "fresh-s633-d31-opposite_wait3",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "continued_reuse",
+    "model": "kernel",
+    "runs": 9,
+    "pooled": {
+      "signal_rms": 6.04932722551267e-06,
+      "rmse": 1.0286638389489141e-07,
+      "max_absolute": 2.615908753556592e-07,
+      "nrmse": 0.01700459903393202
+    },
+    "worst_run": "fresh-s633-d29-irregular_three",
+    "worst_nrmse": 0.03488698079283232,
+    "failed_runs": []
+  },
+  {
+    "role": "continued_reuse",
+    "model": "recursive",
+    "runs": 9,
+    "pooled": {
+      "signal_rms": 6.04932722551267e-06,
+      "rmse": 1.0058311166302849e-07,
+      "max_absolute": 2.5827675765493604e-07,
+      "nrmse": 0.01662715669253687
+    },
+    "worst_run": "fresh-s633-d29-irregular_three",
+    "worst_nrmse": 0.03383519599348089,
+    "failed_runs": []
+  }
+]

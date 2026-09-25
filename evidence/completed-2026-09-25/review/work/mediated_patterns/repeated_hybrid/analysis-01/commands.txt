@@ -1,0 +1,9 @@
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid quick --data work/mediated_patterns/two_way_hybrid/frozen-01 --output work/mediated_patterns/repeated_hybrid/baseline-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.repeated_hybrid development --output work/mediated_patterns/repeated_hybrid/development-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.repeated_hybrid qualify --output work/mediated_patterns/repeated_hybrid/qualification-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.repeated_hybrid freeze --output work/mediated_patterns/repeated_hybrid/frozen-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.repeated_hybrid fresh --output work/mediated_patterns/repeated_hybrid/fresh-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.repeated_hybrid checkpoint --output work/mediated_patterns/repeated_hybrid/checkpoint-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.repeated_hybrid quick --output work/mediated_patterns/repeated_hybrid/quick-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.repeated_hybrid fresh_refine --output work/mediated_patterns/repeated_hybrid/fresh-refinement-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.repeated_analysis --output work/mediated_patterns/repeated_hybrid/analysis-01

@@ -1,0 +1,102 @@
+{
+  "status": "COMPOSITION_INFORMED_FR_REQUALIFIED",
+  "composition_informed": true,
+  "selection_exposure": [
+    "s2011-c39",
+    "s2011-c39",
+    "s4011-c41",
+    "s4022-c39"
+  ],
+  "C_order": 32,
+  "C_model_sha256": "d81f276cade69d40ef8b215ed9e38a225296061dfc74cf2d5b8d14615afdc7b1",
+  "AB_model_sha256": "a128228fd027986ed17fbc1802f02a9d1820f7dffd215aa46fa6211c4c04bb6e",
+  "config": {
+    "length": 192,
+    "n": 768,
+    "dt": 0.00625,
+    "r": -0.67,
+    "cubic": 2.0,
+    "feedback": 0.05,
+    "source": 1.0,
+    "diffusion": 64.0,
+    "tau": 10.0
+  },
+  "gates": {
+    "C_response_nrmse": 0.01,
+    "C_response_max": 0.001,
+    "B_response_nrmse": 0.1,
+    "B_response_max": 2e-05,
+    "C_return_nrmse": 0.1,
+    "C_return_max": 1e-06,
+    "return_signal_floor": 2e-07
+  },
+  "additional_gates": {
+    "C_field_relative_rms": 0.01,
+    "C_sham_mass_max": 0.005,
+    "C_jump_mass_max": 0.001,
+    "initial_max": 1e-10
+  },
+  "training": [
+    "s71-c38",
+    "s71-c42",
+    "s82-c38",
+    "s82-c42"
+  ],
+  "FR_development": [
+    "s2011-c39",
+    "s2022-c41"
+  ],
+  "RR_exposure_before_freeze": true,
+  "qualification_resolution": {
+    "s2011-c39-single": "pass_with_unresolved_windows",
+    "s2011-c39-reverse": "pass_with_unresolved_windows",
+    "s4011-c41-three": "pass_with_unresolved_windows",
+    "s4022-c39-three": "pass_with_unresolved_windows"
+  },
+  "fresh_seeds": [
+    5011,
+    5022,
+    5033
+  ],
+  "positions": [
+    39,
+    41
+  ],
+  "age": "20 odd /60 even",
+  "plans": {
+    "two": {
+      "events": [
+        [
+          0,
+          0.08
+        ],
+        [
+          12,
+          -0.07
+        ]
+      ],
+      "horizon": 80
+    },
+    "three": {
+      "events": [
+        [
+          0,
+          -0.075
+        ],
+        [
+          11,
+          0.07
+        ],
+        [
+          29,
+          -0.08
+        ]
+      ],
+      "horizon": 109
+    }
+  },
+  "AB_unchanged": true,
+  "joint_fit": false,
+  "windows": "same repeated-hybrid whole/event20/last+10/final20; early5 absolute-only",
+  "stop": "first independently frozen composition preserved; adaptation if any separately named"
+}

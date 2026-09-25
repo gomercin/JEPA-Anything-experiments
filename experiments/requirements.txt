@@ -1,0 +1,6 @@
+# Experiment dependencies, separate from the unchanged upstream core package.
+# Install the core with -e './jepa-anything-core[dev]' as well.
+# These are compatibility ranges, not a reconstruction of every historical environment.
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7

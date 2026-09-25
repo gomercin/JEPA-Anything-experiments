@@ -1,0 +1,1200 @@
+[
+  {
+    "cell": null,
+    "code": "B007",
+    "end_location": {
+      "column": 24,
+      "row": 140
+    },
+    "filename": "experiments/mediated_patterns/cross_analysis.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "_a",
+          "end_location": {
+            "column": 24,
+            "row": 140
+          },
+          "location": {
+            "column": 23,
+            "row": 140
+          }
+        }
+      ],
+      "message": "Rename unused `a` to `_a`"
+    },
+    "location": {
+      "column": 23,
+      "row": 140
+    },
+    "message": "Loop control variable `a` not used within loop body",
+    "name": "unused-loop-control-variable",
+    "noqa_row": 140,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-loop-control-variable"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 125,
+      "row": 174
+    },
+    "filename": "experiments/mediated_patterns/cross_analysis.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 174
+    },
+    "message": "Line too long (124 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 174,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 110,
+      "row": 270
+    },
+    "filename": "experiments/mediated_patterns/cross_analysis.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 270
+    },
+    "message": "Line too long (109 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 270,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 105,
+      "row": 442
+    },
+    "filename": "experiments/mediated_patterns/cross_analysis.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 442
+    },
+    "message": "Line too long (104 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 442,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "B007",
+    "end_location": {
+      "column": 14,
+      "row": 83
+    },
+    "filename": "experiments/mediated_patterns/cross_pulse.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 83
+    },
+    "message": "Loop control variable `a` not used within loop body",
+    "name": "unused-loop-control-variable",
+    "noqa_row": 83,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-loop-control-variable"
+  },
+  {
+    "cell": null,
+    "code": "B007",
+    "end_location": {
+      "column": 17,
+      "row": 83
+    },
+    "filename": "experiments/mediated_patterns/cross_pulse.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 83
+    },
+    "message": "Loop control variable `b` not used within loop body",
+    "name": "unused-loop-control-variable",
+    "noqa_row": 83,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-loop-control-variable"
+  },
+  {
+    "cell": null,
+    "code": "B007",
+    "end_location": {
+      "column": 22,
+      "row": 83
+    },
+    "filename": "experiments/mediated_patterns/cross_pulse.py",
+    "fix": null,
+    "location": {
+      "column": 19,
+      "row": 83
+    },
+    "message": "Loop control variable `gap` not used within loop body",
+    "name": "unused-loop-control-variable",
+    "noqa_row": 83,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-loop-control-variable"
+  },
+  {
+    "cell": null,
+    "code": "E731",
+    "end_location": {
+      "column": 68,
+      "row": 90
+    },
+    "filename": "experiments/mediated_patterns/cross_pulse.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "def rms(v):\n            return float(np.sqrt(np.mean(np.asarray(v) ** 2)))",
+          "end_location": {
+            "column": 68,
+            "row": 90
+          },
+          "location": {
+            "column": 9,
+            "row": 90
+          }
+        }
+      ],
+      "message": "Rewrite `rms` as a `def`"
+    },
+    "location": {
+      "column": 9,
+      "row": 90
+    },
+    "message": "Do not assign a `lambda` expression, use a `def`",
+    "name": "lambda-assignment",
+    "noqa_row": 90,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/lambda-assignment"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 104,
+      "row": 374
+    },
+    "filename": "experiments/mediated_patterns/cross_pulse.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 374
+    },
+    "message": "Line too long (103 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 374,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 144,
+      "row": 562
+    },
+    "filename": "experiments/mediated_patterns/cross_pulse.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 562
+    },
+    "message": "Line too long (143 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 562,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 122,
+      "row": 568
+    },
+    "filename": "experiments/mediated_patterns/cross_pulse.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 568
+    },
+    "message": "Line too long (121 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 568,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 105,
+      "row": 758
+    },
+    "filename": "experiments/mediated_patterns/cross_pulse.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 758
+    },
+    "message": "Line too long (104 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 758,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 110,
+      "row": 822
+    },
+    "filename": "experiments/mediated_patterns/cross_pulse.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 822
+    },
+    "message": "Line too long (109 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 822,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 142,
+      "row": 830
+    },
+    "filename": "experiments/mediated_patterns/cross_pulse.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 830
+    },
+    "message": "Line too long (141 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 830,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 159,
+      "row": 226
+    },
+    "filename": "experiments/mediated_patterns/dual_analysis.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 226
+    },
+    "message": "Line too long (158 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 226,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "B007",
+    "end_location": {
+      "column": 28,
+      "row": 257
+    },
+    "filename": "experiments/mediated_patterns/dual_analysis.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "_amplitude",
+          "end_location": {
+            "column": 28,
+            "row": 257
+          },
+          "location": {
+            "column": 19,
+            "row": 257
+          }
+        }
+      ],
+      "message": "Rename unused `amplitude` to `_amplitude`"
+    },
+    "location": {
+      "column": 19,
+      "row": 257
+    },
+    "message": "Loop control variable `amplitude` not used within loop body",
+    "name": "unused-loop-control-variable",
+    "noqa_row": 257,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-loop-control-variable"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 122,
+      "row": 319
+    },
+    "filename": "experiments/mediated_patterns/dual_analysis.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 319
+    },
+    "message": "Line too long (121 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 319,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 267,
+      "row": 390
+    },
+    "filename": "experiments/mediated_patterns/dual_analysis.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 390
+    },
+    "message": "Line too long (266 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 390,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 123,
+      "row": 381
+    },
+    "filename": "experiments/mediated_patterns/dual_reduction.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 381
+    },
+    "message": "Line too long (122 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 381,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 108,
+      "row": 513
+    },
+    "filename": "experiments/mediated_patterns/dual_reduction.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 513
+    },
+    "message": "Line too long (107 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 513,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 126,
+      "row": 344
+    },
+    "filename": "experiments/mediated_patterns/hybrid_analysis.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 344
+    },
+    "message": "Line too long (125 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 344,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 107,
+      "row": 345
+    },
+    "filename": "experiments/mediated_patterns/hybrid_analysis.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 345
+    },
+    "message": "Line too long (106 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 345,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 103,
+      "row": 522
+    },
+    "filename": "experiments/mediated_patterns/recursive_response.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 522
+    },
+    "message": "Line too long (102 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 522,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 115,
+      "row": 554
+    },
+    "filename": "experiments/mediated_patterns/recursive_response.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 554
+    },
+    "message": "Line too long (114 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 554,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 110,
+      "row": 557
+    },
+    "filename": "experiments/mediated_patterns/recursive_response.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 557
+    },
+    "message": "Line too long (109 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 557,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 126,
+      "row": 564
+    },
+    "filename": "experiments/mediated_patterns/recursive_response.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 564
+    },
+    "message": "Line too long (125 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 564,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 122,
+      "row": 565
+    },
+    "filename": "experiments/mediated_patterns/recursive_response.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 565
+    },
+    "message": "Line too long (121 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 565,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 115,
+      "row": 566
+    },
+    "filename": "experiments/mediated_patterns/recursive_response.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 566
+    },
+    "message": "Line too long (114 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 566,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 108,
+      "row": 808
+    },
+    "filename": "experiments/mediated_patterns/recursive_response.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 808
+    },
+    "message": "Line too long (107 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 808,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 109,
+      "row": 871
+    },
+    "filename": "experiments/mediated_patterns/recursive_response.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 871
+    },
+    "message": "Line too long (108 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 871,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 107,
+      "row": 919
+    },
+    "filename": "experiments/mediated_patterns/recursive_response.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 919
+    },
+    "message": "Line too long (106 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 919,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "B007",
+    "end_location": {
+      "column": 26,
+      "row": 968
+    },
+    "filename": "experiments/mediated_patterns/recursive_response.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "_amp",
+          "end_location": {
+            "column": 26,
+            "row": 968
+          },
+          "location": {
+            "column": 23,
+            "row": 968
+          }
+        }
+      ],
+      "message": "Rename unused `amp` to `_amp`"
+    },
+    "location": {
+      "column": 23,
+      "row": 968
+    },
+    "message": "Loop control variable `amp` not used within loop body",
+    "name": "unused-loop-control-variable",
+    "noqa_row": 968,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-loop-control-variable"
+  },
+  {
+    "cell": null,
+    "code": "B007",
+    "end_location": {
+      "column": 20,
+      "row": 42
+    },
+    "filename": "experiments/mediated_patterns/repeated_analysis.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "_a",
+          "end_location": {
+            "column": 20,
+            "row": 42
+          },
+          "location": {
+            "column": 19,
+            "row": 42
+          }
+        }
+      ],
+      "message": "Rename unused `a` to `_a`"
+    },
+    "location": {
+      "column": 19,
+      "row": 42
+    },
+    "message": "Loop control variable `a` not used within loop body",
+    "name": "unused-loop-control-variable",
+    "noqa_row": 42,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-loop-control-variable"
+  },
+  {
+    "cell": null,
+    "code": "B007",
+    "end_location": {
+      "column": 20,
+      "row": 79
+    },
+    "filename": "experiments/mediated_patterns/repeated_analysis.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "_a",
+          "end_location": {
+            "column": 20,
+            "row": 79
+          },
+          "location": {
+            "column": 19,
+            "row": 79
+          }
+        }
+      ],
+      "message": "Rename unused `a` to `_a`"
+    },
+    "location": {
+      "column": 19,
+      "row": 79
+    },
+    "message": "Loop control variable `a` not used within loop body",
+    "name": "unused-loop-control-variable",
+    "noqa_row": 79,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-loop-control-variable"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 192,
+      "row": 261
+    },
+    "filename": "experiments/mediated_patterns/repeated_analysis.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 261
+    },
+    "message": "Line too long (191 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 261,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 119,
+      "row": 265
+    },
+    "filename": "experiments/mediated_patterns/repeated_analysis.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 265
+    },
+    "message": "Line too long (118 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 265,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 237,
+      "row": 271
+    },
+    "filename": "experiments/mediated_patterns/repeated_analysis.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 271
+    },
+    "message": "Line too long (236 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 271,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 134,
+      "row": 239
+    },
+    "filename": "experiments/mediated_patterns/repeated_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 239
+    },
+    "message": "Line too long (133 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 239,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 127,
+      "row": 317
+    },
+    "filename": "experiments/mediated_patterns/repeated_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 317
+    },
+    "message": "Line too long (126 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 317,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 142,
+      "row": 319
+    },
+    "filename": "experiments/mediated_patterns/repeated_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 319
+    },
+    "message": "Line too long (141 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 319,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 105,
+      "row": 493
+    },
+    "filename": "experiments/mediated_patterns/repeated_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 493
+    },
+    "message": "Line too long (104 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 493,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 110,
+      "row": 494
+    },
+    "filename": "experiments/mediated_patterns/repeated_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 494
+    },
+    "message": "Line too long (109 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 494,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 107,
+      "row": 497
+    },
+    "filename": "experiments/mediated_patterns/repeated_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 497
+    },
+    "message": "Line too long (106 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 497,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 127,
+      "row": 498
+    },
+    "filename": "experiments/mediated_patterns/repeated_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 498
+    },
+    "message": "Line too long (126 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 498,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 105,
+      "row": 499
+    },
+    "filename": "experiments/mediated_patterns/repeated_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 499
+    },
+    "message": "Line too long (104 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 499,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 114,
+      "row": 572
+    },
+    "filename": "experiments/mediated_patterns/repeated_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 572
+    },
+    "message": "Line too long (113 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 572,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 105,
+      "row": 638
+    },
+    "filename": "experiments/mediated_patterns/repeated_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 638
+    },
+    "message": "Line too long (104 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 638,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 117,
+      "row": 270
+    },
+    "filename": "experiments/mediated_patterns/two_way_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 270
+    },
+    "message": "Line too long (116 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 270,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 102,
+      "row": 280
+    },
+    "filename": "experiments/mediated_patterns/two_way_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 280
+    },
+    "message": "Line too long (101 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 280,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 104,
+      "row": 356
+    },
+    "filename": "experiments/mediated_patterns/two_way_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 356
+    },
+    "message": "Line too long (103 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 356,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 106,
+      "row": 450
+    },
+    "filename": "experiments/mediated_patterns/two_way_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 450
+    },
+    "message": "Line too long (105 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 450,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 102,
+      "row": 522
+    },
+    "filename": "experiments/mediated_patterns/two_way_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 522
+    },
+    "message": "Line too long (101 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 522,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 102,
+      "row": 523
+    },
+    "filename": "experiments/mediated_patterns/two_way_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 523
+    },
+    "message": "Line too long (101 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 523,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 118,
+      "row": 568
+    },
+    "filename": "experiments/mediated_patterns/two_way_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 568
+    },
+    "message": "Line too long (117 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 568,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 169,
+      "row": 578
+    },
+    "filename": "experiments/mediated_patterns/two_way_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 578
+    },
+    "message": "Line too long (168 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 578,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 122,
+      "row": 579
+    },
+    "filename": "experiments/mediated_patterns/two_way_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 579
+    },
+    "message": "Line too long (121 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 579,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 119,
+      "row": 580
+    },
+    "filename": "experiments/mediated_patterns/two_way_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 580
+    },
+    "message": "Line too long (118 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 580,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 108,
+      "row": 583
+    },
+    "filename": "experiments/mediated_patterns/two_way_hybrid.py",
+    "fix": null,
+    "location": {
+      "column": 101,
+      "row": 583
+    },
+    "message": "Line too long (107 > 100)",
+    "name": "line-too-long",
+    "noqa_row": 583,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  }
+]

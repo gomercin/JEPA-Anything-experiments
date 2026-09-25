@@ -1,0 +1,466 @@
+[
+  {
+    "role": "short",
+    "model": "kernel",
+    "runs": 27,
+    "passed": 12,
+    "pooled": {
+      "signal_rms": 5.816553950963422e-06,
+      "rmse": 2.9612618063088216e-07,
+      "max_absolute": 1.3086196083442516e-06,
+      "nrmse": 0.0509109316491139
+    },
+    "worst_nrmse": 0.0999506726133981,
+    "failures": [
+      {
+        "run": "s741-d25-strong_np2",
+        "failed": [
+          "early_absolute"
+        ]
+      },
+      {
+        "run": "s741-d27-short_np25",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s741-d27-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s741-d31-short_np25",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s741-d31-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d25-strong_np2",
+        "failed": [
+          "early_absolute"
+        ]
+      },
+      {
+        "run": "s852-d27-short_np25",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d27-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d31-short_np25",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d31-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d25-strong_np2",
+        "failed": [
+          "early_absolute"
+        ]
+      },
+      {
+        "run": "s963-d27-short_np25",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d27-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d31-short_np25",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d31-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "short",
+    "model": "original",
+    "runs": 27,
+    "passed": 15,
+    "pooled": {
+      "signal_rms": 5.816553950963422e-06,
+      "rmse": 2.9614885272221113e-07,
+      "max_absolute": 1.3076258749993587e-06,
+      "nrmse": 0.05091482950539102
+    },
+    "worst_nrmse": 0.09991035688044159,
+    "failures": [
+      {
+        "run": "s741-d27-short_np25",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s741-d27-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s741-d31-short_np25",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s741-d31-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d27-short_np25",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d27-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d31-short_np25",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d31-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d27-short_np25",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d27-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d31-short_np25",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d31-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "short",
+    "model": "candidate",
+    "runs": 27,
+    "passed": 27,
+    "pooled": {
+      "signal_rms": 5.816553950963422e-06,
+      "rmse": 1.5878090417207953e-07,
+      "max_absolute": 7.15025373898311e-07,
+      "nrmse": 0.02729810563276559
+    },
+    "worst_nrmse": 0.0363182167356451,
+    "failures": []
+  },
+  {
+    "role": "regression",
+    "model": "kernel",
+    "runs": 27,
+    "passed": 27,
+    "pooled": {
+      "signal_rms": 1.824678009297549e-05,
+      "rmse": 3.515009309348848e-07,
+      "max_absolute": 1.8470014206477904e-06,
+      "nrmse": 0.019263723744344517
+    },
+    "worst_nrmse": 0.029015750310105268,
+    "failures": []
+  },
+  {
+    "role": "regression",
+    "model": "original",
+    "runs": 27,
+    "passed": 27,
+    "pooled": {
+      "signal_rms": 1.824678009297549e-05,
+      "rmse": 3.546821252168672e-07,
+      "max_absolute": 1.8473887059804121e-06,
+      "nrmse": 0.019438066519660093
+    },
+    "worst_nrmse": 0.029063233867733067,
+    "failures": []
+  },
+  {
+    "role": "regression",
+    "model": "candidate",
+    "runs": 27,
+    "passed": 27,
+    "pooled": {
+      "signal_rms": 1.824678009297549e-05,
+      "rmse": 3.554934468815547e-07,
+      "max_absolute": 1.8473887060488863e-06,
+      "nrmse": 0.019482530346184745
+    },
+    "worst_nrmse": 0.02906323386880443,
+    "failures": []
+  },
+  {
+    "role": "three",
+    "model": "kernel",
+    "runs": 9,
+    "passed": 3,
+    "pooled": {
+      "signal_rms": 2.5122651316998477e-06,
+      "rmse": 1.0923735581749503e-07,
+      "max_absolute": 3.902612557484748e-07,
+      "nrmse": 0.043481619212532276
+    },
+    "worst_nrmse": 0.07772003734307412,
+    "failures": [
+      {
+        "run": "s741-d27-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s741-d31-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d27-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d31-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d27-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d31-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "three",
+    "model": "original",
+    "runs": 9,
+    "passed": 3,
+    "pooled": {
+      "signal_rms": 2.5122651316998477e-06,
+      "rmse": 1.1342443711677316e-07,
+      "max_absolute": 3.944788663922347e-07,
+      "nrmse": 0.0451482750309988
+    },
+    "worst_nrmse": 0.08077826642051583,
+    "failures": [
+      {
+        "run": "s741-d27-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s741-d31-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d27-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d31-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d27-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d31-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "three",
+    "model": "candidate",
+    "runs": 9,
+    "passed": 0,
+    "pooled": {
+      "signal_rms": 2.5122651316998477e-06,
+      "rmse": 2.3328999462938407e-07,
+      "max_absolute": 8.79224135407765e-07,
+      "nrmse": 0.09286041974062487
+    },
+    "worst_nrmse": 0.10520574137693421,
+    "failures": [
+      {
+        "run": "s741-d25-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s741-d27-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s741-d31-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d25-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d27-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s852-d31-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d25-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d27-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s963-d31-three_close",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  }
+]

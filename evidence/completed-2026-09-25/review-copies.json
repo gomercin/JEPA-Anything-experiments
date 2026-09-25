@@ -1,0 +1,464 @@
+[
+  {
+    "original": "work/coupled_oscillators/frozen_encoder/alternate-rotation/summary.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/frozen_encoder/alternate-rotation/summary.md",
+    "sha256": "dea1b71cff46ef0236498fb6caf40f88600813523a8968b383e75a208b4305e2",
+    "bytes": 1135
+  },
+  {
+    "original": "work/coupled_oscillators/frozen_encoder/analysis.json",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/frozen_encoder/analysis.json",
+    "sha256": "d4506d39ca615436eaae3268ae1dc9eef90011e29ccc05902ad55a3e582170bc",
+    "bytes": 72825
+  },
+  {
+    "original": "work/coupled_oscillators/frozen_encoder/c1/summary.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/frozen_encoder/c1/summary.md",
+    "sha256": "c6178babed3b11650648b21f613769202442f0276899e0da3cda55eb7db150bd",
+    "bytes": 1133
+  },
+  {
+    "original": "work/coupled_oscillators/frozen_encoder/c2-c3/summary.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/frozen_encoder/c2-c3/summary.md",
+    "sha256": "b320e1afd15ef48d61c8dda2cfd1de45f9d6523ca099644210949586374523b6",
+    "bytes": 1940
+  },
+  {
+    "original": "work/coupled_oscillators/frozen_encoder/fixed-alternate/summary.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/frozen_encoder/fixed-alternate/summary.md",
+    "sha256": "f9377d76ea37a8be8337ad5242fb0807ea7c14e9c413c9919858ef6f10fb593c",
+    "bytes": 702
+  },
+  {
+    "original": "work/coupled_oscillators/frozen_encoder/gram-controls/summary.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/frozen_encoder/gram-controls/summary.md",
+    "sha256": "67b0872fadd24643b5092de80865bb71a739ea3db3e5b59bca38398a11c1f0c0",
+    "bytes": 1158
+  },
+  {
+    "original": "work/coupled_oscillators/frozen_encoder/mechanisms.png",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/frozen_encoder/mechanisms.png",
+    "sha256": "55ab9d3aeea76c0db42691765f369b4364b2a3c2a3e105efa27ab0e123c0abd4",
+    "bytes": 197355
+  },
+  {
+    "original": "work/coupled_oscillators/frozen_encoder/qr-native/summary.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/frozen_encoder/qr-native/summary.md",
+    "sha256": "6d7caffdf216d1cc6d0d9db7ddb5800cf1f88d6914e61c9ef0a1470609f08b5d",
+    "bytes": 459
+  },
+  {
+    "original": "work/coupled_oscillators/frozen_encoder/sgd-duration/summary.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/frozen_encoder/sgd-duration/summary.md",
+    "sha256": "0eca0e6daccf4a109bdcb412d56b2a2e1d7b7702937ee98bef1289def880a70b",
+    "bytes": 1058
+  },
+  {
+    "original": "work/coupled_oscillators/interrogation/panel-01/analysis.json",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/interrogation/panel-01/analysis.json",
+    "sha256": "acd007667553ed951a04c6cc2024524d54377797acc3283141e1d79ebf939d93",
+    "bytes": 8698
+  },
+  {
+    "original": "work/coupled_oscillators/interrogation/panel-01/conditioning.png",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/interrogation/panel-01/conditioning.png",
+    "sha256": "94861fcd09457e85a0865b27ff6071320ae92eb382463dde026afdcf0c66b5d2",
+    "bytes": 170550
+  },
+  {
+    "original": "work/coupled_oscillators/interrogation/panel-01/summary.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/interrogation/panel-01/summary.md",
+    "sha256": "8bc30c2d56485a28af32d7cd06de2037621653cb864e2b52730d9a83955c5e29",
+    "bytes": 1982
+  },
+  {
+    "original": "work/coupled_oscillators/phase-a-quick/summary.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase-a-quick/summary.md",
+    "sha256": "d163fe15915a0efbb852abde6df39873784c4bd7dd1fdbe350469a86c980f13d",
+    "bytes": 2730
+  },
+  {
+    "original": "work/coupled_oscillators/phase_b/COMMANDS.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_b/COMMANDS.md",
+    "sha256": "f82e1530cd3e6f40814f545798fe850793ee8a0e5d51634844b01d3d99fd51d1",
+    "bytes": 3467
+  },
+  {
+    "original": "work/coupled_oscillators/phase_b/analysis.json",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_b/analysis.json",
+    "sha256": "9752ac5bf0112ff8ea8ee9918c20c747e464399f3556490b666443bc75bb0380",
+    "bytes": 37480
+  },
+  {
+    "original": "work/coupled_oscillators/phase_b/b1/summary.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_b/b1/summary.md",
+    "sha256": "14443fd091664f5a959df4cc22886a7b9810e7e98313d969660119d80fa579af",
+    "bytes": 8406
+  },
+  {
+    "original": "work/coupled_oscillators/phase_b/coordinate_sensitivity.png",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_b/coordinate_sensitivity.png",
+    "sha256": "70ffe2b68a8d67450478593b029b76f663226b0f9a4dd64bb1b6da125487ac44",
+    "bytes": 64521
+  },
+  {
+    "original": "work/coupled_oscillators/phase_b/coordinate_sensitivity.svg",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_b/coordinate_sensitivity.svg",
+    "sha256": "a19220fcd10209554e3ed603bf0a3bcc269da2f30c43b6b3d0bfa4a0ed25f8b3",
+    "bytes": 56820
+  },
+  {
+    "original": "work/coupled_oscillators/phase_b/prediction_gap.png",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_b/prediction_gap.png",
+    "sha256": "0d09bd8cd05805ad2c78162de30266ee2ad07cc515fabfe0844e4c790cff7e74",
+    "bytes": 105199
+  },
+  {
+    "original": "work/coupled_oscillators/phase_b/prediction_gap.svg",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_b/prediction_gap.svg",
+    "sha256": "0cb7913bb7bbea793098034ea2a483a89b21d537c49fd1e29a3e721b1e71a071",
+    "bytes": 114245
+  },
+  {
+    "original": "work/coupled_oscillators/phase_b/summary.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_b/summary.md",
+    "sha256": "c279e30daf46e9638f677a68073aec10ccbff451407188e1f6e40a42cd81f3fa",
+    "bytes": 19195
+  },
+  {
+    "original": "work/coupled_oscillators/phase_c_partial/COMMANDS.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_c_partial/COMMANDS.md",
+    "sha256": "6e312a5804696507b04e113a7ea921ce267e98c84d009be8c679ac56d43b101c",
+    "bytes": 3967
+  },
+  {
+    "original": "work/coupled_oscillators/phase_c_partial/analysis.json",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_c_partial/analysis.json",
+    "sha256": "12306f8571a19f81fc20a874911c8b6567fdd9ab827f77d9c9ec0f230d800f77",
+    "bytes": 322941
+  },
+  {
+    "original": "work/coupled_oscillators/phase_c_partial/history-prediction.png",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_c_partial/history-prediction.png",
+    "sha256": "879e575b62fe6596a9d11c70212d9f58cac5201ee06d2eb02d58fff83e306c5f",
+    "bytes": 137425
+  },
+  {
+    "original": "work/coupled_oscillators/phase_c_partial/neural-training-rollout.png",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_c_partial/neural-training-rollout.png",
+    "sha256": "66f1b9e25f00cd15c484675570bde9502f5ad286230fa2754ed779aa8268484e",
+    "bytes": 225550
+  },
+  {
+    "original": "work/coupled_oscillators/phase_c_partial/summary.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_c_partial/summary.md",
+    "sha256": "4a50104b0133ca388fa15adb539b22f3e1c330916fd83641005939fb5f2527ff",
+    "bytes": 19651
+  },
+  {
+    "original": "work/coupled_oscillators/phase_d_noise/COMMANDS.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_d_noise/COMMANDS.md",
+    "sha256": "df03e09fd120569fc4610ed605b167d839c63bb870fb540897b975254f263f46",
+    "bytes": 5072
+  },
+  {
+    "original": "work/coupled_oscillators/phase_d_noise/analysis.json",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_d_noise/analysis.json",
+    "sha256": "8621ccd4e3f66d84746416845323502d807b3946813b7118e32639f1e9493010",
+    "bytes": 151087
+  },
+  {
+    "original": "work/coupled_oscillators/phase_d_noise/controls.png",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_d_noise/controls.png",
+    "sha256": "0f55d7e1b49a2589009e5c9f963526047c6e249d01f4ed0b668431641b14e8f7",
+    "bytes": 180270
+  },
+  {
+    "original": "work/coupled_oscillators/phase_d_noise/prediction.png",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_d_noise/prediction.png",
+    "sha256": "02c0791b425c715eb2927ba3d0d0ef0821c6c60fddec0e28005dc0a5671a5f10",
+    "bytes": 179612
+  },
+  {
+    "original": "work/coupled_oscillators/phase_d_noise/summary.md",
+    "copy": "evidence/completed-2026-09-25/review/work/coupled_oscillators/phase_d_noise/summary.md",
+    "sha256": "15faa3a7c002518f525024e9e318e2be140e02ca18b078a9d2d2490b24e4f58f",
+    "bytes": 19110
+  },
+  {
+    "original": "work/mediated_patterns/COMMANDS.md",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/COMMANDS.md",
+    "sha256": "ee90e11dfe12fdefa7b1d3cc2afeff87358c6a96061deffb18f0c301836d9ee3",
+    "bytes": 2613
+  },
+  {
+    "original": "work/mediated_patterns/NEW-quick/demonstration.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/NEW-quick/demonstration.png",
+    "sha256": "f11cc6e358a39dee52d064b254cc1661b3ee26445997893e7c7bda94a80d92dc",
+    "bytes": 96147
+  },
+  {
+    "original": "work/mediated_patterns/analysis-01/mechanism-and-response.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/analysis-01/mechanism-and-response.png",
+    "sha256": "4741967df06e030d2261cf11c405cc2d70d4318a235c4c3222dd952947f36c7d",
+    "bytes": 300421
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/analysis-02/commands.txt",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/analysis-02/commands.txt",
+    "sha256": "6f3821ddd432a893926cc95ca010db89af7ed6dd2b5df360f5ef4999243c351e",
+    "bytes": 4086
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/analysis-02/error_decomposition.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/analysis-02/error_decomposition.png",
+    "sha256": "5290d137f25f85820efb7ae1d64e35564b26e4c8df9096a5b55878bc696efc46",
+    "bytes": 167009
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/analysis-02/fresh_sequences.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/analysis-02/fresh_sequences.png",
+    "sha256": "2abc18154efa75e60d7221e54ed0f1c3b0f2329a9f6aad4a85e374abb921ec5e",
+    "bytes": 287431
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/analysis-02/summary.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/analysis-02/summary.json",
+    "sha256": "580c980b23aa35ebe9af818bc3273f02001588363e7abeca9762a620bb6961ff",
+    "bytes": 314484
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/analysis-03/commands.txt",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/analysis-03/commands.txt",
+    "sha256": "18269e368b398a38433bc44110ae4d61622de2d5e7e12b8f161467b1b3df5b8e",
+    "bytes": 4237
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/analysis-03/error_decomposition.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/analysis-03/error_decomposition.png",
+    "sha256": "5290d137f25f85820efb7ae1d64e35564b26e4c8df9096a5b55878bc696efc46",
+    "bytes": 167009
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/analysis-03/fresh_sequences.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/analysis-03/fresh_sequences.png",
+    "sha256": "72afa1f0f4bd15219e6fe2f993ef4b99c7e3b55bfac8d344993eabe62139d683",
+    "bytes": 283056
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/analysis-03/summary.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/analysis-03/summary.json",
+    "sha256": "624ac87883f6a193ffad36b596c058a336cd7fcf095d3d16ff7abf8a02c872f2",
+    "bytes": 314486
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/conditioned-02/fit.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/conditioned-02/fit.json",
+    "sha256": "a7262bb490902c78527b61a469334473f2415855d909635af28664a1e325f96f",
+    "bytes": 1651
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/fresh-01/summary.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/fresh-01/summary.json",
+    "sha256": "072abfb2212a6b35ed203907cb112cf9a59c83a40bda5d9ab34e8f4352e1226e",
+    "bytes": 9814
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/fresh-02/summary.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/fresh-02/summary.json",
+    "sha256": "e0a470cc53916ab5f54500586528dc536691bfffde75693008780476a09c3fe2",
+    "bytes": 10164
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/frozen-01/freeze.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/frozen-01/freeze.json",
+    "sha256": "26dae0a347a19f554283f4b84a7126e53db3233dbb5e668639ae998a50eaa7cc",
+    "bytes": 3632
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/frozen-02/freeze.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/frozen-02/freeze.json",
+    "sha256": "d3b4ab930d0a54d596593936c486fa563e7e1ca09fdce1e3e8dd26cfbaefab82",
+    "bytes": 3828
+  },
+  {
+    "original": "work/mediated_patterns/cross_pulse_repair/quick-02/summary.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/cross_pulse_repair/quick-02/summary.json",
+    "sha256": "c56b14d9ab8aff90c451fc51c54b4034ce646d719669a6be153615c4c819ea18",
+    "bytes": 4205
+  },
+  {
+    "original": "work/mediated_patterns/development-01/fit.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/development-01/fit.json",
+    "sha256": "e323e0f401180fd5a94e7975f51a606cbe424356d7585f423ef0627050d053b7",
+    "bytes": 1215
+  },
+  {
+    "original": "work/mediated_patterns/dual_reduction/analysis-01/responses.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/dual_reduction/analysis-01/responses.png",
+    "sha256": "3b99d7e670d93ee42cb29ba3b11e530bef26e6bd77cdcf712d33b9c6b31517b9",
+    "bytes": 129647
+  },
+  {
+    "original": "work/mediated_patterns/dual_reduction/analysis-01/return_contrast.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/dual_reduction/analysis-01/return_contrast.png",
+    "sha256": "07bbab186a5defd673d39d6551f1f3ef145b967e6cda13e61afdf090f74ff048",
+    "bytes": 131360
+  },
+  {
+    "original": "work/mediated_patterns/dual_reduction/analysis-02/responses.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/dual_reduction/analysis-02/responses.png",
+    "sha256": "14522214dbea4e0b29ebf2f606d31ab4115ea74677c12809830888e546c40c7a",
+    "bytes": 127449
+  },
+  {
+    "original": "work/mediated_patterns/dual_reduction/analysis-02/return_contrast.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/dual_reduction/analysis-02/return_contrast.png",
+    "sha256": "f14cafc838a3974321eb36e1d52c13ad62e01ec87b2b0a8210fd12d31dd6c2f0",
+    "bytes": 131151
+  },
+  {
+    "original": "work/mediated_patterns/dual_reduction/calibration-01/fit.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/dual_reduction/calibration-01/fit.json",
+    "sha256": "0f73978e9be0d4d938436ab26060f17f0fdde7c522282ba364db217aa52b3599",
+    "bytes": 2323
+  },
+  {
+    "original": "work/mediated_patterns/dual_reduction/commands.txt",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/dual_reduction/commands.txt",
+    "sha256": "6e914f0757c8b49b809da6e26f0c2fa369c72fd34913e24f78b9ab150c48334e",
+    "bytes": 6847
+  },
+  {
+    "original": "work/mediated_patterns/dual_reduction/frozen-01/freeze.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/dual_reduction/frozen-01/freeze.json",
+    "sha256": "14d93dad67d54436deeee9464e3faa1f00fb33f0282219c635e559f457652ec8",
+    "bytes": 1985
+  },
+  {
+    "original": "work/mediated_patterns/dual_reduction/frozen-02/freeze.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/dual_reduction/frozen-02/freeze.json",
+    "sha256": "ef6cf04b61c0ecd57cd458eb142d466d3088459995380b49f59ffd203bec34ec",
+    "bytes": 2124
+  },
+  {
+    "original": "work/mediated_patterns/pilot-02/profiles.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/pilot-02/profiles.png",
+    "sha256": "0d3a42c6e7dee952ada0f82b66f0004f2694d1bc7661404ec9b740228d0e36ae",
+    "bytes": 97565
+  },
+  {
+    "original": "work/mediated_patterns/pilot-04/fields.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/pilot-04/fields.png",
+    "sha256": "d2a5f6b092b89fe7dc16fa8ce871de3fdae53185c0969ac4091e5ea9f883b23d",
+    "bytes": 52449
+  },
+  {
+    "original": "work/mediated_patterns/quick-01/demonstration.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/quick-01/demonstration.png",
+    "sha256": "f11cc6e358a39dee52d064b254cc1661b3ee26445997893e7c7bda94a80d92dc",
+    "bytes": 96147
+  },
+  {
+    "original": "work/mediated_patterns/recursive_response/fit-01/fit.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/recursive_response/fit-01/fit.json",
+    "sha256": "7dd39a2d3a212e903732ee35c2190b7b60342d3a31ac64afcc7767624df352ef",
+    "bytes": 6261
+  },
+  {
+    "original": "work/mediated_patterns/recursive_response/fresh-01/summary.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/recursive_response/fresh-01/summary.json",
+    "sha256": "d3f9cc82b730ac160a7f83a1998d80486fc4e971671dd70721b8bd3c00f84b43",
+    "bytes": 4140
+  },
+  {
+    "original": "work/mediated_patterns/recursive_response/frozen-01/freeze.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/recursive_response/frozen-01/freeze.json",
+    "sha256": "d6fd71bc575f6f4d6d73dede83a598be7d33c6075c8bdb832baf98a94daa5ca3",
+    "bytes": 3382
+  },
+  {
+    "original": "work/mediated_patterns/recursive_response/quick-01/summary.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/recursive_response/quick-01/summary.json",
+    "sha256": "5501f5482bd5b6f75b23525874656da347026743cd3278c81072701746ba0af0",
+    "bytes": 2580
+  },
+  {
+    "original": "work/mediated_patterns/recursive_response/report-01/response_sequences.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/recursive_response/report-01/response_sequences.png",
+    "sha256": "ea1e9de59b5dc58ac21e52d3f70ac5cf4ae2b03464c522b214ad8cb9c8367a86",
+    "bytes": 289968
+  },
+  {
+    "original": "work/mediated_patterns/recursive_response/report-02/response_sequences.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/recursive_response/report-02/response_sequences.png",
+    "sha256": "d2809db02bb13eec4b8ecc4db039b783009c8fd86f23fc47f27087410567397d",
+    "bytes": 286948
+  },
+  {
+    "original": "work/mediated_patterns/repeated_hybrid/analysis-01/commands.txt",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/repeated_hybrid/analysis-01/commands.txt",
+    "sha256": "70e8d17a18678e36f70a4030551e0f58f509b43667aefc20e74dce77e8807e1a",
+    "bytes": 1476
+  },
+  {
+    "original": "work/mediated_patterns/repeated_hybrid/analysis-01/per_preparation.md",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/repeated_hybrid/analysis-01/per_preparation.md",
+    "sha256": "253af093fd171c45d89e94aa850fa3fe1e34e7af8e0afc675f8e028a6c39d427",
+    "bytes": 2529
+  },
+  {
+    "original": "work/mediated_patterns/repeated_hybrid/analysis-01/repeated_responses.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/repeated_hybrid/analysis-01/repeated_responses.png",
+    "sha256": "407a4a294d21c229ca8064bfe19bd72f6bc789cda5c84330d7c519f0d116fe47",
+    "bytes": 148476
+  },
+  {
+    "original": "work/mediated_patterns/repeated_hybrid/analysis-01/repeated_return.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/repeated_hybrid/analysis-01/repeated_return.png",
+    "sha256": "6ea6d5fbede67f32b7e67f905a7f97ac6dd3df5b42b9396067840ec0dbb40bb1",
+    "bytes": 157467
+  },
+  {
+    "original": "work/mediated_patterns/repeated_hybrid/analysis-01/summary.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/repeated_hybrid/analysis-01/summary.json",
+    "sha256": "df4043dfbbe36d2cb64c1a8d56b11ab27a3c61976bc835acd28c86b50d5e5040",
+    "bytes": 269349
+  },
+  {
+    "original": "work/mediated_patterns/repeated_hybrid/frozen-01/freeze.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/repeated_hybrid/frozen-01/freeze.json",
+    "sha256": "e41654197dd345190ab2dcec3806340832c05946a173253b0d66902e3a19ac98",
+    "bytes": 2358
+  },
+  {
+    "original": "work/mediated_patterns/two_way_hybrid/analysis-01/commands.txt",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/two_way_hybrid/analysis-01/commands.txt",
+    "sha256": "46a7ef8d1c9b06c63a735a992003f43689a8c62c078d2a329a6d56fc417c8b0b",
+    "bytes": 2882
+  },
+  {
+    "original": "work/mediated_patterns/two_way_hybrid/analysis-01/summary.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/two_way_hybrid/analysis-01/summary.json",
+    "sha256": "64e0b05f06a44f5b047022558235da7ac08926c5a789b0490afaef5af766bc5d",
+    "bytes": 28355
+  },
+  {
+    "original": "work/mediated_patterns/two_way_hybrid/analysis-01/two_way_response.png",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/two_way_hybrid/analysis-01/two_way_response.png",
+    "sha256": "ae6322d451d55a76498264505821306e3c420e65b7d78f1ef44bb41aad01805a",
+    "bytes": 310410
+  },
+  {
+    "original": "work/mediated_patterns/two_way_hybrid/calibration-01/fit.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/two_way_hybrid/calibration-01/fit.json",
+    "sha256": "3534159a4345f392acf2875e3543b0665d2cd7367024840874bc2ec145fd9a30",
+    "bytes": 6828
+  },
+  {
+    "original": "work/mediated_patterns/two_way_hybrid/frozen-01/freeze.json",
+    "copy": "evidence/completed-2026-09-25/review/work/mediated_patterns/two_way_hybrid/frozen-01/freeze.json",
+    "sha256": "05dbfc5d2681f55ab46e24e6e3923d318100fcc4481d843049ff62050427ba7a",
+    "bytes": 3558
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "single_fit": [
+    {
+      "nominal_separation": 24,
+      "basis_projection_relative": 0.00040840071563187375
+    },
+    {
+      "nominal_separation": 25,
+      "basis_projection_relative": 0.0003257919784527459
+    },
+    {
+      "nominal_separation": 26,
+      "basis_projection_relative": 0.000433871753659798
+    },
+    {
+      "nominal_separation": 27,
+      "basis_projection_relative": 0.00045469974785293407
+    },
+    {
+      "nominal_separation": 28,
+      "basis_projection_relative": 0.0006430752219852722
+    },
+    {
+      "nominal_separation": 29,
+      "basis_projection_relative": 0.0005408908551470086
+    },
+    {
+      "nominal_separation": 30,
+      "basis_projection_relative": 0.0004377568280422267
+    },
+    {
+      "nominal_separation": 31,
+      "basis_projection_relative": 0.0006853464232981886
+    },
+    {
+      "nominal_separation": 32,
+      "basis_projection_relative": 0.0009826329712531517
+    }
+  ],
+  "cross_fit": {
+    "tau": [
+      1.152122683206563,
+      0.9519632033034647
+    ],
+    "weights": [
+      -2.262991057218343,
+      11.195356806312175,
+      17.144196824711646,
+      -68.51468919824573,
+      0.298989849772098,
+      0.057402954826929586,
+      -1.5977201510150103,
+      9.564697256239187,
+      0.38064128153284515,
+      -1.1785700435376594,
+      -0.19326166403744596,
+      -4.905404924885314
+    ],
+    "success": true,
+    "normalized_cross_fit_rmse": 0.0018677983642622262,
+    "tau_bounds": [
+      0.25,
+      10.0
+    ],
+    "objective": "cross-only, normalized by sum of single-response RMS"
+  },
+  "cpu_seconds": 0.43633299999999997,
+  "wall_seconds": 0.6196709170471877
+}

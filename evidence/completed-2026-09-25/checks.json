@@ -1,0 +1,41 @@
+{
+  "scope": "Preservation software checks only; not scientific reproduction",
+  "fast_tests": 202,
+  "subtests": 2,
+  "deselected_scientific_panel_tests": 1,
+  "make_check": "passed",
+  "historical_source_strict_lint": {
+    "status": "existing findings retained",
+    "count": 58,
+    "files": 9,
+    "codes": {
+      "E501": 49,
+      "B007": 8,
+      "E731": 1
+    }
+  },
+  "historical_source_format_check": {
+    "status": "would reformat; originals retained",
+    "files": 19
+  },
+  "new_restore_tests": 9,
+  "new_tool_lint_and_format": "passed",
+  "scientific_panels_executed": 0,
+  "whitespace": {
+    "initial": "2120 trailing-space lines in two byte-identical historical Matplotlib SVG review copies",
+    "handling": "Scoped .gitattributes whitespace exemption for those generated SVG copies; no bytes changed",
+    "source_and_documentation": "passed"
+  },
+  "remote_restoration": {
+    "archive_bytes": 346031945,
+    "verified_members": 2250,
+    "restored_bytes": 1009289031,
+    "saved_model_checkpoint_table_smoke": "passed",
+    "download_failures_retained": [
+      "Python TLS issuer certificate unavailable; did not disable verification",
+      "gh download timed out after partial large asset; verified curl range resume succeeded"
+    ]
+  },
+  "preservation_regression_after_handoff": "passed; unnecessary new oscillator README appendix removed to retain its exact historical bytes",
+  "source_snapshot_hosted_ci": "three completed SUCCESS checks observed at e17fe41d07a03d3a7fe67955054112773e8344be"
+}

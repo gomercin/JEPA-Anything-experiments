@@ -133,3 +133,19 @@ If you find this work useful in your research, please cite our paper:
 ## License
 
 See [LICENSE](LICENSE) and the [core license](jepa-anything-core/LICENSE).
+
+## Completed exploratory lab evidence (this fork)
+
+This fork's completed oscillator A–D and mediated-pattern investigations are
+preserved separately from the upstream framework claims. Start with the
+[portable evidence index](evidence/completed-2026-09-25/README.md) for reports,
+frozen model identities, all result/failure packages, explicit restoration and
+review limitations. Publication began as an unreviewed research snapshot, not a new
+scientific run or production release. The next organization-conditioned-response
+investigation is not executed by this preservation task.
+
+Implementation review and integration status are recorded in [PR #1](https://github.com/gomercin/JEPA-Anything-experiments/pull/1)
+and [PR #2](https://github.com/gomercin/JEPA-Anything-experiments/pull/2).
+Publication-time receipts and frozen reports remain historical records; integration
+does not expand the scientific claims. No further research or Atlas update is
+part of this review.

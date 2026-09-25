@@ -1,0 +1,156 @@
+{
+  "status": "FROZEN_EXPLORATORY",
+  "contract": {
+    "input": "u <- u*(1+a*b(x)); compact C-infinity bump, radius 8, fixed left anchor",
+    "output": "fixed exterior mediator sensor at right anchor+12, minus own no-pulse sham",
+    "initial_access": "one field scan for u^2-weighted initial separation; nominal anchors known",
+    "deployment": "only initial separation, retained state, static coefficients, clock and pulses",
+    "sensor": "old smooth radius-2 sensor; never recentered",
+    "sample": 0.25,
+    "event_order": "jump at exact event time before sampling; mediator is continuous at event",
+    "preparation": "two isolated 150-unit relaxations, assembly residual .02, age20 odd/60 even",
+    "new_horizon": 100,
+    "historical_gates": "unchanged; terminal exterior max2e-6 and NRMSE15% at20/50"
+  },
+  "model_sha256": "d7359fd7a6cdc9a5f5d2cfec57440516c75d4267e0dfc7a6262607c6398410ca",
+  "baseline_model_hashes": {
+    "kernel.json": "828fb8a8f863dad9a3082c8721eb15ce6eaa11725b49e9d527274bca5e34c4a0",
+    "state-uncorrected.json": "0d98a86b8060723f8042c06f0d5e2ebe7511a4302ee39e879af7b80d277961f4"
+  },
+  "baseline_directory": "work/mediated_patterns/recursive_response/frozen-01",
+  "gates": {
+    "response_resolution_floor": 1e-07,
+    "floor_rationale": "absolute readout contract rounded above the 7.87e-8 domain-refinement bound",
+    "per_run_trace_nrmse": 0.05,
+    "per_run_max_absolute": 2e-06,
+    "early_first_0_to_5_max_absolute": 2e-08,
+    "relative_rule": "no relative accuracy verdict if window signal RMS<=1e-7",
+    "after_last": "same NRMSE/absolute gates, separate from whole trace"
+  },
+  "seeds": [
+    741,
+    852,
+    963
+  ],
+  "separations": [
+    25,
+    27,
+    31
+  ],
+  "schedules": [
+    {
+      "name": "short_np25",
+      "role": "short",
+      "pulses": [
+        [
+          0,
+          -0.08
+        ],
+        [
+          2.5,
+          0.08
+        ]
+      ]
+    },
+    {
+      "name": "short_pn35",
+      "role": "short",
+      "pulses": [
+        [
+          0,
+          0.09
+        ],
+        [
+          3.5,
+          -0.09
+        ]
+      ]
+    },
+    {
+      "name": "strong_np2",
+      "role": "short",
+      "pulses": [
+        [
+          0,
+          -0.1
+        ],
+        [
+          2,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "same_sign_wait6",
+      "role": "regression",
+      "pulses": [
+        [
+          0,
+          0.075
+        ],
+        [
+          6,
+          0.075
+        ]
+      ]
+    },
+    {
+      "name": "opposite_wait15",
+      "role": "regression",
+      "pulses": [
+        [
+          0,
+          -0.075
+        ],
+        [
+          15,
+          0.075
+        ]
+      ]
+    },
+    {
+      "name": "unequal_wait30",
+      "role": "regression",
+      "pulses": [
+        [
+          0,
+          0.05
+        ],
+        [
+          30,
+          -0.1
+        ]
+      ]
+    },
+    {
+      "name": "three_close",
+      "role": "three",
+      "pulses": [
+        [
+          0,
+          0.08
+        ],
+        [
+          2.5,
+          -0.09
+        ],
+        [
+          7.5,
+          0.06
+        ]
+      ]
+    }
+  ],
+  "horizon": 100,
+  "sample": 0.25,
+  "fit_sources": [
+    "s11-d24",
+    "s11-d28",
+    "s11-d32",
+    "s411-d29"
+  ],
+  "selection": "two command-memory scalars, 6 coefficients; first pulse and A/B/C unchanged",
+  "split": "whole preparations; all earlier outcomes exposed and only these seeds fresh",
+  "joint_success": "short-gap improvement under unchanged gates AND retained regression and three-pulse gates",
+  "pathway": "no pathway-fidelity claim; total-response task only"
+}

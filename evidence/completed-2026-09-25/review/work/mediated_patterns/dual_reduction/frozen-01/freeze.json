@@ -1,0 +1,95 @@
+{
+  "status": "SEPARATELY_FR_QUALIFIED",
+  "C_order": 24,
+  "C_model_sha256": "232cdd3477d7e80f61decf18e5b0354f12f05c253de1c23f234d06c9c2729d35",
+  "AB_model_sha256": "a128228fd027986ed17fbc1802f02a9d1820f7dffd215aa46fa6211c4c04bb6e",
+  "config": {
+    "length": 192,
+    "n": 768,
+    "dt": 0.00625,
+    "r": -0.67,
+    "cubic": 2.0,
+    "feedback": 0.05,
+    "source": 1.0,
+    "diffusion": 64.0,
+    "tau": 10.0
+  },
+  "gates": {
+    "C_response_nrmse": 0.01,
+    "C_response_max": 0.001,
+    "B_response_nrmse": 0.1,
+    "B_response_max": 2e-05,
+    "C_return_nrmse": 0.1,
+    "C_return_max": 1e-06,
+    "return_signal_floor": 2e-07
+  },
+  "additional_gates": {
+    "C_field_relative_rms": 0.01,
+    "C_sham_mass_max": 0.005,
+    "C_jump_mass_max": 0.001,
+    "initial_max": 1e-10
+  },
+  "training": [
+    "s71-c38",
+    "s71-c42",
+    "s82-c38",
+    "s82-c42"
+  ],
+  "FR_development": [
+    "s2011-c39",
+    "s2022-c41"
+  ],
+  "RR_exposure_before_freeze": false,
+  "qualification_resolution": {
+    "s2011-c39-single": "pass_with_unresolved_windows",
+    "s2011-c39-reverse": "pass_with_unresolved_windows",
+    "s2022-c41-reverse": "partial_unresolved_return",
+    "s2022-c41-single": "pass_with_unresolved_windows"
+  },
+  "fresh_seeds": [
+    4011,
+    4022,
+    4033
+  ],
+  "positions": [
+    39,
+    41
+  ],
+  "age": "20 odd /60 even",
+  "plans": {
+    "two": {
+      "events": [
+        [
+          0,
+          0.075
+        ],
+        [
+          10,
+          -0.065
+        ]
+      ],
+      "horizon": 80
+    },
+    "three": {
+      "events": [
+        [
+          0,
+          -0.08
+        ],
+        [
+          9,
+          0.065
+        ],
+        [
+          27,
+          -0.075
+        ]
+      ],
+      "horizon": 107
+    }
+  },
+  "AB_unchanged": true,
+  "joint_fit": false,
+  "windows": "same repeated-hybrid whole/event20/last+10/final20; early5 absolute-only",
+  "stop": "first independently frozen composition preserved; adaptation if any separately named"
+}

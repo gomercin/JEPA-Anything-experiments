@@ -1,0 +1,668 @@
+[
+  {
+    "id": "oscillator-a",
+    "report": "experiments/coupled_oscillators/README.md",
+    "report_sha256_before_publication_handoff": "49662e23c51b611bd8e7c9cb0dfb4d56ed5f897ab042cb66fe3ddfeb05fbfd0e",
+    "packages": [
+      "work/coupled_oscillators/phase-a-quick"
+    ],
+    "artifact_count": 4,
+    "raw_bytes": 186301,
+    "archives": [
+      "coupled_oscillators.tar.gz"
+    ],
+    "commands": [],
+    "protocols": [
+      "work/coupled_oscillators/phase-a-quick/protocol.json"
+    ],
+    "result_and_table_paths": [
+      "work/coupled_oscillators/phase-a-quick/results.json",
+      "work/coupled_oscillators/phase-a-quick/summary.md"
+    ],
+    "models_and_configs": [],
+    "provenance": "Per-run protocol/source hashes and archived executed sources where present; preservation revision is not a historical execution revision.",
+    "model_note": "Oscillator weights/matrices are embedded in saved result or per-run JSON where recorded; no invented stand-alone frozen checkpoint. Phase A retained no trained checkpoint."
+  },
+  {
+    "id": "oscillator-interrogation",
+    "report": "experiments/coupled_oscillators/INTERROGATION.md",
+    "report_sha256_before_publication_handoff": "3c6ae0767ea37ad5f4ced78fecfe4847969273dee6eda28edf4bfa085b9ec12c",
+    "packages": [
+      "work/coupled_oscillators/interrogation"
+    ],
+    "artifact_count": 8,
+    "raw_bytes": 9210744,
+    "archives": [
+      "coupled_oscillators.tar.gz"
+    ],
+    "commands": [],
+    "protocols": [
+      "work/coupled_oscillators/interrogation/panel-01/protocol.json"
+    ],
+    "result_and_table_paths": [
+      "work/coupled_oscillators/interrogation/panel-01/analysis.json",
+      "work/coupled_oscillators/interrogation/panel-01/results.json",
+      "work/coupled_oscillators/interrogation/panel-01/summary.md"
+    ],
+    "models_and_configs": [],
+    "provenance": "Per-run protocol/source hashes and archived executed sources where present; preservation revision is not a historical execution revision.",
+    "model_note": "Oscillator weights/matrices are embedded in saved result or per-run JSON where recorded; no invented stand-alone frozen checkpoint. Phase A retained no trained checkpoint."
+  },
+  {
+    "id": "oscillator-frozen-encoder",
+    "report": "experiments/coupled_oscillators/FROZEN_ENCODER.md",
+    "report_sha256_before_publication_handoff": "76e439ee15ad661ebd39a7862ae340f1d8a5be40a8da28a0cfbdfb7d2ac0d5a3",
+    "packages": [
+      "work/coupled_oscillators/frozen_encoder"
+    ],
+    "artifact_count": 38,
+    "raw_bytes": 39626925,
+    "archives": [
+      "coupled_oscillators.tar.gz"
+    ],
+    "commands": [],
+    "protocols": [
+      "work/coupled_oscillators/frozen_encoder/alternate-rotation/protocol.json",
+      "work/coupled_oscillators/frozen_encoder/c1/protocol.json",
+      "work/coupled_oscillators/frozen_encoder/c2-c3/protocol.json",
+      "work/coupled_oscillators/frozen_encoder/fixed-alternate/protocol.json",
+      "work/coupled_oscillators/frozen_encoder/gram-controls/protocol.json",
+      "work/coupled_oscillators/frozen_encoder/qr-native/protocol.json",
+      "work/coupled_oscillators/frozen_encoder/sgd-duration/protocol.json"
+    ],
+    "result_and_table_paths": [
+      "work/coupled_oscillators/frozen_encoder/alternate-rotation/results.json",
+      "work/coupled_oscillators/frozen_encoder/alternate-rotation/summary.md",
+      "work/coupled_oscillators/frozen_encoder/analysis.json",
+      "work/coupled_oscillators/frozen_encoder/c1/results.json",
+      "work/coupled_oscillators/frozen_encoder/c1/summary.md",
+      "work/coupled_oscillators/frozen_encoder/c2-c3/results.json",
+      "work/coupled_oscillators/frozen_encoder/c2-c3/summary.md",
+      "work/coupled_oscillators/frozen_encoder/fixed-alternate/results.json",
+      "work/coupled_oscillators/frozen_encoder/fixed-alternate/summary.md",
+      "work/coupled_oscillators/frozen_encoder/gram-controls/results.json",
+      "work/coupled_oscillators/frozen_encoder/gram-controls/summary.md",
+      "work/coupled_oscillators/frozen_encoder/qr-native/results.json",
+      "work/coupled_oscillators/frozen_encoder/qr-native/summary.md",
+      "work/coupled_oscillators/frozen_encoder/sgd-duration/results.json",
+      "work/coupled_oscillators/frozen_encoder/sgd-duration/summary.md"
+    ],
+    "models_and_configs": [],
+    "provenance": "Per-run protocol/source hashes and archived executed sources where present; preservation revision is not a historical execution revision.",
+    "model_note": "Oscillator weights/matrices are embedded in saved result or per-run JSON where recorded; no invented stand-alone frozen checkpoint. Phase A retained no trained checkpoint."
+  },
+  {
+    "id": "oscillator-b",
+    "report": "experiments/coupled_oscillators/PHASE_B.md",
+    "report_sha256_before_publication_handoff": "c279e30daf46e9638f677a68073aec10ccbff451407188e1f6e40a42cd81f3fa",
+    "packages": [
+      "work/coupled_oscillators/phase_b"
+    ],
+    "artifact_count": 101,
+    "raw_bytes": 40128578,
+    "archives": [
+      "coupled_oscillators.tar.gz"
+    ],
+    "commands": [
+      "work/coupled_oscillators/phase_b/COMMANDS.md"
+    ],
+    "protocols": [
+      "work/coupled_oscillators/phase_b/b0/protocol.json",
+      "work/coupled_oscillators/phase_b/b0-refined/protocol.json",
+      "work/coupled_oscillators/phase_b/b1/protocol.json",
+      "work/coupled_oscillators/phase_b/b2-controls/protocol.json",
+      "work/coupled_oscillators/phase_b/b3-transform/protocol.json"
+    ],
+    "result_and_table_paths": [
+      "work/coupled_oscillators/phase_b/analysis.json",
+      "work/coupled_oscillators/phase_b/b0/qualification.json",
+      "work/coupled_oscillators/phase_b/b0/results.json",
+      "work/coupled_oscillators/phase_b/b0-refined/qualification.json",
+      "work/coupled_oscillators/phase_b/b0-refined/results.json",
+      "work/coupled_oscillators/phase_b/b1/results.json",
+      "work/coupled_oscillators/phase_b/b1/summary.md",
+      "work/coupled_oscillators/phase_b/b2-controls/results.json",
+      "work/coupled_oscillators/phase_b/b3-transform/results.json",
+      "work/coupled_oscillators/phase_b/summary.md"
+    ],
+    "models_and_configs": [],
+    "provenance": "Per-run protocol/source hashes and archived executed sources where present; preservation revision is not a historical execution revision.",
+    "model_note": "Oscillator weights/matrices are embedded in saved result or per-run JSON where recorded; no invented stand-alone frozen checkpoint. Phase A retained no trained checkpoint."
+  },
+  {
+    "id": "oscillator-c",
+    "report": "experiments/coupled_oscillators/PHASE_C_PARTIAL.md",
+    "report_sha256_before_publication_handoff": "4a50104b0133ca388fa15adb539b22f3e1c330916fd83641005939fb5f2527ff",
+    "packages": [
+      "work/coupled_oscillators/phase_c_partial"
+    ],
+    "artifact_count": 98,
+    "raw_bytes": 25989945,
+    "archives": [
+      "coupled_oscillators.tar.gz"
+    ],
+    "commands": [
+      "work/coupled_oscillators/phase_c_partial/COMMANDS.md"
+    ],
+    "protocols": [
+      "work/coupled_oscillators/phase_c_partial/c0/protocol.json",
+      "work/coupled_oscillators/phase_c_partial/c0-compression/protocol.json",
+      "work/coupled_oscillators/phase_c_partial/c0-ridge/protocol.json",
+      "work/coupled_oscillators/phase_c_partial/c1/protocol.json",
+      "work/coupled_oscillators/phase_c_partial/c2-duration/protocol.json",
+      "work/coupled_oscillators/phase_c_partial/c3-diagnostics/protocol.json"
+    ],
+    "result_and_table_paths": [
+      "work/coupled_oscillators/phase_c_partial/analysis.json",
+      "work/coupled_oscillators/phase_c_partial/c0/results.json",
+      "work/coupled_oscillators/phase_c_partial/c0-compression/results.json",
+      "work/coupled_oscillators/phase_c_partial/c0-ridge/results.json",
+      "work/coupled_oscillators/phase_c_partial/c1/results.json",
+      "work/coupled_oscillators/phase_c_partial/c2-duration/results.json",
+      "work/coupled_oscillators/phase_c_partial/c3-diagnostics/results.json",
+      "work/coupled_oscillators/phase_c_partial/summary.md"
+    ],
+    "models_and_configs": [],
+    "provenance": "Per-run protocol/source hashes and archived executed sources where present; preservation revision is not a historical execution revision.",
+    "model_note": "Oscillator weights/matrices are embedded in saved result or per-run JSON where recorded; no invented stand-alone frozen checkpoint. Phase A retained no trained checkpoint."
+  },
+  {
+    "id": "oscillator-d",
+    "report": "experiments/coupled_oscillators/PHASE_D_NOISE.md",
+    "report_sha256_before_publication_handoff": "15faa3a7c002518f525024e9e318e2be140e02ca18b078a9d2d2490b24e4f58f",
+    "packages": [
+      "work/coupled_oscillators/phase_d_noise"
+    ],
+    "artifact_count": 132,
+    "raw_bytes": 33515612,
+    "archives": [
+      "coupled_oscillators.tar.gz"
+    ],
+    "commands": [
+      "work/coupled_oscillators/phase_d_noise/COMMANDS.md"
+    ],
+    "protocols": [
+      "work/coupled_oscillators/phase_d_noise/d0/protocol.json",
+      "work/coupled_oscillators/phase_d_noise/d1-filters/protocol.json",
+      "work/coupled_oscillators/phase_d_noise/d2-neural/protocol.json",
+      "work/coupled_oscillators/phase_d_noise/d3-output-error/protocol.json",
+      "work/coupled_oscillators/phase_d_noise/d3-output-error-contiguous/protocol.json",
+      "work/coupled_oscillators/phase_d_noise/d4-duration/protocol.json",
+      "work/coupled_oscillators/phase_d_noise/d5-normalization/protocol.json",
+      "work/coupled_oscillators/phase_d_noise/d6-output-error-duration/protocol.json"
+    ],
+    "result_and_table_paths": [
+      "work/coupled_oscillators/phase_d_noise/analysis.json",
+      "work/coupled_oscillators/phase_d_noise/d0/results.json",
+      "work/coupled_oscillators/phase_d_noise/d1-filters/results.json",
+      "work/coupled_oscillators/phase_d_noise/d2-neural/results.json",
+      "work/coupled_oscillators/phase_d_noise/d3-output-error-contiguous/results.json",
+      "work/coupled_oscillators/phase_d_noise/d4-duration/results.json",
+      "work/coupled_oscillators/phase_d_noise/d5-normalization/results.json",
+      "work/coupled_oscillators/phase_d_noise/d6-output-error-duration/results.json",
+      "work/coupled_oscillators/phase_d_noise/summary.md"
+    ],
+    "models_and_configs": [],
+    "provenance": "Per-run protocol/source hashes and archived executed sources where present; preservation revision is not a historical execution revision.",
+    "model_note": "Oscillator weights/matrices are embedded in saved result or per-run JSON where recorded; no invented stand-alone frozen checkpoint. Phase A retained no trained checkpoint."
+  },
+  {
+    "id": "field-terminal",
+    "report": "experiments/mediated_patterns/FINDINGS.md",
+    "report_sha256_before_publication_handoff": "820b97968f4a1618209251750efae5e63f480206ad02e2e11dea7a7a90d30256",
+    "packages": [
+      "work/mediated_patterns/pilot-01",
+      "work/mediated_patterns/pilot-02",
+      "work/mediated_patterns/pilot-03",
+      "work/mediated_patterns/pilot-04",
+      "work/mediated_patterns/qualification-01",
+      "work/mediated_patterns/qualification-02",
+      "work/mediated_patterns/qualification-03",
+      "work/mediated_patterns/development-01",
+      "work/mediated_patterns/fresh-01",
+      "work/mediated_patterns/fresh-refinement-01",
+      "work/mediated_patterns/readout-diagnostic-01",
+      "work/mediated_patterns/outward-development-01",
+      "work/mediated_patterns/outward-fresh-01",
+      "work/mediated_patterns/receiver-control-01",
+      "work/mediated_patterns/analysis-01",
+      "work/mediated_patterns/quick-01",
+      "work/mediated_patterns/NEW-quick"
+    ],
+    "artifact_count": 204,
+    "raw_bytes": 76148431,
+    "archives": [
+      "mediated_patterns.tar.gz"
+    ],
+    "commands": [],
+    "protocols": [
+      "work/mediated_patterns/NEW-quick/protocol.json",
+      "work/mediated_patterns/analysis-01/protocol.json",
+      "work/mediated_patterns/development-01/protocol.json",
+      "work/mediated_patterns/fresh-01/protocol.json",
+      "work/mediated_patterns/fresh-refinement-01/protocol.json",
+      "work/mediated_patterns/outward-development-01/protocol.json",
+      "work/mediated_patterns/outward-fresh-01/protocol.json",
+      "work/mediated_patterns/pilot-01/protocol.json",
+      "work/mediated_patterns/pilot-02/protocol.json",
+      "work/mediated_patterns/pilot-03/protocol.json",
+      "work/mediated_patterns/pilot-04/protocol.json",
+      "work/mediated_patterns/qualification-01/protocol.json",
+      "work/mediated_patterns/qualification-02/protocol.json",
+      "work/mediated_patterns/qualification-03/protocol.json",
+      "work/mediated_patterns/quick-01/protocol.json",
+      "work/mediated_patterns/readout-diagnostic-01/protocol.json",
+      "work/mediated_patterns/receiver-control-01/protocol.json"
+    ],
+    "result_and_table_paths": [
+      "work/mediated_patterns/NEW-quick/results.json",
+      "work/mediated_patterns/development-01/results.json",
+      "work/mediated_patterns/fresh-01/results.json",
+      "work/mediated_patterns/fresh-refinement-01/results.json",
+      "work/mediated_patterns/outward-development-01/results.json",
+      "work/mediated_patterns/outward-fresh-01/results.json",
+      "work/mediated_patterns/pilot-01/results.json",
+      "work/mediated_patterns/pilot-02/results.json",
+      "work/mediated_patterns/pilot-03/results.json",
+      "work/mediated_patterns/pilot-04/results.json",
+      "work/mediated_patterns/qualification-01/results.json",
+      "work/mediated_patterns/qualification-02/results.json",
+      "work/mediated_patterns/qualification-03/results.json",
+      "work/mediated_patterns/quick-01/results.json",
+      "work/mediated_patterns/readout-diagnostic-01/results.json",
+      "work/mediated_patterns/receiver-control-01/results.json"
+    ],
+    "models_and_configs": [
+      {
+        "path": "work/mediated_patterns/outward-development-01/model.json",
+        "bytes": 1419,
+        "sha256": "e01be919706959b312c829388e7b9c4f14a8cca327c860c36f96c92058611855",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/outward-development-01/model.json"
+      }
+    ],
+    "provenance": "Per-run protocol/source hashes and archived executed sources where present; preservation revision is not a historical execution revision."
+  },
+  {
+    "id": "recursive-response",
+    "report": "experiments/mediated_patterns/RECURSIVE_RESPONSE.md",
+    "report_sha256_before_publication_handoff": "05b8e70526de26b5741880e725c01a7ad01f18942a28edcb532cde43bb231871",
+    "packages": [
+      "work/mediated_patterns/recursive_response"
+    ],
+    "artifact_count": 186,
+    "raw_bytes": 84682955,
+    "archives": [
+      "mediated_patterns.tar.gz"
+    ],
+    "commands": [],
+    "protocols": [
+      "work/mediated_patterns/recursive_response/development-01/protocol.json",
+      "work/mediated_patterns/recursive_response/diagnostic-01/protocol.json",
+      "work/mediated_patterns/recursive_response/diagnostic-02/protocol.json",
+      "work/mediated_patterns/recursive_response/fit-01/protocol.json",
+      "work/mediated_patterns/recursive_response/fresh-01/protocol.json",
+      "work/mediated_patterns/recursive_response/frozen-01/protocol.json",
+      "work/mediated_patterns/recursive_response/pilot-01/protocol.json",
+      "work/mediated_patterns/recursive_response/qualification-01/protocol.json",
+      "work/mediated_patterns/recursive_response/qualification-three-01/protocol.json",
+      "work/mediated_patterns/recursive_response/quick-01/protocol.json",
+      "work/mediated_patterns/recursive_response/repair-01/protocol.json",
+      "work/mediated_patterns/recursive_response/report-01/protocol.json",
+      "work/mediated_patterns/recursive_response/report-02/protocol.json"
+    ],
+    "result_and_table_paths": [
+      "work/mediated_patterns/recursive_response/development-01/results.json",
+      "work/mediated_patterns/recursive_response/diagnostic-01/results.json",
+      "work/mediated_patterns/recursive_response/diagnostic-02/results.json",
+      "work/mediated_patterns/recursive_response/fresh-01/results.json",
+      "work/mediated_patterns/recursive_response/fresh-01/summary.json",
+      "work/mediated_patterns/recursive_response/pilot-01/results.json",
+      "work/mediated_patterns/recursive_response/qualification-01/results.json",
+      "work/mediated_patterns/recursive_response/qualification-three-01/results.json",
+      "work/mediated_patterns/recursive_response/quick-01/results.json",
+      "work/mediated_patterns/recursive_response/quick-01/summary.json"
+    ],
+    "models_and_configs": [
+      {
+        "path": "work/mediated_patterns/recursive_response/frozen-01/kernel.json",
+        "bytes": 96085,
+        "sha256": "828fb8a8f863dad9a3082c8721eb15ce6eaa11725b49e9d527274bca5e34c4a0",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/recursive_response/frozen-01/kernel.json"
+      },
+      {
+        "path": "work/mediated_patterns/recursive_response/frozen-01/state-uncorrected.json",
+        "bytes": 5113,
+        "sha256": "0d98a86b8060723f8042c06f0d5e2ebe7511a4302ee39e879af7b80d277961f4",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/recursive_response/frozen-01/state-uncorrected.json"
+      },
+      {
+        "path": "work/mediated_patterns/recursive_response/frozen-01/freeze.json",
+        "bytes": 3382,
+        "sha256": "d6fd71bc575f6f4d6d73dede83a598be7d33c6075c8bdb832baf98a94daa5ca3",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/recursive_response/frozen-01/freeze.json"
+      }
+    ],
+    "provenance": "Per-run protocol/source hashes and archived executed sources where present; preservation revision is not a historical execution revision."
+  },
+  {
+    "id": "cross-pulse-repair",
+    "report": "experiments/mediated_patterns/CROSS_PULSE_REPAIR.md",
+    "report_sha256_before_publication_handoff": "d6ee62ffc9dad4487b6e09ae47c15dd49f107b4fd1a0d1380c316834cbc1bb18",
+    "packages": [
+      "work/mediated_patterns/cross_pulse_repair"
+    ],
+    "artifact_count": 317,
+    "raw_bytes": 118348605,
+    "archives": [
+      "mediated_patterns.tar.gz"
+    ],
+    "commands": [
+      "work/mediated_patterns/cross_pulse_repair/analysis-02/commands.txt",
+      "work/mediated_patterns/cross_pulse_repair/analysis-03/commands.txt"
+    ],
+    "protocols": [
+      "work/mediated_patterns/cross_pulse_repair/analysis-02/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/analysis-03/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/conditioned-02/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/conditioned-regression-02/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/cross-model-01/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/cross-regression-01/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/development-01/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/diagnosis-01/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/event-linear-01/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/event-linear-regression-01/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/fresh-01/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/fresh-02/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/frozen-01/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/frozen-02/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/pulse-audit-01/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/qualification-02/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/quick-02/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/refinement-01/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/singles-02/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/triple-diagnostic-01/protocol.json",
+      "work/mediated_patterns/cross_pulse_repair/triple-diagnostic-02/protocol.json"
+    ],
+    "result_and_table_paths": [
+      "work/mediated_patterns/cross_pulse_repair/analysis-02/summary.json",
+      "work/mediated_patterns/cross_pulse_repair/analysis-03/summary.json",
+      "work/mediated_patterns/cross_pulse_repair/conditioned-regression-02/results.json",
+      "work/mediated_patterns/cross_pulse_repair/cross-model-01/results.json",
+      "work/mediated_patterns/cross_pulse_repair/cross-regression-01/results.json",
+      "work/mediated_patterns/cross_pulse_repair/development-01/results.json",
+      "work/mediated_patterns/cross_pulse_repair/diagnosis-01/results.json",
+      "work/mediated_patterns/cross_pulse_repair/event-linear-01/results.json",
+      "work/mediated_patterns/cross_pulse_repair/event-linear-regression-01/results.json",
+      "work/mediated_patterns/cross_pulse_repair/fresh-01/results.json",
+      "work/mediated_patterns/cross_pulse_repair/fresh-01/summary.json",
+      "work/mediated_patterns/cross_pulse_repair/fresh-02/results.json",
+      "work/mediated_patterns/cross_pulse_repair/fresh-02/summary.json",
+      "work/mediated_patterns/cross_pulse_repair/pulse-audit-01/results.json",
+      "work/mediated_patterns/cross_pulse_repair/qualification-02/results.json",
+      "work/mediated_patterns/cross_pulse_repair/quick-02/results.json",
+      "work/mediated_patterns/cross_pulse_repair/quick-02/summary.json",
+      "work/mediated_patterns/cross_pulse_repair/refinement-01/results.json",
+      "work/mediated_patterns/cross_pulse_repair/singles-02/results.json",
+      "work/mediated_patterns/cross_pulse_repair/triple-diagnostic-01/results.json",
+      "work/mediated_patterns/cross_pulse_repair/triple-diagnostic-02/results.json"
+    ],
+    "models_and_configs": [
+      {
+        "path": "work/mediated_patterns/cross_pulse_repair/frozen-01/model.json",
+        "bytes": 5179,
+        "sha256": "d7359fd7a6cdc9a5f5d2cfec57440516c75d4267e0dfc7a6262607c6398410ca",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/cross_pulse_repair/frozen-01/model.json"
+      },
+      {
+        "path": "work/mediated_patterns/cross_pulse_repair/frozen-02/model.json",
+        "bytes": 12480,
+        "sha256": "4b94038cd857d3109f52a9dacacd48a8d17afb82cc4d61c383b240e327ba7d0a",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/cross_pulse_repair/frozen-02/model.json"
+      },
+      {
+        "path": "work/mediated_patterns/cross_pulse_repair/frozen-02/freeze.json",
+        "bytes": 3828,
+        "sha256": "d3b4ab930d0a54d596593936c486fa563e7e1ca09fdce1e3e8dd26cfbaefab82",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/cross_pulse_repair/frozen-02/freeze.json"
+      }
+    ],
+    "provenance": "Per-run protocol/source hashes and archived executed sources where present; preservation revision is not a historical execution revision."
+  },
+  {
+    "id": "two-way-hybrid",
+    "report": "experiments/mediated_patterns/TWO_WAY_HYBRID.md",
+    "report_sha256_before_publication_handoff": "70c23025398cff63fc7d9cbe8c59c500f4cdeb97fcfbd69f8b04b43ab34e4a70",
+    "packages": [
+      "work/mediated_patterns/two_way_hybrid"
+    ],
+    "artifact_count": 276,
+    "raw_bytes": 54111704,
+    "archives": [
+      "mediated_patterns.tar.gz"
+    ],
+    "commands": [
+      "work/mediated_patterns/two_way_hybrid/analysis-01/commands.txt"
+    ],
+    "protocols": [
+      "work/mediated_patterns/two_way_hybrid/analysis-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/calibration-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/consistency-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/fresh-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/frozen-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/openloop-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/order12-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/order16-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/order20-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/order4-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/order8-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/pilot-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/qualification-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/quick-01/protocol.json",
+      "work/mediated_patterns/two_way_hybrid/weak-refinement-01/protocol.json"
+    ],
+    "result_and_table_paths": [
+      "work/mediated_patterns/two_way_hybrid/analysis-01/summary.json",
+      "work/mediated_patterns/two_way_hybrid/calibration-01/results.json",
+      "work/mediated_patterns/two_way_hybrid/consistency-01/results.json",
+      "work/mediated_patterns/two_way_hybrid/fresh-01/results.json",
+      "work/mediated_patterns/two_way_hybrid/openloop-01/results.json",
+      "work/mediated_patterns/two_way_hybrid/order12-01/results.json",
+      "work/mediated_patterns/two_way_hybrid/order16-01/results.json",
+      "work/mediated_patterns/two_way_hybrid/order20-01/results.json",
+      "work/mediated_patterns/two_way_hybrid/order4-01/results.json",
+      "work/mediated_patterns/two_way_hybrid/order8-01/results.json",
+      "work/mediated_patterns/two_way_hybrid/pilot-01/results.json",
+      "work/mediated_patterns/two_way_hybrid/qualification-01/results.json",
+      "work/mediated_patterns/two_way_hybrid/quick-01/results.json",
+      "work/mediated_patterns/two_way_hybrid/weak-refinement-01/results.json"
+    ],
+    "models_and_configs": [
+      {
+        "path": "work/mediated_patterns/two_way_hybrid/frozen-01/model.npz",
+        "bytes": 38345,
+        "sha256": "a128228fd027986ed17fbc1802f02a9d1820f7dffd215aa46fa6211c4c04bb6e",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/two_way_hybrid/frozen-01/model.npz"
+      },
+      {
+        "path": "work/mediated_patterns/two_way_hybrid/frozen-01/freeze.json",
+        "bytes": 3558,
+        "sha256": "05dbfc5d2681f55ab46e24e6e3923d318100fcc4481d843049ff62050427ba7a",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/two_way_hybrid/frozen-01/freeze.json"
+      }
+    ],
+    "provenance": "Per-run protocol/source hashes and archived executed sources where present; preservation revision is not a historical execution revision."
+  },
+  {
+    "id": "repeated-hybrid",
+    "report": "experiments/mediated_patterns/REPEATED_HYBRID.md",
+    "report_sha256_before_publication_handoff": "d8ef2219a7fea4270ed339952f6ecefc093fa67c0636ed1311da08651628706c",
+    "packages": [
+      "work/mediated_patterns/repeated_hybrid"
+    ],
+    "artifact_count": 212,
+    "raw_bytes": 51437253,
+    "archives": [
+      "mediated_patterns.tar.gz"
+    ],
+    "commands": [
+      "work/mediated_patterns/repeated_hybrid/analysis-01/commands.txt"
+    ],
+    "protocols": [
+      "work/mediated_patterns/repeated_hybrid/analysis-01/protocol.json",
+      "work/mediated_patterns/repeated_hybrid/baseline-01/protocol.json",
+      "work/mediated_patterns/repeated_hybrid/checkpoint-01/protocol.json",
+      "work/mediated_patterns/repeated_hybrid/development-01/protocol.json",
+      "work/mediated_patterns/repeated_hybrid/fresh-01/protocol.json",
+      "work/mediated_patterns/repeated_hybrid/fresh-refinement-01/protocol.json",
+      "work/mediated_patterns/repeated_hybrid/frozen-01/protocol.json",
+      "work/mediated_patterns/repeated_hybrid/qualification-01/protocol.json",
+      "work/mediated_patterns/repeated_hybrid/quick-01/protocol.json"
+    ],
+    "result_and_table_paths": [
+      "work/mediated_patterns/repeated_hybrid/analysis-01/per_preparation.md",
+      "work/mediated_patterns/repeated_hybrid/analysis-01/summary.json",
+      "work/mediated_patterns/repeated_hybrid/baseline-01/results.json",
+      "work/mediated_patterns/repeated_hybrid/checkpoint-01/results.json",
+      "work/mediated_patterns/repeated_hybrid/development-01/results.json",
+      "work/mediated_patterns/repeated_hybrid/fresh-01/results.json",
+      "work/mediated_patterns/repeated_hybrid/fresh-refinement-01/results.json",
+      "work/mediated_patterns/repeated_hybrid/qualification-01/results.json",
+      "work/mediated_patterns/repeated_hybrid/quick-01/results.json"
+    ],
+    "models_and_configs": [
+      {
+        "path": "work/mediated_patterns/two_way_hybrid/frozen-01/model.npz",
+        "bytes": 38345,
+        "sha256": "a128228fd027986ed17fbc1802f02a9d1820f7dffd215aa46fa6211c4c04bb6e",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/two_way_hybrid/frozen-01/model.npz"
+      },
+      {
+        "path": "work/mediated_patterns/repeated_hybrid/frozen-01/freeze.json",
+        "bytes": 2358,
+        "sha256": "e41654197dd345190ab2dcec3806340832c05946a173253b0d66902e3a19ac98",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/repeated_hybrid/frozen-01/freeze.json"
+      }
+    ],
+    "provenance": "Per-run protocol/source hashes and archived executed sources where present; preservation revision is not a historical execution revision."
+  },
+  {
+    "id": "dual-reduction",
+    "report": "experiments/mediated_patterns/DUAL_REDUCTION.md",
+    "report_sha256_before_publication_handoff": "7998e42611360d8b102e0a95b1d236aa0c7cb84a013369df957aa040ef4a6aa9",
+    "packages": [
+      "work/mediated_patterns/dual_reduction"
+    ],
+    "artifact_count": 667,
+    "raw_bytes": 475807480,
+    "archives": [
+      "mediated_patterns.tar.gz"
+    ],
+    "commands": [
+      "work/mediated_patterns/dual_reduction/commands.txt"
+    ],
+    "protocols": [
+      "work/mediated_patterns/dual_reduction/analysis-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/analysis-02/protocol.json",
+      "work/mediated_patterns/dual_reduction/c16-fr-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/c16-projection-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/c24-fr-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/c32-fr-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/c8-fr-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/c8-projection-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/calibration-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/checkpoint-02/protocol.json",
+      "work/mediated_patterns/dual_reduction/composition-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/composition-02/protocol.json",
+      "work/mediated_patterns/dual_reduction/diagnosis-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/failure-refinement-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/fresh-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/fresh-02/protocol.json",
+      "work/mediated_patterns/dual_reduction/frozen-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/frozen-02/protocol.json",
+      "work/mediated_patterns/dual_reduction/incremental-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/incremental-02/protocol.json",
+      "work/mediated_patterns/dual_reduction/pilot-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/quick-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/refinement-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/refinement-02/protocol.json",
+      "work/mediated_patterns/dual_reduction/repair-regression-01/protocol.json",
+      "work/mediated_patterns/dual_reduction/resources-02/protocol.json",
+      "work/mediated_patterns/dual_reduction/rf-baseline-01/protocol.json"
+    ],
+    "result_and_table_paths": [
+      "work/mediated_patterns/dual_reduction/analysis-01/results.json",
+      "work/mediated_patterns/dual_reduction/analysis-02/results.json",
+      "work/mediated_patterns/dual_reduction/c16-fr-01/results.json",
+      "work/mediated_patterns/dual_reduction/c16-projection-01/results.json",
+      "work/mediated_patterns/dual_reduction/c24-fr-01/results.json",
+      "work/mediated_patterns/dual_reduction/c32-fr-01/results.json",
+      "work/mediated_patterns/dual_reduction/c8-fr-01/results.json",
+      "work/mediated_patterns/dual_reduction/c8-projection-01/results.json",
+      "work/mediated_patterns/dual_reduction/checkpoint-02/results.json",
+      "work/mediated_patterns/dual_reduction/composition-01/results.json",
+      "work/mediated_patterns/dual_reduction/composition-02/results.json",
+      "work/mediated_patterns/dual_reduction/diagnosis-01/results.json",
+      "work/mediated_patterns/dual_reduction/failure-refinement-01/results.json",
+      "work/mediated_patterns/dual_reduction/fresh-01/results.json",
+      "work/mediated_patterns/dual_reduction/fresh-02/results.json",
+      "work/mediated_patterns/dual_reduction/incremental-01/results.json",
+      "work/mediated_patterns/dual_reduction/incremental-02/results.json",
+      "work/mediated_patterns/dual_reduction/pilot-01/results.json",
+      "work/mediated_patterns/dual_reduction/quick-01/results.json",
+      "work/mediated_patterns/dual_reduction/refinement-01/results.json",
+      "work/mediated_patterns/dual_reduction/refinement-02/results.json",
+      "work/mediated_patterns/dual_reduction/repair-regression-01/results.json",
+      "work/mediated_patterns/dual_reduction/resources-02/results.json",
+      "work/mediated_patterns/dual_reduction/rf-baseline-01/results.json"
+    ],
+    "models_and_configs": [
+      {
+        "path": "work/mediated_patterns/two_way_hybrid/frozen-01/model.npz",
+        "bytes": 38345,
+        "sha256": "a128228fd027986ed17fbc1802f02a9d1820f7dffd215aa46fa6211c4c04bb6e",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/two_way_hybrid/frozen-01/model.npz"
+      },
+      {
+        "path": "work/mediated_patterns/dual_reduction/frozen-01/model.npz",
+        "bytes": 13461,
+        "sha256": "232cdd3477d7e80f61decf18e5b0354f12f05c253de1c23f234d06c9c2729d35",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/dual_reduction/frozen-01/model.npz"
+      },
+      {
+        "path": "work/mediated_patterns/dual_reduction/frozen-02/model.npz",
+        "bytes": 17903,
+        "sha256": "d81f276cade69d40ef8b215ed9e38a225296061dfc74cf2d5b8d14615afdc7b1",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/dual_reduction/frozen-02/model.npz"
+      },
+      {
+        "path": "work/mediated_patterns/dual_reduction/frozen-02/freeze.json",
+        "bytes": 2124,
+        "sha256": "ef6cf04b61c0ecd57cd458eb142d466d3088459995380b49f59ffd203bec34ec",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/dual_reduction/frozen-02/freeze.json"
+      },
+      {
+        "path": "work/mediated_patterns/dual_reduction/checkpoint-02/state.npz",
+        "bytes": 69972,
+        "sha256": "a32d2a07ab70f6f823907d759b680a1c63b7bb8ca4eecb58172c6e99b436480f",
+        "archive": "mediated_patterns.tar.gz",
+        "member": "work/mediated_patterns/dual_reduction/checkpoint-02/state.npz"
+      }
+    ],
+    "provenance": "Per-run protocol/source hashes and archived executed sources where present; preservation revision is not a historical execution revision."
+  }
+]
