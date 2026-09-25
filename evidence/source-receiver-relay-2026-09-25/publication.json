@@ -1,5 +1,5 @@
 {
-  "state": "REMOTE_VERIFIED_PR_OPEN",
+  "state": "MERGED_LAB_AND_ATLAS",
   "remote_verified": true,
   "members": 77,
   "data_bytes": 6599030,
@@ -55,5 +55,22 @@
   },
   "remote_member_hashes_verified": 77,
   "remote_restore_hashes_verified": 77,
-  "hosted_status_at_snapshot": "push check passed; PR check pending; recheck exact final head before merge"
+  "hosted_status_at_snapshot": "push check passed; PR check pending; recheck exact final head before merge",
+  "lab_merge_commit": "75fa0685824a691494e3928d9721c2c5958f3286",
+  "lab_merged_at": "2026-09-25T21:26:51Z",
+  "reviewed_lab_head": "695e7eda1543300d9e356de08f9c54622c5479f4",
+  "lab_checks": {
+    "36191344583": "success",
+    "36191350064": "success"
+  },
+  "atlas": {
+    "pr": "https://github.com/gomercin/motif-atlas/pull/157",
+    "reviewed_head": "2cd1b5ecbb091feed826f2500eec80b569f20742",
+    "merge_commit": "76464c12ce1e2a1f8c3bcf2fcfc9dfe4889aad36",
+    "merged_at": "2026-09-25T21:28:05Z",
+    "local_checks": "roadmap lint, changed-link/frontmatter review, whitespace: PASS",
+    "hosted_checks": "none configured"
+  },
+  "successor": "NONE",
+  "scientific_data_changed_after_remote_verification": false
 }
