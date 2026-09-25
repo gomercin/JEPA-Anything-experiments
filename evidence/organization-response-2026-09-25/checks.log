@@ -1,0 +1,313 @@
+$ .venv/bin/python -m pytest evidence/completed-2026-09-25/tests evidence/organization-response-2026-09-25/tests -q
+....................                                                     [100%]
+20 passed in 0.23s
+
+$ .venv/bin/python -I evidence/organization-response-2026-09-25/restore.py --verify-only
+{"verified_members": 163, "experiments_executed": false}
+
+$ .venv/bin/python -I evidence/organization-response-2026-09-25/saved_data_smoke.py --root evidence/organization-response-2026-09-25/data
+{
+  "script": "/Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/evidence/organization-response-2026-09-25/saved_data_smoke.py",
+  "root": "/Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/evidence/organization-response-2026-09-25/data",
+  "config": {
+    "length": 192,
+    "n": 768,
+    "dt": 0.00625,
+    "r": -0.67,
+    "cubic": 2.0,
+    "feedback": 0.05,
+    "source": 1.0,
+    "diffusion": 64.0,
+    "tau": 10.0
+  },
+  "gain_fits": {
+    "full": {
+      "gain": 1.0006786857715775,
+      "delay": 0.0,
+      "objective": 0.0010162140644494153
+    },
+    "cut": {
+      "gain": 1.0006793443062878,
+      "delay": 0.0,
+      "objective": 0.0010185900700347037
+    },
+    "return": {
+      "gain": 0.9851834378332427,
+      "delay": 0.0,
+      "objective": 0.0502375636997627
+    }
+  },
+  "criteria": {
+    "selectivity_nrmse": 0.05,
+    "absolute_floor_multiple": 5,
+    "total_prediction_nrmse": 0.02,
+    "return_prediction_nrmse": 0.1
+  },
+  "floors": [
+    5.660872282565029e-08,
+    5.232943316932972e-08
+  ],
+  "development_seeds": [
+    6101,
+    6102
+  ],
+  "fresh_seeds": [
+    7101,
+    7102,
+    7103
+  ],
+  "saved_comparator_table": [
+    {
+      "seed": 7101,
+      "kind": "full",
+      "weighted_nrmse": 0.0010004882199353472,
+      "practical_failure": false
+    },
+    {
+      "seed": 7101,
+      "kind": "cut",
+      "weighted_nrmse": 0.0010013667757652037,
+      "practical_failure": false
+    },
+    {
+      "seed": 7101,
+      "kind": "return",
+      "weighted_nrmse": 0.007545482354894104,
+      "practical_failure": false
+    },
+    {
+      "seed": 7102,
+      "kind": "full",
+      "weighted_nrmse": 0.0010656631201574932,
+      "practical_failure": false
+    },
+    {
+      "seed": 7102,
+      "kind": "cut",
+      "weighted_nrmse": 0.0010664736784733642,
+      "practical_failure": false
+    },
+    {
+      "seed": 7102,
+      "kind": "return",
+      "weighted_nrmse": 0.008234834598581858,
+      "practical_failure": false
+    },
+    {
+      "seed": 7103,
+      "kind": "full",
+      "weighted_nrmse": 0.0008378772906602286,
+      "practical_failure": false
+    },
+    {
+      "seed": 7103,
+      "kind": "cut",
+      "weighted_nrmse": 0.0008389939331087987,
+      "practical_failure": false
+    },
+    {
+      "seed": 7103,
+      "kind": "return",
+      "weighted_nrmse": 0.0057808602993890635,
+      "practical_failure": false
+    }
+  ],
+  "historical_execution_checks": {
+    "focused_tests": {
+      "result": "10 passed",
+      "pytest_seconds": 0.79,
+      "process_wall_seconds": 1.1,
+      "process_user_seconds": 0.49,
+      "process_system_seconds": 0.15
+    },
+    "ruff_check": "All checks passed!",
+    "ruff_format_check": "2 files already formatted",
+    "git_diff_check": "PASS",
+    "scope": "New response instrument only; no historical scientific panel or preservation audit repeated.",
+    "interpretation": "Instrument correctness checks; neither scientific superiority nor implementation certification."
+  },
+  "historical_budget_charge_seconds": 270.84833899999995,
+  "preparations": [
+    {
+      "path": "work/mediated_patterns/organization_response/development-01/s6101-a-10-initial.npz",
+      "shapes": {
+        "state": [
+          2,
+          768
+        ],
+        "x": [
+          768
+        ]
+      }
+    },
+    {
+      "path": "work/mediated_patterns/organization_response/development-01/s6101-a-18-initial.npz",
+      "shapes": {
+        "state": [
+          2,
+          768
+        ],
+        "x": [
+          768
+        ]
+      }
+    },
+    {
+      "path": "work/mediated_patterns/organization_response/development-01/s6102-a-10-initial.npz",
+      "shapes": {
+        "state": [
+          2,
+          768
+        ],
+        "x": [
+          768
+        ]
+      }
+    },
+    {
+      "path": "work/mediated_patterns/organization_response/development-01/s6102-a-18-initial.npz",
+      "shapes": {
+        "state": [
+          2,
+          768
+        ],
+        "x": [
+          768
+        ]
+      }
+    },
+    {
+      "path": "work/mediated_patterns/organization_response/fresh-01/s7101-a-10-initial.npz",
+      "shapes": {
+        "state": [
+          2,
+          768
+        ],
+        "x": [
+          768
+        ]
+      }
+    },
+    {
+      "path": "work/mediated_patterns/organization_response/fresh-01/s7101-a-18-initial.npz",
+      "shapes": {
+        "state": [
+          2,
+          768
+        ],
+        "x": [
+          768
+        ]
+      }
+    },
+    {
+      "path": "work/mediated_patterns/organization_response/fresh-01/s7102-a-10-initial.npz",
+      "shapes": {
+        "state": [
+          2,
+          768
+        ],
+        "x": [
+          768
+        ]
+      }
+    },
+    {
+      "path": "work/mediated_patterns/organization_response/fresh-01/s7102-a-18-initial.npz",
+      "shapes": {
+        "state": [
+          2,
+          768
+        ],
+        "x": [
+          768
+        ]
+      }
+    },
+    {
+      "path": "work/mediated_patterns/organization_response/fresh-01/s7103-a-10-initial.npz",
+      "shapes": {
+        "state": [
+          2,
+          768
+        ],
+        "x": [
+          768
+        ]
+      }
+    },
+    {
+      "path": "work/mediated_patterns/organization_response/fresh-01/s7103-a-18-initial.npz",
+      "shapes": {
+        "state": [
+          2,
+          768
+        ],
+        "x": [
+          768
+        ]
+      }
+    }
+  ],
+  "fresh_traces": [
+    {
+      "preparation_id": "s7101-a-10",
+      "shape": [
+        161,
+        2,
+        2
+      ]
+    },
+    {
+      "preparation_id": "s7101-a-18",
+      "shape": [
+        161,
+        2,
+        2
+      ]
+    },
+    {
+      "preparation_id": "s7102-a-10",
+      "shape": [
+        161,
+        2,
+        2
+      ]
+    },
+    {
+      "preparation_id": "s7102-a-18",
+      "shape": [
+        161,
+        2,
+        2
+      ]
+    },
+    {
+      "preparation_id": "s7103-a-10",
+      "shape": [
+        161,
+        2,
+        2
+      ]
+    },
+    {
+      "preparation_id": "s7103-a-18",
+      "shape": [
+        161,
+        2,
+        2
+      ]
+    }
+  ],
+  "imports": "stdlib and numpy only; pickle disabled",
+  "experiments_executed": false,
+  "independent_scientific_reproduction": false
+}
+
+$ .venv/bin/ruff check evidence/organization-response-2026-09-25/restore.py evidence/organization-response-2026-09-25/package.py evidence/organization-response-2026-09-25/saved_data_smoke.py evidence/organization-response-2026-09-25/tests/test_publication.py
+All checks passed!
+
+$ .venv/bin/ruff format --check evidence/organization-response-2026-09-25/restore.py evidence/organization-response-2026-09-25/package.py evidence/organization-response-2026-09-25/saved_data_smoke.py evidence/organization-response-2026-09-25/tests/test_publication.py
+4 files already formatted
+
+$ git diff --check

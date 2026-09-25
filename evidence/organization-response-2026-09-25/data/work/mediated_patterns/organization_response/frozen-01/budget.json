@@ -1,0 +1,14 @@
+{
+  "cpu_seconds": 0.139144,
+  "wall_seconds": 0.18610270801582374,
+  "previous_cpu_seconds": 168.518889,
+  "limit_cpu_seconds": 1200,
+  "sections": [
+    {
+      "task": "freeze-and-fit",
+      "cpu_seconds": 0.130378,
+      "wall_seconds": 0.1330365830217488
+    }
+  ],
+  "status": "COMPLETE"
+}

@@ -1,0 +1,14 @@
+{
+  "cpu_seconds": 0.321975,
+  "wall_seconds": 0.45336724998196587,
+  "previous_cpu_seconds": 259.88636399999996,
+  "limit_cpu_seconds": 1800.0,
+  "sections": [
+    {
+      "task": "read-only-report-calculations-and-plot",
+      "cpu_seconds": 0.321966,
+      "wall_seconds": 0.4533604999887757
+    }
+  ],
+  "status": "COMPLETE"
+}

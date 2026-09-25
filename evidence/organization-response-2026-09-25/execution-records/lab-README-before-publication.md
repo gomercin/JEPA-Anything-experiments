@@ -145,31 +145,13 @@ Saved-result interpretation check: **Original AB + C24** means **FULL_AB+C24** (
 
 Dual-reduction cycle completed locally: successful composition-informed C-only repair, not first-freeze independent-composition success. AB20/C32 retained as the frozen result. No successor selected.
 
-## Integration review status
-
-Implementation review and integration are recorded in [PR #1](https://github.com/gomercin/JEPA-Anything-experiments/pull/1)
-and the dependent [PR #2](https://github.com/gomercin/JEPA-Anything-experiments/pull/2).
-Their discussions record exact reviewed revisions, checks and confirmed merge status.
-The publication-time draft/unreviewed statements below and in frozen reports are
-historical. Integration does not independently reproduce the scientific panels or
-expand their stated limits. Atlas remains unchanged; no research continuation is
-part of this review.
-
-Review found a checkpoint file-safety defect: a suffixless save could overwrite
-an existing `.npz`, and a dangling destination symlink could be followed. Current
-`PairHybrid.save` and `DualHybrid.save` now create the actual NumPy destination
-exclusively. Only serialization changed; stepping, initialization, bases, event
-maps, readouts and saved evidence did not. Six file-only regressions cover both
-classes. Historical execution identity continues to use the archived source and
-pinned publication revisions, not the corrected live files.
-
-## Remote preservation handoff (publication-time record)
+## Remote preservation handoff
 
 The completed field lineage and oscillator lineage are remotely preserved on
 `codex/preserve-completed-experiments` in `gomercin/JEPA-Anything-experiments`.
 See the [portable evidence index](../../evidence/completed-2026-09-25/README.md)
 and [publication receipt](../../evidence/completed-2026-09-25/publication.json)
-for the source-snapshot revision, review PR, checksum-pinned evidence tag/assets,
+for the source-snapshot revision, review PR, immutable evidence tag/assets,
 retrieval verification, and provenance gaps. Publication is not merge approval.
 The original pending Atlas paragraph stays unchanged in DUAL_REDUCTION.md;
 these remote pointers belong with the existing Effective Motif Dynamics and
@@ -207,34 +189,3 @@ preserved evidence remain unchanged; no science was added to PR #1. No push,
 merge, Atlas edit, or successor was selected. The preservation handoff above is
 historical; this task used the owner's supplied verified head and local evidence
 without restoring archives or repeating the preservation audit.
-
-### Organization-response integration review
-
-[PR #2](https://github.com/gomercin/JEPA-Anything-experiments/pull/2) records the
-implementation review, exact revisions/checks and confirmed integration status.
-The frozen report, thresholds and evidence remain unchanged. Saved-data score
-verification supports the reported fit errors, not exact response equality or
-resolved organization-dependent return selectivity. This task integrates the
-completed result and stops; Atlas is pending and no successor is selected.
-
-### Incremental publication handoff (publication-time record)
-
-The completed organization-conditioned-response record is preserved separately
-through the [portable incremental evidence index](../../evidence/organization-response-2026-09-25/README.md).
-It includes all 163 new work files (8,853,052 bytes) in Git, with explicit
-checksum-verified, non-overwriting restoration and saved-data-only inspection.
-The index's publication receipt and separate draft PR record the source snapshot,
-final head and dependency on still-unmerged preservation PR #1. This publication
-adds no new science and changes no conclusion, criterion, floor or exposure split.
-The original report and pending Atlas paragraph remain intact. Earlier archives,
-PR #1 and AB20/C32 are unchanged; no Atlas edit, merge or successor is selected.
-
-Publication verified in [draft PR #2](https://github.com/gomercin/JEPA-Anything-experiments/pull/2),
-targeting `codex/preserve-completed-experiments`. The source snapshot is
-`f1b6f2c62000e4eb415711653ab7ba973f8ab762`; a fresh GitHub clone and separate
-restoration matched all 163 member hashes and loaded the saved configuration,
-gain fits, floors, preparations and table without science or experiment imports.
-See the [retrieval receipt](../../evidence/organization-response-2026-09-25/remote-verification.json)
-and PR body for the distinct final pushed head. All new evidence is in Git;
-no new release asset or inherited-archive download was needed. No extant
-substantive new evidence remains local-only.

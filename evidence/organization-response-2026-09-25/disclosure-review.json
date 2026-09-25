@@ -1,0 +1,18 @@
+{
+  "scope": "New experiment work subtree, completed implementation/test/report, preserved original handoff, scoped publication helpers and build-test discovery changes only.",
+  "files_reviewed": 181,
+  "signature_scan_classes": [
+    "private_key",
+    "github_token",
+    "aws_key",
+    "service_token",
+    "credential_url"
+  ],
+  "flagged_files": [],
+  "manual_scope_review": "Scientific numeric arrays/JSON, source snapshots, experiment prose, commands, and three response plots. No conversation exports or unrelated Project/workplace files.",
+  "local_path_metadata": "One original /Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/experiments/mediated_patterns/organization_response.py source path remains in execution metadata. Retained verbatim; no credential material.",
+  "withheld_sensitive_files": [],
+  "redacted_originals": false,
+  "caches_environments_included": false,
+  "automated_scan_limit": "Signature and scope checks are not a proof that arbitrary secrets cannot exist."
+}

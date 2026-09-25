@@ -1,0 +1,1624 @@
+{
+  "development_seeds": [
+    6101,
+    6102
+  ],
+  "fresh_seeds": [
+    7101,
+    7102,
+    7103
+  ],
+  "organizations": [
+    -10.0,
+    -18.0
+  ],
+  "config": {
+    "length": 192,
+    "n": 768,
+    "dt": 0.00625,
+    "r": -0.67,
+    "cubic": 2.0,
+    "feedback": 0.05,
+    "source": 1.0,
+    "diffusion": 64.0,
+    "tau": 10.0
+  },
+  "epsilon": 0.02,
+  "horizon": 80.0,
+  "floors": [
+    5.660872282565029e-08,
+    5.232943316932972e-08
+  ],
+  "models": {
+    "full": {
+      "scales": [
+        0.007434557214485038,
+        0.0035226500443389487
+      ],
+      "gain_delay": {
+        "gain": 1.0006786857715775,
+        "delay": 0.0,
+        "objective": 0.0010162140644494153
+      },
+      "gain_only": {
+        "gain": 1.0006786857715775,
+        "delay": 0.0,
+        "objective": 0.0010162140644494153
+      }
+    },
+    "cut": {
+      "scales": [
+        0.00743455152694496,
+        0.0035222596465756925
+      ],
+      "gain_delay": {
+        "gain": 1.0006793443062878,
+        "delay": 0.0,
+        "objective": 0.0010185900700347037
+      },
+      "gain_only": {
+        "gain": 1.0006793443062878,
+        "delay": 0.0,
+        "objective": 0.0010185900700347037
+      }
+    },
+    "return": {
+      "scales": [
+        8.338248168770041e-07,
+        4.818311890513206e-07
+      ],
+      "gain_delay": {
+        "gain": 0.9851834378332427,
+        "delay": 0.0,
+        "objective": 0.0502375636997627
+      },
+      "gain_only": {
+        "gain": 0.9851834378332427,
+        "delay": 0.0,
+        "objective": 0.0502375636997627
+      }
+    }
+  },
+  "development_scores": {
+    "full": {
+      "weighted_nrmse": 0.0008879475408368281,
+      "rmse": [
+        6.729787614561207e-06,
+        3.0681021536282913e-06
+      ],
+      "max_absolute": [
+        8.688389356455162e-05,
+        8.622967925069752e-06
+      ],
+      "signal_rms": [
+        0.007434774160719502,
+        0.0035249378561083063
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    "cut": {
+      "weighted_nrmse": 0.0008889846951509589,
+      "rmse": [
+        6.739897649411319e-06,
+        3.0702369742326574e-06
+      ],
+      "max_absolute": [
+        8.695760768194505e-05,
+        8.621331246040469e-06
+      ],
+      "signal_rms": [
+        0.007434768348516558,
+        0.003524549583438036
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    "return": {
+      "weighted_nrmse": 0.006292418968034231,
+      "rmse": [
+        4.066266541835425e-09,
+        3.548155458970859e-09
+      ],
+      "max_absolute": [
+        9.396577225556551e-09,
+        1.215836952045869e-08
+      ],
+      "signal_rms": [
+        8.262385834503885e-07,
+        4.790042823620739e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    }
+  },
+  "refinement": [
+    {
+      "organization": -10.0,
+      "refinement": "half-dt",
+      "full_rmse": [
+        2.68832253534438e-10,
+        1.8173879972313628e-10
+      ],
+      "conservative_return_bound": [
+        7.600644653706515e-10,
+        5.13876087284953e-10
+      ],
+      "direct_return_rmse": [
+        4.735515879469151e-14,
+        3.8691230376090916e-14
+      ]
+    },
+    {
+      "organization": -10.0,
+      "refinement": "double-n",
+      "full_rmse": [
+        4.01318270864828e-09,
+        3.7017460912635524e-09
+      ],
+      "conservative_return_bound": [
+        1.1320624064048132e-08,
+        1.0465886633865945e-08
+      ],
+      "direct_return_rmse": [
+        6.369191298701083e-13,
+        7.210078661305923e-13
+      ]
+    },
+    {
+      "organization": -18.0,
+      "refinement": "half-dt",
+      "full_rmse": [
+        2.687271820141218e-10,
+        1.8230356347271188e-10
+      ],
+      "conservative_return_bound": [
+        7.597777125792378e-10,
+        5.154811694257644e-10
+      ],
+      "direct_return_rmse": [
+        4.403575250543363e-14,
+        3.5728515654770245e-14
+      ]
+    },
+    {
+      "organization": -18.0,
+      "refinement": "double-n",
+      "full_rmse": [
+        4.013580614287434e-09,
+        3.696288477995591e-09
+      ],
+      "conservative_return_bound": [
+        1.1321744565130057e-08,
+        1.0450500017173884e-08
+      ],
+      "direct_return_rmse": [
+        6.329766701150011e-13,
+        7.188378385284242e-13
+      ]
+    }
+  ],
+  "tangent_checks": [
+    {
+      "preparation": "s6101-a-10",
+      "probe": "even",
+      "kind": "full",
+      "weighted_nrmse": 0.01019286468875241,
+      "rmse": [
+        0.00010710961451811938,
+        1.737840196951125e-06
+      ],
+      "max_absolute": [
+        0.0008744351869132139,
+        7.779298453496178e-06
+      ],
+      "signal_rms": [
+        0.010512271992794026,
+        0.00010145760821360164
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "odd",
+      "kind": "full",
+      "weighted_nrmse": 0.003490225468673126,
+      "rmse": [
+        3.648608570760994e-05,
+        1.8633521810080213e-06
+      ],
+      "max_absolute": [
+        0.0003994863686466142,
+        2.3506137607548147e-06
+      ],
+      "signal_rms": [
+        0.00016817365917942242,
+        0.004981277713065272
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "even-negative",
+      "kind": "full",
+      "weighted_nrmse": 0.010461886440325472,
+      "rmse": [
+        0.00011057535366181486,
+        1.7874905914363987e-06
+      ],
+      "max_absolute": [
+        0.000891576612750189,
+        8.110185214898921e-06
+      ],
+      "signal_rms": [
+        0.010573252396283418,
+        0.00010332175320986967
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "odd-negative",
+      "kind": "full",
+      "weighted_nrmse": 0.0034942301421979224,
+      "rmse": [
+        3.6469359306511565e-05,
+        2.0142814029856118e-06
+      ],
+      "max_absolute": [
+        0.00039948636864462275,
+        2.494536299115814e-06
+      ],
+      "signal_rms": [
+        0.00023867531163576788,
+        0.0049774818428483724
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "even-half",
+      "kind": "full",
+      "weighted_nrmse": 0.0051297171017842084,
+      "rmse": [
+        2.698867244299433e-05,
+        4.3743220652036736e-07
+      ],
+      "max_absolute": [
+        0.00021968340287847887,
+        1.9649266803326585e-06
+      ],
+      "signal_rms": [
+        0.005263218654034373,
+        5.0954207962995024e-05
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "odd-half",
+      "kind": "full",
+      "weighted_nrmse": 0.0017456110766592545,
+      "rmse": [
+        9.120600070413343e-06,
+        4.752556382102611e-07
+      ],
+      "max_absolute": [
+        9.987159216168044e-05,
+        5.96666714976473e-07
+      ],
+      "signal_rms": [
+        9.281324408878481e-05,
+        0.002490193427332091
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "even-negative-half",
+      "kind": "full",
+      "weighted_nrmse": 0.005196971809171,
+      "rmse": [
+        2.7421793743044172e-05,
+        4.43635492727856e-07
+      ],
+      "max_absolute": [
+        0.00022182652145752435,
+        2.0062810431430974e-06
+      ],
+      "signal_rms": [
+        0.005278453978194188,
+        5.1420121874734065e-05
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "odd-negative-half",
+      "kind": "full",
+      "weighted_nrmse": 0.0017466122458158846,
+      "rmse": [
+        9.118509009240937e-06,
+        4.941233611676926e-07
+      ],
+      "max_absolute": [
+        9.987159215624382e-05,
+        6.146573698251508e-07
+      ],
+      "signal_rms": [
+        0.00011045314443934694,
+        0.002489244427611153
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "even",
+      "kind": "full",
+      "weighted_nrmse": 0.010201857703214677,
+      "rmse": [
+        0.0001072121245721599,
+        1.711560104453345e-06
+      ],
+      "max_absolute": [
+        0.0008747253689135107,
+        7.645386034751446e-06
+      ],
+      "signal_rms": [
+        0.010512893132502733,
+        0.00010071590095735018
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "odd",
+      "kind": "full",
+      "weighted_nrmse": 0.0034854975605881373,
+      "rmse": [
+        3.649060020218294e-05,
+        1.836720921674783e-06
+      ],
+      "max_absolute": [
+        0.0003994863686470275,
+        2.317227266528457e-06
+      ],
+      "signal_rms": [
+        0.00016790074129704349,
+        0.004987835605755589
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "even-negative",
+      "kind": "full",
+      "weighted_nrmse": 0.010471150839521515,
+      "rmse": [
+        0.00011068328927742275,
+        1.7605561590325318e-06
+      ],
+      "max_absolute": [
+        0.0008918595684951555,
+        7.970516295726325e-06
+      ],
+      "signal_rms": [
+        0.010574046142994868,
+        0.000102585617642275
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "odd-negative",
+      "kind": "full",
+      "weighted_nrmse": 0.003489439506777247,
+      "rmse": [
+        3.6474006006612915e-05,
+        1.9881159808338e-06
+      ],
+      "max_absolute": [
+        0.0003994863686459858,
+        2.461823926712056e-06
+      ],
+      "signal_rms": [
+        0.0002380272663649583,
+        0.004984090020459561
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "even-half",
+      "kind": "full",
+      "weighted_nrmse": 0.005134246992700848,
+      "rmse": [
+        2.7014626293827257e-05,
+        4.3082356504639443e-07
+      ],
+      "max_absolute": [
+        0.0002197555331984631,
+        1.9310993188474907e-06
+      ],
+      "signal_rms": [
+        0.005263549976712245,
+        5.0584206630897535e-05
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "odd-half",
+      "kind": "full",
+      "weighted_nrmse": 0.0017432392328438759,
+      "rmse": [
+        9.121737187512763e-06,
+        4.686268446335355e-07
+      ],
+      "max_absolute": [
+        9.987159216099891e-05,
+        5.883619266103604e-07
+      ],
+      "signal_rms": [
+        9.261602449719322e-05,
+        0.002493478719917412
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "even-negative-half",
+      "kind": "full",
+      "weighted_nrmse": 0.005201569530927662,
+      "rmse": [
+        2.7448425442408972e-05,
+        4.3694510561924587e-07
+      ],
+      "max_absolute": [
+        0.00022189774911724955,
+        1.9717342582002467e-06
+      ],
+      "signal_rms": [
+        0.005278828433113559,
+        5.105151493395009e-05
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "odd-negative-half",
+      "kind": "full",
+      "weighted_nrmse": 0.001744224719561178,
+      "rmse": [
+        9.119662653354647e-06,
+        4.875528108274703e-07
+      ],
+      "max_absolute": [
+        9.987159216047806e-05,
+        6.064368498889458e-07
+      ],
+      "signal_rms": [
+        0.00011016430952301704,
+        0.0024925422919636116
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6102-a-10",
+      "probe": "even",
+      "kind": "full",
+      "weighted_nrmse": 0.010190026794563203,
+      "rmse": [
+        0.00010708490531464638,
+        1.6985940228022692e-06
+      ],
+      "max_absolute": [
+        0.0008744242729571278,
+        7.790988187974027e-06
+      ],
+      "signal_rms": [
+        0.010512819210797034,
+        9.37826790900391e-05
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6102-a-10",
+      "probe": "odd",
+      "kind": "full",
+      "weighted_nrmse": 0.003494901024515114,
+      "rmse": [
+        3.648986422343923e-05,
+        1.8180071131828647e-06
+      ],
+      "max_absolute": [
+        0.0003994863686466047,
+        2.305552369035249e-06
+      ],
+      "signal_rms": [
+        0.00014882180947884847,
+        0.004973886069212426
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6102-a-18",
+      "probe": "even",
+      "kind": "full",
+      "weighted_nrmse": 0.010198964723157886,
+      "rmse": [
+        0.00010718673646604045,
+        1.6723136448729028e-06
+      ],
+      "max_absolute": [
+        0.0008747123772720189,
+        7.65873237482161e-06
+      ],
+      "signal_rms": [
+        0.010513435307533481,
+        9.297111645357339e-05
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6102-a-18",
+      "probe": "odd",
+      "kind": "full",
+      "weighted_nrmse": 0.003490286287683466,
+      "rmse": [
+        3.649435717442278e-05,
+        1.7922562868905798e-06
+      ],
+      "max_absolute": [
+        0.0003994863686473519,
+        2.2735869199879896e-06
+      ],
+      "signal_rms": [
+        0.0001484339703926101,
+        0.00498030683858517
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "even",
+      "kind": "cut",
+      "weighted_nrmse": 0.010192867229032756,
+      "rmse": [
+        0.00010710958662452845,
+        1.7389639143918037e-06
+      ],
+      "max_absolute": [
+        0.0008744351869167596,
+        7.779298456883036e-06
+      ],
+      "signal_rms": [
+        0.010512266659326712,
+        0.00010166255447176171
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "odd",
+      "kind": "cut",
+      "weighted_nrmse": 0.0034901773229164485,
+      "rmse": [
+        3.6485944908497056e-05,
+        1.8609851230816122e-06
+      ],
+      "max_absolute": [
+        0.0003994863686466142,
+        2.343872582525469e-06
+      ],
+      "signal_rms": [
+        0.000168001760854631,
+        0.004980714142912725
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "even-negative",
+      "kind": "cut",
+      "weighted_nrmse": 0.01046188871976901,
+      "rmse": [
+        0.00011057532319626083,
+        1.7886551436597105e-06
+      ],
+      "max_absolute": [
+        0.0008915766127501959,
+        8.110185220220375e-06
+      ],
+      "signal_rms": [
+        0.010573246931666336,
+        0.00010353111602570025
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "odd-negative",
+      "kind": "cut",
+      "weighted_nrmse": 0.003494173807754778,
+      "rmse": [
+        3.646920841838546e-05,
+        2.0118678665016344e-06
+      ],
+      "max_absolute": [
+        0.00039948636864462275,
+        2.487685318155325e-06
+      ],
+      "signal_rms": [
+        0.00023858279325399077,
+        0.004976922362250926
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "even-half",
+      "kind": "cut",
+      "weighted_nrmse": 0.0051297183401913795,
+      "rmse": [
+        2.6988665314363257e-05,
+        4.3771567166281773e-07
+      ],
+      "max_absolute": [
+        0.00021968340288558083,
+        1.9649266825152794e-06
+      ],
+      "signal_rms": [
+        0.005263215971555723,
+        5.105722472863733e-05
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "odd-half",
+      "kind": "cut",
+      "weighted_nrmse": 0.0017455859956270045,
+      "rmse": [
+        9.120564237567451e-06,
+        4.7466101273062215e-07
+      ],
+      "max_absolute": [
+        9.987159216168044e-05,
+        5.949744859307798e-07
+      ],
+      "signal_rms": [
+        9.273998700769508e-05,
+        0.002489912139251535
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "even-negative-half",
+      "kind": "cut",
+      "weighted_nrmse": 0.005196972982235794,
+      "rmse": [
+        2.7421786292236044e-05,
+        4.439240636862153e-07
+      ],
+      "max_absolute": [
+        0.00022182652145752782,
+        2.0062810443605345e-06
+      ],
+      "signal_rms": [
+        0.005278451262940237,
+        5.152424260962231e-05
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "odd-negative-half",
+      "kind": "cut",
+      "weighted_nrmse": 0.0017465851175150259,
+      "rmse": [
+        9.118471915892853e-06,
+        4.935229210548353e-07
+      ],
+      "max_absolute": [
+        9.987159215624382e-05,
+        6.12951411444948e-07
+      ],
+      "signal_rms": [
+        0.0001103993127941074,
+        0.002488964161956464
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "even",
+      "kind": "cut",
+      "weighted_nrmse": 0.010201860108442283,
+      "rmse": [
+        0.00010721209690257074,
+        1.7126836421620474e-06
+      ],
+      "max_absolute": [
+        0.0008747253689170564,
+        7.64538603746927e-06
+      ],
+      "signal_rms": [
+        0.010512887951056165,
+        0.00010091866230697781
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "odd",
+      "kind": "cut",
+      "weighted_nrmse": 0.0034854502065842976,
+      "rmse": [
+        3.649047641490299e-05,
+        1.8345053759609668e-06
+      ],
+      "max_absolute": [
+        0.0003994863686470275,
+        2.310792077946794e-06
+      ],
+      "signal_rms": [
+        0.0001676968321047207,
+        0.0049872782292442065
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "even-negative",
+      "kind": "cut",
+      "weighted_nrmse": 0.010471152986459389,
+      "rmse": [
+        0.00011068325908367621,
+        1.7617203353089726e-06
+      ],
+      "max_absolute": [
+        0.0008918595684969388,
+        7.970516300100051e-06
+      ],
+      "signal_rms": [
+        0.010574040832594316,
+        0.00010279271600583756
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "odd-negative",
+      "kind": "cut",
+      "weighted_nrmse": 0.003489384447454505,
+      "rmse": [
+        3.647387242149369e-05,
+        1.9858540972689246e-06
+      ],
+      "max_absolute": [
+        0.0003994863686459858,
+        2.4552793418293473e-06
+      ],
+      "signal_rms": [
+        0.00023791147685134923,
+        0.004983536466460008
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "even-half",
+      "kind": "cut",
+      "weighted_nrmse": 0.0051342481637033305,
+      "rmse": [
+        2.7014619222908767e-05,
+        4.31106975519438e-07
+      ],
+      "max_absolute": [
+        0.00021975553319490693,
+        1.9310993183363706e-06
+      ],
+      "signal_rms": [
+        0.005263547370504952,
+        5.068612080148696e-05
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "odd-half",
+      "kind": "cut",
+      "weighted_nrmse": 0.0017432146076667248,
+      "rmse": [
+        9.121705625882756e-06,
+        4.6807010347667524e-07
+      ],
+      "max_absolute": [
+        9.987159216099891e-05,
+        5.867462197408496e-07
+      ],
+      "signal_rms": [
+        9.252812675034544e-05,
+        0.0024932004955274516
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "even-negative-half",
+      "kind": "cut",
+      "weighted_nrmse": 0.005201570637298814,
+      "rmse": [
+        2.744841805605218e-05,
+        4.372335920346546e-07
+      ],
+      "max_absolute": [
+        0.0002218977491101476,
+        1.9717342582187053e-06
+      ],
+      "signal_rms": [
+        0.005278825794678696,
+        5.115451318716892e-05
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "odd-negative-half",
+      "kind": "cut",
+      "weighted_nrmse": 0.0017441981680469659,
+      "rmse": [
+        9.119629867018397e-06,
+        4.86990277078307e-07
+      ],
+      "max_absolute": [
+        9.987159216047806e-05,
+        6.048074673668108e-07
+      ],
+      "signal_rms": [
+        0.00011009798729542537,
+        0.002492265023237718
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6102-a-10",
+      "probe": "even",
+      "kind": "cut",
+      "weighted_nrmse": 0.010190029718575567,
+      "rmse": [
+        0.00010708487726181756,
+        1.6996523745204308e-06
+      ],
+      "max_absolute": [
+        0.0008744242729589041,
+        7.79098819225424e-06
+      ],
+      "signal_rms": [
+        0.010512813770875179,
+        9.398112308558675e-05
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6102-a-10",
+      "probe": "odd",
+      "kind": "cut",
+      "weighted_nrmse": 0.0034948435544715135,
+      "rmse": [
+        3.648970652877378e-05,
+        1.815501363255845e-06
+      ],
+      "max_absolute": [
+        0.0003994863686466047,
+        2.2986613854650284e-06
+      ],
+      "signal_rms": [
+        0.00014866533031499796,
+        0.004973331275797155
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6102-a-18",
+      "probe": "even",
+      "kind": "cut",
+      "weighted_nrmse": 0.01019896750308172,
+      "rmse": [
+        0.00010718670861709911,
+        1.6733713083937494e-06
+      ],
+      "max_absolute": [
+        0.0008747123772648996,
+        7.658732377982384e-06
+      ],
+      "signal_rms": [
+        0.010513430019219365,
+        9.316764214671796e-05
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6102-a-18",
+      "probe": "odd",
+      "kind": "cut",
+      "weighted_nrmse": 0.0034902296426728933,
+      "rmse": [
+        3.649421641376505e-05,
+        1.7898987058923527e-06
+      ],
+      "max_absolute": [
+        0.0003994863686473519,
+        2.266991810306526e-06
+      ],
+      "signal_rms": [
+        0.00014824141267469814,
+        0.004979758040569311
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "even",
+      "kind": "return",
+      "weighted_nrmse": 0.009365802120391044,
+      "rmse": [
+        4.311829566707116e-09,
+        2.4385447058190117e-09
+      ],
+      "max_absolute": [
+        8.248242841786915e-09,
+        4.46268411054317e-09
+      ],
+      "signal_rms": [
+        4.589590616837098e-07,
+        2.612033142634643e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "odd",
+      "kind": "return",
+      "weighted_nrmse": 0.0039330347912997785,
+      "rmse": [
+        2.6890943138253896e-09,
+        3.1872862758720458e-09
+      ],
+      "max_absolute": [
+        5.31473583709149e-09,
+        6.741178229345557e-09
+      ],
+      "signal_rms": [
+        1.10093830642861e-06,
+        6.388244102433356e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "even-negative",
+      "kind": "return",
+      "weighted_nrmse": 0.009658208899704859,
+      "rmse": [
+        4.531526106578745e-09,
+        2.563102381896125e-09
+      ],
+      "max_absolute": [
+        8.661750050838039e-09,
+        4.686516134097107e-09
+      ],
+      "signal_rms": [
+        4.677953914142242e-07,
+        2.6620100394349266e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "odd-negative",
+      "kind": "return",
+      "weighted_nrmse": 0.004054093580307647,
+      "rmse": [
+        2.771800928443088e-09,
+        3.2601519513329548e-09
+      ],
+      "max_absolute": [
+        5.4457517749688975e-09,
+        6.850980960489139e-09
+      ],
+      "signal_rms": [
+        1.0968495995257236e-06,
+        6.332760870285229e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "even-half",
+      "kind": "return",
+      "weighted_nrmse": 0.004719217901829074,
+      "rmse": [
+        1.091322241459745e-09,
+        6.172120762007548e-10
+      ],
+      "max_absolute": [
+        2.0871987903273615e-09,
+        1.1292892035180083e-09
+      ],
+      "signal_rms": [
+        2.3054332544342468e-07,
+        1.312032609541688e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "odd-half",
+      "kind": "return",
+      "weighted_nrmse": 0.001981508167774164,
+      "rmse": [
+        6.774143744725936e-10,
+        8.01392279878884e-10
+      ],
+      "max_absolute": [
+        1.336942371865419e-09,
+        1.6922290456931888e-09
+      ],
+      "signal_rms": [
+        5.499799507455534e-07,
+        3.1873415905619804e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "even-negative-half",
+      "kind": "return",
+      "weighted_nrmse": 0.00479232662672474,
+      "rmse": [
+        1.1187769580074479e-09,
+        6.327798879311408e-10
+      ],
+      "max_absolute": [
+        2.1388553829456802e-09,
+        1.1572594829851231e-09
+      ],
+      "signal_rms": [
+        2.327516711264285e-07,
+        1.3245226498257522e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-10",
+      "probe": "odd-negative-half",
+      "kind": "return",
+      "weighted_nrmse": 0.0020117758811311302,
+      "rmse": [
+        6.877514597242636e-10,
+        8.105031194789863e-10
+      ],
+      "max_absolute": [
+        1.3533198633399905e-09,
+        1.7059583802027378e-09
+      ],
+      "signal_rms": [
+        5.489577285026003e-07,
+        3.1734702196451955e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "even",
+      "kind": "return",
+      "weighted_nrmse": 0.009450467316895918,
+      "rmse": [
+        4.242562606412062e-09,
+        2.4122764707337084e-09
+      ],
+      "max_absolute": [
+        8.117826560849364e-09,
+        4.398008795282503e-09
+      ],
+      "signal_rms": [
+        4.476149623125324e-07,
+        2.560225201505797e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "odd",
+      "kind": "return",
+      "weighted_nrmse": 0.003767761612590245,
+      "rmse": [
+        2.5053602965222426e-09,
+        3.0217090091968732e-09
+      ],
+      "max_absolute": [
+        4.9730284792333975e-09,
+        6.435188581663254e-09
+      ],
+      "signal_rms": [
+        1.0822534881411666e-06,
+        6.322362905850737e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "even-negative",
+      "kind": "return",
+      "weighted_nrmse": 0.009741754790276383,
+      "rmse": [
+        4.457760476956844e-09,
+        2.5349353630038716e-09
+      ],
+      "max_absolute": [
+        8.5229137803956e-09,
+        4.6176400294347785e-09
+      ],
+      "signal_rms": [
+        4.5630825133368635e-07,
+        2.6096578872229375e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "odd-negative",
+      "kind": "return",
+      "weighted_nrmse": 0.0038847555142761973,
+      "rmse": [
+        2.583402762047976e-09,
+        3.0929761679091934e-09
+      ],
+      "max_absolute": [
+        5.102263232808292e-09,
+        6.544584882708926e-09
+      ],
+      "signal_rms": [
+        1.0785608037053611e-06,
+        6.270039965328053e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "even-half",
+      "kind": "return",
+      "weighted_nrmse": 0.00476142884738096,
+      "rmse": [
+        1.0737304721275865e-09,
+        6.105333296795696e-10
+      ],
+      "max_absolute": [
+        2.0541018524444245e-09,
+        1.1128674776546494e-09
+      ],
+      "signal_rms": [
+        2.2485423178079685e-07,
+        1.28606409845819e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "odd-half",
+      "kind": "return",
+      "weighted_nrmse": 0.0018983702275096016,
+      "rmse": [
+        6.311804472555576e-10,
+        7.598985069066555e-10
+      ],
+      "max_absolute": [
+        1.2514097764680258e-09,
+        1.6157068695107912e-09
+      ],
+      "signal_rms": [
+        5.406865517605604e-07,
+        3.1547937601941265e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "even-negative-half",
+      "kind": "return",
+      "weighted_nrmse": 0.0048342204830175,
+      "rmse": [
+        1.1006210267350072e-09,
+        6.258551612441396e-10
+      ],
+      "max_absolute": [
+        2.1047296489551935e-09,
+        1.1403062671492886e-09
+      ],
+      "signal_rms": [
+        2.2702682778369423e-07,
+        1.2984181399972934e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6101-a-18",
+      "probe": "odd-negative-half",
+      "kind": "return",
+      "weighted_nrmse": 0.0019276189937567848,
+      "rmse": [
+        6.409386514140121e-10,
+        7.688069637834956e-10
+      ],
+      "max_absolute": [
+        1.267569026855054e-09,
+        1.6293825221350144e-09
+      ],
+      "signal_rms": [
+        5.397633357010129e-07,
+        3.1417124696620565e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6102-a-10",
+      "probe": "even",
+      "kind": "return",
+      "weighted_nrmse": 0.009311386199325002,
+      "rmse": [
+        4.338374053190331e-09,
+        2.432046680853663e-09
+      ],
+      "max_absolute": [
+        8.297362980095842e-09,
+        4.473627154106489e-09
+      ],
+      "signal_rms": [
+        4.6448075743004957e-07,
+        2.6204601115666587e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6102-a-10",
+      "probe": "odd",
+      "kind": "return",
+      "weighted_nrmse": 0.0041355322051907775,
+      "rmse": [
+        2.8303727683160767e-09,
+        3.299277291372956e-09
+      ],
+      "max_absolute": [
+        5.516955069506231e-09,
+        6.890983570220777e-09
+      ],
+      "signal_rms": [
+        1.0922357190208808e-06,
+        6.281067085997172e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6102-a-18",
+      "probe": "even",
+      "kind": "return",
+      "weighted_nrmse": 0.009395234747880619,
+      "rmse": [
+        4.270075151875287e-09,
+        2.405877139764544e-09
+      ],
+      "max_absolute": [
+        8.169511819922201e-09,
+        4.410238616184693e-09
+      ],
+      "signal_rms": [
+        4.5316290450098745e-07,
+        2.568605417328983e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "preparation": "s6102-a-18",
+      "probe": "odd",
+      "kind": "return",
+      "weighted_nrmse": 0.003972500963966909,
+      "rmse": [
+        2.6454602846261814e-09,
+        3.1372335991274724e-09
+      ],
+      "max_absolute": [
+        5.183294396554709e-09,
+        6.595109681463429e-09
+      ],
+      "signal_rms": [
+        1.0741007411006064e-06,
+        6.217176322322511e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    }
+  ],
+  "candidate_selectivity": false,
+  "fresh_mixture": false,
+  "criteria": {
+    "selectivity_nrmse": 0.05,
+    "absolute_floor_multiple": 5,
+    "total_prediction_nrmse": 0.02,
+    "return_prediction_nrmse": 0.1
+  },
+  "source_hashes": {
+    "organization_response.py": "eadf2ad6a4b97387fc83a387c6d9d7905c8d93cadaa980944759386c1acce776",
+    "simulator.py": "5e6d1cb57566d5d2197daf61bead376e03fd1da7ad3c6d00729812e0b5780807",
+    "measurements.py": "570d07a21376ec9c649d9a566a93bd9ea0da61b6812496e6286abe24eca29de6"
+  },
+  "contract_sha256": "fb8251b37bd04049139bf8e183f53c10ebe8690918cb6882c47f7eab9828604c",
+  "development_files": {
+    "s6102-a-18.json": "d82746863be2d59d511b5820209008792a0479dcfa5b6955a98f057c7e3529ad",
+    "pilot-cost.json": "f3b9e3d0615c9a431d576e19d8a791d69db241a5d79fb3ac59131a9244736b71",
+    "s6101-a-10.json": "dca41386db63399b1229da191afafe02bdb5aa893f893339cb2df674d712410e",
+    "s6102-a-10.json": "2c6a6598d50b22bbb52ef874164c955f39988d5c62bf238b35a42767ddaf45ba",
+    "budget.json": "f01cdfc76cd4382f6854de050e862afd778ddb8e7e952e04e2bf9ad2db6971ba",
+    "protocol.json": "7095f21b2d4b6b4de48af0e28a8b0786f3b68f8e5c670767e0f11357fbeecbb2",
+    "s6101-a-18.json": "6b56be725cac04637d4f8ae044708fe673920adbb0916f081adf0890af3a061a"
+  },
+  "refinement_files": {
+    "s6101-a-10-half-dt.json": "08f64c14fb9e5595783966fabb8f189458a99f8b7f6852cb7a8710c327ebc277",
+    "s6101-a-18-double-n.json": "268a4d6d44bb4967ef53da3c0c8f4c1950994fa6193627ade1951a6491b79899",
+    "s6101-a-10-double-n.json": "e5e2c0e7cfb90333a1cd42e6f58e15ff29fcc8a6e65564890c15e6e6bad5bd0e",
+    "budget.json": "02d24de034d460036844efde7fc2b8e583b2a4ec815d6884dbefb408d0123116",
+    "s6101-a-18-half-dt.json": "689e7c351e3a29a8164b7ab14bcee236cd8edaec162c2e8f16a8d3b5cfb4e44b",
+    "protocol.json": "f2bee4ea531aa67d79c777716d8554b31f6e54a14811ad4627f541bac3fa138e"
+  },
+  "prediction_access": "own unperturbed trajectory is diagnostic input; no autonomous reduction claim"
+}

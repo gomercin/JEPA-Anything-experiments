@@ -1,0 +1,14 @@
+{
+  "cpu_seconds": 0.7133750000000001,
+  "wall_seconds": 8.77351662502042,
+  "previous_cpu_seconds": 259.172989,
+  "limit_cpu_seconds": 1800,
+  "sections": [
+    {
+      "task": "analysis",
+      "cpu_seconds": 0.7041580000000001,
+      "wall_seconds": 8.715938042005291
+    }
+  ],
+  "status": "COMPLETE"
+}

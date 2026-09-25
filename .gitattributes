@@ -1,3 +1,5 @@
 # Exact historical Matplotlib SVG bytes include whitespace in path data.
 # Do not normalize archived review copies; all source/docs keep whitespace checks.
 evidence/completed-2026-09-25/review/**/*.svg -whitespace
+# Byte-preserved incremental run output remains reviewable through its index.
+evidence/organization-response-2026-09-25/data/** linguist-generated=true

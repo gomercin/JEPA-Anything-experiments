@@ -1,0 +1,29 @@
+{
+  "cpu_seconds": 79.435127,
+  "wall_seconds": 79.57825616598711,
+  "previous_cpu_seconds": 89.083762,
+  "limit_cpu_seconds": 1200,
+  "sections": [
+    {
+      "task": "s6101-a-10-half-dt",
+      "cpu_seconds": 21.467111,
+      "wall_seconds": 21.49001637499896
+    },
+    {
+      "task": "s6101-a-10-double-n",
+      "cpu_seconds": 17.92729,
+      "wall_seconds": 17.943175083986716
+    },
+    {
+      "task": "s6101-a-18-half-dt",
+      "cpu_seconds": 21.924768,
+      "wall_seconds": 21.955988958012313
+    },
+    {
+      "task": "s6101-a-18-double-n",
+      "cpu_seconds": 18.105393,
+      "wall_seconds": 18.122868625010597
+    }
+  ],
+  "status": "COMPLETE"
+}

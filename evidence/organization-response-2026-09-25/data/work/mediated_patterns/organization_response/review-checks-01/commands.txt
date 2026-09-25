@@ -1,0 +1,10 @@
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.organization_response development --output work/mediated_patterns/organization_response/development-01
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.organization_response qualify --data work/mediated_patterns/organization_response/development-01 --output work/mediated_patterns/organization_response/qualification-01
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.organization_response freeze --data work/mediated_patterns/organization_response/development-01 --refinement work/mediated_patterns/organization_response/qualification-01 --output work/mediated_patterns/organization_response/frozen-01
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.organization_response fresh --freeze work/mediated_patterns/organization_response/frozen-01 --output work/mediated_patterns/organization_response/fresh-01
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.organization_response analyze --data work/mediated_patterns/organization_response/fresh-01 --freeze work/mediated_patterns/organization_response/frozen-01 --output work/mediated_patterns/organization_response/analysis-01
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. .venv/bin/python work/mediated_patterns/organization_response/analysis-01/report_calculations.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 /usr/bin/time -p .venv/bin/python -m pytest experiments/mediated_patterns/tests/test_organization_response.py -q
+.venv/bin/ruff check experiments/mediated_patterns/organization_response.py experiments/mediated_patterns/tests/test_organization_response.py
+.venv/bin/ruff format --check experiments/mediated_patterns/organization_response.py experiments/mediated_patterns/tests/test_organization_response.py
+git diff --check

@@ -1,0 +1,16 @@
+{
+  "original_protocol_source_references_checked": 110,
+  "original_protocol_source_references_matching": 110,
+  "original_review_manifest_entries_checked": 166,
+  "original_review_manifest_entries_matching_before_publication_append": 166,
+  "known_gaps": [
+    "Executed from a dirty worktree at the recorded base. The publication commit does not retroactively identify execution.",
+    "Per-stage source snapshots contain multiple runner versions; all are retained with original hashes.",
+    "Runtime inventory in review-01/details.json records Python/NumPy/platform; an exact complete historical environment lockfile was not recorded.",
+    "The original completed report and execution records retain local paths and then-current local/uncommitted/no-push wording; the living index supplies later publication state."
+  ],
+  "missing_extant_substantive_artifacts": [],
+  "substantive_local_only_remainder": [],
+  "historical_report_summary_conflict": null,
+  "pending_atlas_paragraph": "Preserved byte-for-byte in the original report; Atlas not edited."
+}

@@ -1,0 +1,10 @@
+{
+  "cpu_seconds": 10.64,
+  "measured_test_cpu_seconds": 0.64,
+  "conservative_unmetered_allowance_seconds": 10.0,
+  "previous_cpu_seconds": 260.20833899999997,
+  "total_budget_charge_seconds": 270.84833899999995,
+  "limit_cpu_seconds": 1800,
+  "status": "COMPLETE",
+  "scope": "First instrument test, brief interactive calculations, final focused tests and receipt overhead. The 10-second allowance is a conservative charge, not a measured runtime."
+}

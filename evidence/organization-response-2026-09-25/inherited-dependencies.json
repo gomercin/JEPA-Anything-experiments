@@ -1,0 +1,56 @@
+{
+  "repository": "gomercin/JEPA-Anything-experiments",
+  "git_base_commit": "1c555d5aab826418c81e0a9005a85200e3f8fd65",
+  "pr": {
+    "url": "https://github.com/gomercin/JEPA-Anything-experiments/pull/1",
+    "state_checked": "OPEN",
+    "draft": true,
+    "merged": false,
+    "head": "1c555d5aab826418c81e0a9005a85200e3f8fd65",
+    "branch": "codex/preserve-completed-experiments"
+  },
+  "snapshot_index": "evidence/completed-2026-09-25/README.md",
+  "snapshot_source_commit": "e17fe41d07a03d3a7fe67955054112773e8344be",
+  "tag": "evidence-completed-2026-09-25",
+  "tag_object": "c4c5f37f418e8c06fc3142733114de82c1d714b6",
+  "archives_not_repackaged_or_restored": [
+    {
+      "name": "coupled_oscillators.tar.gz",
+      "bytes": 39152049,
+      "sha256": "0c3e41db7840e0a5aa045a8cab177bcf8ba7b90acc61a2174ff1a4dbc36b742f",
+      "url": "https://github.com/gomercin/JEPA-Anything-experiments/releases/download/evidence-completed-2026-09-25/coupled_oscillators.tar.gz"
+    },
+    {
+      "name": "mediated_patterns.tar.gz",
+      "bytes": 306879896,
+      "sha256": "bf0fc57b2abec330581cb29b79cd03cd600226fac86e21635a57afed577cca6a",
+      "url": "https://github.com/gomercin/JEPA-Anything-experiments/releases/download/evidence-completed-2026-09-25/mediated_patterns.tar.gz"
+    }
+  ],
+  "git_source_dependencies": [
+    {
+      "path": "experiments/mediated_patterns/simulator.py",
+      "sha256": "5e6d1cb57566d5d2197daf61bead376e03fd1da7ad3c6d00729812e0b5780807"
+    },
+    {
+      "path": "experiments/mediated_patterns/measurements.py",
+      "sha256": "570d07a21376ec9c649d9a566a93bd9ea0da61b6812496e6286abe24eca29de6"
+    },
+    {
+      "path": "experiments/mediated_patterns/explore.py",
+      "sha256": "db802d17c5d8362d8075e4e5e39dcee2f4c90bb9ebb23d69d73098f5d2bcb2c9"
+    },
+    {
+      "path": "evidence/completed-2026-09-25/restore.py",
+      "sha256": "7573abb41e6511d4f9d9063d29ee9019e5264a5c93fc056df676976820b00f8b"
+    },
+    {
+      "path": "evidence/completed-2026-09-25/artifacts.json",
+      "sha256": "2b391f1d2a53b89001f2b2a07db731161e5e2cd60bfe0377b8a8a30cc7b52735"
+    }
+  ],
+  "new_saved_data_requires_inherited_archive": false,
+  "new_response_runner_requires_inherited_archive": false,
+  "historical_AB20_C32_reproduction_requires_inherited_archive": true,
+  "remote_check": "GitHub PR, release asset metadata/hash pointers and annotated tag target checked; historical archives were not downloaded."
+}
