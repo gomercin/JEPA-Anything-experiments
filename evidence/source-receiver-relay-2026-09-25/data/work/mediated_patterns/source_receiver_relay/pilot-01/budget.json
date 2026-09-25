@@ -1,0 +1,34 @@
+{
+  "cpu_seconds": 27.618529,
+  "wall_seconds": 27.766968584008282,
+  "previous_cpu_seconds": 0,
+  "limit_cpu_seconds": 1200,
+  "sections": [
+    {
+      "task": "isolated-components-s8101",
+      "cpu_seconds": 11.007869999999999,
+      "wall_seconds": 11.02551708399551
+    },
+    {
+      "task": "prepare-s8101-b0",
+      "cpu_seconds": 0.974571000000001,
+      "wall_seconds": 0.9758798750117421
+    },
+    {
+      "task": "s8101-b0-prediction",
+      "cpu_seconds": 7.321601000000001,
+      "wall_seconds": 7.330642000015359
+    },
+    {
+      "task": "prepare-s8101-b-4",
+      "cpu_seconds": 0.9734729999999985,
+      "wall_seconds": 0.975227040995378
+    },
+    {
+      "task": "s8101-b-4-prediction",
+      "cpu_seconds": 7.316418000000002,
+      "wall_seconds": 7.322126082988689
+    }
+  ],
+  "status": "COMPLETE"
+}

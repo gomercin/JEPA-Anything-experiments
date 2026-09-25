@@ -1,0 +1,114 @@
+{
+  "cpu_seconds": 173.170815,
+  "wall_seconds": 173.43321220899816,
+  "previous_cpu_seconds": 182.846957,
+  "limit_cpu_seconds": 1800,
+  "sections": [
+    {
+      "task": "isolated-components-s9101",
+      "cpu_seconds": 10.845289000000001,
+      "wall_seconds": 10.852474957995582
+    },
+    {
+      "task": "prepare-s9101-b0",
+      "cpu_seconds": 0.9756359999999997,
+      "wall_seconds": 0.9761054169794079
+    },
+    {
+      "task": "s9101-b0-prediction",
+      "cpu_seconds": 7.270331999999998,
+      "wall_seconds": 7.278177540982142
+    },
+    {
+      "task": "s9101-b0",
+      "cpu_seconds": 15.247560000000004,
+      "wall_seconds": 15.256386958004441
+    },
+    {
+      "task": "prepare-s9101-b-4",
+      "cpu_seconds": 0.9662209999999973,
+      "wall_seconds": 0.9667269999918062
+    },
+    {
+      "task": "s9101-b-4-prediction",
+      "cpu_seconds": 7.247447000000001,
+      "wall_seconds": 7.253754208009923
+    },
+    {
+      "task": "s9101-b-4",
+      "cpu_seconds": 15.220762999999998,
+      "wall_seconds": 15.230238707998069
+    },
+    {
+      "task": "isolated-components-s9102",
+      "cpu_seconds": 10.903875,
+      "wall_seconds": 10.91379308301839
+    },
+    {
+      "task": "prepare-s9102-b0",
+      "cpu_seconds": 0.9736029999999971,
+      "wall_seconds": 0.9741549589962233
+    },
+    {
+      "task": "s9102-b0-prediction",
+      "cpu_seconds": 7.265715,
+      "wall_seconds": 7.272502999985591
+    },
+    {
+      "task": "s9102-b0",
+      "cpu_seconds": 15.268263000000005,
+      "wall_seconds": 15.279729875008343
+    },
+    {
+      "task": "prepare-s9102-b-4",
+      "cpu_seconds": 0.9683909999999969,
+      "wall_seconds": 0.9688072910066694
+    },
+    {
+      "task": "s9102-b-4-prediction",
+      "cpu_seconds": 7.307840999999996,
+      "wall_seconds": 7.31617970901425
+    },
+    {
+      "task": "s9102-b-4",
+      "cpu_seconds": 15.131512999999998,
+      "wall_seconds": 15.139368332980666
+    },
+    {
+      "task": "isolated-components-s9103",
+      "cpu_seconds": 10.819645999999992,
+      "wall_seconds": 10.825238958990667
+    },
+    {
+      "task": "prepare-s9103-b0",
+      "cpu_seconds": 0.9724780000000095,
+      "wall_seconds": 0.9728112500160933
+    },
+    {
+      "task": "s9103-b0-prediction",
+      "cpu_seconds": 7.243862000000007,
+      "wall_seconds": 7.251258666976355
+    },
+    {
+      "task": "s9103-b0",
+      "cpu_seconds": 15.177250000000015,
+      "wall_seconds": 15.188863999996101
+    },
+    {
+      "task": "prepare-s9103-b-4",
+      "cpu_seconds": 0.9700819999999908,
+      "wall_seconds": 0.9705713329894934
+    },
+    {
+      "task": "s9103-b-4-prediction",
+      "cpu_seconds": 7.208814999999987,
+      "wall_seconds": 7.213534124981379
+    },
+    {
+      "task": "s9103-b-4",
+      "cpu_seconds": 15.15226100000001,
+      "wall_seconds": 15.163170374988113
+    }
+  ],
+  "status": "COMPLETE"
+}

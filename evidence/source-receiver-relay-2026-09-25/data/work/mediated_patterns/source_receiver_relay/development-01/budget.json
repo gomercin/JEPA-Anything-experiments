@@ -1,0 +1,19 @@
+{
+  "cpu_seconds": 47.953065,
+  "wall_seconds": 48.229181625007186,
+  "previous_cpu_seconds": 27.618529,
+  "limit_cpu_seconds": 1200,
+  "sections": [
+    {
+      "task": "s8101-b0",
+      "cpu_seconds": 23.93079,
+      "wall_seconds": 24.027458541997476
+    },
+    {
+      "task": "s8101-b-4",
+      "cpu_seconds": 23.998988,
+      "wall_seconds": 24.07110050000483
+    }
+  ],
+  "status": "COMPLETE"
+}
