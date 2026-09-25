@@ -22,7 +22,7 @@ B's susceptibility and evolving background, direct oscillatory u tails, and
 loops. The far-field stationary SH roots satisfy (1+lambda^2)^2=r;
 for r=-.67 the positive decay rate is sqrt((sqrt(1.67)-1)/2)=0.3823,
 shorter than the mediator length 8, but not an excuse to delete direct coupling.
-Diffusive impulse arrival over 56 has a kernel peak near 30 time units
+Diffusive impulse arrival over 56 has a kernel peak near 33 time units
 (from t^2/tau+t/2-d^2*tau/(4D)=0). Start with horizon 80; no early below-floor
 trace will be called screening. The trajectory-dependent ETDRK4 tangent, with
 its own sham as privileged diagnostic information, is the stronger ordinary
@@ -88,3 +88,15 @@ hard stop at cumulative 1200. Failures charged and preserved. Source commit and
 hash manifest per run; unique non-overwriting directories; no historical archive
 duplication. Stop after one explanation and qualified fresh check or a bounded
 negligible/ordinary-account outcome. No automatic scientific successor.
+
+## Development decision
+
+The tangent-only pilot predicts C mass RMS 1.7293e-7 / 2.9442e-7 and selected
+feedback contribution RMS 1.1222e-8 / 1.6992e-8 for B=0/-4. The Q_B change has
+mass/moment RMS 1.0856e-8 / 7.5707e-9. Both triples retain measured gaps >23.9
+and maximum drift <.014 over 80. Retain this contrast, with no alternative
+placement or new field. Pilot cost 27.619 CPU seconds; projection 579.831.
+Nonlinear signed .02 checks subsequently give 0.85-1.40% C tangent error;
+halving gives 0.43-0.70%. This supports using the tangent for the smaller signal,
+subject to refinement. At withheld .03 the 2% prediction gate may be marginal;
+retain both the amplitude and gate and record any failure, rather than tuning.

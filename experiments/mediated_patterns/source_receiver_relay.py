@@ -297,6 +297,15 @@ def panel(out, stage, budget, data=None, frozen=None):
                 "development_seeds"
             ] != list(DEV):
                 raise ValueError("Preparation split changed")
+            if (
+                freeze["positions"] != list(POSITIONS)
+                or freeze["config"] != asdict(CFG)
+                or freeze["eps"] != EPS
+            ):
+                raise ValueError("Frozen physical contract changed")
+            for name, expected in freeze["sources"].items():
+                if digest(Path(__file__).with_name(name)) != expected:
+                    raise ValueError("Frozen source changed: " + name)
             (out / "freeze-copy.json").write_bytes(
                 (frozen / "freeze.json").read_bytes()
             )
@@ -310,7 +319,10 @@ def panel(out, stage, budget, data=None, frozen=None):
                 # Pilot is calculation only; fresh prediction is saved BEFORE nonlinear references.
                 case(out, name + "-prediction", CFG, initial, seed, b, [], budget)
                 if stage == "fresh":
-                    case(out, name, CFG, initial, seed, b, [EPS, 0.03], budget)
+                    amplitudes = [EPS]
+                    if any(freeze["candidate_resolved"]):
+                        amplitudes.append(freeze["withheld_amplitude"])
+                    case(out, name, CFG, initial, seed, b, amplitudes, budget)
                 elif b == POSITIONS[0]:
                     spent = time.process_time() - budget.start_cpu
                     write_json(
