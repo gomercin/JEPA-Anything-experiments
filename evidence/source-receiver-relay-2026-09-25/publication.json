@@ -1,6 +1,6 @@
 {
-  "state": "READY_FOR_SCOPED_PR",
-  "remote_verified": false,
+  "state": "REMOTE_VERIFIED_PR_OPEN",
+  "remote_verified": true,
   "members": 77,
   "data_bytes": 6599030,
   "release_assets_created": 0,
@@ -12,5 +12,48 @@
     "02760ba"
   ],
   "scientific_status": "RESOLVED_PATHWAY_AND_ORGANIZATION_DIFFERENCE_WITH_PARTIAL_AMPLITUDE_PREDICTION_FAILURE",
-  "software_status": "make check and focused lint passed; critical review in review.md"
+  "software_status": "make check and focused lint passed; critical review in review.md",
+  "pr": "https://github.com/gomercin/JEPA-Anything-experiments/pull/3",
+  "verified_source_snapshot": "3142e0c9c8cad7237b351f699568a8cc9406deb2",
+  "remote_verification": {
+    "remote_head": "3142e0c9c8cad7237b351f699568a8cc9406deb2",
+    "source_hash_checks": 166,
+    "protocols": 7,
+    "finite_npz_files": 34,
+    "larger_amplitude_full_failures": [
+      {
+        "seed": 9101,
+        "b": 0.0,
+        "kind": "full",
+        "relative": [
+          0.02032712653679708,
+          0.020520784510459893
+        ]
+      },
+      {
+        "seed": 9102,
+        "b": 0.0,
+        "kind": "full",
+        "relative": [
+          0.020201003489067244,
+          0.02026729880918714
+        ]
+      },
+      {
+        "seed": 9103,
+        "b": 0.0,
+        "kind": "full",
+        "relative": [
+          0.0202980265280922,
+          0.020383421074151833
+        ]
+      }
+    ],
+    "scientific_modules_imported": false,
+    "experiments_executed": false,
+    "restored_destination": "/private/tmp/jepa-relay-restored-20260925"
+  },
+  "remote_member_hashes_verified": 77,
+  "remote_restore_hashes_verified": 77,
+  "hosted_status_at_snapshot": "push check passed; PR check pending; recheck exact final head before merge"
 }

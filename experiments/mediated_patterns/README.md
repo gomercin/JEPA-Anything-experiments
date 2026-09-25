@@ -239,7 +239,7 @@ and PR body for the distinct final pushed head. All new evidence is in Git;
 no new release asset or inherited-archive download was needed. No extant
 substantive new evidence remains local-only.
 
-## Source-to-receiver relay — completed science, publication in progress
+## Source-to-receiver relay — completed science, remotely verified PR #3
 
 [Source-to-receiver report](SOURCE_RECEIVER_RELAY.md) and
 [new portable evidence](../../evidence/source-receiver-relay-2026-09-25/README.md)
@@ -256,8 +256,9 @@ while B=-4 and all selected-contribution predictions pass their respective
 gates. Static conditioning and direct propagation remain in the control.
 AB20/C32 stays frozen, and the completed C-probe selectivity negative is unchanged.
 
-Science is closed; software checks and explicit critical review passed. This
-branch is not yet merged at this handoff revision; authoritative publication,
+Science is closed; software checks and explicit critical review passed. [PR #3](https://github.com/gomercin/JEPA-Anything-experiments/pull/3) is open at
+this handoff revision, and all 77 remotely retrieved member hashes and 166
+execution-source references have been verified. Authoritative publication,
 retrieval and merge status is recorded in the evidence receipt and linked PR.
 The accumulated Atlas catch-up targets only the existing Effective Motif
 Dynamics and persistence-to-composability homes. Pending delta if inaccessible:
