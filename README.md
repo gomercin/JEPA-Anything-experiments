@@ -133,3 +133,13 @@ If you find this work useful in your research, please cite our paper:
 ## License
 
 See [LICENSE](LICENSE) and the [core license](jepa-anything-core/LICENSE).
+
+## Completed exploratory lab evidence (this fork)
+
+This fork's completed oscillator A–D and mediated-pattern investigations are
+preserved separately from the upstream framework claims. Start with the
+[portable evidence index](evidence/completed-2026-09-25/README.md) for reports,
+frozen model identities, all result/failure packages, explicit restoration and
+review limitations. Publication is an unreviewed research snapshot, not a new
+scientific run or production release. The next organization-conditioned-response
+investigation is not executed by this preservation task.

@@ -1,0 +1,32 @@
+[
+  {
+    "original": "work/coupled_oscillators/interrogation/panel-01/analyze_panel.py",
+    "copy": "evidence/completed-2026-09-25/historical_analysis/interrogation/panel-01/analyze_panel.py",
+    "sha256": "41bef9d927f6bbc14b2298e241c08e4969a6e2501fcea8f712dfc4df7cd50273",
+    "role": "historical analysis source; use original restored path for the recorded command; not run during preservation"
+  },
+  {
+    "original": "work/coupled_oscillators/frozen_encoder/analyze_session.py",
+    "copy": "evidence/completed-2026-09-25/historical_analysis/frozen_encoder/analyze_session.py",
+    "sha256": "0e6922d0f44236d0dec80798c55c6c80a41676a980fcc5fbdbc8628ec70456e1",
+    "role": "historical analysis source; use original restored path for the recorded command; not run during preservation"
+  },
+  {
+    "original": "work/coupled_oscillators/phase_b/analyze.py",
+    "copy": "evidence/completed-2026-09-25/historical_analysis/phase_b/analyze.py",
+    "sha256": "273dde6ee39447c30e513b266b0e23e8c8ea34ee8b140fe5650cf0fa0ca3cca9",
+    "role": "historical analysis source; use original restored path for the recorded command; not run during preservation"
+  },
+  {
+    "original": "work/coupled_oscillators/phase_c_partial/analyze.py",
+    "copy": "evidence/completed-2026-09-25/historical_analysis/phase_c_partial/analyze.py",
+    "sha256": "c0c29f685159e34a2f7661cbd5f35e5d18e927adbdae5d78feb55073f53f8b13",
+    "role": "historical analysis source; use original restored path for the recorded command; not run during preservation"
+  },
+  {
+    "original": "work/coupled_oscillators/phase_d_noise/analyze.py",
+    "copy": "evidence/completed-2026-09-25/historical_analysis/phase_d_noise/analyze.py",
+    "sha256": "ad4800dacf2c22fbcbe924080b47f59c7bb84e2232c7035cd20e1b8753db5360",
+    "role": "historical analysis source; use original restored path for the recorded command; not run during preservation"
+  }
+]

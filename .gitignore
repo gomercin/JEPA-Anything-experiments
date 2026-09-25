@@ -29,3 +29,9 @@ tensorboard/
 
 # macOS AppleDouble metadata
 ._*
+
+# Generated coupled-oscillator experiment outputs
+work/coupled_oscillators/
+
+# Generated mediated-pattern experiment outputs
+work/mediated_patterns/

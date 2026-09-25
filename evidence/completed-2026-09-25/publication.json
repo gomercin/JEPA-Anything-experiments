@@ -1,0 +1,11 @@
+{
+  "status": "prepared; publication and remote retrieval verification pending",
+  "repository": "gomercin/JEPA-Anything-experiments",
+  "default_branch": "main",
+  "preservation_branch": "codex/preserve-completed-experiments",
+  "tag": "evidence-completed-2026-09-25",
+  "base_revision": "c6e6c88f3ef75a4ce7acd660d6fa5779d995512c",
+  "source_snapshot_commit": "tag target, to be recorded after source commit",
+  "next_experiment_executed": false,
+  "merged": false
+}

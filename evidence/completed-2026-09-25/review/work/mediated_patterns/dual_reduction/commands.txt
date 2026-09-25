@@ -1,0 +1,88 @@
+# work/mediated_patterns/dual_reduction/rf-baseline-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid quick --data work/mediated_patterns/two_way_hybrid/frozen-01 --output work/mediated_patterns/dual_reduction/rf-baseline-01
+
+# work/mediated_patterns/dual_reduction/calibration-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction calibrate --output work/mediated_patterns/dual_reduction/calibration-01
+
+# work/mediated_patterns/dual_reduction/pilot-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction pilot --output work/mediated_patterns/dual_reduction/pilot-01
+
+# work/mediated_patterns/dual_reduction/c8-fr-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction qualify_c --order 8 --output work/mediated_patterns/dual_reduction/c8-fr-01
+
+# work/mediated_patterns/dual_reduction/c8-projection-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_analysis projection --qualification work/mediated_patterns/dual_reduction/c8-fr-01 --order 8 --output work/mediated_patterns/dual_reduction/c8-projection-01
+
+# work/mediated_patterns/dual_reduction/c16-fr-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction qualify_c --order 16 --output work/mediated_patterns/dual_reduction/c16-fr-01
+
+# work/mediated_patterns/dual_reduction/c16-projection-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_analysis projection --qualification work/mediated_patterns/dual_reduction/c16-fr-01 --order 16 --output work/mediated_patterns/dual_reduction/c16-projection-01
+
+# work/mediated_patterns/dual_reduction/c24-fr-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction qualify_c --order 24 --output work/mediated_patterns/dual_reduction/c24-fr-01
+
+# work/mediated_patterns/dual_reduction/frozen-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction freeze_c --qualification work/mediated_patterns/dual_reduction/c24-fr-01 --order 24 --output work/mediated_patterns/dual_reduction/frozen-01
+
+# work/mediated_patterns/dual_reduction/composition-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction compose --output work/mediated_patterns/dual_reduction/composition-01
+
+# work/mediated_patterns/dual_reduction/refinement-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction refine --output work/mediated_patterns/dual_reduction/refinement-01
+
+# work/mediated_patterns/dual_reduction/incremental-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction incremental --output work/mediated_patterns/dual_reduction/incremental-01
+
+# work/mediated_patterns/dual_reduction/fresh-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction fresh --output work/mediated_patterns/dual_reduction/fresh-01
+
+# work/mediated_patterns/dual_reduction/diagnosis-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_analysis exposed --output work/mediated_patterns/dual_reduction/diagnosis-01
+
+# work/mediated_patterns/dual_reduction/analysis-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_analysis summarize --output work/mediated_patterns/dual_reduction/analysis-01
+
+# work/mediated_patterns/dual_reduction/failure-refinement-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction failure_refine --output work/mediated_patterns/dual_reduction/failure-refinement-01
+
+# work/mediated_patterns/dual_reduction/c32-fr-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction adapt --order 32 --output work/mediated_patterns/dual_reduction/c32-fr-01
+
+# work/mediated_patterns/dual_reduction/frozen-02
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction freeze_c --qualification work/mediated_patterns/dual_reduction/c32-fr-01 --order 32 --output work/mediated_patterns/dual_reduction/frozen-02
+
+# work/mediated_patterns/dual_reduction/composition-02
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction compose --freeze frozen-02 --output work/mediated_patterns/dual_reduction/composition-02
+
+# work/mediated_patterns/dual_reduction/fresh-02
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction fresh --freeze frozen-02 --output work/mediated_patterns/dual_reduction/fresh-02
+
+# work/mediated_patterns/dual_reduction/repair-regression-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction repair_regression --freeze frozen-02 --output work/mediated_patterns/dual_reduction/repair-regression-01
+
+# work/mediated_patterns/dual_reduction/analysis-02
+MPLCONFIGDIR=/tmp/jepa-mpl-cache XDG_CACHE_HOME=/tmp/jepa-cache OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_analysis summarize --freeze frozen-02 --panel fresh-02 --output work/mediated_patterns/dual_reduction/analysis-02
+
+# work/mediated_patterns/dual_reduction/refinement-02
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction validate_refine --freeze frozen-02 --panel fresh-02 --output work/mediated_patterns/dual_reduction/refinement-02
+
+# work/mediated_patterns/dual_reduction/incremental-02
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction incremental --freeze frozen-02 --panel composition-02 --output work/mediated_patterns/dual_reduction/incremental-02
+
+# work/mediated_patterns/dual_reduction/checkpoint-02
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction checkpoint --freeze frozen-02 --panel fresh-02 --output work/mediated_patterns/dual_reduction/checkpoint-02
+
+# work/mediated_patterns/dual_reduction/resources-02
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_analysis resources --freeze frozen-02 --panel fresh-02 --output work/mediated_patterns/dual_reduction/resources-02
+
+# work/mediated_patterns/dual_reduction/quick-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.dual_reduction quick --freeze frozen-02 --output work/mediated_patterns/dual_reduction/quick-01
+
+OPENBLAS_NUM_THREADS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest experiments/mediated_patterns/tests -q
+
+OPENBLAS_NUM_THREADS=1 make check PYTHON=.venv/bin/python
+
+.venv/bin/ruff check experiments/mediated_patterns/dual_pair.py experiments/mediated_patterns/dual_reduction.py experiments/mediated_patterns/dual_analysis.py experiments/mediated_patterns/tests/test_dual.py
+
+git diff --check

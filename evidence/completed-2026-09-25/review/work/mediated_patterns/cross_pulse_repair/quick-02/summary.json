@@ -1,0 +1,188 @@
+[
+  {
+    "role": "short",
+    "model": "kernel",
+    "runs": 3,
+    "passed": 0,
+    "pooled": {
+      "signal_rms": 5.1375007106596275e-06,
+      "rmse": 3.887300865051456e-07,
+      "max_absolute": 1.2439059631956966e-06,
+      "nrmse": 0.07566521318402596
+    },
+    "worst_nrmse": 0.10194143116135201,
+    "failures": [
+      {
+        "run": "s1101-d27.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d27.5-short_pn325",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d27.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "short",
+    "model": "original",
+    "runs": 3,
+    "passed": 0,
+    "pooled": {
+      "signal_rms": 5.1375007106596275e-06,
+      "rmse": 3.891253360636948e-07,
+      "max_absolute": 1.2431663228897935e-06,
+      "nrmse": 0.075742147394026
+    },
+    "worst_nrmse": 0.10193699588450712,
+    "failures": [
+      {
+        "run": "s1101-d27.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d27.5-short_pn325",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d27.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "short",
+    "model": "candidate",
+    "runs": 3,
+    "passed": 3,
+    "pooled": {
+      "signal_rms": 5.1375007106596275e-06,
+      "rmse": 3.437327568358745e-08,
+      "max_absolute": 8.826011831977699e-08,
+      "nrmse": 0.006690661008039862
+    },
+    "worst_nrmse": 0.007614209379889498,
+    "failures": []
+  },
+  {
+    "role": "regression",
+    "model": "kernel",
+    "runs": 3,
+    "passed": 3,
+    "pooled": {
+      "signal_rms": 1.4761433288745513e-05,
+      "rmse": 1.9160516916380212e-07,
+      "max_absolute": 4.861684127812675e-07,
+      "nrmse": 0.012980119573475748
+    },
+    "worst_nrmse": 0.01795376169974439,
+    "failures": []
+  },
+  {
+    "role": "regression",
+    "model": "original",
+    "runs": 3,
+    "passed": 3,
+    "pooled": {
+      "signal_rms": 1.4761433288745513e-05,
+      "rmse": 1.9692735730476436e-07,
+      "max_absolute": 4.863209276952752e-07,
+      "nrmse": 0.01334066641448068
+    },
+    "worst_nrmse": 0.01817446818812544,
+    "failures": []
+  },
+  {
+    "role": "regression",
+    "model": "candidate",
+    "runs": 3,
+    "passed": 3,
+    "pooled": {
+      "signal_rms": 1.4761433288745513e-05,
+      "rmse": 2.9300946288552118e-08,
+      "max_absolute": 9.555643397161733e-08,
+      "nrmse": 0.0019849662099473697
+    },
+    "worst_nrmse": 0.002365870041712148,
+    "failures": []
+  },
+  {
+    "role": "three",
+    "model": "kernel",
+    "runs": 1,
+    "passed": 0,
+    "pooled": {
+      "signal_rms": 1.9356416850014053e-06,
+      "rmse": 1.909437882071441e-07,
+      "max_absolute": 4.711417720409345e-07,
+      "nrmse": 0.09864624722989755
+    },
+    "worst_nrmse": 0.09864624722989755,
+    "failures": [
+      {
+        "run": "s1101-d27.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "three",
+    "model": "original",
+    "runs": 1,
+    "passed": 0,
+    "pooled": {
+      "signal_rms": 1.9356416850014053e-06,
+      "rmse": 1.9578990633357268e-07,
+      "max_absolute": 4.7427918979090945e-07,
+      "nrmse": 0.10114987078997037
+    },
+    "worst_nrmse": 0.10114987078997037,
+    "failures": [
+      {
+        "run": "s1101-d27.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "three",
+    "model": "candidate",
+    "runs": 1,
+    "passed": 1,
+    "pooled": {
+      "signal_rms": 1.9356416850014053e-06,
+      "rmse": 6.367947541559511e-08,
+      "max_absolute": 1.4872642919379394e-07,
+      "nrmse": 0.03289837985461079
+    },
+    "worst_nrmse": 0.03289837985461079,
+    "failures": []
+  }
+]

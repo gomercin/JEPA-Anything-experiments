@@ -1,0 +1,15 @@
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid pilot --output work/mediated_patterns/two_way_hybrid/pilot-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid consistency --output work/mediated_patterns/two_way_hybrid/consistency-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid calibrate --output work/mediated_patterns/two_way_hybrid/calibration-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid development --data work/mediated_patterns/two_way_hybrid/calibration-01 --order 4 --output work/mediated_patterns/two_way_hybrid/order4-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid development --data work/mediated_patterns/two_way_hybrid/calibration-01 --order 8 --output work/mediated_patterns/two_way_hybrid/order8-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid qualify --output work/mediated_patterns/two_way_hybrid/qualification-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid development --data work/mediated_patterns/two_way_hybrid/calibration-01 --order 12 --output work/mediated_patterns/two_way_hybrid/order12-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid repair-check --data work/mediated_patterns/two_way_hybrid/calibration-01 --order 16 --output work/mediated_patterns/two_way_hybrid/order16-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid repair-check --data work/mediated_patterns/two_way_hybrid/calibration-01 --order 20 --output work/mediated_patterns/two_way_hybrid/order20-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid freeze --data work/mediated_patterns/two_way_hybrid/calibration-01 --order 20 --output work/mediated_patterns/two_way_hybrid/frozen-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid fresh --data work/mediated_patterns/two_way_hybrid/frozen-01 --output work/mediated_patterns/two_way_hybrid/fresh-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid openloop --output work/mediated_patterns/two_way_hybrid/openloop-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid quick --data work/mediated_patterns/two_way_hybrid/frozen-01 --output work/mediated_patterns/two_way_hybrid/quick-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.two_way_hybrid weak-refinement --output work/mediated_patterns/two_way_hybrid/weak-refinement-01
+OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.mediated_patterns.hybrid_analysis --output work/mediated_patterns/two_way_hybrid/analysis-01

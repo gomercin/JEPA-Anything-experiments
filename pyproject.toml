@@ -3,8 +3,12 @@ minversion = "8.0"
 testpaths = [
   "jepa-anything-core/tests",
   "jepa-anything-skill/tests",
+  "experiments/coupled_oscillators/tests",
+  "experiments/mediated_patterns/tests",
+  "evidence/completed-2026-09-25/tests",
 ]
 pythonpath = [
+  ".",
   "jepa-anything-core/src",
   "jepa-anything-skill",
 ]

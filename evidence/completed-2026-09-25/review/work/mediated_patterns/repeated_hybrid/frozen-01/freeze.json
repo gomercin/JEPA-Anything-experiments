@@ -1,0 +1,113 @@
+{
+  "status": "FROZEN_EXPLORATORY",
+  "model_version": "original twenty-mode spatial pair unchanged",
+  "model_path": "work/mediated_patterns/two_way_hybrid/frozen-01/model.npz",
+  "model_sha256": "a128228fd027986ed17fbc1802f02a9d1820f7dffd215aa46fa6211c4c04bb6e",
+  "config": {
+    "length": 192,
+    "n": 768,
+    "dt": 0.00625,
+    "r": -0.67,
+    "cubic": 2.0,
+    "feedback": 0.05,
+    "source": 1.0,
+    "diffusion": 64.0,
+    "tau": 10.0
+  },
+  "seeds": [
+    3011,
+    3022,
+    3033
+  ],
+  "positions": [
+    39,
+    41
+  ],
+  "age": "20 odd /60 even",
+  "plans": {
+    "overlap_same": {
+      "events": [
+        [
+          0,
+          0.08
+        ],
+        [
+          10,
+          0.065
+        ]
+      ],
+      "horizon": 80
+    },
+    "overlap_reverse": {
+      "events": [
+        [
+          0,
+          -0.08
+        ],
+        [
+          10,
+          0.065
+        ]
+      ],
+      "horizon": 80
+    },
+    "relaxed_reverse": {
+      "events": [
+        [
+          0,
+          0.075
+        ],
+        [
+          55,
+          -0.075
+        ]
+      ],
+      "horizon": 135
+    },
+    "irregular_three": {
+      "events": [
+        [
+          0,
+          0.075
+        ],
+        [
+          9,
+          -0.065
+        ],
+        [
+          27,
+          0.08
+        ]
+      ],
+      "horizon": 107
+    }
+  },
+  "gates": {
+    "C_response_nrmse": 0.01,
+    "C_response_max": 0.001,
+    "B_response_nrmse": 0.1,
+    "B_response_max": 2e-05,
+    "C_return_nrmse": 0.1,
+    "C_return_max": 1e-06,
+    "return_signal_floor": 2e-07
+  },
+  "scales": {
+    "B_response": 0.00032766043852773124,
+    "C_response": 0.09437117286345785,
+    "C_return": 3.328766588624505e-06
+  },
+  "windows": "whole, each event first20, early5 absolute-only, last event+10 onward, final20",
+  "floor": "retain 2e-7 subject to matched refinement; unresolved windows are not relative passes",
+  "preparation_training_ids": [
+    "s71-c38",
+    "s71-c42",
+    "s82-c38",
+    "s82-c42"
+  ],
+  "development_preparations": [
+    "s2011-c39"
+  ],
+  "not_independent": "schedules share one preparation; six new preparations across three seeds",
+  "events": "known external finite table; original radius8 multiplicative u jump; no m jump, no continuous forcing",
+  "no_updates": "no fitting, basis changes, true field refresh, recentering, or gate changes"
+}

@@ -1,0 +1,123 @@
+{
+  "status": "FROZEN_EXPLORATORY_WITHIN_FAMILY",
+  "contract": {
+    "input": "u <- u*(1+a*b(x)); compact C-infinity bump, radius 8, fixed left anchor",
+    "output": "fixed exterior mediator sensor at right anchor+12, minus own no-pulse sham",
+    "initial_access": "one field scan for u^2-weighted initial separation; nominal anchors known",
+    "deployment": "only initial separation, retained state, static coefficients, clock and pulses",
+    "sensor": "old smooth radius-2 sensor; never recentered",
+    "sample": 0.25,
+    "event_order": "jump at exact event time before sampling; mediator is continuous at event",
+    "preparation": "two isolated 150-unit relaxations, assembly residual .02, age20 odd/60 even",
+    "new_horizon": 100,
+    "historical_gates": "unchanged; terminal exterior max2e-6 and NRMSE15% at20/50"
+  },
+  "models": {
+    "kernel.json": "828fb8a8f863dad9a3082c8721eb15ce6eaa11725b49e9d527274bca5e34c4a0",
+    "state-uncorrected.json": "0d98a86b8060723f8042c06f0d5e2ebe7511a4302ee39e879af7b80d277961f4"
+  },
+  "selected_model": "quadratic input, order10 ERA, no susceptibility correction",
+  "rejected_repair": "one decaying event-susceptibility state worsened worst development error",
+  "seeds": [
+    411,
+    522,
+    633
+  ],
+  "separations": [
+    25,
+    29,
+    31
+  ],
+  "sample": 0.25,
+  "horizon": 100,
+  "schedules": [
+    {
+      "name": "same_sign_wait6",
+      "role": "primary",
+      "pulses": [
+        [
+          0,
+          0.075
+        ],
+        [
+          6,
+          0.075
+        ]
+      ]
+    },
+    {
+      "name": "opposite_wait15",
+      "role": "primary",
+      "pulses": [
+        [
+          0,
+          -0.075
+        ],
+        [
+          15,
+          0.075
+        ]
+      ]
+    },
+    {
+      "name": "unequal_wait30",
+      "role": "primary",
+      "pulses": [
+        [
+          0,
+          0.05
+        ],
+        [
+          30,
+          -0.1
+        ]
+      ]
+    },
+    {
+      "name": "opposite_wait3",
+      "role": "short_wait_challenge",
+      "pulses": [
+        [
+          0,
+          -0.075
+        ],
+        [
+          3,
+          0.075
+        ]
+      ]
+    },
+    {
+      "name": "irregular_three",
+      "role": "continued_reuse",
+      "pulses": [
+        [
+          0,
+          0.06
+        ],
+        [
+          7,
+          -0.075
+        ],
+        [
+          23,
+          0.05
+        ]
+      ]
+    }
+  ],
+  "validity": "initial nominal separation24..32, |a|<=.1, pulse waits>=5, horizon<=100; tested family only",
+  "gates": {
+    "response_resolution_floor": 1e-07,
+    "floor_rationale": "absolute readout contract rounded above the 7.87e-8 domain-refinement bound",
+    "per_run_trace_nrmse": 0.05,
+    "per_run_max_absolute": 2e-06,
+    "early_first_0_to_5_max_absolute": 2e-08,
+    "relative_rule": "no relative accuracy verdict if window signal RMS<=1e-7",
+    "after_last": "same NRMSE/absolute gates, separate from whole trace"
+  },
+  "historical_comparison": "single-pulse 5/20/50 maps remain terminal only; report post-last errors without resetting",
+  "receiver_diagnostic": "stream sham RK stages into receiver-local replay for seed411,d29 only; never into model",
+  "preparation_split": "development seeds11/22 vs fresh411/522/633; complete prepared states kept together",
+  "no_retuning": "exposed fresh cases will not change these fitted models or gates"
+}

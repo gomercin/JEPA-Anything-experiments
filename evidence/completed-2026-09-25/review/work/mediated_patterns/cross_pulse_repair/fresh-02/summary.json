@@ -1,0 +1,468 @@
+[
+  {
+    "role": "short",
+    "model": "kernel",
+    "runs": 27,
+    "passed": 9,
+    "pooled": {
+      "signal_rms": 5.6763528775009925e-06,
+      "rmse": 3.285829902114249e-07,
+      "max_absolute": 1.2599173285764108e-06,
+      "nrmse": 0.05788628672361243
+    },
+    "worst_nrmse": 0.10345768428723422,
+    "failures": [
+      {
+        "run": "s1101-d25.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d27.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d27.5-short_pn325",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d27.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d30.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d30.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d25.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d27.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d27.5-short_pn325",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d27.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d30.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d30.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d25.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d27.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d27.5-short_pn325",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d27.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d30.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d30.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "short",
+    "model": "original",
+    "runs": 27,
+    "passed": 9,
+    "pooled": {
+      "signal_rms": 5.6763528775009925e-06,
+      "rmse": 3.285397894307352e-07,
+      "max_absolute": 1.2591787320993443e-06,
+      "nrmse": 0.057878676065568076
+    },
+    "worst_nrmse": 0.10345465003291737,
+    "failures": [
+      {
+        "run": "s1101-d25.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d27.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d27.5-short_pn325",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d27.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d30.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d30.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d25.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d27.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d27.5-short_pn325",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d27.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d30.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d30.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d25.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d27.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d27.5-short_pn325",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d27.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d30.5-short_np275",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d30.5-strong_np2",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "short",
+    "model": "candidate",
+    "runs": 27,
+    "passed": 27,
+    "pooled": {
+      "signal_rms": 5.6763528775009925e-06,
+      "rmse": 7.72461251243523e-08,
+      "max_absolute": 3.56465456732647e-07,
+      "nrmse": 0.013608407861767716
+    },
+    "worst_nrmse": 0.02100425725520829,
+    "failures": []
+  },
+  {
+    "role": "regression",
+    "model": "kernel",
+    "runs": 27,
+    "passed": 27,
+    "pooled": {
+      "signal_rms": 1.667020332303279e-05,
+      "rmse": 2.1710506223282588e-07,
+      "max_absolute": 9.230734627371797e-07,
+      "nrmse": 0.013023540146799375
+    },
+    "worst_nrmse": 0.0196509843132431,
+    "failures": []
+  },
+  {
+    "role": "regression",
+    "model": "original",
+    "runs": 27,
+    "passed": 27,
+    "pooled": {
+      "signal_rms": 1.667020332303279e-05,
+      "rmse": 2.1896091152452245e-07,
+      "max_absolute": 9.185584457180882e-07,
+      "nrmse": 0.013134867480709717
+    },
+    "worst_nrmse": 0.019749710941623887,
+    "failures": []
+  },
+  {
+    "role": "regression",
+    "model": "candidate",
+    "runs": 27,
+    "passed": 27,
+    "pooled": {
+      "signal_rms": 1.667020332303279e-05,
+      "rmse": 1.0389197241646946e-07,
+      "max_absolute": 6.417944745801545e-07,
+      "nrmse": 0.006232195876874795
+    },
+    "worst_nrmse": 0.012050172466796398,
+    "failures": []
+  },
+  {
+    "role": "three",
+    "model": "kernel",
+    "runs": 9,
+    "passed": 3,
+    "pooled": {
+      "signal_rms": 2.279354332228082e-06,
+      "rmse": 1.3805974479687804e-07,
+      "max_absolute": 4.711417720409345e-07,
+      "nrmse": 0.06056967222903156
+    },
+    "worst_nrmse": 0.09864624722989755,
+    "failures": [
+      {
+        "run": "s1101-d27.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d30.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d27.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d30.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d27.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d30.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "three",
+    "model": "original",
+    "runs": 9,
+    "passed": 3,
+    "pooled": {
+      "signal_rms": 2.279354332228082e-06,
+      "rmse": 1.4068034987643283e-07,
+      "max_absolute": 4.7427918979090945e-07,
+      "nrmse": 0.06171938600652624
+    },
+    "worst_nrmse": 0.10114987078997037,
+    "failures": [
+      {
+        "run": "s1101-d27.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1101-d30.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d27.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1202-d30.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d27.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      },
+      {
+        "run": "s1303-d30.5-three_close_withheld",
+        "failed": [
+          "all_relative",
+          "after_last_relative"
+        ]
+      }
+    ]
+  },
+  {
+    "role": "three",
+    "model": "candidate",
+    "runs": 9,
+    "passed": 9,
+    "pooled": {
+      "signal_rms": 2.279354332228082e-06,
+      "rmse": 8.487748441058598e-08,
+      "max_absolute": 3.134359555219319e-07,
+      "nrmse": 0.037237512049132684
+    },
+    "worst_nrmse": 0.04564174767800763,
+    "failures": []
+  }
+]
