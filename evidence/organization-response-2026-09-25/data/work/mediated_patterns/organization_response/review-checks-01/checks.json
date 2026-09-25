@@ -1,0 +1,8 @@
+{
+  "focused_tests": {"result": "10 passed", "pytest_seconds": 0.79, "process_wall_seconds": 1.10, "process_user_seconds": 0.49, "process_system_seconds": 0.15},
+  "ruff_check": "All checks passed!",
+  "ruff_format_check": "2 files already formatted",
+  "git_diff_check": "PASS",
+  "scope": "New response instrument only; no historical scientific panel or preservation audit repeated.",
+  "interpretation": "Instrument correctness checks; neither scientific superiority nor implementation certification."
+}

@@ -1,0 +1,59 @@
+{
+  "cpu_seconds": 89.083762,
+  "wall_seconds": 89.2170397079899,
+  "previous_cpu_seconds": 0,
+  "limit_cpu_seconds": 1200,
+  "sections": [
+    {
+      "task": "isolated-components-s6101",
+      "cpu_seconds": 6.857995000000001,
+      "wall_seconds": 6.864469042018754
+    },
+    {
+      "task": "joint-preparation-s6101-a-10",
+      "cpu_seconds": 0.6053220000000001,
+      "wall_seconds": 0.6058359589951579
+    },
+    {
+      "task": "s6101-a-10",
+      "cpu_seconds": 25.463715999999998,
+      "wall_seconds": 25.492437792010605
+    },
+    {
+      "task": "joint-preparation-s6101-a-18",
+      "cpu_seconds": 0.6149989999999974,
+      "wall_seconds": 0.6154559999995399
+    },
+    {
+      "task": "s6101-a-18",
+      "cpu_seconds": 25.847544,
+      "wall_seconds": 25.876274167007068
+    },
+    {
+      "task": "isolated-components-s6102",
+      "cpu_seconds": 6.986749000000003,
+      "wall_seconds": 6.9927136250189506
+    },
+    {
+      "task": "joint-preparation-s6102-a-10",
+      "cpu_seconds": 0.618352999999999,
+      "wall_seconds": 0.6189715830259956
+    },
+    {
+      "task": "s6102-a-10",
+      "cpu_seconds": 10.686343999999991,
+      "wall_seconds": 10.697203082992928
+    },
+    {
+      "task": "joint-preparation-s6102-a-18",
+      "cpu_seconds": 0.6263600000000054,
+      "wall_seconds": 0.626853540976299
+    },
+    {
+      "task": "s6102-a-18",
+      "cpu_seconds": 10.762007999999994,
+      "wall_seconds": 10.77423512499081
+    }
+  ],
+  "status": "COMPLETE"
+}

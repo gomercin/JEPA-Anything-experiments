@@ -1,0 +1,1002 @@
+{
+  "fresh_comparator": [
+    {
+      "seed": 7101,
+      "kind": "full",
+      "weighted_nrmse": 0.0010004882199353472,
+      "rmse": [
+        7.126112653957312e-06,
+        3.6672655505242954e-06
+      ],
+      "max_absolute": [
+        8.690237163380687e-05,
+        1.0027166345439285e-05
+      ],
+      "signal_rms": [
+        0.007434215727432427,
+        0.0035238382468051593
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false,
+      "identity": {
+        "weighted_nrmse": 0.0012537828772289756,
+        "rmse": [
+          5.447101866715921e-06,
+          5.6888878935721215e-06
+        ],
+        "max_absolute": [
+          2.32857756863325e-05,
+          1.3392504421838591e-05
+        ],
+        "signal_rms": [
+          0.007434215727432427,
+          0.0035238382468051593
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      },
+      "gain_only": {
+        "weighted_nrmse": 0.0010004882199353472,
+        "rmse": [
+          7.126112653957312e-06,
+          3.6672655505242954e-06
+        ],
+        "max_absolute": [
+          8.690237163380687e-05,
+          1.0027166345439285e-05
+        ],
+        "signal_rms": [
+          0.007434215727432427,
+          0.0035238382468051593
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      }
+    },
+    {
+      "seed": 7101,
+      "kind": "cut",
+      "weighted_nrmse": 0.0010013667757652037,
+      "rmse": [
+        7.136215218494549e-06,
+        3.6684034526031676e-06
+      ],
+      "max_absolute": [
+        8.697606910210154e-05,
+        1.0022112544638695e-05
+      ],
+      "signal_rms": [
+        0.007434210537628087,
+        0.003523452421641897
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false,
+      "identity": {
+        "weighted_nrmse": 0.001254826222551423,
+        "rmse": [
+          5.455874645813616e-06,
+          5.692083106430388e-06
+        ],
+        "max_absolute": [
+          2.328577570231971e-05,
+          1.3390126283263637e-05
+        ],
+        "signal_rms": [
+          0.007434210537628087,
+          0.003523452421641897
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      },
+      "gain_only": {
+        "weighted_nrmse": 0.0010013667757652037,
+        "rmse": [
+          7.136215218494549e-06,
+          3.6684034526031676e-06
+        ],
+        "max_absolute": [
+          8.697606910210154e-05,
+          1.0022112544638695e-05
+        ],
+        "signal_rms": [
+          0.007434210537628087,
+          0.003523452421641897
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      }
+    },
+    {
+      "seed": 7101,
+      "kind": "return",
+      "weighted_nrmse": 0.007545482354894104,
+      "rmse": [
+        4.1851239905398e-09,
+        4.46186792719941e-09
+      ],
+      "max_absolute": [
+        9.831228858169826e-09,
+        1.524074088910831e-08
+      ],
+      "signal_rms": [
+        8.224826528371661e-07,
+        4.75929765278286e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false,
+      "identity": {
+        "weighted_nrmse": 0.015645838174699684,
+        "rmse": [
+          1.4871043430360887e-08,
+          6.074376146648128e-09
+        ],
+        "max_absolute": [
+          2.380861729989192e-08,
+          1.1241158448527244e-08
+        ],
+        "signal_rms": [
+          8.224826528371661e-07,
+          4.75929765278286e-07
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      },
+      "gain_only": {
+        "weighted_nrmse": 0.007545482354894104,
+        "rmse": [
+          4.1851239905398e-09,
+          4.46186792719941e-09
+        ],
+        "max_absolute": [
+          9.831228858169826e-09,
+          1.524074088910831e-08
+        ],
+        "signal_rms": [
+          8.224826528371661e-07,
+          4.75929765278286e-07
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      }
+    },
+    {
+      "seed": 7102,
+      "kind": "full",
+      "weighted_nrmse": 0.0010656631201574932,
+      "rmse": [
+        7.355308506670781e-06,
+        4.007153845792343e-06
+      ],
+      "max_absolute": [
+        8.702415180772416e-05,
+        1.0919747979499378e-05
+      ],
+      "signal_rms": [
+        0.007434162950534066,
+        0.0035251858437894625
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false,
+      "identity": {
+        "weighted_nrmse": 0.001329180016025926,
+        "rmse": [
+          5.7430757058517285e-06,
+          6.039125834523813e-06
+        ],
+        "max_absolute": [
+          2.3464175141540977e-05,
+          1.4286371857602509e-05
+        ],
+        "signal_rms": [
+          0.007434162950534066,
+          0.0035251858437894625
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      },
+      "gain_only": {
+        "weighted_nrmse": 0.0010656631201574932,
+        "rmse": [
+          7.355308506670781e-06,
+          4.007153845792343e-06
+        ],
+        "max_absolute": [
+          8.702415180772416e-05,
+          1.0919747979499378e-05
+        ],
+        "signal_rms": [
+          0.007434162950534066,
+          0.0035251858437894625
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      }
+    },
+    {
+      "seed": 7102,
+      "kind": "cut",
+      "weighted_nrmse": 0.0010664736784733642,
+      "rmse": [
+        7.365473589787286e-06,
+        4.007874295804822e-06
+      ],
+      "max_absolute": [
+        8.709784770988271e-05,
+        1.0913092674724213e-05
+      ],
+      "signal_rms": [
+        0.0074341576858610765,
+        0.0035247985677449314
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false,
+      "identity": {
+        "weighted_nrmse": 0.0013301547981864948,
+        "rmse": [
+          5.751852221634971e-06,
+          6.041912829805155e-06
+        ],
+        "max_absolute": [
+          2.3464175152199118e-05,
+          1.4282390682490709e-05
+        ],
+        "signal_rms": [
+          0.0074341576858610765,
+          0.0035247985677449314
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      },
+      "gain_only": {
+        "weighted_nrmse": 0.0010664736784733642,
+        "rmse": [
+          7.365473589787286e-06,
+          4.007874295804822e-06
+        ],
+        "max_absolute": [
+          8.709784770988271e-05,
+          1.0913092674724213e-05
+        ],
+        "signal_rms": [
+          0.0074341576858610765,
+          0.0035247985677449314
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      }
+    },
+    {
+      "seed": 7102,
+      "kind": "return",
+      "weighted_nrmse": 0.008234834598581858,
+      "rmse": [
+        4.3874601259631465e-09,
+        4.93922963217348e-09
+      ],
+      "max_absolute": [
+        1.0231667827652852e-08,
+        1.6904413549744308e-08
+      ],
+      "signal_rms": [
+        8.23472540577257e-07,
+        4.776117073141143e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false,
+      "identity": {
+        "weighted_nrmse": 0.015516042263237174,
+        "rmse": [
+          1.4809301969752729e-08,
+          6.016414229961255e-09
+        ],
+        "max_absolute": [
+          2.369817231340221e-08,
+          1.1400146368578667e-08
+        ],
+        "signal_rms": [
+          8.23472540577257e-07,
+          4.776117073141143e-07
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      },
+      "gain_only": {
+        "weighted_nrmse": 0.008234834598581858,
+        "rmse": [
+          4.3874601259631465e-09,
+          4.93922963217348e-09
+        ],
+        "max_absolute": [
+          1.0231667827652852e-08,
+          1.6904413549744308e-08
+        ],
+        "signal_rms": [
+          8.23472540577257e-07,
+          4.776117073141143e-07
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      }
+    },
+    {
+      "seed": 7103,
+      "kind": "full",
+      "weighted_nrmse": 0.0008378772906602286,
+      "rmse": [
+        6.5585201004411776e-06,
+        2.7913286123582758e-06
+      ],
+      "max_absolute": [
+        8.714290711639427e-05,
+        7.714872785067987e-06
+      ],
+      "signal_rms": [
+        0.007435763083301583,
+        0.0035271706771487065
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false,
+      "identity": {
+        "weighted_nrmse": 0.0010525848309958198,
+        "rmse": [
+          4.678945569322278e-06,
+          4.756219351360301e-06
+        ],
+        "max_absolute": [
+          2.2815074423476744e-05,
+          1.1087953771235504e-05
+        ],
+        "signal_rms": [
+          0.007435763083301583,
+          0.0035271706771487065
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      },
+      "gain_only": {
+        "weighted_nrmse": 0.0008378772906602286,
+        "rmse": [
+          6.5585201004411776e-06,
+          2.7913286123582758e-06
+        ],
+        "max_absolute": [
+          8.714290711639427e-05,
+          7.714872785067987e-06
+        ],
+        "signal_rms": [
+          0.007435763083301583,
+          0.0035271706771487065
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      }
+    },
+    {
+      "seed": 7103,
+      "kind": "cut",
+      "weighted_nrmse": 0.0008389939331087987,
+      "rmse": [
+        6.5686140365329715e-06,
+        2.794020392357441e-06
+      ],
+      "max_absolute": [
+        8.721663863445195e-05,
+        7.715090804072747e-06
+      ],
+      "signal_rms": [
+        0.007435756217223434,
+        0.003526778274166684
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false,
+      "identity": {
+        "weighted_nrmse": 0.0010539142299081639,
+        "rmse": [
+          4.688042130455111e-06,
+          4.760992004739447e-06
+        ],
+        "max_absolute": [
+          2.2815074423476744e-05,
+          1.1090838250488178e-05
+        ],
+        "signal_rms": [
+          0.007435756217223434,
+          0.003526778274166684
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      },
+      "gain_only": {
+        "weighted_nrmse": 0.0008389939331087987,
+        "rmse": [
+          6.5686140365329715e-06,
+          2.794020392357441e-06
+        ],
+        "max_absolute": [
+          8.721663863445195e-05,
+          7.715090804072747e-06
+        ],
+        "signal_rms": [
+          0.007435756217223434,
+          0.003526778274166684
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      }
+    },
+    {
+      "seed": 7103,
+      "kind": "return",
+      "weighted_nrmse": 0.0057808602993890635,
+      "rmse": [
+        4.169052388202108e-09,
+        3.1250160082864195e-09
+      ],
+      "max_absolute": [
+        9.18510972553172e-09,
+        1.0342678526111167e-08
+      ],
+      "signal_rms": [
+        8.326103574457854e-07,
+        4.841621768866659e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false,
+      "identity": {
+        "weighted_nrmse": 0.016782110857801763,
+        "rmse": [
+          1.5889856710605045e-08,
+          6.848729947784699e-09
+        ],
+        "max_absolute": [
+          2.5633145384063027e-08,
+          1.1431303556519445e-08
+        ],
+        "signal_rms": [
+          8.326103574457854e-07,
+          4.841621768866659e-07
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      },
+      "gain_only": {
+        "weighted_nrmse": 0.0057808602993890635,
+        "rmse": [
+          4.169052388202108e-09,
+          3.1250160082864195e-09
+        ],
+        "max_absolute": [
+          9.18510972553172e-09,
+          1.0342678526111167e-08
+        ],
+        "signal_rms": [
+          8.326103574457854e-07,
+          4.841621768866659e-07
+        ],
+        "resolved": [
+          true,
+          true
+        ],
+        "practical_failure": false
+      }
+    }
+  ],
+  "fresh_predictions": [
+    {
+      "seed": 7101,
+      "organization": -10.0,
+      "kind": "full",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.007621048768494502,
+      "rmse": [
+        7.995469742492712e-05,
+        2.1117962264051603e-06
+      ],
+      "max_absolute": [
+        0.0008738318704738235,
+        8.137243189301128e-06
+      ],
+      "signal_rms": [
+        0.007433783284941984,
+        0.003518683171916284
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7101,
+      "organization": -18.0,
+      "kind": "full",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.007621678990088904,
+      "rmse": [
+        8.002539920456392e-05,
+        2.0859598208693984e-06
+      ],
+      "max_absolute": [
+        0.0008741286420691496,
+        8.000624044133783e-06
+      ],
+      "signal_rms": [
+        0.007434215727432427,
+        0.0035238382468051593
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7101,
+      "organization": -10.0,
+      "kind": "cut",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.007621043219709983,
+      "rmse": [
+        7.995464072548417e-05,
+        2.111127781103406e-06
+      ],
+      "max_absolute": [
+        0.0008738318704809567,
+        8.137243190211126e-06
+      ],
+      "signal_rms": [
+        0.007433778411573049,
+        0.0035182938603270596
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7101,
+      "organization": -18.0,
+      "kind": "cut",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.007621670657588743,
+      "rmse": [
+        8.002534719663001e-05,
+        2.0853783054463266e-06
+      ],
+      "max_absolute": [
+        0.0008741286420727093,
+        8.000624050480838e-06
+      ],
+      "signal_rms": [
+        0.007434210537628087,
+        0.003523452421641897
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7101,
+      "organization": -10.0,
+      "kind": "return",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.0052795029255383735,
+      "rmse": [
+        3.649940650379207e-09,
+        2.9171993243761933e-09
+      ],
+      "max_absolute": [
+        8.210970490498109e-09,
+        7.002957324274417e-09
+      ],
+      "signal_rms": [
+        8.368854968394892e-07,
+        4.806684605921909e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7101,
+      "organization": -18.0,
+      "kind": "return",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.005149934656177562,
+      "rmse": [
+        3.525031722572174e-09,
+        2.8016402228994753e-09
+      ],
+      "max_absolute": [
+        8.079812313107433e-09,
+        6.67246743187716e-09
+      ],
+      "signal_rms": [
+        8.224826528371661e-07,
+        4.75929765278286e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7102,
+      "organization": -10.0,
+      "kind": "full",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.007620213242316166,
+      "rmse": [
+        7.995590521640128e-05,
+        2.124462911768289e-06
+      ],
+      "max_absolute": [
+        0.0008738159483943769,
+        8.137235493959586e-06
+      ],
+      "signal_rms": [
+        0.007433731019522383,
+        0.0035197176814450587
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7102,
+      "organization": -18.0,
+      "kind": "full",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.007620560954680571,
+      "rmse": [
+        8.002729245385048e-05,
+        2.0979892301231414e-06
+      ],
+      "max_absolute": [
+        0.0008741156221860613,
+        7.998412168351207e-06
+      ],
+      "signal_rms": [
+        0.007434162950534066,
+        0.0035251858437894625
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7102,
+      "organization": -10.0,
+      "kind": "cut",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.007620209091397758,
+      "rmse": [
+        7.995584918933108e-05,
+        2.1238119523580104e-06
+      ],
+      "max_absolute": [
+        0.0008738159483961463,
+        8.137235498742814e-06
+      ],
+      "signal_rms": [
+        0.007433726101589458,
+        0.0035193272137061162
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7102,
+      "organization": -18.0,
+      "kind": "cut",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.007620554420592652,
+      "rmse": [
+        8.002724143720181e-05,
+        2.0974315046031734e-06
+      ],
+      "max_absolute": [
+        0.0008741156221843058,
+        7.998412171695158e-06
+      ],
+      "signal_rms": [
+        0.0074341576858610765,
+        0.0035247985677449314
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7102,
+      "organization": -10.0,
+      "kind": "return",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.005252031155919208,
+      "rmse": [
+        3.637829939170655e-09,
+        2.9074273842861233e-09
+      ],
+      "max_absolute": [
+        8.2012620394818e-09,
+        6.983502947796594e-09
+      ],
+      "signal_rms": [
+        8.377282622247604e-07,
+        4.819910279789814e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7102,
+      "organization": -18.0,
+      "kind": "return",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.0051100623354238955,
+      "rmse": [
+        3.507337683733292e-09,
+        2.785992278653751e-09
+      ],
+      "max_absolute": [
+        8.067240952461165e-09,
+        6.633500431243999e-09
+      ],
+      "signal_rms": [
+        8.23472540577257e-07,
+        4.776117073141143e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7103,
+      "organization": -10.0,
+      "kind": "full",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.007616571008702465,
+      "rmse": [
+        8.004063832281e-05,
+        1.3010956614624249e-06
+      ],
+      "max_absolute": [
+        0.0008748915071557645,
+        7.2003770681918275e-06
+      ],
+      "signal_rms": [
+        0.0074353313023467595,
+        0.0035228732916855413
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7103,
+      "organization": -18.0,
+      "kind": "full",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.007618056746086094,
+      "rmse": [
+        8.010941717810196e-05,
+        1.274243476461592e-06
+      ],
+      "max_absolute": [
+        0.0008751738213230026,
+        7.0686153915131935e-06
+      ],
+      "signal_rms": [
+        0.007435763083301583,
+        0.0035271706771487065
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7103,
+      "organization": -10.0,
+      "kind": "cut",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.007616574262986559,
+      "rmse": [
+        8.004059147349911e-05,
+        1.3001006658742604e-06
+      ],
+      "max_absolute": [
+        0.0008748915071522534,
+        7.200377070429526e-06
+      ],
+      "signal_rms": [
+        0.007435324639568444,
+        0.0035224761705205205
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7103,
+      "organization": -18.0,
+      "kind": "cut",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.007618055387999735,
+      "rmse": [
+        8.010937395361039e-05,
+        1.273314190392106e-06
+      ],
+      "max_absolute": [
+        0.0008751738213265622,
+        7.068615395271682e-06
+      ],
+      "signal_rms": [
+        0.007435756217223434,
+        0.003526778274166684
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7103,
+      "organization": -10.0,
+      "kind": "return",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.005042034595717703,
+      "rmse": [
+        3.6137611327768267e-09,
+        2.8034882843231073e-09
+      ],
+      "max_absolute": [
+        8.37619319022341e-09,
+        6.534449847536705e-09
+      ],
+      "signal_rms": [
+        8.482429458627326e-07,
+        4.903418633566001e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    },
+    {
+      "seed": 7103,
+      "organization": -18.0,
+      "kind": "return",
+      "prediction": "tangent-basis",
+      "weighted_nrmse": 0.0049597278858154814,
+      "rmse": [
+        3.5142737845647755e-09,
+        2.7086270678315993e-09
+      ],
+      "max_absolute": [
+        8.24431977910654e-09,
+        6.248090917912452e-09
+      ],
+      "signal_rms": [
+        8.326103574457854e-07,
+        4.841621768866659e-07
+      ],
+      "resolved": [
+        true,
+        true
+      ],
+      "practical_failure": false
+    }
+  ],
+  "floors": [
+    5.660872282565029e-08,
+    5.232943316932972e-08
+  ],
+  "freeze_sha256": "8404178d212d31bcefb435152c8a4d0ef99c667e87c7581f14a59661cd79375e",
+  "data": "work/mediated_patterns/organization_response/fresh-01"
+}

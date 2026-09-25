@@ -189,15 +189,3 @@ preserved evidence remain unchanged; no science was added to PR #1. No push,
 merge, Atlas edit, or successor was selected. The preservation handoff above is
 historical; this task used the owner's supplied verified head and local evidence
 without restoring archives or repeating the preservation audit.
-
-### Incremental publication handoff
-
-The completed organization-conditioned-response record is preserved separately
-through the [portable incremental evidence index](../../evidence/organization-response-2026-09-25/README.md).
-It includes all 163 new work files (8,853,052 bytes) in Git, with explicit
-checksum-verified, non-overwriting restoration and saved-data-only inspection.
-The index's publication receipt and separate draft PR record the source snapshot,
-final head and dependency on still-unmerged preservation PR #1. This publication
-adds no new science and changes no conclusion, criterion, floor or exposure split.
-The original report and pending Atlas paragraph remain intact. Earlier archives,
-PR #1 and AB20/C32 are unchanged; no Atlas edit, merge or successor is selected.

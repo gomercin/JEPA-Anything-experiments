@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "publication_tests": "20 file/path/serialization checks; no model imports or evolution",
+  "historical_facts": {
+    "instrument_tests_passed": 10,
+    "budget_charge_cpu_minutes_reported": 4.51,
+    "source": "Original completed execution record; not rerun during publication"
+  },
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "evidence/completed-2026-09-25/tests",
+        "evidence/organization-response-2026-09-25/tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5091638330195565
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-I",
+        "evidence/organization-response-2026-09-25/restore.py",
+        "--verify-only"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.15431241600890644
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-I",
+        "evidence/organization-response-2026-09-25/saved_data_smoke.py",
+        "--root",
+        "evidence/organization-response-2026-09-25/data"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.15290866699069738
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "evidence/organization-response-2026-09-25/restore.py",
+        "evidence/organization-response-2026-09-25/package.py",
+        "evidence/organization-response-2026-09-25/saved_data_smoke.py",
+        "evidence/organization-response-2026-09-25/tests/test_publication.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.040915041987318546
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "evidence/organization-response-2026-09-25/restore.py",
+        "evidence/organization-response-2026-09-25/package.py",
+        "evidence/organization-response-2026-09-25/saved_data_smoke.py",
+        "evidence/organization-response-2026-09-25/tests/test_publication.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.030988666985649616
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.04320695798378438
+    }
+  ],
+  "hosted_ci": "NOT_YET_PUSHED",
+  "new_science_executed": false,
+  "review_scope": "No substantive scientific review; no old archive restoration or broad historical audit."
+}

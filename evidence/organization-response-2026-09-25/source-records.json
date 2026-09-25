@@ -1,0 +1,31 @@
+{
+  "execution_base_revision": "1c555d5aab826418c81e0a9005a85200e3f8fd65",
+  "execution_state": "Dirty-worktree execution; contemporaneous stage source snapshots are authoritative, not the later publication commit.",
+  "files": [
+    {
+      "original_path": "experiments/mediated_patterns/organization_response.py",
+      "preserved_path": "../../experiments/mediated_patterns/organization_response.py",
+      "bytes": 30425,
+      "sha256": "eadf2ad6a4b97387fc83a387c6d9d7905c8d93cadaa980944759386c1acce776"
+    },
+    {
+      "original_path": "experiments/mediated_patterns/ORGANIZATION_RESPONSE.md",
+      "preserved_path": "../../experiments/mediated_patterns/ORGANIZATION_RESPONSE.md",
+      "bytes": 23387,
+      "sha256": "4d9e8cf04b475b844c6713ee009df252f94d8559984a6161bbe1d805d9d5e433"
+    },
+    {
+      "original_path": "experiments/mediated_patterns/tests/test_organization_response.py",
+      "preserved_path": "../../experiments/mediated_patterns/tests/test_organization_response.py",
+      "bytes": 5540,
+      "sha256": "0a9eed8f96fe911d72e4f5e0ce60fefcd795f70eff8117b564b971262b7b523c"
+    },
+    {
+      "original_path": "experiments/mediated_patterns/README.md",
+      "preserved_path": "execution-records/lab-README-before-publication.md",
+      "bytes": 13595,
+      "sha256": "350010bb0b141d3b9766bfd29ee2862bef68156a66b3083f3acfa03034cfc01b"
+    }
+  ],
+  "pending_atlas_suffix_sha256": "1b9ebaca4fbba97eef5c4f4c77cf857786a69959472331f830b4d992f04e6e81"
+}

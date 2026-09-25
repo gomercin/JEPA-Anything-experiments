@@ -1,0 +1,84 @@
+{
+  "cpu_seconds": 90.514956,
+  "wall_seconds": 90.72236229199916,
+  "previous_cpu_seconds": 168.658033,
+  "limit_cpu_seconds": 1800,
+  "sections": [
+    {
+      "task": "isolated-components-s7101",
+      "cpu_seconds": 6.949746,
+      "wall_seconds": 6.985719916003291
+    },
+    {
+      "task": "joint-preparation-s7101-a-10",
+      "cpu_seconds": 0.6197029999999994,
+      "wall_seconds": 0.620241625001654
+    },
+    {
+      "task": "s7101-a-10",
+      "cpu_seconds": 10.820449,
+      "wall_seconds": 10.83110495901201
+    },
+    {
+      "task": "joint-preparation-s7101-a-18",
+      "cpu_seconds": 0.6396240000000013,
+      "wall_seconds": 0.6400769159954507
+    },
+    {
+      "task": "s7101-a-18",
+      "cpu_seconds": 10.857562999999999,
+      "wall_seconds": 10.870936499995878
+    },
+    {
+      "task": "isolated-components-s7102",
+      "cpu_seconds": 7.069206999999999,
+      "wall_seconds": 7.074586915987311
+    },
+    {
+      "task": "joint-preparation-s7102-a-10",
+      "cpu_seconds": 0.6430030000000002,
+      "wall_seconds": 0.6434963330102619
+    },
+    {
+      "task": "s7102-a-10",
+      "cpu_seconds": 10.976953000000002,
+      "wall_seconds": 10.989640249987133
+    },
+    {
+      "task": "joint-preparation-s7102-a-18",
+      "cpu_seconds": 0.6320309999999978,
+      "wall_seconds": 0.6325089579913765
+    },
+    {
+      "task": "s7102-a-18",
+      "cpu_seconds": 10.944139999999997,
+      "wall_seconds": 10.953597125015222
+    },
+    {
+      "task": "isolated-components-s7103",
+      "cpu_seconds": 7.075911000000005,
+      "wall_seconds": 7.08441558299819
+    },
+    {
+      "task": "joint-preparation-s7103-a-10",
+      "cpu_seconds": 0.7056499999999915,
+      "wall_seconds": 0.7335587499837857
+    },
+    {
+      "task": "s7103-a-10",
+      "cpu_seconds": 10.96604099999999,
+      "wall_seconds": 10.981751166982576
+    },
+    {
+      "task": "joint-preparation-s7103-a-18",
+      "cpu_seconds": 0.6358270000000061,
+      "wall_seconds": 0.6363537080178503
+    },
+    {
+      "task": "s7103-a-18",
+      "cpu_seconds": 10.959896,
+      "wall_seconds": 10.971891500026686
+    }
+  ],
+  "status": "COMPLETE"
+}

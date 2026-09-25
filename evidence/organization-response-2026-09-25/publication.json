@@ -1,0 +1,16 @@
+{
+  "repository": "gomercin/JEPA-Anything-experiments",
+  "branch": "codex/organization-conditioned-response",
+  "base_revision": "1c555d5aab826418c81e0a9005a85200e3f8fd65",
+  "pr_base": "codex/preserve-completed-experiments",
+  "dependency_pr": 1,
+  "status": "LOCAL_PREPUBLICATION_CHECKS",
+  "source_snapshot_commit": null,
+  "pr_url": null,
+  "new_release": null,
+  "archive_bytes": 0,
+  "versioning": "Git commit identity plus per-file SHA-256; platform-enforced immutability not claimed",
+  "final_head_identity": "Final pushed head is pinned externally in the new draft PR body after its verification; it is not embedded into its own Git tree.",
+  "new_science_executed": false,
+  "local_only_substantive_remainder": []
+}
