@@ -41,6 +41,15 @@ def pulse_window(x, center, length, radius=8):
     return w
 
 
+def save_npz_exclusive(path, **arrays):
+    """Honor NumPy's suffix convention without overwriting files or symlinks."""
+    path = Path(path)
+    if not str(path).endswith(".npz"):
+        path = Path(str(path) + ".npz")
+    with path.open("xb") as stream:
+        np.savez_compressed(stream, **arrays)
+
+
 class PairHybrid:
     """Equation-derived projection; no fitted transition or scalar feedback gain.
 
@@ -171,11 +180,10 @@ class PairHybrid:
         }
 
     def save(self, path):
-        if Path(path).exists():
-            raise FileExistsError(path)
         # Eigen-coordinates are an orthogonal transform of (z_AB,u_exterior),
-        # not additional state. Retain the transform for an exact restart.
-        np.savez_compressed(
+        # not additional state. The same static operator reconstructs the
+        # transform on load; exact restart is qualified in the same environment.
+        save_npz_exclusive(
             path,
             config=json.dumps(asdict(self.c)),
             basis=self.basis,

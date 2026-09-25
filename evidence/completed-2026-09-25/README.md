@@ -8,13 +8,28 @@ experiment is part of this publication.
 
 Destination: [gomercin/JEPA-Anything-experiments](https://github.com/gomercin/JEPA-Anything-experiments),
 public repository, default branch `main`. Preservation branch:
-`codex/preserve-completed-experiments`. The immutable evidence tag is
+`codex/preserve-completed-experiments`. The checksum-pinned evidence tag is
 `evidence-completed-2026-09-25`. [Draft PR #1](https://github.com/gomercin/JEPA-Anything-experiments/pull/1) is open
 and unmerged. Source snapshot: `e17fe41d07a03d3a7fe67955054112773e8344be`.
 Publication identity and verification are recorded
 in [publication.json](publication.json); the tag identifies the source-snapshot
 commit, while the later PR head adds the publication handoff. Neither is claimed
 to be the historical execution revision of dirty/uncommitted runs.
+
+## Current integration status
+
+[PR #1](https://github.com/gomercin/JEPA-Anything-experiments/pull/1) contains the
+critical implementation review, subsequent file-safety correction, exact checked
+revision and authoritative merge status. The draft/unreviewed statements and
+receipts here describe publication time. Review does not turn the original
+exploratory outcomes into independently replicated results.
+
+The evidence tag/assets are retained by project policy and verified by hashes;
+GitHub reports `immutable: false`. They are not platform-enforced immutable
+objects. No tag, asset, historical digest, report or executed-source snapshot was
+replaced during review. Live checkpoint serialization now refuses suffix-alias
+and dangling-symlink overwrites; the archived solver versions remain authoritative
+for old execution identity. See the [living handoff](../../experiments/mediated_patterns/README.md#integration-review-status).
 
 ## What is preserved
 
@@ -218,7 +233,7 @@ editable experiment module was imported. This verifies persistence and saved
 serialization, not scientific replication.
 
 The final documentation head is pinned outside its own Git content in the
-[immutable remote verification receipt](https://github.com/gomercin/JEPA-Anything-experiments/releases/download/evidence-completed-2026-09-25/remote-verification.json)
+[checksum-pinned remote verification receipt](https://github.com/gomercin/JEPA-Anything-experiments/releases/download/evidence-completed-2026-09-25/remote-verification.json)
 and the PR body. The receipt is a small additional release asset, separate from
 the two scientific archives and their manifest. No existing asset or tag is moved.
 
