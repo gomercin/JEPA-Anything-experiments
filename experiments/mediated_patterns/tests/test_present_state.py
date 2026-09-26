@@ -8,7 +8,11 @@ import pytest
 
 from experiments.mediated_patterns import present_state_model as m
 from experiments.mediated_patterns.hybrid_pair import save_npz_exclusive
-from experiments.mediated_patterns.present_state_transmission import paired_indices
+from experiments.mediated_patterns.present_state_transmission import (
+    DEV,
+    FRESH,
+    paired_indices,
+)
 
 
 def snapshot():
@@ -58,6 +62,8 @@ def test_fixed_anchors_and_single_snapshot():
 
 
 def test_grouped_split_keeps_every_descendant():
+    assert not set(DEV) & set(FRESH)
+    assert len(set(FRESH)) >= 3
     groups = np.repeat([5, 8, 20], 6)
     for train, test in m.grouped_folds(groups):
         assert set(groups[train]).isdisjoint(groups[test])
@@ -99,6 +105,30 @@ def test_inference_from_serialized_inputs_without_solver(tmp_path, monkeypatch):
         m.predict(fitted, z)  # undeclared feature access rejected
     with pytest.raises(ValueError):
         m.predict(fitted, z[:, :3], probe=0.03)
+
+
+def test_each_response_is_independent_of_partner_and_batch():
+    z, y = training()
+    fitted = m.fit(z, y, [[0, 1]], "geometry")
+    alone = m.predict(fitted, z[:1, :3])
+    paired = m.predict(fitted, z[:2, :3])
+    np.testing.assert_allclose(alone[0], paired[0], rtol=1e-14)
+    z[1] += 1e4
+    np.testing.assert_allclose(alone[0], m.predict(fitted, z[:2, :3])[0], rtol=1e-14)
+
+
+def test_other_boundaries_and_twin_do_not_change_extraction(tmp_path):
+    state = snapshot()
+    checkpoints = np.array([[state, state], [state, state]])
+    p = tmp_path / "first.npz"
+    q = tmp_path / "second.npz"
+    save_npz_exclusive(p, checkpoint_times=[50, 100], checkpoints=checkpoints)
+    checkpoints[0, 1] *= 8
+    checkpoints[1] *= 12
+    save_npz_exclusive(q, checkpoint_times=[50, 100], checkpoints=checkpoints)
+    np.testing.assert_array_equal(
+        m.extract(m.load_checkpoint(p, 50, 0)), m.extract(m.load_checkpoint(q, 50, 0))
+    )
 
 
 def test_paired_subtraction_and_blind_failure():
