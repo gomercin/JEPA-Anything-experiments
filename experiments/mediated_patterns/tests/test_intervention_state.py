@@ -140,3 +140,34 @@ print(json.dumps(s.advance(8).tolist()))
         [sys.executable, "-c", code], cwd=tmp_path, text=True
     )
     np.testing.assert_array_equal(json.loads(result), state.advance(8))
+
+
+def test_extended_state_has_local_jump_and_zero_memory_preserves_baseline():
+    model = tiny_model()
+    model["transient"] = {
+        "order": 1,
+        "A": [[0.8]],
+        "B": [[1.0, 0.0]],
+        "C": [[0.001], [0.0], [0.0]],
+        "J": model["J"],
+    }
+    model["readout"] = {
+        "event_basis": True,
+        "interaction": False,
+        "coefficients": np.ones((4, 2)).tolist(),
+        "basis": np.ones((1, 161)).tolist(),
+        "scale_y": [1e-8, 1e-8],
+    }
+    baseline = im.State(tiny_model(), [0.1, 0.2, 0.3])
+    extended = im.State(model, [0.1, 0.2, 0.3])
+    np.testing.assert_array_equal(baseline.advance(30), extended.advance(30))
+    np.testing.assert_array_equal(baseline.response(), extended.response())
+    before = extended.flow.z.copy()
+    extended.event(0.02)
+    np.testing.assert_array_equal(extended.flow.z[1:], before[1:])
+    assert len(extended.memory) == 1 and len(extended.response_memory) == 2
+    before_memory = extended.response_memory.copy()
+    extended.advance(2)
+    np.testing.assert_allclose(
+        extended.response_memory, [before_memory[0], before_memory[1] * np.exp(-2 / 20)]
+    )
