@@ -329,4 +329,45 @@ def analyze(out, args, budget):
     records = gates(y, p, rows, frozen["floors"])
     pm.save_json(out / "scores.json", records)
     pm.save_json(out / "summary.json", summary(records))
+    figures(out, y, p, rows)
     budget.finish()
+
+
+def figures(out, y, prediction, rows):
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    fig, axes = plt.subplots(2, 3, figsize=(13, 7), constrained_layout=True)
+    targets = [y[:, 2], y[:, 1] - y[:, 0], y[:, 2] - y[:, 0]]
+    forecasts = [
+        prediction[:, 2],
+        prediction[:, 1] - prediction[:, 0],
+        prediction[:, 2] - prediction[:, 0],
+    ]
+    for col, (truth, pred, title) in enumerate(
+        zip(
+            targets,
+            forecasts,
+            ["R_after (+.02)", "D1 (−.02)", "D1 (+.02)"],
+            strict=True,
+        )
+    ):
+        for o, name in enumerate(["C mass", "C signed moment"]):
+            ax = axes[o, col]
+            for i, row in enumerate(rows):
+                (line,) = ax.plot(
+                    pm.TIMES,
+                    truth[i, :, o],
+                    label=f"{row['seed']} {row['history']}",
+                    lw=1.3,
+                )
+                ax.plot(pm.TIMES, pred[i, :, o], "--", color=line.get_color(), lw=1)
+            ax.set_title(title + " / " + name)
+            ax.set_xlabel("h after final probe")
+            ax.ticklabel_format(axis="y", style="sci", scilimits=(0, 0))
+    axes[0, 0].legend(fontsize=7)
+    fig.suptitle("Fresh fixed-age snapshot assay: solid reference; dashed prediction")
+    fig.savefig(out / "fresh-responses.png", dpi=160)
+    plt.close(fig)

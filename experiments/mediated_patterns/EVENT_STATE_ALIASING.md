@@ -119,3 +119,17 @@ nine-state repeated failure, composition-informed eleven-state60/80/90 success,
 60/75/90 failure, age18/explicit-age failures, partial exact-center repair and
 inaccurate resolved K12 remain unchanged. Exact inherited identities are recorded
 in the input ledger and portable indexes; no old fresh group becomes fresh again.
+
+## Execution record
+
+The prefix pilot cost0.387CPU seconds; the48-state boundary panel19.465, and the
+first matched probe/sham pair3.119. The finite120CPU/180wall/1GiB section guards
+therefore remain ample. The response-blind seal identifies6 near pairs across
+preparations. The five closest include the largest overlap difference, so no
+sixth pair was added. Center scales are[.00950646,.0492002,.00709145]; extraction
+uncertainties[2.16333e-7,7.02590e-7,8.66187e-8]. The closest pair is12101/odd04
+versus16103/odd04, normalized RMS.0704449 and maximum coordinate.113587.
+Its field L2 difference is.0220448. These are candidates, not collision findings.
+The ordinary fit selection rule is the smallest worst grouped gate-normalized
+error, with deterministic configuration-index tie breaking. All folds rebuild
+scales and temporal bases using training preparations only.
