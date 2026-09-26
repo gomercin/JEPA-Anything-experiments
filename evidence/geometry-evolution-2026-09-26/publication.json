@@ -1,0 +1,14 @@
+{
+  "branch": "codex/geometry-evolution",
+  "data_bytes": 17661087,
+  "experiments_executed": false,
+  "finite_npz_files": 146,
+  "frozen_response_sha256_verified": "f0bc4ced6914bc43148d615912619370465ce48332a140dd41af52b7b85bb74e",
+  "protocols_with_source_identity": 11,
+  "remote": "https://github.com/gomercin/JEPA-Anything-experiments.git",
+  "restored_to_new_directory": true,
+  "retrieved_head": "b713bdf545a53ffc801b516d14749d504486f662",
+  "scope": "Fresh remote clone; safe verify and restore; source/report hashes at execution revisions; finite arrays; old F dependency unchanged. Final merge metadata goes in PR comments.",
+  "source_hash_checks": 358,
+  "verified_members": 429
+}

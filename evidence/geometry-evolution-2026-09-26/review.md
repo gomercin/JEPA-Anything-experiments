@@ -93,3 +93,10 @@ publication tests pass 5/5. `git diff --check` and safe verify-only pass. Hosted
 remote retrieval, reviewed-head/base identity and actual merges are checked
 separately; final metadata is recorded in PR comments. No unresolved material
 code, boundary, score or claim blocker was found in this reviewed scope.
+
+Remote retrieval audit at `b713bdf545a53ffc801b516d14749d504486f662` passed:
+429 members /17,661,087 bytes safely verified and restored;358 source hashes
+across11 source-bearing protocols matched their execution revisions; all146 NPZ
+files were finite; the inherited frozen F hash matched. No experiment was run.
+The remaining receipt-only delta is reviewed separately and does not change any
+scientific source, prediction, model, metric or claim.
