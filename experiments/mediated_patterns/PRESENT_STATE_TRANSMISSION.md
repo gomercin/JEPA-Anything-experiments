@@ -95,3 +95,21 @@ screen. Each two-branch response took about 4 CPU seconds; the original section
 bounds (120 CPU seconds, 180 wall seconds, 1 GiB) have ample margin. The later
 source cleanup adds deterministic scoring/freezing and separate inference-cost
 receipts; it changes no physical law or prior evidence.
+
+`extended-fit-01` retains all 24 states and all four preparation groups. The
+three-center quadratic fit's worst total error is 2.892% (negative write,
+seed 10101, wait 100, late signed moment), while its worst contrast error is
+5.070%. Rank-4 projection is at most .139% on whole traces. Nine-variable shape
+is marginal at 2.020% total/4.214% contrast; fifteen-variable mediator is
+1.180%/1.655%, but weighted design conditions are 1.03e5 and 9.93e6 respectively.
+No descriptor-insufficiency or mediator-necessity conclusion follows.
+
+**Development repair 1, before its outcomes:** the current weight-10 paired loss
+may trade total-response accuracy for already-adequate contrast accuracy. Repeat
+the same finite fitting choices with pair weight 3, keeping the old fits. This
+is a response-model repair with unchanged inputs/temporal rank, not a new state
+claim or relaxed accuracy criterion. If needed, one compact descriptor repair
+will add the current A probe/source overlap (integral of u times the fixed
+unit-L2 source profile): it directly controls the instantaneous u-squared source
+increment under the additive probe and distinguishes amplitude/phase at its
+fixed actuator. This is a same-snapshot scalar, not response spectroscopy.

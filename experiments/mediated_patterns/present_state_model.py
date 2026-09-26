@@ -88,7 +88,7 @@ def grouped_folds(groups):
     ]
 
 
-def fit(z, y, pairs, feature_set, degree=1, ridge=1e-6, rank=4):
+def fit(z, y, pairs, feature_set, degree=1, ridge=1e-6, rank=4, pair_weight=10.0):
     """All supplied rows must be training rows. Pairs are training indices only."""
     z, y = np.asarray(z), np.asarray(y)
     if y.shape != (len(z), len(TIMES), 2) or not np.isfinite(y).all():
@@ -110,8 +110,8 @@ def fit(z, y, pairs, feature_set, degree=1, ridge=1e-6, rank=4):
     a, b = matrix, target
     if pairs and columns:
         left, right = np.asarray(pairs).T
-        a = np.concatenate([a, 10 * (matrix[right] - matrix[left])])
-        b = np.concatenate([b, 10 * (target[right] - target[left])])
+        a = np.concatenate([a, pair_weight * (matrix[right] - matrix[left])])
+        b = np.concatenate([b, pair_weight * (target[right] - target[left])])
     penalty = np.eye(a.shape[1]) * ridge
     penalty[0, 0] = 0
     coefficients = np.linalg.solve(a.T @ a + penalty, a.T @ b)
@@ -128,6 +128,7 @@ def fit(z, y, pairs, feature_set, degree=1, ridge=1e-6, rank=4):
         "times": TIMES.tolist(),
         "degree": degree if columns else 1,
         "ridge": ridge,
+        "pair_weight": pair_weight,
         "rank": len(basis),
         "mean": mean.tolist(),
         "scale": scale.tolist(),

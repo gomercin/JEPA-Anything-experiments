@@ -251,7 +251,7 @@ def dataset(extension=None):
     return z, y, rows, inputs
 
 
-def fit_panel(out, extension, budget):
+def fit_panel(out, extension, budget, pair_weight=10.0):
     z, y, rows, inputs = dataset(extension)
     pairs = paired_indices(rows)
     groups = [r["seed"] for r in rows]
@@ -273,7 +273,7 @@ def fit_panel(out, extension, budget):
                     if i in lookup and j in lookup
                 ]
                 m = model.fit(
-                    z[train], y[train], train_pairs, feature_set, degree, ridge
+                    z[train], y[train], train_pairs, feature_set, degree, ridge, pair_weight=pair_weight
                 )
                 cv[test] = model.predict(m, z[test][:, m["columns"]])
                 conditions.append(m["condition"])
@@ -282,7 +282,9 @@ def fit_panel(out, extension, budget):
                 r["relative_rms"] / (0.02 if r["kind"] == "R" else 0.1) for r in s
             )
             name = f"{feature_set}-d{degree}-r{ridge:g}"
-            fitted = model.fit(z, y, pairs, feature_set, degree, ridge)
+            fitted = model.fit(
+                z, y, pairs, feature_set, degree, ridge, pair_weight=pair_weight
+            )
             models[name] = fitted
             candidates.append(
                 {
@@ -397,6 +399,7 @@ def main():
     p.add_argument("--data", type=Path)
     p.add_argument("--freeze", type=Path)
     p.add_argument("--seed", type=int, default=8101)
+    p.add_argument("--pair-weight", type=float, choices=[3.0, 10.0], default=10.0)
     p.add_argument("--history", default="mixed")
     p.add_argument("--fresh-refinement", action="store_true")
     args = p.parse_args()
@@ -437,7 +440,7 @@ def main():
         )
         budget.check()
         if args.stage == "fit":
-            fit_panel(args.output, args.data, budget)
+            fit_panel(args.output, args.data, budget, args.pair_weight)
         elif args.stage == "extension":
             run_states(
                 args.output,
