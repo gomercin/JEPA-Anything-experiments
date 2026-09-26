@@ -1,0 +1,15 @@
+{
+  "remote_head": "3567e995c4b273021ff616970283d8c09135304a",
+  "member_hashes_verified": 213,
+  "restored_member_hashes_verified": 213,
+  "data_bytes": 13214589,
+  "source_hash_checks": 288,
+  "protocols": 10,
+  "finite_npz_files": 115,
+  "scientific_modules_imported": false,
+  "field_evolutions": 0,
+  "fitting_executed": false,
+  "retrieval": "fresh GitHub sparse partial clone; new package, scientific sources and existing safe-copy helpers only",
+  "preserved_failed_stage": "accounting-01 import-name collision; 2 CPU seconds charged",
+  "restored_destination": "/private/tmp/jepa-present-state-restored"
+}

@@ -66,3 +66,10 @@ Local validation completed: `make check` passes 257 tests plus two subtests, wit
 the existing session-manifest skip and scientific-panel deselection. Scoped Ruff,
 whitespace and all 213 evidence hashes pass. The 12 focused instrument/publication
 tests recompute sealed inference and scores without field evolution.
+
+Fresh GitHub retrieval at `3567e995c4b273021ff616970283d8c09135304a` verified and
+restored all 213 members, checked 288 source hashes across ten protocols and
+loaded 115 finite NPZ files without importing scientific modules or rerunning
+science. Both hosted checks passed at that source/evidence head. The final delta
+adds only this verification receipt and publication pointers; recheck its exact
+head/base and hosted status before guarded merge.

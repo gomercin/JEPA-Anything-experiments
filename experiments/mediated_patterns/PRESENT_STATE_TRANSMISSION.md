@@ -292,3 +292,11 @@ and publication receipt separate software checks, scientific claims and remote
 integration. Earlier frozen results, including the even pilot, C24 failures,
 AB20/C32, C-probe negative, relay amplitude miss and finite-retention result,
 remain byte-for-byte outside this diff. No scientific successor is selected.
+
+Publication-time status: [lab PR #6](https://github.com/gomercin/JEPA-Anything-experiments/pull/6)
+is open with verified remote retrieval of all 213 members, 288 source hashes and
+115 finite NPZ files; [Atlas PR #165](https://github.com/gomercin/motif-atlas/pull/165)
+contains only the two existing-home paragraphs. `make check` passes 257 tests plus
+two subtests (one existing skip and one scientific-panel deselection). Both hosted
+lab checks passed at the source/evidence head; final guarded merge confirmations
+belong in the PR comments rather than a new metadata-only PR.
