@@ -85,3 +85,16 @@ realization of event-induced physical center motion, with zero initialized
 correction driven by that evolving transient, identically zero before events.
 Choose small orders by whole-preparation held-out free rollouts, preserve all
 candidates, and charge every retained mode/coefficient. No absolute age input.
+
+`development-01` failed during import before reference work (unmatched parenthesis);
+its receipt is retained. Corrected before rerun in a new exclusive directory.
+Transient family specification: discrete unit-time ERA orders4/6 fitted to all
+0..30 event-induced center curves, train-only standardized [a,a*z,a²,a²*z]
+excitation. Enforce the initial output as the fitted A-only jump, B/C exactly0.
+The center law is now separately named/extended: advance G on z-Cr, r+=Ar,
+then restore Cr to the physical centers. This has3+order evolving scientific
+scalars plus the step counter, not three dimensions. No reference trajectory is
+retained. Zero r means no *new conditioning event*, not an equilibrated old write.
+Readout family: four-mode SVD correction, linear in retained transient, fitted
+to development D minus the independently predicted F contrast. It is identically
+zero when r=0 and keeps all original no-event predictions byte-equivalent.

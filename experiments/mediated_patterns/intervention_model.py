@@ -39,26 +39,53 @@ class State:
     def __init__(self, model, z):
         self.model = json.loads(json.dumps(model,allow_nan=False))
         self.flow = gm.Continuation(model['G'],z)
+        self.memory = np.zeros(model.get('transient',{}).get('order',0))
 
     def advance(self, steps):
-        return self.flow.advance(steps)
+        if not len(self.memory):
+            return self.flow.advance(steps)
+        if isinstance(steps,bool) or not isinstance(steps,(int,np.integer)) or steps < 0:
+            raise ValueError('Nonnegative integer steps required')
+        t=self.model['transient'];A=np.asarray(t['A']);C=np.asarray(t['C'])
+        for _ in range(steps):
+            # Physical centers are state; remove the predicted incremental
+            # deformation before G and restore its next value. No reference twin.
+            self.flow.z -= C@self.memory
+            self.flow.advance(1)
+            self.memory = A@self.memory
+            self.flow.z += C@self.memory
+        return self.flow.z.copy()
 
     def event(self, amplitude):
-        self.flow.z = kick(self.model['J'],self.flow.z,amplitude)
+        after=kick(self.model['J'],self.flow.z,amplitude)
+        if len(self.memory):
+            t=self.model['transient']
+            increment=np.asarray(t['B'])@kick_features(self.flow.z,amplitude,t['J'])
+            self.memory += increment
+        self.flow.z = after
 
     def response(self):
-        return pm.predict(self.model['F'],self.flow.z[None])[0]
+        result=pm.predict(self.model['F'],self.flow.z[None])[0]
+        if 'readout' in self.model:
+            r=self.model['readout']
+            weights=(self.memory/r['scale_x'])@np.asarray(r['coefficients'])
+            result += np.einsum('ok,kt->to',weights.reshape(2,-1),np.asarray(r['basis']))*r['scale_y']
+        return result
 
     def checkpoint(self,path):
-        pm.save_json(path,dict(schema=1,model_sha256=gm.identity(self.model),z=self.flow.z.tolist(),steps=self.flow.steps))
+        pm.save_json(path,dict(schema=1,model_sha256=gm.identity(self.model),z=self.flow.z.tolist(),steps=self.flow.steps,memory=self.memory.tolist()))
 
     @classmethod
     def restore(cls,model,checkpoint):
-        if set(checkpoint) != {'schema','model_sha256','z','steps'} or checkpoint['schema'] != 1 or checkpoint['model_sha256'] != gm.identity(model):
+        if set(checkpoint) != {'schema','model_sha256','z','steps','memory'} or checkpoint['schema'] != 1 or checkpoint['model_sha256'] != gm.identity(model):
             raise ValueError('Checkpoint/model mismatch')
         obj = cls(model,checkpoint['z'])
         if isinstance(checkpoint['steps'],bool) or not isinstance(checkpoint['steps'],int) or checkpoint['steps'] < 0:
             raise ValueError('Invalid counter')
+        memory=np.asarray(checkpoint['memory'],float)
+        if memory.shape != obj.memory.shape or not np.isfinite(memory).all():
+            raise ValueError('Invalid transient state')
+        obj.memory=memory
         obj.flow.steps=checkpoint['steps']
         return obj
 
