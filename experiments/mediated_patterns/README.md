@@ -338,3 +338,13 @@ while keeping the snapshot response map frozen. Delayed-response prediction
 improves substantially over persistence on new preparations and a withheld time
 interval, with a retained fractional-motion failure for a nearly stationary A
 center. This does not establish repeated-input closure or minimal physical state.
+
+### Actual conditioning event and the next conditional response
+
+[Intervention-aware state](INTERVENTION_AWARE_STATE.md) measures the same three
+centers once, receives an actual fixed-A event, and predicts a later+.02 probe
+without remeasurement. Original G+J+F misses the resolved event contrast. An
+explicit nine-scalar extension passes all fresh R/D gates on three preparations
+and withheld+.01 conditioning, while retaining event-induced B/C geometry limits,
+development failures, and the earlier unforced geometry-conjunction failure.
+See the [portable evidence](../../evidence/intervention-aware-state-2026-09-26/README.md).
