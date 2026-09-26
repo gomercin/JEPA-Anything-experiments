@@ -113,3 +113,32 @@ will add the current A probe/source overlap (integral of u times the fixed
 unit-L2 source profile): it directly controls the instantaneous u-squared source
 increment under the additive probe and distinguishes amplitude/phase at its
 fixed actuator. This is a same-snapshot scalar, not response spectroscopy.
+
+**Repair outcome and final selection.** `balanced-fit-01` uses exactly the same
+linear/quadratic/ridge comparisons with paired-loss weight 3. Three-center
+quadratic ridge 1e-6 now gives worst grouped total/contrast errors
+1.4866%/5.1658%, with weighted design condition 29.07. Shape and mediator give
+1.1633%/4.6743% and .9015%/4.5511%; their conditions remain 4.91e4/8.25e6.
+Geometry and the best linear shape fit both use 80 response coefficients;
+mediator uses 128. Thus the apparent earlier need for more inputs was partly a
+fitting tradeoff. Select geometry, stop adding variables, and do not execute
+the optional source-overlap repair. No current-feature collision or storage
+necessity is established. Retain the failed weight-10 geometry fit.
+
+`dev-refine-01` repeats the mixed history from seed 8101's same initial array,
+with half dt and doubled N through both waits and both independent probe
+branches. The declared shared floor remains 1e-12 for both readouts/windows.
+This is newly checked numerical evidence, not inherited certification.
+Science charged so far: 119.581 CPU seconds plus the fixed 30-second allowance.
+
+**Fresh freeze, before preparation access.** Keep rank 4, the geometry quadratic
+map/ridge 1e-6/pair weight 3 and the saved coefficients. Forecast independently
+from three offsets, with no field or metadata queries. Fresh seeds are
+12101/12102/12103; all have unwritten, odd +.4, and withheld odd +.2/even -.2
+histories at waits 50/100. The withheld mixture has opposite even deformation
+and intermediate odd displacement; it challenges training-history dependence,
+though all states remain within the same prepared three-pattern regime. The
+mean and B-only controls are also sealed. All panel predictions must be saved
+before the first nonlinear reference outcome. The 2%/10% gates, h40..80 window,
+floor rule, and final worst-contrast refinement stay fixed. No fresh-driven
+repair is planned if this check fails; retain that domain limit.
