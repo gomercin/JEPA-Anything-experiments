@@ -1,0 +1,1 @@
+Saved-data accounting failed at NumPy import: script filename inspect.py shadowed Python stdlib inspect. No fitting, field evolution, extraction, or outcome calculation ran. The ~0.1-second failed startup is conservatively charged 2 CPU seconds. Retained original script; retry uses accounting.py in a new directory.

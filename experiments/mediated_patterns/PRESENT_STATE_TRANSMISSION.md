@@ -1,5 +1,15 @@
 # Present-state transmission
 
+**Result:** three current weighted pattern centers, measured relative to the
+fixed A/B/C anchors, suffice for useful response prediction in this late-snapshot
+envelope. A frozen ordinary quadratic regression passes on three new preparations
+and a withheld mixed write. Worst fresh errors are **0.420%/0.511% for C
+mass/moment response** and **2.029%/1.701% for their history contrasts**, below
+the unchanged 2%/10% targets. Neither write history nor future sham trajectories
+are supplied. B position alone fails; adding source/shape or mediator measurements
+is unnecessary for this selected predictor's demonstrated accuracy. This does
+not make geometry the unique physical storage site or prove state minimality.
+
 Living note, 2026-09-26. Base: merged `34c9b333057f3a059b53798674baa7e7e3da6ae2`.
 The question is whether a small measurement of one CURRENT configuration predicts
 its conditional fixed-A `.02` probe response and the independently predicted
@@ -142,3 +152,143 @@ mean and B-only controls are also sealed. All panel predictions must be saved
 before the first nonlinear reference outcome. The 2%/10% gates, h40..80 window,
 floor rule, and final worst-contrast refinement stay fixed. No fresh-driven
 repair is planned if this check fails; retain that domain limit.
+
+## Fresh result and measured boundary
+
+The freeze was written under source `75544ab` before any of seeds
+12101/12102/12103 was prepared. `fresh-01` saves all 18 descriptor vectors and
+all predictions before its first nonlinear reference. The response model takes
+exactly three numbers per state: offsets of the u-squared weighted A/B/C centers
+from -28/-4/28. Its other arguments are the fixed .02 probe and times since that
+probe. Written and unwritten responses are separate evaluations; their predicted
+difference never receives a true response or partner state.
+
+All 18 responses and 12 contrasts pass for both readouts in both windows (120
+scalar checks). These are three independent preparation groups, not 18 independent
+preparations or thousands of independent time samples. The withheld odd +.2/even
+-.2 history was never fitted. Its worst mass/moment contrast errors are
+2.029%/1.701%; old-family odd +.4 gives 1.991%/1.372%. Thus the result survives
+a changed preparation history, within the same supplied assembly and late-wait
+family. Fresh A/B offsets mildly exceed individual training extrema; no claim
+of broad extrapolation follows.
+
+| Window | Worst R mass | Worst R moment | Worst Delta_R mass | Worst Delta_R moment |
+|---|---:|---:|---:|---:|
+| Whole h=0..80 | 0.3445% | 0.4297% | 2.0295% | 1.7005% |
+| Late h=40..80 | 0.4199% | 0.5115% | 1.9675% | 1.6529% |
+
+| Preparation | Worst R mass | Worst R moment | Worst Delta_R mass | Worst Delta_R moment |
+|---|---:|---:|---:|---:|
+| 12101 | 0.1455% | 0.1810% | 1.2734% | 1.1148% |
+| 12102 | 0.0573% | 0.1746% | 1.0438% | 0.8576% |
+| 12103 | 0.4199% | 0.5115% | 2.0295% | 1.7005% |
+
+The worst total-response case is unwritten seed 12103 at wait 100, late window:
+RMS residuals 1.4151e-9 mass / 6.8651e-10 moment, against response RMS
+3.3699e-7 / 1.3422e-7. Maximum point residuals are 2.1002e-9 / 1.1382e-9.
+The worst contrast for both outputs is that seed's withheld mixture at wait 100,
+whole window: RMS residuals 2.4350e-10 / 1.4959e-10, against contrast RMS
+1.1998e-8 / 8.7968e-9. Maximum point residuals are 4.1918e-10 / 4.3486e-10.
+All per-case absolute/normalized scores are retained in the linked summary.
+
+![Actual and independently predicted responses and contrasts in the worst contrast case](../../evidence/present-state-transmission-2026-09-26/data/work/mediated_patterns/present_state_transmission/analysis-final/predictions.png)
+
+The frozen B-only control has worst fresh R errors 17.00%/23.75% and contrast
+errors 32.67%/16.24%. The rank-4 development-mean control has worst R errors
+19.19%/26.55% and exactly 100% contrast error. The earlier geometry miss remains
+a fitted-formula failure: changing the training loss, with no extra inputs,
+repaired it. Shape/mediator predictors received the same temporal flexibility
+and four linear/quadratic/ridge choices; they improved some development scores
+but were not needed or promoted to fresh evaluation after geometry passed.
+Their larger, often poorly conditioned feature maps do not establish necessity.
+The selected temporal basis's evaluator-only best projection has worst
+development R/contrast error .139%/.9996%, including both windows. This diagnostic
+is never an inference input.
+
+No near-matched geometry collision was sought after geometry achieved the task.
+The panel still does not identify which correlated fields physically store the
+change; nor does it determine whether A or C can be omitted from the measured
+description. A failed B-only regression is not a theorem that B's current state
+contains no information. No feature ablation is a physical intervention.
+Geometry is an adequate operational descriptor here; global sufficiency,
+minimality, causal localization, new wait/probe regimes and sequential use remain
+unresolved. The model cannot propagate geometry through the waiting period.
+There is no autonomous closure, synthetic full-state reconstruction, recurrence,
+neural advantage, or fresh field query hidden in prediction. Delta_Q is not scored.
+
+## Numerical checks, access and cost
+
+Both representative development mixture and final worst fresh mixture are
+refined through write/wait/probe from their identical prepared arrays, using
+half dt and twice N. The largest sum of the two separate response RMS errors
+is 1.2532e-13 (late moment); five times that remains below the 1e-12 lower guard.
+The shared floor is therefore 1e-12 for both outputs/windows. All primary
+contrasts resolve above it. This is an empirical numerical estimate, not a
+confidence interval, receiver-noise threshold or pointwise early-signal guarantee.
+All sampled histories and probe branches satisfy the three-pattern bounds.
+
+The full-history tangent previously received complete future unprobed fields.
+This predictor removes that privilege, as well as write labels, wait/seed/case
+metadata, twins and true baseline responses. The checkpoint loader reads only
+the named checkpoint member/boundary; its returned object is one current array.
+The fitting evaluator owns the separate full-field targets. Deployment needs
+three descriptor scalars, 80 fitted response coefficients, 644 temporal-basis
+values and eight fitted scaling values: **732 learned scalars (5,856 float64
+bytes)**. Forecast grid, three anchors, probe contract and polynomial recipe
+are additional static information. There are zero spatial templates, stored
+training examples, rate evaluations, FFTs or solver steps during inference.
+The selected model's JSON alone is 22,892 bytes, exceeding a raw current
+two-field grid's 12,288 bytes; three descriptor values do not imply an automatic
+total-storage advantage.
+
+Extraction validates both full current arrays and performs dense fixed-window
+reductions over N=768, constructing analytic masks transiently. It is a full
+current-field acquisition, not a local observer. The experiment extracted 15
+values per state to support comparisons, then passed only each model's declared
+columns. A geometry-only call returns three offsets without computing mediator
+moments/widths. A 1,000-call saved-state timing gives about 49.7 microseconds for
+geometry extraction and 61.8 microseconds for the complete 322-value forecast,
+including JSON-list conversion to arrays. The fresh panel's all-descriptor
+extraction took .001499 CPU seconds; all three models' forecasts plus serialization
+took .003675. These local timings are not a hardware-independent runtime claim.
+
+All three fitting panels together took .5276 CPU seconds (including loading,
+grouped preprocessing/SVD, candidate fits and diagnostics). New development
+simulation/refinement took 119.0533 seconds; fresh preparation/history/probes
+153.1999 and its final refinement 76.1410, within the reserved 600. Overall charge
+is **382.904 CPU seconds (6.38 minutes)**: 350.904 metered, a conservative two
+seconds for one failed accounting-script import, and the fixed 30-second
+inspection/startup allowance. The failed filename `inspect.py` shadowed Python's
+standard module before any scientific calculation; its script and failure receipt
+remain in `accounting-01`, with the successful retry in `accounting-02`. Nonfatal
+font-cache warnings did not restart either figure analysis. No simulation hit a
+time/memory stop; maximum fresh section cost was 11.067 CPU seconds. Editing,
+fast regression checks and publication are separate.
+
+## Reproduction, evidence and publication
+
+The [portable new-evidence index](../../evidence/present-state-transmission-2026-09-26/README.md)
+links every candidate, frozen model, descriptor, reference branch, score, refinement,
+failure, command and checksum. The primary saved score table is
+[analysis-final/summary.json](../../evidence/present-state-transmission-2026-09-26/data/work/mediated_patterns/present_state_transmission/analysis-final/summary.json).
+Do not rerun old history/reduction panels. Restore only the new package if needed,
+and use unique output children. Exact commands and original execution revisions
+are archived; example invocation from the repository root is:
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m experiments.mediated_patterns.present_state_transmission fit --pair-weight 3 --data work/mediated_patterns/present_state_transmission/extension-01 --output work/mediated_patterns/present_state_transmission/NEW-fit
+python -m pytest experiments/mediated_patterns/tests/test_present_state.py evidence/present-state-transmission-2026-09-26/tests -q
+make check PYTHON=/path/to/prepared/python
+python3 -I evidence/present-state-transmission-2026-09-26/restore.py --verify-only
+```
+
+The scoped tests check snapshot selection, exclusion of other boundaries/twins/
+metadata, fixed anchors, independent inference with solver imports blocked,
+grouped splits, train-only preprocessing, deterministic serialization, safe
+outputs, response subtraction, prediction hashes and floor/score arithmetic.
+CI runs these fast regression/saved-data checks, never the new scientific panel.
+The [critical review](../../evidence/present-state-transmission-2026-09-26/review.md)
+and publication receipt separate software checks, scientific claims and remote
+integration. Earlier frozen results, including the even pilot, C24 failures,
+AB20/C32, C-probe negative, relay amplitude miss and finite-retention result,
+remain byte-for-byte outside this diff. No scientific successor is selected.

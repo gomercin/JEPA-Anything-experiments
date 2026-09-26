@@ -1,0 +1,26 @@
+# Scientific commands from recorded argv. Use a prepared Python with NumPy/SciPy/Matplotlib; unique outputs only.
+# Execute at each protocol revision. Old history evidence is read only.
+# old-fit-01 revision ed3aeb5f93a8a90cd27a8619fadb0b9efa76e8df
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m experiments.mediated_patterns.present_state_transmission fit --output work/mediated_patterns/present_state_transmission/old-fit-01
+# extension-01 revision ed3aeb5f93a8a90cd27a8619fadb0b9efa76e8df
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m experiments.mediated_patterns.present_state_transmission extension --output work/mediated_patterns/present_state_transmission/extension-01
+# extended-fit-01 revision 1f47f3093d1abdc800ffb9a2cdd7602a5b89ecd0
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m experiments.mediated_patterns.present_state_transmission fit --data work/mediated_patterns/present_state_transmission/extension-01 --output work/mediated_patterns/present_state_transmission/extended-fit-01
+# dev-refine-01 revision 1f47f3093d1abdc800ffb9a2cdd7602a5b89ecd0
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m experiments.mediated_patterns.present_state_transmission refine --data work/mediated_patterns/present_state_transmission/extension-01 --seed 8101 --history mixed --output work/mediated_patterns/present_state_transmission/dev-refine-01
+# balanced-fit-01 revision bd6ca5e2f3aa0522d5ff9f965b702de534bd7e19
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m experiments.mediated_patterns.present_state_transmission fit --pair-weight 3 --data work/mediated_patterns/present_state_transmission/extension-01 --output work/mediated_patterns/present_state_transmission/balanced-fit-01
+# frozen-01 revision 75544ab (source hashes pinned in protocol)
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m experiments.mediated_patterns.present_state_analysis freeze --data work/mediated_patterns/present_state_transmission/balanced-fit-01 --refinement work/mediated_patterns/present_state_transmission/dev-refine-01 --output work/mediated_patterns/present_state_transmission/frozen-01 --selected geometry
+# fresh-01 revision 75544ab6c3aabd2e666516d960a92fe842deebde
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m experiments.mediated_patterns.present_state_transmission fresh --freeze work/mediated_patterns/present_state_transmission/frozen-01 --output work/mediated_patterns/present_state_transmission/fresh-01
+# analysis-pre-refine revision 75544ab (source hashes pinned in protocol)
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m experiments.mediated_patterns.present_state_analysis evaluate --data work/mediated_patterns/present_state_transmission/fresh-01 --freeze work/mediated_patterns/present_state_transmission/frozen-01 --output work/mediated_patterns/present_state_transmission/analysis-pre-refine
+# fresh-refine-01 revision 49a0e4ea4a24488bac98e753a4e4603d113fad9a
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m experiments.mediated_patterns.present_state_transmission refine --data work/mediated_patterns/present_state_transmission/fresh-01 --seed 12103 --history heldmix --fresh-refinement --output work/mediated_patterns/present_state_transmission/fresh-refine-01
+# analysis-final revision 75544ab (source hashes pinned in protocol)
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m experiments.mediated_patterns.present_state_analysis evaluate --data work/mediated_patterns/present_state_transmission/fresh-01 --freeze work/mediated_patterns/present_state_transmission/frozen-01 --refinement work/mediated_patterns/present_state_transmission/fresh-refine-01 --output work/mediated_patterns/present_state_transmission/analysis-final
+# Failed saved-data accounting startup, retained and conservatively charged:
+OPENBLAS_NUM_THREADS=1 PYTHONPATH=. python work/mediated_patterns/present_state_transmission/accounting-01/inspect.py
+# Corrected filename in a unique directory:
+OPENBLAS_NUM_THREADS=1 PYTHONPATH=. python work/mediated_patterns/present_state_transmission/accounting-02/accounting.py

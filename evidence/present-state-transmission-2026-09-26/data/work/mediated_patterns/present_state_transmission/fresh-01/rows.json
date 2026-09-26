@@ -1,0 +1,92 @@
+[
+  {
+    "history": "heldmix",
+    "seed": 12101,
+    "wait": 50.0
+  },
+  {
+    "history": "none",
+    "seed": 12101,
+    "wait": 50.0
+  },
+  {
+    "history": "odd04",
+    "seed": 12101,
+    "wait": 50.0
+  },
+  {
+    "history": "heldmix",
+    "seed": 12101,
+    "wait": 100.0
+  },
+  {
+    "history": "none",
+    "seed": 12101,
+    "wait": 100.0
+  },
+  {
+    "history": "odd04",
+    "seed": 12101,
+    "wait": 100.0
+  },
+  {
+    "history": "heldmix",
+    "seed": 12102,
+    "wait": 50.0
+  },
+  {
+    "history": "none",
+    "seed": 12102,
+    "wait": 50.0
+  },
+  {
+    "history": "odd04",
+    "seed": 12102,
+    "wait": 50.0
+  },
+  {
+    "history": "heldmix",
+    "seed": 12102,
+    "wait": 100.0
+  },
+  {
+    "history": "none",
+    "seed": 12102,
+    "wait": 100.0
+  },
+  {
+    "history": "odd04",
+    "seed": 12102,
+    "wait": 100.0
+  },
+  {
+    "history": "heldmix",
+    "seed": 12103,
+    "wait": 50.0
+  },
+  {
+    "history": "none",
+    "seed": 12103,
+    "wait": 50.0
+  },
+  {
+    "history": "odd04",
+    "seed": 12103,
+    "wait": 50.0
+  },
+  {
+    "history": "heldmix",
+    "seed": 12103,
+    "wait": 100.0
+  },
+  {
+    "history": "none",
+    "seed": 12103,
+    "wait": 100.0
+  },
+  {
+    "history": "odd04",
+    "seed": 12103,
+    "wait": 100.0
+  }
+]

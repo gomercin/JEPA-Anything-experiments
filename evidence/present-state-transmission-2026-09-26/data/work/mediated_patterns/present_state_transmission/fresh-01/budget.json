@@ -1,0 +1,144 @@
+{
+  "cpu_seconds": 153.19993,
+  "limit_cpu_seconds": 1800,
+  "previous_cpu_seconds": 149.607586,
+  "sections": [
+    {
+      "cpu_seconds": 11.066972,
+      "task": "isolated-components-s12101",
+      "wall_seconds": 11.097210208012257
+    },
+    {
+      "cpu_seconds": 0.9713960000000004,
+      "task": "prepare-s12101-b-4",
+      "wall_seconds": 0.9722275419917423
+    },
+    {
+      "cpu_seconds": 7.371568,
+      "task": "s12101-histories",
+      "wall_seconds": 7.379926540976157
+    },
+    {
+      "cpu_seconds": 10.872575000000001,
+      "task": "isolated-components-s12102",
+      "wall_seconds": 10.890796291001607
+    },
+    {
+      "cpu_seconds": 0.9657070000000019,
+      "task": "prepare-s12102-b-4",
+      "wall_seconds": 0.966704958002083
+    },
+    {
+      "cpu_seconds": 7.4269060000000025,
+      "task": "s12102-histories",
+      "wall_seconds": 7.4383845000120346
+    },
+    {
+      "cpu_seconds": 10.977193999999997,
+      "task": "isolated-components-s12103",
+      "wall_seconds": 10.994061083998531
+    },
+    {
+      "cpu_seconds": 0.9679240000000036,
+      "task": "prepare-s12103-b-4",
+      "wall_seconds": 0.9688905419898219
+    },
+    {
+      "cpu_seconds": 7.420701999999999,
+      "task": "s12103-histories",
+      "wall_seconds": 7.470705457992153
+    },
+    {
+      "cpu_seconds": 4.0104339999999965,
+      "task": "reference-0",
+      "wall_seconds": 4.018989500007592
+    },
+    {
+      "cpu_seconds": 4.028323,
+      "task": "reference-1",
+      "wall_seconds": 4.035912791994633
+    },
+    {
+      "cpu_seconds": 3.999648999999991,
+      "task": "reference-2",
+      "wall_seconds": 4.008811209001578
+    },
+    {
+      "cpu_seconds": 3.993994999999998,
+      "task": "reference-3",
+      "wall_seconds": 4.0005440000095405
+    },
+    {
+      "cpu_seconds": 4.041661000000005,
+      "task": "reference-4",
+      "wall_seconds": 4.05478266699356
+    },
+    {
+      "cpu_seconds": 4.162644999999998,
+      "task": "reference-5",
+      "wall_seconds": 4.238023333018646
+    },
+    {
+      "cpu_seconds": 5.441196000000005,
+      "task": "reference-6",
+      "wall_seconds": 5.61175833400921
+    },
+    {
+      "cpu_seconds": 7.5123999999999995,
+      "task": "reference-7",
+      "wall_seconds": 7.5769411670044065
+    },
+    {
+      "cpu_seconds": 9.506062,
+      "task": "reference-8",
+      "wall_seconds": 9.799441959010437
+    },
+    {
+      "cpu_seconds": 10.577187999999992,
+      "task": "reference-9",
+      "wall_seconds": 10.989651457988657
+    },
+    {
+      "cpu_seconds": 10.111722,
+      "task": "reference-10",
+      "wall_seconds": 10.4920055840048
+    },
+    {
+      "cpu_seconds": 3.9912929999999847,
+      "task": "reference-11",
+      "wall_seconds": 3.9988781670108438
+    },
+    {
+      "cpu_seconds": 4.0394019999999955,
+      "task": "reference-12",
+      "wall_seconds": 4.050257875001989
+    },
+    {
+      "cpu_seconds": 3.9801829999999825,
+      "task": "reference-13",
+      "wall_seconds": 3.9864738330070395
+    },
+    {
+      "cpu_seconds": 3.9174679999999853,
+      "task": "reference-14",
+      "wall_seconds": 3.9177140409883577
+    },
+    {
+      "cpu_seconds": 3.9300389999999936,
+      "task": "reference-15",
+      "wall_seconds": 3.930506709002657
+    },
+    {
+      "cpu_seconds": 3.9449340000000177,
+      "task": "reference-16",
+      "wall_seconds": 3.9461349159828387
+    },
+    {
+      "cpu_seconds": 3.9255330000000015,
+      "task": "reference-17",
+      "wall_seconds": 3.9262750420020893
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 154.85079929200583
+}

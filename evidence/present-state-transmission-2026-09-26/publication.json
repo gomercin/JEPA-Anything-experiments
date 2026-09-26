@@ -1,0 +1,21 @@
+{
+  "state": "LOCAL_REVIEWED_PENDING_REMOTE_VERIFICATION",
+  "integration_base": "34c9b333057f3a059b53798674baa7e7e3da6ae2",
+  "scientific_status": "THREE_CURRENT_CENTERS_ADEQUATE_FOR_BOUNDED_RESPONSE_AND_HISTORY_CONTRAST",
+  "members": 213,
+  "data_bytes": 13214589,
+  "charged_cpu_seconds": 382.904366,
+  "source_revisions": [
+    "ed3aeb5",
+    "1f47f30",
+    "bd6ca5e",
+    "75544ab",
+    "49a0e4e"
+  ],
+  "critical_review": "review.md; implementing-agent pass, not independent replication",
+  "release_assets_created": 0,
+  "successor": "NONE",
+  "remote_verified": false,
+  "merge_metadata_policy": "Final guarded merge confirmations in PR comments; no metadata-only successor PR",
+  "software_status": "make check: 257 tests + 2 subtests pass; 1 existing manifest skip and 1 scientific-panel deselection; scoped Ruff, whitespace and 213 local member hashes pass"
+}

@@ -31,7 +31,7 @@ test-fields:
 	OPENBLAS_NUM_THREADS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 $(PYTHON) -m pytest experiments/mediated_patterns/tests -q
 
 test-evidence:
-	PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 $(PYTHON) -m pytest evidence/completed-2026-09-25/tests evidence/organization-response-2026-09-25/tests evidence/source-receiver-relay-2026-09-25/tests evidence/history-conditioned-transmission-2026-09-26/tests -q
+	PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 $(PYTHON) -m pytest evidence/completed-2026-09-25/tests evidence/organization-response-2026-09-25/tests evidence/source-receiver-relay-2026-09-25/tests evidence/history-conditioned-transmission-2026-09-26/tests evidence/present-state-transmission-2026-09-26/tests -q
 
 validate-design:
 	$(PYTHON) jepa-anything-skill/scripts/validate_design.py $(DESIGN) >/dev/null
