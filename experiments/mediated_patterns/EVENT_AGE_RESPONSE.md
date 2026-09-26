@@ -88,3 +88,18 @@ No parallel scientific panels, paid compute, large dependencies or automatic
 budget increase. Software checks and publication are separate. One scoped PR,
 portable evidence<=25MiB Git, exact-head review/merge, then only the two existing
 Atlas homes for a material result. No route or automatic successor.
+
+## Development diagnostic 1
+
+Pilot cost10.07CPU seconds. Matched age20 refinements give D1 floors
+2.39e-13/3.67e-13 whole and2.73e-13/4.85e-13 late (mass/moment).
+The first two-decay fit (`fit-two-01`) is retained as a failed candidate:
+186/192 grouped D1 gates fail, worst3499%, although all R gates pass.
+The privileged age control also fails (worst3267%) and exact centers do not
+repair it. Training projection residual is only0.38%, so the first diagnosis
+is preparation extrapolation through nearly dependent center features, not a
+missing physical memory or age mode. Before adding modes, retain only the
+leading training-only standardized-center principal component in both fits.
+This is conditioning within the same diagonal-response family; no new state,
+no new measured quantity, no age18 exposure, no two-event fitting. All original
+failed artifacts remain.

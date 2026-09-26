@@ -60,12 +60,17 @@ def prepare(rows):
     weights = np.einsum("nto,kt->nok", norm, basis).reshape(len(rows), -1)
     mean = zz.mean(axis=0)
     scale = np.maximum(zz.std(axis=0), 1e-14)
-    centers = np.c_[np.ones(len(rows)), (zz - mean) / scale]
+    standard = (zz - mean) / scale
+    _, singular, axes = np.linalg.svd(standard, full_matrices=False)
+    projection = axes[:1].T
+    centers = np.c_[np.ones(len(rows)), standard @ projection]
     readout = {
         "mean_z": mean.tolist(),
         "scale_z": scale.tolist(),
         "scale_y": sy.tolist(),
         "basis": basis.tolist(),
+        "center_projection": projection.tolist(),
+        "center_singular_values": singular.tolist(),
     }
     return centers, weights, readout
 
@@ -145,7 +150,7 @@ def privileged(m, z0, age, a):
     r = m["readout"]
     z, y = geometry(z0, age, a)
     _, base = geometry(z0, age, 0.0)
-    q = (z - r["mean_z"]) / r["scale_z"]
+    q = ((z - r["mean_z"]) / r["scale_z"]) @ np.asarray(r["center_projection"])
     b = a / 0.02
     x = np.outer([b, b * b], np.r_[1.0, q]).ravel()
     coefficient = CubicSpline(m["ages"], r["age_coefficients"], axis=0)(age)

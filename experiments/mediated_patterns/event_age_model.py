@@ -91,6 +91,7 @@ def readout(model, centers, response_state):
     """Pure algebra also used by the explicitly separated evaluator diagnostic."""
     r = model["readout"]
     q = (np.asarray(centers) - r["mean_z"]) / r["scale_z"]
+    q = q @ np.asarray(r.get("center_projection", np.eye(3)))
     features = np.outer(np.asarray(response_state).ravel(), np.r_[1.0, q]).ravel()
     weights = features @ np.asarray(r["coefficients"])
     return (
