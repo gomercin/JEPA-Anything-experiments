@@ -235,7 +235,9 @@ def analyze(out, data, frozen):
                         p["tangent_" + kind][:, 2, :2],
                         floors[2, :2],
                     )
-                    gate = 0.10 if kind == "qb" else 0.02
+                    gate = fz["prediction_gates"][
+                        "history_difference" if kind == "qb" else "response"
+                    ]
                     rows.append(
                         {
                             "seed": seed,
@@ -266,10 +268,13 @@ def analyze(out, data, frozen):
                         "seed": seed,
                         "wait": wait,
                         "kind": "delta_" + kind,
-                        "gate": 0.10,
+                        "gate": fz["prediction_gates"]["history_difference"],
                         "passed": bool(
                             np.all(
-                                (np.asarray(metric["relative"]) <= 0.10)
+                                (
+                                    np.asarray(metric["relative"])
+                                    <= fz["prediction_gates"]["history_difference"]
+                                )
                                 | (np.asarray(metric["rmse"]) <= floors[2, :2])
                             )
                         ),
@@ -322,9 +327,9 @@ def analyze(out, data, frozen):
         )
         histories[-1]["late_displacement_ratio"] = displacement_ratio
         histories[-1]["finite_retention_qualified"] = bool(
-            (retention_ratio >= 0.5).all()
+            (retention_ratio >= fz["retention_rule"]["delta_R_rms_ratio_min"]).all()
             and (correlation > 0).all()
-            and displacement_ratio >= 0.75
+            and displacement_ratio >= fz["retention_rule"]["displacement_ratio_min"]
             and all((rms(v, axis=0) > floors[2, :2]).all() for v in late.values())
         )
     summary = {
