@@ -133,3 +133,27 @@ Its field L2 difference is.0220448. These are candidates, not collision findings
 The ordinary fit selection rule is the smallest worst grouped gate-normalized
 error, with deterministic configuration-index tie breaking. All folds rebuild
 scales and temporal bases using training preparations only.
+
+The selected quadratic ridge1e-6 passes all960 distinct grouped development gates
+(48 histories ×20 gates). WorstD1 is3.2463%; worstR is.3750%. The formerly adverse
+20101/odd04 case has worstD1 1.0708% in its held-preparation fold. Ridge1e-3 also
+passes; ridge.1 retains two failedD1 gates (worst14.4761%). Rank4 contrast
+projection error is at most.8519%, so no temporal basis extension is warranted.
+The regularized quadratic is already a competent same-descriptor adversary;
+RBF and the entire augmentation ladder are therefore NOT RUN.
+
+All40 selected pair/sign/window/readout comparisons fail the collision screen:
+observed differences are at most.198 times the conservative allowance for center
+mismatch plus numerical uncertainty. The five pairs' largest difference RMS
+ranges1.375e-12 to2.571e-11. They demonstrate differences among nearby states,
+not a robust aliasing witness. No physical center-matching perturbation is
+warranted. The matched newD1 floors are mass/moment2.922e-13/3.434e-13 (whole)
+and3.568e-13/4.495e-13 (late). Direct contrast refinement and uncorrelated absolute
+branch bounds remain separately recorded. Development through this decision
+cost494.29CPU seconds including the30-second allowance.
+
+Freeze this three-center fixed-age snapshot model for24101–24103, with no feature
+search after outcomes. A fresh pass may earn a cheap exposed diagnostic using the
+unchanged unforcedG from t50 to72. Such a diagnostic alone would not count as a
+fresh test of restored once-measured prediction; the snapshot and retention
+contracts remain separate. No new event-memory coordinates or repeated fits.
