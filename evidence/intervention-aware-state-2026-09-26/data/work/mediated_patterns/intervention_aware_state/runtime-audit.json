@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "checkpoint": "checkpoint-0-transient4-readout-a-0.02.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-0-transient4-readout-a0.01.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-0-transient4-readout-a0.02.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-0-transient4-readout-a0.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-1-transient4-readout-a-0.02.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-1-transient4-readout-a0.01.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-1-transient4-readout-a0.02.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-1-transient4-readout-a0.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-2-transient4-readout-a-0.02.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-2-transient4-readout-a0.01.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-2-transient4-readout-a0.02.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-2-transient4-readout-a0.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-3-transient4-readout-a-0.02.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-3-transient4-readout-a0.01.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-3-transient4-readout-a0.02.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-3-transient4-readout-a0.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-4-transient4-readout-a-0.02.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-4-transient4-readout-a0.01.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-4-transient4-readout-a0.02.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-4-transient4-readout-a0.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-5-transient4-readout-a-0.02.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-5-transient4-readout-a0.01.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-5-transient4-readout-a0.02.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    },
+    {
+      "checkpoint": "checkpoint-5-transient4-readout-a0.json",
+      "geometry_max": 0.0,
+      "response_max": 0.0
+    }
+  ],
+  "own_cpu_seconds": 0.08596400000000001,
+  "child_cpu_seconds": 2.029592,
+  "access": "Only copied runtime modules, model.json and checkpoint.json; solver imports and all npz/npy field reads denied"
+}

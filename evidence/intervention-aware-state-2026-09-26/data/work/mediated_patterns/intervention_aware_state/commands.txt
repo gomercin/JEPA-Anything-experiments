@@ -1,0 +1,159 @@
+{
+  "stage": "analysis-final",
+  "revision": "0f11e28f934d4cb79a418db736f3ab5108eadc43",
+  "command": [
+    "/private/tmp/jepa-intervention-aware-state/experiments/mediated_patterns/intervention_aware_state.py",
+    "--stage",
+    "analyze",
+    "--freeze",
+    "work/mediated_patterns/intervention_aware_state/frozen-01",
+    "--data",
+    "work/mediated_patterns/intervention_aware_state/fresh-01",
+    "--output",
+    "work/mediated_patterns/intervention_aware_state/analysis-final"
+  ],
+  "status": "COMPLETE"
+}
+
+{
+  "stage": "development-01",
+  "revision": "8d57a41bd37df55b20b9a0929bd70e9940a18b4e",
+  "command": [
+    "/private/tmp/jepa-intervention-aware-state/experiments/mediated_patterns/intervention_aware_state.py",
+    "--stage",
+    "development",
+    "--output",
+    "work/mediated_patterns/intervention_aware_state/development-01"
+  ],
+  "status": "FAILED"
+}
+
+{
+  "stage": "development-02",
+  "revision": "56c58f98eb3801b1aea33d197f7b251e7482a5ed",
+  "command": [
+    "/private/tmp/jepa-intervention-aware-state/experiments/mediated_patterns/intervention_aware_state.py",
+    "--stage",
+    "development",
+    "--output",
+    "work/mediated_patterns/intervention_aware_state/development-02"
+  ],
+  "status": "COMPLETE"
+}
+
+{
+  "stage": "fresh-01",
+  "revision": "94c0f94256379c1f37e5da956945dd5ce6300da8",
+  "command": [
+    "/private/tmp/jepa-intervention-aware-state/experiments/mediated_patterns/intervention_aware_state.py",
+    "--stage",
+    "fresh",
+    "--freeze",
+    "work/mediated_patterns/intervention_aware_state/frozen-01",
+    "--output",
+    "work/mediated_patterns/intervention_aware_state/fresh-01"
+  ],
+  "status": "COMPLETE"
+}
+
+{
+  "stage": "fresh-refine-01",
+  "revision": "see supplemental script commit65a7313",
+  "command": [],
+  "status": "COMPLETE"
+}
+
+{
+  "stage": "frozen-01",
+  "revision": "94c0f94256379c1f37e5da956945dd5ce6300da8",
+  "command": [
+    "/private/tmp/jepa-intervention-aware-state/experiments/mediated_patterns/intervention_aware_state.py",
+    "--stage",
+    "freeze",
+    "--data",
+    "work/mediated_patterns/intervention_aware_state/repair-fit-03",
+    "--output",
+    "work/mediated_patterns/intervention_aware_state/frozen-01"
+  ],
+  "status": "COMPLETE"
+}
+
+{
+  "stage": "pilot-01",
+  "revision": "a47f282dcc67b735f563d1b8ec82271d7e06c3e8",
+  "command": [
+    "/private/tmp/jepa-intervention-aware-state/experiments/mediated_patterns/intervention_aware_state.py",
+    "--stage",
+    "pilot",
+    "--output",
+    "work/mediated_patterns/intervention_aware_state/pilot-01"
+  ],
+  "status": "COMPLETE"
+}
+
+{
+  "stage": "plain-fit-01",
+  "revision": "efb409deda6950d180c49acdf6ff2706422edbcf",
+  "command": [
+    "/private/tmp/jepa-intervention-aware-state/experiments/mediated_patterns/intervention_aware_state.py",
+    "--stage",
+    "plain-fit",
+    "--output",
+    "work/mediated_patterns/intervention_aware_state/plain-fit-01"
+  ],
+  "status": "COMPLETE"
+}
+
+{
+  "stage": "refine-01",
+  "revision": "efb409deda6950d180c49acdf6ff2706422edbcf",
+  "command": [
+    "/private/tmp/jepa-intervention-aware-state/experiments/mediated_patterns/intervention_aware_state.py",
+    "--stage",
+    "refine",
+    "--output",
+    "work/mediated_patterns/intervention_aware_state/refine-01"
+  ],
+  "status": "COMPLETE"
+}
+
+{
+  "stage": "repair-fit-01",
+  "revision": "efb409deda6950d180c49acdf6ff2706422edbcf",
+  "command": [
+    "/private/tmp/jepa-intervention-aware-state/experiments/mediated_patterns/intervention_aware_state.py",
+    "--stage",
+    "repair-fit",
+    "--output",
+    "work/mediated_patterns/intervention_aware_state/repair-fit-01"
+  ],
+  "status": "COMPLETE"
+}
+
+{
+  "stage": "repair-fit-02",
+  "revision": "ce7471bedb6caf1a8df94d9b5ce09bc63b414a98",
+  "command": [
+    "/private/tmp/jepa-intervention-aware-state/experiments/mediated_patterns/intervention_aware_state.py",
+    "--stage",
+    "repair-fit",
+    "--output",
+    "work/mediated_patterns/intervention_aware_state/repair-fit-02"
+  ],
+  "status": "COMPLETE"
+}
+
+{
+  "stage": "repair-fit-03",
+  "revision": "870a3843f9be93aac7410895acd977eec7c4a3cf",
+  "command": [
+    "/private/tmp/jepa-intervention-aware-state/experiments/mediated_patterns/intervention_aware_state.py",
+    "--stage",
+    "repair-fit",
+    "--output",
+    "work/mediated_patterns/intervention_aware_state/repair-fit-03"
+  ],
+  "status": "COMPLETE"
+}
+
+Additional read-only commands: runtime_audit.py --data work/mediated_patterns/intervention_aware_state --output work/mediated_patterns/intervention_aware_state/runtime-audit.json; summarize.py. Supplemental reference: PYTHONPATH=. python evidence/intervention-aware-state-2026-09-26/numerical_check.py. Use OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 throughout.

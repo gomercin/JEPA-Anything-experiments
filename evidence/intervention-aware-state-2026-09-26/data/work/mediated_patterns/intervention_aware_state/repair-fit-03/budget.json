@@ -1,0 +1,14 @@
+{
+  "cpu_seconds": 1.336549,
+  "limit_cpu_seconds": 1200,
+  "previous_cpu_seconds": 272.417646,
+  "sections": [
+    {
+      "cpu_seconds": 1.327759,
+      "task": "grouped-transient-and-readout-fits",
+      "wall_seconds": 1.3313625000009779
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 1.353541583986953
+}
