@@ -60,3 +60,28 @@ only if needed), verify remote retrieval, critical review/fix, guarded merge.
 Update only existing Atlas Effective Motif Dynamics and persistence homes.
 No arbitrary-stream, absolute two-pulse trace, practical switch, minimality or
 unique-storage claim; stop after this bounded task, without an automatic successor.
+
+## Pilot and next discriminator
+
+`pilot-01` costs26.347483 CPU seconds. Exact center jump identity agrees within
+5.3e-17; B/C direct jumps are zero. +.02 shifts A by−1.24292e-4 but at gap10
+its induced shift is+1.94780e-4; true-post-jump G still errs by−3.18022e-4.
+The event excites a transient rather than merely setting a new unforced center.
+Input norm .02 has source increments +.113485/−.112685 and energy increments
+.000340383/.000323757, so opposite/equal-norm events do not mean equal work.
+D/R is .021–.049% mass and .035–.044% moment. F at exact post-event centers has
+D errors21.7%/17.6% at gap30 and281.5%/456.8% at gap10, even though R errors
+are below .24%. This is a frozen-readout limitation, not a proof of missing
+geometry information. Refinement must establish whether this small D resolves.
+
+Keep the schedule/amplitudes unchanged. Complete four-preparation development,
+fit the two specified J controls under unchanged G/F, and refine the entire
+four-branch history at half dt/double N. Confirm pilot per-section limits120 CPU/
+180 wall seconds/1GiB; measured single probes cost3.97 seconds and continuations
+.75. Expected development plus numerical costs<350 CPU seconds. Before fresh,
+allow two compact repair families only: (1) ordinary low-order linear transient
+realization of event-induced physical center motion, with zero initialized
+*incremental event state*, not assumed equilibrium; (2) low-rank response
+correction driven by that evolving transient, identically zero before events.
+Choose small orders by whole-preparation held-out free rollouts, preserve all
+candidates, and charge every retained mode/coefficient. No absolute age input.
