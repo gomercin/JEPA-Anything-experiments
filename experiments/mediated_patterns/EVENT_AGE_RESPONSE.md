@@ -103,3 +103,29 @@ leading training-only standardized-center principal component in both fits.
 This is conditioning within the same diagonal-response family; no new state,
 no new measured quantity, no age18 exposure, no two-event fitting. All original
 failed artifacts remain.
+
+## Bounded alternative after the grouped diagnostic
+
+`fit-conditioned-01` reduces the worst grouped D1 error to45.65%, with52/192
+misses; explicit-age interpolation has52 misses, worst46.62%. Age20 passes all
+contrast gates, but the inherited endpoint capability is lost. The normalized
+center matrix itself has singular values9.44,6.87,2.78; global center collinearity
+is therefore not the full explanation. The flexible center-by-age regression
+from only four training starting conditions per fold extrapolates poorly.
+
+Use one endpoint-preserving alternative ordinary stable realization. Its eight
+response coordinates are b and b² excitations at decay factors corresponding to
+persistence and tau20,5,50. The tau20/persistence part realizes the inherited
+single-event readout exactly; its coefficients are copied from the original
+nine-state artifact, not learned from paired events. New correction coefficients
+lie in the nullspace of the mode vectors at ages10 and30, preserving the known
+endpoints. Fit only the remaining two response directions using the same
+training-only rank4 basis and leading-center interaction. Ages15/20 determine
+that correction; fixed5/50 scales come from the prospective starting pair, not
+a decay-time sweep. Runtime receives only evolving coordinates, no age.
+This candidate has15 scientific scalars (3+4+8) plus a counter. Per-event b²
+excitation is an ordinary single-event linear realization, not physical energy;
+its repeated predictions would be tested only after fresh single-event success.
+This is the second bounded response-state family. No additional architecture
+search is planned if it fails. Explicit-age cubic interpolation is refit to the
+same inherited-readout residual for a competent diagnostic.

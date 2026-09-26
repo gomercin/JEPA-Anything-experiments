@@ -388,6 +388,7 @@ def main():
     p.add_argument("--data", type=Path)
     p.add_argument("--freeze", type=Path)
     p.add_argument("--extra-mode", action="store_true")
+    p.add_argument("--anchored", action="store_true")
     args = p.parse_args()
     if args.output.parent.resolve() != ROOT.resolve() or any(
         x.is_symlink() for x in [args.output, *args.output.parents]

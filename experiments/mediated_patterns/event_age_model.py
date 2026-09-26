@@ -94,10 +94,21 @@ def readout(model, centers, response_state):
     q = q @ np.asarray(r.get("center_projection", np.eye(3)))
     features = np.outer(np.asarray(response_state).ravel(), np.r_[1.0, q]).ravel()
     weights = features @ np.asarray(r["coefficients"])
-    return (
-        pm.predict(model["geometry"]["F"], np.asarray(centers)[None])[0]
-        + np.einsum("ok,kt->to", weights.reshape(2, -1), r["basis"]) * r["scale_y"]
-    )
+    result = pm.predict(model["geometry"]["F"], np.asarray(centers)[None])[0]
+    result += np.einsum("ok,kt->to", weights.reshape(2, -1), r["basis"]) * r["scale_y"]
+    if "prior" in model:
+        prior = model["prior"]
+        # Linear single-event realization of inherited p,d,p²,p*d features.
+        # Squared excitation is injected per event, never inferred from net p.
+        features = np.asarray(response_state)[:, :2].ravel()
+        q = (np.asarray(centers) - prior["mean_z"]) / prior["scale_z"]
+        w = np.outer(features, np.r_[1.0, q]).ravel() @ np.asarray(
+            prior["coefficients"]
+        )
+        result += (
+            np.einsum("ok,kt->to", w.reshape(2, -1), prior["basis"]) * prior["scale_y"]
+        )
+    return result
 
 
 def vector(state):

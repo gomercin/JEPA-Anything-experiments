@@ -169,3 +169,22 @@ print(json.dumps(y.tolist()))
             [sys.executable, "-I", "resume.py", cp], cwd=tmp_path, text=True
         )
         np.testing.assert_array_equal(json.loads(out), expected)
+
+
+def test_linear_realization_of_inherited_single_event():
+    from experiments.mediated_patterns.intervention_model import State as Old
+    from experiments.mediated_patterns.repeated_intervention_state import model
+
+    original = model()
+    m = fixture()
+    m["prior"] = original["readout"]
+    m["decays"] = [1.0, np.exp(-1 / 20), np.exp(-1 / 5), np.exp(-1 / 50)]
+    m["readout"]["coefficients"] = np.zeros((32, 2)).tolist()
+    for age in [10, 18, 30]:
+        s = em.State(m, [0.001, 0.01, -0.002])
+        old = Old(original, [0.001, 0.01, -0.002])
+        for state in [s, old]:
+            state.advance(40 - age)
+            state.event(-0.02)
+            state.advance(age)
+        np.testing.assert_array_equal(s.response(), old.response())

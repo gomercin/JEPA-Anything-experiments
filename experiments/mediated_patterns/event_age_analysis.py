@@ -41,14 +41,18 @@ def geometry(z, age, a):
     return s.flow.z.copy(), s.response()
 
 
-def prepare(rows):
+def prepare(rows, prior=False):
     zz = []
     target = []
     for r in rows:
         z, y = geometry(r["z0"], r["age"], r["a"])
         _, base = geometry(r["z0"], r["age"], 0.0)
         zz.append(z)
-        target.append(r["y"][1] - r["y"][0] - (y - base))
+        if prior:
+            yy = predict_original(r["z0"], r["age"], r["a"], model())
+            target.append(r["y"][1] - r["y"][0] - (yy[1] - yy[0]))
+        else:
+            target.append(r["y"][1] - r["y"][0] - (y - base))
     zz = np.array(zz)
     target = np.array(target)
     sy = np.maximum(rms(target, axis=(0, 1)), 1e-18)
@@ -89,10 +93,43 @@ def regression(x, y):
     return np.linalg.solve(x.T @ x + 1e-7 * np.eye(x.shape[1]), x.T @ y)
 
 
-def fit_model(rows, extra=False):
+def fit_model(rows, extra=False, anchored=False):
     if {r["age"] for r in rows} != set(AGES) or any(r["seed"] not in DEV for r in rows):
         raise ValueError("Development groups and ages only")
-    center, w, readout = prepare(rows)
+    center, w, readout = prepare(rows, prior=anchored)
+    if anchored:
+        # Endpoint-preserving stable realization, selected before withheld age access.
+        taus = [20.0, 5.0, 50.0]
+        anchor_modes = np.c_[
+            np.ones(2), np.exp(-np.array([10.0, 30.0])[:, None] / taus)
+        ]
+        _, _, vh = np.linalg.svd(anchor_modes, full_matrices=True)
+        null = vh[2:].T
+        transform = np.kron(np.kron(np.eye(2), null), np.eye(center.shape[1]))
+        x = features(rows, center, taus)
+        readout["coefficients"] = (transform @ regression(x @ transform, w)).tolist()
+        m = {
+            "schema": 1,
+            "geometry": geometry_model(),
+            "decays": [1.0, *np.exp(-1 / np.array(taus)).tolist()],
+            "readout": readout,
+            "prior": model()["readout"],
+        }
+        details = {
+            "taus": taus,
+            "training_seeds": sorted({r["seed"] for r in rows}),
+            "training_ages": AGES,
+            "anchored": True,
+            "anchors": [10, 30],
+            "response_scalars": 8,
+            "nullspace_residual": float(abs(anchor_modes @ null).max()),
+            "training_projection_relative": float(
+                np.linalg.norm(x @ np.array(readout["coefficients"]) - w)
+                / np.linalg.norm(w)
+            ),
+            "ridge": 1e-7,
+        }
+        return m, details
 
     def residual(logtau):
         x = features(rows, center, np.exp(logtau))
@@ -134,8 +171,8 @@ def fit_model(rows, extra=False):
     return m, details
 
 
-def fit_privileged(rows):
-    center, w, readout = prepare(rows)
+def fit_privileged(rows, anchored=False):
+    center, w, readout = prepare(rows, prior=anchored)
     b = np.array([r["a"] / 0.02 for r in rows])
     x = np.einsum("ni,nj->nij", np.c_[b, b * b], center).reshape(len(rows), -1)
     coefficients = []
@@ -143,7 +180,12 @@ def fit_privileged(rows):
         mask = np.array([r["age"] == age for r in rows])
         coefficients.append(regression(x[mask], w[mask]).tolist())
     readout["age_coefficients"] = coefficients
-    return {"geometry": geometry_model(), "ages": AGES, "readout": readout}
+    return {
+        "geometry": geometry_model(),
+        "ages": AGES,
+        "readout": readout,
+        "inherited_prior": anchored,
+    }
 
 
 def privileged(m, z0, age, a):
@@ -158,6 +200,9 @@ def privileged(m, z0, age, a):
         np.einsum("ok,kt->to", (x @ coefficient).reshape(2, -1), r["basis"])
         * r["scale_y"]
     )
+    if m.get("inherited_prior"):
+        yy = predict_original(z0, age, a, model())
+        return yy + np.array([np.zeros_like(correction), correction])
     return np.array([base, y + correction])
 
 
@@ -208,8 +253,8 @@ def fit(out, args, budget):
     for seed in DEV:
         train = [r for r in rows if r["seed"] != seed]
         test = [r for r in rows if r["seed"] == seed]
-        m, details = fit_model(train, args.extra_mode)
-        diag = fit_privileged(train)
+        m, details = fit_model(train, args.extra_mode, args.anchored)
+        diag = fit_privileged(train, args.anchored)
         pm.save_json(out / f"fold-{seed}-model.json", m)
         pm.save_json(out / f"fold-{seed}-fit.json", details)
         pm.save_json(out / f"fold-{seed}-age.json", diag)
@@ -239,8 +284,8 @@ def fit(out, args, budget):
                 response_state=x,
                 **candidates,
             )
-    m, details = fit_model(rows, args.extra_mode)
-    diag = fit_privileged(rows)
+    m, details = fit_model(rows, args.extra_mode, args.anchored)
+    diag = fit_privileged(rows, args.anchored)
     pm.save_json(out / "model.json", m)
     pm.save_json(out / "fit.json", details)
     pm.save_json(out / "age-diagnostic.json", diag)
