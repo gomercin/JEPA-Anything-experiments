@@ -216,11 +216,12 @@ def history_contrasts(unwritten, written, key="full", input_index=0):
     """Each argument already uses its own history-specific unprobed baseline."""
     if not np.array_equal(unwritten["time"], written["time"]):
         raise ValueError("Matched response timelines differ")
-    if "absolute_time" in unwritten or "absolute_time" in written:
-        if not np.array_equal(
-            unwritten.get("absolute_time"), written.get("absolute_time")
-        ):
-            raise ValueError("Matched absolute probe times differ")
+    if (
+        "absolute_time" in unwritten or "absolute_time" in written
+    ) and not np.array_equal(
+        unwritten.get("absolute_time"), written.get("absolute_time")
+    ):
+        raise ValueError("Matched absolute probe times differ")
     r0 = unwritten[key][:, input_index]
     rw = written[key][:, input_index]
     return r0, rw, rw - r0
@@ -282,7 +283,6 @@ def start(out, stage, budget):
         ["git", "diff", "HEAD", "--", "experiments/mediated_patterns"], text=True
     ):
         raise RuntimeError("Commit scientific sources and contract before execution")
-    out.mkdir(parents=True, exist_ok=False)
     sources = {p.name: digest(p) for p in Path(__file__).parent.glob("*.py")}
     # Reject an untracked scientific module instead of assigning it a Git revision.
     for name in sources:
@@ -296,6 +296,7 @@ def start(out, stage, budget):
             check=True,
             stdout=subprocess.DEVNULL,
         )
+    out.mkdir(parents=True, exist_ok=False)
     write_json(
         out / "protocol.json",
         {

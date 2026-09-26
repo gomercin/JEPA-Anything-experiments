@@ -121,3 +121,41 @@ def test_splits_and_nonoverwriting_arrays(tmp_path):
     a, m = h.read_saved(tmp_path, "once")
     np.testing.assert_array_equal(a["x"], np.arange(3))
     assert m["status"] == "test"
+
+
+def test_absolute_history_times_must_match():
+    a = {
+        "time": np.arange(3.0),
+        "absolute_time": np.arange(3.0) + 50,
+        "full": np.ones((3, 1)),
+    }
+    b = dict(a, absolute_time=np.arange(3.0) + 100)
+    with pytest.raises(ValueError, match="absolute"):
+        h.history_contrasts(a, b)
+
+
+def test_exact_conditional_mediator_homogeneous_operator():
+    f = Field(replace(h.CFG, n=192))
+    s = np.zeros((2, f.c.n))
+    s[1] = 0.2 + 0.1 * np.cos(2 * np.pi * f.x / f.c.length)
+    v = np.fft.rfft(s)
+    for _ in range(16):
+        v, _ = f.step(v)
+    expected = np.fft.irfft(
+        np.exp(f.linear[1] * 16 * f.c.dt) * np.fft.rfft(s[1]), n=f.c.n
+    )
+    np.testing.assert_allclose(np.fft.irfft(v, n=f.c.n)[1], expected, atol=1e-15)
+
+
+def test_start_output_rejects_existing_and_symlinked_paths(tmp_path, monkeypatch):
+    monkeypatch.setattr(h, "ROOT", tmp_path)
+    monkeypatch.setattr(h.subprocess, "check_output", lambda *a, **kw: "")
+    monkeypatch.setattr(h.subprocess, "run", lambda *a, **kw: None)
+    out = tmp_path / "new"
+    h.start(out, "test", Budget())
+    with pytest.raises(FileExistsError):
+        h.start(out, "test", Budget())
+    link = tmp_path / "link"
+    link.symlink_to(tmp_path / "missing")
+    with pytest.raises(ValueError, match="nonsymlink"):
+        h.start(link, "test", Budget())
