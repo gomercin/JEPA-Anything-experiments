@@ -50,8 +50,9 @@ def test_persistence_and_shared_drift():
     )
 
 
-def test_checkpoint_exclusive_and_solver_free_resume(tmp_path):
-    g = fitted()
+@pytest.mark.parametrize("kind", ["affine", "quadratic"])
+def test_checkpoint_exclusive_and_solver_free_resume(tmp_path, kind):
+    g = fitted(kind)
     s = gm.Continuation(g, [0.1, 0.2, 0.3])
     s.advance(25)
     checkpoint = tmp_path / "state.json"
@@ -117,16 +118,17 @@ def test_no_metadata_or_clock_interface():
             gm.rollout(fitted(), [0, 0, 0], delays)
 
 
-def test_train_only_processing_and_grouped_descendants():
+@pytest.mark.parametrize("kind", ["affine", "quadratic"])
+def test_train_only_processing_and_grouped_descendants(kind):
     z = np.arange(36, dtype=float).reshape(12, 3)
     groups = np.repeat([1, 2, 3], 4)
     for train, test in pm.grouped_folds(groups):
         assert not set(groups[train]) & set(groups[test])
-        g = gm.fit(z[train], z[train] * 1e-5)
+        g = gm.fit(z[train], z[train] * 1e-5, kind)
         assert np.array_equal(g["mean"], z[train].mean(axis=0))
         changed = z.copy()
         changed[test] += 1e9
-        assert g == gm.fit(changed[train], changed[train] * 1e-5)
+        assert g == gm.fit(changed[train], changed[train] * 1e-5, kind)
 
 
 def test_fixed_window_chain_rule_and_single_snapshot():
