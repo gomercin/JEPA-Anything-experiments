@@ -115,6 +115,7 @@ def test_fresh_solver_free_checkpoint_resume(tmp_path):
         "intervention_model",
         "geometry_model",
         "present_state_model",
+        "measurements",
         "repeated_intervention_model",
     ]:
         shutil.copyfile(source / f"{name}.py", package / f"{name}.py")
