@@ -268,6 +268,17 @@ def refine(out, args, budget):
 
 
 def freeze(out, args, budget):
+    from .repeated_intervention_analysis import WINDOWS, rms, truth
+
+    scales = {window: np.zeros(2) for window in WINDOWS}
+    development = ROOT / "develop-01"
+    for case in load(development / "cases.json"):
+        y, _, _ = truth(development, case)
+        for window, sl in WINDOWS.items():
+            scales[window] = np.maximum(
+                scales[window],
+                np.max([rms((y[1] - y[0])[sl]), rms((y[2] - y[0])[sl])], axis=0),
+            )
     pm.save_json(out / "model.json", model())
     pm.save_json(
         out / "freeze.json",
@@ -288,6 +299,10 @@ def freeze(out, args, budget):
             "D_limit": 0.1,
             "physical_tolerances": [5e-5, 2e-5, 2e-6],
             "no_fit": True,
+            "development_single_event_scale": {
+                k: v.tolist() for k, v in scales.items()
+            },
+            "development_cases_sha256": digest(development / "cases.json"),
             "withheld": "second event at75 for +.02,-.02 only",
         },
     )

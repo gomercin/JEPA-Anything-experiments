@@ -141,9 +141,15 @@ def analyze(out, args, budget):
         )
         pred, tr = saved["y"], saved["trajectory"]
         for name, p in rm.comparators(pred).items():
-            all_scores.extend(
-                dict(**meta, model=name, **s) for s in score(y, p, floors)
-            )
+            for s in score(y, p, floors):
+                if args.freeze:
+                    scale = load(args.freeze / "freeze.json")[
+                        "development_single_event_scale"
+                    ][s["window"]]
+                    s["error_over_fixed_development_single_event_scale"] = (
+                        s["error_rms"] / scale[["mass", "moment"].index(s["output"])]
+                    )
+                all_scores.append(dict(**meta, model=name, **s))
         true_add, pred_add = y[1] + y[2] - y[0], pred[1] + pred[2] - pred[0]
         terms = np.array(
             [rm.contrasts(y)["K12"], true_add - pred_add, pred_add - pred[3]]

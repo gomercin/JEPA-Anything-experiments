@@ -80,3 +80,34 @@ development contrast14.123% missed; physical B/C induced motion31.2%/100% missed
 unforced A fractional motion41.8%/25.1% missed. This study does not establish a
 full absolute trace, unique storage, minimal state, arbitrary streams or general
 recursive composability.
+
+## Development observations and decisions
+
+The pilot used seed16101/odd04 and all three sign schedules. Its unchanged-state
+worst R11 error was0.288%, D12 9.732%, D2|1 7.493%; independent addition was
+0.284%,4.990%,4.663%. Ignore-both passed the large R while missing the event
+contrasts100%. The model's K12 relative error was about3.6; this is separate from
+the main gates. No repair was justified by the pilot's main gates.
+
+Full-history half-dt/double-N qualification used the opposite-sign pilot. Matched
+D12 floors are[2.737e-13,3.881e-13] whole and[3.472e-13,5.074e-13] late;
+D2|1 floors[2.644e-13,4.160e-13] and[3.415e-13,5.444e-13]. K12 floors
+[5.229e-13,8.119e-13] and[6.550e-13,1.064e-12]. These do not come from old
+floors or the smaller direct contrast differences. Common absolute branch
+quadrature shifts are much larger: the uncorrelated eight-Y K bound reaches
+[1.352e-5,7.875e-7] whole. Numerical resolution here is conditional on the
+matched probe/sham instrument; it is not a rigorous independent-branch PDE bound.
+Both bounds and every underlying branch are published. Opposite-sign mass K12
+resolves in the pilot; moment and same-sign K12 are below these matched floors.
+
+The additive field zero-gap identities hold within2.23e-16. The fitted event
+maps do not satisfy exact zero-gap closure: the cancelling pair leaves up to
+1.78e-4 in a fitted deformation coordinate and about2.74e-12 response RMS.
+The p,d accumulator cancels exactly. This is an approximation limitation outside
+the declared finite event gaps, not a repaired input semantics or a new gate.
+
+Pilot cost33.16CPU seconds; numerical qualification50.95. The isolated-runtime
+software fixture initially omitted the static measurement utility imported by
+F; adding that pure NumPy module fixed the fixture. No solver or field access
+was added. The seven instrument tests then passed. Full development retains all
+six exposed seed/history starts and does not fit any new coefficients.
