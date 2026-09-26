@@ -68,6 +68,9 @@ def test_sealed_sources_and_preparation_groups():
         == freeze["selected_sha256"]
         == seal["model_sha256"]
     )
+    candidate = load(DATA / "frozen-01/model.json")
+    assert candidate.pop("repeated_extension") == "separate-squared-amplitude"
+    assert candidate == load(DATA / "frozen-01/original.json")
     assert not set(freeze["fresh_seeds"]) & set(freeze["development_seeds"])
     assert len({r["seed"] for r in load(fresh / "rows.json")}) == 3
     for name, digest in {**seal["predictions"], **seal["checkpoints"]}.items():
