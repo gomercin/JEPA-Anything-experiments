@@ -16,8 +16,11 @@ SETS = {
     "shape": list(range(9)),
     "mediator": list(range(15)),
 }
-NAMES = [f"{kind}_{site}" for kind in ("offset", "mass", "width", "mmean", "mmoment")
-         for site in "ABC"]
+NAMES = [
+    f"{kind}_{site}"
+    for kind in ("offset", "mass", "width", "mmean", "mmoment")
+    for site in "ABC"
+]
 
 
 def extract(state, length=192.0, feature_set="mediator"):
@@ -34,7 +37,13 @@ def extract(state, length=192.0, feature_set="mediator"):
     if (mass < 1e-12).any():
         raise ValueError("Pattern missing at a fixed anchor")
     offset = (density * d).sum(axis=1) * length / n / mass
-    width = np.sqrt((density * (d - offset[:, None]) ** 2).sum(axis=1) * length / n / mass)
+    if feature_set in ("blind", "b", "geometry"):
+        return offset[SETS[feature_set]]
+    width = np.sqrt(
+        (density * (d - offset[:, None]) ** 2).sum(axis=1) * length / n / mass
+    )
+    if feature_set == "shape":
+        return np.concatenate([offset, mass, width])
     means = (w * state[1]).sum(axis=1) / w.sum(axis=1)
     moments = (w * state[1] * d / 8).sum(axis=1) / w.sum(axis=1)
     return np.concatenate([offset, mass, width, means, moments])[SETS[feature_set]]
@@ -56,8 +65,16 @@ def load_checkpoint(path, wait, index):
 def design(z, degree):
     terms = [np.ones((len(z), 1)), z]
     if degree == 2:
-        terms.append(np.stack([z[:, i] * z[:, j] for i in range(z.shape[1])
-                               for j in range(i, z.shape[1])], axis=1))
+        terms.append(
+            np.stack(
+                [
+                    z[:, i] * z[:, j]
+                    for i in range(z.shape[1])
+                    for j in range(i, z.shape[1])
+                ],
+                axis=1,
+            )
+        )
     return np.concatenate(terms, axis=1)
 
 
@@ -65,8 +82,10 @@ def grouped_folds(groups):
     groups = np.asarray(groups)
     if len(np.unique(groups)) < 3:
         raise ValueError("At least three complete development preparations required")
-    return [(np.flatnonzero(groups != g), np.flatnonzero(groups == g))
-            for g in np.unique(groups)]
+    return [
+        (np.flatnonzero(groups != g), np.flatnonzero(groups == g))
+        for g in np.unique(groups)
+    ]
 
 
 def fit(z, y, pairs, feature_set, degree=1, ridge=1e-6, rank=4):
@@ -79,8 +98,9 @@ def fit(z, y, pairs, feature_set, degree=1, ridge=1e-6, rank=4):
     if (scale_y <= 0).any():
         raise ValueError("Unresolved training readout")
     normalized = y / scale_y
-    _, singular, vt = np.linalg.svd(normalized.transpose(0, 2, 1).reshape(-1, len(TIMES)),
-                                   full_matrices=False)
+    _, singular, vt = np.linalg.svd(
+        normalized.transpose(0, 2, 1).reshape(-1, len(TIMES)), full_matrices=False
+    )
     basis = vt[:rank]
     target = np.einsum("nto,kt->nok", normalized, basis).reshape(len(z), -1)
     x = z[:, columns]
@@ -95,20 +115,33 @@ def fit(z, y, pairs, feature_set, degree=1, ridge=1e-6, rank=4):
     penalty = np.eye(a.shape[1]) * ridge
     penalty[0, 0] = 0
     coefficients = np.linalg.solve(a.T @ a + penalty, a.T @ b)
-    projection = np.einsum("nok,kt->nto", target.reshape(len(z), 2, -1), basis) * scale_y
+    projection = (
+        np.einsum("nok,kt->nto", target.reshape(len(z), 2, -1), basis) * scale_y
+    )
     return {
-        "schema": 1, "feature_set": feature_set, "columns": columns,
-        "names": [NAMES[i] for i in columns], "anchors": ANCHORS.tolist(),
+        "schema": 1,
+        "feature_set": feature_set,
+        "columns": columns,
+        "names": [NAMES[i] for i in columns],
+        "anchors": ANCHORS.tolist(),
         "probe": {"kind": "fixed_A_additive_even_unit_L2", "amplitude": 0.02},
-        "times": TIMES.tolist(), "degree": degree if columns else 1,
-        "ridge": ridge, "rank": len(basis), "mean": mean.tolist(), "scale": scale.tolist(),
-        "scale_y": scale_y.tolist(), "basis": basis.tolist(),
-        "coefficients": coefficients.tolist(), "training_rows": len(z),
+        "times": TIMES.tolist(),
+        "degree": degree if columns else 1,
+        "ridge": ridge,
+        "rank": len(basis),
+        "mean": mean.tolist(),
+        "scale": scale.tolist(),
+        "scale_y": scale_y.tolist(),
+        "basis": basis.tolist(),
+        "coefficients": coefficients.tolist(),
+        "training_rows": len(z),
         "retained_training_examples": 0,
         "condition": float(np.linalg.cond(a)),
         "singular_values": singular.tolist(),
-        "projection_relative_rms": (np.sqrt(np.mean((projection - y) ** 2, axis=1)) /
-                                    np.sqrt(np.mean(y * y, axis=1))).tolist(),
+        "projection_relative_rms": (
+            np.sqrt(np.mean((projection - y) ** 2, axis=1))
+            / np.sqrt(np.mean(y * y, axis=1))
+        ).tolist(),
     }
 
 
@@ -125,7 +158,9 @@ def predict(model, z, probe=0.02, times=TIMES):
     x = (z - model["mean"]) / model["scale"]
     coeff = design(x, model["degree"]) @ np.asarray(model["coefficients"])
     basis = np.asarray(model["basis"])[:, np.searchsorted(model["times"], times)]
-    return np.einsum("nok,kt->nto", coeff.reshape(len(z), 2, -1), basis) * model["scale_y"]
+    return (
+        np.einsum("nok,kt->nto", coeff.reshape(len(z), 2, -1), basis) * model["scale_y"]
+    )
 
 
 def save_json(path, value):
@@ -139,20 +174,33 @@ def scores(truth, prediction, pairs, metadata, floors=None):
     floors = np.zeros((2, 2)) if floors is None else np.asarray(floors)
     result = []
     comparisons = [("R", i, truth[i], prediction[i]) for i in range(len(truth))]
-    comparisons += [("Delta_R", j, truth[j] - truth[i], prediction[j] - prediction[i])
-                    for i, j in pairs]
+    comparisons += [
+        ("Delta_R", j, truth[j] - truth[i], prediction[j] - prediction[i])
+        for i, j in pairs
+    ]
     for kind, i, actual, pred in comparisons:
         for k, mask in enumerate([TIMES >= 0, TIMES >= 40]):
             residual = pred[mask] - actual[mask]
             rms = np.sqrt(np.mean(actual[mask] ** 2, axis=0))
-            error = np.sqrt(np.mean(residual ** 2, axis=0))
+            error = np.sqrt(np.mean(residual**2, axis=0))
             for o, name in enumerate(["mass", "moment"]):
                 resolved = bool(rms[o] > floors[k, o])
                 relative = float(error[o] / rms[o]) if rms[o] else None
-                result.append(dict(**metadata[i], kind=kind, window=["whole", "late"][k],
-                                   output=name, rms=float(rms[o]), residual_rms=float(error[o]),
-                                   residual_max=float(abs(residual[:, o]).max()),
-                                   relative_rms=relative, floor=float(floors[k, o]),
-                                   resolved=resolved, passed=bool(resolved and relative <=
-                                                                (0.02 if kind == "R" else 0.10))))
+                result.append(
+                    dict(
+                        **metadata[i],
+                        kind=kind,
+                        window=["whole", "late"][k],
+                        output=name,
+                        rms=float(rms[o]),
+                        residual_rms=float(error[o]),
+                        residual_max=float(abs(residual[:, o]).max()),
+                        relative_rms=relative,
+                        floor=float(floors[k, o]),
+                        resolved=resolved,
+                        passed=bool(
+                            resolved and relative <= (0.02 if kind == "R" else 0.10)
+                        ),
+                    )
+                )
     return result

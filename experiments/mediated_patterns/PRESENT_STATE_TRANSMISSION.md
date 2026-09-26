@@ -77,3 +77,21 @@ files are exclusive. New evidence only; old portable packages remain read-only.
 Publish all substantive new records, failures, commands and hashes in <=25 MiB
 Git evidence, or a unique <=500 MiB compressed asset if needed. Review the actual
 diff and merge with a reviewed-head guard; update the two existing Atlas homes.
+
+## Development record
+
+`old-fit-01` at ed3aeb5 used the 16 old late states from four preparations.
+Three-center quadratic ridge (.001) gave grouped worst R/Delta_R errors
+0.2754%/1.0634%; B-only gave 11.258%/34.458%, and the mean's Delta_R error is
+100%. The rank-4 temporal projection's worst whole-response error was .0954%.
+Geometry's weighted design condition was 66.3, versus 2.16e5 for the best
+nine-variable shape fit and 3.28e9 for the fifteen-variable mediator fit.
+These are approximation/conditioning comparisons, not information theorems.
+The four preparation groups remain the effective replication count.
+
+The planned extension ran next: two old initial preparations, negative odd -.4
+and mixed odd .28/even .28 at waits 50/100. All histories/probes passed the regime
+screen. Each two-branch response took about 4 CPU seconds; the original section
+bounds (120 CPU seconds, 180 wall seconds, 1 GiB) have ample margin. The later
+source cleanup adds deterministic scoring/freezing and separate inference-cost
+receipts; it changes no physical law or prior evidence.

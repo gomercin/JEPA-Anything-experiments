@@ -13,7 +13,7 @@ from experiments.mediated_patterns.present_state_transmission import paired_indi
 
 def snapshot():
     x = np.arange(768) / 4 - 96
-    u = sum(np.cos(x - c) * np.exp(-((x - c) / 4) ** 8) for c in m.ANCHORS)
+    u = sum(np.cos(x - c) * np.exp(-(((x - c) / 4) ** 8)) for c in m.ANCHORS)
     return np.array([u, 0.2 + x / 1000])
 
 
@@ -27,8 +27,13 @@ def training():
 def test_current_checkpoint_loader_ignores_future_and_metadata(tmp_path):
     p = tmp_path / "history.npz"
     s = snapshot()
-    save_npz_exclusive(p, checkpoint_times=[50, 100], checkpoints=np.array([[s, s], [s, s]]),
-                       future=np.full((8, 2, 768), np.nan), seed=np.array({"private": 1}, dtype=object))
+    save_npz_exclusive(
+        p,
+        checkpoint_times=[50, 100],
+        checkpoints=np.array([[s, s], [s, s]]),
+        future=np.full((8, 2, 768), np.nan),
+        seed=np.array({"private": 1}, dtype=object),
+    )
     np.testing.assert_array_equal(m.load_checkpoint(p, 50, 0), s)
     with pytest.raises(ValueError):
         m.load_checkpoint(p, 51, 0)
@@ -86,7 +91,9 @@ def test_inference_from_serialized_inputs_without_solver(tmp_path, monkeypatch):
         return original(name, *args, **kwargs)
 
     monkeypatch.setattr(builtins, "__import__", no_solver)
-    predicted = m.predict(json.loads(p.read_text()), json.loads(json.dumps(z[:, :3].tolist())))
+    predicted = m.predict(
+        json.loads(p.read_text()), json.loads(json.dumps(z[:, :3].tolist()))
+    )
     assert predicted.shape == y.shape
     with pytest.raises(ValueError):
         m.predict(fitted, z)  # undeclared feature access rejected
@@ -95,7 +102,7 @@ def test_inference_from_serialized_inputs_without_solver(tmp_path, monkeypatch):
 
 
 def test_paired_subtraction_and_blind_failure():
-    rows = [dict(seed=3, wait=50, history=h) for h in ["none", "write"]]
+    rows = [{"seed": 3, "wait": 50, "history": h} for h in ["none", "write"]]
     truth = np.ones((2, 161, 2))
     truth[1] *= 1.1
     prediction = np.ones_like(truth)
@@ -105,7 +112,11 @@ def test_paired_subtraction_and_blind_failure():
     assert all(r["relative_rms"] == 1 for r in s if r["kind"] == "Delta_R")
     assert all(not r["passed"] for r in s if r["kind"] == "Delta_R")
     unresolved = m.scores(truth, prediction, pairs, rows, np.ones((2, 2)))
-    assert all(not r["resolved"] and not r["passed"] for r in unresolved if r["kind"] == "Delta_R")
+    assert all(
+        not r["resolved"] and not r["passed"]
+        for r in unresolved
+        if r["kind"] == "Delta_R"
+    )
 
 
 def test_exclusive_output(tmp_path):
