@@ -24,20 +24,38 @@ def sha(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
-def test_portable_hashes_and_safe_restore(tmp_path):
+def restore_module():
     spec = importlib.util.spec_from_file_location(
         "repeated_restore", HERE / "restore.py"
     )
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
+    return module
+
+
+@pytest.fixture(scope="session", autouse=True)
+def restored_evidence(tmp_path_factory):
+    global DATA
+    root = tmp_path_factory.mktemp("repeated-evidence")
+    restore_module().unpack(root)
+    DATA = root / "work/mediated_patterns/repeated_intervention_state"
+
+
+def test_portable_hashes_and_safe_restore(tmp_path):
+    module = restore_module()
     manifest = load(HERE / "artifacts.json")
     assert manifest["bytes"] == sum(r["bytes"] for r in manifest["files"])
-    assert manifest["bytes"] < 25 * 1024**2
-    assert module.helpers.verify(manifest, HERE / "data") == len(manifest["files"])
+    assert sum(r["bytes"] for r in manifest["archives"]) < 25 * 1024**2
+    root = DATA.parents[2]
+    assert module.helpers.verify(manifest, root) == len(manifest["files"])
     subset = {"files": manifest["files"][:1]}
-    module.helpers.restore(subset, HERE / "data", tmp_path / "restored")
+    module.helpers.restore(subset, root, tmp_path / "restored")
     with pytest.raises(FileExistsError):
-        module.helpers.restore(subset, HERE / "data", tmp_path / "restored")
+        module.helpers.restore(subset, root, tmp_path / "restored")
+    link = tmp_path / "link"
+    link.symlink_to(tmp_path / "restored", target_is_directory=True)
+    with pytest.raises(ValueError):
+        module.unpack(link)
 
 
 def test_sealed_sources_and_preparation_groups():
@@ -56,7 +74,7 @@ def test_sealed_sources_and_preparation_groups():
         assert sha(fresh / name) == digest
     assert sha(fresh / "initial-descriptors.npz") == seal["initialization_sha256"]
     checks = load(DATA / "runtime-audit.json")["checks"]
-    assert len(checks) == 192
+    assert len(checks) == 384
     assert all(c["state_max"] == c["response_max"] == 0 for c in checks)
 
 
@@ -65,7 +83,7 @@ def test_all_scores_targets_and_no_reset():
     frozen = load(DATA / "frozen-01/freeze.json")
     scores = load(DATA / "fresh-analysis-01/scores.json")
     z0 = np.load(fresh / "initial-descriptors.npz")["z"]
-    model = load(DATA / "frozen-01/model.json")
+    model = load(DATA / "frozen-01/original.json")
     for case in load(fresh / "cases.json"):
         y, _, _ = truth(fresh, case)
         schedule = case["schedule"]
@@ -77,7 +95,22 @@ def test_all_scores_targets_and_no_reset():
                 tr, stored["trajectory"][j], rtol=1e-11, atol=1e-14
             )
             np.testing.assert_allclose(pred, stored["y"][j], rtol=1e-11, atol=1e-20)
-        for name, pred in rm.comparators(stored["y"]).items():
+        selected = np.load(
+            fresh / f"prediction-{case['index']}-{schedule['name']}-selected.npz"
+        )
+        selected_model = load(DATA / "frozen-01/model.json")
+        for j, flags in enumerate(rm.PREFIXES):
+            aa = [a * b for a, b in zip(schedule["amplitudes"], flags, strict=True)]
+            tr, pred = rm.forecast(
+                selected_model, z0[case["index"]], schedule["times"], aa
+            )
+            np.testing.assert_allclose(
+                tr, selected["trajectory"][j], rtol=1e-11, atol=1e-14
+            )
+            np.testing.assert_allclose(pred, selected["y"][j], rtol=1e-11, atol=1e-20)
+        candidates = rm.comparators(stored["y"])
+        candidates["separate-squares"] = selected["y"]
+        for name, pred in candidates.items():
             computed = score(y, pred, frozen["floors"]["floors"])
             matching = [
                 s

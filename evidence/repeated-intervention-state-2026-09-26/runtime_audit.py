@@ -24,27 +24,32 @@ def main():
     freeze = json.loads((args.data / "frozen-01/freeze.json").read_text())
     cases = json.loads((args.data / "fresh-01/cases.json").read_text())
     tasks = []
-    for case in cases:
-        s = case["schedule"]
-        for j, flags in enumerate([(0, 0), (1, 0), (0, 1), (1, 1)]):
-            for t in [s["times"][0] + 2, s["times"][1] + 2]:
-                path = (
-                    args.data
-                    / f"fresh-01/checkpoint-{case['index']}-{s['name']}-{j}-t{t}.json"
-                )
-                tasks.append(
-                    {
-                        "name": path.name,
-                        "index": case["index"],
-                        "schedule": s["name"],
-                        "prefix": j,
-                        "times": s["times"],
-                        "amplitudes": [
-                            a * b for a, b in zip(s["amplitudes"], flags, strict=True)
-                        ],
-                        "checkpoint": json.loads(path.read_text()),
-                    }
-                )
+    for suffix in ["", "-selected"]:
+        for case in cases:
+            schedule = case["schedule"]
+            for j, flags in enumerate([(0, 0), (1, 0), (0, 1), (1, 1)]):
+                for t in [schedule["times"][0] + 2, schedule["times"][1] + 2]:
+                    path = (
+                        args.data
+                        / f"fresh-01/checkpoint-{case['index']}-{schedule['name']}-{j}{suffix}-t{t}.json"
+                    )
+                    tasks.append(
+                        {
+                            "name": path.name,
+                            "suffix": suffix,
+                            "index": case["index"],
+                            "schedule": schedule["name"],
+                            "prefix": j,
+                            "times": schedule["times"],
+                            "amplitudes": [
+                                a * b
+                                for a, b in zip(
+                                    schedule["amplitudes"], flags, strict=True
+                                )
+                            ],
+                            "checkpoint": json.loads(path.read_text()),
+                        }
+                    )
     with tempfile.TemporaryDirectory(prefix="repeated-solver-free-") as td:
         td = Path(td)
         package = td / "runtime"
@@ -56,12 +61,14 @@ def main():
             "present_state_model",
             "measurements",
             "repeated_intervention_model",
+            "repeated_intervention_extension",
         ]:
             shutil.copyfile(
                 Path("experiments/mediated_patterns") / f"{name}.py",
                 package / f"{name}.py",
             )
         shutil.copyfile(args.data / "frozen-01/model.json", td / "model.json")
+        shutil.copyfile(args.data / "frozen-01/original.json", td / "original.json")
         (td / "tasks.json").write_text(json.dumps(tasks))
         script = """import sys,json,importlib.abc
 sys.path.insert(0,'.')
@@ -74,10 +81,11 @@ def audit(event,args):
  if event=='open' and isinstance(args[0],str) and args[0].endswith(('.npz','.npy')): raise RuntimeError('field arrays unavailable')
 sys.addaudithook(audit)
 from runtime.intervention_model import State
-from runtime.repeated_intervention_model import continue_state,vector
-model=json.load(open('model.json')); results=[]
+from runtime.repeated_intervention_model import continue_state,vector,state_class
+models={'-selected':json.load(open('model.json')),'':json.load(open('original.json'))}; results=[]
 for task in json.load(open('tasks.json')):
- state=State.restore(model,task['checkpoint'])
+ model=models[task['suffix']]
+ state=state_class(model).restore(model,task['checkpoint'])
  _,y=continue_state(state,task['times'],task['amplitudes'],40)
  results.append(dict(name=task['name'],state=vector(state).tolist(),y=y.tolist()))
 print(json.dumps(results))
@@ -97,7 +105,8 @@ print(json.dumps(results))
     checks = []
     for task, result in zip(tasks, results, strict=True):
         saved = np.load(
-            args.data / f"fresh-01/prediction-{task['index']}-{task['schedule']}.npz"
+            args.data
+            / f"fresh-01/prediction-{task['index']}-{task['schedule']}{task['suffix']}.npz"
         )
         ze = float(
             abs(
