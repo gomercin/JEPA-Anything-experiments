@@ -73,3 +73,13 @@ loaded 115 finite NPZ files without importing scientific modules or rerunning
 science. Both hosted checks passed at that source/evidence head. The final delta
 adds only this verification receipt and publication pointers; recheck its exact
 head/base and hosted status before guarded merge.
+
+Final CI found a publication-test portability defect at `3303ab2`: one Linux
+runner recomputed five descriptor values with maximum difference 1.11e-16,
+while an exact-array assertion required bit identity. The saved arrays/model
+hashes and prediction replay all passed. The test now allows 1e-13 relative /
+1e-15 absolute roundoff for re-extraction only; current-state and model hashes
+remain exact. No predictor, evidence bytes, floor, scientific gate or outcome
+changed. The affected 12 focused tests pass locally; both hosted checks must
+pass at the new reviewed head before merge. The original failure remains in
+[run 36256491548](https://github.com/gomercin/JEPA-Anything-experiments/actions/runs/36256491548).

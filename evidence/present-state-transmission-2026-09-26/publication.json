@@ -42,5 +42,6 @@
     "local_checks": "roadmap lint, whitespace, semantic/frontmatter/link review passed",
     "hosted_checks": "none configured",
     "scope": "two existing question homes only; no route or stop changes"
-  }
+  },
+  "review_fix": "3303ab2 hosted Linux re-extraction differed by 1.11e-16; publication test now uses roundoff tolerance while exact hashes and scientific gates remain unchanged. Failed run 36256491548 retained; final new-head checks required."
 }

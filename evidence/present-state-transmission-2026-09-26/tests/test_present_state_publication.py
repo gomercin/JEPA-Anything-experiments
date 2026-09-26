@@ -66,7 +66,9 @@ def test_frozen_model_and_serialized_descriptor_only_predictions():
             row["wait"],
             order.index(row["history"]),
         )
-        np.testing.assert_array_equal(m.extract(current), z[i])
+        # Floating reductions can differ by a few ulps across CPU/NumPy builds.
+        # Serialized current-state and model identity remain exact hash checks.
+        np.testing.assert_allclose(m.extract(current), z[i], rtol=1e-13, atol=1e-15)
         assert (
             hashlib.sha256(current.tobytes()).hexdigest()
             == load(fresh / f"reference-{i}.json")["current_sha256"]
