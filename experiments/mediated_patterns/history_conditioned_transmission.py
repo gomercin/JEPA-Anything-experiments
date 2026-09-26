@@ -216,6 +216,11 @@ def history_contrasts(unwritten, written, key="full", input_index=0):
     """Each argument already uses its own history-specific unprobed baseline."""
     if not np.array_equal(unwritten["time"], written["time"]):
         raise ValueError("Matched response timelines differ")
+    if "absolute_time" in unwritten or "absolute_time" in written:
+        if not np.array_equal(
+            unwritten.get("absolute_time"), written.get("absolute_time")
+        ):
+            raise ValueError("Matched absolute probe times differ")
     r0 = unwritten[key][:, input_index]
     rw = written[key][:, input_index]
     return r0, rw, rw - r0
@@ -407,6 +412,18 @@ def panel(out, stage, data, frozen, budget):
         for name, h in fz["source_hashes"].items():
             if digest(Path(__file__).with_name(name)) != h:
                 raise ValueError("Frozen scientific source changed: " + name)
+        expected = {
+            "B": B,
+            "write_kind": "odd",
+            "write_amplitude": WRITE,
+            "probe_amplitude": EPS,
+            "waits": list(WAITS),
+            "horizon": 80.0,
+            "configuration": asdict(CFG),
+            "development_seeds": list(DEV),
+        }
+        if any(fz[k] != v for k, v in expected.items()):
+            raise ValueError("Frozen physical contract changed")
         if fz["fresh_seeds"] != list(FRESH):
             raise ValueError("Frozen preparation split changed")
         (out / "freeze-copy.json").write_bytes((frozen / "freeze.json").read_bytes())

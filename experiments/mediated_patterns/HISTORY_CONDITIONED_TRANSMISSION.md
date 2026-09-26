@@ -108,3 +108,26 @@ These candidate 7.7%/15.5% changes justify the three-delay matched-history
 panel and the selected feedback-expression diagnostic. Numerical resolution
 remains provisional until the full-history refinement below. This is not an
 engineering threshold or a claim of practical receiver use.
+
+**Development result and interpretation rules.** `develop-01` (de30719) keeps
+all six probe histories in bounds, with own-sham field mismatch <=1.7e-15.
+At waits 10/50/100 the mass Delta_R RMS grows from 1.05e-8 to 1.66e-8 to
+2.35e-8, even while B's displacement slowly shrinks. Thus the carrier is the
+changed coupled configuration/environment, not necessarily B's position alone.
+At time 100 B's mass excess has fallen from .195 to .00485, but its centroid
+shift remains .0884. A's written/unwritten centroid separation grows to .0108;
+no actuator follows it. The remaining mediator difference is continually
+sourced: over 50->100 the homogeneous inherited residue has L2 2.05e-5, versus
+total delta-m .01450. These are conditional state diagnostics, not causal
+fractions. They distinguish fast amplitude relaxation and passive mediator
+residue from a slow configurational change; they do not prove an attractor or
+complete equilibration.
+
+Freeze an operational finite-retention rule: Delta_R exceeds the shared floor
+at both late waits, late traces retain positive correlation, its RMS at 100 is
+at least half that at 50, and the local displacement projection retains at least
+75%. This labels the tested 50-to-100 envelope only. No minimum useful effect
+or binary receiver threshold is asserted. Own-history tangent total-response
+errors on development are below 1%; its Delta_R errors are below .7%. Keep the
+2% total and 10% contrast prospective gates. Also record Q and Delta_Q and the
+cut's A response; neither will be called a storage-localization result.
