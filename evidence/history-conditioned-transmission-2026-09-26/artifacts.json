@@ -1,0 +1,749 @@
+{
+  "files": [
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/analysis-01/budget.json",
+      "bytes": 179,
+      "sha256": "90a1e2b441868bb3a62312a0ba6db71e6be2e4712619a840e3dcef472fd12d1c"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/analysis-01/history.png",
+      "bytes": 394761,
+      "sha256": "afec99f7f272cd6e60f88655ff1ba36098b6cd956e355c41b09dc6944488da7a"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/analysis-01/protocol.json",
+      "bytes": 3501,
+      "sha256": "c8060d7b8534b290fcab1fb7fae7633e7c49f51484a98e65dde51797c43a7d0d"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/analysis-01/summary.json",
+      "bytes": 92892,
+      "sha256": "6fa50f62c6e0573caee078353b6d8aed3cfe7a861868a9ece1d5f2dfe79b48d1"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/budget-total.json",
+      "bytes": 513,
+      "sha256": "9ffa430cb0eea29a4fcb80964412a85f6448e2077219721498f67b72a156e48e"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/commands.txt",
+      "bytes": 2759,
+      "sha256": "956bfac4b83023f76c39d6ba08f5eb9d9438cc2237b41c6ab20cba0580ffada0"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/budget.json",
+      "bytes": 1090,
+      "sha256": "a2c4126d023b4a952aca176763970ea15535d5235d5d80c1e43e6e8110128174"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/protocol.json",
+      "bytes": 3330,
+      "sha256": "51723bdf5941bbfffcd4b8646869eb0e59e73d6f8fdb2b3c4ae796ac9ef86875"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-history.json",
+      "bytes": 373458,
+      "sha256": "0e43bab513ec5014fa96a07d42040d165e2518403f31cce92f3fd4e7d58f1496"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-history.npz",
+      "bytes": 141976,
+      "sha256": "517131c61d3ecbe329da84f9440d10d9d18da83e09890ffd40c3baf5306eccbb"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-t10-unwritten.json",
+      "bytes": 126895,
+      "sha256": "3cf5cee2bbd33807e303220007d775a44d5318d112632cc8741228c8d3b6ae34"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-t10-unwritten.npz",
+      "bytes": 197604,
+      "sha256": "15023d9201b0cacdd2f6dc7eb5b626bde661a93a7e7b5de3b66aacfa0d8f33e9"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-t10-written.json",
+      "bytes": 126936,
+      "sha256": "372dc02fc3ce2117a8929f1f1c94442bacb2ecd9408afdfca48c486bf016ea7b"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-t10-written.npz",
+      "bytes": 195620,
+      "sha256": "fc72b58c82a97a2e7c1646cd13de0fdb17cb7a7880be601edc17d8abf10679a1"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-t100-unwritten.json",
+      "bytes": 126891,
+      "sha256": "9226c7414bb95655ad1df49eb8657a77abb0218760817b32282fd387f7bd42b1"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-t100-unwritten.npz",
+      "bytes": 197055,
+      "sha256": "b24100b4dc1529ea55a0fbc64882691819b952d2c1e0cee4f4b05197a261cbc8"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-t100-written.json",
+      "bytes": 126948,
+      "sha256": "769ab468c30598d92ae9a69bae2f43e975fa483463e3c43e2c1a4ebef8c91bba"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-t100-written.npz",
+      "bytes": 194122,
+      "sha256": "0b288394884d56a63251ae8e9aff91920fcf228460bcc66af8441db1dddd457b"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-t50-unwritten.json",
+      "bytes": 126894,
+      "sha256": "7645dc961d996020998d93225517b68f72d2101b120aeb1bbecce0b33bc1a8dc"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-t50-unwritten.npz",
+      "bytes": 196769,
+      "sha256": "ac631d568c5ae8cf2b0713b8da7cadef5df4811b285fb0bb98a56efe3d07c8af"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-t50-written.json",
+      "bytes": 126946,
+      "sha256": "2e4315223910f68c1c69cddbde8ebe4a4d6ceb245e0fb4ea110165797be86414"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/develop-01/s8101-t50-written.npz",
+      "bytes": 195552,
+      "sha256": "51a607835135726205d1ac60cfa4caee5b624b4d07a3e78099f72f510136e783"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/budget.json",
+      "bytes": 6241,
+      "sha256": "a4240ed69fe18e64e7223595f8db51cc59a827e3c7d80302b610c2817e1de4bf"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/freeze-copy.json",
+      "bytes": 44069,
+      "sha256": "d1b21a6739ae4abec1223bffed28ee0fb587f1acd7da2324da5eb55ed2fddc28"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/protocol.json",
+      "bytes": 3422,
+      "sha256": "8c3cc90e61367b69e08b49996d0cbedbac8ccd3602e77e4bd84e673735bcd09a"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-history.json",
+      "bytes": 373427,
+      "sha256": "94a195a4217863b7301e48dbc12b6574c27951d04eff2de6ebb849a2a1545985"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-history.npz",
+      "bytes": 142014,
+      "sha256": "efaff47ca816cf92e34f7ed9f0cd72ee33eee1430402338e1cdfa264dad288d2"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-preparation.npz",
+      "bytes": 42782,
+      "sha256": "6d2571809c149d60693cb2c112e47b9652aa07daef6c6e2a7cd46c99b3403b2c"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t10-unwritten-prediction.json",
+      "bytes": 123547,
+      "sha256": "bbb5c0da4eab31c120d3723f532b686488d9fcf430e5c33b4ea9f0d910332125"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t10-unwritten-prediction.npz",
+      "bytes": 65488,
+      "sha256": "61bee65e94dc60f729838a52233a8b418154b36d7163781c8967a1f235ca73fa"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t10-unwritten.json",
+      "bytes": 125208,
+      "sha256": "dae38a231afd7dd5a430b9373b92d61c077149e59a91d2d7691a1fcdf551853f"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t10-unwritten.npz",
+      "bytes": 131111,
+      "sha256": "2b341d7c12063a9ef7b2b5c9d1b1c4a6660dcdf43a17c199cf5a7c1c02c8b694"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t10-written-prediction.json",
+      "bytes": 123642,
+      "sha256": "0d518a29bcfecf0dc649b6de80a2d1e211c492488a7b6492c08c4010ac94bfa5"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t10-written-prediction.npz",
+      "bytes": 65384,
+      "sha256": "de0a38eeae83863e8e6be68c85ad72d24b37652132db2428d599680deabb5a9f"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t10-written.json",
+      "bytes": 125319,
+      "sha256": "cf3f35d1841f240af3a1d52ce7882a810b85928b422b92ea4ffcdf516a57ed81"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t10-written.npz",
+      "bytes": 130308,
+      "sha256": "667b12f491d5770d410873fec608ddbabf7a1a293adfa408f6498ff00d76ce73"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t100-unwritten-prediction.json",
+      "bytes": 123616,
+      "sha256": "8ef95d3b48bba0800cfbffb2f9d19151efa7d45ec063a42c67ab10e32a7f7f2c"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t100-unwritten-prediction.npz",
+      "bytes": 66576,
+      "sha256": "9ec29b8b187d88eb04dc28fa30b564b803c8ec8204870fb332df3909ab7588e3"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t100-unwritten.json",
+      "bytes": 125275,
+      "sha256": "32c94828a5557bf8dedff18b057f1b8ecf8e764eeeb7900377e05572f7330b68"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t100-unwritten.npz",
+      "bytes": 132100,
+      "sha256": "1e7c03463c4b5b662e4368e97e435efaa4c83f9783023173008fd5c8e4343736"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t100-written-prediction.json",
+      "bytes": 123579,
+      "sha256": "03ddae0a9dd47a22b857cc3d63d3f60ce967f3aee1ff9fe4ef95861a26a51c6e"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t100-written-prediction.npz",
+      "bytes": 65750,
+      "sha256": "65142fe1235ade069d6be8a3f23091d6fcba910bbe217fcbe205575617507541"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t100-written.json",
+      "bytes": 125246,
+      "sha256": "8c0fd6e63f1be4c67b9aaa5291cd500f6ebf33d572477f6287e0dc9ece3fab12"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t100-written.npz",
+      "bytes": 130573,
+      "sha256": "e36e72f5e874294be24f8cb6ed7b3c6ea69a6d5b55820a060fb8de113edc609c"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t50-unwritten-prediction.json",
+      "bytes": 123579,
+      "sha256": "91e26d3b06a2a1de70cc8bd9a1be09639152cf7abd082dc4906403c528682d06"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t50-unwritten-prediction.npz",
+      "bytes": 66654,
+      "sha256": "112d36f6253742df093d12b4a24151f59d03da449d0c77f1e8cf25876d09b15b"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t50-unwritten.json",
+      "bytes": 125238,
+      "sha256": "38deb2ca28d89487ab684c364e0df3b305a2c8b1d22ed8694debc5dc28038736"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t50-unwritten.npz",
+      "bytes": 132088,
+      "sha256": "5f32ac5beedb2f72d20ddd3fc9efafb1db5cad87d3904503f667f8e919aa18e2"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t50-written-prediction.json",
+      "bytes": 123607,
+      "sha256": "e8b49e017f79588a31ed7c3d0c135b585044bd56f042be96d409b83ca05ee04c"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t50-written-prediction.npz",
+      "bytes": 65159,
+      "sha256": "a0a50ed213a471ee6ff67f560920822073671d459a6a60d2546a0d91fcb27fb5"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t50-written.json",
+      "bytes": 125272,
+      "sha256": "f0575530c3fc49eec4923d671e12f25171e07fbd4b4d3a711594e6c1538d29b4"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10101-t50-written.npz",
+      "bytes": 130052,
+      "sha256": "1a0fdce5cc83f33c8f98bcd076fb42f67c234b7145c30e70898b7efcb5add095"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-history.json",
+      "bytes": 373454,
+      "sha256": "86aa99ec5b4070d787070c757a8e8279be8184e98802dc2f1dc9b9d8ac169881"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-history.npz",
+      "bytes": 142014,
+      "sha256": "878ddcda9c1084577daf6e19d5372d01784ec53786eba6c27eba17ae6e2267a6"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-preparation.npz",
+      "bytes": 43250,
+      "sha256": "4ff01eee9fa1f647614d9229df391106406bd7be2bef03ab3e3f6258cb965b07"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t10-unwritten-prediction.json",
+      "bytes": 123578,
+      "sha256": "3a9e0c61267943296f256f61b6366c63b6f2dbb00ccd0078bc590f7d7e6fbdd1"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t10-unwritten-prediction.npz",
+      "bytes": 66478,
+      "sha256": "4e5ea215d1aec6ab17a0eb501a04ee8dc861ecc9f779a569df737b3b63fe7567"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t10-unwritten.json",
+      "bytes": 125230,
+      "sha256": "fe200b1852a662850beb740315b085b23cd45bd1c5d780b9bb0abef7692f8e4f"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t10-unwritten.npz",
+      "bytes": 132280,
+      "sha256": "f14da50b50472766c8310a8c04cc38847e129277eb80dbb67d3ba08620d07fee"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t10-written-prediction.json",
+      "bytes": 123625,
+      "sha256": "a3f6797f6f1c882e299cf6e9a871ac064660fca6ec2f2ec1ac400abcd7e11f5e"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t10-written-prediction.npz",
+      "bytes": 65602,
+      "sha256": "c16d9333450d8540db37c962e8328d7b334723a388135671af62ed522a3cee62"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t10-written.json",
+      "bytes": 125291,
+      "sha256": "71492c0c58d59fc80c3d0dab019b0b1ca5c35b364ca93db520d0eed5771777bd"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t10-written.npz",
+      "bytes": 130985,
+      "sha256": "7379e543cec7920156f57e98fecb0f177b1702f2fcb8b0e2d6ec6ff4b98fa68f"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t100-unwritten-prediction.json",
+      "bytes": 123581,
+      "sha256": "de1136764da9b37255abfbc0a0db77db0005df092edc591fb4da2a08bf58b043"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t100-unwritten-prediction.npz",
+      "bytes": 65026,
+      "sha256": "34c96f2bebafed1d7a7f13ca442e4045b5d7ac4a6faddb6c52cd11ee261f0a89"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t100-unwritten.json",
+      "bytes": 125246,
+      "sha256": "ac6df0fa3f8ae30db4fa2e9ccb4ae259057bfd89a03927423818cc0d50f4c46b"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t100-unwritten.npz",
+      "bytes": 130873,
+      "sha256": "9fe5eee6391aaf2a5bacb927843d65509157dd14c05ef15e2aad7d2fe8e75808"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t100-written-prediction.json",
+      "bytes": 123612,
+      "sha256": "b359c70f9bf94fb4ba64be848fff7d03e118cfe0a530cad18211efe67584f166"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t100-written-prediction.npz",
+      "bytes": 64966,
+      "sha256": "bf45211b73b0567f421ea97aef91ee4500ac378c0ff5472b4aa0ae2980073422"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t100-written.json",
+      "bytes": 125273,
+      "sha256": "6313646f1dbc7b49c741c6f907d39f8d91d27a93b547ff39058bd98a6f568d9d"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t100-written.npz",
+      "bytes": 130008,
+      "sha256": "65105f4642714e2e00f1c99539bdcb641baf96656b97d3667e42997400ae822d"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t50-unwritten-prediction.json",
+      "bytes": 123587,
+      "sha256": "3888309553996e31e42ce3aae1b1f7f75f4bb41f3068c9244406999bb06952c8"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t50-unwritten-prediction.npz",
+      "bytes": 66600,
+      "sha256": "73414724e4008102f7a6d515a502d0b21ce87a18d84d417d59e95f5541fba790"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t50-unwritten.json",
+      "bytes": 125248,
+      "sha256": "f59e7426089182dfeec82b66c6011a45e8fb495a39cf08c687dc8118f528bec9"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t50-unwritten.npz",
+      "bytes": 132679,
+      "sha256": "cacf9f86c1ba3d3100e3f88133be0b92279b3daf1bed0d32dc484660efe87758"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t50-written-prediction.json",
+      "bytes": 123664,
+      "sha256": "db6e9a40e367401906d589659684e435686cfc983c89a8853cb30784e311ff5f"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t50-written-prediction.npz",
+      "bytes": 65398,
+      "sha256": "323e7499788f07424765ea01a85713448627d2d0e1c244e5df252033ce2a386b"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t50-written.json",
+      "bytes": 125342,
+      "sha256": "7f219348844ac55756362d1b7bbfc02cce7de1966f12e08d2ffaa55f00e1ee0f"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10102-t50-written.npz",
+      "bytes": 130374,
+      "sha256": "e7c2e5aa7bbba3ccc14b9068054ec45cd768378caffe5eccdd8022406715f71f"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-history.json",
+      "bytes": 373444,
+      "sha256": "e4c571d4462bbc3e5713b9e5edeb17b60088b93d88ff6e112935066453c95fbd"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-history.npz",
+      "bytes": 142008,
+      "sha256": "439fe39bc7be7f40e3cf7a283928a8e935cbd95f66fb8d486cd23557493147b4"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-preparation.npz",
+      "bytes": 42935,
+      "sha256": "5a7dfcd108dc84fc045463da3db400d178827fabda157928e65ea3829aa66908"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t10-unwritten-prediction.json",
+      "bytes": 123556,
+      "sha256": "e718b87b592db3034ed8ea276aa8215285728a1d1305bb97b1d226f53fbb374e"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t10-unwritten-prediction.npz",
+      "bytes": 66023,
+      "sha256": "2d804d121452e88f17bd1cfe54784be629d827f959ede662c2a9290b533cfb63"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t10-unwritten.json",
+      "bytes": 125222,
+      "sha256": "304eb5315ae71e1b95a3398129c178a4951a26c7bb6e790a4652ae7fb4055aab"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t10-unwritten.npz",
+      "bytes": 132053,
+      "sha256": "3ac6984f8f64f7785627b1b955803d9ec5c6ae71eb3869d939558863e09d7918"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t10-written-prediction.json",
+      "bytes": 123609,
+      "sha256": "a263c3947bb3c85db72646a75d11072deb439233747f50881c634bf8d5fb1220"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t10-written-prediction.npz",
+      "bytes": 65237,
+      "sha256": "708e26c3702e6d592267d2d38d5d326c4c17ce7562d92d7a3e3af3bb393eae77"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t10-written.json",
+      "bytes": 125274,
+      "sha256": "8cda8b1883403e6f1fa84b9ecbe73f0f64bc2846ddca0f59e07dbcf580b9bcb8"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t10-written.npz",
+      "bytes": 130501,
+      "sha256": "b1eb63f809dc7dc77c27feb3c332f5499f2bbc61aa3404e791e29b25aec20871"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t100-unwritten-prediction.json",
+      "bytes": 123626,
+      "sha256": "dd01ab9edb3cc1d341b14011fd7828a93b0d25f148ad66aa7eaca110416d00cb"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t100-unwritten-prediction.npz",
+      "bytes": 65883,
+      "sha256": "5d15874ae1320def78f344363c6c6062b458bae6188b65ed26ae1a335ef52be7"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t100-unwritten.json",
+      "bytes": 125290,
+      "sha256": "455308f1045c64115cbb018b8d878c761357ea2856105190f53ccc4127a556f6"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t100-unwritten.npz",
+      "bytes": 131382,
+      "sha256": "b0a5f8d97b961a99c12109331a6ee1f924a6f3c8906824951a0357338f120283"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t100-written-prediction.json",
+      "bytes": 123641,
+      "sha256": "fc21adf526932e76574f548c14fbdb0ebf30506f468d932fa187f7c7e9355f17"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t100-written-prediction.npz",
+      "bytes": 66265,
+      "sha256": "e206d2622ebc91d6f27f599588f3361af38c356ab4166f4263ae540ca06424f2"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t100-written.json",
+      "bytes": 125299,
+      "sha256": "bf61be77f1e4dad4a382cdfcb0a21bd6bc8cbc6c253d68d64ebd63c660b3cf03"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t100-written.npz",
+      "bytes": 131304,
+      "sha256": "e5fdaf5f056f99b95eb074d970aba7bc60ca6d04f77e1061f9d127b6850c90a3"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t50-unwritten-prediction.json",
+      "bytes": 123573,
+      "sha256": "18eba3cd71e9ab1b5fcb4eca9423d57fa347efd518d5742e58760c793bec9572"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t50-unwritten-prediction.npz",
+      "bytes": 66620,
+      "sha256": "72e892b6a2fcf9f6b2e6376dbd106d5c83627fa06544081d8cf0d8ef02e57fce"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t50-unwritten.json",
+      "bytes": 125245,
+      "sha256": "287d80afe1c4fb951edf39d8bdab1ae963efa044da5811c58cc8322bb409ac3f"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t50-unwritten.npz",
+      "bytes": 132180,
+      "sha256": "73c988b96e85e81f6e1dc498fa0f6a865ae0de2ec6bf1044b7d97c430b4ce961"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t50-written-prediction.json",
+      "bytes": 123651,
+      "sha256": "00eeac3d84e26a3d99c4cc7b66eba326d48f4ed1421b4c1a2fbfdf327be7e86a"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t50-written-prediction.npz",
+      "bytes": 65678,
+      "sha256": "3f4620a1919b669a8d6bde2ea2988461f4f0a7410e8f344b480b84ed8e7454fb"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t50-written.json",
+      "bytes": 125316,
+      "sha256": "a38d00aa767a9e746ad5242bef0bedd1d5dd23641f3c4c187b9faed88c23c083"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/fresh-01/s10103-t50-written.npz",
+      "bytes": 130822,
+      "sha256": "39f14d90bc7e34530b05d536ff47a1d737bcf51b3a7b6ade7c2b479b870edf4e"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/frozen-01/budget.json",
+      "bytes": 190,
+      "sha256": "25ea9d1113d979e701bbbead4abfbed1648501245f7c7f3698db95e3a83cc116"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/frozen-01/freeze.json",
+      "bytes": 44069,
+      "sha256": "d1b21a6739ae4abec1223bffed28ee0fb587f1acd7da2324da5eb55ed2fddc28"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/frozen-01/protocol.json",
+      "bytes": 3503,
+      "sha256": "5001132b0fecc726237165b1233cb7a3e4eda747b940a58d70acd06d5e082dd8"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/pilot-01/budget.json",
+      "bytes": 567,
+      "sha256": "69d73207eacf5069c03644e5070b4bca5300fcb88c18d2418dbec16ffb18046b"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/pilot-01/pilot-cost.json",
+      "bytes": 90,
+      "sha256": "19a7ba4b459e8e0f2b171ebbdb8f55578427663b548cb650192143b963b55906"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/pilot-01/pilot.json",
+      "bytes": 521923,
+      "sha256": "b7581e4d04ff6d8353a4a1658193f9e7c69f3a973661d1a5c4b60e03fb1c6a01"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/pilot-01/pilot.npz",
+      "bytes": 203530,
+      "sha256": "e35cc76c86d47b8f4ca857a59740f7dc55240f18f2414c71d06ebababde1e825"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/pilot-01/preparation.npz",
+      "bytes": 42961,
+      "sha256": "2b3093e5edf828065580a0f1d6209037b9044b795662982eba35f2b98bc9bd1d"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/pilot-01/protocol.json",
+      "bytes": 3238,
+      "sha256": "ac19c5829e88ca14141f95da42656b6cf420c2a5113b291017f0f4a857cea055"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/budget.json",
+      "bytes": 2090,
+      "sha256": "647b478aced6d064e446a45af0082de9c7ffbc83af527884b8523c26828c3122"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/protocol.json",
+      "bytes": 3422,
+      "sha256": "64718882d45ac0cb4ce22121a7a57b83829ce1b808858a2f347b6049f4ad6957"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-history.json",
+      "bytes": 373473,
+      "sha256": "eeeaa4ab952a7c01836fe10f6de80355b61e5772070f6928eb56ead359890cad"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-history.npz",
+      "bytes": 253002,
+      "sha256": "cbb3f6d438559b69a21ff44fb671d89c24c6fd4964ff95e02e268ba7983ec0fa"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-t10-unwritten.json",
+      "bytes": 125219,
+      "sha256": "2e7c0a279f12338d211ab571cd9b493f9bf60e84f3e385e5c6771bb74a88b8cd"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-t10-unwritten.npz",
+      "bytes": 169229,
+      "sha256": "9a1c9ff1dcf0a51f2eded49fef49667c58b937dd0ec920d4a1792a677375d6fd"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-t10-written.json",
+      "bytes": 125264,
+      "sha256": "34412809fea96da731122c345654f1dda9bdfa15cbb0c26b63c5b4d80dc6b9a9"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-t10-written.npz",
+      "bytes": 167469,
+      "sha256": "a8c73af2fb97762f2cf9bfb7250e0d1e907a4b7186d474ffd5a8e47f58213f1c"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-t100-unwritten.json",
+      "bytes": 125231,
+      "sha256": "4811564d0b41758a768bc11bc530d73871f4a4f8c4bb2ba64b47291e42db7bca"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-t100-unwritten.npz",
+      "bytes": 169049,
+      "sha256": "e7ab91033ed8f7fb34d38c6297fde395003251e3b734f81fa764afadff16b67a"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-t100-written.json",
+      "bytes": 125266,
+      "sha256": "29a89fc2fb858129d7f518bf740dfeee5ed4b596040fc13620d7d75fa3fc1e94"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-t100-written.npz",
+      "bytes": 167157,
+      "sha256": "26f1f820d0d6081edca736dafbc5eba4bf7017bbcfc14386f5b01b7563edf78e"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-t50-unwritten.json",
+      "bytes": 125241,
+      "sha256": "c6be36d47a231b11e0196604cff7d778cb7b50c3045bd84df97e834430d423f7"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-t50-unwritten.npz",
+      "bytes": 170257,
+      "sha256": "bbf21b188873d9104ca60a9d14b65d2e497f4b99314e89a92a938f8e23be21fe"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-t50-written.json",
+      "bytes": 125282,
+      "sha256": "2a92a631f5265be287ee2992563729debb5f5f3e560673aab9deed7568c6b3e5"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-double-n-t50-written.npz",
+      "bytes": 165609,
+      "sha256": "d482832402c36f4b619e2f44d7fd0a4d1e4603674428d49afe40e91fc3fabfb9"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-history.json",
+      "bytes": 373469,
+      "sha256": "84ac024158ee11fa693f33339797a4a4a0d88cd5d687d3617a1f4ff17cab30eb"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-history.npz",
+      "bytes": 141983,
+      "sha256": "06a5b4d6288ced0a78e90fdea9c900eec64a43d0a7c0da330d9f02c21432e9bc"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-t10-unwritten.json",
+      "bytes": 125211,
+      "sha256": "5d4054fd18900ce8ac4bb1370076b0beeb34cc3cd2318e7ab77f841e4802a963"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-t10-unwritten.npz",
+      "bytes": 133214,
+      "sha256": "c88b5c70ea9751e1b76d74b703f3b72ccc350856cd9761524ddf8b65b995a377"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-t10-written.json",
+      "bytes": 125260,
+      "sha256": "1c8b8b8b23518b0aa5be247b6c727b6fb78f133b9cbd374d3b931dd9d1223d6c"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-t10-written.npz",
+      "bytes": 131959,
+      "sha256": "839b693524614fb0fbfa470c7a99c5192acfde08ba03c36a1de3ac71af088b06"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-t100-unwritten.json",
+      "bytes": 125284,
+      "sha256": "13d543187771c6ab02f5de76f1e0327f4391fd665b65aff1ed3262dc25567a33"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-t100-unwritten.npz",
+      "bytes": 132633,
+      "sha256": "37a01a6c94537dcec1df407773db1605aeaf21feb5d29e84b3592ee428b5b7d3"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-t100-written.json",
+      "bytes": 125299,
+      "sha256": "6f314be6c5f53826406f18cac01e3493ffe8ddb06078cd815509a12bd8090195"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-t100-written.npz",
+      "bytes": 131108,
+      "sha256": "e2d410f30c3b15038aa280dfcf9549228568f2599077c9cb2675cd4fbba217d4"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-t50-unwritten.json",
+      "bytes": 125243,
+      "sha256": "2ffa495e19b34a90d626a5428ed5f5f482c50eb996a177f5552b4951d1914ab7"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-t50-unwritten.npz",
+      "bytes": 133645,
+      "sha256": "0c88cd5636cb1f70a9b418f38def08b330b31e996130486649661eecef46c135"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-t50-written.json",
+      "bytes": 125282,
+      "sha256": "88acd770781c302d6c3bec68fdfb23634061d7c05738e64862d7453064038099"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/refine-01/s8101-half-dt-t50-written.npz",
+      "bytes": 131644,
+      "sha256": "7d49d22c011926e83b2bb17572966341bd2b766c1da3f09de3316fb23c055af1"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/screen-01/budget.json",
+      "bytes": 318,
+      "sha256": "071334c84700ec3d39c59b0d2be18d5dd5b7c213cc42fef1393ea3994c0458c1"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/screen-01/protocol.json",
+      "bytes": 3327,
+      "sha256": "fc6ceedf6c1779c59a9c2eb8acfa2630d1ebc025185ba5c8f85eb81185e4feb7"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/screen-01/screen.json",
+      "bytes": 540,
+      "sha256": "0067e030d603e90decf1104595f1f6bccea400693df7a264a0ac81e769896e3c"
+    },
+    {
+      "path": "work/mediated_patterns/history_conditioned_transmission/screen-01/screen.npz",
+      "bytes": 133344,
+      "sha256": "fccac50860940b55cb0dad0bcb6ec45003e42d23db3327fa3ad2496babf6664f"
+    }
+  ]
+}

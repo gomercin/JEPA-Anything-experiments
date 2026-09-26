@@ -2,7 +2,7 @@
 
 A small, exploratory field toy, independent of JEPA/OPF training. See
 [FINDINGS.md](FINDINGS.md) for the measured results and limits. Earlier oscillator
-source and evidence are preserved. Nothing in Atlas is changed.
+source and evidence are preserved. Later cycles and Atlas handoffs are recorded below.
 
 ## Equations and provenance
 
@@ -275,3 +275,36 @@ There is no pending scientific or Atlas delta. Numerical detectability is
 established within the tested envelope; practical receiver utility, isolated
 one-pass attribution and spontaneous formation remain unearned. Stop here.
 No new route, change to an existing stop, or automatic scientific successor.
+
+## History-conditioned transmission — completed finite-retention assay
+
+The [write–wait–probe report](HISTORY_CONDITIONED_TRANSMISSION.md) starts from
+merged integration `44e44a9` and identical complete A/B/C fields, with a compact
+instantaneous .4 write near B=-4. It supplies a new history contract; the earlier
+reduction, C-probe negative and relay .03 failure above remain unchanged.
+
+Across three fresh preparations, the written state changes the identical .02 A
+probe's C response after waits 50 and 100. At wait 100 the mass/moment **curve
+differences** are 8.00–8.33% / 16.07–16.70% of unwritten RMS; total transmitted
+RMS is attenuated by 5.25–5.37% / 13.33–13.59%. A scalar gain leaves shape
+residuals. The smaller change in B-feedback dependence also resolves, but
+feedback interruption changes A later: this is loop-wide expression, not a
+storage-localization or isolated relay coefficient.
+
+The ordinary interacting tangent along each history predicts every fresh
+comparison within its frozen gates. Fast mass relaxation leaves a slow,
+translation-like changed configuration with continuously replenished mediator
+differences. It is finite configurational retention, not passive residue alone,
+permanent memory, learning from A, a practical switch or spontaneous formation.
+The full fields continue relaxing; all three patches and fixed-frame bounds
+remain qualified. No optional repeated-use or successor experiment is needed.
+
+[New evidence](../../evidence/history-conditioned-transmission-2026-09-26/README.md)
+preserves all 149 substantive files (18,119,012 bytes), including the less
+persistent even pilot, fresh arrays, predictions, numerical floors and input
+work. Science is complete at 821.258 charged CPU seconds, including a 15-second
+inspection allowance. Software/critical-review and publication/merge status
+are separate in the [publication receipt](../../evidence/history-conditioned-transmission-2026-09-26/publication.json)
+and PR handoff. Confirmed merge metadata will be posted in the PR rather than
+creating another metadata-only PR. Only the two existing Atlas question homes
+receive this material new finding; no route or unrelated stop changes.

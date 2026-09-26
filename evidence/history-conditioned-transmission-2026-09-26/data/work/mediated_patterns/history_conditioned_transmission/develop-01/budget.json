@@ -1,0 +1,44 @@
+{
+  "cpu_seconds": 101.78064199999999,
+  "wall_seconds": 102.39257083300618,
+  "previous_cpu_seconds": 34.00353,
+  "limit_cpu_seconds": 1200,
+  "sections": [
+    {
+      "task": "s8101-history",
+      "cpu_seconds": 9.025193,
+      "wall_seconds": 9.028623833000893
+    },
+    {
+      "task": "s8101-t10-unwritten",
+      "cpu_seconds": 15.436284999999998,
+      "wall_seconds": 15.445563459012192
+    },
+    {
+      "task": "s8101-t10-written",
+      "cpu_seconds": 15.454442000000004,
+      "wall_seconds": 15.462578458013013
+    },
+    {
+      "task": "s8101-t50-unwritten",
+      "cpu_seconds": 15.390441000000003,
+      "wall_seconds": 15.394523333001416
+    },
+    {
+      "task": "s8101-t50-written",
+      "cpu_seconds": 15.495489999999997,
+      "wall_seconds": 15.535528834006982
+    },
+    {
+      "task": "s8101-t100-unwritten",
+      "cpu_seconds": 15.485496999999995,
+      "wall_seconds": 15.493675667006755
+    },
+    {
+      "task": "s8101-t100-written",
+      "cpu_seconds": 15.418185999999992,
+      "wall_seconds": 15.426822249981342
+    }
+  ],
+  "status": "COMPLETE"
+}

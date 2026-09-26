@@ -1,0 +1,20 @@
+{
+  "state": "LOCAL_SCIENCE_COMPLETE_PENDING_REMOTE_PUBLICATION",
+  "integration_base": "44e44a9c2fc3d7d4fecaab20f7a61f515fde0df9",
+  "scientific_status": "FINITE_CONFIGURATIONAL_RETENTION_WITH_LOOP_WIDE_EXPRESSION_DEPENDENCE",
+  "members": 149,
+  "data_bytes": 18119012,
+  "charged_cpu_seconds": 821.257652,
+  "source_revisions": [
+    "667fc7c",
+    "d5247b1",
+    "de30719",
+    "3c4d9c5",
+    "945c2ff"
+  ],
+  "release_assets_created": 0,
+  "successor": "NONE",
+  "merge_metadata_policy": "Confirm in PR comments; no extra merge-SHA-only PR",
+  "software_status": "make check: 245 tests + 2 subtests passed; 1 local-manifest skip, 1 scientific-panel deselection; scoped Ruff and whitespace pass",
+  "critical_review": "review.md; implementing-agent critical pass, not external replication"
+}

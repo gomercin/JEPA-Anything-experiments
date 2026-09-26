@@ -1,0 +1,17 @@
+{
+  "metered_cpu_seconds": 806.257652,
+  "stages": {
+    "develop-01": 101.78064199999999,
+    "frozen-01": 0.19018000000000002,
+    "fresh-01": 390.77277300000003,
+    "refine-01": 278.099816,
+    "screen-01": 8.010853000000001,
+    "pilot-01": 25.992677,
+    "analysis-01": 1.410711
+  },
+  "unmetered_read_only_inspection_allowance_seconds": 15,
+  "charged_cpu_seconds": 821.257652,
+  "limit_cpu_seconds": 1800,
+  "failed_scientific_stages": [],
+  "ordinary_editing_publication_and_fast_tests_excluded": true
+}

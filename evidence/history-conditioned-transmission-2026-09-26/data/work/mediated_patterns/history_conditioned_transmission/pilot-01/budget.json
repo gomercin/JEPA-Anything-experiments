@@ -1,0 +1,24 @@
+{
+  "cpu_seconds": 25.992677,
+  "wall_seconds": 26.552749208000023,
+  "previous_cpu_seconds": 0,
+  "limit_cpu_seconds": 1200,
+  "sections": [
+    {
+      "task": "isolated-components-s8101",
+      "cpu_seconds": 11.137880000000001,
+      "wall_seconds": 11.142254750011489
+    },
+    {
+      "task": "prepare-s8101-b-4",
+      "cpu_seconds": 1.0014769999999995,
+      "wall_seconds": 1.0020924159907736
+    },
+    {
+      "task": "pilot-write-continuations",
+      "cpu_seconds": 13.776771,
+      "wall_seconds": 13.78682741598459
+    }
+  ],
+  "status": "COMPLETE"
+}

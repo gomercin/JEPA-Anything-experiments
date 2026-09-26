@@ -1,0 +1,14 @@
+{
+  "cpu_seconds": 8.010853000000001,
+  "wall_seconds": 8.557262874994194,
+  "previous_cpu_seconds": 25.992677,
+  "limit_cpu_seconds": 1200,
+  "sections": [
+    {
+      "task": "late-full-field-screen",
+      "cpu_seconds": 7.927792999999999,
+      "wall_seconds": 7.93275504198391
+    }
+  ],
+  "status": "COMPLETE"
+}

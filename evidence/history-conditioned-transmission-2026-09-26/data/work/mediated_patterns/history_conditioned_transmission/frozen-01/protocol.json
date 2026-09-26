@@ -1,0 +1,66 @@
+{
+  "stage": "freeze",
+  "command": [
+    "/private/tmp/jepa-history-conditioned-transmission/experiments/mediated_patterns/history_analysis.py",
+    "freeze",
+    "--data",
+    "work/mediated_patterns/history_conditioned_transmission/develop-01",
+    "--refinement",
+    "work/mediated_patterns/history_conditioned_transmission/refine-01",
+    "--output",
+    "work/mediated_patterns/history_conditioned_transmission/frozen-01"
+  ],
+  "revision": "945c2ff772652f6814915ea9ab028eb7ab880220",
+  "source_hashes": {
+    "cross_analysis.py": "39b537e6ffc704692b64375b32aa1e69688df5911d93152b046895a9eecbc0e2",
+    "relay_analysis.py": "76361e96dd0b4ee9499ab09910a635a8854d30007fc9da84075273d20527083e",
+    "repeated_analysis.py": "a251f139b6c684bbfbfdec81e943901e2e427ea98313c58d25c9ece9d72b3a37",
+    "event_response.py": "94720421efd1ee1cca0eb4ac14d29282860f62e3d92b98e96ad7794ae1af3f30",
+    "reduced.py": "33096cb5e37108d7ab1ffb6175245e62bf721f8af7d459982a9932353bd15b99",
+    "history_conditioned_transmission.py": "923c1ffd85383a5d65d39ad15bf37665fc23b72093184bb90376b11ff4cae5f5",
+    "dual_pair.py": "f69eda0fedf9a7ecfecaa3e17cb134253b0cc0eeb916c9616ea322e07d658630",
+    "__init__.py": "bbd16988f4993645f46ba1ffbe80fc658b22f2448e1a7378bdfa31dc4e773e98",
+    "hybrid_analysis.py": "eef0bbcd6149ad8084f3550a91a930815cd95344c436aa5f5ae5acec12a3cf2e",
+    "organization_response.py": "eadf2ad6a4b97387fc83a387c6d9d7905c8d93cadaa980944759386c1acce776",
+    "hybrid_pair.py": "c9ab4afd7caf9753d1d24bcac80077adef6479b2ca54124cf21fb9af922f7789",
+    "hybrid_schedule.py": "621a303a811c0544c67fb971037a3dacd39dcb0f4baaec4b3186baed898a0e5a",
+    "dual_analysis.py": "38c67cc18552bf65cd7a86dc102a339a3ab432546803057af8a83fef5c8ec0b0",
+    "source_receiver_relay.py": "0d53f7c6856bc01754007ee2b44f317da8768b67fb45ac24058db4a58bb9b539",
+    "simulator.py": "5e6d1cb57566d5d2197daf61bead376e03fd1da7ad3c6d00729812e0b5780807",
+    "response_state.py": "8ba0cc7c41224b9b0275cdbf12c0011dca4c5adcb572c5d460a461099cab9638",
+    "explore.py": "db802d17c5d8362d8075e4e5e39dcee2f4c90bb9ebb23d69d73098f5d2bcb2c9",
+    "repeated_hybrid.py": "09a72f08748c38442e1c13349e35bdb213cc1feedcd31b20c499b392c0738a7c",
+    "cross_pulse.py": "e2832ad5afb8e1ea16d0c8b9bcf89a6683f7a835e3ed138e2c5aa8c6299774d8",
+    "history_analysis.py": "f0b6e5003ae5346f26b7894e440f63fe47cfed6851ecc39b62700f53e58d34d6",
+    "recursive_response.py": "120c27254aa2100917c4af6721aa685049f5596940e37d713f8ea3fdfe4277dd",
+    "dual_reduction.py": "d3da6d10183d0d54bded796ae21266fabc2822cbd7b3fe1cb7439928f93a42cc",
+    "analyze.py": "20e97443d5785e098362c90f3cb96eebcd06986c353245ef0478c8184cfbc2f8",
+    "measurements.py": "570d07a21376ec9c649d9a566a93bd9ea0da61b6812496e6286abe24eca29de6",
+    "two_way_hybrid.py": "bb317b315abdb325683fe9e1982ce91626cbe7216114840c2f6e04d80f673af6",
+    "outward_response.py": "3133f0e536623090bb839f723dbf83f98805303cd75418a5705ba693ae7b9bf2"
+  },
+  "report_sha256": "d56d341a7fa194898604e6caabc82ad0ad4eef79b934b1d17382f7738ccf9942",
+  "config": {
+    "length": 192,
+    "n": 768,
+    "dt": 0.00625,
+    "r": -0.67,
+    "cubic": 2.0,
+    "feedback": 0.05,
+    "source": 1.0,
+    "diffusion": 64.0,
+    "tau": 10.0
+  },
+  "python": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "numpy": "2.5.3",
+  "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+  "development_seeds": [
+    8101
+  ],
+  "fresh_seeds": [
+    10101,
+    10102,
+    10103
+  ],
+  "budget_limit": 1800.0
+}

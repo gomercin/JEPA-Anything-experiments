@@ -1,0 +1,234 @@
+{
+  "cpu_seconds": 390.77277300000003,
+  "wall_seconds": 391.42895141599,
+  "previous_cpu_seconds": 414.074168,
+  "limit_cpu_seconds": 1800,
+  "sections": [
+    {
+      "task": "isolated-components-s10101",
+      "cpu_seconds": 10.553165,
+      "wall_seconds": 10.55387149998569
+    },
+    {
+      "task": "prepare-s10101-b-4",
+      "cpu_seconds": 0.9446410000000007,
+      "wall_seconds": 0.9446518330078106
+    },
+    {
+      "task": "s10101-history",
+      "cpu_seconds": 8.728785,
+      "wall_seconds": 8.729747083008988
+    },
+    {
+      "task": "s10101-t10-unwritten-prediction",
+      "cpu_seconds": 7.281738999999998,
+      "wall_seconds": 7.283398792002117
+    },
+    {
+      "task": "s10101-t10-unwritten",
+      "cpu_seconds": 11.130883999999998,
+      "wall_seconds": 11.13132333298563
+    },
+    {
+      "task": "s10101-t10-written-prediction",
+      "cpu_seconds": 7.2041109999999975,
+      "wall_seconds": 7.204869083012454
+    },
+    {
+      "task": "s10101-t10-written",
+      "cpu_seconds": 11.138281000000006,
+      "wall_seconds": 11.138755084015429
+    },
+    {
+      "task": "s10101-t50-unwritten-prediction",
+      "cpu_seconds": 7.182991999999999,
+      "wall_seconds": 7.186775582988048
+    },
+    {
+      "task": "s10101-t50-unwritten",
+      "cpu_seconds": 11.171155999999996,
+      "wall_seconds": 11.174949334003031
+    },
+    {
+      "task": "s10101-t50-written-prediction",
+      "cpu_seconds": 7.260974999999988,
+      "wall_seconds": 7.263293750002049
+    },
+    {
+      "task": "s10101-t50-written",
+      "cpu_seconds": 11.161783999999997,
+      "wall_seconds": 11.164489999995567
+    },
+    {
+      "task": "s10101-t100-unwritten-prediction",
+      "cpu_seconds": 7.200339,
+      "wall_seconds": 7.201876250008354
+    },
+    {
+      "task": "s10101-t100-unwritten",
+      "cpu_seconds": 11.189492000000001,
+      "wall_seconds": 11.219394875020953
+    },
+    {
+      "task": "s10101-t100-written-prediction",
+      "cpu_seconds": 7.2248440000000045,
+      "wall_seconds": 7.228256041009445
+    },
+    {
+      "task": "s10101-t100-written",
+      "cpu_seconds": 11.125572000000005,
+      "wall_seconds": 11.12672958301846
+    },
+    {
+      "task": "isolated-components-s10102",
+      "cpu_seconds": 10.564148000000017,
+      "wall_seconds": 10.565100792009616
+    },
+    {
+      "task": "prepare-s10102-b-4",
+      "cpu_seconds": 0.9382049999999822,
+      "wall_seconds": 0.9384166249947157
+    },
+    {
+      "task": "s10102-history",
+      "cpu_seconds": 8.622679000000005,
+      "wall_seconds": 8.623547458002577
+    },
+    {
+      "task": "s10102-t10-unwritten-prediction",
+      "cpu_seconds": 7.188001999999983,
+      "wall_seconds": 7.188636125007179
+    },
+    {
+      "task": "s10102-t10-unwritten",
+      "cpu_seconds": 11.118357000000003,
+      "wall_seconds": 11.119056541996542
+    },
+    {
+      "task": "s10102-t10-written-prediction",
+      "cpu_seconds": 7.207011999999992,
+      "wall_seconds": 7.207934415986529
+    },
+    {
+      "task": "s10102-t10-written",
+      "cpu_seconds": 11.113552999999996,
+      "wall_seconds": 11.11417379201157
+    },
+    {
+      "task": "s10102-t50-unwritten-prediction",
+      "cpu_seconds": 7.170225000000016,
+      "wall_seconds": 7.170777957973769
+    },
+    {
+      "task": "s10102-t50-unwritten",
+      "cpu_seconds": 11.087945999999988,
+      "wall_seconds": 11.088411375007126
+    },
+    {
+      "task": "s10102-t50-written-prediction",
+      "cpu_seconds": 7.183850000000007,
+      "wall_seconds": 7.184305417002179
+    },
+    {
+      "task": "s10102-t50-written",
+      "cpu_seconds": 11.14704500000002,
+      "wall_seconds": 11.147922665986698
+    },
+    {
+      "task": "s10102-t100-unwritten-prediction",
+      "cpu_seconds": 7.194208000000003,
+      "wall_seconds": 7.195520624984056
+    },
+    {
+      "task": "s10102-t100-unwritten",
+      "cpu_seconds": 11.151195000000001,
+      "wall_seconds": 11.151836250006454
+    },
+    {
+      "task": "s10102-t100-written-prediction",
+      "cpu_seconds": 7.200963999999999,
+      "wall_seconds": 7.201846000010846
+    },
+    {
+      "task": "s10102-t100-written",
+      "cpu_seconds": 11.128392999999988,
+      "wall_seconds": 11.129291582998121
+    },
+    {
+      "task": "isolated-components-s10103",
+      "cpu_seconds": 10.532983000000002,
+      "wall_seconds": 10.533548207982676
+    },
+    {
+      "task": "prepare-s10103-b-4",
+      "cpu_seconds": 0.9453110000000038,
+      "wall_seconds": 0.9453177090035751
+    },
+    {
+      "task": "s10103-history",
+      "cpu_seconds": 8.65287699999999,
+      "wall_seconds": 8.6539672910003
+    },
+    {
+      "task": "s10103-t10-unwritten-prediction",
+      "cpu_seconds": 7.166661999999974,
+      "wall_seconds": 7.166918083006749
+    },
+    {
+      "task": "s10103-t10-unwritten",
+      "cpu_seconds": 11.156881999999996,
+      "wall_seconds": 11.159498666995205
+    },
+    {
+      "task": "s10103-t10-written-prediction",
+      "cpu_seconds": 7.202306000000021,
+      "wall_seconds": 7.204698708024807
+    },
+    {
+      "task": "s10103-t10-written",
+      "cpu_seconds": 11.173068,
+      "wall_seconds": 11.174142583011417
+    },
+    {
+      "task": "s10103-t50-unwritten-prediction",
+      "cpu_seconds": 7.142456999999979,
+      "wall_seconds": 7.1451167500054
+    },
+    {
+      "task": "s10103-t50-unwritten",
+      "cpu_seconds": 11.072047999999995,
+      "wall_seconds": 11.072684624989051
+    },
+    {
+      "task": "s10103-t50-written-prediction",
+      "cpu_seconds": 7.238685999999973,
+      "wall_seconds": 7.239538541994989
+    },
+    {
+      "task": "s10103-t50-written",
+      "cpu_seconds": 11.185748999999987,
+      "wall_seconds": 11.18727100000251
+    },
+    {
+      "task": "s10103-t100-unwritten-prediction",
+      "cpu_seconds": 7.161991,
+      "wall_seconds": 7.164712499972666
+    },
+    {
+      "task": "s10103-t100-unwritten",
+      "cpu_seconds": 11.147119999999973,
+      "wall_seconds": 11.14776987498044
+    },
+    {
+      "task": "s10103-t100-written-prediction",
+      "cpu_seconds": 7.22459600000002,
+      "wall_seconds": 7.224838209018344
+    },
+    {
+      "task": "s10103-t100-written",
+      "cpu_seconds": 11.155521000000022,
+      "wall_seconds": 11.159825167007511
+    }
+  ],
+  "status": "COMPLETE"
+}
