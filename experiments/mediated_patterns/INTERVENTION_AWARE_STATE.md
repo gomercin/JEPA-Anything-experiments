@@ -124,3 +124,32 @@ storage. No-event initialization p=d=0 has the same incremental meaning as r.
 Total candidate dimension is now11 scientific scalars plus the step counter.
 This is the last readout form; freeze the best grouped candidate or retain the
 restricted failure. No further architecture or data expansion is planned.
+
+## Final development selection and freeze
+
+`repair-fit-03` directly driven response memory is much better: order4+readout
+worst grouped D14.123%, R.10643%; order6+readout D29.713%, R.10804%.
+Select **order4+two response variables**, nine evolving scientific scalars plus
+one integer step counter, for the primary response objective. Keep order6 as the
+more accurate physical-geometry control. This retains a development response
+miss, not a declaration that every development gate passed. Stop fitting here.
+Physical tolerances freeze at[A,B,C]=[5e-5,2e-5,2e-6]; they exceed development
+resolution by factors639/33/228 and spend roughly .031%/.057% of R in the prior
+local F-sensitivity estimate. Order4 already has some trajectory errors above
+these limits; keep those physical limitations rather than changing coordinates
+or gates to favor its readout. Original fractional-motion failures remain intact.
+
+Freeze seeds16101/16102/16103; none/odd04 preparation histories; conditioning
++.02/−.02 and withheld intermediate+.01; unchanged delay10 and gaps10/30.
+Both signs describe conditioning only; final diagnostic probe always+.02.
+No fresh-driven repair. Development response floors freeze as above; any later
+worst-case numerical checks report supplemental uncertainty without converting
+failed accuracy gates to passes. All primary forecasts and post-event retained
+states are sealed before generating future fields. The original G/F remain
+byte-identical within controls; the selected construction changes both evolution
+and readout through explicit retained variables. No new initial field features.
+
+The order6 physical realization has spectral radius1.00817 per unit step; it is
+a finite0..30 approximation, not a globally stable relaxation law. Order4 has
+radius.97249. Neither fitted mode decomposition uniquely identifies physical
+storage or certifies arbitrary event streams.
