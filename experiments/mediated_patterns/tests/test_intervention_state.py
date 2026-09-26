@@ -45,3 +45,55 @@ def test_grouped_descendants_never_cross():
     groups=np.repeat([8101,10101,10102],12)
     for train,test in pm.grouped_folds(groups):
         assert not set(groups[train]) & set(groups[test])
+
+
+def tiny_model():
+    from experiments.mediated_patterns.geometry_model import fit
+    z=np.array([[0.,0.,0.],[.1,.2,.3],[.2,.1,.4]])
+    G=fit(z,np.zeros_like(z),kind='affine')
+    F=pm.fit(z,np.ones((3,161,2)),[],'geometry',rank=1)
+    J=im.fit_kick(z,[.02,-.02,.02],np.array([[.001,0,0],[-.001,0,0],[.001,0,0]]),'constant')
+    return dict(G=G,F=F,J=J)
+
+
+def test_causal_events_segmented_and_zero_equivalence(tmp_path):
+    model=tiny_model();z=np.array([.1,.2,.3])
+    a=im.State(model,z);b=im.State(model,z)
+    # Runtime has no future schedule input; same prefix despite differing future events.
+    np.testing.assert_array_equal(a.advance(4),b.advance(4))
+    b.event(0.)
+    a.advance(6);b.advance(3);b.advance(3)
+    np.testing.assert_array_equal(a.flow.z,b.flow.z)
+    a.event(.02);a.advance(2);a.checkpoint(tmp_path/'state.json')
+    import json
+    restored=im.State.restore(model,json.loads((tmp_path/'state.json').read_text()))
+    np.testing.assert_array_equal(a.advance(8),restored.advance(8))
+    with pytest.raises(FileExistsError):a.checkpoint(tmp_path/'state.json')
+    (tmp_path/'dangling.json').symlink_to(tmp_path/'absent.json')
+    with pytest.raises(FileExistsError):a.checkpoint(tmp_path/'dangling.json')
+    assert not (tmp_path/'absent.json').exists()
+
+
+def test_runtime_solver_free_fresh_process(tmp_path):
+    import json
+    import subprocess
+    import sys
+    import shutil
+    from pathlib import Path
+    model=tiny_model();state=im.State(model,[.1,.2,.3]);state.event(.02);state.advance(2)
+    state.checkpoint(tmp_path/'checkpoint.json');pm.save_json(tmp_path/'model.json',model)
+    package=tmp_path/'runtime';package.mkdir();(package/'__init__.py').write_text('')
+    src=Path(im.__file__).parent
+    for name in ['intervention_model.py','geometry_model.py','present_state_model.py','measurements.py']:
+        shutil.copyfile(src/name,package/name)
+    code='''import sys,json,importlib.abc
+class Block(importlib.abc.MetaPathFinder):
+ def find_spec(self,fullname,path=None,target=None):
+  if any(x in fullname for x in ['scipy','simulator','intervention_analysis','intervention_aware_state']): raise RuntimeError('scientific module unavailable')
+sys.meta_path.insert(0,Block())
+from runtime.intervention_model import State
+m=json.load(open('model.json'));s=State.restore(m,json.load(open('checkpoint.json')))
+print(json.dumps(s.advance(8).tolist()))
+'''
+    result=subprocess.check_output([sys.executable,'-c',code],cwd=tmp_path,text=True)
+    np.testing.assert_array_equal(json.loads(result),state.advance(8))
