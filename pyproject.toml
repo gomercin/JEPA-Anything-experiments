@@ -13,6 +13,7 @@ testpaths = [
   "evidence/geometry-evolution-2026-09-26/tests",
   "evidence/intervention-aware-state-2026-09-26/tests",
   "evidence/repeated-intervention-state-2026-09-26/tests",
+  "evidence/event-age-response-2026-09-26/tests",
 ]
 pythonpath = [
   ".",
