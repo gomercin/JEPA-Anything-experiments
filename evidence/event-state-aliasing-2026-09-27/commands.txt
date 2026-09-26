@@ -1,0 +1,49 @@
+# Run from repository root with the existing NumPy/SciPy/matplotlib environment.
+# Historical repeated and event-age inputs must be restored through their own portable indexes.
+# The --inherited path below identifies the read-only prior restore, not a new simulation.
+# Each recorded source revision is available in this branch history; output names are exclusive.
+
+# execution revision 6e548e6f9e819adbb5baa45f8e465a45c659bb3a
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage pilot --output work/mediated_patterns/event_state_aliasing/pilot-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision 6e548e6f9e819adbb5baa45f8e465a45c659bb3a
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage boundaries --output work/mediated_patterns/event_state_aliasing/boundaries-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision 35dd91d4e050dad1d64655d65493f0931aeda29b
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage response-pilot --output work/mediated_patterns/event_state_aliasing/response-pilot-01 --data work/mediated_patterns/event_state_aliasing/boundaries-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision 35dd91d4e050dad1d64655d65493f0931aeda29b
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage references --output work/mediated_patterns/event_state_aliasing/responses-01 --data work/mediated_patterns/event_state_aliasing/boundaries-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision 4b42d45239bd003b623700c2798474241ead03d8
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage refine --output work/mediated_patterns/event_state_aliasing/refinement-01 --data work/mediated_patterns/event_state_aliasing/boundaries-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision 4b42d45239bd003b623700c2798474241ead03d8
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage fit --feature-set centers --output work/mediated_patterns/event_state_aliasing/fit-centers-quadratic --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision 4b42d45239bd003b623700c2798474241ead03d8
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage pairs --output work/mediated_patterns/event_state_aliasing/pairs-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision 31c9701a288c46043f4fcdd221416a0aef3d0e65
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage freeze --output work/mediated_patterns/event_state_aliasing/frozen-01 --data work/mediated_patterns/event_state_aliasing/fit-centers-quadratic --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision 31c9701a288c46043f4fcdd221416a0aef3d0e65
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage fresh --output work/mediated_patterns/event_state_aliasing/fresh-01 --freeze work/mediated_patterns/event_state_aliasing/frozen-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision 31c9701a288c46043f4fcdd221416a0aef3d0e65
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage analyze --output work/mediated_patterns/event_state_aliasing/fresh-analysis-01 --data work/mediated_patterns/event_state_aliasing/fresh-01 --freeze work/mediated_patterns/event_state_aliasing/frozen-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision 59b49650736c6ad64233d28917c98ea47944b7a3
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage retention --output work/mediated_patterns/event_state_aliasing/retention-01 --data work/mediated_patterns/event_state_aliasing/fresh-01 --freeze work/mediated_patterns/event_state_aliasing/frozen-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision b8588d5917cf91a487dab916778d63b9efa9de38
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage retain_freeze --output work/mediated_patterns/event_state_aliasing/retained-frozen-01 --freeze work/mediated_patterns/event_state_aliasing/frozen-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision b8588d5917cf91a487dab916778d63b9efa9de38
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage retain_fresh --output work/mediated_patterns/event_state_aliasing/retained-fresh-01 --freeze work/mediated_patterns/event_state_aliasing/retained-frozen-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision b8588d5917cf91a487dab916778d63b9efa9de38
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage retain_analyze --output work/mediated_patterns/event_state_aliasing/retained-analysis-01 --data work/mediated_patterns/event_state_aliasing/retained-fresh-01 --freeze work/mediated_patterns/event_state_aliasing/retained-frozen-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision 60c930d9ccfaed9fd59fa37fe740f814d070a0c5
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-alias-mpl python -m experiments.mediated_patterns.event_state_aliasing --stage report --output work/mediated_patterns/event_state_aliasing/report-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state

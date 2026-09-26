@@ -122,3 +122,77 @@ def test_new_numerical_qualification_and_cost(data):
         if "overlap_error" in row:
             assert row["overlap_error"] < 1e-12
             assert row["qualified"]
+
+
+def test_retained_fresh_seals_and_replay(data, tmp_path):
+    import shutil
+    import subprocess
+    import sys
+
+    frozen = data / "retained-frozen-01"
+    fresh = data / "retained-fresh-01"
+    f = load(frozen / "freeze.json")
+    seal = load(fresh / "seal.json")
+    m = load(frozen / "model.json")
+    g = load(frozen / "G.json")
+    assert f["sources"] == load(fresh / "protocol.json")["sources"]
+    assert (
+        gm.identity(m)
+        == seal["model_sha256"]
+        == load(data / "frozen-01/freeze.json")["model_sha256"]
+    )
+    assert gm.identity(g) == seal["G_sha256"] == f["G_sha256"]
+    assert digest(fresh / "predictions.npz") == seal["prediction_sha256"]
+    assert (
+        digest(fresh / "initial-descriptors.npz") == seal["initial_descriptor_sha256"]
+    )
+    rows = load(fresh / "rows.json")
+    assert not {r["seed"] for r in rows} & {
+        r["seed"] for r in load(data / "fresh-01/rows.json")
+    }
+    p = arrays(fresh / "predictions.npz")["y"]
+    y = arrays(fresh / "targets.npz")["y"]
+    records = gates(y, p, rows, f["floors"])
+    assert records == load(data / "retained-analysis-01/scores.json")
+    for i in range(len(rows)):
+        for j, a in enumerate([0.0, -0.02, 0.02]):
+            np.testing.assert_array_equal(
+                paired(fresh / f"reference-{i}-{a:g}.npz")["response"], y[i, j]
+            )
+    package = tmp_path / "runtime"
+    package.mkdir()
+    (package / "__init__.py").write_text("")
+    for name in [
+        "event_state_model",
+        "geometry_model",
+        "present_state_model",
+        "measurements",
+    ]:
+        shutil.copyfile(
+            Path(sm.__file__).with_name(name + ".py"), package / (name + ".py")
+        )
+    (tmp_path / "model.json").write_text(json.dumps(m))
+    (tmp_path / "G.json").write_text(json.dumps(g))
+    script = """
+import builtins,json,sys
+sys.path.insert(0,'.')
+original=builtins.__import__
+def guard(name,*args,**kwargs):
+    if name.startswith(('scipy','experiments')) or 'simulator' in name:raise RuntimeError('solver unavailable')
+    return original(name,*args,**kwargs)
+builtins.__import__=guard
+from runtime.geometry_model import Continuation
+from runtime.event_state_model import predict
+s=Continuation.restore(json.load(open('G.json')),json.load(open('checkpoint.json')))
+z=s.advance(12);m=json.load(open('model.json'))
+print(json.dumps([predict(m,z,a).tolist() for a in [0.,-.02,.02]]))
+"""
+    (tmp_path / "resume.py").write_text(script)
+    for i in range(len(rows)):
+        cp = fresh / f"checkpoint-{i}.json"
+        assert digest(cp) == seal["checkpoints"][cp.name]
+        (tmp_path / "checkpoint.json").write_bytes(cp.read_bytes())
+        result = subprocess.check_output(
+            [sys.executable, "-I", "resume.py"], cwd=tmp_path, text=True
+        )
+        np.testing.assert_array_equal(json.loads(result), p[i])
