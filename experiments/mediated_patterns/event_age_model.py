@@ -1,5 +1,7 @@
 """Fixed-size causal response aging; no age, field or schedule in the readout."""
 
+import json
+
 import numpy as np
 
 from . import geometry_model as gm
@@ -9,7 +11,17 @@ from .intervention_model import State as GeometryState
 
 class State:
     def __init__(self, model, z):
-        self.model = model
+        self.model = json.loads(json.dumps(model, allow_nan=False))
+        decays = np.asarray(model["decays"], float)
+        if (
+            decays.ndim != 1
+            or not len(decays)
+            or not np.isfinite(decays).all()
+            or np.any((decays <= 0) | (decays > 1))
+        ):
+            raise ValueError("Stable finite diagonal response transition required")
+        if "readout" in model["geometry"]:
+            raise ValueError("Old response memory must be removed, not hidden")
         self.geometry = GeometryState(model["geometry"], z)
         self.response_state = np.zeros((2, len(model["decays"])))
 
