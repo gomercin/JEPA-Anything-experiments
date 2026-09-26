@@ -40,6 +40,7 @@ class State:
         self.model = json.loads(json.dumps(model,allow_nan=False))
         self.flow = gm.Continuation(model['G'],z)
         self.memory = np.zeros(model.get('transient',{}).get('order',0))
+        self.response_memory = np.zeros(2) if model.get('readout',{}).get('event_basis') else np.zeros(0)
 
     def advance(self, steps):
         if not len(self.memory):
@@ -54,6 +55,7 @@ class State:
             self.flow.advance(1)
             self.memory = A@self.memory
             self.flow.z += C@self.memory
+            if len(self.response_memory):self.response_memory[1] *= np.exp(-1./20.)
         return self.flow.z.copy()
 
     def event(self, amplitude):
@@ -63,12 +65,17 @@ class State:
             increment=np.asarray(t['B'])@kick_features(self.flow.z,amplitude,t['J'])
             self.memory += increment
         self.flow.z = after
+        if len(self.response_memory):self.response_memory += amplitude/.02
 
     def response(self):
         result=pm.predict(self.model['F'],self.flow.z[None])[0]
         if 'readout' in self.model:
             r=self.model['readout']
-            features=self.memory/np.asarray(r['scale_x'])
+            if r.get('event_basis'):
+                a,d=self.response_memory
+                features=np.array([a,d,a*a,a*d])
+            else:
+                features=self.memory/np.asarray(r['scale_x'])
             if r.get('interaction'):
                 q=(self.flow.z-r['mean_z'])/r['scale_z']
                 features=np.outer(features,np.r_[1.,q]).ravel()
@@ -77,11 +84,11 @@ class State:
         return result
 
     def checkpoint(self,path):
-        pm.save_json(path,dict(schema=1,model_sha256=gm.identity(self.model),z=self.flow.z.tolist(),steps=self.flow.steps,memory=self.memory.tolist()))
+        pm.save_json(path,dict(schema=1,model_sha256=gm.identity(self.model),z=self.flow.z.tolist(),steps=self.flow.steps,memory=self.memory.tolist(),response_memory=self.response_memory.tolist()))
 
     @classmethod
     def restore(cls,model,checkpoint):
-        if set(checkpoint) != {'schema','model_sha256','z','steps','memory'} or checkpoint['schema'] != 1 or checkpoint['model_sha256'] != gm.identity(model):
+        if set(checkpoint) != {'schema','model_sha256','z','steps','memory','response_memory'} or checkpoint['schema'] != 1 or checkpoint['model_sha256'] != gm.identity(model):
             raise ValueError('Checkpoint/model mismatch')
         obj = cls(model,checkpoint['z'])
         if isinstance(checkpoint['steps'],bool) or not isinstance(checkpoint['steps'],int) or checkpoint['steps'] < 0:
@@ -89,6 +96,9 @@ class State:
         memory=np.asarray(checkpoint['memory'],float)
         if memory.shape != obj.memory.shape or not np.isfinite(memory).all():
             raise ValueError('Invalid transient state')
+        response_memory=np.asarray(checkpoint['response_memory'],float)
+        if response_memory.shape!=obj.response_memory.shape or not np.isfinite(response_memory).all():raise ValueError('Invalid response memory')
+        obj.response_memory=response_memory
         obj.memory=memory
         obj.flow.steps=checkpoint['steps']
         return obj

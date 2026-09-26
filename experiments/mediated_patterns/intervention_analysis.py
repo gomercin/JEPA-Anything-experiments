@@ -160,28 +160,29 @@ def transient_fit(rows,order):
                 spectral_radius=float(max(abs(np.linalg.eigvals(A)))),singular_values=s.tolist())
 
 
-def corrected_response_fit(model,rows,interaction=False):
+def corrected_response_fit(model,rows,interaction=False,event_basis=False):
     features=[];targets=[];centers=[]
     for r in rows:
         s0=im.State(model,r['z0']);s1=im.State(model,r['z0'])
         for s in [s0,s1]:s.advance(10)
         s0.event(0.);s1.event(r['a'])
         s0.advance(r['gap']);s1.advance(r['gap'])
-        features.append(s1.memory);centers.append(s1.flow.z.copy())
+        a=r['a']/.02;d=a*np.exp(-r['gap']/20.)
+        features.append(np.array([a,d,a*a,a*d]) if event_basis else s1.memory);centers.append(s1.flow.z.copy())
         targets.append(r['y'][1]-r['y'][0]-(s1.response()-s0.response()))
     x=np.asarray(features);y=np.asarray(targets)
     scale_y=np.sqrt(np.mean(y*y,axis=(0,1)))
     _,s,vt=np.linalg.svd((y/scale_y).transpose(0,2,1).reshape(-1,161),full_matrices=False)
     basis=vt[:4]
     target=np.einsum('nto,kt->nok',y/scale_y,basis).reshape(len(y),-1)
-    scale_x=np.maximum(np.sqrt(np.mean(x*x,axis=0)),1e-14)
+    scale_x=np.ones(x.shape[1]) if event_basis else np.maximum(np.sqrt(np.mean(x*x,axis=0)),1e-14)
     x=x/scale_x
     centers=np.array(centers);mean_z=centers.mean(axis=0);scale_z=np.maximum(centers.std(axis=0),1e-14)
     if interaction:
         q=(centers-mean_z)/scale_z
         x=np.einsum('ni,nj->nij',x,np.c_[np.ones(len(x)),q]).reshape(len(x),-1)
     coef=np.linalg.solve(x.T@x+1e-4*np.eye(x.shape[1]),x.T@target)
-    return dict(interaction=interaction,mean_z=mean_z.tolist(),scale_z=scale_z.tolist(),basis=basis.tolist(),coefficients=coef.tolist(),scale_x=scale_x.tolist(),scale_y=scale_y.tolist(),singular_values=s.tolist(),training_rows=len(y))
+    return dict(event_basis=event_basis,interaction=interaction,mean_z=mean_z.tolist(),scale_z=scale_z.tolist(),basis=basis.tolist(),coefficients=coef.tolist(),scale_x=scale_x.tolist(),scale_y=scale_y.tolist(),singular_values=s.tolist(),training_rows=len(y))
 
 
 def repair_fit(out,args,budget):
@@ -192,7 +193,7 @@ def repair_fit(out,args,budget):
         for order in [4,6]:
             m=dict(G=G,F=F,J=fit_jump(train,'dependent'),transient=transient_fit(train,order))
             # Fit correction before adding it to model; unchanged F baseline stays exact.
-            correction=corrected_response_fit(m,train,interaction=True)
+            correction=corrected_response_fit(m,train,interaction=True,event_basis=True)
             for corrected in [False,True]:
                 if corrected:m['readout']=correction
                 name=f"transient{order}"+('-readout' if corrected else '')
@@ -217,7 +218,7 @@ def repair_fit(out,args,budget):
     for order in [4,6]:
         m=dict(G=G,F=F,J=fit_jump(rows,'dependent'),transient=transient_fit(rows,order))
         models[f'transient{order}']=dict(m)
-        m['readout']=corrected_response_fit(m,rows,interaction=True)
+        m['readout']=corrected_response_fit(m,rows,interaction=True,event_basis=True)
         models[f'transient{order}-readout']=m
     pm.save_json(out/'models.json',models);pm.save_json(out/'scores.json',scores)
     pm.save_json(out/'physical.json',physical);pm.save_json(out/'predictions.json',predictions)

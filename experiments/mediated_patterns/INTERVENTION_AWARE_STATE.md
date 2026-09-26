@@ -109,3 +109,18 @@ state-dependent readout: transient coordinates times[1, standardized current
 centers], with fixed ridge1e-4 and training-only scales. This tests ordinary
 readout curvature/interactions rather than changing physical coordinates or
 adding extraction. No new repair family, amplitude, timing or sensor search.
+
+`refine-01` costs67.931 CPU seconds. New response floors whole/late mass are
+2.339e-13/1.850e-13 and moment3.402e-13/4.525e-13. The poor small-contrast fits
+remain resolved. `repair-fit-02` interaction readout worsens worst D to430.3%;
+retain that failure. Last approximation within the readout family: drive a
+separate two-scalar response memory directly with known event strength, rather
+than asking the six geometry-optimized latent modes to encode it accurately.
+The two variables are p+=a/.02 and d+=a/.02, then p'=p and d'=exp(-1/20)*d
+per unit step. Correction features[p,d,p²,p*d] times[1,current standardized z],
+four SVD response modes, ridge1e-4. All coefficients and scales train by grouped
+preparation. The fixed20 timescale is a basis choice, not identified physical
+storage. No-event initialization p=d=0 has the same incremental meaning as r.
+Total candidate dimension is now11 scientific scalars plus the step counter.
+This is the last readout form; freeze the best grouped candidate or retain the
+restricted failure. No further architecture or data expansion is planned.
