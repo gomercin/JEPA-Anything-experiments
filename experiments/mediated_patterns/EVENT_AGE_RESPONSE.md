@@ -1,5 +1,10 @@
 # Causal event-response aging before repeated composition
 
+**Result: the fresh single-event timing contract fails.** A15-scalar causal
+construction preserves endpoint accuracy and improves age18 substantially, but
+eight resolved D1 gates remain above10%. The explicit-age comparator also fails.
+Repeated composition is therefore **not re-tested** in this task.
+
 Living prospective record opened2026-09-26 at inspected main
 `241e232723871515c70189fa130903aca4549d27`; no later continuation was present.
 Question: can a compact causal response state generalize one conditioning event
@@ -129,3 +134,161 @@ its repeated predictions would be tested only after fresh single-event success.
 This is the second bounded response-state family. No additional architecture
 search is planned if it fails. Explicit-age cubic interpolation is refit to the
 same inherited-readout residual for a competent diagnostic.
+
+## Frozen fresh result and diagnosis
+
+The selected artifact has identity
+`f6e9e97b9547e76989121e1eaa9c024392512d7f5ef219a16c0bb6709bf9e527`.
+Source commit `ab6c6ad` froze the implementation before fresh references.
+`frozen-01/freeze.json` freezes coefficients, eight response coordinates,
+preprocessing, basis, amplitudes, schedules, scoring and numerical floors.
+Three genuinely new seeds20101–20103 each supply none/odd04 initial histories.
+All36 event cases (six initial conditions × three ages × two amplitudes) are
+related within their preparation group. Each R_without is counted once per
+initial condition/age: **352/360 distinct gates pass; eight fail; none is
+sub-floor.** All216 distinct R gates pass;136/144 D1 gates pass. The raw score
+file has432 rows per comparator because the same R_without is listed for both
+amplitudes; those aliases are not extra evidence.
+
+Worst relative RMS, taking both whole and late windows and all fresh cases:
+
+| Model and target | Age10 mass/moment | Withheld age18 mass/moment | Age30 mass/moment |
+|---|---:|---:|---:|
+| Causal R_after |0.175% /0.198%|0.174% /0.199%|0.174% /0.197%|
+| Causal D1 |2.23% /2.13%|**31.78% /50.57%**|1.69% /1.45%|
+| Original nine/eleven D1 |2.23% /2.13%|452.23% /679.07%|1.69% /1.45%|
+| Explicit-age cubic D1 |4.73% /7.37%|**23.92% /38.61%**|4.59% /1.43%|
+| Exact centers + retained state D1 |17.37% /18.04%|**19.03% /33.44%**|155.15% /147.28%|
+
+The anchored model passes all grouped development gates (worst D1 8.41%).
+The privileged interpolation retains two grouped development misses, worst
+10.98%; it is not reported as a qualified oracle. On fresh data both deployed
+and privileged models fail the same eight age18 gates: seed20101, odd04,
+both conditioning signs, both outputs, both windows. The other five initial
+conditions pass their age18 gates. Thus interpolation is useful and much better
+than the old fixed timing representation, but it is **not easy enough under the
+complete10% contrast contract**. There is no claim that a larger model or a
+better interpolator could not work.
+
+Exact centers repair all four positive-amplitude age18 misses but leave all
+four negative-amplitude misses (worst33.44%). They also destroy some endpoint
+contrast accuracy that the fitted readout had with its own predicted centers.
+Geometry prediction is materially involved, while perfect terminal centers do
+not suffice for this frozen readout. The result does not isolate a necessity
+for more physical descriptors, more physical memories, or composition-specific
+variables. No third response family, fresh-triggered parameter search, or
+geometry-repair campaign was run.
+
+The first event changes the later conditional response at every tested age,
+with all D1 signals resolved under the frozen matched-history floors. Ignoring
+it has exactly zero predicted D1 and100% resolved contrast error, despite the
+large R remaining accurate. At age18, R_after RMS spans2.73e-7–3.18e-7 mass and
+8.59e-8–1.24e-7 moment. D1 RMS spans2.53e-11–2.66e-10 mass and
+7.64e-12–1.47e-10 moment. Largest causal age18 D1 RMS errors are8.07e-12 and
+5.54e-12; maximum point errors1.47e-11 and8.62e-12, respectively. The worst
+relative case is the negative event's late moment: true RMS7.728e-12,
+error3.908e-12 (50.57%), maximum residual5.889e-12. Its true late absolute peak
+is at h80; the forecast's is at h40. The sign at h80 is correct but its amplitude
+is too small. Fixed development single-event scales are saved for diagnostics;
+no normalization was changed to rescue this weak contrast.
+
+The conditional second stage is **NOT RUN**. The failed single-event contract
+blocks exposed60/80/90 and60/75/90 repeated reuse, fresh repeated seeds22101–22103,
+and composition correction. R11/D12/D2|1/K12 therefore have no new scores.
+The historical eleven-state60/80/90 success, complete60/75/90 failure, second-only
+122.3%/100.4% failure and inaccurate K12 remain unchanged. This task neither
+repairs that repeated result nor turns it into a clean composition-specific
+boundary.
+
+## Numerical and physical qualification
+
+Both age20 development and the worst fresh age18 negative-event history were
+recomputed from the saved prepared initial field, through the original write,
+t0=50, event, and probe, using half dt and doubled N. Sham branches keep the same
+integration boundaries. Frozen D1 floors are mass/moment2.39e-13/3.67e-13 whole
+and2.73e-13/4.85e-13 late. The adverse matched bounds are smaller:
+2.28e-13/3.21e-13 whole and2.32e-13/4.24e-13 late. These do **not** replace the
+prospective floors. The worst late-moment signal is about16 times its frozen
+floor and its error about8 times that floor; the failure is not numerical zero.
+Direct contrast refinement is recorded separately, never substituted for the
+triangle-propagated pair uncertainty.
+
+This qualification is empirical for matched responses. Uncorrelated absolute-Y
+bounds are much larger: adverse doubled-mesh bounds reach6.88e-6 mass and
+8.34e-8 moment. They do not certify absolute field/output trajectories or a
+continuum error theorem. The stable matched response subtraction and the much
+larger common branch drift are both retained.
+
+All new reference continuations satisfy the inherited separated-pattern regime.
+The laboratory-fixed additive event has input L2=.02, leaves m unchanged and
+has no immediate B/C center jump. Exact weighted-center jump checks remain at
+roundoff. Fresh field norms before events span5.73122–5.73328 and afterward
+5.72138–5.74317. Source increments span−.112689 to+.113489; energy increments
+span.000322946–.000340394. Equal input norm is not equal work, and trajectories
+are never renormalized.
+
+Geometry is unchanged by the response repair. Fresh maximum absolute A/B/C
+errors are5.154e-5/2.729e-5/3.506e-6, exceeding the preserved
+5e-5/2e-5/2e-6 tolerances. Maximum event-induced-motion errors are
+5.066e-5/1.869e-5/1.369e-7. The plotted weak C displacement is especially poorly
+represented. These failures, the old B/C induced-motion failures and the old
+unforced A41.8%/25.1% fractional-motion failures remain distinct from response
+accuracy. No physical-center correction was fitted in this task.
+
+## Access, state and cost accounting
+
+Acquisition remains the three weighted centers measured once at t0=50. Four
+inherited deformation coordinates and eight new response coordinates initialize
+to zero, meaning no new conditioning input since acquisition, not an equilibrated
+field. Total retained state is **15 scientific scalars plus one integer step
+counter**. Runtime never reads age, absolute time, preparation/write/seed labels,
+fields, true centers/rates, sham responses or reference corrections. The event
+slot and final boundary only dispatch advance/event calls. The final probe is a
+response readout, not another event before that readout. Every paired forecast
+is independently initialized; D1 is subtracted afterward.
+
+Active static storage is2,423 coefficient/basis/scaling/transition values:
+inherited geometry/F/J/transient856, inherited response prior780, correction783,
+and four decay factors. Three rank4×161 response-time bases are included.
+The serialized artifact has2,709 numeric values and82,743 bytes including
+training/diagnostic metadata; it is not a15-number complete program. Fixed
+anchors3, response times161, unit step and amplitude scale.02 are explicit.
+A scheduler holds one(time,amplitude) slot and a final boundary. Each readout
+produces322 values. An independent R_after/R_without comparison costs two
+40-step paths and two readouts,30 scientific scalars plus two counters if
+concurrent. Sequential execution can reuse memory but does not remove those
+operations or the output buffers. Privileged/exact-center controls are additional
+evaluator work, not runtime inputs.
+
+Each step keeps the inherited four10×3 G evaluations, two3×4 and one4×4
+geometry/deformation products, plus eight response-coordinate multiplications.
+Each event uses the inherited local A kick and4×8 deformation excitation, then
+adds b or b² to eight coordinates. Each readout uses F's10×8 coefficient product,
+two16×8 response products, three rank4 reconstructions and the small center
+projection. No reconstruction or PDE solve is hidden in these operations.
+
+All72 fresh zero/event checkpoints, taken two steps after the event boundary,
+resume bit-for-bit in a fresh isolated process containing only inference modules,
+static coefficients, retained state and permitted scheduling data. Scientific
+imports and array-file reads are denied. Synthetic tests verify intermediate
+exponential aging, no clock input, future-input independence, zero-event identity,
+segmented continuation, accumulation and serialization. Numerical self-containment
+is separate from the failed reference-accuracy contract.
+
+Science used386.71 aggregate CPU seconds (**6.45CPU minutes**), including failed
+fits, refinements, analysis, isolated continuation and a30-second startup/read-only
+inspection allowance. Fresh preparation/reference cost208.89CPU seconds; the
+largest section was7.15CPU/8.85wall seconds. The1,800CPU-second aggregate,
+120CPU/180wall section and1GiB RSS bounds were respected. The unused budget does
+not justify another architecture search after the two bounded families.
+
+[Portable evidence, exact commands and critical review](../../evidence/event-age-response-2026-09-26/README.md)
+retain every substantive stage and failed candidate. The
+[response figure](../../evidence/event-age-response-2026-09-26/figures/response-age18.png)
+separates the common R_after from D1; the
+[geometry figure](../../evidence/event-age-response-2026-09-26/figures/geometry-age18.png)
+separates true/predicted centers from event-induced motion. The figures use the
+prospectively fixed first written preparation, age18, positive amplitude.
+No full absolute-Y prediction, arbitrary stream, minimal state, identified
+physical storage, practical switch, neural advantage, spontaneous interface or
+universal closure follows. No successor is launched.

@@ -1,0 +1,36 @@
+# All science sequential. Python: repository .venv/bin/python.
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-age-mpl
+# Restore inherited evidence once, read-only thereafter:
+python evidence/repeated-intervention-state-2026-09-26/restore.py --destination /private/tmp/jepa-event-age-inherited
+
+# execution revision 02ecf88fdfb4c2e601032e964149d1ffb92c43a2
+python -m experiments.mediated_patterns.event_age_response --stage pilot --output work/mediated_patterns/event_age_response/pilot-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision db0f17fb5b7d6116b5720378f6e763abb6c362b5
+python -m experiments.mediated_patterns.event_age_response --stage develop --output work/mediated_patterns/event_age_response/develop-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision fa78fae4d8ff5e6fbca2c547090415bc50439eaf
+python -m experiments.mediated_patterns.event_age_response --stage refine --output work/mediated_patterns/event_age_response/refine-01 --data work/mediated_patterns/event_age_response/pilot-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision fa78fae4d8ff5e6fbca2c547090415bc50439eaf
+python -m experiments.mediated_patterns.event_age_response --stage fit --output work/mediated_patterns/event_age_response/fit-two-01 --data work/mediated_patterns/event_age_response/develop-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision 53ca24188e902b709b378aba41e1a28222932b70
+python -m experiments.mediated_patterns.event_age_response --stage fit --output work/mediated_patterns/event_age_response/fit-conditioned-01 --data work/mediated_patterns/event_age_response/develop-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision 4231aac19f7c2ee7f914e74992026cb56303e8bc
+python -m experiments.mediated_patterns.event_age_response --stage fit --anchored --output work/mediated_patterns/event_age_response/fit-anchored-01 --data work/mediated_patterns/event_age_response/develop-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision ab6c6ad064030238cc210c309fecd946c1cdbac3
+python -m experiments.mediated_patterns.event_age_response --stage freeze --output work/mediated_patterns/event_age_response/frozen-01 --data work/mediated_patterns/event_age_response/fit-anchored-01 --freeze work/mediated_patterns/event_age_response/refine-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision ab6c6ad064030238cc210c309fecd946c1cdbac3
+python -m experiments.mediated_patterns.event_age_response --stage fresh --output work/mediated_patterns/event_age_response/fresh-01 --freeze work/mediated_patterns/event_age_response/frozen-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# execution revision ab6c6ad064030238cc210c309fecd946c1cdbac3
+python -m experiments.mediated_patterns.event_age_response --stage analyze --output work/mediated_patterns/event_age_response/fresh-analysis-01 --data work/mediated_patterns/event_age_response/fresh-01 --freeze work/mediated_patterns/event_age_response/frozen-01 --inherited /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+python evidence/event-age-response-2026-09-26/runtime_audit.py --data work/mediated_patterns/event_age_response/fresh-01 --freeze work/mediated_patterns/event_age_response/frozen-01 --output work/mediated_patterns/event_age_response/runtime-audit.json
+PYTHONPATH=. python evidence/event-age-response-2026-09-26/refine_adverse.py --output work/mediated_patterns/event_age_response/adverse-refine-01
+python evidence/event-age-response-2026-09-26/summarize.py
+# Repeated stages deliberately NOT RUN: single-event decision false.

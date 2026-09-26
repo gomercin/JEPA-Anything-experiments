@@ -188,3 +188,14 @@ def test_linear_realization_of_inherited_single_event():
             state.event(-0.02)
             state.advance(age)
         np.testing.assert_array_equal(s.response(), old.response())
+
+
+def test_repeated_stage_blocked_by_failed_single_event(tmp_path):
+    from types import SimpleNamespace
+
+    from experiments.mediated_patterns.event_age_analysis import repeated
+
+    (tmp_path / "decision.json").write_text(json.dumps({"single_event_pass": False}))
+    with pytest.raises(ValueError, match="single-event"):
+        repeated(tmp_path / "unused", SimpleNamespace(data=tmp_path), None)
+    assert not (tmp_path / "unused").exists()

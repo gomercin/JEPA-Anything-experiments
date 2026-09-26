@@ -291,6 +291,7 @@ def fresh(out, args, budget):
     if (
         frozen["sources"] != source_hashes()
         or gm.identity(candidate) != frozen["model_sha256"]
+        or gm.identity(diagnostic) != frozen["diagnostic_sha256"]
         or set(DEV) & set(FRESH)
     ):
         raise ValueError("Frozen sources/model/groups changed")
