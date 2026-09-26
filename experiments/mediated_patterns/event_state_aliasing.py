@@ -315,6 +315,7 @@ def main():
             "fresh",
             "analyze",
             "pairs",
+            "retention",
         ],
     )
     p.add_argument("--output", type=Path, required=True)

@@ -371,3 +371,42 @@ def figures(out, y, prediction, rows):
     fig.suptitle("Fresh fixed-age snapshot assay: solid reference; dashed prediction")
     fig.savefig(out / "fresh-responses.png", dpi=160)
     plt.close(fig)
+
+
+def retention(out, args, budget):
+    """Exposed diagnostic only; no added coordinates or refitting."""
+    from .repeated_intervention_state import model as original_model
+
+    if load(ROOT / "fresh-analysis-01/summary.json")["failed"]:
+        raise ValueError("Snapshot single-event qualification required")
+    model = load(args.freeze / "model.json")
+    if model["feature_set"] != "centers":
+        raise ValueError("Only unchanged center evolution is specified here")
+    budget.begin("unchanged-G-exposed-retention-diagnostic")
+    base = args.data
+    starts = arrays(base / "boundary-50.npz")["states"]
+    initial = np.array([pm.extract(s, feature_set="geometry") for s in starts])
+    g = original_model()["G"]
+    trajectories = np.array([gm.rollout(g, z, np.arange(23)) for z in initial])
+    forecasts = prediction(model, trajectories[:, -1])
+    save_npz(out / "predictions.npz", initial=initial, z=trajectories, y=forecasts)
+    # Only after the predictions are saved does this function read later truth.
+    true_x = arrays(base / "descriptors.npz")["x"][:, :3]
+    y = arrays(base / "targets.npz")["y"]
+    rows = load(base / "rows.json")
+    frozen = load(args.freeze / "freeze.json")
+    records = gates(y, forecasts, rows, frozen["floors"])
+    pm.save_json(out / "scores.json", records)
+    pm.save_json(
+        out / "summary.json",
+        dict(
+            summary(records),
+            max_center_error=abs(trajectories[:, -1] - true_x).max(0).tolist(),
+            actual_motion=(true_x - initial).tolist(),
+            errors=(trajectories[:, -1] - true_x).tolist(),
+            G_sha256=gm.identity(g),
+            model_sha256=gm.identity(model),
+            exposure="exposed snapshot fresh panel; diagnostic, not fresh once-measured qualification",
+        ),
+    )
+    budget.finish()
