@@ -58,34 +58,39 @@ def source_hashes():
     return {p.name: digest(p) for p in Path(__file__).parent.glob("*.py")}
 
 
-def predictions(out, starts, rows, schedules, budget):
+def predictions(out, starts, rows, schedules, budget, selected=None):
     budget.begin("seal-all-prefix-predictions")
     z = np.array([pm.extract(s, feature_set="geometry") for s in starts])
     save_npz(out / "initial-descriptors.npz", z=z)
     pm.save_json(out / "rows.json", rows)
-    for i, z0 in enumerate(z):
-        for s in schedules:
-            trajectories, responses = [], []
-            for j, flags in enumerate(rm.PREFIXES):
-                amplitudes = [
-                    a * b for a, b in zip(s["amplitudes"], flags, strict=True)
-                ]
+    candidates = {"": model()}
+    if selected is not None:
+        candidates["-selected"] = selected
+    for suffix, candidate in candidates.items():
+        for i, z0 in enumerate(z):
+            for s in schedules:
+                trajectories, responses = [], []
+                for j, flags in enumerate(rm.PREFIXES):
+                    amplitudes = [
+                        a * b for a, b in zip(s["amplitudes"], flags, strict=True)
+                    ]
 
-                def checkpoint(state, i=i, name=s["name"], j=j):
-                    state.checkpoint(
-                        out / f"checkpoint-{i}-{name}-{j}-t{state.flow.steps}.json"
+                    def checkpoint(state, i=i, name=s["name"], j=j, suffix=suffix):
+                        state.checkpoint(
+                            out
+                            / f"checkpoint-{i}-{name}-{j}{suffix}-t{state.flow.steps}.json"
+                        )
+
+                    tr, y = rm.forecast(
+                        candidate, z0, s["times"], amplitudes, checkpoint=checkpoint
                     )
-
-                tr, y = rm.forecast(
-                    model(), z0, s["times"], amplitudes, checkpoint=checkpoint
+                    trajectories.append(tr)
+                    responses.append(y)
+                save_npz(
+                    out / f"prediction-{i}-{s['name']}{suffix}.npz",
+                    trajectory=trajectories,
+                    y=responses,
                 )
-                trajectories.append(tr)
-                responses.append(y)
-            save_npz(
-                out / f"prediction-{i}-{s['name']}.npz",
-                trajectory=trajectories,
-                y=responses,
-            )
     pm.save_json(
         out / "seal.json",
         {
@@ -96,7 +101,10 @@ def predictions(out, starts, rows, schedules, budget):
                 p.name: digest(p) for p in sorted(out.glob("checkpoint-*.json"))
             },
             "initialization_sha256": digest(out / "initial-descriptors.npz"),
-            "model_sha256": SELECTED_SHA,
+            "model_sha256": gm.identity(selected)
+            if selected is not None
+            else SELECTED_SHA,
+            "original_selected_sha256": SELECTED_SHA,
             "order": "All independently initialized prefix forecasts saved before any future reference arrays",
         },
     )
@@ -165,9 +173,11 @@ def panel(out, args, budget):
         frozen = load(args.freeze / "freeze.json")
         if (
             frozen["sources"] != source_hashes()
-            or frozen["selected_sha256"] != SELECTED_SHA
+            or frozen["original_selected_sha256"] != SELECTED_SHA
         ):
             raise ValueError("Frozen source/model mismatch")
+        if gm.identity(load(args.freeze / "model.json")) != frozen["selected_sha256"]:
+            raise ValueError("Selected artifact changed")
         if set(FRESH) & set(DEV) or frozen["fresh_seeds"] != FRESH:
             raise ValueError("Grouped exposure split changed")
         starts, rows = [], []
@@ -198,7 +208,14 @@ def panel(out, args, budget):
         if args.stage == "pilot":
             starts, rows = starts[1:2], rows[1:2]
         schedules = SCHEDULES
-    predictions(out, starts, rows, schedules, budget)
+    predictions(
+        out,
+        starts,
+        rows,
+        schedules,
+        budget,
+        load(args.freeze / "model.json") if args.stage == "fresh" else None,
+    )
     references(out, starts, rows, schedules, budget)
 
 
@@ -279,12 +296,15 @@ def freeze(out, args, budget):
                 scales[window],
                 np.max([rms((y[1] - y[0])[sl]), rms((y[2] - y[0])[sl])], axis=0),
             )
-    pm.save_json(out / "model.json", model())
+    candidate = load(ROOT / "separate-squares-01/model.json")
+    pm.save_json(out / "model.json", candidate)
+    pm.save_json(out / "original.json", model())
     pm.save_json(
         out / "freeze.json",
         {
-            "selected": "unchanged-nine",
-            "selected_sha256": SELECTED_SHA,
+            "selected": "separate-squares",
+            "selected_sha256": gm.identity(candidate),
+            "original_selected_sha256": SELECTED_SHA,
             "original_file_sha256": MODEL_SHA,
             "sources": source_hashes(),
             "development_seeds": DEV,
@@ -292,7 +312,7 @@ def freeze(out, args, budget):
             "schedules": [*SCHEDULES, WITHHELD],
             "t0": 50,
             "probe_time": 90,
-            "initial_measurement": "three centers; six auxiliary zeros",
+            "initial_measurement": "three centers; eight auxiliary zeros for selected, six for original",
             "runtime_step": 1,
             "floors": load(args.data / "refinement.json"),
             "R_limit": 0.02,

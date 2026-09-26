@@ -104,7 +104,8 @@ def test_safe_output(tmp_path):
     np.testing.assert_array_equal(np.load(path)["x"], [1])
 
 
-def test_fresh_solver_free_checkpoint_resume(tmp_path):
+@pytest.mark.parametrize("extended", [False, True])
+def test_fresh_solver_free_checkpoint_resume(tmp_path, extended):
     # Copy only inference modules/model/JSON checkpoint. No field files, SciPy,
     # or evaluator module exists in the isolated runtime's module namespace.
     package = tmp_path / "runtime"
@@ -117,9 +118,12 @@ def test_fresh_solver_free_checkpoint_resume(tmp_path):
         "present_state_model",
         "measurements",
         "repeated_intervention_model",
+        "repeated_intervention_extension",
     ]:
         shutil.copyfile(source / f"{name}.py", package / f"{name}.py")
     m, z = model(), np.array([0.001, 0.01, -0.002])
+    if extended:
+        m["repeated_extension"] = "separate-squared-amplitude"
     (tmp_path / "model.json").write_text(json.dumps(m))
     checkpoints = []
 
@@ -139,10 +143,10 @@ def guarded(name,*args,**kwargs):
     return original(name,*args,**kwargs)
 builtins.__import__=guarded
 from runtime.intervention_model import State
-from runtime.repeated_intervention_model import continue_state
+from runtime.repeated_intervention_model import continue_state,state_class
 model=json.load(open('model.json'))
 checkpoint=json.load(open(sys.argv[1]))
-state=State.restore(model,checkpoint)
+state=state_class(model).restore(model,checkpoint)
 _,y=continue_state(state,[10,30],[.02,-.02],40)
 print(json.dumps(y.tolist()))
 """
@@ -152,3 +156,31 @@ print(json.dumps(y.tolist()))
             [sys.executable, "-I", "resume.py", cp], cwd=tmp_path, text=True
         )
         np.testing.assert_array_equal(json.loads(output), expected)
+
+
+def test_squared_accumulation_and_train_only_scalar_fit():
+    from experiments.mediated_patterns.repeated_intervention_repair import fit_alpha
+
+    m = model()
+    m["repeated_extension"] = "separate-squared-amplitude"
+    state = rm.state_class(m)(m, np.array([0.001, 0.01, -0.002]))
+    state.event(0.02)
+    state.advance(20)
+    state.event(-0.02)
+    np.testing.assert_allclose(state.squared_memory, [2, 1 + np.exp(-1)], rtol=1e-15)
+    assert state.response_memory[0] == 0
+    before = state.squared_memory.copy()
+    state.event(0)
+    np.testing.assert_array_equal(before, state.squared_memory)
+    examples = [
+        {
+            "seed": s,
+            "delta": np.ones((4, 2)),
+            "target": np.ones((4, 2)) * v,
+            "truth_k": np.ones((4, 2)),
+        }
+        for s, v in [(1, 2.0), (2, 100.0)]
+    ]
+    assert fit_alpha(examples, {1}, 0) == 2
+    examples[1]["target"] *= 1000
+    assert fit_alpha(examples, {1}, 0) == 2

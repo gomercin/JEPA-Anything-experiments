@@ -140,7 +140,22 @@ def analyze(out, args, budget):
             allow_pickle=False,
         )
         pred, tr = saved["y"], saved["trajectory"]
-        for name, p in rm.comparators(pred).items():
+        candidates = rm.comparators(pred)
+        selected_path = (
+            data / f"prediction-{case['index']}-{meta['schedule']}-selected.npz"
+        )
+        if selected_path.exists():
+            selected = np.load(selected_path, allow_pickle=False)
+            candidates["separate-squares"] = selected["y"]
+            ranges.append(
+                dict(
+                    **meta,
+                    model="separate-squares",
+                    min=selected["trajectory"].min(axis=(0, 1)).tolist(),
+                    max=selected["trajectory"].max(axis=(0, 1)).tolist(),
+                )
+            )
+        for name, p in candidates.items():
             for s in score(y, p, floors):
                 if args.freeze:
                     scale = load(args.freeze / "freeze.json")[
@@ -190,7 +205,7 @@ def analyze(out, args, budget):
     pm.save_json(out / "identities.json", identities)
     pm.save_json(out / "state-ranges.json", ranges)
     summary = {}
-    for model_name in rm.comparators(np.zeros((4, 161, 2))):
+    for model_name in sorted({s["model"] for s in all_scores}):
         summary[model_name] = {}
         for kind in rm.CONTRASTS:
             ss = [
@@ -241,6 +256,15 @@ def analyze(out, args, budget):
                     ":",
                     label="single-event addition",
                 )
+                selected_path = data / f"prediction-0-{s}-selected.npz"
+                if selected_path.exists():
+                    selected = np.load(selected_path)["y"]
+                    ax.plot(
+                        pm.TIMES,
+                        rm.contrasts(selected)[kind][:, o],
+                        "-.",
+                        label="eleven-state",
+                    )
                 ax.set_ylabel(kind + " " + ["mass", "moment"][o])
                 ax.legend(fontsize=7)
         for ax in axes[-1]:

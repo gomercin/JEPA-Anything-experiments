@@ -142,3 +142,14 @@ not change geometry, G, J or the four deformation coordinates. It adds two
 scientific scalars (eleven total) but fits no new coefficient. For one isolated
 event q=p² and e=p*d analytically; verify the saved panel numerically. This is
 composition-informed and no longer unchanged nine-state reuse. No third repair.
+
+The second family passes all development main gates: R11 .4055%, D12 6.8338%,
+D2|1 5.3469%, with no saved one-event gate lost and exactly zero maximum change
+to those old one-event forecasts. Select this eleven-scalar separate-square
+candidate for fresh access. Its K12 is still inaccurate (worst raw relative1.48),
+so no preservation of nonlinear combination is claimed. This construction is
+useful approximate addition; the original and independent-addition comparators
+remain alongside it. No third family, further fitting, or fresh-triggered repair
+is authorized by this record. New seeds and the single withheld timing remain
+18101–18103 and60/75/90(+.02,-.02). Freeze hashes, preprocessing, schedules,
+floors, scores and both original/selected models before their preparation.
