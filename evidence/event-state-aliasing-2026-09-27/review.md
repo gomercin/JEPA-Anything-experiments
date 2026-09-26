@@ -71,3 +71,13 @@ plotter; its README caption explicitly identifies G-propagated inputs.
 Local full-suite results, remote retrieval and hosted CI are recorded alongside
 the final reviewed head in the PR. Merge is conditional on their completion and
 a live unchanged head/base check, without protection bypass.
+
+Hosted Linux CI at initial head 45547d7 exposed cross-platform last-bit differences
+in the matching norm and response matrix products (maximum response difference
+1.06e-22). The portability assertions now use relative 1e-12 / absolute 1e-22
+response tolerance, many orders below the scientific floors; selector numeric
+values use relative 1e-14. Hashes, pair order, near flags and pass decisions stay
+exact. Each isolated process additionally compares resumed and uninterrupted G
+states bit-exactly on its own platform. Frozen arrays, coefficients, scientific
+metrics and archive bytes were not changed. Affected replay tests were rechecked
+locally and exact-head hosted CI was required again.

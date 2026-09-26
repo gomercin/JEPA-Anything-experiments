@@ -60,10 +60,18 @@ def test_response_blind_selection_and_grouped_preprocessing(data):
     expected = sm.choose_pairs(
         x["x"], [r["seed"] for r in rows], x["extraction_uncertainty"].max(0)[:3]
     )
-    assert expected["all_pairs"] == [
-        {k: row[k] for k in expected_row}
-        for row, expected_row in zip(s["all_pairs"], expected["all_pairs"], strict=True)
-    ]
+    for row, expected_row in zip(s["all_pairs"], expected["all_pairs"], strict=True):
+        assert row["indices"] == expected_row["indices"]
+        assert row["near"] == expected_row["near"]
+        for key in [
+            "distance",
+            "normalized_max",
+            "uncertainty_distance",
+            "overlap_difference",
+        ]:
+            np.testing.assert_allclose(
+                row[key], expected_row[key], rtol=1e-14, atol=1e-24
+            )
     assert [r["indices"] for r in expected["candidate_pairs"]] == [
         r["indices"] for r in s["candidate_pairs"]
     ]
@@ -72,7 +80,7 @@ def test_response_blind_selection_and_grouped_preprocessing(data):
         np.testing.assert_array_equal(
             pair["descriptor_difference"], x["x"][i] - x["x"][j]
         )
-    assert expected["scale"] == s["scale"]
+    np.testing.assert_allclose(expected["scale"], s["scale"], rtol=1e-14, atol=1e-24)
     assert load(data / "responses-01/selection-copy.json") == s
     for folder in data.glob("fit-*"):
         selected = load(folder / "selection.json")
@@ -104,7 +112,7 @@ def test_snapshot_freeze_prediction_and_scores(data):
     }
     x = arrays(fresh / "descriptors.npz")["x"]
     p = arrays(fresh / "predictions.npz")["y"]
-    np.testing.assert_array_equal(prediction(m, x), p)
+    np.testing.assert_allclose(prediction(m, x), p, rtol=1e-12, atol=1e-22)
     y = arrays(fresh / "targets.npz")["y"]
     for i in range(len(rows)):
         for j, a in enumerate([0.0, -0.02, 0.02]):
@@ -112,8 +120,10 @@ def test_snapshot_freeze_prediction_and_scores(data):
                 paired(fresh / f"reference-{i}-{a:g}.npz")["response"], y[i, j]
             )
     actual = gates(y, p, rows, f["floors"])
-    assert actual == load(data / "fresh-analysis-01/scores.json")
-    assert summary(actual) == load(data / "fresh-analysis-01/summary.json")
+    numeric_records_equal(actual, load(data / "fresh-analysis-01/scores.json"))
+    numeric_records_equal(
+        summary(actual), load(data / "fresh-analysis-01/summary.json")
+    )
     body = Path("experiments/mediated_patterns/event_state_analysis.py").read_text()
     body = body[body.index("def fresh(") : body.index("def analyze(")]
     assert body.index('"seal.json"') < body.rindex("response_pair(")
@@ -164,7 +174,7 @@ def test_retained_fresh_seals_and_replay(data, tmp_path):
     p = arrays(fresh / "predictions.npz")["y"]
     y = arrays(fresh / "targets.npz")["y"]
     records = gates(y, p, rows, f["floors"])
-    assert records == load(data / "retained-analysis-01/scores.json")
+    numeric_records_equal(records, load(data / "retained-analysis-01/scores.json"))
     for i in range(len(rows)):
         for j, a in enumerate([0.0, -0.02, 0.02]):
             np.testing.assert_array_equal(
@@ -196,14 +206,35 @@ from runtime.geometry_model import Continuation
 from runtime.event_state_model import predict
 s=Continuation.restore(json.load(open('G.json')),json.load(open('checkpoint.json')))
 z=s.advance(12);m=json.load(open('model.json'))
+import numpy as np
+u=Continuation(json.load(open('G.json')),json.load(open('initial.json')))
+np.testing.assert_array_equal(z,u.advance(22))
 print(json.dumps([predict(m,z,a).tolist() for a in [0.,-.02,.02]]))
 """
     (tmp_path / "resume.py").write_text(script)
+    initial = arrays(fresh / "initial-descriptors.npz")["x"]
     for i in range(len(rows)):
+        (tmp_path / "initial.json").write_text(json.dumps(initial[i].tolist()))
         cp = fresh / f"checkpoint-{i}.json"
         assert digest(cp) == seal["checkpoints"][cp.name]
         (tmp_path / "checkpoint.json").write_bytes(cp.read_bytes())
         result = subprocess.check_output(
             [sys.executable, "-I", "resume.py"], cwd=tmp_path, text=True
         )
-        np.testing.assert_array_equal(json.loads(result), p[i])
+        np.testing.assert_allclose(json.loads(result), p[i], rtol=1e-12, atol=1e-22)
+
+
+def numeric_records_equal(actual, expected):
+    """Decision/identity exact; arithmetic portable far below scientific floors."""
+    if isinstance(expected, dict):
+        assert actual.keys() == expected.keys()
+        for key in expected:
+            numeric_records_equal(actual[key], expected[key])
+    elif isinstance(expected, list):
+        assert len(actual) == len(expected)
+        for a, b in zip(actual, expected, strict=True):
+            numeric_records_equal(a, b)
+    elif isinstance(expected, float):
+        np.testing.assert_allclose(actual, expected, rtol=1e-12, atol=1e-24)
+    else:
+        assert actual == expected
