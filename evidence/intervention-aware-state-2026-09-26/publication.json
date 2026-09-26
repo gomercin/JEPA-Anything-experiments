@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "lab_pr": "https://github.com/gomercin/JEPA-Anything-experiments/pull/8",
+  "remote_retrieval": {
+    "source_head": "5d1d85edda4aa03c1b9a0458f55b1fff88345204",
+    "method": "new shallow sparse clone from GitHub, only the new evidence package",
+    "members": 504,
+    "bytes": 23830038,
+    "manifest_sha256": "473c8040e269e8161f3a3fb3b6d30132840c80c4c33c401645b1102ba256cea1",
+    "verified_all_sizes_and_sha256": true,
+    "scientific_reruns": 0
+  },
+  "local_validation": {
+    "make_check": "PASS",
+    "tests_passed": 286,
+    "subtests_passed": 2,
+    "historical_manifest_skip": 1,
+    "historical_scientific_cli_deselected": 1,
+    "selected_fresh_process_checkpoints_exact": 24
+  },
+  "merge_confirmation": "Recorded in PR comments after guarded merge; no metadata-only successor PR."
+}

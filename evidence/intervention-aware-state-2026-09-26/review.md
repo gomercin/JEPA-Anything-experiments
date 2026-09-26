@@ -80,3 +80,11 @@ under refinement. This boundary is shown explicitly in the geometry figure.
 The supplemental larger numerical floor does not change any conclusion. No
 fresh-driven fitting occurred and the larger fresh-better control is not
 retroactively selected. All original source/artifact bytes are unchanged.
+
+Final local validation: `make check` passes286 tests plus two subtests, with one
+existing unavailable-manifest skip and one intentionally excluded historical
+scientific CLI panel. The new three evidence tests replay all scores and hashes.
+A fresh GitHub sparse clone independently retrieves all504 members/23,830,038
+bytes and verifies every size/SHA256 at5d1d85e. No historical corpus is audited
+or scientific panel rerun for this retrieval. Live CI/base/head state is checked
+at merge time and merge confirmations are posted on the PRs.
