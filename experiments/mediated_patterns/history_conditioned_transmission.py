@@ -370,16 +370,21 @@ def screen(out, data, budget):
             budget.check()
     a = np.asarray(absolute)
     r0, rw = a[:, 1] - a[:, 0], a[:, 3] - a[:, 2]
-    arrays = dict(
-        absolute=a,
-        absolute_time=np.asarray(times),
-        unwritten=r0,
-        written=rw,
-        delta=rw - r0,
-        initial=np.asarray(starts),
-        final=np.fft.irfft(v, n=CFG.n),
+    arrays = {
+        "absolute": a,
+        "absolute_time": np.asarray(times),
+        "unwritten": r0,
+        "written": rw,
+        "delta": rw - r0,
+        "initial": np.asarray(starts),
+        "final": np.fft.irfft(v, n=CFG.n),
+    }
+    save(
+        out,
+        "screen",
+        arrays,
+        {"jumps": jumps, "probe_time": 100.0, "config": asdict(CFG)},
     )
-    save(out, "screen", arrays, dict(jumps=jumps, probe_time=100.0, config=asdict(CFG)))
     budget.finish()
     print(
         json.dumps(

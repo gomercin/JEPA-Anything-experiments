@@ -101,3 +101,10 @@ slow displacement-like carrier; it does not establish a permanent mode. Select
 the odd .4 pulse without changing waits, sensors or bounds. Run one late (T=100)
 full-field four-branch screen before the full response/control panel. No new
 write amplitude or family is needed. Keep the even candidate in the evidence.
+
+The T=100 screen (`screen-01`, d5247b1) gives Delta_R RMS 2.3511e-8
+(mass) and 1.5834e-8 (moment), versus R0 3.0366e-7 and 1.0190e-7.
+These candidate 7.7%/15.5% changes justify the three-delay matched-history
+panel and the selected feedback-expression diagnostic. Numerical resolution
+remains provisional until the full-history refinement below. This is not an
+engineering threshold or a claim of practical receiver use.
