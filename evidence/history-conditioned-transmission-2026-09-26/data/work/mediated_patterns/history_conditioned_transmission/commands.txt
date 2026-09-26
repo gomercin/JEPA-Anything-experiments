@@ -1,0 +1,22 @@
+Working directory: /private/tmp/jepa-history-conditioned-transmission
+Integration: 44e44a9c2fc3d7d4fecaab20f7a61f515fde0df9
+Interpreter: /Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/.venv/bin/python
+Every scientific command used OPENBLAS_NUM_THREADS=1. For reproduction, PYTHON
+below denotes that interpreter (or an environment with experiments/requirements.txt).
+Each stage protocol pins the actual execution revision and source hashes; use
+that revision's files rather than assigning the final publication revision.
+
+# 667fc7c
+OPENBLAS_NUM_THREADS=1 $PYTHON -m experiments.mediated_patterns.history_conditioned_transmission pilot --output work/mediated_patterns/history_conditioned_transmission/pilot-01
+# d5247b1
+OPENBLAS_NUM_THREADS=1 $PYTHON -m experiments.mediated_patterns.history_conditioned_transmission screen --data work/mediated_patterns/history_conditioned_transmission/pilot-01 --output work/mediated_patterns/history_conditioned_transmission/screen-01
+# de30719
+OPENBLAS_NUM_THREADS=1 $PYTHON -m experiments.mediated_patterns.history_conditioned_transmission develop --data work/mediated_patterns/history_conditioned_transmission/pilot-01 --output work/mediated_patterns/history_conditioned_transmission/develop-01
+# 3c4d9c5
+OPENBLAS_NUM_THREADS=1 $PYTHON -m experiments.mediated_patterns.history_conditioned_transmission refine --data work/mediated_patterns/history_conditioned_transmission/pilot-01 --output work/mediated_patterns/history_conditioned_transmission/refine-01
+# 945c2ff
+OPENBLAS_NUM_THREADS=1 $PYTHON -m experiments.mediated_patterns.history_analysis freeze --data work/mediated_patterns/history_conditioned_transmission/develop-01 --refinement work/mediated_patterns/history_conditioned_transmission/refine-01 --output work/mediated_patterns/history_conditioned_transmission/frozen-01
+OPENBLAS_NUM_THREADS=1 $PYTHON -m experiments.mediated_patterns.history_conditioned_transmission fresh --freeze work/mediated_patterns/history_conditioned_transmission/frozen-01 --output work/mediated_patterns/history_conditioned_transmission/fresh-01
+OPENBLAS_NUM_THREADS=1 $PYTHON -m experiments.mediated_patterns.history_analysis analyze --data work/mediated_patterns/history_conditioned_transmission/fresh-01 --freeze work/mediated_patterns/history_conditioned_transmission/frozen-01 --output work/mediated_patterns/history_conditioned_transmission/analysis-01
+
+The freeze/analyze stdout was redirected to /private/tmp/history-freeze.log and /private/tmp/history-analysis.log; all substantive values are in their JSON files. The analysis emitted a nonfatal Matplotlib/font-cache warning and used its temporary cache; no scientific run was restarted. Fast checks: make check PYTHON=$PYTHON; scoped Ruff; git diff --check.

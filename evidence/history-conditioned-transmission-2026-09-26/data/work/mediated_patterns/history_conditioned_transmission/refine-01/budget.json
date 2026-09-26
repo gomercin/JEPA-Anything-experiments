@@ -1,0 +1,79 @@
+{
+  "cpu_seconds": 278.099816,
+  "wall_seconds": 278.8583440829825,
+  "previous_cpu_seconds": 135.78417199999998,
+  "limit_cpu_seconds": 1200,
+  "sections": [
+    {
+      "task": "s8101-half-dt-history",
+      "cpu_seconds": 17.692329,
+      "wall_seconds": 17.7029467090033
+    },
+    {
+      "task": "s8101-half-dt-t10-unwritten",
+      "cpu_seconds": 22.359958,
+      "wall_seconds": 22.36914708398399
+    },
+    {
+      "task": "s8101-half-dt-t10-written",
+      "cpu_seconds": 22.555882999999994,
+      "wall_seconds": 22.706637124996632
+    },
+    {
+      "task": "s8101-half-dt-t50-unwritten",
+      "cpu_seconds": 22.214952999999994,
+      "wall_seconds": 22.216181125026196
+    },
+    {
+      "task": "s8101-half-dt-t50-written",
+      "cpu_seconds": 22.158124,
+      "wall_seconds": 22.162080582987983
+    },
+    {
+      "task": "s8101-half-dt-t100-unwritten",
+      "cpu_seconds": 22.20582999999999,
+      "wall_seconds": 22.20917625000584
+    },
+    {
+      "task": "s8101-half-dt-t100-written",
+      "cpu_seconds": 22.177262999999982,
+      "wall_seconds": 22.189633375004632
+    },
+    {
+      "task": "s8101-double-n-history",
+      "cpu_seconds": 14.11040700000001,
+      "wall_seconds": 14.112009125004988
+    },
+    {
+      "task": "s8101-double-n-t10-unwritten",
+      "cpu_seconds": 18.748426999999992,
+      "wall_seconds": 18.749753042007796
+    },
+    {
+      "task": "s8101-double-n-t10-written",
+      "cpu_seconds": 18.727339,
+      "wall_seconds": 18.72888233399135
+    },
+    {
+      "task": "s8101-double-n-t50-unwritten",
+      "cpu_seconds": 18.778654999999986,
+      "wall_seconds": 18.779675208992558
+    },
+    {
+      "task": "s8101-double-n-t50-written",
+      "cpu_seconds": 18.811874999999986,
+      "wall_seconds": 18.81395770900417
+    },
+    {
+      "task": "s8101-double-n-t100-unwritten",
+      "cpu_seconds": 18.760539999999992,
+      "wall_seconds": 18.76131308299955
+    },
+    {
+      "task": "s8101-double-n-t100-written",
+      "cpu_seconds": 18.717786000000046,
+      "wall_seconds": 18.718999208009336
+    }
+  ],
+  "status": "COMPLETE"
+}
