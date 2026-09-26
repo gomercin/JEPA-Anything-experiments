@@ -381,6 +381,7 @@ def main():
             "fresh",
             "analyze",
             "repeated",
+            "repeated_fresh",
         ],
     )
     p.add_argument("--output", type=Path, required=True)
@@ -403,7 +404,10 @@ def main():
     os.close(fd)
     previous = 30 + sum(load(p)["cpu_seconds"] for p in ROOT.glob("*/budget.json"))
     budget = HistoryBudget(
-        previous, 1800 if args.stage in ["fresh", "analyze", "repeated"] else 1200
+        previous,
+        1800
+        if args.stage in ["fresh", "analyze", "repeated", "repeated_fresh"]
+        else 1200,
     )
     started = False
     status = "FAILED"
@@ -425,7 +429,7 @@ def main():
         )
         model()
         budget.check()
-        if args.stage in ["fit", "freeze", "analyze", "repeated"]:
+        if args.stage in ["fit", "freeze", "analyze", "repeated", "repeated_fresh"]:
             from . import event_age_analysis as ea
 
             getattr(ea, args.stage)(args.output, args, budget)

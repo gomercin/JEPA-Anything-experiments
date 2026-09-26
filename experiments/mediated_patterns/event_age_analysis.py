@@ -391,6 +391,7 @@ def analyze(out, args, budget):
             "unresolved": sum(r["passed"] is None for r in selected),
         },
     )
+    figures(out, data, args.freeze)
     budget.finish()
 
 
@@ -459,3 +460,154 @@ def repeated(out, args, budget):
         },
     )
     budget.finish()
+
+
+def figures(out, data, frozen):
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    cases = load(data / "cases.json")
+    # Fixed first written preparation, withheld age and positive event; no sensor selection.
+    c = next(c for c in cases if c["index"] == 1 and c["age"] == 18 and c["a"] == 0.02)
+    ds = [paired(data / (n + ".npz")) for n in c["prefixes"]]
+    y = np.array([d["response"] for d in ds])
+    z = np.array([d["z"] for d in ds])
+    p = arrays(data / (c["prediction"] + ".npz"))
+    m = load(frozen / "model.json")
+    exact = np.array(
+        [em.readout(m, z[i, -1], p["response_state"][i]) for i in range(2)]
+    )
+    fig, axes = plt.subplots(2, 2, figsize=(10, 6), constrained_layout=True)
+    for o, name in enumerate(["C mass", "C signed moment"]):
+        for j, kind in enumerate(["R_after", "D1"]):
+            ax = axes[j, o]
+            for label, a in [
+                ("truth", y),
+                ("causal", p["y"]),
+                ("original9/11", p["original"]),
+                ("explicit age", p["privileged"]),
+                ("exact centers", exact),
+            ]:
+                value = a[1] if j == 0 else a[1] - a[0]
+                ax.plot(
+                    pm.TIMES,
+                    value[:, o],
+                    label=label,
+                    lw=1.4,
+                    ls="-" if label == "truth" else "--",
+                )
+            ax.set(title=f"{kind}: {name}", xlabel="Time since diagnostic probe")
+            ax.ticklabel_format(axis="y", style="sci", scilimits=(0, 0))
+    axes[0, 0].legend(fontsize=8)
+    fig.suptitle("Fresh 20101 odd04; event at72, probe90; +.02 conditioning")
+    fig.savefig(out / "response-age18.png", dpi=160)
+    plt.close(fig)
+    fig, axes = plt.subplots(2, 3, figsize=(12, 6), constrained_layout=True)
+    for k, name in enumerate("ABC"):
+        axes[0, k].plot(np.arange(41) + 50, z[1, :, k], label="true post-event history")
+        axes[0, k].plot(
+            np.arange(41) + 50, p["trajectory"][1, :, k], ls="--", label="predicted"
+        )
+        axes[1, k].plot(np.arange(41) + 50, (z[1] - z[0])[:, k])
+        axes[1, k].plot(
+            np.arange(41) + 50, (p["trajectory"][1] - p["trajectory"][0])[:, k], ls="--"
+        )
+        for j in [0, 1]:
+            axes[j, k].axvline(72, color="gray", lw=0.7)
+            axes[j, k].set(
+                title=f"{name}: "
+                + ("center offset" if j == 0 else "event-induced motion"),
+                xlabel="Absolute time",
+            )
+    axes[0, 0].legend(fontsize=8)
+    fig.savefig(out / "geometry-age18.png", dpi=160)
+    plt.close(fig)
+
+
+def repeated_fresh(out, args, budget):
+    from .geometry_assay import initialize_written
+    from .geometry_evolution import unforced
+    from .organization_response import isolated_components
+    from .repeated_intervention_state import references
+    from .simulator import Field
+    from .source_receiver_relay import CFG, prepare
+
+    if not load(args.data / "decision.json")["exposed_repeated_pass"]:
+        raise ValueError("Exposed repeated contract failed")
+    frozen = load(args.freeze / "freeze.json")
+    m = load(args.freeze / "model.json")
+    if frozen["sources"] != source_hashes() or frozen["model_sha256"] != gm.identity(m):
+        raise ValueError("Frozen construction changed")
+    starts = []
+    rows = []
+    for seed in [22101, 22102, 22103]:
+        f = Field(CFG)
+        initial = prepare(f, isolated_components(f, seed, budget), seed, -4.0, budget)
+        save_npz(out / f"s{seed}-initial.npz", initial=initial)
+        for history in ["none", "odd04"]:
+            budget.begin(f"prepare-{seed}-{history}")
+            starts.append(
+                unforced(
+                    initialize_written(initial, history, CFG), CFG, [0.0, 50.0], budget
+                )[0][-1]
+            )
+            rows.append({"seed": seed, "history": history})
+            budget.finish()
+    save_npz(out / "boundary-50.npz", states=starts)
+    z0 = np.array([pm.extract(s, feature_set="geometry") for s in starts])
+    save_npz(out / "initial-descriptors.npz", z=z0)
+    schedule = {"name": "timing", "times": [10, 25], "amplitudes": [0.02, -0.02]}
+    budget.begin("seal-all-repeated-forecasts")
+    for i, z in enumerate(z0):
+        yy = []
+        tr = []
+        for j, flags in enumerate(rm.PREFIXES):
+            events = [
+                (t, a * b)
+                for t, a, b in zip(
+                    schedule["times"], schedule["amplitudes"], flags, strict=True
+                )
+            ]
+
+            def checkpoint(s, i=i, j=j):
+                s.checkpoint(out / f"checkpoint-{i}-{j}-t{s.geometry.flow.steps}.json")
+
+            trajectory, y = em.forecast(m, z, events, checkpoint=checkpoint)
+            yy.append(y)
+            tr.append(trajectory)
+        save_npz(out / f"prediction-{i}.npz", y=yy, trajectory=tr)
+    pm.save_json(
+        out / "seal.json",
+        {
+            "model_sha256": gm.identity(m),
+            "predictions": {p.name: digest(p) for p in out.glob("prediction-*.npz")},
+            "checkpoints": {p.name: digest(p) for p in out.glob("checkpoint-*.json")},
+            "order": "all repeated forecasts before future references",
+        },
+    )
+    budget.finish()
+    references(out, starts, rows, [schedule], budget)
+    from .repeated_intervention_analysis import score as repeated_score
+    from .repeated_intervention_analysis import truth
+
+    floors = load(args.inherited / "frozen-01/freeze.json")["floors"]["floors"]
+    scores = []
+    for i, c in enumerate(load(out / "cases.json")):
+        y, _, _ = truth(out, c)
+        p = arrays(out / f"prediction-{i}.npz")["y"]
+        scores.extend(
+            dict(seed=c["seed"], history=c["history"], model="causal", **v)
+            for v in repeated_score(y, p, floors)
+        )
+    pm.save_json(out / "scores.json", scores)
+    pm.save_json(
+        out / "decision.json",
+        {
+            "fresh_repeated_pass": all(
+                r["pass"] is True for r in scores if r["kind"] != "K12"
+            ),
+            "no_composition_fit": True,
+        },
+    )
