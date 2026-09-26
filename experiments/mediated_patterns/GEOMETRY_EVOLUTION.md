@@ -125,3 +125,19 @@ keeps exactly three measured/evolving coordinates; it changes the approximation
 class, from12 to30 rate coefficients (plus6 scaling numbers). Preserve both
 baselines and affine, and retain all gates. This is a targeted curvature check,
 not evidence of a missing physical variable or a reason to extend the field regime.
+
+`fit-02` retains all four earlier candidates and adds only two quadratic fits.
+Selected quadratic ridge1e-6 reduces grouped rollout coordinate RMS from1.690e-5
+to4.894e-6; largest A/B/C errors are3.405e-5/2.526e-5/7.855e-6 and condition7.913.
+Its worst R/Delta_R errors are .4962%/2.1392%. The almost stationary A case improves
+but retains a **13.97% relative-motion miss** from60 (9.95% from50); B/C remain
+below .65%/.27%. Preserve that development limit and the unchanged10% gate.
+Do not add state or keep searching to remove this small remaining miss. Fresh
+results will distinguish adequate delayed readout and absolute geometry from
+any remaining failure of strict fractional-motion accuracy.
+
+`dev-refine-01` confirms the new mixed/time75 response floor remains1e-12 in both
+windows/readouts. Coordinate floors, independently measured rather than inherited,
+are [1.137e-7,4.592e-7,1.276e-8] over50/60/75. Movement resolution uses twice those
+floors. Freeze the quadratic candidate plus persistence/drift/affine controls;
+fixed RK4 step1, no extra measurements, no response refit and no fresh-driven repair.
