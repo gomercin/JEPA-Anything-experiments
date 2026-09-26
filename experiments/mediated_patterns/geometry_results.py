@@ -38,7 +38,10 @@ def freeze(out, fit, refinements, budget):
     report = load(fit / "fit.json")
     all_models = load(fit / "models.json")
     selected = report["selected"]
-    models = {k: all_models[k] for k in ["persistence", "drift", selected]}
+    models = {
+        k: all_models[k]
+        for k in dict.fromkeys(["persistence", "drift", "affine-1e-06", selected])
+    }
     pm.save_json(out / "models.json", models)
     floors, coordinate_floor = shared_floors(refinements)
     # Development physical-coordinate gate, including relative-to-motion error.
@@ -319,7 +322,8 @@ def analyze(out, data, frozen, refinements, budget):
             "dynamic_bytes": 24,
             "step_counter_scalars": 1,
             "integrator_step": models[selected]["step"],
-            "updater_learned_scalars": 18,
+            "updater_learned_scalars": 6
+            + int(np.size(models[selected]["coefficients"])),
             "response_learned_scalars": 732,
             "retained_training_examples": 0,
             "spatial_templates": 0,

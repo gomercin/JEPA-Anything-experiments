@@ -259,7 +259,7 @@ def response_pairs(rows):
     return pairs
 
 
-def fit_panel(out, data, budget):
+def fit_panel(out, data, budget, quadratic=False):
     budget.begin("grouped-free-rollout-selection")
     rows = load(data / "rows.json")
     with np.load(data / "trajectories.npz", allow_pickle=False) as a:
@@ -274,10 +274,12 @@ def fit_panel(out, data, budget):
         ("affine", 1e-6),
         ("affine", 1e-3),
     ]
+    if quadratic:
+        candidates += [("quadratic", 1e-6), ("quadratic", 1e-3)]
     models, summaries = {}, {}
     predicted = {}
     for kind, ridge in candidates:
-        name = kind if kind != "affine" else f"affine-{ridge:g}"
+        name = kind if kind in ("persistence", "drift") else f"{kind}-{ridge:g}"
         oof = np.empty((len(z), 2, len(SAMPLES), 3))
         oof[:] = np.nan
         fold_info = []
@@ -392,6 +394,7 @@ def main():
     )
     p.add_argument("--output", type=Path, required=True)
     p.add_argument("--data", type=Path)
+    p.add_argument("--quadratic", action="store_true")
     p.add_argument("--freeze", type=Path)
     p.add_argument("--refinement", type=Path, action="append", default=[])
     p.add_argument("--seed", type=int, default=8101)
@@ -443,7 +446,7 @@ def main():
         elif args.stage == "development":
             development(args.output, budget)
         elif args.stage == "fit":
-            fit_panel(args.output, args.data, budget)
+            fit_panel(args.output, args.data, budget, args.quadratic)
         elif args.stage == "refine":
             from .geometry_assay import refine
 

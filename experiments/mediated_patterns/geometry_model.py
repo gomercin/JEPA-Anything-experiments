@@ -5,7 +5,7 @@ import json
 
 import numpy as np
 
-from .present_state_model import save_json
+from .present_state_model import design, save_json
 
 
 def identity(model):
@@ -21,13 +21,21 @@ def fit(z, rates, kind="affine", ridge=1e-6, step=1.0):
         raise ValueError("Expected matching (N,3) training centers/rates")
     if not np.isfinite(z).all() or not np.isfinite(rates).all():
         raise ValueError("Nonfinite training data")
-    if kind not in ("persistence", "drift", "affine") or ridge < 0 or step <= 0:
+    if (
+        kind not in ("persistence", "drift", "affine", "quadratic")
+        or ridge < 0
+        or step <= 0
+    ):
         raise ValueError("Unsupported update contract")
-    mean = z.mean(axis=0) if kind == "affine" else np.zeros(3)
-    scale = np.maximum(z.std(axis=0), 1e-14) if kind == "affine" else np.ones(3)
+    mean = z.mean(axis=0) if kind in ("affine", "quadratic") else np.zeros(3)
+    scale = (
+        np.maximum(z.std(axis=0), 1e-14)
+        if kind in ("affine", "quadratic")
+        else np.ones(3)
+    )
     a = np.ones((len(z), 1))
-    if kind == "affine":
-        a = np.column_stack([a, (z - mean) / scale])
+    if kind in ("affine", "quadratic"):
+        a = design((z - mean) / scale, 2 if kind == "quadratic" else 1)
     penalty = np.eye(a.shape[1]) * ridge
     penalty[0, 0] = 0
     coefficients = np.linalg.solve(a.T @ a + penalty, a.T @ rates)
@@ -50,7 +58,11 @@ def fit(z, rates, kind="affine", ridge=1e-6, step=1.0):
 def velocity(model, z):
     """Shared autonomous law; no clock or metadata parameter."""
     x = (np.asarray(z, float) - model["mean"]) / model["scale"]
-    a = np.r_[1.0, x] if model["kind"] == "affine" else np.ones(1)
+    a = (
+        design(x[None], 2 if model["kind"] == "quadratic" else 1)[0]
+        if model["kind"] in ("affine", "quadratic")
+        else np.ones(1)
+    )
     return a @ np.asarray(model["coefficients"])
 
 

@@ -114,3 +114,14 @@ contrast guarantee; Delta_R is scored independently. Refine seed8101 mixed
 freeze. Final histories are none, odd+.4 and already qualified heldmix(.2,-.2)
 for seeds14101/14102/14103. The history family itself is exposed; time90 inside
 (75,100) is the withheld interpolation interval. No fresh-driven repair is planned.
+
+**Development discrepancy and repair opportunity (before outcomes).** The
+absolute coordinate gates are adequate for affine rollouts, but the additional
+10% relative-motion gate is not: maximum A relative-motion RMS error is 46.8%
+from50 and68.7% from60, in an almost stationary A trajectory. B/C are below
+2.1%/.61%. Keep this affine limitation. Try one modest quadratic autonomous law
+with the same two ridge choices and the same grouped rollout selection. It
+keeps exactly three measured/evolving coordinates; it changes the approximation
+class, from12 to30 rate coefficients (plus6 scaling numbers). Preserve both
+baselines and affine, and retain all gates. This is a targeted curvature check,
+not evidence of a missing physical variable or a reason to extend the field regime.
