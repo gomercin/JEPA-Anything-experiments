@@ -61,7 +61,11 @@ recorded in the PR comments after all fixes and checks.
 Focused engineering correction during review: one synthetic test initially used
 bit equality for decimal floating-point scale construction; it now checks the
 specified tolerance at machine precision. No scientific threshold, reference,
-model or outcome was changed. The retained figure uses the same snapshot-map
+model or outcome was changed. Portable replay then caught a copied restore-prefix
+suffix; the new helper now accepts exactly event_state_aliasing/, with the same
+exclusive path protections. The replay assertion was also corrected to compare selector-owned keys while
+checking the separately added present-field diagnostic metadata independently.
+All replay tests were rerun. The retained figure uses the same snapshot-map
 plotter; its README caption explicitly identifies G-propagated inputs.
 
 Local full-suite results, remote retrieval and hosted CI are recorded alongside

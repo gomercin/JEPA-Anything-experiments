@@ -56,3 +56,12 @@ trace, post-event physical geometry or multi-event update is claimed.
 See `artifacts.json` for archive/member checksums and the exact publication
 revision. PR comments record reviewed-head checks and actual merge confirmations;
 no metadata-only successor PR is used.
+
+Package: 453 members, 23,680,179 uncompressed bytes; 10,823,446 compressed bytes.
+Archive SHA256 `d24b4f2004ae444ce7a9b345f5018f958525438423a7fb3c66893d9dc4501ce3`.
+Local `make check` passes 324 tests and 2 subtests, retaining one inherited skip
+and one historical scientific-CLI deselection. This includes eight new synthetic
+instrument tests and five new portable evidence tests; six isolated checkpoint
+processes reproduce saved predictions exactly. Archive verification restores all
+453 members without executing experiments. The generated Git evidence is below
+25 MiB.

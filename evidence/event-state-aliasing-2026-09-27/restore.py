@@ -13,7 +13,7 @@ SPEC = importlib.util.spec_from_file_location(
 )
 helpers = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(helpers)
-helpers.PREFIX = "work/mediated_patterns/event_state_aliasing_response/"
+helpers.PREFIX = "work/mediated_patterns/event_state_aliasing/"
 
 
 def unpack(destination):

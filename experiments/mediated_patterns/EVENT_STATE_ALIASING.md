@@ -201,7 +201,8 @@ separation/regime guards pass all new branches. No trajectory was renormalized.
 
 The primary snapshot test acquires a field at t72. The selected extractor needs
 u on the existing 768-point grid to produce three weighted centers; this is not a
-three-number physical sensor architecture. Diagnostic extraction also reads m
+three-number physical sensor architecture. The reference runner holds both
+768-vectors; the selected centers depend only on u. Diagnostic extraction reads m
 and produces six scalars, but S_A, mediator and mass never enter selected fitting
 or prediction. The independent retained test acquires only the three centers at
 t50 and has no subsequent predictive field access.

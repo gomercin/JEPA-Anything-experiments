@@ -1,0 +1,3185 @@
+{
+  "schema": 1,
+  "source_report_revision": "0bf0f8252e408f039adb27789d67dd18b0249c6b",
+  "bytes": 23680179,
+  "archives": [
+    {
+      "name": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 10823446,
+      "sha256": "d24b4f2004ae444ce7a9b345f5018f958525438423a7fb3c66893d9dc4501ce3"
+    }
+  ],
+  "files": [
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/boundaries-01/boundary-72.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/boundaries-01/boundary-72.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 541069,
+      "sha256": "7a3c2e0f7f99ea69a8d5fa3b3940e857adad54beaf60a3d8686a965cfd1ea43b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/boundaries-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/boundaries-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 6582,
+      "sha256": "587c520e526add917113e2c321f2baf5b43923f7d25d5a09349310a76aeff951"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/boundaries-01/descriptors.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/boundaries-01/descriptors.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 4242,
+      "sha256": "58bdddaf7640a4bafc1cd8c4070889af54bfdaed838d1a216484d77b31bfbe20"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/boundaries-01/inputs.json",
+      "member": "work/mediated_patterns/event_state_aliasing/boundaries-01/inputs.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 3276,
+      "sha256": "edbf9fde7aaa0ed99dd5ac78a17fd7034e5c690c2799992e76e870e7f99af001"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/boundaries-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/boundaries-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 4932,
+      "sha256": "e12327c9dc089f8e70b0a3e4795905183a6c7d54cb210bfa4b24f71c714896c3"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/boundaries-01/rows.json",
+      "member": "work/mediated_patterns/event_state_aliasing/boundaries-01/rows.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 10031,
+      "sha256": "cdbf7537e9fdf238a9c76fd3a4a2bd4f5ece54e6f08438c4e814bcdb08ef48c3"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/boundaries-01/selection.json",
+      "member": "work/mediated_patterns/event_state_aliasing/boundaries-01/selection.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 293167,
+      "sha256": "f07d7e3546d8461d910a2681fd1c7c09974429e8efa9b0110b3eb9f3791dbf51"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 563,
+      "sha256": "adbd8970af97e4083c898b0045d5623ff1463b09ca10c87ffc3d24fdc1981657"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/folds-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/folds-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 11266,
+      "sha256": "8c41b53f8fea9f39a56ae2a5d739334fd7ca495b0e833afb0af7d6221138cb53"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/folds-1.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/folds-1.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 11266,
+      "sha256": "12b31bfa474cf093086ecbc48d64782a759d7edab63a9c593085e2827b98d29a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/folds-2.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/folds-2.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 11266,
+      "sha256": "671c16b18e19772db9556317e501655e1f4c50f6f73cdd7c10ea823c21ab1b00"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/model-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/model-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 46440,
+      "sha256": "5a0f89ed4283043599e661a9875346a623c84350002fa592beca7bfd80ad1d39"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/model-1.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/model-1.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 46449,
+      "sha256": "d7dfff69927d5bb03f9e2f06001c63afdf366c25b70c6555a6aa2867430bc192"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/model-2.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/model-2.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 46454,
+      "sha256": "5a92808f9a18cafd67618ae7178a38182e4ad590e0a7f8b0570bfe1cbfddb00d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/predictions-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/predictions-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 353927,
+      "sha256": "3f16ec4ce9a8075bcc0c945b1104ab8615be04a50d6f06e24197b9986abdfa5c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/predictions-1.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/predictions-1.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 353914,
+      "sha256": "ee328494d6d238082357d35d6c636a932724426a0cf692f83b5458fc1a371c75"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/predictions-2.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/predictions-2.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 353987,
+      "sha256": "6fff9171711255ad06952fbbf9dd304c39ce956a0ba25637e9ab4f89c6f20ee5"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5068,
+      "sha256": "eedf359e57d337b532c46f36d3d204cf63d527d3d2f5ccf8e33d068c0e93ea8c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/scores-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/scores-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 620820,
+      "sha256": "dfde33d5b42f85af2a2d1d327b814dd66bb1312f89756ed7079a1f66a8872b0a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/scores-1.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/scores-1.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 620817,
+      "sha256": "0eff236f9688b28a1f345026a5cffd4cea473afa2f0d14fef195ee2432857dab"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/scores-2.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/scores-2.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 620528,
+      "sha256": "561d07934b5456b93db9d1e9826c587b2c1b724ce2465af5e0aeb433d98dde74"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/selection.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fit-centers-quadratic/selection.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 20650,
+      "sha256": "f149043d4499c33cd66f651f7427397acb285eb42504fa0a69d9bc6b1cfde57e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/boundary-50.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/boundary-50.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 67853,
+      "sha256": "6b714987c16a3166553fc6f7323b13c932250e0897e4131867bc319d9a92eff2"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/boundary-72.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/boundary-72.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 67879,
+      "sha256": "353368c0c2983c4631641364c72d6b2460cbbc9e5e02d796e778df0038c31c5d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 7003,
+      "sha256": "7973e370b69d508455b41891d6189516f2057e1ddddbe9f18f6e4ea102636109"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/descriptors.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/descriptors.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 493,
+      "sha256": "778d395ebf1e941393f719d2920058f10b654a5917520f734306056020abec62"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/initial-24101.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/initial-24101.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 11508,
+      "sha256": "bf1af80b52d76b792046fff4ab1c2756e4b0101c4f76922af2c8d7689bbb63e4"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/initial-24102.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/initial-24102.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 11476,
+      "sha256": "d6e67784537a2b779835b8242583ee3180bfcba24daad76b0c72a16a05549e8e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/initial-24103.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/initial-24103.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 11476,
+      "sha256": "0c544b778de496ab32938c920aaf99d5e383242f860ba89e1818d8cf94d7a7ee"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/predictions.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/predictions.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 44368,
+      "sha256": "2b5e86a80d9351fcdd7f140c1031466e0d45a3f413cddcd26ce9ffdd38e18a8e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5098,
+      "sha256": "38aab51f07768999ecdcd1d2a00f178b75df05958892f8bf35514403fd999ace"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-0--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-0--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75262,
+      "sha256": "33e85c2e46a1c3a927b6e736c3b53d5314a65f0d0e27f35891bb0d04b17c8420"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-0--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-0--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22254,
+      "sha256": "70bc0e4c80a193c2745910f27611f97ea84f0714aedc0472c01bbd540ad5fbbe"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-0-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-0-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75295,
+      "sha256": "c373d228d23af1dcce939f1092e90d8e5eabe284d7b920c6a17114f73c023057"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-0-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-0-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22199,
+      "sha256": "a3f747d041a63240bf02ee18c38b2bb2f53c03e9409646512aa3ded7eceab494"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-0-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-0-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75125,
+      "sha256": "ebb5c91fd691e7724a6859ccf4cf97a8748f66080dadab5c95e1477d46e3051d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-0-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-0-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22178,
+      "sha256": "a15abbed9e296164d363fb638b1e9c52cc8884246c8043f74612eb0dbf778fd0"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-1--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-1--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74829,
+      "sha256": "a038bb605fd980b28a4726b87e332415d5229bc274d36d3526e4e95679b4fe64"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-1--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-1--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21667,
+      "sha256": "d0207f293c6c646a3a17e6befff4099dbb468d5b440d7a4bd40b126bffab7b9c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-1-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-1-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74799,
+      "sha256": "6b33a80bfb0c47af13a5d8c100d9f205280d33aa2a0ea7bd070a5ed3f5560c62"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-1-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-1-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21613,
+      "sha256": "e637beefac72aa21939f23885435bb8b8aa7923b20da0f7036afe6a9e7513e90"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-1-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-1-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74707,
+      "sha256": "78046ec51cdd28028134471ba1ddd52674da3063d7a466f48856e589a3a283f8"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-1-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-1-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21583,
+      "sha256": "d8b4224cadd5160433d0d5327a8e471f0876f085480b1662b3ffe0d18b98b477"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-2--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-2--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75091,
+      "sha256": "077149bc7269d14fb525ba1ec1db04a2d9f34b9d12a7ded01a2952477b2f0139"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-2--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-2--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22182,
+      "sha256": "e16ecbca454e38b5e6a123d736a2a7e54838442145eb47b94b5bf0e32dacb67f"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-2-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-2-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75084,
+      "sha256": "87a4c83d69930ed6805a2cb7c7f103c879b38ae98124b050ce24436dd54a7271"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-2-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-2-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22189,
+      "sha256": "ad2be008420e6a2402d25b9115413a47086f7a019e39f11f35463b81b2e18e4d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-2-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-2-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74969,
+      "sha256": "3223d109cde8032718210f060ffccfa5ebd5984f2eed585c7016fa1862176335"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-2-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-2-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22151,
+      "sha256": "1409b1a60a2700f1c4894d1a2767d9f3794d92ecc4e9517899f52588901e5cc9"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-3--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-3--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74697,
+      "sha256": "42e6c394d08d13b8e8541da53823e323ca30263ed133a85fe9b92f91c86fe585"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-3--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-3--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21710,
+      "sha256": "ced32f7631b1a4f9fbbe2cd8555d13101eabae04b492952d775c26cd4c35dce6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-3-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-3-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74726,
+      "sha256": "384620225cf6bd0865d1e06bbb0db5fb6022bc0d98229d35e89386c9bdb15402"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-3-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-3-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21663,
+      "sha256": "2b10c77702a21b79be226dd096362e9a7d5d24e8d5392b92c5fc871d2b8e5b0a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-3-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-3-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74567,
+      "sha256": "49e74432ca2c2be418711343149de11eefe4953207c01743c401e4e36adcc0cf"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-3-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-3-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21611,
+      "sha256": "8aff15954ef7300f183aedc47c41b099201f613d5491f41442e17d9f4e33d469"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-4--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-4--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75099,
+      "sha256": "70a7d2a89c68732428bc411bb65ad602782890449e72226051d675d3e6c3f3d8"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-4--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-4--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22202,
+      "sha256": "9669da07fe22d72b8cc3ac555d9db7c2c351ac5e100a01583b5fdd041e7a29d7"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-4-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-4-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75088,
+      "sha256": "099b6f0d3fc99e7ebfd1b4f070da1c0c40162aa727368545e9b4c41bd222a333"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-4-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-4-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22140,
+      "sha256": "a043d76a4ce67ca314a801c986ee5f099dcf699d3bd26e06bf792cc91b5fc33f"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-4-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-4-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74974,
+      "sha256": "102df238b0fddf32cc3c395b71481a4916cd8619f211800291ada9043c5348ad"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-4-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-4-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22106,
+      "sha256": "73489e3af9f30c99a17c3d17f484c3c2cd7a6150dcf121a00eac21818d8d0bc3"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-5--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-5--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74763,
+      "sha256": "a90ad678ab8eaf9c0ad409151144d76bedafc7da4e7221e2e4d0589750bb2ac4"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-5--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-5--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21706,
+      "sha256": "3fa0b066f8e057276e67f7387da343dfd02511d1c024b3c253bf26eda915c792"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-5-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-5-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74777,
+      "sha256": "94a4a39fbdd883a9eb91ebd518a427773726f8898e2a78c44cde237fac71d641"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-5-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-5-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21673,
+      "sha256": "8ee9a69892ec171f28854e32412c5621c22002465cd3531a8e6b820ac63664ed"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-5-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-5-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74680,
+      "sha256": "edb9bc7749012ed7208b693b81072389d0017f44e6f36ff496be753ba7818cc5"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-5-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/reference-5-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21614,
+      "sha256": "3af93c0e65b2aa50c19e7c81ddf5b6b2b3e45325809be542e8f6993d5d3764e1"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/rows.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/rows.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 306,
+      "sha256": "812a3a3ea53180f1e23f03b58bcb11a2c3b41dd8c37453aa43f2e608a9f3112e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/seal.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/seal.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 447,
+      "sha256": "11e997f274fada28c3ef077d69e8fa6825503cd7e7dbdc604b0d8d897b8fe3ce"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-01/targets.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-01/targets.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 28076,
+      "sha256": "a5f7eb5853cb7f16259b01bb9dfd606fa96d1e30be051e140b17c42c37e79539"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-analysis-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-analysis-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 301,
+      "sha256": "5c8c73ce398d023501dfb54f35bfe4b417fc2bd16db1198448d32bd66ce774a7"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-analysis-01/fresh-responses.png",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-analysis-01/fresh-responses.png",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 347930,
+      "sha256": "a288f33578d4cba754900c088b417685492dd0e1fa249b0b738ce4f228574228"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-analysis-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-analysis-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5183,
+      "sha256": "ee11b1fc6e4c54f5d780172e7b5b9c498bf7fcc506b6c288149160249066b66b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-analysis-01/scores.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-analysis-01/scores.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 77461,
+      "sha256": "e7bd700f7ebcf1008f8cfcac7aa4b033d81895dcf07795e32975e77650c889ea"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/fresh-analysis-01/summary.json",
+      "member": "work/mediated_patterns/event_state_aliasing/fresh-analysis-01/summary.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 387,
+      "sha256": "366e709faccac6f5b26401c29e21660cdd062062729b4e52fa4fbe7e31a86066"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/frozen-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/frozen-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 332,
+      "sha256": "297f8d5d1f43d7a7eaaa76a2614ed47399d44f27ac9f29d008e1916ed2f6ff81"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/frozen-01/freeze.json",
+      "member": "work/mediated_patterns/event_state_aliasing/frozen-01/freeze.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5833,
+      "sha256": "8b1dc32b2915ac0dd5b111add21f50de0bbfec0ae65cc4db936f2f378fba81c6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/frozen-01/model.json",
+      "member": "work/mediated_patterns/event_state_aliasing/frozen-01/model.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 46440,
+      "sha256": "5a0f89ed4283043599e661a9875346a623c84350002fa592beca7bfd80ad1d39"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/frozen-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/frozen-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5110,
+      "sha256": "5eb48025765b48afba9b4c033c37d4797128cd7e51422eaf5c778a93071ab41e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/pairs-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/pairs-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 334,
+      "sha256": "871ff441d9446c06ec874873931c60691f266cde8f8877b2e55ec129c5513db2"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/pairs-01/pairs.json",
+      "member": "work/mediated_patterns/event_state_aliasing/pairs-01/pairs.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 47484,
+      "sha256": "d5e69fca571563caf95d4dfd5ac2508135067cd5e4756fe2ec077d340a94091a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/pairs-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/pairs-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5021,
+      "sha256": "19823f966dcc7a66081dfb42c9100d0e9f6386ba309d1399268901b4148ee418"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/pilot-01/boundary-72.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/pilot-01/boundary-72.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 11491,
+      "sha256": "30212217fc2414f3f294c2295c4794af8915f30e8197d6246729b77132fae3bf"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/pilot-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/pilot-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 304,
+      "sha256": "fe45a010c3d2158a78054643a8d3bc21750753ed24f01cc236774bd466309ed6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/pilot-01/descriptors.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/pilot-01/descriptors.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 510,
+      "sha256": "bafc46e945fb485772c91fcb67dba5c0bdcf8ec875ffe714dbd6e394daa58df3"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/pilot-01/inputs.json",
+      "member": "work/mediated_patterns/event_state_aliasing/pilot-01/inputs.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 3276,
+      "sha256": "edbf9fde7aaa0ed99dd5ac78a17fd7034e5c690c2799992e76e870e7f99af001"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/pilot-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/pilot-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 4922,
+      "sha256": "7c8c54e87902b9c51d177576600016f39fe5a8207bf989d6f68fe5dbcd47244c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/pilot-01/rows.json",
+      "member": "work/mediated_patterns/event_state_aliasing/pilot-01/rows.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 235,
+      "sha256": "658491914233a759b0d3f2d16b2245050afdae449d95fc65431081d3aa3f13bf"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/14-doubleN/reference--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/14-doubleN/reference--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74708,
+      "sha256": "821b8780aaf452f03867f422214403b100296128e475efba293953daf3c7ddbe"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/14-doubleN/reference--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/14-doubleN/reference--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21664,
+      "sha256": "f91c369b4b04a0c56dd6841f9f0bbb90947c1b9a3c403a5dac5963880491f24e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/14-doubleN/reference-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/14-doubleN/reference-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74665,
+      "sha256": "71b982e3a424ef322982f7be9ff089bc9f1a3fa8a4a0e179d5bf78b97607b817"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/14-doubleN/reference-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/14-doubleN/reference-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21679,
+      "sha256": "e989d27bfafe94ae4d6f0055c6546924fdec7ed121c186ff14e6ef4788525e47"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/14-doubleN/reference-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/14-doubleN/reference-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74614,
+      "sha256": "62f9d5826b93520b0021bd723061bcc69f4af389a0de5462625c874cae148209"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/14-doubleN/reference-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/14-doubleN/reference-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21566,
+      "sha256": "c32def1a75a6bc9883d28ccebc3a0432119115f7e18ccc71ac07728e48cdf297"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/14-halfdt/reference--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/14-halfdt/reference--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74744,
+      "sha256": "0ffdfbd87f7e5710d93bd2a63d44c0e72f62fd87fe02bb9c4069ffc5dc4a8a1b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/14-halfdt/reference--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/14-halfdt/reference--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21638,
+      "sha256": "8be419c6f7b63845c7173b8f1ac0ca9ea8086731b9eab3e8b8f63f1db46ba067"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/14-halfdt/reference-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/14-halfdt/reference-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74746,
+      "sha256": "4af555aa69cc9c63ea97bc9099cb8912cb25fa5b7fabb78d20a86fe522aa69bf"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/14-halfdt/reference-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/14-halfdt/reference-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21682,
+      "sha256": "af1111ad492915668ee799c988afa35a560f03b36f0ac04df5459c50fd5b80c5"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/14-halfdt/reference-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/14-halfdt/reference-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74632,
+      "sha256": "18af22eadc6a359e56d54052f9ad6561126786bbc03c092f673af58ea5b52ba0"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/14-halfdt/reference-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/14-halfdt/reference-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21578,
+      "sha256": "13ca54f31c3ed43630a78e0c9edd0fba3fb1b8265c5543143340df781c3dbe8d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/35-doubleN/reference--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/35-doubleN/reference--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74723,
+      "sha256": "660b15caa8dd524d71628efb1ea72ed1b4127cc5620f1286a5ea4e091173ac61"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/35-doubleN/reference--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/35-doubleN/reference--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21714,
+      "sha256": "0d4d8138bc1f1da021099f1ef0515d342667569e431742581cba293a76464859"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/35-doubleN/reference-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/35-doubleN/reference-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74714,
+      "sha256": "2446069a45f8f7f98af3322f7697d3022820986ebc0f9185a23c3bc4f001d5a6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/35-doubleN/reference-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/35-doubleN/reference-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21697,
+      "sha256": "814e66dd07ebb1ee3241d8dd9b30c9a0153bbcb0984b39d9c617238a13b94341"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/35-doubleN/reference-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/35-doubleN/reference-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74597,
+      "sha256": "ded2e5a2c169059faa3eabbbbaae9039b2a7563e75b140c65328a54b185414e7"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/35-doubleN/reference-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/35-doubleN/reference-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21631,
+      "sha256": "9ece7ffc532d661dc8385767cbf23f9ff9c1bfb033f76b8e34d8b900d511e5a0"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/35-halfdt/reference--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/35-halfdt/reference--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74781,
+      "sha256": "57391198c68352cdb6773ce00006c8a4d322c03c7591926775db06e3381a43ec"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/35-halfdt/reference--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/35-halfdt/reference--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21723,
+      "sha256": "fa53ec2c58bb34a62284d7537bcc716a44da4113965973ff7dbde856e0338e60"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/35-halfdt/reference-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/35-halfdt/reference-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74772,
+      "sha256": "2e552a6fab2b21e4267b0a8d466ccc8dedc4792dc59014e02da98e94b6f7c8f1"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/35-halfdt/reference-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/35-halfdt/reference-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21712,
+      "sha256": "1b751032685ca9f5cc5f2cc39897673acb645889b5521de448ef77cb7c2a2f00"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/35-halfdt/reference-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/35-halfdt/reference-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74653,
+      "sha256": "c2abd6102036e6c8754dd00c45b9b42f930b33616bec1be542581cc596aa4442"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/35-halfdt/reference-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/35-halfdt/reference-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21612,
+      "sha256": "f457884e64f8865b8e6beb3e9542a497de5f50d501bed6480a95de967b19ff1f"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 3480,
+      "sha256": "b3adecd64237c81339f74589a5ddcd062742a818c93d6d6185ee9b04ecfc52bc"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5106,
+      "sha256": "38ca38391b39bb88c02e2a6a06260b1272f202c664fa9214808b0288f643fff4"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/refinement-01/refinement.json",
+      "member": "work/mediated_patterns/event_state_aliasing/refinement-01/refinement.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 11113,
+      "sha256": "c79decc7f3a704a7aae8d6663fbd6a8191b07236677857eeef379cc2031a1c54"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/report-01/accounting.json",
+      "member": "work/mediated_patterns/event_state_aliasing/report-01/accounting.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 767,
+      "sha256": "2993edfe255f1870e5bbab72c41526b0d5e4bcbd804096a16131fcddb19f16f8"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/report-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/report-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 326,
+      "sha256": "1bef3d486bead946e6cb429d32f548b449a00f91d6bf09b627b6ce29775ef5ab"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/report-01/inherited-identities.json",
+      "member": "work/mediated_patterns/event_state_aliasing/report-01/inherited-identities.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 966,
+      "sha256": "f832bbabe7b2664ab6cedd7fbfc5f34b19810ec29be6d600b241fd991a69a928"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/report-01/matched-pair-responses.png",
+      "member": "work/mediated_patterns/event_state_aliasing/report-01/matched-pair-responses.png",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 294966,
+      "sha256": "748afbf26cee4ce77d89547bdf3c88aa50ca12e201a9727a4ae26645a33b1542"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/report-01/pre-event-geometry.png",
+      "member": "work/mediated_patterns/event_state_aliasing/report-01/pre-event-geometry.png",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 83157,
+      "sha256": "f2a2402e23e5bd47458502c01dbbe5e3558ab0f1287219e0261560b2a54ffae6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/report-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/report-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5023,
+      "sha256": "73a15bb5709398e6ef28e33139c776615922986e0d0a4d59d9bccde21519ade3"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/report-01/scales.json",
+      "member": "work/mediated_patterns/event_state_aliasing/report-01/scales.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 12598,
+      "sha256": "87f70b7ae99adcfc34e90b869c259dab534df792e24ee81fb06b7c43c86aef7f"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/response-pilot-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/response-pilot-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 450,
+      "sha256": "f36ed2538a952ada84e1c9d1d1bd8f182abeea50aec2b3513a0d15f259908fb0"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/response-pilot-01/pilot-pair.json",
+      "member": "work/mediated_patterns/event_state_aliasing/response-pilot-01/pilot-pair.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75053,
+      "sha256": "29f7238edea787b3b31c68520b7cc23f38812c3c60d099170ec39a65d02b6e16"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/response-pilot-01/pilot-pair.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/response-pilot-01/pilot-pair.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22182,
+      "sha256": "a46741611ffb0f8685e9423d8a1c3bf1b6949dedec846d6873f26499906c475c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/response-pilot-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/response-pilot-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5118,
+      "sha256": "b95c166878bc5b47e53a17b3ee3f2630f772998253fa72d430443c2966600d02"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 35794,
+      "sha256": "5cc0b49e80dcfff8c216aca2823a8fa5feb3a229e116658a07231a97091c2199"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5109,
+      "sha256": "7be8a30e88c55962dc8b2ce86ffdd5cd66a4b8d7257c29585caf04b0cf91be71"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-0--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-0--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75191,
+      "sha256": "945cd4f6621458d0c5de95045d48547d29a757d75597c415b384c04e2265fa40"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-0--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-0--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22246,
+      "sha256": "79f164eb820b939e34104bce43accbef68ec896e6a70fd6781efc181f38f468a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-0-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-0-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75210,
+      "sha256": "9a55fc08fc42d58a576097faeda0b19c267445e2364a5760ef88efef434571b9"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-0-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-0-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22204,
+      "sha256": "5a1bab0559e646a9ffd741c215433dd1750352c437c6ab061850f708dc79b7ed"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-0-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-0-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75053,
+      "sha256": "29f7238edea787b3b31c68520b7cc23f38812c3c60d099170ec39a65d02b6e16"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-0-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-0-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22182,
+      "sha256": "a46741611ffb0f8685e9423d8a1c3bf1b6949dedec846d6873f26499906c475c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-1--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-1--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74819,
+      "sha256": "cce5826c942c9819d5e7d5b448f675c799d58eceef02bfb035aebd0e2448f9cc"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-1--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-1--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21685,
+      "sha256": "da72a2b6671f9c95d5953f220653f8ff1dbe9a8f2679aba6af75db7bc8048369"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-1-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-1-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74832,
+      "sha256": "6d35ac353dbaf609b0fb64db78589427755cef73c7055c0e225e7b3d6965a89f"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-1-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-1-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21657,
+      "sha256": "37fd5300540ff24d7a6f14c75092b9d36523d072a29f443ec0620301c8d71620"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-1-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-1-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74722,
+      "sha256": "b63cf33ed3304d12249b234fe47d3abbb089a9b6cab407061892b7c3b4cb3ad9"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-1-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-1-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21581,
+      "sha256": "b9b328ef5b212f9c9473156b0081153e1168ca051e1b2b910590014b3e1bfb6d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-10--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-10--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74889,
+      "sha256": "6fe263be0d33da0dd727b08e4372fd0363c90cd30a316df16f1ce148992549fc"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-10--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-10--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22296,
+      "sha256": "16f34c6e7a41bff1f950ce247ac26e2dcbe203c990218e5604b0071e99c9d3f8"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-10-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-10-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74860,
+      "sha256": "6f07134e9cebc576ad567dca90a02f4f528391d7e43e1f14b54e3b872a1a3116"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-10-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-10-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22289,
+      "sha256": "6bb788473055a7d5ee70b5da9fccf0cfa260f1775a30073fafbd3aa2cfa91a15"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-10-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-10-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74761,
+      "sha256": "ca78550f155c9a2f83a8a72f56afcf56b4d8cfddeaf9e70c30483df6e214850c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-10-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-10-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22270,
+      "sha256": "ab3694999131be68f51a115f8c7e994e9e1496a3019ca32d64391386d8d615bd"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-11--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-11--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74792,
+      "sha256": "bd06992825d220d159863574af31030bab8510acff5ad26ac2085b2a4cd3ccf5"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-11--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-11--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21750,
+      "sha256": "28c135cf25c14a109197459ad9f82f0b02e1edcdee3275c2efac249864f517c5"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-11-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-11-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74812,
+      "sha256": "dcc0367913138b8409972f2fc862d27f3f8262513f3db681b0ade3aef7cda0cf"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-11-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-11-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21752,
+      "sha256": "25b20d51aa6f09663754869642b20aed192d58c68dc3e19a8fdece01ebf4cc21"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-11-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-11-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74690,
+      "sha256": "ae2dff1e24782fe6f7ba98dfed88f92e2dc773dba133bcf8c643e34a6cf91d71"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-11-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-11-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21716,
+      "sha256": "c996996820e0f131988506e3b5a5222b781e3d1bb32b6c9f26c1c876854a1f50"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-12--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-12--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74883,
+      "sha256": "136893f92fafead193e1f3413038a3749b0e76b5135dd11cd8c8e7e704479e4d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-12--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-12--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21946,
+      "sha256": "c80e91d52b091a250e8e7a8b6cf75b6a2880ef48ac2857d5a88b5adf0d2d9388"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-12-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-12-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74884,
+      "sha256": "46e9590ca73ccb6bd3a8b5cdcd46353474a2cbece26a0a79bf478fc3a7020e23"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-12-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-12-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21922,
+      "sha256": "00f2bbf1caa643caad3633cd16d41e5a0fe952e99c0bef4b8c27d1732e0e523b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-12-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-12-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74735,
+      "sha256": "d48a9c7c3f744afab948d8ffa743ac995c414228cca680b08772f6f2f9fe3697"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-12-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-12-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21862,
+      "sha256": "240d883b5d2d773170b088f4e692e7a5edbb3248b9997c37c8670ee9c19efbf9"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-13--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-13--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75148,
+      "sha256": "3207ffd3b06e48be0f4685140514de8a20f9fae06b763ca251973bc83afdd66c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-13--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-13--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22205,
+      "sha256": "a52bb5ce66989b78dbcfbc31ada47fb569c6f048805fb3c387c948f9cdaf8e6d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-13-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-13-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75113,
+      "sha256": "569e53f3d25f9bc1126f185b24e2c6245b089008c164bde51ed159d96a6cad80"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-13-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-13-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22175,
+      "sha256": "c105598223fee0b115b0389db47e2768b3ec25cb75fb0ce189570bcef9922a82"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-13-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-13-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75031,
+      "sha256": "2c043eb17859d467e077e8fc6e5347bbdb102421e62da303d7f55414b8683b65"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-13-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-13-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22129,
+      "sha256": "f5044982c26fe15fc24233027325372078f1cfff91b840849fc033d3e54b707e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-14--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-14--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74747,
+      "sha256": "0222bfb832f5af43e6a18f84186323427c793ec0249a2991045e0c22bb2b3253"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-14--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-14--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21640,
+      "sha256": "9f4994442e580838d4db9b5b2fa0fa4df6e7976b828ffe1b8920a401286ecd55"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-14-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-14-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74747,
+      "sha256": "ac987db3ec9b51141867382906642f6260aa604975f985be74fa29ed854d1724"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-14-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-14-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21650,
+      "sha256": "3e01d02c075f139eb0d2b9eb2ccb418a86e198332507323d16291b106800494b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-14-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-14-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74650,
+      "sha256": "6aa7496d07ba7f039190e0cd4e2bcf30ef09f09959e7f1e9a6f549889487f25a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-14-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-14-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21580,
+      "sha256": "98881b74c7e23620a9e78ea4b6fe48840c8c17aba93df8d8263848e24fd4e77a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-15--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-15--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74808,
+      "sha256": "d1dff67f7322541ae79049c062a03c2151bbec19e9860a7045ce5f2fe686ee45"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-15--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-15--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21811,
+      "sha256": "b7994a379c52308df0dfc0afc0788e6959745f2f28e3b643e7e49f9e32b947b9"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-15-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-15-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74791,
+      "sha256": "ec65123dca751537058057018b72a4801899655cfb3937c5ca86bc2b25060888"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-15-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-15-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21779,
+      "sha256": "f43c283dc8c4f1130f9292cc0f6a5a3467a9eaebb2ba4ddbea42f693f9be38e8"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-15-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-15-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74656,
+      "sha256": "2b0f5a34ddfc1c2cb41fae63d9a2ebb6ccc5c6df0c24fdaac30bc52645f1ef77"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-15-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-15-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21725,
+      "sha256": "459ff728175cae0c2e2f9d0d94f0286faa00abc96aee9102b1a7d8e9e23c37fe"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-16--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-16--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75026,
+      "sha256": "b128ef459d0cfba6b666aec12d49934690552d90711817006c2cf89cae48e5fb"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-16--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-16--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22122,
+      "sha256": "5e5d4cdbf400281420d27804c024d63372eebe95ba9169ac5e7ec73e576de2d4"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-16-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-16-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74993,
+      "sha256": "61b524c611f1b25c98e261aa441b0fc9989ac5015b24eb1b45f1a5b009bd7169"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-16-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-16-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22118,
+      "sha256": "b45c781e95694f0a9c2565b81e10ac656f84f7ec79238035b0e429f02e42c645"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-16-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-16-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74868,
+      "sha256": "e142573b3937e2f921bbde873cf9185cf836692d9d7c766bd5061cb15f8d836d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-16-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-16-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22081,
+      "sha256": "579a2b7dc153f47661cf0a99694450cf3a5127602a09fa9e4f3fa861ef368681"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-17--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-17--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74807,
+      "sha256": "9aeca07782b83c86b40fed23b4bfb33f063cfa84fd19ee7135b0649e5e8bc5e4"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-17--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-17--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21462,
+      "sha256": "89e496f699e718320a60b3c23cd5c0b6f00600543e7f4ef72922ffbe69e7f724"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-17-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-17-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74759,
+      "sha256": "cdc01d52f4c48ad2056d7c8c399879a4e7a0a20f1c134cabae4342556f79d835"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-17-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-17-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21449,
+      "sha256": "4e51d9791f8ff42b709d2a4194a8dbb69799726c8f9a5799d6f8696941aa87cf"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-17-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-17-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74683,
+      "sha256": "2e917d254383d78fdc7d624398f6861a85045fc6876eb728c0ddb26be4f30118"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-17-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-17-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21382,
+      "sha256": "6494f8d3f8e56f380a65e1320f1202eb53071c8cbf6b952f7f1be4c86029a724"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-18--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-18--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75110,
+      "sha256": "f238ea9fc4ebd4958a61365a011e9b5877f41626bcd4e095fb9d0d2648daea09"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-18--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-18--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21983,
+      "sha256": "1e8c3d8b30d84c0c8a9b859f3ecb82b68f0019e943e0e08fb43d12baea455d52"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-18-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-18-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75095,
+      "sha256": "11cbafc1c1774567c14807062a8c4f7cb84790cdc78c013449097ffd8e6588a4"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-18-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-18-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21978,
+      "sha256": "6b31a7875ec758decbe08afc5089b7cfc75fb5d68642ae7d3cb78f76b61104ba"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-18-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-18-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74968,
+      "sha256": "7a38de7ea8bb08e0b832ad14efb76f6b840454fce45269c4cc79dbcf3030831c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-18-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-18-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21897,
+      "sha256": "5efad4a33a01c17a3c352de61d6f4b1e74d218fc7411203e106fa6ab613304b2"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-19--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-19--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75169,
+      "sha256": "44592e35d890bbc0201a0949aa676955db2d427942d5c0b0a1d02b7de8762b55"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-19--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-19--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22191,
+      "sha256": "5ecd1e8bccf0c16633b3387f1127c58fa94086f5cb1e4db32d27b76698373af2"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-19-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-19-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75182,
+      "sha256": "112d3ed8cac2e645582b3dedc940695b22f757753d0bbf92fb115b682b442403"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-19-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-19-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22155,
+      "sha256": "5804b9c5e2eda89b762ecfe38a50319a0dc67d408f23e3c66dec7f61f72d252d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-19-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-19-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75028,
+      "sha256": "9ae822605643137bca14f54af39342b6be71f9e049024f20c32ee984089a941b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-19-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-19-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22120,
+      "sha256": "d7f2489232ce4017e78ec0e49f00ace487c1e1e30f5626b9060e2bae049dda4a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-2--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-2--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75005,
+      "sha256": "dcf2aa014297ca581099475a53c336f8fdb1d03528f234d5e3f88dc84af012b9"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-2--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-2--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22159,
+      "sha256": "5af3929e77c06b54c1eb647128b479a83bed7519802b189da23be72ae239700c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-2-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-2-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75055,
+      "sha256": "447cece4d5995014d04b0c86052fa7e01c0be881707ccac75db25a61d40fb676"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-2-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-2-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22150,
+      "sha256": "d828a25de97fb6d0b94090e69ef4cc5f734ea4d88216f488e9b4cf55b75142dc"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-2-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-2-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74896,
+      "sha256": "5850d758dea476bc0bc54fe57a42f4382c77b2ef1da09308ebb69101955114d5"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-2-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-2-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22102,
+      "sha256": "43f244cbe3dcb9f4975f905f43b3fd73278c4a5aa38fa2a282492bd1146904e4"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-20--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-20--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74843,
+      "sha256": "4df2252e4c23c9c0f42c75c8ca7d3678d27962665689d0516969903e8260563e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-20--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-20--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21751,
+      "sha256": "7129fa3f545667618569c6ff70dc5545334a6ca01af0468c59a209e1b726eb43"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-20-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-20-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74804,
+      "sha256": "ad305c50d1486b0daacf060bd1a1e019416362f9768dbffffd20781eba9e8b68"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-20-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-20-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21763,
+      "sha256": "e2d50c5d8d07be0ec62458adeab4c12942ddd6e8b63118b276b1833e23d57ade"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-20-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-20-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74754,
+      "sha256": "22bd7fcee9a5cde7038afe16384195ef16c2c3c57040c30c1c8fcf71eeba9f49"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-20-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-20-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21677,
+      "sha256": "9b1b50421596d634a4d651745859165b0ee039fa3b1b78162de940d7484d98a7"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-21--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-21--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74962,
+      "sha256": "a45cddaf12fd2a71e9013da6cd9f786e4c8dd8eef55172f219d3332bce959538"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-21--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-21--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22120,
+      "sha256": "0908f4ac9e53e809b2a25836db202e648f4969b32a06292078d08bfff15063c5"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-21-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-21-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74989,
+      "sha256": "22fcd26cf38c26fc24f2b2daf92e13668fa40f580eb5b6fae48e0ad2a7ce5323"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-21-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-21-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22094,
+      "sha256": "df6e0a22b4e76cca186daa348d41676bcd93f699c2144cb4c2ad7dd0138076db"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-21-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-21-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74854,
+      "sha256": "f115b11ee08bf6a46a156535dd6dbd8bae599eea6fd4e0144e726d269b8b4899"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-21-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-21-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22058,
+      "sha256": "cc9bac008b1d0fc675e95083088df0c35292085d86bab80dc7221c25a2f178f0"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-22--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-22--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74753,
+      "sha256": "01d1eba56dabe0b54b0e0ba5fc1d877c03059ac95a57a36df2557ab269eab2ce"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-22--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-22--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21570,
+      "sha256": "598da0cdd37dd6ae4dcea2ba7de04f88abd01266f807a4c6aa07fcc41c4bd888"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-22-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-22-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74739,
+      "sha256": "9a66ea590f8c88f7098192ef323c595383002f615bac7533937935173f69462d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-22-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-22-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21601,
+      "sha256": "10b2ef71cf335eff8f4de3ed9d88e60ae3ab76778090cb22f769352026395391"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-22-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-22-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74632,
+      "sha256": "502595d78e6476c3595485e47cd6b023e374aeddc1c2583ee8ebba7d40f45cda"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-22-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-22-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21479,
+      "sha256": "bf7f2e1e72eb534e3382ef95357b475e2aa43ce27c08d35cd0626f25fa54b679"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-23--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-23--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74819,
+      "sha256": "b0a99d6858edf1c7aebe57e475f2c5fc1825d5e15acda36a1c39ceeb7fb7a842"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-23--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-23--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21859,
+      "sha256": "28f3e3d5c4789a642481f0cee631508077d0b15ffb35b3b596a5b0b38d2cb970"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-23-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-23-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74823,
+      "sha256": "1033fd13b928c865f9b1c50b36efc3db9b2bb94eac5733a637379a58d818f9e9"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-23-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-23-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21828,
+      "sha256": "950dda554528ea1fd8626fc830d9e3497883081b484fbeb6dab30cd84111cd92"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-23-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-23-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74691,
+      "sha256": "809f4739e1c2c60d1249916010f7832f9431bacd9e0c8bc5f88c9f481de53124"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-23-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-23-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21759,
+      "sha256": "5ef8451556b08d79853fdd26a06e5d2173b78a9ceefd15406b7f67640ada2ca0"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-24--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-24--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75038,
+      "sha256": "b9b33388a58daa9ca87911ad4fcdbd6ea6b95d2a73a12b3723b205e149e98755"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-24--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-24--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22131,
+      "sha256": "456d2244445fc60d7a1aaa60529b7b6c68a8677fafff8469752751dc05958220"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-24-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-24-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75063,
+      "sha256": "65ff10992a03125eff66984367a43ad4ca6ac64680f96f7a426cfd720be22dcb"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-24-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-24-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22103,
+      "sha256": "c6085c9182314a7f6c62def45f8e2c090458536ded9f467c2848b3cd48b2ac8f"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-24-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-24-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74919,
+      "sha256": "723f746a28920765a129534c13ecc9d9a40a9a5aa9a77157961fee2db020320c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-24-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-24-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22103,
+      "sha256": "37eb1d0ae1f9ee115146b2949e2bd7d0abc0eff1a80d27d37d6bfd9517e2b139"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-25--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-25--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74784,
+      "sha256": "6b5d77888c019fa7e4d54bc1547994612266c27b1c878f55327cce3e3b741d4d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-25--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-25--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21708,
+      "sha256": "5d78c12d9b806c8cb4df4b9c252fd09b38b53bb4e163e9322508a511599d7647"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-25-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-25-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74774,
+      "sha256": "613085872f8404a85ab9bd29d38ecf524a483b7ab9c0669f0fd72a97f59a5191"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-25-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-25-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21674,
+      "sha256": "d6ea4d94c3124f8f19d572426cd00574f065561574f98f1d0ce7d87406370103"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-25-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-25-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74654,
+      "sha256": "edf2df016057256cd756468550dcca9e1d12b42cf6a332e272814514f29403dc"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-25-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-25-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21596,
+      "sha256": "9ef33ff0c93a20a3ac7492345ae14955490cbd51e15a887339108eebab48574e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-26--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-26--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74866,
+      "sha256": "f4bbfefc7c540df949d4e977adb565145bf93d314bc40e9e4c9632b8a83f2bda"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-26--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-26--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21970,
+      "sha256": "2ad45d2b446a578b84dd05cbf7120fe5145950c879c6a1de65499dfe8ed4ea26"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-26-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-26-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74838,
+      "sha256": "de506933fb01a6bbf75c01680e58ea7554dba800eb5da2e8845712d1d15fd1e2"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-26-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-26-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21914,
+      "sha256": "719eefd300161a9a8a55ce15cf9fcfa6d2d7ff3b2185d83f032a285cf2f0010d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-26-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-26-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74781,
+      "sha256": "a2ec037064ebea1e145b44f62993076b8673c0ed2b811dd01f5820e1b7acb977"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-26-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-26-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21866,
+      "sha256": "4cf2ea750c137c9a902e193871b08a43220cbf8df038a847476097d92e554533"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-27--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-27--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75218,
+      "sha256": "8f449bb65214b07009dfaa73e93eb491147a5304683fc16db80f1c97222302ee"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-27--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-27--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22178,
+      "sha256": "ba0b8f25db2ad91ccb797c55865e4eab37a6eacf71935c9949c7c111ac649f10"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-27-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-27-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75214,
+      "sha256": "1c3afae51827adc5ba7695277523050b315a7c5e515c5d82e1c501f6cff4c320"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-27-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-27-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22185,
+      "sha256": "e239df04fa6b32f732c9115f0d5de8ac21c90941ca9d5eb86301fab99fa33657"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-27-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-27-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75133,
+      "sha256": "510b7379288e9e008efd8dd3652d207666e3d463562060399da81104418ec75e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-27-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-27-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22111,
+      "sha256": "df0f83cdab9c233b47bdd246c56c603bb9c7f646c3ce6309eb5942847b8102a9"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-28--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-28--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74784,
+      "sha256": "d129186aee6293dc8cb3f19bc7bd3866b1326269e83f25ec242bdd287cd99b41"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-28--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-28--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21724,
+      "sha256": "e6928741c47d36586243e50f6982be5b65a5018b4ea34d93bd95eeb87672d020"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-28-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-28-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74796,
+      "sha256": "606c215d3e17120d14265f1ca16b9f6c70f5670daccd83f10d28402a1a273cf2"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-28-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-28-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21673,
+      "sha256": "b352c2f0ce121d05faf39beac2ba3556823a80e6c78cdcbd1ac96f9c4a2abde4"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-28-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-28-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74643,
+      "sha256": "54c450f3f2e82cc5ae92c36bc58cb8b6db62c6cdc6852c2319fc9df4593766dc"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-28-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-28-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21621,
+      "sha256": "e69efdc2543e711517f8f2b346828b3de735159a252eaebcac9ef14dafc63444"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-29--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-29--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74989,
+      "sha256": "6d96f626ff6cfccfcb658d8e8d568226f462ce424ba84170e83179807bdf76f8"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-29--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-29--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21950,
+      "sha256": "c4f0d2279dc20dadb2614a75bb8e8feb87320094c302c10c2017c2b903d0512e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-29-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-29-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74957,
+      "sha256": "1d69f5c330296708700dbf90cefeb27cea0cc2d46c34c4709569aeeace9c9075"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-29-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-29-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21905,
+      "sha256": "10efb776d4b9ca06ce315b064e72ba5c0de477d80866196b087944cc0c06bbfa"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-29-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-29-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74862,
+      "sha256": "5c8adc91530a86bc588224366d9400eb39e5c222c360d83a44dc31cbd91b5d62"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-29-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-29-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21854,
+      "sha256": "1aaa12b58febd87eddbc3e2f2278a646793450a9987d1764f2794a7cd8e95a06"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-3--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-3--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74729,
+      "sha256": "0c479766a504f5d1f9962e6fa6fed792856e777894b3315b6488f8337f7e3592"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-3--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-3--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21683,
+      "sha256": "c837c19463edeeb04f81a51cc0bfed0398fd27bd45941a9159250c1132421661"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-3-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-3-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74752,
+      "sha256": "4ee79a1acb22c02b5344895453c07ecd92f6f01123da32697c424557143b136d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-3-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-3-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21655,
+      "sha256": "af25ac902c396ae3b34460e44b9b545bfe38cd587bfa56b351e6093b35331f6e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-3-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-3-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74606,
+      "sha256": "6b92d3cdd7d0548085c8abf80bd05e3199d0e626afa5a21050761e6237291b2f"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-3-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-3-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21598,
+      "sha256": "4985032007df311f4b671b26e73119b7bebbfb6159b4749c74dd34e86108271a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-30--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-30--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75055,
+      "sha256": "d65e58b52904ae5889f1b628f8a058247da8512f965e4cb39292cfc05a4fc7db"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-30--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-30--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22191,
+      "sha256": "e23537d25fbc8aecf4b64c5dfe409660e9982b815efb1e58c3ed27fd27d63bfd"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-30-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-30-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75130,
+      "sha256": "5f928aa0aa924d3d8e29d3d8d0bf6f4101dfda826f385164e9a6c7789177b898"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-30-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-30-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22151,
+      "sha256": "370d02731c68cf6cbc06f2278d9438b062f06ed1053bea08e831a97dfab59014"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-30-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-30-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74946,
+      "sha256": "f343c9a0cbed88ff2d269ebd3a4c252aeed75c8e598725af1f3fca03b27226e6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-30-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-30-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22113,
+      "sha256": "b483867453ff9af77c100a7551847acf64757644d0f640dfee7718e27fdd5ad0"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-31--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-31--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74767,
+      "sha256": "8c3e6f4f14dc1c74dcca97d27d868d88018608475f5a4c70aca14515ace609ed"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-31--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-31--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21747,
+      "sha256": "0a599a3ec850da02f00b7670544711a70f5225ab52651524fb637870651459b4"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-31-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-31-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74778,
+      "sha256": "8340d92bbb1fd44ccd317dbe7c48d42d14af1b0b06c9de67277fc5841caf9cea"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-31-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-31-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21749,
+      "sha256": "c71f7e7cf617cfce04b841016ca7fbc3ba920bb95301dc5639682f8a9cccbb9b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-31-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-31-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74672,
+      "sha256": "e174321ca8917314534519217a863bb7671d0f2a1f36d80571c09b0a57a38434"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-31-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-31-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21692,
+      "sha256": "6699d691343d4ac91fe4aaad321103cc46c42744b861786d95f1ef7ad28b3800"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-32--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-32--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75061,
+      "sha256": "927847d0a1e5ecbba666f0d8b265018b44f43a3e8d70f933795e32a2bac6b2ad"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-32--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-32--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22214,
+      "sha256": "a9b230b8011439d0ef497da192693fe76bc3fd81aa3371343d777f087c9d4e0c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-32-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-32-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75060,
+      "sha256": "fff931cd275f861241a51f27464ea7ddef4808cada6af3d3561f6d8d5b88026f"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-32-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-32-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22163,
+      "sha256": "2871e7e76b45585ce25ea1f4168a9ede043a8c0643ce6278a10052d7c06ead9b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-32-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-32-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74982,
+      "sha256": "ae83833e57044df610c60c52616dba9df352e04719be96426a4e023ec65e8a52"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-32-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-32-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22155,
+      "sha256": "600f993b2d7fccf952f42ebb3d0b4479dade390b89c728bc1cd73676fde793ea"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-33--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-33--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74830,
+      "sha256": "ae4202d2fc74aa0fb70752061be498782fa09dd84a9292894d57b1fd71dd0bef"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-33--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-33--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21468,
+      "sha256": "d82308e71ec3a75df7b43bb271a5957ba47b357634f2c6dfd37ca9c710576812"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-33-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-33-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74870,
+      "sha256": "d4a07d3c56022df84f23e2e93b356691f2b56a4f8748471ef7f656d2318d9ebd"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-33-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-33-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21515,
+      "sha256": "ff2d2a79f271448fb707d211b7f5d5eb6449b990ace70b23952da046a129c8b3"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-33-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-33-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74724,
+      "sha256": "c62454e68d75621832e9e6475c609616c0823ce13eca687c6cd3f52bfead898e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-33-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-33-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21390,
+      "sha256": "4cf51ddcbe72067922c4bc656bb4fd64fa99cae971e4bd6a526c07b416bc43d7"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-34--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-34--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75142,
+      "sha256": "f8df4050a3d8edfe8014f3ba197d99737c8ca41ff7171b157ddd5d44d6a0d692"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-34--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-34--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22242,
+      "sha256": "dbc4e505720a3d0ddc80b86c5fbc44edc0ed7bb23579049ed1651f046fa63c44"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-34-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-34-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75142,
+      "sha256": "21e29b351ca61fa6221d9373360f752e715055a22d50605911032453040be585"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-34-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-34-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22188,
+      "sha256": "82a62e557baf054543cdebc5428ba34b4006a7a415a3e8c53befac06a22327b3"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-34-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-34-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75054,
+      "sha256": "c29c88a03613de51fd569ed78e28688f94195c80194973240bc492559a072852"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-34-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-34-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22168,
+      "sha256": "b5e09186a2b6e27fe7a4acb25c4c1c75173dfa379276d27ea0b676e13c756d65"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-35--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-35--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74761,
+      "sha256": "b050393709f0c591920e257075de79a78ce0adfadb898bad595b719696639041"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-35--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-35--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21724,
+      "sha256": "0e9889b2a77b5d365d6178cfa06d0b4a236550aadb6964a9dd67fc53da05bbfa"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-35-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-35-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74751,
+      "sha256": "f10c1c525b94c00dcdec1e0ed3d5a1850e6fb9f6a6b2dc43a532524734b1bda6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-35-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-35-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21721,
+      "sha256": "811da65d3a34717d3361108df350d742c5f857f16b6c502c989950a8ff20ba53"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-35-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-35-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74625,
+      "sha256": "a03f0e60f188795f5e137851e56ff20563cb701100c571443de172baf6f35ef1"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-35-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-35-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21635,
+      "sha256": "0ce08991daf90e7d178a0f5a742f9274f017d90e67e5a4b7fd8e86f0a3a555a1"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-36--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-36--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75206,
+      "sha256": "f0f2e93b3dfb1857e08261f4590415cc5219f34b53863cff99e6cb9502ea0871"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-36--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-36--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22252,
+      "sha256": "476c65086945c30054ba877d5a6fb1fa42166522d249430e7ad37a491026c9af"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-36-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-36-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75190,
+      "sha256": "2e0cb644d9e06d79d044e9a56747d49b51729a15d711202e96e195023e9bb87b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-36-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-36-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22222,
+      "sha256": "f78bdd743be67d28d9f07900fd8d67ccb6da71ff1c873347e43e110253a66ac0"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-36-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-36-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75060,
+      "sha256": "34bcb710af3e506ac48f27d8a2826f348d170c1159845ff49c4bc05383b96f04"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-36-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-36-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22209,
+      "sha256": "102440927a4408463c29edc0850394002db8deee8c30057343a2b98111a7a9b6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-37--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-37--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74762,
+      "sha256": "c73928c8709d3d442ca4847a03c5757dd27bac7386bde864dc7d5df7c85a8479"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-37--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-37--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21745,
+      "sha256": "cefa42f5cd340b316e721aca39619cc811d362d7dd57156fe90ee1f6a2a56c05"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-37-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-37-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74784,
+      "sha256": "1aebf85445951e0b061c059ee59a0247d3e5f1960be136fa82a7a675c5f57773"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-37-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-37-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21729,
+      "sha256": "b96729bb7abe3a4494bb440634a4ef20b8de725c4530a1a07bed1829783ee907"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-37-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-37-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74677,
+      "sha256": "73b6d97d393b885b27c639d5689f8438275978b3477f0c068d293bdb6e5d0206"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-37-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-37-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21661,
+      "sha256": "3f6a2b6da92240ee248a6bb862310a5abb780c4c2966f544532834e7890bc650"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-38--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-38--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75182,
+      "sha256": "f16740570c4f5d8482fe425c69e18ff0065012e9b9f897be13304c17f24ea313"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-38--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-38--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22236,
+      "sha256": "47a094462d7ee469267b1e9c9a68d4efb6089c85af0f87db7d5b6ac03f1052b7"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-38-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-38-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75213,
+      "sha256": "1f8527fef3e7ff23c122cd6cf815f3a8fc617a48c1cd2de38fb3ef86dcbb9554"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-38-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-38-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22200,
+      "sha256": "57b96e62990d9b79f5bbcfa92fe87568a301fa230dc27998f51c4ab9ac4650fc"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-38-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-38-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75111,
+      "sha256": "37b24b8230417296231bb9093970e95e7fcb01f1216c7541837dbf7aa99a4928"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-38-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-38-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22170,
+      "sha256": "e98cc24fdeba8513374590913c75f1cdae1a6ffd35be486e36f4cacdc2b0e542"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-39--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-39--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74820,
+      "sha256": "ec4823f37b080e27585f2cbf18bf8f9af35bc6905c5a6029e46347dc09ed8aa5"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-39--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-39--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21587,
+      "sha256": "5ba97a3b0464a61614fbd2bdc3f6abfa9e46afffbc16ed3531c74345cc4070b6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-39-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-39-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74829,
+      "sha256": "e5aa06071cfd677ff95b60b121b91f434e461cbe01df3f2d0f53c861fd9e0745"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-39-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-39-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21598,
+      "sha256": "45298db7b5fcdeac3727b4c673545ab321d7fa5fe6f3b956a985f51d578bb654"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-39-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-39-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74692,
+      "sha256": "d56658eae051fb487a45605f74b7c268916825c7e8060c589847a6d9d84b93bc"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-39-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-39-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21515,
+      "sha256": "a0d8968a1f99abfc64882f94fef681603749c8990fd85a062696f1547e1aba4e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-4--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-4--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75203,
+      "sha256": "f39457f990bdc9caceb53173ce7df0178e2279e0569773eaa1ff416c3fa5d6dc"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-4--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-4--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22235,
+      "sha256": "02cf3b9a085f405c80c41a64d44263b6f9940446c6ea751fb8e4560b190725de"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-4-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-4-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75204,
+      "sha256": "32e2ed98915bd8373bcc06549b4b2db5259bf4e740d972cf9b1bc70e93be7fdb"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-4-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-4-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22245,
+      "sha256": "4b4fe6f912d446016c5e319ec8b901c0d223ca220a104eb66d11cdd42aa17abb"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-4-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-4-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75070,
+      "sha256": "9587c1868bd5c25b24138c954603f759e3547ad7ec3c7f05a2bf67d372bde544"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-4-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-4-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22186,
+      "sha256": "68d464ab48294e2afcebb88246a9c74d5253ab3af71c31b8171593d5a34e87de"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-40--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-40--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75299,
+      "sha256": "89d83e3e2b629c5b9ca26e58e3e46010bc91859712e6a20a7a0b0feb77fd60d0"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-40--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-40--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22389,
+      "sha256": "d13d6422f85d162ff74ce70ff256d569b0ac27e1fb8e1f0cce0d3f5eb3606135"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-40-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-40-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75296,
+      "sha256": "7a8c011e9b4fd9ca56e5d62c4fb91e26d8517c4062b4f2bbc11e8ae0180b90d6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-40-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-40-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22337,
+      "sha256": "603abd3d0594c950bdbb08b69ce01e246ce62a69fe02200dc6305401aa3f1dc8"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-40-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-40-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75159,
+      "sha256": "87a67a0c04b6504b3d45ed683464ca756adf73e91fa6807566f7bb6dac286a81"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-40-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-40-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22303,
+      "sha256": "4d581eed048865fd185b20f82dbe5638ba06bee65583d713c57a9c6028b67ca0"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-41--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-41--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75015,
+      "sha256": "e25728aa27942889e0f3c31784854d8b0f4e7f287b2ba861caa6d481313aaea1"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-41--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-41--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21815,
+      "sha256": "9098d6577b1e279a3f0b45da19efa9af5e5a2944a86b738462ef88fafb654dc4"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-41-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-41-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75010,
+      "sha256": "6ef460f6f4f99c883af2e68e7acd0f05fb80887813ff3f6841712842911a5985"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-41-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-41-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21832,
+      "sha256": "8a2122fe73e197e62ea496b7c98262e22e14c728637c3b2765b357c4d50804ff"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-41-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-41-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74880,
+      "sha256": "5bd03e823c8f23908cc0fd822575c1b79ba68d9cd55e4947313e698287505688"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-41-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-41-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21746,
+      "sha256": "aacdf35911d9d3facf53cffe15489d819c7d6c928c1fac4ea5bda0a7bf578755"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-5--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-5--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74856,
+      "sha256": "ec645e1b200281108c59128bb7415634cd4b86a14be5b618d11bc6ac24bf27df"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-5--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-5--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21723,
+      "sha256": "a254258be8e8f17bd43ec771b0b65f3c250651504d5f3052777b84133342e07c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-5-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-5-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74842,
+      "sha256": "f8655aa546209b601fe4ce0ae3e2689de87d60f9e78cb69983d9bf6663af3413"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-5-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-5-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21691,
+      "sha256": "d729cb95a985a4ee08a8c350cd7d19b041e68c2084e61c4fd098c387f8d3b176"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-5-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-5-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74751,
+      "sha256": "7f2d5cef99bfcffe2bd121a433c8739243e765d551a68b2a1044a22541f2001b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-5-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-5-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21632,
+      "sha256": "daaccf5c5688bcd7a1d62510614e9e77dba9e53c6fc86cb255d6a0f7d9125a4f"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-6--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-6--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74977,
+      "sha256": "ce9c4382f5ab138174973906186825823a0f338dc12346c2b68102e93daf63d6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-6--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-6--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22185,
+      "sha256": "65d7f595effe8c006d21cc4eca61748f56f7740ce02f6d3cf37f84cbba9b624a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-6-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-6-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75017,
+      "sha256": "db6feb0bcb10641db1bebccff153cb740119973df28d58ba6e3325a789805baf"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-6-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-6-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22154,
+      "sha256": "9ddd7e56cde637d2e6a42d5f48d04b096042f2e4ee6ce861ee13c81fd10d644b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-6-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-6-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74923,
+      "sha256": "533871f8457971c2fd192f02d19e13a641868fc74c63724c33e9d9940b31f8db"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-6-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-6-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22134,
+      "sha256": "ca56a6f86c47605e28c5f903f2360bb23de48cd6b4bf473fbe9ab97286e59903"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-7--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-7--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74699,
+      "sha256": "25611172be4610cbc57f6e12dcf7fce667672ed63aa940373db8eba5e8d1dd73"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-7--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-7--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21649,
+      "sha256": "5b3e3c3763ce887b5601f55a4b2e7574e1f7552042000a74672924522fc96b2a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-7-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-7-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74734,
+      "sha256": "cacc74fae2d9f400d1f92f05f71f1fe9076671cc7a74b4c8e285264a5d240512"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-7-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-7-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21597,
+      "sha256": "783e7a295b1623c624ccb138e080a82dafa6ac9f65323ac606c98e17eb4e42b6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-7-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-7-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74628,
+      "sha256": "f76c878ba2ce1708e971b189a1016a66978a07048baf1b644afc5591d6322119"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-7-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-7-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21522,
+      "sha256": "e26d1b059d4e67d0b6bac2e4371b012f9a8fa009b119ed3cd02ea55e253b5246"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-8--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-8--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75019,
+      "sha256": "0536f9e8dd3cbdeac1907f0b9fc4d95f9fc1018195ed24eb555e7931510e4228"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-8--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-8--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22436,
+      "sha256": "cd5bc3ef14c34570c4e75b6d89694aa856682d308ef20349ee9f67e6915756e6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-8-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-8-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74987,
+      "sha256": "7852494b91e8b9202eb8d78bbc3c65b7602545a2cd3d67f3048e51eab5ee6461"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-8-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-8-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22393,
+      "sha256": "d927ccdb1122e869d1081af710e4622f2493f5f03a3a59287a78d2373982477a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-8-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-8-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74878,
+      "sha256": "a62f53d880671015223fd03212447675e1ba223f007b52c9a2cbc54a894711e9"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-8-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-8-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22399,
+      "sha256": "dacd73575ff29f7feb4243569c80d03f30dbaa0d121ac488fe2d2279c44a22b0"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-9--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-9--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74904,
+      "sha256": "867b7d29c054b4ff3865531f16b39c1e87f0193c89f4391163be2e2a44175bf1"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-9--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-9--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21939,
+      "sha256": "41b57fe92b3d6f03b75c23ecb1c4afe2a6445b77b9d1f8ad16527154de27092c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-9-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-9-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74922,
+      "sha256": "a05e09f1d8cb32234afd0d1e878371ab18bb12b476ae6614603ccfb756769806"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-9-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-9-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21908,
+      "sha256": "dba387c83f41027bcb254e7b23ef63942c4cda88b3f950b0e2a1e1405c2c5475"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-9-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-9-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74782,
+      "sha256": "70b3d9f9f47c865998a892f5eb4499c95b9813a3e036fa8fcf0e44594747a846"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/reference-9-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/reference-9-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21853,
+      "sha256": "921941359f5fbf78dba44bf042ac7056b68dc6edcc17ff3cd9b1a83e93973761"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/references.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/references.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 33885,
+      "sha256": "a7cd3ff8b28296ef8a3c78a9c5b5266d10bb060788fe0358857a0105e54b8c7f"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/selection-copy.json",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/selection-copy.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 293167,
+      "sha256": "f07d7e3546d8461d910a2681fd1c7c09974429e8efa9b0110b3eb9f3791dbf51"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/responses-01/targets.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/responses-01/targets.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 225505,
+      "sha256": "2447799c1b242704f2c6690b9637011fe2dfb74a6d894a1350b85326e11a97eb"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-analysis-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-analysis-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 326,
+      "sha256": "035b57b5d9e8106e32a2f73d2e9a2842b3c4efbcfba7c743a318f6a7dd84ea44"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-analysis-01/fresh-responses.png",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-analysis-01/fresh-responses.png",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 378556,
+      "sha256": "9711b8129b7a5702d6f4bc9b891091e449a92294367a28888d542f1dda46adce"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-analysis-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-analysis-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5211,
+      "sha256": "789cef7a0cea6dd438c68231b50efd17ab5d069860c094a10714464f43b7ddef"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-analysis-01/scores.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-analysis-01/scores.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 77482,
+      "sha256": "603014ba19cb4757f0f96dd5edcc7c2ab1e9819756721ee53faa7aa61fdb1eed"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-analysis-01/summary.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-analysis-01/summary.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 2523,
+      "sha256": "2b92bc3f432cde58891d6fa5b361866ffe489f1a751d566f2ce5f4593e877f14"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/boundary-50.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/boundary-50.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 67813,
+      "sha256": "92781f328db6dd3b9d50cb40f9b5bd864b24c3a92bd29f703e36c6b82d867d5a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/boundary-72.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/boundary-72.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 67896,
+      "sha256": "27c753a7af78a4a5243d53a28d6c1fa80c95297c94f4b44af877cae589a58d59"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 7890,
+      "sha256": "ad1ab104f6edef6f69ac9672dcd94d075281a94df8504655c95fc09672e2d9ff"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/checkpoint-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/checkpoint-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 214,
+      "sha256": "79e119a29dee5fdd26a6b784d0aa37500330831449279d45129a2a032bfe17a1"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/checkpoint-1.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/checkpoint-1.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 211,
+      "sha256": "76ea1f8e1256c244a82a6ada57dc342f84bcfbe2aad26387f9f7a93760ed2c57"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/checkpoint-2.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/checkpoint-2.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 211,
+      "sha256": "d4018fe251c73266b943e6a6cdf7502b024dfb669061f327d51732fdeca626ec"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/checkpoint-3.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/checkpoint-3.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 208,
+      "sha256": "973df510c0ca265ebc013ffaff7e451baf370f8f3c27f15f2ae2a26cd423da66"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/checkpoint-4.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/checkpoint-4.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 211,
+      "sha256": "08572a83a22e32ddb200f0b33e03981301884ad3829b38a2988abbd6c04d2671"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/checkpoint-5.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/checkpoint-5.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 208,
+      "sha256": "2d04b334962f3cc560232f27d6745a466fdf26e7d33dfd905013879089f9597b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/descriptors.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/descriptors.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 492,
+      "sha256": "33a172668769c44a732a8a4518b7d9229984fa39e3d50cfc51dabbb8a0edd750"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/initial-24111.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/initial-24111.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 11473,
+      "sha256": "1c309c579d0d0b32095c725c4afa5ee8bccb5bb33d060fcd2b934da1ffd01ab7"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/initial-24112.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/initial-24112.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 11473,
+      "sha256": "5babb010dbcd71192f56941254ff5fa196c1653f965f2b1d5db8b05225f00281"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/initial-24113.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/initial-24113.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 11492,
+      "sha256": "5f6ad7f978892341d214cbef7c01e18cd2c2d20d69462b1ae008bad55fa40d2c"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/initial-descriptors.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/initial-descriptors.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 349,
+      "sha256": "2bf04d12a37d529b41bdd0905e558bcf1bd24c0b56c7fb9f74541ce317a04c80"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/predictions.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/predictions.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 47666,
+      "sha256": "f58dd9d0df5f8a4549cb3633d7aa68dccac10d3fedbbf04daaa27a5631b76e18"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5123,
+      "sha256": "25edfd5ddf370f301ab0699acd5973495441dd01e5e13560a791bd352ab38ddf"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-0--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-0--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75084,
+      "sha256": "5a403590421b3389e223972708a517f342aef192880d6d3095486781c53edd72"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-0--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-0--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22187,
+      "sha256": "74ce6fb17aabf9ee080b6b5c2f4c048fc30d2dd13c1af44b96ea0ae3525c3cc0"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-0-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-0-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75145,
+      "sha256": "455cf36bc8898fa32648fbe9197fe7358e1d9d0c1e55b6ca69a7f612f1097a50"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-0-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-0-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22177,
+      "sha256": "611a384ac5c5a48e29ffc188ff924235e0e671ad3eebe81d9bf8b83c28b7876f"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-0-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-0-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75057,
+      "sha256": "4cba361c87d69e30f7de3360324d17fe9fa48f9f7683000e666010d629b18f33"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-0-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-0-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22147,
+      "sha256": "3fb05809a272dacad0d20b0fd63848bea96e1ae67d0ff609539c45763a0c8298"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-1--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-1--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74737,
+      "sha256": "ca30e7b9e99afdb1bfa7700d7ddc5bfacbaa14d8fc9e34dc5e12148a793c36e9"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-1--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-1--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21552,
+      "sha256": "6ff74d6d1aa6056c2716a3d7416439263b186c2c9c4994e183ca1ea9fd7ac36d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-1-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-1-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74768,
+      "sha256": "3e1195187708f72da1158bcd98aab300c67d0e595bc61950c8aac8c0b20febbe"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-1-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-1-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21561,
+      "sha256": "54c9ce4eee5176b73c129474046960c4b25c5d9012153fb457d5edf2bbb2fd6d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-1-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-1-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74677,
+      "sha256": "e7a20b0d30a3fdf85b58885968e8d508dd1b3943cf9ae5341a0e97fa56d0e402"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-1-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-1-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21501,
+      "sha256": "df1bb2df9c091f28c6fee232a1716bcdb4bd000dc9e7478d7cf7477d25aec2e2"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-2--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-2--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75100,
+      "sha256": "584cb3829e069f4a7bec2e8123efc5027b3d7b7ed8fbe4e3d3b8eead1dca06ac"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-2--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-2--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22221,
+      "sha256": "a60ceba83157a88dbecab5657bf68af3ec23cf0841aba78442abea0901e1f3b9"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-2-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-2-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75132,
+      "sha256": "e7d000a1a069185a7f64b405a270ebacfd59d1fd1e4bd8fe666107213b0c9eff"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-2-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-2-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22219,
+      "sha256": "5498c9e4adda04865799878513640be3d41a52b154d6723bc7f69ca5820e11a6"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-2-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-2-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75002,
+      "sha256": "1223bab344f94763daf9d9f85a85ba77703befad5c1d5f60c484681685d9c78d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-2-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-2-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22181,
+      "sha256": "afc735a8b21aa57fc5e7d67cc01a7a7bf87d1b52a5fc98c9425c8429340039c0"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-3--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-3--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74759,
+      "sha256": "9edf2ba41e59ba3f5e27dcd15ce8c21548073390d2961e1fa1bba8586ea3ec3e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-3--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-3--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21716,
+      "sha256": "143f7f7340e8b99c40249037cdcef28f5ee7f9b3827146698a8e96d44eea3b31"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-3-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-3-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74795,
+      "sha256": "497089df1b131f815495d6242e91894fb5fa28b9d23522994e46332a09b82507"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-3-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-3-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21722,
+      "sha256": "87af88b3e92685ced8d3011540c3f16d1599a7b05c70ad749f03e726b1f60cf3"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-3-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-3-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74631,
+      "sha256": "2215a4cb4583baba8e2ab0065fa7c5afc951d845a1354d1d0194f9f461ec689d"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-3-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-3-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21635,
+      "sha256": "325410e36d3efe1ba75d1ca344acf1f26960b2e98e0e9f2ff0fe7fd404a42276"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-4--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-4--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75220,
+      "sha256": "da1b618bf809e7ebecb6c020d58660843ef60f46c21255e3922eca20616598fd"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-4--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-4--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22227,
+      "sha256": "9d6477cf490546aa46a2e2c86f25143ea144f2d14c275caf34c18cc46493d3e9"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-4-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-4-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75196,
+      "sha256": "5bfee7ff485056aa2f19bdca1bed9776e6588cf8c47113e28e193596f9a4598f"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-4-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-4-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22199,
+      "sha256": "d5ae67f4f46836090af813b81187b6d6ff6eb7cc01a3c989b53a4ffa8e7e27bb"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-4-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-4-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 75131,
+      "sha256": "e02c98e7e84089bf5a0568bc9cbdf441373ed790eb6df33ab517acef401e01a2"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-4-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-4-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 22138,
+      "sha256": "c7e5b813539351cbe3e8cbcd2a8934a9a590db6580dfdc1e63114a615afd4eb7"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-5--0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-5--0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74758,
+      "sha256": "dd9c0d9720731e527a02b2d3b6be7767b0fbf565b8b3003b52ae9b685d217406"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-5--0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-5--0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21681,
+      "sha256": "34f01037fdcd1bf2335d4370ddd4745558890e7e7a10cb01a979e2af217b430a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-5-0.02.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-5-0.02.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74720,
+      "sha256": "e80301eb829fc0327f76f9572e89b7fe24aa4e7a5d5c1b3946d122a6923e9785"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-5-0.02.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-5-0.02.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21665,
+      "sha256": "7c57563ecb10179c2ec365e63c37da56bc4d96e8816b105b187fc66b6921cb6b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-5-0.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-5-0.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 74611,
+      "sha256": "6a500cb5b7c38f57508a0171852cc0d936c36a10f1d6517eaf7a21f73d32366f"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-5-0.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/reference-5-0.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 21612,
+      "sha256": "cf95b07d1f758d106e9c29bc3b3c77e25171869f5832269a0592344800dcd39b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/rows.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/rows.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 306,
+      "sha256": "c21ece21c09919c414e660c9ca927720530b58a4ddb15568652ea01f20e976b7"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/seal.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/seal.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 1115,
+      "sha256": "96f5901675a302aed87fe09b716533e0119dbbbf03b592ed5b8c15f1316cf085"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/targets.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-fresh-01/targets.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 27921,
+      "sha256": "cf7e1d7f4d0c9366ce16bebad930d03661a18fa1d1d8bed8aab6e092fbd551b1"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-frozen-01/G.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-frozen-01/G.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 1399,
+      "sha256": "39b498baaa3814dfb589f45fe6b75588ebd1ac0c80180777154166df26982456"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-frozen-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-frozen-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 348,
+      "sha256": "820da1cc72ad69a4de3ef88d6e9f523333c6f79fd1efdd41d52c35af74a3662b"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-frozen-01/freeze.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-frozen-01/freeze.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 6110,
+      "sha256": "9046d6df55d936b4bc59bbac6d93058e895637c5f6fa6d0f6a7ec53d3b1a3bf2"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-frozen-01/model.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-frozen-01/model.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 46440,
+      "sha256": "5a0f89ed4283043599e661a9875346a623c84350002fa592beca7bfd80ad1d39"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retained-frozen-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retained-frozen-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5116,
+      "sha256": "180e0639a1355be230447b91243b063238d654e6d337a7f08d5c89c8d994dfc7"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retention-01/budget.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retention-01/budget.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 348,
+      "sha256": "1204e728209434fa64f362623bc8791c9ab3f7069ad5cfda129416b51a2adb2a"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retention-01/predictions.npz",
+      "member": "work/mediated_patterns/event_state_aliasing/retention-01/predictions.npz",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 48052,
+      "sha256": "f9a3edbdcc6cccd1914d1d06639a64e8b0029fbbb2f2fed349ca4a0c97d809fb"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retention-01/protocol.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retention-01/protocol.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 5180,
+      "sha256": "0e8e7fb2bf5af6b1c0d33a16b84101c687ada158758617e54738eb3c6fe3ce2e"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retention-01/scores.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retention-01/scores.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 77419,
+      "sha256": "7bf06fec89c90eef5a8cd938a5473125fb4750d94a35db3c21da539142a593df"
+    },
+    {
+      "path": "work/mediated_patterns/event_state_aliasing/retention-01/summary.json",
+      "member": "work/mediated_patterns/event_state_aliasing/retention-01/summary.json",
+      "archive": "event-state-aliasing-20260927-0bf0f82.tar.gz",
+      "bytes": 2022,
+      "sha256": "765d4072881f2e973f27eb53169bd57aa97f19f3be8ff529aadfc9689edab52b"
+    }
+  ]
+}

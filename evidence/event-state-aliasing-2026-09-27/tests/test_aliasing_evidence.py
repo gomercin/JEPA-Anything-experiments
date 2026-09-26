@@ -60,7 +60,18 @@ def test_response_blind_selection_and_grouped_preprocessing(data):
     expected = sm.choose_pairs(
         x["x"], [r["seed"] for r in rows], x["extraction_uncertainty"].max(0)[:3]
     )
-    assert expected["all_pairs"] == s["all_pairs"]
+    assert expected["all_pairs"] == [
+        {k: row[k] for k in expected_row}
+        for row, expected_row in zip(s["all_pairs"], expected["all_pairs"], strict=True)
+    ]
+    assert [r["indices"] for r in expected["candidate_pairs"]] == [
+        r["indices"] for r in s["candidate_pairs"]
+    ]
+    for pair in s["candidate_pairs"]:
+        i, j = pair["indices"]
+        np.testing.assert_array_equal(
+            pair["descriptor_difference"], x["x"][i] - x["x"][j]
+        )
     assert expected["scale"] == s["scale"]
     assert load(data / "responses-01/selection-copy.json") == s
     for folder in data.glob("fit-*"):
