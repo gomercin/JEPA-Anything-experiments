@@ -197,13 +197,23 @@ def refine(out, data, seed, family, target, budget, is_fresh=False):
             ] = y
     # Full-history refinement shares the prepared initial field, not a later reset.
     save_npz_exclusive(out / "prepared-initial.npz", initial=initial)
+    panel_times = sorted({50.0, 60.0, target})
     y0 = []
     zi = []
     index = list(times).index(target)
     for history in ["none", family]:
         i = rows.index({"seed": seed, "history": history})
         y0.append(base_y[i, index])
-        zi.append(base_z[i, index])
+        values = []
+        for t in panel_times:
+            if is_fresh and t == 50:
+                with np.load(
+                    data / "initial-descriptors-50.npz", allow_pickle=False
+                ) as a:
+                    values.append(a["z"][i])
+            else:
+                values.append(base_z[i, list(times).index(t)])
+        zi.append(values)
     y0 = np.array(y0)
     zi = np.array(zi)
     records = []
@@ -218,8 +228,8 @@ def refine(out, data, seed, family, target, budget, is_fresh=False):
                 initial if config.n == CFG.n else resample(initial, config.n, axis=-1)
             )
             state = initialize_written(init, history, config)
-            states, screens = unforced(state, config, [0.0, target], budget)
-            zs.append(pm.extract(states[-1], config.length, "geometry"))
+            states, screens = unforced(state, config, [0.0, *panel_times], budget)
+            zs.append([pm.extract(s, config.length, "geometry") for s in states[1:]])
             save_npz_exclusive(out / f"{label}-{history}-current.npz", state=states[-1])
             pm.save_json(out / f"{label}-{history}-regime.json", {"regime": screens})
             budget.finish()
@@ -244,7 +254,9 @@ def refine(out, data, seed, family, target, budget, is_fresh=False):
             {
                 "refinement": label,
                 "response_floor": floors,
-                "coordinate_floor": (5 * abs(np.array(zs) - zi).max(axis=0)).tolist(),
+                "coordinate_floor": (
+                    5 * abs(np.array(zs) - zi).max(axis=(0, 1))
+                ).tolist(),
                 "coordinate_difference": (np.array(zs) - zi).tolist(),
                 "contrast_residual_rms": np.sqrt(
                     np.mean((errors[1] - errors[0]) ** 2, axis=0)
@@ -257,6 +269,7 @@ def refine(out, data, seed, family, target, budget, is_fresh=False):
             "seed": seed,
             "history": family,
             "target": target,
+            "coordinate_times": panel_times,
             "prepared_initial_sha256": digest(out / "prepared-initial.npz"),
             "records": records,
             "response_floors": np.maximum(

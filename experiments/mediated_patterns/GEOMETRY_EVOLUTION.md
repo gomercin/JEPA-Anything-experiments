@@ -86,3 +86,31 @@ Use 50/55/60/65/70/75/100 only. The final target at 90 tests interpolation insid
 that gap, with new preparations; it is not a new dynamical regime. The saved
 interior development samples are evaluator-only and are not consulted in model
 selection. F adequacy is checked at actual 60/75 states as well as saved 50/100.
+
+`development-01` costs 192.597 CPU seconds: 21 natural history continuations
+from seven exposed complete preparations; 50-unit unforced continuations cost
+about 1.24 seconds each and independent two-branch probe evaluations about 3.95.
+All sampled histories/probes qualify. The 120 CPU/180 wall/1 GiB section bounds
+have ample pilot margin. Saved wait-100 checkpoint agreement is checked per case.
+
+`fit-01` selects affine ridge 1e-6 by grouped free-rollout physical-coordinate RMS.
+Maximum held-out A/B/C errors are .0001070/.0001559/.00001686. The standardized
+fit has condition 1.635. Worst delayed R/Delta_R errors are .5003%/1.8732%; exact
+current F gives .5115%/2.0295%. Persistence gives 8.828%/33.752%, shared constant
+drift 6.205%/32.963%. The alternative affine ridge .001 is nearly tied. This is
+not a need for quadratic dynamics or additional fields; no state extension is
+attempted. The response scores use a previously fitted F, so this development
+panel is not fresh validation of F. New intermediate snapshots pass its diagnostic.
+
+Before refinement/fresh access, choose maximum physical coordinate tolerances
+[A,B,C]=[2e-4,2e-4,5e-5], plus <=10% RMS error relative to each coordinate's
+resolved actual movement over each preparation/history/origin's selected delays.
+The maximum development relative F sensitivities per unit are [6.020,.366,.136]
+for mass and [10.381,1.041,.236] for moment. The sum of sensitivity times these
+coordinate tolerances is about .128%/.230%, leaving most of the 2% R allowance
+for the unchanged F. This is a local development error budget, not a global
+contrast guarantee; Delta_R is scored independently. Refine seed8101 mixed
+(.28,.28) and its unwritten branch through times50/60/75 and probe at75, then
+freeze. Final histories are none, odd+.4 and already qualified heldmix(.2,-.2)
+for seeds14101/14102/14103. The history family itself is exposed; time90 inside
+(75,100) is the withheld interpolation interval. No fresh-driven repair is planned.

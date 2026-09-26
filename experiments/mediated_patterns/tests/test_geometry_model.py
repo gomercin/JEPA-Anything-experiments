@@ -64,6 +64,10 @@ def test_checkpoint_exclusive_and_solver_free_resume(tmp_path):
         s.checkpoint(alias)
     assert not (tmp_path / "absent.json").exists()
     pm.save_json(tmp_path / "model.json", g)
+    from experiments.mediated_patterns.geometry_evolution import frozen_response
+
+    response_model = frozen_response()
+    pm.save_json(tmp_path / "response-model.json", response_model)
     code = """
 import importlib.abc,json,sys
 class Block(importlib.abc.MetaPathFinder):
@@ -77,7 +81,10 @@ from pathlib import Path
 p=Path(sys.argv[1])
 g=json.loads((p/'model.json').read_text())
 s=Continuation.restore(g,json.loads((p/'state.json').read_text()))
-(p/'resumed.json').write_text(json.dumps(s.advance(25).tolist()))
+z=s.advance(25)
+(p/'resumed.json').write_text(json.dumps(z.tolist()))
+f=json.loads((p/'response-model.json').read_text())
+(p/'response.json').write_text(json.dumps(predict(f,z[None]).tolist()))
 """
     subprocess.run(
         [sys.executable, "-c", code, str(tmp_path)],
@@ -86,6 +93,12 @@ s=Continuation.restore(g,json.loads((p/'state.json').read_text()))
     )
     assert np.array_equal(
         json.loads((tmp_path / "resumed.json").read_text()), s.advance(25)
+    )
+    np.testing.assert_allclose(
+        json.loads((tmp_path / "response.json").read_text()),
+        pm.predict(response_model, s.z[None]),
+        rtol=1e-13,
+        atol=1e-20,
     )
     other = fitted("drift")
     with pytest.raises(ValueError, match="mismatch"):
@@ -164,3 +177,84 @@ def test_deterministic_serialization(tmp_path):
     assert gm.identity(json.loads(a.read_text())) == gm.identity(
         json.loads(b.read_text())
     )
+
+
+def test_signed_residual_and_independent_contrast_identity():
+    from experiments.mediated_patterns.geometry_results import error_terms
+
+    truth = np.array([[[2.0, 3.0]], [[4.0, 7.0]]])
+    snapshot = truth + np.array([[[0.3, -0.2]], [[0.8, -0.1]]])
+    prediction = snapshot + np.array([[[-0.1, 0.4]], [[-0.2, 0.6]]])
+    u, r = error_terms(prediction, snapshot, truth)
+    np.testing.assert_allclose(u + r, prediction - truth, atol=1e-15)
+    du, dr = u[1] - u[0], r[1] - r[0]
+    residual = (prediction[1] - prediction[0]) - (truth[1] - truth[0])
+    np.testing.assert_allclose(du + dr, residual, atol=1e-15)
+    np.testing.assert_allclose(
+        np.mean(residual**2), np.mean(du**2) + np.mean(dr**2) + 2 * np.mean(du * dr)
+    )
+
+
+def test_fresh_access_order_saves_before_each_future(monkeypatch, tmp_path):
+    from experiments.mediated_patterns import geometry_assay as assay
+    from experiments.mediated_patterns.geometry_evolution import F_SHA
+    from experiments.mediated_patterns.present_state_transmission import digest
+
+    frozen = tmp_path / "frozen"
+    frozen.mkdir()
+    out = tmp_path / "out"
+    out.mkdir()
+    models = {"affine": fitted()}
+    pm.save_json(frozen / "models.json", models)
+    contract = {
+        "models_sha256": digest(frozen / "models.json"),
+        "F_sha256": F_SHA,
+        "fresh_seeds": list(assay.FRESH),
+        "families": assay.FAMILIES,
+        "times": {"50": [60, 75, 90, 100], "60": [75, 90, 100]},
+    }
+    pm.save_json(frozen / "freeze.json", contract)
+    log = []
+    monkeypatch.setattr(assay, "isolated_components", lambda *args: None)
+    monkeypatch.setattr(assay, "prepare", lambda *args: np.zeros((2, 768)))
+    monkeypatch.setattr(
+        assay, "initialize_written", lambda initial, *args: initial.copy()
+    )
+    monkeypatch.setattr(
+        pm, "extract", lambda state, **kwargs: np.array([state[0, 0], 0, 0])
+    )
+
+    def unforced(state, config, times, budget):
+        log.append(("evolve", float(state[0, 0]), float(times[-1])))
+        return np.array([state + t for t in times]), [{"qualified": True}]
+
+    monkeypatch.setattr(assay, "unforced", unforced)
+
+    def forecasts(out, starts, models, origin, times):
+        log.append(("seal", origin))
+        assert np.all(starts[:, 0] == origin)
+
+    monkeypatch.setattr(assay, "forecasts", forecasts)
+
+    def reference(state, *args):
+        log.append(("probe", float(state[0, 0])))
+        return {"response": np.zeros((161, 2))}, [{"qualified": True}]
+
+    monkeypatch.setattr(assay, "reference", reference)
+
+    class Budget:
+        def begin(self, *args):
+            pass
+
+        def finish(self):
+            pass
+
+    assay.fresh(out, frozen, Budget())
+    first = log.index(("seal", 50))
+    second = log.index(("seal", 60))
+    assert first == 9
+    assert all(
+        x[0] == "evolve" and x[1:] == (50.0, 10.0) for x in log[first + 1 : second]
+    )
+    assert all(x[0] != "probe" for x in log[: second + 1])
+    assert all(x[1] >= 60 for x in log if x[0] == "probe")

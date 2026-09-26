@@ -385,9 +385,19 @@ def fit_panel(out, data, budget):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--stage", choices=["pilot", "development", "fit"], required=True)
+    p.add_argument(
+        "--stage",
+        choices=["pilot", "development", "fit", "refine", "freeze", "fresh", "analyze"],
+        required=True,
+    )
     p.add_argument("--output", type=Path, required=True)
     p.add_argument("--data", type=Path)
+    p.add_argument("--freeze", type=Path)
+    p.add_argument("--refinement", type=Path, action="append", default=[])
+    p.add_argument("--seed", type=int, default=8101)
+    p.add_argument("--history", default="mixed")
+    p.add_argument("--target", type=float, default=75.0)
+    p.add_argument("--fresh-refinement", action="store_true")
     args = p.parse_args()
     if args.output.parent.resolve() != ROOT.resolve() or any(
         x.is_symlink() for x in [args.output, *args.output.parents]
@@ -401,7 +411,10 @@ def main():
     fd = os.open(ROOT / ".active", os.O_CREAT | os.O_EXCL | os.O_WRONLY)
     os.close(fd)
     previous = 30 + sum(load(x)["cpu_seconds"] for x in ROOT.glob("*/budget.json"))
-    budget = HistoryBudget(previous, 1200)
+    budget = HistoryBudget(
+        previous,
+        1800 if args.stage in ("fresh", "analyze") or args.fresh_refinement else 1200,
+    )
     started, status = False, "FAILED"
     try:
         args.output.mkdir(exist_ok=False)
@@ -431,6 +444,35 @@ def main():
             development(args.output, budget)
         elif args.stage == "fit":
             fit_panel(args.output, args.data, budget)
+        elif args.stage == "refine":
+            from .geometry_assay import refine
+
+            refine(
+                args.output,
+                args.data,
+                args.seed,
+                args.history,
+                args.target,
+                budget,
+                args.fresh_refinement,
+            )
+        elif args.stage == "freeze":
+            from .geometry_results import freeze
+
+            freeze(args.output, args.data, args.refinement, budget)
+        elif args.stage == "fresh":
+            from .geometry_assay import fresh
+
+            contract = load(args.freeze / "freeze.json")
+            if contract["sources"] != {
+                p.name: digest(p) for p in Path(__file__).parent.glob("*.py")
+            }:
+                raise ValueError("Frozen scientific sources changed")
+            fresh(args.output, args.freeze, budget)
+        elif args.stage == "analyze":
+            from .geometry_results import analyze
+
+            analyze(args.output, args.data, args.freeze, args.refinement, budget)
         status = "COMPLETE"
     finally:
         if started:
