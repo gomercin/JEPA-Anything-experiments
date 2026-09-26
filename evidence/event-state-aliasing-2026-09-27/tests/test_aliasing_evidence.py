@@ -207,8 +207,13 @@ from runtime.event_state_model import predict
 s=Continuation.restore(json.load(open('G.json')),json.load(open('checkpoint.json')))
 z=s.advance(12);m=json.load(open('model.json'))
 import numpy as np
-u=Continuation(json.load(open('G.json')),json.load(open('initial.json')))
-np.testing.assert_array_equal(z,u.advance(22))
+g=json.load(open('G.json'));initial=json.load(open('initial.json'))
+u=Continuation(g,initial);u.advance(10)
+path='local-checkpoint-'+sys.argv[1]+'.json';u.checkpoint(path)
+v=Continuation.restore(g,json.load(open(path)))
+full=Continuation(g,initial).advance(22)
+np.testing.assert_array_equal(v.advance(12),full)
+np.testing.assert_allclose(z,full,rtol=1e-14,atol=1e-20)
 print(json.dumps([predict(m,z,a).tolist() for a in [0.,-.02,.02]]))
 """
     (tmp_path / "resume.py").write_text(script)
@@ -219,7 +224,7 @@ print(json.dumps([predict(m,z,a).tolist() for a in [0.,-.02,.02]]))
         assert digest(cp) == seal["checkpoints"][cp.name]
         (tmp_path / "checkpoint.json").write_bytes(cp.read_bytes())
         result = subprocess.check_output(
-            [sys.executable, "-I", "resume.py"], cwd=tmp_path, text=True
+            [sys.executable, "-I", "resume.py", str(i)], cwd=tmp_path, text=True
         )
         np.testing.assert_allclose(json.loads(result), p[i], rtol=1e-12, atol=1e-22)
 

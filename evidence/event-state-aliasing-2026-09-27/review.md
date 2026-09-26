@@ -81,3 +81,11 @@ exact. Each isolated process additionally compares resumed and uninterrupted G
 states bit-exactly on its own platform. Frozen arrays, coefficients, scientific
 metrics and archive bytes were not changed. Affected replay tests were rechecked
 locally and exact-head hosted CI was required again.
+
+The next hosted run isolated one remaining harness error: its supposed
+same-platform comparison still began at a macOS-generated midpoint checkpoint.
+The corrected test generates and serializes a new local midpoint for bit-exact
+segmented/uninterrupted comparison, while separately checking the published
+checkpoint against local advancement at relative 1e-14 tolerance. The observed
+center difference was 1.73e-18. This changes no runtime, scientific artifact or
+acceptance threshold; the entire evidence suite was rerun.
