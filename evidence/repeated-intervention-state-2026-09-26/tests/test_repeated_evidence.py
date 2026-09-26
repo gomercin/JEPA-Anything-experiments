@@ -3,6 +3,8 @@
 import hashlib
 import importlib.util
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -142,3 +144,13 @@ def test_all_reference_regimes_and_local_jumps():
             for event in row["events"]:
                 assert event["identity_max"] < 1e-13
                 np.testing.assert_array_equal(event["before"][1:], event["after"][1:])
+
+
+def test_verification_cli_uses_canonical_internal_temp():
+    result = json.loads(
+        subprocess.check_output(
+            [sys.executable, str(HERE / "restore.py"), "--verify-only"], text=True
+        )
+    )
+    assert result["verified_members"] == len(load(HERE / "artifacts.json")["files"])
+    assert result["experiments_executed"] is False

@@ -39,7 +39,10 @@ def main():
     if args.verify_only and args.destination:
         count = helpers.verify(manifest, args.destination)
     elif args.verify_only:
-        with tempfile.TemporaryDirectory(prefix="verify-repeated-evidence-") as tmp:
+        with tempfile.TemporaryDirectory(
+            prefix="verify-repeated-evidence-",
+            dir=Path(tempfile.gettempdir()).resolve(),
+        ) as tmp:
             count = unpack(Path(tmp))
     elif args.destination:
         count = unpack(args.destination)

@@ -140,14 +140,14 @@ def main():
             ]:
                 magnitude = np.sqrt(np.mean(target[sl] ** 2, axis=0))
                 true_addition.append(
-                    dict(
-                        seed=case["seed"],
-                        history=case["history"],
-                        schedule=case["schedule"]["name"],
-                        window=window,
-                        kind=kind,
-                        relative=(error / magnitude).tolist(),
-                    )
+                    {
+                        "seed": case["seed"],
+                        "history": case["history"],
+                        "schedule": case["schedule"]["name"],
+                        "window": window,
+                        "kind": kind,
+                        "relative": (error / magnitude).tolist(),
+                    }
                 )
     audit = load(args.data / "runtime-audit.json")
     report = {

@@ -48,3 +48,21 @@ and incremental package own this result. Fast CI adds arithmetic regression only
 
 Final outcome, checks and exact reviewed-head merge metadata are recorded in the
 PR review/confirmation comments after the complete evidence diff is available.
+
+Completed local review found one publication defect: the verifier's internally
+created temporary directory could use macOS's `/var` symlink spelling and reject
+it under the destination guard. The verifier now creates its own temporary root
+under the canonical system-temp path; user-specified symlink destinations remain
+rejected. A CLI regression covers the fix. No scientific arrays, models, gates,
+fresh predictions or historical files changed.
+
+Final local validation: `make check` passes300 tests plus2 subtests, with one
+inherited session-manifest skip and one historical scientific-CLI deselection.
+Ruff and `git diff --check` pass. The archive preserves1,098 original files
+(32,591,865 uncompressed bytes); compressed archive13,513,148 bytes, SHA256
+`03f55c88560627b78acf356c8c1e6eac7cb4e8d0dd07ae7f8622433de061c9ab`.
+Generated package including figures/index is below25MiB. The result remains
+mixed:528 distinct standard-timing gates pass for the selected repair, while72
+fresh timing gates fail; no full fresh qualification is claimed. Geometry and
+resolved K limitations remain explicit. No material local blocker remains for
+publishing this restricted negative/positive result.
