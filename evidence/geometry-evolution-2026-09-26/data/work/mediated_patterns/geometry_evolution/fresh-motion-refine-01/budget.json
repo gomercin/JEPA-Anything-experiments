@@ -1,0 +1,49 @@
+{
+  "cpu_seconds": 46.474461999999995,
+  "limit_cpu_seconds": 1800,
+  "previous_cpu_seconds": 518.036544,
+  "sections": [
+    {
+      "cpu_seconds": 4.9296370000000005,
+      "task": "halfdt-none-history",
+      "wall_seconds": 4.931106083007762
+    },
+    {
+      "cpu_seconds": 8.006152,
+      "task": "halfdt-none-probe",
+      "wall_seconds": 8.008705292013474
+    },
+    {
+      "cpu_seconds": 4.8755320000000015,
+      "task": "halfdt-odd04-history",
+      "wall_seconds": 4.875823667010991
+    },
+    {
+      "cpu_seconds": 8.044677,
+      "task": "halfdt-odd04-probe",
+      "wall_seconds": 8.044972791016335
+    },
+    {
+      "cpu_seconds": 3.922715,
+      "task": "doubleN-none-history",
+      "wall_seconds": 3.929707875009626
+    },
+    {
+      "cpu_seconds": 6.379415000000002,
+      "task": "doubleN-none-probe",
+      "wall_seconds": 6.381078874983359
+    },
+    {
+      "cpu_seconds": 3.927033999999999,
+      "task": "doubleN-odd04-history",
+      "wall_seconds": 3.9310913749795873
+    },
+    {
+      "cpu_seconds": 6.379541000000003,
+      "task": "doubleN-odd04-probe",
+      "wall_seconds": 6.381191082997248
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 46.528451958001824
+}

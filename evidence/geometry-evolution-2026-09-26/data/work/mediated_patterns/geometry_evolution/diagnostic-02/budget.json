@@ -1,0 +1,14 @@
+{
+  "cpu_seconds": 0.34469400000000006,
+  "limit_cpu_seconds": 1800,
+  "previous_cpu_seconds": 566.6678509999999,
+  "sections": [
+    {
+      "cpu_seconds": 0.34468200000000004,
+      "task": "weak-motion-rate-and-error-diagnostics",
+      "wall_seconds": 0.42686162499012426
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 0.42686954099917784
+}

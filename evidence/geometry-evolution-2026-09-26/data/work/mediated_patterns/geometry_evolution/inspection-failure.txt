@@ -1,0 +1,6 @@
+A read-only console summary after analysis-pre-refine iterated over the snapshot
+response diagnostic as if it also had geometry rollout rows. NumPy raised
+ValueError: zero-size array to reduction operation maximum which has no identity.
+The saved analysis was complete and unchanged. The console summary was corrected
+to iterate over updater names only. No fit, simulation, gate or exposure changed;
+this sub-second inspection is covered by the fixed 30-second allowance.

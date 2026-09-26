@@ -1,0 +1,43 @@
+All scientific commands run at repository root with OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1.
+MPLCONFIGDIR and XDG_CACHE_HOME were set to writable /private/tmp paths for final plotting.
+Stages are exclusive; use a restored read-only archive or unique new output paths. These seeds are now exposed.
+
+analysis-final source cbabf57d2b40d54a27bd82841b8a2e0147148f51
+python -m experiments.mediated_patterns.geometry_evolution --stage analyze --data work/mediated_patterns/geometry_evolution/fresh-01 --freeze work/mediated_patterns/geometry_evolution/frozen-01 --refinement work/mediated_patterns/geometry_evolution/dev-refine-01 --refinement work/mediated_patterns/geometry_evolution/fresh-refine-01 --refinement work/mediated_patterns/geometry_evolution/fresh-motion-refine-01 --output work/mediated_patterns/geometry_evolution/analysis-final
+
+analysis-pre-refine source cbabf57d2b40d54a27bd82841b8a2e0147148f51
+python -m experiments.mediated_patterns.geometry_evolution --stage analyze --data work/mediated_patterns/geometry_evolution/fresh-01 --freeze work/mediated_patterns/geometry_evolution/frozen-01 --refinement work/mediated_patterns/geometry_evolution/dev-refine-01 --output work/mediated_patterns/geometry_evolution/analysis-pre-refine
+
+dev-refine-01 source 463bbf19371dfeb1b8a1d446a14c1d0c6cc56e71
+python -m experiments.mediated_patterns.geometry_evolution --stage refine --data work/mediated_patterns/geometry_evolution/development-01 --output work/mediated_patterns/geometry_evolution/dev-refine-01 --seed 8101 --history mixed --target 75
+
+development-01 source e22078f51a21cd42f3d7ee7e9a73d8c68d18d841
+python -m experiments.mediated_patterns.geometry_evolution --stage development --output work/mediated_patterns/geometry_evolution/development-01
+
+diagnostic-02 source 3b93b70a57b0bda8e15262cc84fbe52e641669e5fb3e52cdba3fc548021bf484
+PYTHONPATH=. python work/mediated_patterns/geometry_evolution/diagnostic-02/diagnose.py
+
+fit-01 source 21acf3eb70ac428aece9488ad5216c01486b9517
+python -m experiments.mediated_patterns.geometry_evolution --stage fit --data work/mediated_patterns/geometry_evolution/development-01 --output work/mediated_patterns/geometry_evolution/fit-01
+
+fit-02 source c73142750728185bc771c3415585df5d61df58cd
+python -m experiments.mediated_patterns.geometry_evolution --stage fit --quadratic --data work/mediated_patterns/geometry_evolution/development-01 --output work/mediated_patterns/geometry_evolution/fit-02
+
+fresh-01 source cbabf57d2b40d54a27bd82841b8a2e0147148f51
+python -m experiments.mediated_patterns.geometry_evolution --stage fresh --freeze work/mediated_patterns/geometry_evolution/frozen-01 --output work/mediated_patterns/geometry_evolution/fresh-01
+
+fresh-motion-refine-01 source cbabf57d2b40d54a27bd82841b8a2e0147148f51
+python -m experiments.mediated_patterns.geometry_evolution --stage refine --data work/mediated_patterns/geometry_evolution/fresh-01 --output work/mediated_patterns/geometry_evolution/fresh-motion-refine-01 --seed 14103 --history odd04 --target 100 --fresh-refinement
+
+fresh-refine-01 source cbabf57d2b40d54a27bd82841b8a2e0147148f51
+python -m experiments.mediated_patterns.geometry_evolution --stage refine --data work/mediated_patterns/geometry_evolution/fresh-01 --output work/mediated_patterns/geometry_evolution/fresh-refine-01 --seed 14103 --history heldmix --target 100 --fresh-refinement
+
+frozen-01 source cbabf57d2b40d54a27bd82841b8a2e0147148f51
+python -m experiments.mediated_patterns.geometry_evolution --stage freeze --data work/mediated_patterns/geometry_evolution/fit-02 --refinement work/mediated_patterns/geometry_evolution/dev-refine-01 --output work/mediated_patterns/geometry_evolution/frozen-01
+
+pilot-01 source e22078f51a21cd42f3d7ee7e9a73d8c68d18d841
+python -m experiments.mediated_patterns.geometry_evolution --stage pilot --output work/mediated_patterns/geometry_evolution/pilot-01
+
+diagnostic-01 failed before imports completed:
+PYTHONPATH=. python work/mediated_patterns/geometry_evolution/diagnostic-01/inspect.py
+See diagnostic-01/failure.txt and conservative cost receipt.

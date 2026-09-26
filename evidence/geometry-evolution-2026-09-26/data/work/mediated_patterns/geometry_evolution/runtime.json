@@ -1,0 +1,33 @@
+{
+  "anchors": [
+    -28,
+    -4,
+    28
+  ],
+  "config": {
+    "cubic": 2.0,
+    "diffusion": 64.0,
+    "dt": 0.00625,
+    "feedback": 0.05,
+    "length": 192,
+    "n": 768,
+    "r": -0.67,
+    "source": 1.0,
+    "tau": 10.0
+  },
+  "no_paid_or_remote_compute": true,
+  "numpy": "2.5.3",
+  "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+  "post_probe_times": {
+    "start": 0,
+    "step": 0.5,
+    "stop": 80
+  },
+  "probe_amplitude": 0.02,
+  "python": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "scipy": "1.18.1",
+  "threads": {
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1
+  }
+}

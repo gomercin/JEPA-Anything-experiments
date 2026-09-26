@@ -1,0 +1,14 @@
+{
+  "cpu_seconds": 0.30127399999999993,
+  "limit_cpu_seconds": 1200,
+  "previous_cpu_seconds": 265.995042,
+  "sections": [
+    {
+      "cpu_seconds": 0.29565700000000006,
+      "task": "freeze-and-development-geometry-audit",
+      "wall_seconds": 0.2994131669984199
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 0.3272827079927083
+}

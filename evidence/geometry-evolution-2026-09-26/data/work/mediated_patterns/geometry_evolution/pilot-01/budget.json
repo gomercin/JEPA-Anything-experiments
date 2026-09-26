@@ -1,0 +1,14 @@
+{
+  "cpu_seconds": 0.06599500000000003,
+  "limit_cpu_seconds": 1200,
+  "previous_cpu_seconds": 30,
+  "sections": [
+    {
+      "cpu_seconds": 0.06113599999999997,
+      "task": "saved-motion-rate-and-persistence-pilot",
+      "wall_seconds": 0.06505254202056676
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 0.09437079197959974
+}

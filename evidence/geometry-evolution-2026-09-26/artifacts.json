@@ -1,0 +1,2152 @@
+{
+  "bytes": 17661087,
+  "files": [
+    {
+      "bytes": 985,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-final/accounting.json",
+      "sha256": "7053c8a875f363dbc423a9f3914de052934da067010a62e0fb902b47c8cc5a9d"
+    },
+    {
+      "bytes": 311,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-final/budget.json",
+      "sha256": "aa7b68c1ca8d85ab76265956c02206f52cb832697b665cf1fe81e50b757642de"
+    },
+    {
+      "bytes": 149261,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-final/geometry.png",
+      "sha256": "5d1ddf9a014c45049a6b1d1329228774cf04803a2ec4a261c80b603ed8aabdf5"
+    },
+    {
+      "bytes": 4218,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-final/protocol.json",
+      "sha256": "931ebbb8e526153e723c51ed2105f9f6a0e25facf79650c8f226b7935f16a363"
+    },
+    {
+      "bytes": 190984,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-final/responses.png",
+      "sha256": "ae88fdcab941a5f94ed045605b43e7725d591ed5c914d4baf5c05490ac25d778"
+    },
+    {
+      "bytes": 5523,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-final/rows.json",
+      "sha256": "7f119d229f88fc463abdba74ec9a0b286f58dc738770aece15564b1eeb406dc7"
+    },
+    {
+      "bytes": 1888994,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-final/signed-predictions.npz",
+      "sha256": "3b2e62b46c0bb604a2d60f8983f408b566ebc45a15b4849592b3e7487c910600"
+    },
+    {
+      "bytes": 1837306,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-final/summary.json",
+      "sha256": "e769cbb34eac84b02547ffd4463b0c19311c3ab260dac65452a643eba7c02370"
+    },
+    {
+      "bytes": 985,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-pre-refine/accounting.json",
+      "sha256": "fc0a777355872687ee64f654b73cfaf2d4a66915a8ec28bc919aa9d1a65d670b"
+    },
+    {
+      "bytes": 308,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-pre-refine/budget.json",
+      "sha256": "dc0851a7894bca026fbc13a818595c2ef61dc9e1988637612368ee649fad9008"
+    },
+    {
+      "bytes": 149261,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-pre-refine/geometry.png",
+      "sha256": "5d1ddf9a014c45049a6b1d1329228774cf04803a2ec4a261c80b603ed8aabdf5"
+    },
+    {
+      "bytes": 4054,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-pre-refine/protocol.json",
+      "sha256": "d2f9190a3075ed8fd0cf0ba37e7cb84b7b178f764689aba799070c09fd7d367c"
+    },
+    {
+      "bytes": 190984,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-pre-refine/responses.png",
+      "sha256": "ae88fdcab941a5f94ed045605b43e7725d591ed5c914d4baf5c05490ac25d778"
+    },
+    {
+      "bytes": 5523,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-pre-refine/rows.json",
+      "sha256": "7f119d229f88fc463abdba74ec9a0b286f58dc738770aece15564b1eeb406dc7"
+    },
+    {
+      "bytes": 1888994,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-pre-refine/signed-predictions.npz",
+      "sha256": "3b2e62b46c0bb604a2d60f8983f408b566ebc45a15b4849592b3e7487c910600"
+    },
+    {
+      "bytes": 1837308,
+      "path": "work/mediated_patterns/geometry_evolution/analysis-pre-refine/summary.json",
+      "sha256": "64c2b644cb2d3e8455f8dfbda770d851c674a5c161cf87956497011fe629aca4"
+    },
+    {
+      "bytes": 27174,
+      "path": "work/mediated_patterns/geometry_evolution/budget-total.json",
+      "sha256": "2beed2706a96f0998d3b90e55a5027ad6a6503e93369653c827c4b18c4cf08ea"
+    },
+    {
+      "bytes": 4067,
+      "path": "work/mediated_patterns/geometry_evolution/commands.txt",
+      "sha256": "46301d4ada695dd69853d2c996699dbcd4b5e2fbece4e59b00fa63c0c8b2ec38"
+    },
+    {
+      "bytes": 1207,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/budget.json",
+      "sha256": "2afb7df302b1ca01478e312a612c72b77bbc87b7854bdad0865a3e87768df68d"
+    },
+    {
+      "bytes": 22551,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/doubleN-mixed-current.npz",
+      "sha256": "6aabd51a03615510b6618e58383fda6bd613c646551b3599838c969062df76a3"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/doubleN-mixed-probe.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21239,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/doubleN-mixed-reference.npz",
+      "sha256": "16ae7c57c421742955645f2c5e88ac3f7ee099d3efd57233ba7eb68f054f2f6d"
+    },
+    {
+      "bytes": 31235,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/doubleN-mixed-regime.json",
+      "sha256": "b761f0ec72b43acb0f80ce5374b7c54e5b9c633b16a6f6055d32ac42e12fafc9"
+    },
+    {
+      "bytes": 22513,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/doubleN-none-current.npz",
+      "sha256": "ad98f2961dd996908ddd94d83f0e432e36468480f43c3dae3bb99c7a7f17b525"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/doubleN-none-probe.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21549,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/doubleN-none-reference.npz",
+      "sha256": "17dd01b2bf9c6c979801dfbd5e9b05dcdb6e5db7e6ca4c84bfd494f8fab52e2e"
+    },
+    {
+      "bytes": 31280,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/doubleN-none-regime.json",
+      "sha256": "4fda6fac545af38988a5d2ab5cbe647d00fe83b15df19688b8554f960e02dd02"
+    },
+    {
+      "bytes": 11475,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/halfdt-mixed-current.npz",
+      "sha256": "fccb2280bfb8f29eea4bb2b18f6acfdac3053058f513b15deb7ab3f93117982b"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/halfdt-mixed-probe.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21240,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/halfdt-mixed-reference.npz",
+      "sha256": "d84fba5d0042ad751cef76a8836e2375ebc899ee36dfaacaba16f5a44c78cac8"
+    },
+    {
+      "bytes": 31232,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/halfdt-mixed-regime.json",
+      "sha256": "075cbfd0d544772158869b64cfb01a5b3efb59420dae2dc9290c0bc8d93a0626"
+    },
+    {
+      "bytes": 11465,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/halfdt-none-current.npz",
+      "sha256": "01e2c55810aec623ab763748bafd7e8e2efccf07ffe90cbf2b3d28476da2bff7"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/halfdt-none-probe.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21535,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/halfdt-none-reference.npz",
+      "sha256": "76a741e5824ef7eba20fb7d36cd7891d8c71a77bd4cd30f71375aab1c2516ff0"
+    },
+    {
+      "bytes": 31280,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/halfdt-none-regime.json",
+      "sha256": "3a9856cdc886703e1ace63b9bdb0e898411da97927c58ca5ef9d3561836d89ba"
+    },
+    {
+      "bytes": 11499,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/prepared-initial.npz",
+      "sha256": "e89305dc16aea9c31f9e7d1c2f1083bf95c3678e9eadd895171bfc0cea9b42fb"
+    },
+    {
+      "bytes": 3969,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/protocol.json",
+      "sha256": "26a1817a359cdcddea3fc83e0042380510244ad5776cd42c580b8c146d5845cd"
+    },
+    {
+      "bytes": 3162,
+      "path": "work/mediated_patterns/geometry_evolution/dev-refine-01/refinement.json",
+      "sha256": "e12606c62ce31d3ca926322d09d49f1455185b71f195adeef7e9638a56702ec3"
+    },
+    {
+      "bytes": 8023,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/budget.json",
+      "sha256": "21f9115781c759a68e48d22ce1a4c1fb93f7c50114d8baf476b274f8904c60cf"
+    },
+    {
+      "bytes": 6206,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/inputs.json",
+      "sha256": "9587094b3a480179dd8f780f09d045f8dfdc5f8a39a31f7de7df62e90392574b"
+    },
+    {
+      "bytes": 22936,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-0.npz",
+      "sha256": "865e33dadfdd7b3c94dcbf35ef85234300d846436d790e38d408f3524ee1180d"
+    },
+    {
+      "bytes": 22874,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-1.npz",
+      "sha256": "820cec18efe1d229337928d562357716e48bd4319d4d6f65f886bc201ec6006f"
+    },
+    {
+      "bytes": 22947,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-10.npz",
+      "sha256": "0d259c1c7f8e7f7fbf3c193c72fe4aaec25303a14ffef4703a7671f9d39f0a99"
+    },
+    {
+      "bytes": 22878,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-11.npz",
+      "sha256": "a90877c80171e2a6b6d73c55a8ad5d7eb5866c71dd2f3dc3dbd4965c299a4a50"
+    },
+    {
+      "bytes": 22908,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-12.npz",
+      "sha256": "05c6e30a58e9b05652724a4247c319c4d455a1ddac276a35d0f0317b696d7258"
+    },
+    {
+      "bytes": 22920,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-13.npz",
+      "sha256": "1556d63b65fc1e25a2469570dcc65d4c68bef494fa0b678d27a5a61297704721"
+    },
+    {
+      "bytes": 22906,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-14.npz",
+      "sha256": "dfc559d1bf5f6734099253e60f2ab0ad5916fc767a047b4a7a7e2ffbaa081640"
+    },
+    {
+      "bytes": 22933,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-15.npz",
+      "sha256": "df1dff39775157e7859abff41f889bca2fd09fb54606000e0d8e8889e289a463"
+    },
+    {
+      "bytes": 22896,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-16.npz",
+      "sha256": "b2f0c001492790f8fb0a93884ac5b8aeec1c19d1a4a0a9080825c395d33ecf55"
+    },
+    {
+      "bytes": 22884,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-17.npz",
+      "sha256": "6f3146df25a7f0446ed563c4ca905c9ea90924a32c65eb75aa765ed8c091893b"
+    },
+    {
+      "bytes": 22948,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-18.npz",
+      "sha256": "7d210bd51be20f909a733e1efa33580055fa5a17ac5a967e8406403948a180a7"
+    },
+    {
+      "bytes": 22934,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-19.npz",
+      "sha256": "b81ad0d4aa885ab58588e3dfbd895a35cec8121f857b3afdbd954e4fb0b61641"
+    },
+    {
+      "bytes": 22904,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-2.npz",
+      "sha256": "d17875f801250d528db314fc4b46c6d1f21809108e2cceffed446005624f5287"
+    },
+    {
+      "bytes": 22889,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-20.npz",
+      "sha256": "19d17d0e49c360522b73d56178c504379ff6b1bdb1b244d9da01e5b98346d194"
+    },
+    {
+      "bytes": 22882,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-3.npz",
+      "sha256": "953e6eccfd969a43c9bc1d3c651078ed725dcdedb966fecebd08ce559fc1765f"
+    },
+    {
+      "bytes": 22930,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-4.npz",
+      "sha256": "f93d383176e93fa01580bbcd7627901c11108da59c9873260000e00cd5f18ebe"
+    },
+    {
+      "bytes": 22874,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-5.npz",
+      "sha256": "47a3abb0f93651cc0b58d8ade644cd1c12bcd93c7f22d72031210c2e7d59fd73"
+    },
+    {
+      "bytes": 22940,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-6.npz",
+      "sha256": "cf494258635847794dd42c461069243492bc5877b105cae6bfc52904476eb421"
+    },
+    {
+      "bytes": 22869,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-7.npz",
+      "sha256": "67f9d735d35c4da9ec71ef09646eaf14661328ac6c82718890a5ff5739d1bdf8"
+    },
+    {
+      "bytes": 22926,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-8.npz",
+      "sha256": "c90be15f24570e6da83c7ad4213afc5f7ee0d5086173efc1adbf1437d079ca9c"
+    },
+    {
+      "bytes": 22925,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/intermediate-9.npz",
+      "sha256": "fab07ffc7fe145e6f0abf7565d4a23b94eaa2f5b710c452d683c050e4174fdd1"
+    },
+    {
+      "bytes": 3626,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/protocol.json",
+      "sha256": "34f2dad42f9b83e5287e5d76c6fc48fec9fe400e026039302fde9afed8936e71"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-0-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21601,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-0-60.npz",
+      "sha256": "4102a8f4c803daa1929676133b62cae6f5e57361a80d57a5601515c351843ddb"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-0-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21538,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-0-75.npz",
+      "sha256": "d3bf48c0fa2467cae5bcaeb09a7f1ae7a89581f7782c449458cc0b8bae306252"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-1-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21045,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-1-60.npz",
+      "sha256": "b7bf76f25b4514104f5301cdd415299d46f811f9282b147e05009ab02d53c475"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-1-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21009,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-1-75.npz",
+      "sha256": "921fb846e67443d986710be0acc71aa1524a27c5dfa76003a1cb15f037682009"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-10-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21631,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-10-60.npz",
+      "sha256": "2f1bef8d87978b8434fce7af67e03d3c02247e41f51673c8e6955572baa0f1a6"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-10-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21633,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-10-75.npz",
+      "sha256": "db80809e0a9ec8706eb0f8b7eb02019d0d008ddf1edb1083d8b57e65f46af230"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-11-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21174,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-11-60.npz",
+      "sha256": "2cfeefecd6d085317eda7d001feb32aa05bfeab8a47a36ae4105673219351b0c"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-11-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21139,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-11-75.npz",
+      "sha256": "d6805ee4fa2bd54007c2fc77e9c6e2a869f5ad7e12fdd8d52dc2ea946aafe7ba"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-12-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21251,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-12-60.npz",
+      "sha256": "b57d92a0ff63b51f23d6e909ba67d5bee1cc238e343cb1fe314e4e0cf04bd382"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-12-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21213,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-12-75.npz",
+      "sha256": "fb8e7d2b56beadd99f00ecad2c49765a2cf5fb8a35021d7e2314dd4f549a0218"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-13-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21514,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-13-60.npz",
+      "sha256": "dbe276546cda835d395d12d384b792c4dde48c7a6b4f321694490eacc8300fe7"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-13-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21510,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-13-75.npz",
+      "sha256": "6203153fe9a86f0ab6a0d86d70e3065a7e924be802df68ee590f34055d574c54"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-14-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20992,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-14-60.npz",
+      "sha256": "c68b85a5544b7ea46df485faba207079c4f1e08d01240edcc3cb080d3ecd1408"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-14-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20963,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-14-75.npz",
+      "sha256": "f464a81648b7a573b9388c6356f1d82c5dc09ee8408b7fb940236324335de0e9"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-15-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21134,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-15-60.npz",
+      "sha256": "725885ecc0f26c96b426986784413fb98c7d3a99d79ef51f68fb7749c877f057"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-15-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21090,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-15-75.npz",
+      "sha256": "465276a027f127da54699266dabd6d84a284514401c60f55e2308ad32556cb39"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-16-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21437,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-16-60.npz",
+      "sha256": "fe55a6f336e1a2a3900c59984f285934ac377ec4e9986fc6b69aa260acad2209"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-16-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21439,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-16-75.npz",
+      "sha256": "389c12674b243810e12233770f8d0a498fae936cbb293052eb8b822da96ea759"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-17-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20708,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-17-60.npz",
+      "sha256": "2bae342e1c4f3c30d79f62c333206157699f9dff0ae98e591c6e9a9b855c72a0"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-17-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20689,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-17-75.npz",
+      "sha256": "546e47092650a2435cea6ccfdef9bdad57a5c85457f6e97a8567e4deadfec7ef"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-18-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21316,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-18-60.npz",
+      "sha256": "fe139e406abb8c547e134edd16c5bb3a15fae38da8adcd5a1f7c98b638d845d3"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-18-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21257,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-18-75.npz",
+      "sha256": "d56cec3fe74cad175e7a44766691744f7a26f6606af973ece550eda24eb684c1"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-19-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21500,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-19-60.npz",
+      "sha256": "fb65458737f87fb9203037344368e0d5e76f1b0f1b5059217bc819ba74582797"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-19-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21494,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-19-75.npz",
+      "sha256": "9c024fcff606d51dc66b3176914601b5c676318cc8219dccb2566c2614693e4a"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-2-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21448,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-2-60.npz",
+      "sha256": "3ad1347c9e6c353c17ffb4cda9a47860bf76126d57c390879a721fbbee354536"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-2-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21437,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-2-75.npz",
+      "sha256": "f58a29029aa7a110b940699abf4ae76cd4eb11452c743c3aad6bc986fd88f8b3"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-20-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21027,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-20-60.npz",
+      "sha256": "f725cff13ba760c426c4998b22d8d4bfad4019cd6d64c6c939c8b6d71ccfe26b"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-20-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21025,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-20-75.npz",
+      "sha256": "f9ffc9886e0ff3a8ca0a8f3e534b2a5b9dedbd1c32ce77077819a9c9449c26c4"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-3-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20948,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-3-60.npz",
+      "sha256": "47ced2d5833fa8f6acee86c726ecda4151250755926253314611268ef18a64dd"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-3-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20917,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-3-75.npz",
+      "sha256": "1b62cb0768072e20737d61ab9c402837adeb1d726904466db2ef70a2ac043d4d"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-4-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21651,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-4-60.npz",
+      "sha256": "408aadf1954db6b4a6823ab0265f5678e259b65088413604b6982a9630005154"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-4-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21582,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-4-75.npz",
+      "sha256": "a78ef8ed26ed9dcb76393a5b4d2b59d8684b07a2185704f779da9e19d50219cd"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-5-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21037,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-5-60.npz",
+      "sha256": "6a70041e2c6148f39e96e8665b98d0b47d450ee65ab6a8f7c002a113b083e796"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-5-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21044,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-5-75.npz",
+      "sha256": "69214e20ea915c4b1f499a260c5b73655df72120e5984ab07c2b04391e43fb7b"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-6-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21552,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-6-60.npz",
+      "sha256": "2fcb7226031b8773d70f33e768483bbe315874f62837d50fad6992619e3418b9"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-6-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21504,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-6-75.npz",
+      "sha256": "3bde59c41b7addb3eab8098feeb174ffc02c508969f9a05d924dfa4d356248a2"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-7-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20982,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-7-60.npz",
+      "sha256": "66d45aa81f3c4bfbbd9c8d81bb3c7ee89ebae376191cce5eddb8a18dfa15f4a3"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-7-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20930,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-7-75.npz",
+      "sha256": "e01377ce70c590bdfa4bc33d299d0603a382dadddff3640d1bec45eda797de63"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-8-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21826,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-8-60.npz",
+      "sha256": "95057cd3d3290ad24746940c2a7c15b4d6917c52304ff6f0827796315048a78e"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-8-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21793,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-8-75.npz",
+      "sha256": "7d2c4a911d42f355199a52a79ed4aa09b92371c0fb6cabc45a8dc4da46df1181"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-9-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21261,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-9-60.npz",
+      "sha256": "7499822500fa81478223a6d56790beb44fcd31ae1ef334e806c30d6a77a19fe8"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-9-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21224,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/reference-9-75.npz",
+      "sha256": "a11ccd7dbbc6b9763c579ac7e74824a054d27ef8b19fe70481f45b51c3d77fd0"
+    },
+    {
+      "bytes": 5824,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/response-rows.json",
+      "sha256": "898bee3579eaea4136310384efed3859d7dc9c5b99f9feeb8842cf73a3ebbaac"
+    },
+    {
+      "bytes": 1075,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/rows.json",
+      "sha256": "103aaad3ac4731b4aca1cea1da656aef49a92a3a92b28deb6cafa614c37a0942"
+    },
+    {
+      "bytes": 135617,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/targets.npz",
+      "sha256": "8a1dbef0219adee4f11e89bd6e8158efe7b86b0c74c7b6245462b31f9bcc26c0"
+    },
+    {
+      "bytes": 35711,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectories.npz",
+      "sha256": "8c19bf491af34c1a2b500c51ff8e926abe3e4e693bd64a53d3e2b59fda3897c8"
+    },
+    {
+      "bytes": 21133,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-0.json",
+      "sha256": "43846bd58d84411b2df26f0c09a735eabc8c765a85554abfa501bdee5b2e238a"
+    },
+    {
+      "bytes": 21034,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-1.json",
+      "sha256": "3e35a73811888e54c5ed4edc28c105a052aca8dde24b7afccd11bdc4ae584e29"
+    },
+    {
+      "bytes": 21000,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-10.json",
+      "sha256": "32ff0153c3d868e41b033e2ded0db80edca8df5f68688e24f505014e936c1e0b"
+    },
+    {
+      "bytes": 21003,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-11.json",
+      "sha256": "73b48146db02a7e904a8ad0a40def3a76696d720ced4665cdb05513f7d05fda9"
+    },
+    {
+      "bytes": 21030,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-12.json",
+      "sha256": "8c888ebd023f39639995ad3b323bed112841757323ef5823d6259a86cc368e46"
+    },
+    {
+      "bytes": 21080,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-13.json",
+      "sha256": "048fa513603fc4c91706b714c70151c78f07313d3291936a2fda9519465a2f4d"
+    },
+    {
+      "bytes": 20982,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-14.json",
+      "sha256": "2461650e1530dbda40536d70ce85abc63666d64ca4de9065942978413fe8cd3a"
+    },
+    {
+      "bytes": 20994,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-15.json",
+      "sha256": "eaf5faf8fb91d8c479f82033743f341d3505707b7dcd4e0e5f73b717cff878bf"
+    },
+    {
+      "bytes": 21051,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-16.json",
+      "sha256": "cd043819e2e4f29aab0a91138597b82aea010533e3a8e002e24aa7280c573831"
+    },
+    {
+      "bytes": 21012,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-17.json",
+      "sha256": "8fe89c512a6940dc7cd3e522cafbab780ef4be6d1554abd502c6538358f8b902"
+    },
+    {
+      "bytes": 21102,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-18.json",
+      "sha256": "eeba5118818abb0fb1cbdf723a5288e43697cead7bfe708c21c2579608b93d28"
+    },
+    {
+      "bytes": 21096,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-19.json",
+      "sha256": "c3020c79c5ab0b07097054419a644acb5cba26bcfd643be695d4c2fb4254859e"
+    },
+    {
+      "bytes": 21079,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-2.json",
+      "sha256": "8cf5f5ec0190e2c43c89095899d470308247affeaff8eb17fcf9cb94ee570612"
+    },
+    {
+      "bytes": 21011,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-20.json",
+      "sha256": "3554854208e4c06a52b33b1696f4bcb146f1afa1f732c57e1e14780cf317ee3e"
+    },
+    {
+      "bytes": 20977,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-3.json",
+      "sha256": "e1c328ceba8430a164e63e422b023c526e5d2f79f3d13248fbae12e2a678b54e"
+    },
+    {
+      "bytes": 21111,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-4.json",
+      "sha256": "7800aff173ee0c1299099e4123ea4d145552038fdf5231f26171463a11070dba"
+    },
+    {
+      "bytes": 21051,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-5.json",
+      "sha256": "e76cf7160989f5e4efba355ee9e65c99a1ae25034e8fb807b92508f6f48fc59e"
+    },
+    {
+      "bytes": 21109,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-6.json",
+      "sha256": "8aa951affd78cad45f4e49c96cff34d1734f9be331e838d3b47f6d76678e54ee"
+    },
+    {
+      "bytes": 21001,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-7.json",
+      "sha256": "66eb1d863a9a027307704e93ccb0dba7bf7fe8e6745a7da51119245c4e8302c2"
+    },
+    {
+      "bytes": 21082,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-8.json",
+      "sha256": "3fc84a70c76f99483388a0177875d260909239a582bb4a7375a3918de483101f"
+    },
+    {
+      "bytes": 21072,
+      "path": "work/mediated_patterns/geometry_evolution/development-01/trajectory-9.json",
+      "sha256": "f045bcd1349203a6eb6b42b765e04b75ced502f2acd0cc27093a7e62c02ce28f"
+    },
+    {
+      "bytes": 138,
+      "path": "work/mediated_patterns/geometry_evolution/diagnostic-01/budget.json",
+      "sha256": "b6421f5c3deff45fadd9273ef78fae75c12667c8846f1934993c8c21b08e3eea"
+    },
+    {
+      "bytes": 449,
+      "path": "work/mediated_patterns/geometry_evolution/diagnostic-01/failure.txt",
+      "sha256": "6d759bdf180fce826681751e2be32990e98cfeab1574ef3bf2147f99ba57b3d4"
+    },
+    {
+      "bytes": 6138,
+      "path": "work/mediated_patterns/geometry_evolution/diagnostic-01/inspect.py",
+      "sha256": "3b93b70a57b0bda8e15262cc84fbe52e641669e5fb3e52cdba3fc548021bf484"
+    },
+    {
+      "bytes": 351,
+      "path": "work/mediated_patterns/geometry_evolution/diagnostic-02/budget.json",
+      "sha256": "fa71b29d74889447fbb5928614fa99e77850d19201254335a10c2c7f8556944a"
+    },
+    {
+      "bytes": 6138,
+      "path": "work/mediated_patterns/geometry_evolution/diagnostic-02/diagnose.py",
+      "sha256": "3b93b70a57b0bda8e15262cc84fbe52e641669e5fb3e52cdba3fc548021bf484"
+    },
+    {
+      "bytes": 20994,
+      "path": "work/mediated_patterns/geometry_evolution/diagnostic-02/diagnostic.json",
+      "sha256": "93fb62a445a9c48a046418087686ac5354eef397143c0321709eefb6582e3c60"
+    },
+    {
+      "bytes": 319,
+      "path": "work/mediated_patterns/geometry_evolution/diagnostic-02/protocol.json",
+      "sha256": "e4a057922745a82ffaf1cdfd6a7b669479d04beb2e3eb60bc5eba15c19ecef37"
+    },
+    {
+      "bytes": 63017,
+      "path": "work/mediated_patterns/geometry_evolution/diagnostic-02/weak-motion.png",
+      "sha256": "42aaea2b50d57ac198cb671eb2b3838683dd11a66f53cb930b0c750c70abb368"
+    },
+    {
+      "bytes": 312,
+      "path": "work/mediated_patterns/geometry_evolution/fit-01/budget.json",
+      "sha256": "646d4f68f12f6e5a32e40894523b44bbb67738dcd3d5cba7f7835a42a74ce963"
+    },
+    {
+      "bytes": 1588352,
+      "path": "work/mediated_patterns/geometry_evolution/fit-01/fit.json",
+      "sha256": "089f9e379cd7fbb8c7d4ae5d3c1497054d79e22e2d8024dda123faba92c3b39f"
+    },
+    {
+      "bytes": 2564,
+      "path": "work/mediated_patterns/geometry_evolution/fit-01/models.json",
+      "sha256": "165a73ce4c4082d8130e91743662f04d5337b5a76a6ad885d5ffa158ea2f5581"
+    },
+    {
+      "bytes": 3782,
+      "path": "work/mediated_patterns/geometry_evolution/fit-01/protocol.json",
+      "sha256": "63c3120a0090f37416bbcfb43ac8f3ec73b833983d06b53777639d8bebb25c49"
+    },
+    {
+      "bytes": 30950,
+      "path": "work/mediated_patterns/geometry_evolution/fit-01/rollouts.npz",
+      "sha256": "4a649e4bc3ab9de0bdac1dd73e6da283c0d9a20eaef159a1796b8aee653f7cfd"
+    },
+    {
+      "bytes": 322,
+      "path": "work/mediated_patterns/geometry_evolution/fit-02/budget.json",
+      "sha256": "364debb09a4d1ac90238351e9d31c5551a153f2feb8ab4f0f79a90bc9f9bd79e"
+    },
+    {
+      "bytes": 2241214,
+      "path": "work/mediated_patterns/geometry_evolution/fit-02/fit.json",
+      "sha256": "62702a4a884a0d7c39bfb9cb28c9b6e220ad161b1ceb3ed3e438cbd7523dad41"
+    },
+    {
+      "bytes": 5689,
+      "path": "work/mediated_patterns/geometry_evolution/fit-02/models.json",
+      "sha256": "61164b4bc8383859b1ea56b7ed0372e93fe2e1ead9529a44430d93c23fa10b35"
+    },
+    {
+      "bytes": 3896,
+      "path": "work/mediated_patterns/geometry_evolution/fit-02/protocol.json",
+      "sha256": "f368b7edfced3c9e1888f41d8c17a561117033721388665b681859edf81e9b65"
+    },
+    {
+      "bytes": 50381,
+      "path": "work/mediated_patterns/geometry_evolution/fit-02/rollouts.npz",
+      "sha256": "c6b591768b005da85c9b4d301c3b367749b91b497b56188bca83dd25dc2617af"
+    },
+    {
+      "bytes": 4543,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/50-to-60-0.json",
+      "sha256": "15786acc50154f3cf87ba68fb0a18c637578523c9880a0ef888bac71df9cd7b3"
+    },
+    {
+      "bytes": 4522,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/50-to-60-1.json",
+      "sha256": "f02be7f2b1455365830a6bf57193286bad8b86d24f68e5a26fa8e6c42b4c4191"
+    },
+    {
+      "bytes": 4541,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/50-to-60-2.json",
+      "sha256": "d9e48a1f6c229aadea4b349e377bb533574efcc6905aad501c424d3ec9da9a5a"
+    },
+    {
+      "bytes": 4539,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/50-to-60-3.json",
+      "sha256": "d25a2a1e2ef753c3a9993cd9e65a496bf023217a0706e70e15c7d60b32a1aa9a"
+    },
+    {
+      "bytes": 4520,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/50-to-60-4.json",
+      "sha256": "fd8528317c163d74d6bdce7a36f3714e417d2f2069c195f7c249137137590937"
+    },
+    {
+      "bytes": 4527,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/50-to-60-5.json",
+      "sha256": "b77d467483db9c819313f431798d2740c9fb4c13f19e703a356e3f98ed37e7ea"
+    },
+    {
+      "bytes": 4552,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/50-to-60-6.json",
+      "sha256": "53ad0c2809c1f41588343ab8014b0280e488c053f46b69210427d2c5bdc5ebbe"
+    },
+    {
+      "bytes": 4520,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/50-to-60-7.json",
+      "sha256": "734f996dcb5e45a94319222b7d32d789c15d95b2840d51e922505cb1f09090f6"
+    },
+    {
+      "bytes": 4524,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/50-to-60-8.json",
+      "sha256": "e11aa717a0315a7ff480e41b8d06fdb10433577b7096a354d289c121c3819c44"
+    },
+    {
+      "bytes": 16851,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/60-to-100-0.json",
+      "sha256": "76c437908e7e637998912735f9f941ea21d1c3f3dc3e57eb984fde3da9b31921"
+    },
+    {
+      "bytes": 16783,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/60-to-100-1.json",
+      "sha256": "f45578f139746fb17da9e8ea3742e46cdc344df8f7ef1d51206580d1e3909761"
+    },
+    {
+      "bytes": 16839,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/60-to-100-2.json",
+      "sha256": "e03e17b546ef55cd3619be8e82250f94f184095b4455e4c5d713326e7aadfd9c"
+    },
+    {
+      "bytes": 16874,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/60-to-100-3.json",
+      "sha256": "e25aec6ca57fc87662ca890cbd27e5c893b8cf37d24fcbb729e6dc29ec13baa8"
+    },
+    {
+      "bytes": 16784,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/60-to-100-4.json",
+      "sha256": "6be7fa4d1d8e8b8536c329f2e7d12868329b9ac3fb8f018a0f6be1980a186689"
+    },
+    {
+      "bytes": 16810,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/60-to-100-5.json",
+      "sha256": "b7a1e2ea0c75e44f55ea4f18e5b5fb3ee28a3bd5c9f695862f0a80ffb25b72b9"
+    },
+    {
+      "bytes": 16924,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/60-to-100-6.json",
+      "sha256": "4fd987bb0a98a60b9c9328c9dc2406ea7c4e58eb24dbc8016a273ae2c4afed4c"
+    },
+    {
+      "bytes": 16813,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/60-to-100-7.json",
+      "sha256": "d09c279ae412b77ca03b10a913aee1daca65da2b94bb33001fd5da5bc072be93"
+    },
+    {
+      "bytes": 16838,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/60-to-100-8.json",
+      "sha256": "152188ab500e8239c439c7289b28ad47bf496e85f30b2836043502a660c6cbf8"
+    },
+    {
+      "bytes": 101408,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/boundary-50.npz",
+      "sha256": "8baf8b8186f5f95ba1102968f4f48fce25f862c79189d8a46213132ab5165fa8"
+    },
+    {
+      "bytes": 101483,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/boundary-60.npz",
+      "sha256": "e4efb4fe39e579b029706cf21deb563ea85f4cf47fcdd48cfddf97074664cbdf"
+    },
+    {
+      "bytes": 8912,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/budget.json",
+      "sha256": "5c748525cd0763174a51dbf2b8b0044ae886bdf84fbaa32db5a279fc194aab8a"
+    },
+    {
+      "bytes": 209,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-affine-1e-06-0.json",
+      "sha256": "5d6b8c3e62d87e168e2d30036fff578170b9c798d559e02e533d9013d62250f4"
+    },
+    {
+      "bytes": 209,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-affine-1e-06-1.json",
+      "sha256": "97cbe48112c4ee84a5cc287b964df2cb53c5f8ec368e7bdeefa47fe7a05308a8"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-affine-1e-06-2.json",
+      "sha256": "4a159259df6e4aa4257821236a2a4ac2575685dd061d64a8a33817710bcdd4cc"
+    },
+    {
+      "bytes": 212,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-affine-1e-06-3.json",
+      "sha256": "88b9d5f3bcc7141773480c40a39d72121575072a6870b3abd6c296114e02bab3"
+    },
+    {
+      "bytes": 207,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-affine-1e-06-4.json",
+      "sha256": "b31791b179e790af651faf146318d3f9ce0da918608ac50b0aa995850a595de3"
+    },
+    {
+      "bytes": 209,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-affine-1e-06-5.json",
+      "sha256": "8fa7677d5a5bea9d02ca18f9b23bb158098d4ffcb870b93b697f3632e2200b02"
+    },
+    {
+      "bytes": 214,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-affine-1e-06-6.json",
+      "sha256": "0632150a42bb7fd1738f7ac6e53010aab139540a3ec52c73f509de31452a043b"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-affine-1e-06-7.json",
+      "sha256": "3720459a7bff9bac8ae2e3608de1e3a8d1bfeca687100cf59cc1273e6890cc61"
+    },
+    {
+      "bytes": 209,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-affine-1e-06-8.json",
+      "sha256": "a08155ebb43ff0487a28e33fd8fb923aa771d44034466c270badad7eaa2e3e3c"
+    },
+    {
+      "bytes": 212,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-drift-0.json",
+      "sha256": "373db9d2f8195be98ae48ed442f3b01607c34822e5b3884327a063be4cef4acf"
+    },
+    {
+      "bytes": 206,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-drift-1.json",
+      "sha256": "b3b07df5cb588bcb77684416580c4c1d89500907f4d75594d4f507924a05b802"
+    },
+    {
+      "bytes": 209,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-drift-2.json",
+      "sha256": "a8d7eaa5f6746080646ca42e9548b28ada426eff71ed560d3f811ecc2ac52e16"
+    },
+    {
+      "bytes": 212,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-drift-3.json",
+      "sha256": "8db4097db4f1475204d895e3a6e4a96027de86191a23c5a1e5035519b5f9aa8e"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-drift-4.json",
+      "sha256": "e284ebc57cef66f23fd59b1c2fe62b4efc14fa9a5d206b6f890ca8f83f0a027f"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-drift-5.json",
+      "sha256": "9b5f41e5645a0c152c7c413189116eba845767d87dfa780ec5986eabc5dff6bc"
+    },
+    {
+      "bytes": 211,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-drift-6.json",
+      "sha256": "a9d068552e5fba8a5fc5506ab80f1bc0ce7352ee5adadd3067259dbb1c77452e"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-drift-7.json",
+      "sha256": "5aab064b618786d746d192f9c171e11405f04aa8fab15d1756a3b94dd315c33d"
+    },
+    {
+      "bytes": 212,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-drift-8.json",
+      "sha256": "8e006cb5539a5e8d29b1f545b826787e582d0dff8b24415176bab8204f6de28c"
+    },
+    {
+      "bytes": 213,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-persistence-0.json",
+      "sha256": "e4a80d3f6e949b8fe2e2e6a88f4348308a0f1e8b6e678c09c49fcb1916a75f2d"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-persistence-1.json",
+      "sha256": "0d376a4fe2dc62a96ea37358b890452a3ecca8db51ecb6efdf382992301bb7ac"
+    },
+    {
+      "bytes": 209,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-persistence-2.json",
+      "sha256": "9d36009875582628073ff4246438d2274270da9c73d8c58699ffc765eda0101e"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-persistence-3.json",
+      "sha256": "04ca3019019cce25c9ff0242c8b4a1c18737f40c75ea228e63ed9a713f4a4a24"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-persistence-4.json",
+      "sha256": "b67645eaacbc8d8c7680a1ce806d0e5a3fa1f2b05d402aa2c26b0ccb59fad575"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-persistence-5.json",
+      "sha256": "464f90f687e06583a7801349e58b1bc11b2cad42b08efe41e66974e8664337fd"
+    },
+    {
+      "bytes": 212,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-persistence-6.json",
+      "sha256": "d0c45adffd8c5dae91cff7d6d98fd0d55313e0725030feb9b2bd223cc9843756"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-persistence-7.json",
+      "sha256": "e217012f29ac5606d025a84d93b6328e0c461b33e93c717966f1f6f7b944b321"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-persistence-8.json",
+      "sha256": "e397b0e0e3b0ad00c34efe318779bd844d006938dca6c44b4218d9d62f56bcf5"
+    },
+    {
+      "bytes": 212,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-quadratic-1e-06-0.json",
+      "sha256": "dd422c8259069b10cb91fdd9b6af889d393b10eb3be3361d2d38749a3e50622a"
+    },
+    {
+      "bytes": 208,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-quadratic-1e-06-1.json",
+      "sha256": "0d8b80c87cad9896a614ef287480439e1a0fe51ce2044e2deae9476345b73a04"
+    },
+    {
+      "bytes": 208,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-quadratic-1e-06-2.json",
+      "sha256": "ede88f31a860ccff5a23006c271f3a7a15ab4b64c4d25d0586973d37fdecdfe9"
+    },
+    {
+      "bytes": 211,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-quadratic-1e-06-3.json",
+      "sha256": "b5b41fe693ae1c9115d145d1da0714e1fdf7f0bf93dd93c33b56ab3279bcf950"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-quadratic-1e-06-4.json",
+      "sha256": "a8fdf3139ff698deb6eae909d2010af8b061f90b51a1db0d07119fbbfaf33e8b"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-quadratic-1e-06-5.json",
+      "sha256": "47ab5057333a961ba31c6a278473302f950d4b4e606a59e070601fb3cd295739"
+    },
+    {
+      "bytes": 213,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-quadratic-1e-06-6.json",
+      "sha256": "de13027856ace6637f0e31fa635b81fde1b514687e611062832196d072e1e0ff"
+    },
+    {
+      "bytes": 209,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-quadratic-1e-06-7.json",
+      "sha256": "e1bc6fd3cc606211a685dde83c35633f2c2251f4a429776db59611f765491f89"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-50-quadratic-1e-06-8.json",
+      "sha256": "3e4cf19394d10fc6b3cbfa7fedfea894a780c0da5877e931515b0fa02f796e1a"
+    },
+    {
+      "bytes": 211,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-affine-1e-06-0.json",
+      "sha256": "8f605f23f16ce0867c7fd0982416f4482669286f15b3533db4b2924781cd0b55"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-affine-1e-06-1.json",
+      "sha256": "86d0b67c6f0e7a2e202ef462f1874f722c40382d90e4ded392e1783b8efb3d57"
+    },
+    {
+      "bytes": 207,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-affine-1e-06-2.json",
+      "sha256": "ebf92674d4dc00662b598210a53fab0589d223865db1cd1ee9b5627fd56f2729"
+    },
+    {
+      "bytes": 213,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-affine-1e-06-3.json",
+      "sha256": "a042409925dcb34dfade37a01d6dd084cba7ecaeae7212736a65164f2712d8eb"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-affine-1e-06-4.json",
+      "sha256": "2de5e63e5a0b3bbe8b7144c0ca61db04a37aba11b9812e011932203e1d25ce88"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-affine-1e-06-5.json",
+      "sha256": "fb75c7f9f97a70681edfa9d2ec44024d725ba3d22aee2b25198b66e83f49fa9b"
+    },
+    {
+      "bytes": 213,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-affine-1e-06-6.json",
+      "sha256": "4a496e9dc569e9b0a127b2f134de09827db09f1126056592f6ed7d0d9d9472ac"
+    },
+    {
+      "bytes": 208,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-affine-1e-06-7.json",
+      "sha256": "d1168fff73b834793dbd29a09f8754ac6acb7fa4573873e025453b810726f33a"
+    },
+    {
+      "bytes": 211,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-affine-1e-06-8.json",
+      "sha256": "e131a83c9d3beb56f186eb75d19aad08d22e70aec40dcd0355830940f603b9ef"
+    },
+    {
+      "bytes": 211,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-drift-0.json",
+      "sha256": "3677bb8765109548f852ec5dfd120917092e66547255e22e9d39eedc45f987ee"
+    },
+    {
+      "bytes": 207,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-drift-1.json",
+      "sha256": "5454cc9f349c4ea3a7b3aa41d2c677660e2c8c79b0ae1e853bf9b54aa7827d8b"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-drift-2.json",
+      "sha256": "cd877a4a5161833da6ef65783ec879ce4633c1d39060724dbd609f5885cfe3e4"
+    },
+    {
+      "bytes": 213,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-drift-3.json",
+      "sha256": "929e174de804cd6c871d973f23e8ced92aa9207c73eb05556150df6c8bf3e385"
+    },
+    {
+      "bytes": 208,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-drift-4.json",
+      "sha256": "d78ad6951919dee342f93776822953b993403d84c2abdd8a6239e920fd5f641a"
+    },
+    {
+      "bytes": 209,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-drift-5.json",
+      "sha256": "bb9ab619ccbb64cfcbca148a218c1f9b00d13f0e0776da3cecb9f9fe7f2132e0"
+    },
+    {
+      "bytes": 213,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-drift-6.json",
+      "sha256": "9fd637d62723bcd5ca4b0b3edd8159a4986d4953a83f77c52ca5a1b78d0f29c0"
+    },
+    {
+      "bytes": 209,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-drift-7.json",
+      "sha256": "7e7434b81a5cbd425e47269759c59132b53723b286ee61253fb3d322323ecaae"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-drift-8.json",
+      "sha256": "bfbaa34aaa095ec125d760c47e1d8b465c2147a52bf57752bce0dd73196071b0"
+    },
+    {
+      "bytes": 211,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-persistence-0.json",
+      "sha256": "76a990d72a8739f7998ac99e43a418547fb60e6b7fedec25426d7f896c26c025"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-persistence-1.json",
+      "sha256": "920c692abd22f391f9627dce18777ae2739cc2c99ce486e406114b3f65b7da56"
+    },
+    {
+      "bytes": 209,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-persistence-2.json",
+      "sha256": "79028fba02766666ff7dfb406f13da1bdd20494250b2387750367346cacb4c8e"
+    },
+    {
+      "bytes": 212,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-persistence-3.json",
+      "sha256": "4be5438a3a7a519d7d2af5174ee1c99be33d3d131bd104cec80f70933ccfc3fd"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-persistence-4.json",
+      "sha256": "aee357ae3b33c40cff48a5b10867c9980c32c4bec6f9ff3b0cef694f8ff0f858"
+    },
+    {
+      "bytes": 211,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-persistence-5.json",
+      "sha256": "99dbc1759895a4c7672bf536ffc0de137cac30ef41be4cbef4b8bf45498ba2e5"
+    },
+    {
+      "bytes": 212,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-persistence-6.json",
+      "sha256": "2790f61f1c12f344b8dfc8fa484c504a70ae305374d8f1283988085fa6e2fc5e"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-persistence-7.json",
+      "sha256": "550b20379c154e4c3e611f9a79157cdf048bcba00e01df86ebb3e89f1eff2e46"
+    },
+    {
+      "bytes": 211,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-persistence-8.json",
+      "sha256": "ed1972834479b51757d404b277aa4a2f025f2c4c9f8c0ba485fac22d9550941c"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-quadratic-1e-06-0.json",
+      "sha256": "910c11d9be74ebf999891056b4a2b28662fb0ff48661bc557bf7eccc171bcc2b"
+    },
+    {
+      "bytes": 209,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-quadratic-1e-06-1.json",
+      "sha256": "c91c63cd33833a318df4a609ea4da3d5a8c1793f04e6212393c0bb2595f3c99e"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-quadratic-1e-06-2.json",
+      "sha256": "6fe82b29f5c0132d54c5b1c475e5d9f98fbec356112cb4ee39aa9d37f9e32766"
+    },
+    {
+      "bytes": 213,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-quadratic-1e-06-3.json",
+      "sha256": "04dae59233168400ea14c4a59b45038f712d5a2ec2bc5d6e7a6afc1e9b3225ae"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-quadratic-1e-06-4.json",
+      "sha256": "117476ea04fc7b42caacae69b88876af1e9f429815d1a9e8fd8659701c680380"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-quadratic-1e-06-5.json",
+      "sha256": "e43f700ee795dfb0eec47257c2cef723552796a2816bfe270b1b8fdd8537bfcd"
+    },
+    {
+      "bytes": 212,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-quadratic-1e-06-6.json",
+      "sha256": "239761b5c9880694064ac6147fc192b6277c1668290c4f5e44f020ad936b9ca5"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-quadratic-1e-06-7.json",
+      "sha256": "823498b10cd7daa090bf8ad5594fdefc62300515d2c2887ffe929dbadf85d1dd"
+    },
+    {
+      "bytes": 210,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/checkpoint-60-quadratic-1e-06-8.json",
+      "sha256": "0ce89a1d29c7d30ffd1965358ce8aedb43c5ca5bebf76f3947ac4a4d3e6cc1aa"
+    },
+    {
+      "bytes": 1286,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/evaluator-geometry.npz",
+      "sha256": "73b5ae5a7c68ed6382d755fbf35034848c7cb3a58ef6629ef4dc4fa8d02010e0"
+    },
+    {
+      "bytes": 404956,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/evaluator-states.npz",
+      "sha256": "4bb872b9f46c7ffafb7a0a418eb74c997c6c4b85edbe9e02b7f112bcc4208f71"
+    },
+    {
+      "bytes": 3713,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/geometry-50.npz",
+      "sha256": "bbde31845940e575e774ea3e12036ae4c1721cb6dc3ffea6cd74725e330d9543"
+    },
+    {
+      "bytes": 3070,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/geometry-60.npz",
+      "sha256": "161102b70c361f2f7fc9afa5c18a084beb1bf47e31b366bae15aa77ba041dd36"
+    },
+    {
+      "bytes": 426,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/initial-descriptors-50.npz",
+      "sha256": "3f0c8385bbd75ee3b7cca5813dca9a0a184e1b386088ce5d837a06f0329e0542"
+    },
+    {
+      "bytes": 426,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/initial-descriptors-60.npz",
+      "sha256": "101794ce24e9e9a0ca0d1d4c165b7424d09742f62f41e49a9e1e4a09dba15317"
+    },
+    {
+      "bytes": 20900,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/pre-boundary-14101-heldmix.json",
+      "sha256": "62b5c1913aac6f5542afd1aa757e663d1d1f873ed510a348ba1f1c40b315230a"
+    },
+    {
+      "bytes": 20974,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/pre-boundary-14101-none.json",
+      "sha256": "0514b05f569b7db55d8d651914cab5601f5e7abf48dc609e5ef8fc5859211f41"
+    },
+    {
+      "bytes": 20872,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/pre-boundary-14101-odd04.json",
+      "sha256": "72a55b52309fe29c7e9f0cd94eb88072292ec7bab76f9b42eb8534d797441241"
+    },
+    {
+      "bytes": 20920,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/pre-boundary-14102-heldmix.json",
+      "sha256": "0d2a0f8e13c9b3cb4698b236bf5a42efa54d54d0ed310e38695ddea7b2cc7cfe"
+    },
+    {
+      "bytes": 20951,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/pre-boundary-14102-none.json",
+      "sha256": "68f344384e126fe2b859c686816ad77aeb07a3ec97eb2f777a9abe54e40e096c"
+    },
+    {
+      "bytes": 20894,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/pre-boundary-14102-odd04.json",
+      "sha256": "8f1e4d43d21362ef063d73001e3f78caf99f81e828c3fdf3b5a202c38838f1b9"
+    },
+    {
+      "bytes": 20949,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/pre-boundary-14103-heldmix.json",
+      "sha256": "4803ac6852bcda16812948e74ab76aed6b927a08b5fd9f237b610ca6028fee0c"
+    },
+    {
+      "bytes": 20976,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/pre-boundary-14103-none.json",
+      "sha256": "f3cba6d6e5e24765e0d1bece76960c18426790ecdf537ea20a712b04e51f6a7f"
+    },
+    {
+      "bytes": 20902,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/pre-boundary-14103-odd04.json",
+      "sha256": "80840970bdf4ebaa03fc0a34b2e73758cfabdee41ffdf3dddb3867c3338e0b87"
+    },
+    {
+      "bytes": 291341,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/predictions-50.npz",
+      "sha256": "4b9d4fe64570d6e5757315cf6bd91360b0a5520615fb145663bee94f122fb17f"
+    },
+    {
+      "bytes": 224822,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/predictions-60.npz",
+      "sha256": "5becf1465a560d175d0950022cfb6007803bb481495878a02c9680ea87756190"
+    },
+    {
+      "bytes": 3886,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/protocol.json",
+      "sha256": "fef4f5a6db4f3e3b00d8062d8ed28f80b9cf9fce1344dde6c3462aef1d38ac0f"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-0-100.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21408,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-0-100.npz",
+      "sha256": "fbbc5f2abe5cdb8f83d8c2b132e1d8d25ade46edc663e629a65e53b5a329a3a9"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-0-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21442,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-0-60.npz",
+      "sha256": "52306518aa62b24d40dfb2b218723cf2dbeb9d320601210ec11d09bcd2c25617"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-0-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21417,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-0-75.npz",
+      "sha256": "eade8c797193d0ee14ac5db620cccf3f656b3345b88ab37b4ef42ad865fd156b"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-0-90.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21425,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-0-90.npz",
+      "sha256": "f53cc7ba75ab81ce4febb31741a8ea91718228188e6d150136fdddc716744f7d"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-1-100.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20772,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-1-100.npz",
+      "sha256": "5a24e5640ebfe861717dee90cecf1d778deb1302c6a6d21f256acea33e41129c"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-1-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20870,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-1-60.npz",
+      "sha256": "97877142c3e5cb03fce20295a710528b84dd1cb50cba4ed1cb3ca640b7d3066b"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-1-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20851,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-1-75.npz",
+      "sha256": "da217669f79f76b2b62e6ff9251444e55cecd09cd5238c6ad2e47cc68695cc9c"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-1-90.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20805,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-1-90.npz",
+      "sha256": "e1b21541028202252ac08bbef7022baafbb82e3cf265b08763d2f9c8d7a19732"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-2-100.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21112,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-2-100.npz",
+      "sha256": "88d3bad8bc7c711d9b04da1fdf7599db711bbee594ad1546984aaf170a4cca1e"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-2-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21217,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-2-60.npz",
+      "sha256": "f99a57e2b1669614cce8f327a7469a0141d7f609ba9751234f032fb2eacb60c3"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-2-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21127,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-2-75.npz",
+      "sha256": "301cba8201a13cd10534e538ae32aff8b7586fdc4f1da200b03106cff0ca16c9"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-2-90.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21093,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-2-90.npz",
+      "sha256": "bed87e8a1a2589fbbae817d2752a0e6743a80af24bfa50948d603275e8d6a94f"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-3-100.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21453,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-3-100.npz",
+      "sha256": "815048226283b43d6c45aaf81e10c46a79076234e855db87a47afe8e67e7fabb"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-3-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21524,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-3-60.npz",
+      "sha256": "902aca5ddf62bdcfb522d34784c20ae92ffbf14c01709b003ddd7ed59efd9770"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-3-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21517,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-3-75.npz",
+      "sha256": "d37e1c121bc9907cc60afe052e5d9ed1add37cb08e63145a23f0873b7f035a54"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-3-90.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21444,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-3-90.npz",
+      "sha256": "b5017fbba111e1a13325bb5e70309828785758f62b963459fabf7f5443b95a0f"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-4-100.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20935,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-4-100.npz",
+      "sha256": "b244305f63a6f1b54194da73a32910f8cda338bc59f49639847fda2d4c563f97"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-4-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20989,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-4-60.npz",
+      "sha256": "da68392e44f8223217137ebe952ec44ccaf86a8f543c0eb14b65e675df439d0d"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-4-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20973,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-4-75.npz",
+      "sha256": "fae25b545741bc480d1d38dd28c6b4005a77e0a083063c4ae653b5c71137d6d5"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-4-90.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20947,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-4-90.npz",
+      "sha256": "5c17b660f63454abb1e3abe5742e26048dc91802ec1fc72cca87a636c792fd49"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-5-100.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21201,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-5-100.npz",
+      "sha256": "47e3319ed92c4872c87d9091a56139e4f243a55b8990cd2e7d228d0311c89886"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-5-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21215,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-5-60.npz",
+      "sha256": "f6b0f6c351ed1120b590e2fc0fef49fd9e2e802eec600fdcde3dce706802ac32"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-5-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21240,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-5-75.npz",
+      "sha256": "c21c64ce7c114b4d8685f1280ca4d3c94b3020b0851c2e6f637619a0889ce29c"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-5-90.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21212,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-5-90.npz",
+      "sha256": "ca11c7237ac603689e9bb104326f841504c270db73ad29c6a78d763798cbe98b"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-6-100.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21420,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-6-100.npz",
+      "sha256": "e4acb88c8f4ca1b376bb8ac30dba3faa59385ed01b61b1c35efae0391e9f23df"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-6-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21513,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-6-60.npz",
+      "sha256": "cac8b0d76863a825fab1a946276c8d2dcbbae47975b1e9865321aba2b10f3718"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-6-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21477,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-6-75.npz",
+      "sha256": "1635300c3db9becf53aa55433740b658bc0111b2918b5d405faf9a74aa36cff4"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-6-90.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21453,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-6-90.npz",
+      "sha256": "1555e4f99aee993f1a98ed2f4f00833760a79ca8060ada60081f73d491384fa8"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-7-100.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20974,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-7-100.npz",
+      "sha256": "3d098c7c9430502efea8e40b837966d4fd479bd6639d7ad57ef21b1d27bff981"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-7-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20930,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-7-60.npz",
+      "sha256": "5e48b5448640c5461665801fab36614dc30aa8f5456f12c2b097957ddc27e8fb"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-7-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20978,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-7-75.npz",
+      "sha256": "2c19b71178bfe5a9e13ed989a30a87d10b5831ec20148cdba4ce8ac9ede67e99"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-7-90.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21006,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-7-90.npz",
+      "sha256": "d260d3dd388639addf2a08067bf9755ca7c6096de0980a010c3b2b60282e965d"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-8-100.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21176,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-8-100.npz",
+      "sha256": "f071ec98f32f2387c67ca799fc647a88ebd9b51b2500db61d16bdae71141ff5f"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-8-60.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21267,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-8-60.npz",
+      "sha256": "b5cf09fb5278ac52d423cf50e3555605d245aa2d2a502229a1401a39ec50d741"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-8-75.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21236,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-8-75.npz",
+      "sha256": "728836653ff0ed6bcc10da78d6b19f78eaeb132ecab2a9f00c6e2e26031e5ad2"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-8-90.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21228,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/reference-8-90.npz",
+      "sha256": "1e230adb4118a56d32c769aa6af3791de2b87433db8dbd953ec25f942c42330c"
+    },
+    {
+      "bytes": 465,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/rows.json",
+      "sha256": "fcacb21b1f3bd9a612e7c152f77905162ba364d790d32f042bbc30e730c0d185"
+    },
+    {
+      "bytes": 11472,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/s14101-initial.npz",
+      "sha256": "122d288435d25685bc5f23b271b120d2c396552062e741dab2a12dba5d2ca4bf"
+    },
+    {
+      "bytes": 11472,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/s14102-initial.npz",
+      "sha256": "e2a126b62910246e1463a5a0955a635496859ac1575ad3013ce2a4ed32efb0fa"
+    },
+    {
+      "bytes": 11497,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/s14103-initial.npz",
+      "sha256": "d1750d1dc90a1a4426b376539584af67348d845b42c7205e3f82539721e9b54c"
+    },
+    {
+      "bytes": 952,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/seal-50.json",
+      "sha256": "cfa0351b1c33ce6b1aa6a0b1fd9183a2284a35802069f726be21d588dffd0db4"
+    },
+    {
+      "bytes": 952,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/seal-60.json",
+      "sha256": "f2ed3791e161c2341712d46fe1e0687dd72851c5d1603171dfdb14bf86264763"
+    },
+    {
+      "bytes": 57449,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-01/targets.npz",
+      "sha256": "96dbbb2162efb7ab25f9ce347ea8592ceb7a97de7e7f28a881c600454667977b"
+    },
+    {
+      "bytes": 1205,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/budget.json",
+      "sha256": "2ffbdae1eb2fc31382054d342a9dfaa8ee83a4507002bd0eac23f1b6ff89d9a9"
+    },
+    {
+      "bytes": 22515,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/doubleN-none-current.npz",
+      "sha256": "9f3345236d27443337884662fb405a848641bc4e54c2b0ae47320f0c1b500e55"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/doubleN-none-probe.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21456,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/doubleN-none-reference.npz",
+      "sha256": "01d06dbdca2955722eabcfa30e40c020fdb9f462bc61204cf67405246784d066"
+    },
+    {
+      "bytes": 41580,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/doubleN-none-regime.json",
+      "sha256": "d4473fd49d9edbc338226ec8b639a46cf264e64805e7a900616b99cc3e10c8e5"
+    },
+    {
+      "bytes": 22535,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/doubleN-odd04-current.npz",
+      "sha256": "3c919efeea5dd990f90404b5d27390ef110ffd8dc65e4b07ddf7e5ce51b68b44"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/doubleN-odd04-probe.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20954,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/doubleN-odd04-reference.npz",
+      "sha256": "2c6b8d88aa0310b459901e6674f429bd7ae80cae0dc8245c618ccb2b6c418544"
+    },
+    {
+      "bytes": 41346,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/doubleN-odd04-regime.json",
+      "sha256": "c284f6ce30379c26d0f0e9eac5ca08f13c3920b88925ec86b75e667b625dd178"
+    },
+    {
+      "bytes": 11478,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/halfdt-none-current.npz",
+      "sha256": "8f931b9688bba968c5e7cb85e696f94a0b61da1acb33f483ee1fee545e5ac22e"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/halfdt-none-probe.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21440,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/halfdt-none-reference.npz",
+      "sha256": "2d5657ae2c00918fd59777793a1108d4d9d04e04d87a63bc2ffd8a136f283a80"
+    },
+    {
+      "bytes": 41560,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/halfdt-none-regime.json",
+      "sha256": "453ddd6eed38f603b1a48542bbe7b6573680b4bb87b9bdf6f03c385fc0238174"
+    },
+    {
+      "bytes": 11473,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/halfdt-odd04-current.npz",
+      "sha256": "4900c59e8cfba1bdc0756c756778495a0988e67bbf3ea8106c9300d383d3d9cf"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/halfdt-odd04-probe.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 20945,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/halfdt-odd04-reference.npz",
+      "sha256": "966521eef062fa54c742ee697077df3f9cef75a96b0fb0e7ad44118f5b455df3"
+    },
+    {
+      "bytes": 41377,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/halfdt-odd04-regime.json",
+      "sha256": "363740302e52e915d076bf2f56ae5e6a03c2e688135d9ecff053043408791401"
+    },
+    {
+      "bytes": 11497,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/prepared-initial.npz",
+      "sha256": "d1750d1dc90a1a4426b376539584af67348d845b42c7205e3f82539721e9b54c"
+    },
+    {
+      "bytes": 4000,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/protocol.json",
+      "sha256": "7b13ec43c9dc09968bca331fe00ace0a46fecb56b72b0bcc47f00c23afca69d8"
+    },
+    {
+      "bytes": 3160,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-motion-refine-01/refinement.json",
+      "sha256": "d8098635fd2afad3e64dcd516e43afd930375f81688227378da57a296df15c0d"
+    },
+    {
+      "bytes": 1230,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/budget.json",
+      "sha256": "1b1fb4e78599c3db2e855350862b5d0095a22becc1162da8d944eb54c0e6ba14"
+    },
+    {
+      "bytes": 22560,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/doubleN-heldmix-current.npz",
+      "sha256": "da38dd416928121825fc9966c3abf926025ffc029f121558840b64ae041b7d49"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/doubleN-heldmix-probe.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21196,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/doubleN-heldmix-reference.npz",
+      "sha256": "de51b7178256797d46154384fb2b62a5f1bd0bd660c973359b6ec4d6cceee818"
+    },
+    {
+      "bytes": 41469,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/doubleN-heldmix-regime.json",
+      "sha256": "9146aace6f404f09dd34c1a5bef63fa8c4bd2d87f405fbaadec34ae256d08b94"
+    },
+    {
+      "bytes": 22515,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/doubleN-none-current.npz",
+      "sha256": "9f3345236d27443337884662fb405a848641bc4e54c2b0ae47320f0c1b500e55"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/doubleN-none-probe.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21456,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/doubleN-none-reference.npz",
+      "sha256": "01d06dbdca2955722eabcfa30e40c020fdb9f462bc61204cf67405246784d066"
+    },
+    {
+      "bytes": 41580,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/doubleN-none-regime.json",
+      "sha256": "d4473fd49d9edbc338226ec8b639a46cf264e64805e7a900616b99cc3e10c8e5"
+    },
+    {
+      "bytes": 11485,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/halfdt-heldmix-current.npz",
+      "sha256": "ff95bf7433d920ab5eb73e85315d49b70357387d53454644ac2024f3db866dc2"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/halfdt-heldmix-probe.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21206,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/halfdt-heldmix-reference.npz",
+      "sha256": "e984a778b0a63a067cb38f265e4c1994cd1050fc6f28bbdef6d3072555254879"
+    },
+    {
+      "bytes": 41461,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/halfdt-heldmix-regime.json",
+      "sha256": "e447d126e2a677bf281fc5fef33cc3261913aa03a9a272788d2f2dc57034d8bc"
+    },
+    {
+      "bytes": 11478,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/halfdt-none-current.npz",
+      "sha256": "8f931b9688bba968c5e7cb85e696f94a0b61da1acb33f483ee1fee545e5ac22e"
+    },
+    {
+      "bytes": 24,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/halfdt-none-probe.json",
+      "sha256": "668bec074daefee2250964d1f1bdd98a98477603957fd91adabf318134c5c52c"
+    },
+    {
+      "bytes": 21440,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/halfdt-none-reference.npz",
+      "sha256": "2d5657ae2c00918fd59777793a1108d4d9d04e04d87a63bc2ffd8a136f283a80"
+    },
+    {
+      "bytes": 41560,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/halfdt-none-regime.json",
+      "sha256": "453ddd6eed38f603b1a48542bbe7b6573680b4bb87b9bdf6f03c385fc0238174"
+    },
+    {
+      "bytes": 11497,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/prepared-initial.npz",
+      "sha256": "d1750d1dc90a1a4426b376539584af67348d845b42c7205e3f82539721e9b54c"
+    },
+    {
+      "bytes": 3994,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/protocol.json",
+      "sha256": "8c10815175185eb5274a16d2cd5b0244fc2a83a5356686003d77fc6a1746c169"
+    },
+    {
+      "bytes": 3160,
+      "path": "work/mediated_patterns/geometry_evolution/fresh-refine-01/refinement.json",
+      "sha256": "0181761a4e97c64ad911bd9a5dd3af605d261b51a2320fc5249569ff1e837a2b"
+    },
+    {
+      "bytes": 341,
+      "path": "work/mediated_patterns/geometry_evolution/frozen-01/budget.json",
+      "sha256": "b34aced8234c971e7dcc260e353a3badc77846f1bdd4fe0777f737f700d8dd3d"
+    },
+    {
+      "bytes": 14244,
+      "path": "work/mediated_patterns/geometry_evolution/frozen-01/development-geometry.json",
+      "sha256": "1f5c217b06c2321f60cd7745199cedb99285ebe67e25d7c5ccf484bb7754ce1b"
+    },
+    {
+      "bytes": 4799,
+      "path": "work/mediated_patterns/geometry_evolution/frozen-01/freeze.json",
+      "sha256": "a3e53c61f3311c4b8164a2920e695312274ae36c7a402d56ee480b4fcad0b091"
+    },
+    {
+      "bytes": 3243,
+      "path": "work/mediated_patterns/geometry_evolution/frozen-01/models.json",
+      "sha256": "4b42006337f4e27c1149211e724ffeef022e9b6391c46aee27d96ecb9c038477"
+    },
+    {
+      "bytes": 3958,
+      "path": "work/mediated_patterns/geometry_evolution/frozen-01/protocol.json",
+      "sha256": "acba327012b7b7b4bbd54920ce3564bfccd8310f83cf38b069b26ff33eb98822"
+    },
+    {
+      "bytes": 472,
+      "path": "work/mediated_patterns/geometry_evolution/inspection-failure.txt",
+      "sha256": "5295c7de3c4f61bab54c4c2280c40b786734f8913897204869fd726922834029"
+    },
+    {
+      "bytes": 337,
+      "path": "work/mediated_patterns/geometry_evolution/pilot-01/budget.json",
+      "sha256": "af90b31ebd7fc5484be73e79a4490c94044fb932213f76f7dbe99d5ab8895baf"
+    },
+    {
+      "bytes": 28521,
+      "path": "work/mediated_patterns/geometry_evolution/pilot-01/pilot.json",
+      "sha256": "921638d0f94f466db9eb268769f57ecb96f788477fde31dcf99c3f6d75064341"
+    },
+    {
+      "bytes": 3607,
+      "path": "work/mediated_patterns/geometry_evolution/pilot-01/protocol.json",
+      "sha256": "1a367fa030d95e4c900de4ebe538204055e2c75b742241037a4b6032dec5bd6c"
+    },
+    {
+      "bytes": 644,
+      "path": "work/mediated_patterns/geometry_evolution/runtime.json",
+      "sha256": "78ffe344275e08801d074038e95b8abe49eade08d625eed5dc255772111f67ac"
+    }
+  ],
+  "schema": 1,
+  "source_report_revision": "2c42405"
+}
