@@ -124,3 +124,21 @@ basis, variable, event semantics, G, J, or physical trajectory. Compare alpha0
 (linear readout) and alpha1 (frozen original) as endpoints, retain all failures,
 and replay the saved one-event panel to detect loss. This is explicitly
 composition-informed even if the nine-dimensional runtime remains unchanged.
+
+The first repair is retained as **failed**: alpha=-0.174855 (held-seed fits
+-0.158260,-0.186470,-0.180527), four selected and four grouped main-gate misses,
+and one old one-event miss (10.512%). Opposite-sign p=0 makes the combined
+quadratic features exactly zero regardless of alpha; changing their coefficients
+cannot restore that lost individual-event contribution. CLI dispatch initially
+rejected the new stage before any fit; the parser was fixed and that startup
+attempt is covered by the30CPU-second allowance.
+
+Second/final repair family, declared before evaluation: retain q+=b² and e+=b²
+at each event, e decaying by exp(-1/20) each unit step, with q constant. Use
+[p,d,q,e] in the original readout coefficients instead of[p,d,p²,p*d]. This is
+ordinary diagonal event addition within a fixed-size state, not physical energy.
+Both summaries initialize to zero, require no additional acquisition, and do
+not change geometry, G, J or the four deformation coordinates. It adds two
+scientific scalars (eleven total) but fits no new coefficient. For one isolated
+event q=p² and e=p*d analytically; verify the saved panel numerically. This is
+composition-informed and no longer unchanged nine-state reuse. No third repair.

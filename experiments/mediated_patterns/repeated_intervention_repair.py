@@ -146,3 +146,81 @@ def run(out, args, budget):
         },
     )
     budget.finish()
+
+
+def separate_squares(out, args, budget):
+    from .intervention_analysis import records
+    from .intervention_analysis import score as old_score
+    from .repeated_intervention_state import OLD, ROOT, model
+
+    budget.begin("separate-square-summary-repair")
+    candidate = model()
+    candidate["repeated_extension"] = "separate-squared-amplitude"
+    data = ROOT / "develop-01"
+    z0 = np.load(data / "initial-descriptors.npz")["z"]
+    floors = load(ROOT / "refine-01/refinement.json")["floors"]
+    scores = []
+    for i, case in enumerate(load(data / "cases.json")):
+        s = case["schedule"]
+        y, _, _ = truth(data, case)
+        ys = []
+        trajectories = []
+        for flags in rm.PREFIXES:
+            aa = [a * b for a, b in zip(s["amplitudes"], flags, strict=True)]
+            tr, p = rm.forecast(candidate, z0[case["index"]], s["times"], aa)
+            ys.append(p)
+            trajectories.append(tr)
+        save_npz_exclusive(out / f"case-{i}.npz", y=ys, trajectory=trajectories)
+        scores.extend(
+            dict(
+                seed=case["seed"],
+                history=case["history"],
+                schedule=s["name"],
+                model="separate-squares",
+                **v,
+            )
+            for v in score(y, np.array(ys), floors)
+        )
+    old = []
+    equivalence = []
+    for row in records(OLD / "fresh-01"):
+        yy = []
+        for amp in [0.0, row["a"]]:
+            state = rm.state_class(candidate)(candidate, row["z0"])
+            state.advance(10)
+            state.event(amp)
+            state.advance(row["gap"])
+            yy.append(state.response())
+            original = im.forecast(model(), row["z0"], amp, gaps=(row["gap"],))[1][0]
+            equivalence.append(float(abs(original - yy[-1]).max()))
+        old.extend(
+            dict(
+                seed=row["seed"],
+                history=row["history"],
+                amplitude=row["a"],
+                gap=row["gap"],
+                **v,
+            )
+            for v in old_score(
+                row["y"],
+                np.array(yy),
+                load(OLD / "frozen-01/freeze.json")["response_floors"],
+            )
+        )
+    pm.save_json(out / "model.json", candidate)
+    pm.save_json(out / "scores.json", scores)
+    pm.save_json(out / "one-event-regression.json", old)
+    pm.save_json(
+        out / "selection.json",
+        {
+            "family": "separate squared-amplitude summaries; no coefficient fitting",
+            "main_failures": sum(v["pass"] is False for v in scores),
+            "one_event_failures": sum(not v["passed"] for v in old),
+            "one_event_original_max_difference": max(equivalence),
+            "scientific_scalars": 11,
+            "active_coefficient_values": 1636,
+            "initialization": "three measured centers and eight zero auxiliary coordinates",
+            "exposure": "composition-informed after the original and scalar-rescale development failures; all descendants grouped",
+        },
+    )
+    budget.finish()

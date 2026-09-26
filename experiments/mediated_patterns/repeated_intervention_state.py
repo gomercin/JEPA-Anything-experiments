@@ -322,6 +322,7 @@ def main():
             "fresh",
             "analyze",
             "repair",
+            "separate-squares",
         ],
     )
     parser.add_argument("--output", type=Path, required=True)
@@ -365,6 +366,10 @@ def main():
         budget.check()
         if args.stage in ("pilot", "develop", "fresh"):
             panel(args.output, args, budget)
+        elif args.stage == "separate-squares":
+            from .repeated_intervention_repair import separate_squares
+
+            separate_squares(args.output, args, budget)
         elif args.stage == "repair":
             from .repeated_intervention_repair import run
 

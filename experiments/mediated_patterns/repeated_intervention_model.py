@@ -35,8 +35,21 @@ def validate_schedule(times, amplitudes, final):
         raise ValueError("Per-event amplitude guard")
 
 
+def state_class(model):
+    if model.get("repeated_extension") == "separate-squared-amplitude":
+        from .repeated_intervention_extension import SquaredState
+
+        return SquaredState
+    return State
+
+
 def vector(state):
-    return np.r_[state.flow.z, state.memory, state.response_memory]
+    return np.r_[
+        state.flow.z,
+        state.memory,
+        state.response_memory,
+        getattr(state, "squared_memory", np.zeros(0)),
+    ]
 
 
 def continue_state(state, times, amplitudes, final, checkpoint=None):
@@ -62,7 +75,9 @@ def continue_state(state, times, amplitudes, final, checkpoint=None):
 
 
 def forecast(model, z0, times, amplitudes, final=40, checkpoint=None):
-    return continue_state(State(model, z0), times, amplitudes, final, checkpoint)
+    return continue_state(
+        state_class(model)(model, z0), times, amplitudes, final, checkpoint
+    )
 
 
 def contrasts(responses):
