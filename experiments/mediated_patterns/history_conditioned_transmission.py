@@ -27,6 +27,7 @@ from .source_receiver_relay import (
     prepare,
     read,
     simulate,
+    source_profile,
 )
 
 ROOT = Path("work/mediated_patterns/history_conditioned_transmission")
@@ -343,9 +344,59 @@ def pilot(out, budget):
     )
 
 
+def screen(out, data, budget):
+    """Cheap nonlinear late-response check before building the pathway panel."""
+    pilot_arrays, _ = read_saved(data, "pilot")
+    states = checkpoint(pilot_arrays, 100.0)[[0, 2]]
+    f = Field(CFG)
+    q = source_profile(f)
+    starts, jumps = [], []
+    for s in states:
+        stimulated, jump = event(f, s, q, EPS)
+        starts.extend([s.copy(), stimulated])
+        jumps.append(jump)
+    v = np.fft.rfft(np.asarray(starts))
+    absolute, times = [], []
+    budget.begin("late-full-field-screen")
+    for k in range(grid_steps(80.0, CFG.dt) + 1):
+        if k % grid_steps(0.5, CFG.dt) == 0:
+            absolute.append(read(f, np.fft.irfft(v, n=CFG.n), B))
+            times.append(100 + k * CFG.dt)
+        if k == grid_steps(80.0, CFG.dt):
+            break
+        for j in range(len(v)):
+            v[j], _ = f.step(v[j])
+        if k % 100 == 0:
+            budget.check()
+    a = np.asarray(absolute)
+    r0, rw = a[:, 1] - a[:, 0], a[:, 3] - a[:, 2]
+    arrays = dict(
+        absolute=a,
+        absolute_time=np.asarray(times),
+        unwritten=r0,
+        written=rw,
+        delta=rw - r0,
+        initial=np.asarray(starts),
+        final=np.fft.irfft(v, n=CFG.n),
+    )
+    save(out, "screen", arrays, dict(jumps=jumps, probe_time=100.0, config=asdict(CFG)))
+    budget.finish()
+    print(
+        json.dumps(
+            {
+                "C_delta_rms": np.sqrt(np.mean((rw - r0)[:, 2] ** 2, axis=0)).tolist(),
+                "C_unwritten_rms": np.sqrt(np.mean(r0[:, 2] ** 2, axis=0)).tolist(),
+            }
+        ),
+        flush=True,
+    )
+
+
 def panel(out, stage, data, frozen, budget):
     if stage == "pilot":
         return pilot(out, budget)
+    if stage == "screen":
+        return screen(out, data, budget)
     fz = load(frozen / "freeze.json") if frozen else None
     if stage == "fresh":
         for name, h in fz["source_hashes"].items():
@@ -395,13 +446,13 @@ def panel(out, stage, data, frozen, budget):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("stage", choices=["pilot", "develop", "refine", "fresh"])
+    p.add_argument("stage", choices=["pilot", "screen", "develop", "refine", "fresh"])
     p.add_argument("--output", type=Path, required=True)
     p.add_argument("--data", type=Path)
     p.add_argument("--freeze", type=Path)
     args = p.parse_args()
     validate_split()
-    if args.stage in ("develop", "refine") and args.data is None:
+    if args.stage in ("screen", "develop", "refine") and args.data is None:
         p.error("--data required")
     if args.stage == "fresh" and args.freeze is None:
         p.error("--freeze required")

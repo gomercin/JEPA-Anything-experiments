@@ -91,3 +91,13 @@ keep their receipts. No clipping, paid compute or large downloads. Original
 fields are the reference; AB20/C32 and C-probe/relay contracts are not reused as
 accuracy certificates. Stop after a qualified answer; optional repeat use only
 if it discriminates a live explanation within budget. No automatic successor.
+
+**Pilot decision (development only).** `pilot-01`, source 667fc7c, used 25.9924
+CPU seconds. Both writes remained in the declared bounds. Even write delta-u
+L2 fell .0134 at time 10 to .00416 at 100, with a tiny translation projection
+−.00143. Odd write retained delta-u L2 .35095 at 100 (from .38143 at 10),
+translation projection .12361 and residual .0210. This supports inspecting a
+slow displacement-like carrier; it does not establish a permanent mode. Select
+the odd .4 pulse without changing waits, sensors or bounds. Run one late (T=100)
+full-field four-branch screen before the full response/control panel. No new
+write amplitude or family is needed. Keep the even candidate in the evidence.
