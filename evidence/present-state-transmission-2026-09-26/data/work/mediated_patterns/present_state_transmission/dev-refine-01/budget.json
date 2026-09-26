@@ -1,0 +1,59 @@
+{
+  "cpu_seconds": 76.684078,
+  "limit_cpu_seconds": 1200,
+  "previous_cpu_seconds": 72.700929,
+  "sections": [
+    {
+      "cpu_seconds": 9.746955999999999,
+      "task": "half-dt-history",
+      "wall_seconds": 9.756424124992918
+    },
+    {
+      "cpu_seconds": 7.963577000000001,
+      "task": "half-dt-50.0-none",
+      "wall_seconds": 7.97065412500524
+    },
+    {
+      "cpu_seconds": 7.8837389999999985,
+      "task": "half-dt-50.0-mixed",
+      "wall_seconds": 7.889106957998592
+    },
+    {
+      "cpu_seconds": 7.971943,
+      "task": "half-dt-100.0-none",
+      "wall_seconds": 7.988688457990065
+    },
+    {
+      "cpu_seconds": 7.8655959999999965,
+      "task": "half-dt-100.0-mixed",
+      "wall_seconds": 7.872867707978003
+    },
+    {
+      "cpu_seconds": 8.259828000000006,
+      "task": "double-n-history",
+      "wall_seconds": 8.26863004200277
+    },
+    {
+      "cpu_seconds": 6.843288999999999,
+      "task": "double-n-50.0-none",
+      "wall_seconds": 6.860507624980528
+    },
+    {
+      "cpu_seconds": 6.691652000000005,
+      "task": "double-n-50.0-mixed",
+      "wall_seconds": 6.6986655419750605
+    },
+    {
+      "cpu_seconds": 6.697606999999998,
+      "task": "double-n-100.0-none",
+      "wall_seconds": 6.706438749999506
+    },
+    {
+      "cpu_seconds": 6.728568999999993,
+      "task": "double-n-100.0-mixed",
+      "wall_seconds": 6.736332125001354
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 76.80949404099374
+}

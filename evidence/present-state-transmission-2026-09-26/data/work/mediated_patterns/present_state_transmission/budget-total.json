@@ -1,0 +1,21 @@
+{
+  "charged_cpu_seconds": 382.904366,
+  "fresh_and_refinement_cpu_seconds": 229.340954,
+  "inspection_and_startup_allowance_seconds": 30,
+  "limit_cpu_seconds": 1800,
+  "metered_cpu_seconds": 352.904366,
+  "stages": {
+    "accounting-01": 2.0,
+    "accounting-02": 0.139628,
+    "analysis-final": 0.981534,
+    "analysis-pre-refine": 0.8346640000000001,
+    "balanced-fit-01": 0.195886,
+    "dev-refine-01": 76.684078,
+    "extended-fit-01": 0.19310400000000005,
+    "extension-01": 42.369247,
+    "fresh-01": 153.19993,
+    "fresh-refine-01": 76.141024,
+    "frozen-01": 0.026692999999999967,
+    "old-fit-01": 0.13857799999999998
+  }
+}

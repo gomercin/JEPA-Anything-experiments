@@ -1,0 +1,13 @@
+{
+  "current_grid_values_per_state": 1536,
+  "deployment_descriptor_count": {
+    "b": 1,
+    "blind": 0,
+    "geometry": 3
+  },
+  "extracted_panel_values_per_state": 15,
+  "models_json_bytes": 69568,
+  "panel_all_descriptor_extraction_cpu": 0.0014989999999919235,
+  "panel_all_model_forecast_and_save_cpu": 0.003675000000001205,
+  "states": 18
+}

@@ -318,3 +318,16 @@ verified source head `0f4fd6b`; final-head checks precede guarded merge.
 reviewed two-paragraph update and awaits lab merge. Actual merge confirmations
 for both repositories are maintained in these PR comments, not another PR.
 No scientific or interpretation blocker remains in this bounded cycle.
+
+
+## Present-state response prediction
+
+The [snapshot-only continuation](PRESENT_STATE_TRANSMISSION.md) removes the
+history tangent's future-sham access. Three current A/B/C centers relative to
+fixed anchors, with an ordinary frozen quadratic response regression, pass on
+three fresh preparations and a withheld mixed write: worst C mass/moment total
+errors .420%/.511% and history-contrast errors 2.029%/1.701%. B position alone
+fails; a development loss-balancing repair succeeds without extra descriptors.
+This is useful response prediction in the late-state envelope, not exclusive
+storage localization, minimality or autonomous closure. Earlier outcomes remain
+unchanged; no successor is selected. See the [new portable evidence](../../evidence/present-state-transmission-2026-09-26/README.md).

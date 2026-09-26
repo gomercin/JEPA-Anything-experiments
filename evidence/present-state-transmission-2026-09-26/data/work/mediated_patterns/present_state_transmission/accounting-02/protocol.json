@@ -1,0 +1,7 @@
+{
+  "analysis": "saved outcomes and fixed inference timings; no fit or solver",
+  "command": [
+    "accounting.py"
+  ],
+  "scientific_execution": false
+}

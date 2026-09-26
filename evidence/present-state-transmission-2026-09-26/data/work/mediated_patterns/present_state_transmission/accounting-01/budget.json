@@ -1,0 +1,5 @@
+{
+  "cpu_seconds": 2.0,
+  "status": "FAILED_IMPORT_NAME_COLLISION",
+  "accounting": "conservative upper charge; startup ended before internal timer"
+}

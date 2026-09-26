@@ -1,0 +1,47 @@
+{
+  "state": "PUBLICATION_TIME_VERIFIED_PENDING_GUARDED_MERGE",
+  "integration_base": "34c9b333057f3a059b53798674baa7e7e3da6ae2",
+  "scientific_status": "THREE_CURRENT_CENTERS_ADEQUATE_FOR_BOUNDED_RESPONSE_AND_HISTORY_CONTRAST",
+  "members": 213,
+  "data_bytes": 13214589,
+  "charged_cpu_seconds": 382.904366,
+  "source_revisions": [
+    "ed3aeb5",
+    "1f47f30",
+    "bd6ca5e",
+    "75544ab",
+    "49a0e4e"
+  ],
+  "critical_review": "review.md; implementing-agent pass, not independent replication",
+  "release_assets_created": 0,
+  "successor": "NONE",
+  "remote_verified": true,
+  "merge_metadata_policy": "Final guarded merge confirmations in PR comments; no metadata-only successor PR",
+  "software_status": "make check: 257 tests + 2 subtests pass; 1 existing manifest skip and 1 scientific-panel deselection; scoped Ruff, whitespace and 213 local member hashes pass",
+  "pr": "https://github.com/gomercin/JEPA-Anything-experiments/pull/6",
+  "remote_verification": {
+    "remote_head": "3567e995c4b273021ff616970283d8c09135304a",
+    "member_hashes_verified": 213,
+    "restored_member_hashes_verified": 213,
+    "data_bytes": 13214589,
+    "source_hash_checks": 288,
+    "protocols": 10,
+    "finite_npz_files": 115,
+    "scientific_modules_imported": false,
+    "field_evolutions": 0,
+    "fitting_executed": false,
+    "retrieval": "fresh GitHub sparse partial clone; new package, scientific sources and existing safe-copy helpers only",
+    "preserved_failed_stage": "accounting-01 import-name collision; 2 CPU seconds charged",
+    "restored_destination": "/private/tmp/jepa-present-state-restored"
+  },
+  "hosted_status_at_snapshot": "Both deterministic-checks jobs passed at 3567e995c4b273021ff616970283d8c09135304a; final metadata head must be rechecked before merge",
+  "atlas": {
+    "pr": "https://github.com/gomercin/motif-atlas/pull/165",
+    "state_at_snapshot": "OPEN_PENDING_LAB_MERGE",
+    "reviewed_head": "80ed589ef9373583f26623c7b44d5566149272bf",
+    "local_checks": "roadmap lint, whitespace, semantic/frontmatter/link review passed",
+    "hosted_checks": "none configured",
+    "scope": "two existing question homes only; no route or stop changes"
+  },
+  "review_fix": "3303ab2 hosted Linux re-extraction differed by 1.11e-16; publication test now uses roundoff tolerance while exact hashes and scientific gates remain unchanged. Failed run 36256491548 retained; final new-head checks required."
+}

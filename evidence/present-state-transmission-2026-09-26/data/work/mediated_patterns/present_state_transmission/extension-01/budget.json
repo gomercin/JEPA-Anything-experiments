@@ -1,0 +1,59 @@
+{
+  "cpu_seconds": 42.369247,
+  "limit_cpu_seconds": 1200,
+  "previous_cpu_seconds": 30.138578,
+  "sections": [
+    {
+      "cpu_seconds": 4.8755239999999995,
+      "task": "s8101-histories",
+      "wall_seconds": 4.880460750020575
+    },
+    {
+      "cpu_seconds": 4.882215,
+      "task": "s10101-histories",
+      "wall_seconds": 4.885696499986807
+    },
+    {
+      "cpu_seconds": 4.028396000000001,
+      "task": "reference-0",
+      "wall_seconds": 4.032899625017308
+    },
+    {
+      "cpu_seconds": 3.9905500000000007,
+      "task": "reference-1",
+      "wall_seconds": 3.9981682090146933
+    },
+    {
+      "cpu_seconds": 3.9822859999999984,
+      "task": "reference-2",
+      "wall_seconds": 3.9887091249984223
+    },
+    {
+      "cpu_seconds": 4.001363999999999,
+      "task": "reference-3",
+      "wall_seconds": 4.006629874987993
+    },
+    {
+      "cpu_seconds": 3.981807,
+      "task": "reference-4",
+      "wall_seconds": 3.9878501250059344
+    },
+    {
+      "cpu_seconds": 4.2379,
+      "task": "reference-5",
+      "wall_seconds": 4.2865517080063
+    },
+    {
+      "cpu_seconds": 4.371088,
+      "task": "reference-6",
+      "wall_seconds": 4.429775958007667
+    },
+    {
+      "cpu_seconds": 4.001078,
+      "task": "reference-7",
+      "wall_seconds": 4.013856749981642
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 42.552707249997184
+}

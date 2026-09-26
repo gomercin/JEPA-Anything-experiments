@@ -1,0 +1,42 @@
+[
+  {
+    "history": "negative",
+    "seed": 8101,
+    "wait": 50.0
+  },
+  {
+    "history": "mixed",
+    "seed": 8101,
+    "wait": 50.0
+  },
+  {
+    "history": "negative",
+    "seed": 8101,
+    "wait": 100.0
+  },
+  {
+    "history": "mixed",
+    "seed": 8101,
+    "wait": 100.0
+  },
+  {
+    "history": "negative",
+    "seed": 10101,
+    "wait": 50.0
+  },
+  {
+    "history": "mixed",
+    "seed": 10101,
+    "wait": 50.0
+  },
+  {
+    "history": "negative",
+    "seed": 10101,
+    "wait": 100.0
+  },
+  {
+    "history": "mixed",
+    "seed": 10101,
+    "wait": 100.0
+  }
+]
