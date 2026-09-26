@@ -157,3 +157,15 @@ search after outcomes. A fresh pass may earn a cheap exposed diagnostic using th
 unchanged unforcedG from t50 to72. Such a diagnostic alone would not count as a
 fresh test of restored once-measured prediction; the snapshot and retention
 contracts remain separate. No new event-memory coordinates or repeated fits.
+
+The sealed snapshot fresh panel passes all120 distinct gates, none unresolved:
+worstD1 .7987%, worstR .1136%. The unchangedG diagnostic on these now-exposed
+preparations also passes, with worstD1 .9094% and maximum t72 center errors
+[A,B,C]=[3.095e-6,1.519e-6,5.108e-7]. No coefficient is changed.
+Prospectively freeze this exact G plus the same snapshot map for further untouched
+24111–24113, none/odd04, both signs, age18 only. Save every forecast from t50
+before even generating t72 field arrays. Checkpoint G at t60 and resume to72.
+This restores only the fixed-event/fixed-age forecast if it passes; it supplies
+no new age-general response state or rule for repeated conditioning events.
+Those stages remain not run. The event amplitude selects a conditional forecast
+at the declared t72 event; it does not enter the preceding unforced state update.

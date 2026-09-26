@@ -316,6 +316,9 @@ def main():
             "analyze",
             "pairs",
             "retention",
+            "retain_freeze",
+            "retain_fresh",
+            "retain_analyze",
         ],
     )
     p.add_argument("--output", type=Path, required=True)
@@ -338,7 +341,10 @@ def main():
     os.close(fd)
     previous = 30 + sum(load(p)["cpu_seconds"] for p in ROOT.glob("*/budget.json"))
     budget = HistoryBudget(
-        previous, 1800 if args.stage in ["fresh", "analyze"] else 1200
+        previous,
+        1800
+        if args.stage in ["fresh", "analyze", "retain_fresh", "retain_analyze"]
+        else 1200,
     )
     started = False
     status = "FAILED"

@@ -410,3 +410,147 @@ def retention(out, args, budget):
         ),
     )
     budget.finish()
+
+
+RETAIN_FRESH = [24111, 24112, 24113]
+
+
+def retain_freeze(out, args, budget):
+    from .repeated_intervention_state import model as original_model
+
+    result = load(ROOT / "retention-01/summary.json")
+    if result["failed"] or result["unresolved"]:
+        raise ValueError("Successful exposed retention diagnostic required")
+    budget.begin("freeze-unchanged-G-and-snapshot-readout")
+    frozen = load(args.freeze / "freeze.json")
+    model = load(args.freeze / "model.json")
+    g = original_model()["G"]
+    pm.save_json(out / "model.json", model)
+    pm.save_json(out / "G.json", g)
+    frozen.update(
+        sources=source_hashes(),
+        fresh_seeds=RETAIN_FRESH,
+        G_sha256=gm.identity(g),
+        snapshot_freeze_sha256=digest(args.freeze / "freeze.json"),
+        acquisition="three centers once at t50; unchanged G to t72; fixed age18 conditional-response map",
+        access="no field access after t50 for prediction; later fields evaluator-only",
+        repeated_stage="not specified by this fixed-age snapshot response map",
+    )
+    pm.save_json(out / "freeze.json", frozen)
+    budget.finish()
+
+
+def retain_fresh(out, args, budget):
+    from .organization_response import isolated_components
+    from .source_receiver_relay import prepare
+
+    frozen = load(args.freeze / "freeze.json")
+    model = load(args.freeze / "model.json")
+    g = load(args.freeze / "G.json")
+    if (
+        frozen["sources"] != source_hashes()
+        or frozen["model_sha256"] != gm.identity(model)
+        or frozen["G_sha256"] != gm.identity(g)
+    ):
+        raise ValueError("Retained freeze changed")
+    _, _, exposed = development()
+    if set(RETAIN_FRESH) & ({r["seed"] for r in exposed} | set(FRESH)):
+        raise ValueError("Untouched retention groups required")
+    starts, rows = [], []
+    for seed in RETAIN_FRESH:
+        f = Field(CFG)
+        initial = prepare(f, isolated_components(f, seed, budget), seed, -4.0, budget)
+        save_npz(out / f"initial-{seed}.npz", state=initial)
+        for history in ["none", "odd04"]:
+            budget.begin(f"retained-initial-{seed}-{history}")
+            starts.append(
+                unforced(
+                    initialize_written(initial, history, CFG), CFG, [0.0, 50.0], budget
+                )[0][-1]
+            )
+            rows.append({"seed": seed, "history": history})
+            budget.finish()
+    save_npz(out / "boundary-50.npz", states=starts)
+    initial = np.array([pm.extract(s, feature_set="geometry") for s in starts])
+    save_npz(out / "initial-descriptors.npz", x=initial)
+    pm.save_json(out / "rows.json", rows)
+    budget.begin("seal-retained-predictions-before-later-fields")
+    trajectories = []
+    for i, z in enumerate(initial):
+        state = gm.Continuation(g, z)
+        state.advance(10)
+        state.checkpoint(out / f"checkpoint-{i}.json")
+        restored = gm.Continuation.restore(g, load(out / f"checkpoint-{i}.json"))
+        end = restored.advance(12)
+        trajectory = gm.rollout(g, z, np.arange(23))
+        np.testing.assert_array_equal(end, trajectory[-1])
+        trajectories.append(trajectory)
+    trajectories = np.array(trajectories)
+    save_npz(
+        out / "predictions.npz",
+        y=prediction(model, trajectories[:, -1]),
+        z=trajectories,
+    )
+    pm.save_json(
+        out / "seal.json",
+        {
+            "prediction_sha256": digest(out / "predictions.npz"),
+            "initial_descriptor_sha256": digest(out / "initial-descriptors.npz"),
+            "model_sha256": gm.identity(model),
+            "G_sha256": gm.identity(g),
+            "freeze_sha256": digest(args.freeze / "freeze.json"),
+            "checkpoints": {p.name: digest(p) for p in out.glob("checkpoint-*.json")},
+            "order": "all forecasts from t50 saved before ANY later field arrays or responses",
+        },
+    )
+    budget.finish()
+    states = []
+    for i, start in enumerate(starts):
+        budget.begin(f"retained-reference-boundary-{i}")
+        states.append(reach_boundary(start, budget))
+        budget.finish()
+    save_npz(out / "boundary-72.npz", states=states)
+    save_npz(out / "descriptors.npz", x=[descriptor(s) for s in states])
+    y = [
+        [
+            response_pair(out, f"reference-{i}-{a:g}", s, a, budget)
+            for a in [0.0, -0.02, 0.02]
+        ]
+        for i, s in enumerate(states)
+    ]
+    save_npz(out / "targets.npz", y=y)
+
+
+def retain_analyze(out, args, budget):
+    budget.begin("retained-fresh-scoring")
+    base = args.data
+    frozen = load(args.freeze / "freeze.json")
+    seal = load(base / "seal.json")
+    if (
+        digest(base / "predictions.npz") != seal["prediction_sha256"]
+        or digest(base / "initial-descriptors.npz") != seal["initial_descriptor_sha256"]
+    ):
+        raise ValueError("Retained prediction seal changed")
+    saved = arrays(base / "predictions.npz")
+    y = arrays(base / "targets.npz")["y"]
+    rows = load(base / "rows.json")
+    records = gates(y, saved["y"], rows, frozen["floors"])
+    exact = arrays(base / "descriptors.npz")["x"][:, :3]
+    z0 = arrays(base / "initial-descriptors.npz")["x"]
+    errors = saved["z"][:, -1] - exact
+    pm.save_json(out / "scores.json", records)
+    pm.save_json(
+        out / "summary.json",
+        dict(
+            summary(records),
+            max_center_error=abs(errors).max(0).tolist(),
+            center_errors=errors.tolist(),
+            actual_motion=(exact - z0).tolist(),
+            fractional_motion_error=(
+                abs(errors) / np.maximum(abs(exact - z0), 1e-15)
+            ).tolist(),
+            claim="once-measured fixed age18 conditional-response forecast; no post-event geometry or variable-age/event-stream closure",
+        ),
+    )
+    figures(out, y, saved["y"], rows)
+    budget.finish()

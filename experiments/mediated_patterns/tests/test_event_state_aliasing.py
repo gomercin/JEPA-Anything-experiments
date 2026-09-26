@@ -192,3 +192,49 @@ def test_safe_snapshot_outputs(tmp_path):
     link.symlink_to(tmp_path / "missing")
     with pytest.raises(FileExistsError):
         save_npz_exclusive(link, x=[2])
+
+
+def test_retained_forecast_sealed_before_later_fields(monkeypatch, tmp_path):
+    from experiments.mediated_patterns import event_state_analysis as sa
+    from experiments.mediated_patterns import organization_response as org
+    from experiments.mediated_patterns import source_receiver_relay as relay
+    from experiments.mediated_patterns.geometry_model import identity
+    from experiments.mediated_patterns.repeated_intervention_state import model
+
+    x, y = synthetic()
+    m = sm.fit(x, y, "centers")
+    g = model()["G"]
+    frozen = tmp_path / "frozen"
+    frozen.mkdir()
+    pm.save_json(frozen / "model.json", m)
+    pm.save_json(frozen / "G.json", g)
+    pm.save_json(
+        frozen / "freeze.json",
+        {"sources": {}, "model_sha256": identity(m), "G_sha256": identity(g)},
+    )
+    monkeypatch.setattr(sa, "source_hashes", dict)
+    monkeypatch.setattr(sa, "development", lambda: (None, None, [{"seed": 1}]))
+    monkeypatch.setattr(sa, "RETAIN_FRESH", [999])
+    monkeypatch.setattr(org, "isolated_components", lambda *a: None)
+    monkeypatch.setattr(relay, "prepare", lambda *a: np.zeros((2, 768)))
+    monkeypatch.setattr(sa, "initialize_written", lambda s, *a: s)
+    monkeypatch.setattr(sa, "unforced", lambda s, *a: ([s], []))
+    monkeypatch.setattr(
+        sa.pm, "extract", lambda *a, **k: np.array([0.001, 0.01, -0.002])
+    )
+    monkeypatch.setattr(sa, "descriptor", lambda s: x[0])
+    out = tmp_path / "out"
+    out.mkdir()
+    calls = []
+
+    def future(s, *a):
+        assert (out / "seal.json").is_file()
+        calls.append("future")
+        return s
+
+    monkeypatch.setattr(sa, "reach_boundary", future)
+    monkeypatch.setattr(sa, "response_pair", lambda *a: np.zeros((161, 2)))
+    budget = SimpleNamespace(begin=lambda *a: None, finish=lambda: None)
+    sa.retain_fresh(out, SimpleNamespace(freeze=frozen), budget)
+    assert calls == ["future", "future"]
+    assert len(list(out.glob("checkpoint-*.json"))) == 2
