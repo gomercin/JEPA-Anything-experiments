@@ -1,0 +1,332 @@
+"""Grouped fixed-age snapshot fitting and sealed evaluation, never runtime truth."""
+
+import numpy as np
+
+from . import event_state_model as sm
+from . import geometry_model as gm
+from . import present_state_model as pm
+from .event_age_response import WINDOWS, arrays, rms, score
+from .event_state_aliasing import FRESH, ROOT, descriptor, reach_boundary, response_pair
+from .geometry_assay import initialize_written
+from .geometry_evolution import unforced
+from .hybrid_pair import save_npz_exclusive as save_npz
+from .present_state_transmission import digest, load
+from .repeated_intervention_state import source_hashes
+from .simulator import Field
+from .source_receiver_relay import CFG
+
+
+def development():
+    base = ROOT / "boundaries-01"
+    return (
+        arrays(base / "descriptors.npz")["x"],
+        arrays(ROOT / "responses-01/targets.npz")["y"],
+        load(base / "rows.json"),
+    )
+
+
+def gates(y, prediction, rows, floors):
+    result = []
+    for i, row in enumerate(rows):
+        for j, a in [(1, -0.02), (2, 0.02)]:
+            for r in score(y[i, [0, j]], prediction[i, [0, j]], floors):
+                result.append(
+                    dict(**r, index=i, seed=row["seed"], history=row["history"], a=a)
+                )
+    return result
+
+
+def summary(records):
+    unique = []
+    for r in records:
+        if r["kind"] != "R_without" or r["a"] == -0.02:
+            unique.append(r)
+    return {
+        "distinct_gates": len(unique),
+        "failed": sum(r["passed"] is False for r in unique),
+        "unresolved": sum(r["passed"] is None for r in unique),
+        "worst_gate_ratio": max(
+            (
+                r["relative"] / (0.1 if r["kind"] == "D1" else 0.02)
+                for r in unique
+                if r["resolved"]
+            ),
+            default=0.0,
+        ),
+        "by_kind": {
+            kind: {
+                "failed": sum(
+                    r["passed"] is False for r in unique if r["kind"] == kind
+                ),
+                "worst_relative": max(
+                    (
+                        r["relative"]
+                        for r in unique
+                        if r["kind"] == kind and r["resolved"]
+                    ),
+                    default=0.0,
+                ),
+            }
+            for kind in ["R_without", "R_after", "D1"]
+        },
+    }
+
+
+def prediction(model, x):
+    return np.array([[sm.predict(model, v, a) for a in [0.0, -0.02, 0.02]] for v in x])
+
+
+def variations(model, x, selected):
+    """Absolute line-integral variation; empirical bound, not a sufficiency theorem."""
+    values = []
+    for pair in selected:
+        i, j = pair["indices"]
+        path = x[i][None] + np.linspace(0, 1, 17)[:, None] * (x[j] - x[i])[None]
+        pp = prediction(model, path)
+        d = pp[:, 1:] - pp[:, :1]
+        integral = abs(np.diff(d, axis=0)).sum(axis=0)
+        values.append(
+            np.array([rms(integral[:, sl], axis=1) for sl in WINDOWS.values()])
+        )
+    return np.array(values)
+
+
+def fit(out, args, budget):
+    x, y, rows = development()
+    groups = np.array([r["seed"] for r in rows])
+    floors = load(ROOT / "refinement-01/refinement.json")["floors"]
+    pairs = load(ROOT / "boundaries-01/selection.json")["candidate_pairs"]
+    configs = (
+        [
+            {"kind": "rbf", "ridge": ridge, "width_factor": width}
+            for width in [0.5, 1.0, 2.0]
+            for ridge in [1e-6, 1e-3]
+        ]
+        if args.kernel
+        else [{"kind": "quadratic", "ridge": ridge} for ridge in [1e-6, 1e-3, 1e-1]]
+    )
+    results = []
+    for ci, config in enumerate(configs):
+        budget.begin(f"grouped-{args.feature_set}-{ci}")
+        pred = np.zeros_like(y)
+        sensitivity = np.zeros((len(pairs), 2, 2, 2))
+        folds = []
+        for group in sorted(set(groups)):
+            train = groups != group
+            test = ~train
+            m = sm.fit(x[train], y[train], args.feature_set, **config)
+            pred[test] = prediction(m, x[test])
+            if args.feature_set == "centers":
+                sensitivity = np.maximum(sensitivity, variations(m, x, pairs))
+            folds.append(
+                {
+                    "held_group": int(group),
+                    "training_groups": sorted(set(groups[train].tolist())),
+                    "mean": m["mean"],
+                    "scale": m["scale"],
+                    "model_sha256": gm.identity(m),
+                }
+            )
+            budget.check()
+        m = sm.fit(x, y, args.feature_set, **config)
+        scores = gates(y, pred, rows, floors)
+        pm.save_json(out / f"model-{ci}.json", m)
+        pm.save_json(out / f"scores-{ci}.json", scores)
+        pm.save_json(out / f"folds-{ci}.json", folds)
+        save_npz(out / f"predictions-{ci}.npz", y=pred, sensitivity=sensitivity)
+        result = dict(
+            index=ci, config=config, **summary(scores), model_sha256=gm.identity(m)
+        )
+        results.append(result)
+        budget.finish()
+    selected = min(results, key=lambda r: (r["worst_gate_ratio"], r["index"]))
+    # Assess temporal projection independently of descriptor regression.
+    m = load(out / f"model-{selected['index']}.json")
+    basis = np.array(m["bases"])[1]
+    d = y[:, 1:] - y[:, :1]
+    projected = np.einsum("nsht,kh,kj->nsjt", d, basis, basis)
+    projection = {
+        w: (
+            rms((projected - d)[:, :, sl], axis=2)
+            / np.maximum(rms(d[:, :, sl], axis=2), 1e-30)
+        ).tolist()
+        for w, sl in WINDOWS.items()
+    }
+    pm.save_json(
+        out / "selection.json",
+        {
+            "feature_set": args.feature_set,
+            "candidates": results,
+            "selected_index": selected["index"],
+            "selection_rule": "minimum worst grouped normalized gate error; deterministic index tie break",
+            "projection_relative": projection,
+            "development_groups": sorted(set(groups.tolist())),
+            "fixed_D1_scale": rms(d, axis=(0, 1, 2)).tolist(),
+            "rank": 4,
+        },
+    )
+
+
+def pairs(out, args, budget):
+    budget.begin("pair-consequence-analysis")
+    _x, y, rows = development()
+    selection = load(ROOT / "boundaries-01/selection.json")
+    candidates = selection["candidate_pairs"]
+    floor = load(ROOT / "refinement-01/refinement.json")["floors"]
+    sens = np.zeros((len(candidates), 2, 2, 2))
+    sources = []
+    for p in sorted(ROOT.glob("fit-centers-*/predictions-*.npz")):
+        sens = np.maximum(sens, arrays(p)["sensitivity"])
+        sources.append({"path": str(p), "sha256": digest(p)})
+    ds = y[:, 1:] - y[:, :1]
+    fixed = rms(ds, axis=(0, 1, 2))
+    results = []
+    for k, pair in enumerate(candidates):
+        i, j = pair["indices"]
+        for ai, a in enumerate([-0.02, 0.02]):
+            for wi, (window, sl) in enumerate(WINDOWS.items()):
+                delta = ds[i, ai, sl] - ds[j, ai, sl]
+                magnitude = rms(delta)
+                both = np.minimum(rms(ds[i, ai, sl]), rms(ds[j, ai, sl]))
+                uncertainty = np.array(floor["D1/" + window]) * 2
+                local = 5 * sens[k, wi, ai]
+                for o, name in enumerate(["mass", "moment"]):
+                    screen = bool(
+                        pair["near"]
+                        and both[o] > uncertainty[o] / 2
+                        and magnitude[o] > uncertainty[o] + local[o]
+                        and magnitude[o] > 0.1 * fixed[o]
+                    )
+                    results.append(
+                        {
+                            "pair": k,
+                            "indices": [i, j],
+                            "preparations": [rows[i], rows[j]],
+                            "a": a,
+                            "window": window,
+                            "output": name,
+                            "near": pair["near"],
+                            "difference_rms": float(magnitude[o]),
+                            "difference_max": float(abs(delta[:, o]).max()),
+                            "left_rms": float(rms(ds[i, ai, sl])[o]),
+                            "right_rms": float(rms(ds[j, ai, sl])[o]),
+                            "numerical_bound": float(uncertainty[o]),
+                            "fitted_sensitivity_bound": float(local[o]),
+                            "fixed_scale": float(fixed[o]),
+                            "empirical_screen": screen,
+                            "qualification": "empirical screen only; physical sensitivity control required for robust collision",
+                        }
+                    )
+    pm.save_json(
+        out / "pairs.json",
+        {
+            "selection_sha256": digest(ROOT / "boundaries-01/selection.json"),
+            "sensitivity_sources": sources,
+            "records": results,
+        },
+    )
+    budget.finish()
+
+
+def freeze(out, args, budget):
+    budget.begin("freeze-snapshot-model")
+    selection = load(args.data / "selection.json")
+    model = load(args.data / f"model-{selection['selected_index']}.json")
+    pm.save_json(out / "model.json", model)
+    numerical = load(ROOT / "refinement-01/refinement.json")
+    pm.save_json(
+        out / "freeze.json",
+        {
+            "sources": source_hashes(),
+            "model_sha256": gm.identity(model),
+            "source_selection": str(args.data),
+            "selection_sha256": digest(args.data / "selection.json"),
+            "fresh_seeds": FRESH,
+            "histories": ["none", "odd04"],
+            "event_boundary": 72,
+            "probe_boundary": 90,
+            "amplitudes": [-0.02, 0.02],
+            "floors": numerical["floors"],
+            "fixed_D1_scale": selection["fixed_D1_scale"],
+            "gates": {"R": 0.02, "D1": 0.1},
+            "access": "actual event-boundary snapshot descriptor; no claim of t50 retention",
+            "repeated_stage": "blocked unless snapshot and retention independently qualify",
+        },
+    )
+    budget.finish()
+
+
+def fresh(out, args, budget):
+    from .organization_response import isolated_components
+    from .source_receiver_relay import prepare
+
+    frozen = load(args.freeze / "freeze.json")
+    model = load(args.freeze / "model.json")
+    if (
+        frozen["sources"] != source_hashes()
+        or gm.identity(model) != frozen["model_sha256"]
+    ):
+        raise ValueError("Frozen source or model changed")
+    _, _, development_rows = development()
+    if set(FRESH) & {r["seed"] for r in development_rows}:
+        raise ValueError("Fresh groups overlap development")
+    states, starts, rows, xx = [], [], [], []
+    for seed in FRESH:
+        f = Field(CFG)
+        initial = prepare(f, isolated_components(f, seed, budget), seed, -4.0, budget)
+        save_npz(out / f"initial-{seed}.npz", state=initial)
+        for history in ["none", "odd04"]:
+            budget.begin(f"fresh-boundary-{seed}-{history}")
+            state50 = unforced(
+                initialize_written(initial, history, CFG), CFG, [0.0, 50.0], budget
+            )[0][-1]
+            state72 = reach_boundary(state50, budget)
+            starts.append(state50)
+            states.append(state72)
+            xx.append(descriptor(state72))
+            rows.append({"seed": seed, "history": history})
+            budget.finish()
+    save_npz(out / "boundary-50.npz", states=starts)
+    save_npz(out / "boundary-72.npz", states=states)
+    save_npz(out / "descriptors.npz", x=xx)
+    pm.save_json(out / "rows.json", rows)
+    budget.begin("seal-all-snapshot-predictions")
+    save_npz(out / "predictions.npz", y=prediction(model, xx))
+    pm.save_json(
+        out / "seal.json",
+        {
+            "prediction_sha256": digest(out / "predictions.npz"),
+            "descriptor_sha256": digest(out / "descriptors.npz"),
+            "model_sha256": gm.identity(model),
+            "freeze_sha256": digest(args.freeze / "freeze.json"),
+            "order": "all snapshot predictions persisted before generating any future references",
+        },
+    )
+    budget.finish()
+    y = []
+    for i, state in enumerate(states):
+        y.append(
+            [
+                response_pair(out, f"reference-{i}-{a:g}", state, a, budget)
+                for a in [0.0, -0.02, 0.02]
+            ]
+        )
+    save_npz(out / "targets.npz", y=y)
+
+
+def analyze(out, args, budget):
+    budget.begin("sealed-fresh-analysis")
+    base = args.data
+    frozen = load(args.freeze / "freeze.json")
+    seal = load(base / "seal.json")
+    if seal["prediction_sha256"] != digest(base / "predictions.npz") or seal[
+        "descriptor_sha256"
+    ] != digest(base / "descriptors.npz"):
+        raise ValueError("Fresh seal changed")
+    y = arrays(base / "targets.npz")["y"]
+    p = arrays(base / "predictions.npz")["y"]
+    rows = load(base / "rows.json")
+    records = gates(y, p, rows, frozen["floors"])
+    pm.save_json(out / "scores.json", records)
+    pm.save_json(out / "summary.json", summary(records))
+    budget.finish()

@@ -307,6 +307,7 @@ def main():
         choices=[
             "pilot",
             "boundaries",
+            "response-pilot",
             "references",
             "refine",
             "fit",
@@ -359,6 +360,9 @@ def main():
         budget.check()
         if args.stage in ["pilot", "boundaries"]:
             boundaries(args.output, args, budget)
+        elif args.stage == "response-pilot":
+            state = arrays(args.data / "boundary-72.npz")["states"][0]
+            response_pair(args.output, "pilot-pair", state, 0.0, budget)
         elif args.stage in ["references", "refine"]:
             globals()[args.stage](args.output, args, budget)
         else:
