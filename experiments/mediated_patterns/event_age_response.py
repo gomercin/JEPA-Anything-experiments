@@ -13,7 +13,6 @@ from . import event_age_model as em
 from . import geometry_model as gm
 from . import intervention_model as im
 from . import present_state_model as pm
-from . import repeated_intervention_model as rm
 from .geometry_assay import initialize_written
 from .geometry_evolution import unforced
 from .history_conditioned_transmission import HistoryBudget
@@ -157,24 +156,24 @@ def score(y, p, floors=None):
                 h = pm.TIMES[sl]
                 peak = int(np.argmax(abs(t[sl, o])))
                 result.append(
-                    dict(
-                        kind=kind,
-                        window=window,
-                        output=name,
-                        magnitude=float(magnitude[o]),
-                        error_rms=float(error[o]),
-                        error_max=float(abs(v - t)[sl, o].max()),
-                        relative=relative,
-                        floor=float(floor),
-                        resolved=resolved,
-                        passed=bool(relative <= (0.1 if kind == "D1" else 0.02))
+                    {
+                        "kind": kind,
+                        "window": window,
+                        "output": name,
+                        "magnitude": float(magnitude[o]),
+                        "error_rms": float(error[o]),
+                        "error_max": float(abs(v - t)[sl, o].max()),
+                        "relative": relative,
+                        "floor": float(floor),
+                        "resolved": resolved,
+                        "passed": bool(relative <= (0.1 if kind == "D1" else 0.02))
                         if resolved
                         else None,
-                        true_peak=float(t[sl, o][peak]),
-                        true_peak_h=float(h[peak]),
-                        predicted_at_true_peak=float(v[sl, o][peak]),
-                        predicted_peak_h=float(h[np.argmax(abs(v[sl, o]))]),
-                    )
+                        "true_peak": float(t[sl, o][peak]),
+                        "true_peak_h": float(h[peak]),
+                        "predicted_at_true_peak": float(v[sl, o][peak]),
+                        "predicted_peak_h": float(h[np.argmax(abs(v[sl, o]))]),
+                    }
                 )
     return result
 
@@ -231,27 +230,29 @@ def refine(out, args, budget):
                 key = kind + "/" + window
                 floors[key] = np.maximum(floors.get(key, np.zeros(2)), bound)
                 details.append(
-                    dict(
-                        refinement=label,
-                        window=window,
-                        kind=kind,
-                        pair=pair.tolist(),
-                        floor=bound.tolist(),
-                        direct=(5 * rms(np.einsum("i,ito->to", w, r - y)[sl])).tolist(),
-                        absolute_branch=branches.tolist(),
-                        uncorrelated_absolute_bound=(
+                    {
+                        "refinement": label,
+                        "window": window,
+                        "kind": kind,
+                        "pair": pair.tolist(),
+                        "floor": bound.tolist(),
+                        "direct": (
+                            5 * rms(np.einsum("i,ito->to", w, r - y)[sl])
+                        ).tolist(),
+                        "absolute_branch": branches.tolist(),
+                        "uncorrelated_absolute_bound": (
                             abs(w) @ branches.sum(axis=1)
                         ).tolist(),
-                    )
+                    }
                 )
     pm.save_json(
         out / "refinement.json",
-        dict(
-            floors={k: v.tolist() for k, v in floors.items()},
-            records=details,
-            coordinate_floors=np.max(coord, axis=0).tolist(),
-            rule="max halfdt/doubleN; 5x matched R differences and 64eps absolute scale; triangle propagated D1",
-        ),
+        {
+            "floors": {k: v.tolist() for k, v in floors.items()},
+            "records": details,
+            "coordinate_floors": np.max(coord, axis=0).tolist(),
+            "rule": "max halfdt/doubleN; 5x matched R differences and 64eps absolute scale; triangle propagated D1",
+        },
     )
 
 
@@ -280,9 +281,9 @@ def predict(candidate, z, age, a, checkpoint=None):
 
 
 def fresh(out, args, budget):
+    from .event_age_analysis import privileged
     from .organization_response import isolated_components
     from .source_receiver_relay import prepare
-    from .event_age_analysis import privileged
 
     frozen = load(args.freeze / "freeze.json")
     candidate = load(args.freeze / "model.json")
@@ -307,7 +308,7 @@ def fresh(out, args, budget):
                     initialize_written(initial, history, CFG), CFG, [0.0, 50.0], budget
                 )[0][-1]
             )
-            rows.append(dict(seed=seed, history=history))
+            rows.append({"seed": seed, "history": history})
             budget.finish()
     save_npz(out / "boundary-50.npz", states=starts)
     z0 = np.array([pm.extract(s, feature_set="geometry") for s in starts])
@@ -346,14 +347,14 @@ def fresh(out, args, budget):
                 )
     pm.save_json(
         out / "seal.json",
-        dict(
-            predictions={p.name: digest(p) for p in out.glob("prediction-*.npz")},
-            checkpoints={p.name: digest(p) for p in out.glob("checkpoint-*.json")},
-            initialization_sha256=digest(out / "initial-descriptors.npz"),
-            model_sha256=gm.identity(candidate),
-            freeze_sha256=digest(args.freeze / "freeze.json"),
-            order="all forecasts and retained states before all future reference outcomes",
-        ),
+        {
+            "predictions": {p.name: digest(p) for p in out.glob("prediction-*.npz")},
+            "checkpoints": {p.name: digest(p) for p in out.glob("checkpoint-*.json")},
+            "initialization_sha256": digest(out / "initial-descriptors.npz"),
+            "model_sha256": gm.identity(candidate),
+            "freeze_sha256": digest(args.freeze / "freeze.json"),
+            "order": "all forecasts and retained states before all future reference outcomes",
+        },
     )
     budget.finish()
     for i, initial in enumerate(starts):
@@ -410,14 +411,16 @@ def main():
         started = True
         pm.save_json(
             args.output / "protocol.json",
-            dict(
-                command=sys.argv,
-                revision=subprocess.check_output(
+            {
+                "command": sys.argv,
+                "revision": subprocess.check_output(
                     ["git", "rev-parse", "HEAD"], text=True
                 ).strip(),
-                sources=source_hashes(),
-                note_sha256=digest(Path(__file__).with_name("EVENT_AGE_RESPONSE.md")),
-            ),
+                "sources": source_hashes(),
+                "note_sha256": digest(
+                    Path(__file__).with_name("EVENT_AGE_RESPONSE.md")
+                ),
+            },
         )
         model()
         budget.check()
