@@ -356,6 +356,10 @@ def main():
         budget.check()
         if args.stage in ("pilot", "develop", "fresh"):
             panel(args.output, args, budget)
+        elif args.stage == "repair":
+            from .repeated_intervention_repair import run
+
+            run(args.output, args, budget)
         elif args.stage == "analyze":
             from .repeated_intervention_analysis import analyze
 

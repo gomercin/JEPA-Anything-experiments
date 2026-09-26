@@ -111,3 +111,16 @@ software fixture initially omitted the static measurement utility imported by
 F; adding that pure NumPy module fixed the fixture. No solver or field access
 was added. The seven instrument tests then passed. Full development retains all
 six exposed seed/history starts and does not fit any new coefficients.
+
+Full exposed development reveals five unchanged response-contrast gate misses:
+worst D12 11.237%, D2|1 13.741%, while isolated D1/D2 stay below1.874%/4.804%.
+Independent addition stays below7.128%/5.707%. This points to the excessive
+combined quadratic readout contribution, not an event-timing defect or a need to
+alter physical centers. One repair family is declared before fitting: multiply
+both existing quadratic readout coefficient blocks by one scalar alpha. Fit
+alpha by ordinary least squares to resolved whole-window mass K12 on training
+seeds, and evaluate each held preparation including every descendant. No new
+basis, variable, event semantics, G, J, or physical trajectory. Compare alpha0
+(linear readout) and alpha1 (frozen original) as endpoints, retain all failures,
+and replay the saved one-event panel to detect loss. This is explicitly
+composition-informed even if the nine-dimensional runtime remains unchanged.
