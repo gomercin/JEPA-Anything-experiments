@@ -60,10 +60,18 @@ def test_prospective_seal_and_saved_checkpoint_replay():
             state = im.State.restore(
                 model, load(fresh / f"checkpoint-{i}-{freeze['selected']}-a{a:g}.json")
             )
-            np.testing.assert_array_equal(state.advance(8), predictions["z"][ai, 0])
-            np.testing.assert_array_equal(state.response(), predictions["y"][ai, 0])
-            np.testing.assert_array_equal(state.advance(20), predictions["z"][ai, 1])
-            np.testing.assert_array_equal(state.response(), predictions["y"][ai, 1])
+            np.testing.assert_allclose(
+                state.advance(8), predictions["z"][ai, 0], rtol=1e-12, atol=1e-15
+            )
+            np.testing.assert_allclose(
+                state.response(), predictions["y"][ai, 0], rtol=1e-12, atol=1e-20
+            )
+            np.testing.assert_allclose(
+                state.advance(20), predictions["z"][ai, 1], rtol=1e-12, atol=1e-15
+            )
+            np.testing.assert_allclose(
+                state.response(), predictions["y"][ai, 1], rtol=1e-12, atol=1e-20
+            )
         # Before any new event, added state preserves prior G/F capability exactly.
         base = im.State(models["ignore"], z)
         augmented = im.State(model, z)
@@ -105,7 +113,9 @@ def test_all_four_branch_targets_and_score_arithmetic():
         o = ["mass", "moment"].index(s["output"])
         rms = float(np.sqrt(np.mean(t[mask, o] ** 2)))
         err = float(np.sqrt(np.mean((p[mask, o] - t[mask, o]) ** 2)))
-        assert s["rms"] == rms and s["error_rms"] == err
+        np.testing.assert_allclose(
+            [s["rms"], s["error_rms"]], [rms, err], rtol=1e-12, atol=1e-25
+        )
         assert s["resolved"] == (rms > s["floor"])
         assert s["passed"] == (
             rms > s["floor"] and err / rms <= (0.1 if s["kind"] == "D_event" else 0.02)

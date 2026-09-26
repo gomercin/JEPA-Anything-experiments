@@ -88,3 +88,10 @@ A fresh GitHub sparse clone independently retrieves all504 members/23,830,038
 bytes and verifies every size/SHA256 at5d1d85e. No historical corpus is audited
 or scientific panel rerun for this retrieval. Live CI/base/head state is checked
 at merge time and merge confirmations are posted on the PRs.
+
+Portability fix before merge: saved macOS predictions replayed on Linux may differ
+at float64 roundoff. The new evidence test now uses the existing lineage's tight
+cross-platform tolerances (geometry1e-15+1e-12 relative, R1e-20+1e-12 relative)
+and1e-12 relative score-arithmetic tolerance. Same-process zero-event equality
+and the recorded24 fresh-process exact matches remain exact. No scientific
+threshold, prediction, coefficient, floor, outcome or indexed artifact changed.
