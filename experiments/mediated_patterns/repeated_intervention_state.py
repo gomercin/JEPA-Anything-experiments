@@ -313,7 +313,16 @@ def main():
     parser.add_argument(
         "--stage",
         required=True,
-        choices=["algebra", "pilot", "develop", "refine", "freeze", "fresh", "analyze"],
+        choices=[
+            "algebra",
+            "pilot",
+            "develop",
+            "refine",
+            "freeze",
+            "fresh",
+            "analyze",
+            "repair",
+        ],
     )
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--data", type=Path)
