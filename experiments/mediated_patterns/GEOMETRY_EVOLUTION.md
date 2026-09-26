@@ -71,3 +71,18 @@ updates. A useful outcome is bounded unforced propagation for delayed readout;
 it is not updating through probes, repeated-input closure, minimality, physical
 storage localization or universal dynamics. Publish/review/merge this scope,
 then append a small result to the two existing Atlas homes. No automatic successor.
+
+## Pilot and development decisions
+
+`pilot-01` (e22078f) uses the four original saved histories and costs .066 CPU
+seconds. Persistence from 50 to 100 has worst R/Delta_R errors 5.386%/29.742%,
+so updating could matter. Maximum physical A/B/C drift is .005452/.008444/.003294.
+The chain-rule rate agrees with one reference step to about 1e-9 units/time;
+the finite-step difference has the expected small integration-interval bias.
+
+Before any update fitting: acquire development geometry at 5-unit spacing but
+**exclude interior times 80/85/90/95 from fitting, scaling and rollout selection**.
+Use 50/55/60/65/70/75/100 only. The final target at 90 tests interpolation inside
+that gap, with new preparations; it is not a new dynamical regime. The saved
+interior development samples are evaluator-only and are not consulted in model
+selection. F adequacy is checked at actual 60/75 states as well as saved 50/100.

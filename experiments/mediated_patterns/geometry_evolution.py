@@ -264,6 +264,7 @@ def fit_panel(out, data, budget):
     rows = load(data / "rows.json")
     with np.load(data / "trajectories.npz", allow_pickle=False) as a:
         z, rates, features = a["z"], a["rates"], a["features"]
+    selected_times = (SAMPLES <= 75) | (SAMPLES == 100)
     groups = np.array([r["seed"] for r in rows])
     folds = pm.grouped_folds(groups)
     F = frozen_response()
@@ -282,7 +283,10 @@ def fit_panel(out, data, budget):
         fold_info = []
         for train, test in folds:
             g = gm.fit(
-                z[train].reshape(-1, 3), rates[train].reshape(-1, 3), kind, ridge
+                z[train][:, selected_times].reshape(-1, 3),
+                rates[train][:, selected_times].reshape(-1, 3),
+                kind,
+                ridge,
             )
             fold_info.append(
                 {
@@ -296,15 +300,20 @@ def fit_panel(out, data, budget):
                     oof[i, b, start:] = gm.rollout(
                         g, z[i, start], SAMPLES[start:] - SAMPLES[start]
                     )
-        # Coordinate selection uses all free-rollout points; denominator fixed physical unit.
-        residual = oof - z[:, None]
+        # Hold the interior 75-to-100 interval out of fitting and selection.
+        residual = (oof - z[:, None])[:, :, selected_times]
         summaries[name] = {
             "max_error": np.nanmax(abs(residual), axis=(0, 1, 2)).tolist(),
             "rms": np.sqrt(np.nanmean(residual**2, axis=(0, 1, 2))).tolist(),
             "score": float(np.sqrt(np.nanmean(residual**2))),
             "folds": fold_info,
         }
-        models[name] = gm.fit(z.reshape(-1, 3), rates.reshape(-1, 3), kind, ridge)
+        models[name] = gm.fit(
+            z[:, selected_times].reshape(-1, 3),
+            rates[:, selected_times].reshape(-1, 3),
+            kind,
+            ridge,
+        )
         predicted[name] = np.nan_to_num(
             oof, nan=0.0
         )  # start=60 has no predictions before60; mask documented.
@@ -323,17 +332,15 @@ def fit_panel(out, data, budget):
             meta.append(dict(**r, origin=float(SAMPLES[start])))
             truth_selected.append(y)
             snapshot.append(pm.predict(F, z[i, ti : ti + 1])[0])
-            for name in forecasts:
-                forecasts[name].append(
-                    pm.predict(F, predicted[name][i, b, ti : ti + 1])[0]
-                )
+            for name, values in forecasts.items():
+                values.append(pm.predict(F, predicted[name][i, b, ti : ti + 1])[0])
     pairs = response_pairs(meta)
     scores = {
         name: pm.scores(np.array(truth_selected), np.array(p), pairs, meta)
         for name, p in dict(snapshot=snapshot, **forecasts).items()
     }
     # F sensitivity to a physical center perturbation, independent of target fitting.
-    flat = z.reshape(-1, 3)
+    flat = z[:, selected_times].reshape(-1, 3)
     base = pm.predict(F, flat)
     jac = np.stack(
         [
@@ -358,8 +365,14 @@ def fit_panel(out, data, budget):
             "sensitivity_max": sensitivity.max(axis=0).tolist(),
             "geometry_correlation": np.corrcoef(flat.T).tolist(),
             "feature_age_correlation": np.corrcoef(
-                np.column_stack([features.reshape(-1, 15), np.tile(SAMPLES, len(z))]).T
+                np.column_stack(
+                    [
+                        features[:, selected_times].reshape(-1, 15),
+                        np.tile(SAMPLES[selected_times], len(z)),
+                    ]
+                ).T
             ).tolist(),
+            "selection_times": SAMPLES[selected_times].tolist(),
             "n_preparations": len(set(groups)),
             "n_trajectories": len(z),
             "conditioning": models[selected]["condition"],
