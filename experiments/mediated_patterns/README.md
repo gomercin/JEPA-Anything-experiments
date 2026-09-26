@@ -239,7 +239,7 @@ and PR body for the distinct final pushed head. All new evidence is in Git;
 no new release asset or inherited-archive download was needed. No extant
 substantive new evidence remains local-only.
 
-## Source-to-receiver relay — completed science, remotely verified PR #3
+## Source-to-receiver relay — merged cycle and Atlas catch-up
 
 [Source-to-receiver report](SOURCE_RECEIVER_RELAY.md) and
 [new portable evidence](../../evidence/source-receiver-relay-2026-09-25/README.md)
@@ -256,13 +256,22 @@ while B=-4 and all selected-contribution predictions pass their respective
 gates. Static conditioning and direct propagation remain in the control.
 AB20/C32 stays frozen, and the completed C-probe selectivity negative is unchanged.
 
-Science is closed; software checks and explicit critical review passed. [PR #3](https://github.com/gomercin/JEPA-Anything-experiments/pull/3) is open at
-this handoff revision, and all 77 remotely retrieved member hashes and 166
-execution-source references have been verified. Authoritative publication,
-retrieval and merge status is recorded in the evidence receipt and linked PR.
-The accumulated Atlas catch-up targets only the existing Effective Motif
-Dynamics and persistence-to-composability homes. Pending delta if inaccessible:
-carry the merged adapted AB20/C32 success and retained C24 failures; the preserved
-C-probe 5% selectivity negative; and this bounded loop-wide forward-response
-result with its .03 approximation failure. No new route, stop change or automatic
-scientific successor is selected.
+Science is closed; software checks and explicit critical review passed.
+[Lab PR #3](https://github.com/gomercin/JEPA-Anything-experiments/pull/3) merged
+at `75fa0685824a691494e3928d9721c2c5958f3286`, retaining reviewed head
+`695e7eda1543300d9e356de08f9c54622c5479f4`. Both exact-head hosted checks passed.
+All 77 remotely retrieved member hashes and 166 execution-source references
+were verified; see the [publication receipt](../../evidence/source-receiver-relay-2026-09-25/publication.json).
+
+[Atlas PR #157](https://github.com/gomercin/motif-atlas/pull/157) merged at
+`76464c12ce1e2a1f8c3bcf2fcfc9dfe4889aad36`. It adds the accumulated catch-up only
+to the existing Effective Motif Dynamics and persistence-to-composability homes,
+separating adapted AB20/C32 success and retained C24 failures, the preserved
+C-probe negative, and this loop-wide forward-response result with its .03
+approximation failure. Atlas roadmap lint, focused link/frontmatter review and
+whitespace checks passed; no hosted Atlas checks were configured.
+
+There is no pending scientific or Atlas delta. Numerical detectability is
+established within the tested envelope; practical receiver utility, isolated
+one-pass attribution and spontaneous formation remain unearned. Stop here.
+No new route, change to an existing stop, or automatic scientific successor.
