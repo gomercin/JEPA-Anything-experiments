@@ -267,3 +267,12 @@ remain in the fast suite. Historical findings above were inspected and preserved
 this cycle's full nonlinear, tangent and refinement findings were reproduced
 in this session. Scientific completion, software checks and remote merge state
 are recorded separately in the publication receipt and linked PR.
+
+Publication-time record: [lab PR #5](https://github.com/gomercin/JEPA-Anything-experiments/pull/5)
+is open; [Atlas PR #161](https://github.com/gomercin/motif-atlas/pull/161) carries
+only the two existing-home paragraphs. Local checks passed (245 tests plus two
+subtests, documented skip/deselection), and remote verification matched all
+149 new members, 179 source hashes and 66 finite NPZ files. See the publication
+receipt for inspected head and scope. Actual guarded-merge confirmations belong
+in the PR comments; they will not trigger a new metadata-only PR. This is the
+legitimate stopping point for the scientific question.

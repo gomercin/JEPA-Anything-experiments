@@ -59,3 +59,10 @@ verify exact aged sham continuations, subtraction, frozen-copy equality and
 prediction-before-reference ordering. The actual figure was visually inspected.
 No material scientific or software blocker remains in this reviewed scope.
 Remote retrieval, hosted checks and actual merge remain separate requirements.
+
+Fresh remote retrieval at `0f4fd6b09b1e93ddd9589c53deaf012e12e928ec` verified
+149 member/restoration hashes, 179 source hashes across seven protocols, and
+66 finite NPZ files. No scientific module was imported or field advanced.
+Both hosted checks passed at that head. The remaining diff is publication
+metadata and links only; the final head/base and hosted checks must still be
+checked immediately before guarded merge. No old package was republished.

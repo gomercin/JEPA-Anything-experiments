@@ -308,3 +308,13 @@ are separate in the [publication receipt](../../evidence/history-conditioned-tra
 and PR handoff. Confirmed merge metadata will be posted in the PR rather than
 creating another metadata-only PR. Only the two existing Atlas question homes
 receive this material new finding; no route or unrelated stop changes.
+
+Publication-time handoff: [lab PR #5](https://github.com/gomercin/JEPA-Anything-experiments/pull/5)
+is open with the completed result; a fresh sparse GitHub retrieval verified all
+149 new member hashes, safe restoration, 179 executed-source hashes and 66
+finite NPZ files without simulation. The two hosted checks passed at the
+verified source head `0f4fd6b`; final-head checks precede guarded merge.
+[Atlas PR #161](https://github.com/gomercin/motif-atlas/pull/161) contains the
+reviewed two-paragraph update and awaits lab merge. Actual merge confirmations
+for both repositories are maintained in these PR comments, not another PR.
+No scientific or interpretation blocker remains in this bounded cycle.
