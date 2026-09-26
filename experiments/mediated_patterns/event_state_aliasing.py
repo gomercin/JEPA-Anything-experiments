@@ -319,6 +319,7 @@ def main():
             "retain_freeze",
             "retain_fresh",
             "retain_analyze",
+            "report",
         ],
     )
     p.add_argument("--output", type=Path, required=True)

@@ -554,3 +554,129 @@ def retain_analyze(out, args, budget):
     )
     figures(out, y, saved["y"], rows)
     budget.finish()
+
+
+def report(out, args, budget):
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    from .event_state_aliasing import AGE
+    from .repeated_intervention_state import MODEL_FILE
+    from .repeated_intervention_state import model as original_model
+
+    budget.begin("final-evidence-tables-and-figures")
+    model = load(ROOT / "frozen-01/model.json")
+    paths = [
+        AGE / "frozen-01/model.json",
+        args.inherited / "frozen-01/model.json",
+        MODEL_FILE,
+    ]
+    pm.save_json(
+        out / "inherited-identities.json",
+        {
+            "files": {str(p): digest(p) for p in paths},
+            "fifteen_state": gm.identity(load(paths[0])),
+            "eleven_state": gm.identity(load(paths[1])),
+            "nine_state": gm.identity(original_model()),
+            "unchanged_G": gm.identity(original_model()["G"]),
+            "new_snapshot": gm.identity(model),
+        },
+    )
+    panels = {}
+    for name in ["fresh-analysis-01", "retained-analysis-01"]:
+        scores = load(ROOT / name / "scores.json")
+        panels[name] = {}
+        for kind in ["R_without", "R_after", "D1"]:
+            panels[name][kind] = {}
+            for output in ["mass", "moment"]:
+                subset = [
+                    r for r in scores if r["kind"] == kind and r["output"] == output
+                ]
+                panels[name][kind][output] = {
+                    "signal_rms_range": [
+                        min(r["magnitude"] for r in subset),
+                        max(r["magnitude"] for r in subset),
+                    ],
+                    "max_error_rms": max(r["error_rms"] for r in subset),
+                    "max_error_pointwise": max(r["error_max"] for r in subset),
+                    "worst_relative": max(r["relative"] for r in subset),
+                    "max_peak_timing_difference": max(
+                        abs(r["predicted_peak_h"] - r["true_peak_h"]) for r in subset
+                    ),
+                    "worst_case": max(subset, key=lambda r: r["relative"]),
+                    "residuals_below_floor": sum(
+                        r["error_rms"] < r["floor"] for r in subset
+                    ),
+                }
+    pm.save_json(out / "scales.json", panels)
+    active_snapshot = sum(
+        np.size(model[k]) for k in ["coefficients", "mean", "scale", "bases", "scales"]
+    )
+    g = load(ROOT / "retained-frozen-01/G.json")
+    pm.save_json(
+        out / "accounting.json",
+        {
+            "selected_measurements": 3,
+            "diagnostic_descriptors": 6,
+            "evolving_centers": 3,
+            "step_counter": 1,
+            "event_amplitude_input": 1,
+            "snapshot_active_fitted_basis_scaling_values": int(active_snapshot),
+            "G_active_values_including_step": sum(
+                int(np.size(g[k])) for k in ["coefficients", "mean", "scale", "step"]
+            ),
+            "amplitude_normalization_constant": 0.02,
+            "output_values_per_response": 322,
+            "snapshot_model_json_bytes": (ROOT / "frozen-01/model.json").stat().st_size,
+            "G_json_bytes": (ROOT / "retained-frozen-01/G.json").stat().st_size,
+            "inference": "22 unit RK4 steps, 88 rate products of 10 by 3; per requested amplitude one 10 by 24 product and two 4 by 161 temporal reconstructions for each of two outputs; no PDE or response lookup",
+            "state_after_event": "fixed-age forecast only; a pre-event center triple plus declared amplitude can be kept, or materialize 322 response values; no evolving event memory qualified",
+        },
+    )
+    pairs = load(ROOT / "boundaries-01/selection.json")["candidate_pairs"]
+    rows = load(ROOT / "boundaries-01/rows.json")
+    y = arrays(ROOT / "responses-01/targets.npz")["y"]
+    p = arrays(ROOT / "fit-centers-quadratic/predictions-0.npz")["y"]
+    fig, axes = plt.subplots(2, len(pairs), figsize=(17, 6), constrained_layout=True)
+    for k, pair in enumerate(pairs):
+        i, j = pair["indices"]
+        for o, output in enumerate(["mass", "signed moment"]):
+            ax = axes[o, k]
+            for s, a in [(1, -0.02), (2, 0.02)]:
+                truth = (y[i, s] - y[i, 0]) - (y[j, s] - y[j, 0])
+                pred = (p[i, s] - p[i, 0]) - (p[j, s] - p[j, 0])
+                (line,) = ax.plot(pm.TIMES, truth[:, o], label=f"a={a:+g}")
+                ax.plot(pm.TIMES, pred[:, o], "--", color=line.get_color())
+            ax.set_title(
+                f"{rows[i]['seed']}/{rows[i]['history']}\n− {rows[j]['seed']}/{rows[j]['history']}",
+                fontsize=9,
+            )
+            ax.set_xlabel("h after probe")
+            ax.set_ylabel("ΔD1 " + output)
+            ax.ticklabel_format(axis="y", style="sci", scilimits=(0, 0))
+    axes[0, 0].legend(fontsize=8)
+    fig.suptitle(
+        "All response-blind selected pairs: solid reference difference; dashed grouped prediction difference"
+    )
+    fig.savefig(out / "matched-pair-responses.png", dpi=160)
+    plt.close(fig)
+    retained = ROOT / "retained-fresh-01"
+    z0 = arrays(retained / "initial-descriptors.npz")["x"]
+    actual = arrays(retained / "descriptors.npz")["x"][:, :3] - z0
+    pred = arrays(retained / "predictions.npz")["z"][:, -1] - z0
+    fig, axes = plt.subplots(1, 3, figsize=(12, 4), constrained_layout=True)
+    labels = [str(r["seed"]) + " " + r["history"] for r in load(retained / "rows.json")]
+    for o, name in enumerate("ABC"):
+        axes[o].plot(actual[:, o], "o", label="true boundary motion")
+        axes[o].plot(pred[:, o], "x", label="unchanged G")
+        axes[o].set_xticks(
+            range(len(labels)), labels, rotation=45, ha="right", fontsize=8
+        )
+        axes[o].set_title(name + " center, t50→72")
+        axes[o].ticklabel_format(axis="y", style="sci", scilimits=(0, 0))
+    axes[0].legend(fontsize=8)
+    fig.savefig(out / "pre-event-geometry.png", dpi=160)
+    plt.close(fig)
+    budget.finish()
