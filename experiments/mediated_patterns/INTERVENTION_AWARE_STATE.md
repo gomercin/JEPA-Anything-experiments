@@ -98,3 +98,14 @@ retained. Zero r means no *new conditioning event*, not an equilibrated old writ
 Readout family: four-mode SVD correction, linear in retained transient, fitted
 to development D minus the independently predicted F contrast. It is identically
 zero when r=0 and keeps all original no-event predictions byte-equivalent.
+
+`plain-fit-01`: all grouped R gates pass (worst .418%) but local kick+G/F fails
+D badly; ignore predicts exactly zero D (100% relative when resolved).
+`repair-fit-01`: order6 reduces worst physical A/B/C errors over0..30 to
+[3.331e-5,1.398e-5,8.102e-7], versus order4[1.116e-4,3.584e-5,8.103e-7].
+Its linear readout correction has worst D error161.5%, at a small2.34e-12
+moment contrast. Retain it. Within the same second repair family, test one
+state-dependent readout: transient coordinates times[1, standardized current
+centers], with fixed ridge1e-4 and training-only scales. This tests ordinary
+readout curvature/interactions rather than changing physical coordinates or
+adding extraction. No new repair family, amplitude, timing or sensor search.

@@ -68,7 +68,11 @@ class State:
         result=pm.predict(self.model['F'],self.flow.z[None])[0]
         if 'readout' in self.model:
             r=self.model['readout']
-            weights=(self.memory/r['scale_x'])@np.asarray(r['coefficients'])
+            features=self.memory/np.asarray(r['scale_x'])
+            if r.get('interaction'):
+                q=(self.flow.z-r['mean_z'])/r['scale_z']
+                features=np.outer(features,np.r_[1.,q]).ravel()
+            weights=features@np.asarray(r['coefficients'])
             result += np.einsum('ok,kt->to',weights.reshape(2,-1),np.asarray(r['basis']))*r['scale_y']
         return result
 
