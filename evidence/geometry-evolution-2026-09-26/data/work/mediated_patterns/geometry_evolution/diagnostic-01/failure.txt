@@ -1,0 +1,6 @@
+The optional post-freeze diagnostic failed before its budget object was created.
+The filename inspect.py shadowed Python's standard inspect module when NumPy
+imported it, causing AttributeError: partially initialized module 'numpy' has no
+attribute 'array'. No scientific result, prediction or field was changed.
+Preserve this script and charge a conservative one CPU second. A new unique
+stage diagnostic-02 runs the same script named diagnose.py.

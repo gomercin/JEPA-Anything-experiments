@@ -331,3 +331,10 @@ fails; a development loss-balancing repair succeeds without extra descriptors.
 This is useful response prediction in the late-state envelope, not exclusive
 storage localization, minimality or autonomous closure. Earlier outcomes remain
 unchanged; no successor is selected. See the [new portable evidence](../../evidence/present-state-transmission-2026-09-26/README.md).
+
+**Unforced geometry continuation (2026-09-26):** [GEOMETRY_EVOLUTION.md](GEOMETRY_EVOLUTION.md)
+compares persistence, shared drift and ordinary autonomous three-center updates
+while keeping the snapshot response map frozen. Delayed-response prediction
+improves substantially over persistence on new preparations and a withheld time
+interval, with a retained fractional-motion failure for a nearly stationary A
+center. This does not establish repeated-input closure or minimal physical state.

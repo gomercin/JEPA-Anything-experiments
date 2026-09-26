@@ -1,0 +1,21 @@
+{
+  "dynamic_bytes": 24,
+  "dynamic_coordinates": 3,
+  "extraction_cpu_seconds": 0.00019300000000010975,
+  "initial_field_bytes": 12288,
+  "initial_field_values": 1536,
+  "initial_full_field_scans": "finite check over both arrays; three weighted u-squared window reductions over u; no rate or FFT at inference",
+  "integrator_step": 1.0,
+  "response_four_delays_cpu_seconds": 0.0008100000000001994,
+  "response_learned_scalars": 732,
+  "response_model_file_bytes": 69568,
+  "retained_training_examples": 0,
+  "spatial_templates": 0,
+  "step_counter_scalars": 1,
+  "timing_note": "Single-workload process timings; not a whole-system speed benchmark. Model-file sizes include controls and metadata.",
+  "training_rate_access": "Full current u,m plus periodic FFT RHS and three weighted reductions at selected development boundaries only",
+  "update_50_cpu_seconds": 0.0024800000000000377,
+  "update_rhs_calls_for_50": 200,
+  "updater_file_bytes": 3243,
+  "updater_learned_scalars": 36
+}

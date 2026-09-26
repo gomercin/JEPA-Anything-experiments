@@ -1,0 +1,14 @@
+{
+  "cpu_seconds": 0.278451,
+  "limit_cpu_seconds": 1200,
+  "previous_cpu_seconds": 222.663108,
+  "sections": [
+    {
+      "cpu_seconds": 0.272957,
+      "task": "grouped-free-rollout-selection",
+      "wall_seconds": 0.2749885419907514
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 0.3111900420044549
+}

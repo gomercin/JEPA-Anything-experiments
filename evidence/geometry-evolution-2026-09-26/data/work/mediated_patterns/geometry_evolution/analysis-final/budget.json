@@ -1,0 +1,14 @@
+{
+  "cpu_seconds": 1.1568450000000001,
+  "limit_cpu_seconds": 1800,
+  "previous_cpu_seconds": 564.511006,
+  "sections": [
+    {
+      "cpu_seconds": 1.150083,
+      "task": "scoring-and-figures",
+      "wall_seconds": 12.460108416998992
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 12.497064833005425
+}

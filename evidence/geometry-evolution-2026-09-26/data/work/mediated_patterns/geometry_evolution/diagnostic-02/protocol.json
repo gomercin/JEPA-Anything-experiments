@@ -1,0 +1,8 @@
+{
+  "command": [
+    "work/mediated_patterns/geometry_evolution/diagnostic-02/diagnose.py"
+  ],
+  "frozen_models_sha256": "4b42006337f4e27c1149211e724ffeef022e9b6391c46aee27d96ecb9c038477",
+  "script_sha256": "3b93b70a57b0bda8e15262cc84fbe52e641669e5fb3e52cdba3fc548021bf484",
+  "sources_unchanged_from_freeze": true
+}

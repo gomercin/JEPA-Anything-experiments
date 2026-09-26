@@ -1,0 +1,49 @@
+{
+  "cpu_seconds": 46.242453999999995,
+  "limit_cpu_seconds": 1800,
+  "previous_cpu_seconds": 471.79409,
+  "sections": [
+    {
+      "cpu_seconds": 4.7874929999999996,
+      "task": "halfdt-none-history",
+      "wall_seconds": 4.789422207977623
+    },
+    {
+      "cpu_seconds": 7.766665000000001,
+      "task": "halfdt-none-probe",
+      "wall_seconds": 7.767355874995701
+    },
+    {
+      "cpu_seconds": 4.825240000000001,
+      "task": "halfdt-heldmix-history",
+      "wall_seconds": 4.825478999991901
+    },
+    {
+      "cpu_seconds": 7.776553,
+      "task": "halfdt-heldmix-probe",
+      "wall_seconds": 7.777314250008203
+    },
+    {
+      "cpu_seconds": 3.905239999999999,
+      "task": "doubleN-none-history",
+      "wall_seconds": 3.9073920419905335
+    },
+    {
+      "cpu_seconds": 6.629874000000001,
+      "task": "doubleN-none-probe",
+      "wall_seconds": 6.633985374995973
+    },
+    {
+      "cpu_seconds": 3.9297949999999986,
+      "task": "doubleN-heldmix-history",
+      "wall_seconds": 3.932581208006013
+    },
+    {
+      "cpu_seconds": 6.612076999999999,
+      "task": "doubleN-heldmix-probe",
+      "wall_seconds": 6.6134387089987285
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 46.29288887500297
+}

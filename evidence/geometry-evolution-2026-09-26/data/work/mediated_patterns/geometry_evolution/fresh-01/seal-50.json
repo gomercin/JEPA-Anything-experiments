@@ -1,0 +1,15 @@
+{
+  "cpu_seconds": 0.11082400000000092,
+  "geometry_sha256": "bbde31845940e575e774ea3e12036ae4c1721cb6dc3ffea6cd74725e330d9543",
+  "initial_descriptors_sha256": "3f0c8385bbd75ee3b7cca5813dca9a0a184e1b386088ce5d837a06f0329e0542",
+  "max_resume_discrepancy": 0.0,
+  "order": "Saved all predictions at this initialization boundary before its future unforced continuation or probe references",
+  "predictions_sha256": "4b9d4fe64570d6e5757315cf6bd91360b0a5520615fb145663bee94f122fb17f",
+  "response_model_sha256": "f0bc4ced6914bc43148d615912619370465ce48332a140dd41af52b7b85bb74e",
+  "updaters_sha256": {
+    "affine-1e-06": "0aa89c99a0db3cde0fd9a9e14c5e4136bf60b438444e40e89806cbd283f91a49",
+    "drift": "12cc4e71d66192c6fd8accf8dfeec4e2bb76115d29bcd09d5a3d16d798707e1f",
+    "persistence": "b8ef63d01fe47721fd7e0043c56b8636a50cecef02315eee82d23192fbfe1f2a",
+    "quadratic-1e-06": "a9af96ddb21bcd90e92cb8cd51fa1371c95166949fec6ffe54c0e1367dfdded9"
+  }
+}

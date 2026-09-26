@@ -1,0 +1,49 @@
+{
+  "cpu_seconds": 42.556572,
+  "limit_cpu_seconds": 1200,
+  "previous_cpu_seconds": 222.941559,
+  "sections": [
+    {
+      "cpu_seconds": 3.7908749999999998,
+      "task": "halfdt-none-history",
+      "wall_seconds": 3.8021420830045827
+    },
+    {
+      "cpu_seconds": 8.228561,
+      "task": "halfdt-none-probe",
+      "wall_seconds": 8.247891041974071
+    },
+    {
+      "cpu_seconds": 3.756653,
+      "task": "halfdt-mixed-history",
+      "wall_seconds": 3.7619366660073865
+    },
+    {
+      "cpu_seconds": 8.096783000000002,
+      "task": "halfdt-mixed-probe",
+      "wall_seconds": 8.111773707991233
+    },
+    {
+      "cpu_seconds": 2.939731000000002,
+      "task": "doubleN-none-history",
+      "wall_seconds": 2.942630208999617
+    },
+    {
+      "cpu_seconds": 6.3733889999999995,
+      "task": "doubleN-none-probe",
+      "wall_seconds": 6.374843249999685
+    },
+    {
+      "cpu_seconds": 2.9407369999999986,
+      "task": "doubleN-mixed-history",
+      "wall_seconds": 2.9412704579881392
+    },
+    {
+      "cpu_seconds": 6.419120000000007,
+      "task": "doubleN-mixed-probe",
+      "wall_seconds": 6.435063291981351
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 42.65909370800364
+}
