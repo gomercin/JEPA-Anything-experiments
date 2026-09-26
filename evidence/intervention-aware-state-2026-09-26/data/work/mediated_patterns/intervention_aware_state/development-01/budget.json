@@ -1,0 +1,8 @@
+{
+  "cpu_seconds": 0.009494000000000002,
+  "limit_cpu_seconds": 1200,
+  "previous_cpu_seconds": 56.347483,
+  "sections": [],
+  "status": "FAILED",
+  "wall_seconds": 0.08124912498169579
+}

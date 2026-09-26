@@ -1,0 +1,14 @@
+{
+  "cpu_seconds": 0.42864899999999995,
+  "limit_cpu_seconds": 1200,
+  "previous_cpu_seconds": 201.21138499999998,
+  "sections": [
+    {
+      "cpu_seconds": 0.416574,
+      "task": "grouped-jump-fits",
+      "wall_seconds": 0.46885416700388305
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 0.5111549579887651
+}

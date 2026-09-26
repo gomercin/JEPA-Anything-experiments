@@ -1,0 +1,89 @@
+{
+  "cpu_seconds": 73.74530200000001,
+  "limit_cpu_seconds": 1800,
+  "previous_cpu_seconds": 450.419668,
+  "sections": [
+    {
+      "cpu_seconds": 2.962306,
+      "task": "halfdt-prefix",
+      "wall_seconds": 2.9724889589997474
+    },
+    {
+      "cpu_seconds": 0.6172070000000001,
+      "task": "prefix",
+      "wall_seconds": 0.617890499997884
+    },
+    {
+      "cpu_seconds": 0.6698029999999999,
+      "task": "conditioning-0.0",
+      "wall_seconds": 0.6741112920281012
+    },
+    {
+      "cpu_seconds": 11.245678999999999,
+      "task": "probe-0.0-10",
+      "wall_seconds": 11.256811582978116
+    },
+    {
+      "cpu_seconds": 0.7236760000000011,
+      "task": "conditioning--0.02",
+      "wall_seconds": 0.7240750410128385
+    },
+    {
+      "cpu_seconds": 11.245530000000002,
+      "task": "probe--0.02-10",
+      "wall_seconds": 11.255123083974468
+    },
+    {
+      "cpu_seconds": 0.7259479999999989,
+      "task": "conditioning-0.01",
+      "wall_seconds": 0.7273632090073079
+    },
+    {
+      "cpu_seconds": 11.924684000000003,
+      "task": "probe-0.01-10",
+      "wall_seconds": 11.964115542010404
+    },
+    {
+      "cpu_seconds": 2.972744999999996,
+      "task": "doubleN-prefix",
+      "wall_seconds": 2.992435291991569
+    },
+    {
+      "cpu_seconds": 0.5938879999999997,
+      "task": "prefix",
+      "wall_seconds": 0.5985537499946076
+    },
+    {
+      "cpu_seconds": 0.5987560000000016,
+      "task": "conditioning-0.0",
+      "wall_seconds": 0.6010135000105947
+    },
+    {
+      "cpu_seconds": 9.291778999999998,
+      "task": "probe-0.0-10",
+      "wall_seconds": 9.314427332981722
+    },
+    {
+      "cpu_seconds": 0.6000829999999979,
+      "task": "conditioning--0.02",
+      "wall_seconds": 0.6018455419980455
+    },
+    {
+      "cpu_seconds": 9.496975999999997,
+      "task": "probe--0.02-10",
+      "wall_seconds": 9.534139374998631
+    },
+    {
+      "cpu_seconds": 0.5912569999999988,
+      "task": "conditioning-0.01",
+      "wall_seconds": 0.5918668340018485
+    },
+    {
+      "cpu_seconds": 9.472819000000001,
+      "task": "probe-0.01-10",
+      "wall_seconds": 9.52121674999944
+    }
+  ],
+  "status": "COMPLETE",
+  "wall_seconds": 73.96182883300935
+}

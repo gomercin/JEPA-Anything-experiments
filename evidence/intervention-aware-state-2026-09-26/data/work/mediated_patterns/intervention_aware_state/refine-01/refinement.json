@@ -1,0 +1,18 @@
+{
+  "coordinate_floors": [
+    7.824534973069341e-08,
+    6.127087075896709e-07,
+    8.765532929491324e-09
+  ],
+  "response_floors": [
+    [
+      2.338979675935109e-13,
+      3.4022724356981314e-13
+    ],
+    [
+      1.8500694397070363e-13,
+      4.5252458256175885e-13
+    ]
+  ],
+  "rule": "max across matched refinements of 5*sum separate R RMS differences; minimum64*eps*max absolute C readout"
+}

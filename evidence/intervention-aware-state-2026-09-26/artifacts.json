@@ -1,0 +1,2527 @@
+{
+  "schema": 1,
+  "source_report_revision": "712f29690e4c0a5d55c27415faf7ca367e41e5dd",
+  "bytes": 23830038,
+  "files": [
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/analysis-final/budget.json",
+      "bytes": 299,
+      "sha256": "3e12ea3a17b11620786a241f3d79fa115eafdc85b2b7884db9d2cf9edf58da1d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/analysis-final/geometry.png",
+      "bytes": 220937,
+      "sha256": "2fae3c4ee83feaf77832b0c5819308c6f28bf895c75bb97f3c19d71051c1626e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/analysis-final/physical.json",
+      "bytes": 131411,
+      "sha256": "9ab2190cf972246b26a1fccdc605b7b7a775da951013fdc8283a43c4bd1f4bd7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/analysis-final/protocol.json",
+      "bytes": 4149,
+      "sha256": "32ef81aedb3fe06b5d0495f50179776d63cd93025836dae03eb1d12476c3a235"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/analysis-final/responses.png",
+      "bytes": 236032,
+      "sha256": "89b7c0f533fd6a7882ff911768449cb726b84e9059149e085948f82c17aada3a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/analysis-final/scores.json",
+      "bytes": 2215981,
+      "sha256": "ddde7bc6d7a90ab726de738de670774d5eb7a14a159074bbda1e86778ed2e6eb"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/analysis-final/summary.json",
+      "bytes": 2758,
+      "sha256": "e42c40c8f03d881d59d0b1987c30ec88b88c4cac0c0acfea84f0d5f7bc7e351d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/audit-summary.json",
+      "bytes": 16383,
+      "sha256": "03e2d5f157cbd13dcc45de79393875dee9a2d622763ff418d3b3566d5fd3f6a3"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/commands.txt",
+      "bytes": 4708,
+      "sha256": "e504ee5d7e877f604f456106ba815c1d689477598fd15a98a488161199bfbfe1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-01/budget.json",
+      "bytes": 187,
+      "sha256": "ef48511a7052ea582c042098bb63ee11cad48ddc7461bbe866c656f210b64e27"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-01/protocol.json",
+      "bytes": 3994,
+      "sha256": "0464f8dee7e7a22977358a902738acdd1fd5de8e4f0c6b64dd4b8418c6ca2eab"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/budget.json",
+      "bytes": 8949,
+      "sha256": "2c8f4c2a9ab1c99c73c7c54d85edb76fc45821cea25ca74ce4200e7196e90b22"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/inputs.json",
+      "bytes": 864,
+      "sha256": "2a42c0a3d4bc3ac1f3bf2424b6204e200a13ffbd6163c1a839887a43471ec1b7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/protocol.json",
+      "bytes": 3994,
+      "sha256": "e8a986bf53c7020ff6e3e1aa912d921b9246c8378a9e3d26493c38823e5794cb"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-none-a-0.02-event.json",
+      "bytes": 13636,
+      "sha256": "856f1421d8fc5120b27cc2421baa383c7f2a92534bfc3bc8ec676998dac167e8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-none-a-0.02-gap10.npz",
+      "bytes": 42313,
+      "sha256": "8cdbb7d1ccfad21f76928cd4aaef98ac9952ecdeb91dad0564c1bac61db12280"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-none-a-0.02-gap30.npz",
+      "bytes": 41806,
+      "sha256": "e648b9f4a0cd68e25b4cbcc0e51749438dcaed7fb4da3f10f35bbe61875777e8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-none-a-0.02-geometry.npz",
+      "bytes": 4699,
+      "sha256": "821056b759e392ebd1ef97fe4c04319c7e5147bf9d26969bb7b8ecfb4eee6aef"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-none-a0-event.json",
+      "bytes": 13556,
+      "sha256": "908fcab3f0790b888d86174b1961deecaf390636db192f15fd7b4cd4a69630b1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-none-a0-geometry.npz",
+      "bytes": 4650,
+      "sha256": "749ecf47c28814c0b2de3c75d2244be050ade3915f33c64a84bcf8a25dac9beb"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-none-a0.02-event.json",
+      "bytes": 13641,
+      "sha256": "356d9c7172ae00f16a59033885431a4b890ecbbf5b2a7e32291bbf0e208681b7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-none-a0.02-gap10.npz",
+      "bytes": 42185,
+      "sha256": "33f82ba7c68af33085a218863b15a38cfb0295bd6b1f400323e36f7144e5cea1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-none-a0.02-gap30.npz",
+      "bytes": 41728,
+      "sha256": "e204cc1c39ed3887ef219091056eed517048a4b82f6de75c14edef6225270bed"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-none-a0.02-geometry.npz",
+      "bytes": 4682,
+      "sha256": "4d81dca61da07b4dd653e935f1a24bb602c8e15b7f04f44f89c9edba9fc06fc1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-odd04-a-0.02-event.json",
+      "bytes": 13557,
+      "sha256": "f576fb285144b705fe55634cb12cc80249b3199be23ea718bcb7f2a1bbd759af"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-odd04-a-0.02-gap10.npz",
+      "bytes": 41314,
+      "sha256": "ca1b2a719bf9eb9732d6afe83100ec65847c5c999dd81ca2dbcc7ede7b596d1d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-odd04-a-0.02-gap30.npz",
+      "bytes": 40958,
+      "sha256": "8cb0d5c70678c6078763e31e13bb484c3e96d40f53d7b8af9dd29f171919527b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-odd04-a-0.02-geometry.npz",
+      "bytes": 4636,
+      "sha256": "9487e0d46e1a6a54b42a4633ad12c0c97a4f0a5b35e50b8bfa3dd81547bb32c6"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-odd04-a0-event.json",
+      "bytes": 13493,
+      "sha256": "40bc11d1952801e7d441d3dea23d1e229275177d9d7317c1489bb26b3e9c7d6b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-odd04-a0-geometry.npz",
+      "bytes": 4577,
+      "sha256": "12531be4a3ec23d543cfc3a70a809fe46ece1f8018c779910aa679387f44f280"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-odd04-a0.02-event.json",
+      "bytes": 13548,
+      "sha256": "38cb42f9dc3e964f0dd0759c584be3a3a00e61d14155dfb4990390542d12d957"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-odd04-a0.02-gap10.npz",
+      "bytes": 41193,
+      "sha256": "95638bd1b3c2d4e8e41a583a4b300164c291fcd6f48731cb831e17cd61702c34"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-odd04-a0.02-gap30.npz",
+      "bytes": 40912,
+      "sha256": "305bb14d5fcfbb4232f4f284943a8d2a6c8630e8562c5aaa4cc9c3b277427133"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10101-odd04-a0.02-geometry.npz",
+      "bytes": 4608,
+      "sha256": "f4e8ba08d6d6c8f316bd6f1032490a875150a983429c7dfd578e3055cee737ec"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-none-a-0.02-event.json",
+      "bytes": 13668,
+      "sha256": "0de8f8442e927f1af15128ac8025c29dcdff548cda71ad72f77ee1e64bfb5669"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-none-a-0.02-gap10.npz",
+      "bytes": 42608,
+      "sha256": "b2f3cdd9e4b39df97ca1e1cf7eacd8e1fec696f55438be33a161e7bd69999b28"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-none-a-0.02-gap30.npz",
+      "bytes": 42154,
+      "sha256": "35ccad0d91151fc60bcb43512541a56aa1edda15d904d6c4bbddf7c33c307920"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-none-a-0.02-geometry.npz",
+      "bytes": 4701,
+      "sha256": "d369f015104b41d92d8ce860a3dee3bdcf725fd1fc1364e5706a85eaf65632f1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-none-a0-event.json",
+      "bytes": 13595,
+      "sha256": "6d5fe56d6182deaf7693ed9487a24ed06d9d439bab6d019ef0975f534172ff7a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-none-a0-geometry.npz",
+      "bytes": 4653,
+      "sha256": "18c38ef44fcce02bb25d9e1b0e665c6f2f93313b807d46ffc8b12abf1f23b0c5"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-none-a0.02-event.json",
+      "bytes": 13680,
+      "sha256": "1902fb853dbd966f373879d61c78147dfdecf4938bdf62ac1c5748e0dbd1c072"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-none-a0.02-gap10.npz",
+      "bytes": 42486,
+      "sha256": "9571b35ea63c7e2bfd07ff6d17f1763200fed5bb53f69380556d4d34a5cd1977"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-none-a0.02-gap30.npz",
+      "bytes": 42078,
+      "sha256": "8f33c5da321673f7645eb0fa9bce94e4f96cbbe5ca26fc9e21ac8ae153afa742"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-none-a0.02-geometry.npz",
+      "bytes": 4688,
+      "sha256": "8494feab16df3c22690de59f06e50844322590530bb4f9f39152e78134b589ef"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-odd04-a-0.02-event.json",
+      "bytes": 13603,
+      "sha256": "786a92cd8bf25533d666d7d12cede07e98974081ada41c74c136bb29fdc48cf9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-odd04-a-0.02-gap10.npz",
+      "bytes": 41452,
+      "sha256": "f11ec2a2c97334a27de2f8ed90aec6c609468cb56d92a788095e7446f5dae855"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-odd04-a-0.02-gap30.npz",
+      "bytes": 40848,
+      "sha256": "96dc6154ea006c4cda10d4b1013de82c0bf43a6577c7766d61a7c9e566d5b0bb"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-odd04-a-0.02-geometry.npz",
+      "bytes": 4644,
+      "sha256": "946793bd66f17e93074a0984f4bd51243c963c58947053c72ec6873f9eba206c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-odd04-a0-event.json",
+      "bytes": 13542,
+      "sha256": "4a300d537834e5975c07d37b266f77d29c5428ee77a004a7e6c8b9079bc416b8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-odd04-a0-geometry.npz",
+      "bytes": 4580,
+      "sha256": "835dba881dfe7dc1c5f682d3b6c9d6babea439dcc9a3f408e4a32a8ea8367b4b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-odd04-a0.02-event.json",
+      "bytes": 13610,
+      "sha256": "282e212787b1fb31dbbc2ac3d46c02c532a48e37dfa74b321bd481948a25d3f9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-odd04-a0.02-gap10.npz",
+      "bytes": 41379,
+      "sha256": "28beedc95b8ce11a0c83e7fb6c2c37d33e2e91187c70685dad3ad874e6ba454c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-odd04-a0.02-gap30.npz",
+      "bytes": 40802,
+      "sha256": "2fe76f65b97e91bc9c86183b01216a5e55325c3b61108767ba1e5323112af3a4"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10102-odd04-a0.02-geometry.npz",
+      "bytes": 4612,
+      "sha256": "d2cafd593f41fea104356bfb14175aee5db8aef567b99b2389a42129c94245d7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-none-a-0.02-event.json",
+      "bytes": 13653,
+      "sha256": "73afe3019821458c7c2dfb85174fffc788948ce8c74d6e5536bbe48afb399761"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-none-a-0.02-gap10.npz",
+      "bytes": 42432,
+      "sha256": "a1952b61131d42bee36be40f31a938ae3c81d49ea337ab44e19a811ca39c277e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-none-a-0.02-gap30.npz",
+      "bytes": 41888,
+      "sha256": "fa1919d5482eadaf2cb78a5bce660feb1f285d1bdd7fcd04b9430302524402b7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-none-a-0.02-geometry.npz",
+      "bytes": 4678,
+      "sha256": "cd66008c8ba91f7bb4c888226e438cf5d74b6de5c2a8712b9482e80c44d59f22"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-none-a0-event.json",
+      "bytes": 13564,
+      "sha256": "459fd3c9d64bd33a71023eefc76c5dfda6e62e239d33a10b92227a641afe00d1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-none-a0-geometry.npz",
+      "bytes": 4623,
+      "sha256": "c33c9feaa55116425d519c3e69678314c8820a70890ed22c8bf87e69380dd1b9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-none-a0.02-event.json",
+      "bytes": 13650,
+      "sha256": "af0f6e8ed02cfaffe54464bd7f8843c39c99ff8caf855d50b79f84575d338b36"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-none-a0.02-gap10.npz",
+      "bytes": 42293,
+      "sha256": "f46b009d249f62fb0d91db9ad96dfeb05b5406b277492a5552bcfc802774a687"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-none-a0.02-gap30.npz",
+      "bytes": 41797,
+      "sha256": "46598cd829c73cc49776ecb2f6e6257593b58013b040f4cf9e5d90e1ab63cb64"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-none-a0.02-geometry.npz",
+      "bytes": 4662,
+      "sha256": "31b3d5d62090f82c6573c551ce4df68a71e05fe11114bee4821bf8acd4fbf148"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-odd04-a-0.02-event.json",
+      "bytes": 13544,
+      "sha256": "730614eb2e7d3a32b0f29d18413faa507e9e468561a045e72476509c1967e6ab"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-odd04-a-0.02-gap10.npz",
+      "bytes": 41350,
+      "sha256": "aa028cc2204c4ae6a7cf4c75b1f9adcf71f982f8a27eabdc311f16c5ad7b321b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-odd04-a-0.02-gap30.npz",
+      "bytes": 40922,
+      "sha256": "c85fa551d66601930c6c2f3556ba49a501426014d4425049f387501c8b691a8c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-odd04-a-0.02-geometry.npz",
+      "bytes": 4623,
+      "sha256": "99c2f18c9c5f9a73c1e0ad9c4b995888da080d3a9344c46a8943b76d1df6089f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-odd04-a0-event.json",
+      "bytes": 13514,
+      "sha256": "55029d900cfbd38166464d795e1ce8a3c62806ac31f4fedb895021f41bf6d3b1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-odd04-a0-geometry.npz",
+      "bytes": 4580,
+      "sha256": "2decbf0f8366ebbbaf938369a2a5e915471dff87e0c6adfca5b9215f3a2ddd1a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-odd04-a0.02-event.json",
+      "bytes": 13516,
+      "sha256": "239dc3bb8b3b67c18905d3d5a37c25e2528f8af5ea65d29f832bbc1046d12555"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-odd04-a0.02-gap10.npz",
+      "bytes": 41268,
+      "sha256": "a623daf752ec3b29a0d31b3fe75f7180f8558931b8c354fa57779f0973e5d698"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-odd04-a0.02-gap30.npz",
+      "bytes": 40853,
+      "sha256": "5d6f1080624d7606abc9a59972266de43aefefff470d5b096ca0f1dae852682f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s10103-odd04-a0.02-geometry.npz",
+      "bytes": 4605,
+      "sha256": "ab1c45917fd3ad3d0f4193b09fb957d8f774a45869cf0091e69f1d21a8e7a63b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s8101-none-a-0.02-event.json",
+      "bytes": 13675,
+      "sha256": "56f0ac57480424d73dfb2616c27816cf2665e96d4a35dfaa94dd645daf4e0637"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s8101-none-a-0.02-gap10.npz",
+      "bytes": 42627,
+      "sha256": "1fb6fe9dfb79564f4316caf475fb4901c4cda7ce549a13733e96aef875a7d97d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s8101-none-a-0.02-gap30.npz",
+      "bytes": 42235,
+      "sha256": "929951978a8414734bc4cc9c03e1d9983a662ce14ba1c252792b657e8bca88b3"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s8101-none-a-0.02-geometry.npz",
+      "bytes": 4700,
+      "sha256": "37bdb09f48fc99217ab37845aa7d61e94c0478406300c318dd612ea8f79f2be8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s8101-none-a0-event.json",
+      "bytes": 13614,
+      "sha256": "17203103b97a6636785ce5a97f87778dfda3c3328291d95d564d242dfc7952b7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s8101-none-a0-geometry.npz",
+      "bytes": 4654,
+      "sha256": "ff11ccffe077d0ac88b46971eba12331d642b2d346fe9d85a6c3f37a1155e8a3"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s8101-none-a0.02-event.json",
+      "bytes": 13667,
+      "sha256": "809963934a16f154303b71705cc11702044c5b52044b3a74836ea390237ff821"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s8101-none-a0.02-gap10.npz",
+      "bytes": 42484,
+      "sha256": "c41f80408fa97e5a730540bdf562303afc435a4cb59b9477899222217ee98a46"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s8101-none-a0.02-gap30.npz",
+      "bytes": 42099,
+      "sha256": "d258517fe0006f6f00e505ded07d98bcb5437edf0c390343d83e6a65e25fbc78"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/development-02/s8101-none-a0.02-geometry.npz",
+      "bytes": 4686,
+      "sha256": "dbad3568ca6f6534ad0f057b3ed97bedd6437c3fcb9295601c98fcc458b84a51"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/failure.txt",
+      "bytes": 184,
+      "sha256": "7d971934b4fb4ad44862d091f0c43e67233af4260744ca6f1510a1146021e7b9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/boundary-50.npz",
+      "bytes": 67876,
+      "sha256": "6b238da8718a606be124a4e4c95065362637c2bd1630faed7f638a33c4b6fc7f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/budget.json",
+      "bytes": 11752,
+      "sha256": "ffa8cbd5728678a0eef98039df6f42513507d1ed64bb6b26c80daacff808d85f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-affine-ignore-a-0.02.json",
+      "bytes": 254,
+      "sha256": "b06fa177d5202de9b022f5b4d79d3de4e9c3fa3758598966e76c5b64d5be16e8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-affine-ignore-a0.01.json",
+      "bytes": 254,
+      "sha256": "b06fa177d5202de9b022f5b4d79d3de4e9c3fa3758598966e76c5b64d5be16e8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-affine-ignore-a0.02.json",
+      "bytes": 254,
+      "sha256": "b06fa177d5202de9b022f5b4d79d3de4e9c3fa3758598966e76c5b64d5be16e8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-affine-ignore-a0.json",
+      "bytes": 254,
+      "sha256": "b06fa177d5202de9b022f5b4d79d3de4e9c3fa3758598966e76c5b64d5be16e8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-constant-a-0.02.json",
+      "bytes": 253,
+      "sha256": "ed4e6b298f6048b04a6fc759db80767097c694aa4fe9fe8a8b12bd9b9c293744"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-constant-a0.01.json",
+      "bytes": 254,
+      "sha256": "9afa07212b632ef8e6a538968f8a74129d363e816635af49df61d97db9af62a8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-constant-a0.02.json",
+      "bytes": 254,
+      "sha256": "e6df54a629b45f0eed06a676bdf606080ded4664d21a59c70d44b0d738a29be1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-constant-a0.json",
+      "bytes": 253,
+      "sha256": "0a338e181bcc9b184ae1272e357ec7a44dd7e5f5cf8604bcdfffccf423600e59"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-dependent-a-0.02.json",
+      "bytes": 254,
+      "sha256": "ed5ff832b1f52b234c60b65de053bca397d329efdd9ee88714995fccb4227d3e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-dependent-a0.01.json",
+      "bytes": 254,
+      "sha256": "34cf475d91a0266ce473900116e250fdbe8679d7076491bb4a35769019b771d6"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-dependent-a0.02.json",
+      "bytes": 250,
+      "sha256": "35c76ccb922521e30bce6cd5735d41fb19851f438340de54b40a6f266b9ff695"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-dependent-a0.json",
+      "bytes": 253,
+      "sha256": "400f664215335fad1d463a455d7b06ba95d4e171dd85845a21f89ebc3e9f3909"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-ignore-a-0.02.json",
+      "bytes": 253,
+      "sha256": "69b9e559dd007dc485ceda5910557e847c541ba938842025d2866839987293a2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-ignore-a0.01.json",
+      "bytes": 253,
+      "sha256": "69b9e559dd007dc485ceda5910557e847c541ba938842025d2866839987293a2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-ignore-a0.02.json",
+      "bytes": 253,
+      "sha256": "69b9e559dd007dc485ceda5910557e847c541ba938842025d2866839987293a2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-ignore-a0.json",
+      "bytes": 253,
+      "sha256": "69b9e559dd007dc485ceda5910557e847c541ba938842025d2866839987293a2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient4-a-0.02.json",
+      "bytes": 360,
+      "sha256": "62b1e494bfd445c5a9976c6778547f7332e3c69f634dc064e789cfb72d297bdf"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient4-a0.01.json",
+      "bytes": 367,
+      "sha256": "dc66d294e61ec8e434b121bf412e56972c3abe484d9e315dcfd55d6d19cfda8e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient4-a0.02.json",
+      "bytes": 364,
+      "sha256": "1bccd3be930a08a14258503e1066c1dc4f7bac7cc16aff4c539e6099c984adee"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient4-a0.json",
+      "bytes": 291,
+      "sha256": "57fce464275e8e4cf9527cc06cbd61bef7e55b0c3741d1ded9254ad539d7173a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient4-readout-a-0.02.json",
+      "bytes": 397,
+      "sha256": "5aa1c74aadac0f2c53f00093a2ec514b1c97ab770854a0e6bad803d3829d6c51"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient4-readout-a0.01.json",
+      "bytes": 402,
+      "sha256": "561ca1bafcf3ad17848d45a957869422f9ea424beb1467db631680626d5a4e9f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient4-readout-a0.02.json",
+      "bytes": 399,
+      "sha256": "48272d97c933b28c32d4d5dc27d2b8e1a345e5c032954b45ff79ce7231eed0d6"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient4-readout-a0.json",
+      "bytes": 311,
+      "sha256": "8171787596289a20f4cd362959d8fd32360733fee4b13df5ebd24e9052a0ad01"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient6-a-0.02.json",
+      "bytes": 414,
+      "sha256": "578552cc8260ab4d60db2c8bc63e838a75ced6cf5f2cc08b59d9be4299adaf04"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient6-a0.01.json",
+      "bytes": 420,
+      "sha256": "c1340109a02fa6447c5f2eed459b4da97fb97e956e02486088f5ab907adbcc04"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient6-a0.02.json",
+      "bytes": 418,
+      "sha256": "127c73f1dd518acacce3e2a5ad0cabd3b51f872935670629779297eb80017539"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient6-a0.json",
+      "bytes": 309,
+      "sha256": "6e3ed5828ea61b72448e93e32d6fa3c0d9368dbb1d64db1cbf6df7c9e6c5f7ec"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient6-readout-a-0.02.json",
+      "bytes": 451,
+      "sha256": "a756e235f5eb724c63b3530abacaada0ca97e510cef1a338fcb3ed7766f6a76c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient6-readout-a0.01.json",
+      "bytes": 455,
+      "sha256": "342274d8f96785f0860b7bcff9eef10b3d88430eb5476e700abc9acda0bfadaa"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient6-readout-a0.02.json",
+      "bytes": 453,
+      "sha256": "5184f970d830df277b57942ba187c3041f42f89da445c8871af8619fba2c4aff"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-0-transient6-readout-a0.json",
+      "bytes": 329,
+      "sha256": "1c9811d19be6bb9ca0595901a59e585fbe896e533a924ed49e9d55729ec0644f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-affine-ignore-a-0.02.json",
+      "bytes": 251,
+      "sha256": "69c3c6253a6592b70cd4efc284d845685cc8c9a633032c13862af4a6dc877237"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-affine-ignore-a0.01.json",
+      "bytes": 251,
+      "sha256": "69c3c6253a6592b70cd4efc284d845685cc8c9a633032c13862af4a6dc877237"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-affine-ignore-a0.02.json",
+      "bytes": 251,
+      "sha256": "69c3c6253a6592b70cd4efc284d845685cc8c9a633032c13862af4a6dc877237"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-affine-ignore-a0.json",
+      "bytes": 251,
+      "sha256": "69c3c6253a6592b70cd4efc284d845685cc8c9a633032c13862af4a6dc877237"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-constant-a-0.02.json",
+      "bytes": 251,
+      "sha256": "3196afa6c0fff2fb2ff5a2a133a5586faec3d2fc9914da80f56f44b8df3461f9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-constant-a0.01.json",
+      "bytes": 251,
+      "sha256": "13f0791c181b7ee64fea4dc0f3bbfdf253bae315a42386fb5774049ee320def2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-constant-a0.02.json",
+      "bytes": 251,
+      "sha256": "499885572e0e5f00b0c86f7bfde4f3a6d101fd38b69b932b928c1dccdccfd6e6"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-constant-a0.json",
+      "bytes": 250,
+      "sha256": "b4b6be48864b7705017e775ce2e0ae65d10951be5f970cbd88f87dbf733b00c0"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-dependent-a-0.02.json",
+      "bytes": 250,
+      "sha256": "883e9854d3eda5a2399effc333516d2ec5e4ea05c56d06a99a82e874392688c6"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-dependent-a0.01.json",
+      "bytes": 250,
+      "sha256": "6c1a5f05d1519188703dffdaffcaf226e87ae7d1953f9ded2909a9ac31bd413c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-dependent-a0.02.json",
+      "bytes": 250,
+      "sha256": "c10c1c48dbdba44fa10fbfec05ee2030203febb44212596f9baec434394e1088"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-dependent-a0.json",
+      "bytes": 250,
+      "sha256": "519229c8df7f4a320d55f0bc31ea55d819e855df41b040145b8e7f6dc51e976d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-ignore-a-0.02.json",
+      "bytes": 250,
+      "sha256": "17b30632707f33601fc8fe2b0af07321c9c948ef2df8eb09b648c1d075c096f7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-ignore-a0.01.json",
+      "bytes": 250,
+      "sha256": "17b30632707f33601fc8fe2b0af07321c9c948ef2df8eb09b648c1d075c096f7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-ignore-a0.02.json",
+      "bytes": 250,
+      "sha256": "17b30632707f33601fc8fe2b0af07321c9c948ef2df8eb09b648c1d075c096f7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-ignore-a0.json",
+      "bytes": 250,
+      "sha256": "17b30632707f33601fc8fe2b0af07321c9c948ef2df8eb09b648c1d075c096f7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient4-a-0.02.json",
+      "bytes": 356,
+      "sha256": "e3ba5f7c0029fba04ae4a1e6838de55358c8ab67c439376ee7250f9111a069d3"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient4-a0.01.json",
+      "bytes": 361,
+      "sha256": "86d990756322887eedfd28e0dcf3526b82b69681988f4ab155105623d946d2a0"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient4-a0.02.json",
+      "bytes": 360,
+      "sha256": "0b1b087e04942909c46fc61f307dbe5ead2ed9ecec53b90199ca31adee633ab5"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient4-a0.json",
+      "bytes": 288,
+      "sha256": "e8829a1be293bb21e6739cb573bf91da25dcebb6b7be9a8eb2d94798b891e9ea"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient4-readout-a-0.02.json",
+      "bytes": 393,
+      "sha256": "3cd39bc49fc549e499a812f7a6f6512a642abb1bb022e638336167c97ecb8c44"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient4-readout-a0.01.json",
+      "bytes": 396,
+      "sha256": "65aeb1d52c851b5ea56360bc3c9b9b9d7a342c53a7c531a0d37d01c2252a5fe5"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient4-readout-a0.02.json",
+      "bytes": 395,
+      "sha256": "81295606c337e0394dc46965ab19bf34d394144dcf8829c12d2c2904d385fa61"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient4-readout-a0.json",
+      "bytes": 308,
+      "sha256": "404bd579039790c5f14a90665bc60978d8a159d96e96976d1ac517f7dfec3cfb"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient6-a-0.02.json",
+      "bytes": 411,
+      "sha256": "d1b6b11e1ba41564464c286b1a451ee36b02868beb98fa6e2bdc12d41003f870"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient6-a0.01.json",
+      "bytes": 416,
+      "sha256": "ec4ed23ba79ae6df88e796f103a41b2229cc4d97d742d94694badec9dd11ff47"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient6-a0.02.json",
+      "bytes": 416,
+      "sha256": "faebfbeae6c8950b00bac4af8a6fc7850c57f4923a7e3bc5032442634308b246"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient6-a0.json",
+      "bytes": 306,
+      "sha256": "5c19cdcb6fd9087047166a29e721daa6b2d89f5c2d6af4d9c4399d46813e2bd2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient6-readout-a-0.02.json",
+      "bytes": 448,
+      "sha256": "f5c14ddc11103582af3fb735e8686d873b10739c4b0aa2af4e79de53ee24d102"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient6-readout-a0.01.json",
+      "bytes": 451,
+      "sha256": "5a28898dda8b02dc406523ee66f21d6f47b9c82c2dbb2b59d196c245013fea6c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient6-readout-a0.02.json",
+      "bytes": 451,
+      "sha256": "3d51b0a105615342c02399eeb6cb49470ce45ea995969f7ae302fe00632226da"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-1-transient6-readout-a0.json",
+      "bytes": 326,
+      "sha256": "398480969101b46b27fcc98a1f3c5fa2634bdce274f88236dae6cbea0f227bdf"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-affine-ignore-a-0.02.json",
+      "bytes": 254,
+      "sha256": "8d93151e3a66526ef4d68f4c1326ab9cf467754dab0366cff522410bc2f03fb9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-affine-ignore-a0.01.json",
+      "bytes": 254,
+      "sha256": "8d93151e3a66526ef4d68f4c1326ab9cf467754dab0366cff522410bc2f03fb9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-affine-ignore-a0.02.json",
+      "bytes": 254,
+      "sha256": "8d93151e3a66526ef4d68f4c1326ab9cf467754dab0366cff522410bc2f03fb9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-affine-ignore-a0.json",
+      "bytes": 254,
+      "sha256": "8d93151e3a66526ef4d68f4c1326ab9cf467754dab0366cff522410bc2f03fb9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-constant-a-0.02.json",
+      "bytes": 254,
+      "sha256": "cc30b269b7b4ccc291116e5517c0dfdd208bc48255293ad83ee1a16aa402be4e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-constant-a0.01.json",
+      "bytes": 253,
+      "sha256": "61aa8e4bc9cbe2b6ece576d726e78e1de967438cec7f26c4e6e3469cb0b69024"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-constant-a0.02.json",
+      "bytes": 253,
+      "sha256": "bce36f301a92471ed4e1c9269ce9189db59f3bc6436cacf62b1a00bc4044d2cb"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-constant-a0.json",
+      "bytes": 254,
+      "sha256": "dea433d19e747577a96309072919545db0c7db0d8e9ca9a054047dc5250c8b4d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-dependent-a-0.02.json",
+      "bytes": 253,
+      "sha256": "f1d70ccb8137315314d46b69cd2a187b3a9de815573942eaba6cb716268e0823"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-dependent-a0.01.json",
+      "bytes": 253,
+      "sha256": "74d174778562bc22e4c9166a7588d68119dca920b901a5da87f8eebd590e4620"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-dependent-a0.02.json",
+      "bytes": 253,
+      "sha256": "c8f2b29f4068a4dc4d7255d64f7455d3fa01f9ed8105604ec52f6beb491a695b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-dependent-a0.json",
+      "bytes": 254,
+      "sha256": "eee8af4c1f930760322ae54fd23c6a77884eb4b752991ed821ce70f07f852099"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-ignore-a-0.02.json",
+      "bytes": 254,
+      "sha256": "04c2ff15478ea9c6a95ed0c44730189188724b375518018dfbcc637b6f7e2fcd"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-ignore-a0.01.json",
+      "bytes": 254,
+      "sha256": "04c2ff15478ea9c6a95ed0c44730189188724b375518018dfbcc637b6f7e2fcd"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-ignore-a0.02.json",
+      "bytes": 254,
+      "sha256": "04c2ff15478ea9c6a95ed0c44730189188724b375518018dfbcc637b6f7e2fcd"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-ignore-a0.json",
+      "bytes": 254,
+      "sha256": "04c2ff15478ea9c6a95ed0c44730189188724b375518018dfbcc637b6f7e2fcd"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient4-a-0.02.json",
+      "bytes": 359,
+      "sha256": "f1927b61569fe9b97781f8c1d2a57d7fe6d5718ca7456fa18e70ea6b3552ed83"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient4-a0.01.json",
+      "bytes": 366,
+      "sha256": "aa449c7e054c58d6e875c583d61a6c7bb4a1ed28fb3a13fbed1a1eb40098dd03"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient4-a0.02.json",
+      "bytes": 363,
+      "sha256": "11e61734a4168b7a49d584aa08573ee1d01f6519aa962bea088edb1e7abab90d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient4-a0.json",
+      "bytes": 292,
+      "sha256": "3896ca7b307d136e67fadb601443a5543ac3097c05c36a7abf2245108ed53e70"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient4-readout-a-0.02.json",
+      "bytes": 396,
+      "sha256": "23839b3015d4f7040470e246b4babda87d4c66c6ea1269260de5757576f61730"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient4-readout-a0.01.json",
+      "bytes": 401,
+      "sha256": "db2a46ce115979e82a86cbcbf36ccb276b41dab9b77e2a0c3489eb87ea3d0a32"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient4-readout-a0.02.json",
+      "bytes": 398,
+      "sha256": "58c381df56b19802c1f3a6d0b0572ea9277d8366d1a8e48141048179a778fee6"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient4-readout-a0.json",
+      "bytes": 312,
+      "sha256": "5d625a0199c151217ec525878dfe91651ee50c82693f25d48299f5852801aae8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient6-a-0.02.json",
+      "bytes": 411,
+      "sha256": "61542c3ddb0fb8b1a83c01f9acc81e597d1812f902cec5c3735e2ecf819bd99d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient6-a0.01.json",
+      "bytes": 421,
+      "sha256": "2c1977d1ce8b02f5b19ed1d63a7caa626a709253eb064955c3ea1e195e3b798e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient6-a0.02.json",
+      "bytes": 421,
+      "sha256": "6bc3760699becceed6806e56ce7d8a24222de589410f98fcdaf6332868fe9b38"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient6-a0.json",
+      "bytes": 310,
+      "sha256": "d617f4c5a8a7ad65baa2eb1c9c99bd855dc68f976d47dbce62387775c701865d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient6-readout-a-0.02.json",
+      "bytes": 448,
+      "sha256": "dccc63e038438a896b42a6108fb1dd725edb232dcfd76c780c650700d0edd43a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient6-readout-a0.01.json",
+      "bytes": 456,
+      "sha256": "d80d0c4957f7d0c8ef6f517afbbadc846b4a92a0d07b3917e7e131b9db6119f7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient6-readout-a0.02.json",
+      "bytes": 456,
+      "sha256": "0767d4bf0ed50efc79624847c89c6c666f4ecd101dfee856071a342ced19bfb7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-2-transient6-readout-a0.json",
+      "bytes": 330,
+      "sha256": "154c629e31bf346cc64be0f9099b745362444b1a8261bf73b2f0679f945c0268"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-affine-ignore-a-0.02.json",
+      "bytes": 251,
+      "sha256": "9ec47259080143f3186f5e87cec2d6a738373ccb0d9fbe253f721fe6a1bd2ac2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-affine-ignore-a0.01.json",
+      "bytes": 251,
+      "sha256": "9ec47259080143f3186f5e87cec2d6a738373ccb0d9fbe253f721fe6a1bd2ac2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-affine-ignore-a0.02.json",
+      "bytes": 251,
+      "sha256": "9ec47259080143f3186f5e87cec2d6a738373ccb0d9fbe253f721fe6a1bd2ac2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-affine-ignore-a0.json",
+      "bytes": 251,
+      "sha256": "9ec47259080143f3186f5e87cec2d6a738373ccb0d9fbe253f721fe6a1bd2ac2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-constant-a-0.02.json",
+      "bytes": 251,
+      "sha256": "41074020fbfe5831b65e7b5f1d4888dbbe71077ea6532e7104ae186ca13d5ef3"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-constant-a0.01.json",
+      "bytes": 252,
+      "sha256": "cce16d85c4a2526c7989d419c20ee2c47e8148fda7ad0e488ab5529e479f677c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-constant-a0.02.json",
+      "bytes": 250,
+      "sha256": "fac733630c99dc63dcf920b3f9ff92e40f83fe10186cefcf8fab9172ee65f91f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-constant-a0.json",
+      "bytes": 251,
+      "sha256": "a6a15c87cdbb76f9e6c54c69a673e6e673d9e239e0a0c583449a7cfb1c3cfb28"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-dependent-a-0.02.json",
+      "bytes": 250,
+      "sha256": "791187f55162c754afffba7bd2998ec50fb8afb1ff80b9c28d66ca5ee30a0065"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-dependent-a0.01.json",
+      "bytes": 250,
+      "sha256": "8d4c4e601e0824f93197955634231e6ae670fb989063d7720d2eba6b8d3c12bd"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-dependent-a0.02.json",
+      "bytes": 251,
+      "sha256": "7c92e77a1a4f511e51da28aa7c77240db1c3b12dc0d2f349598bd5552d5789d2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-dependent-a0.json",
+      "bytes": 251,
+      "sha256": "e8eaf5011bcfb2693c6be24c1889ee7c8a6575a904ab4a5c1e78b6615b98d180"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-ignore-a-0.02.json",
+      "bytes": 251,
+      "sha256": "1077fb6e68ca3b07bad021477c137bcec314555badcc7c08b0cbf7a01cf81016"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-ignore-a0.01.json",
+      "bytes": 251,
+      "sha256": "1077fb6e68ca3b07bad021477c137bcec314555badcc7c08b0cbf7a01cf81016"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-ignore-a0.02.json",
+      "bytes": 251,
+      "sha256": "1077fb6e68ca3b07bad021477c137bcec314555badcc7c08b0cbf7a01cf81016"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-ignore-a0.json",
+      "bytes": 251,
+      "sha256": "1077fb6e68ca3b07bad021477c137bcec314555badcc7c08b0cbf7a01cf81016"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient4-a-0.02.json",
+      "bytes": 362,
+      "sha256": "513733b274d8a3914071f5c1e52d0f9605c86b71a8fdc9494cccfa875372570b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient4-a0.01.json",
+      "bytes": 365,
+      "sha256": "513029d8b67be8dc04fb8d106dd31dd86fdf4bdbb00774e04a75ad4af1e99eb8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient4-a0.02.json",
+      "bytes": 363,
+      "sha256": "d650c58b6bff83de0fa7a0cd7e867f54597f58cabbba708dcae948cffcfff05b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient4-a0.json",
+      "bytes": 289,
+      "sha256": "d3cc3fd325d0ce352d95671967c72d1a51e5d1b828bccbc969763cbb8326eb6b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient4-readout-a-0.02.json",
+      "bytes": 399,
+      "sha256": "f10488244aaaca497fad90d97c687fc077b4143d30114d282b4dd9f6ba796cea"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient4-readout-a0.01.json",
+      "bytes": 400,
+      "sha256": "222df2b99a3245c202b1b59c441cf16bc1c4f9ae019912a8810951ec9da25331"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient4-readout-a0.02.json",
+      "bytes": 398,
+      "sha256": "bc4dd3c470cbe737f1b9bd08cc8a802ce4d6993d739ad027d9169362f883631b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient4-readout-a0.json",
+      "bytes": 309,
+      "sha256": "3cac57a6aa62eb1f2b3f262710a218bc6e404f125cbb1e05496210ae2239e61f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient6-a-0.02.json",
+      "bytes": 414,
+      "sha256": "1f17fcb32c3ecab2b95d53467f3fbd7cb5aea682c837014368b747c1b4be1bfc"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient6-a0.01.json",
+      "bytes": 419,
+      "sha256": "1df394c109922505e845b63e6177c3c464448d6c4b7b7d06c2322375bbf3faab"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient6-a0.02.json",
+      "bytes": 418,
+      "sha256": "a3af275b983b1a6c08c8440e95a16614def4ab51de3349868d35dadf63e5cb9b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient6-a0.json",
+      "bytes": 307,
+      "sha256": "b3975f9ac02effc94c110b9a2f27e1b04addc4df7b8b20d0f65d6e1564e0ddbb"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient6-readout-a-0.02.json",
+      "bytes": 451,
+      "sha256": "c4dc13c54fbaf8bc4316df06be6dbdc87b5eeb8fedd851f8715f7911c979472e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient6-readout-a0.01.json",
+      "bytes": 454,
+      "sha256": "b7cc4f4de48528e9f0538d0f06d6362e6e0e54a3f571b540e95dd161c31b9104"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient6-readout-a0.02.json",
+      "bytes": 453,
+      "sha256": "065bfb4158557033e6819dde75685cd887b87f118f9e3ffe590c0d75cd374860"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-3-transient6-readout-a0.json",
+      "bytes": 327,
+      "sha256": "85ac00e17c118c424ee7e264db858569a335924a4c6c3e4389f1737e12fe47cf"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-affine-ignore-a-0.02.json",
+      "bytes": 253,
+      "sha256": "f36a7019afd665c7ccf4c4c59b07d411cc8d04524ec1399cfc5ed6d51267258a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-affine-ignore-a0.01.json",
+      "bytes": 253,
+      "sha256": "f36a7019afd665c7ccf4c4c59b07d411cc8d04524ec1399cfc5ed6d51267258a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-affine-ignore-a0.02.json",
+      "bytes": 253,
+      "sha256": "f36a7019afd665c7ccf4c4c59b07d411cc8d04524ec1399cfc5ed6d51267258a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-affine-ignore-a0.json",
+      "bytes": 253,
+      "sha256": "f36a7019afd665c7ccf4c4c59b07d411cc8d04524ec1399cfc5ed6d51267258a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-constant-a-0.02.json",
+      "bytes": 253,
+      "sha256": "5a150cfdfc62e70a9526dc43153c3ef62d91af7432179a99bac32c57283447ff"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-constant-a0.01.json",
+      "bytes": 252,
+      "sha256": "b37ecab02d6752442834f923ed2741a792bf2164ab33cc9294f4b2fb6faee91f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-constant-a0.02.json",
+      "bytes": 251,
+      "sha256": "1a2226b1a17513537998be6e954170f2505bf33bfc540651193b1e833ac6641d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-constant-a0.json",
+      "bytes": 252,
+      "sha256": "157a3d69e52710f575988ff1fdc8e82ff203b56ea8ec2c2468397271fb71d707"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-dependent-a-0.02.json",
+      "bytes": 252,
+      "sha256": "8be6baf5b0b9c178fbf8fa4fb239d73610556c1382eb8adfd5be136ab9108732"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-dependent-a0.01.json",
+      "bytes": 253,
+      "sha256": "db1d2e8e00dca50a0ecdbd2a560f7e6959fa45c08752601ffba0c93d75755830"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-dependent-a0.02.json",
+      "bytes": 253,
+      "sha256": "bd577e324532324d58d3d82ff9cb9ed4adc2060831f24d46f922e3ec996a7d67"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-dependent-a0.json",
+      "bytes": 252,
+      "sha256": "b6c93c69dda64d96d810d5a2c88d18859c453f8d62deff12510778623c640e58"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-ignore-a-0.02.json",
+      "bytes": 252,
+      "sha256": "e29d0dd02881a0e6de2e81f881e51c008e82b4b9e7b916521072ac4b133b0023"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-ignore-a0.01.json",
+      "bytes": 252,
+      "sha256": "e29d0dd02881a0e6de2e81f881e51c008e82b4b9e7b916521072ac4b133b0023"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-ignore-a0.02.json",
+      "bytes": 252,
+      "sha256": "e29d0dd02881a0e6de2e81f881e51c008e82b4b9e7b916521072ac4b133b0023"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-ignore-a0.json",
+      "bytes": 252,
+      "sha256": "e29d0dd02881a0e6de2e81f881e51c008e82b4b9e7b916521072ac4b133b0023"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient4-a-0.02.json",
+      "bytes": 358,
+      "sha256": "17645662de98ef32ae293ecd8b841bfae3ff8052ac2a996986385f6043f9f0cd"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient4-a0.01.json",
+      "bytes": 364,
+      "sha256": "316766f8fa0ae2e0ea374eb6edc52a988f476b554a4fb77353cc08fc758aa9eb"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient4-a0.02.json",
+      "bytes": 363,
+      "sha256": "60f16b5daca7339250064dcd838fc65af242436a8bd6007151c6f28d637da5a1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient4-a0.json",
+      "bytes": 290,
+      "sha256": "5ca06c12f581ca3f79100165fa1ac852f706568cbc0d97be0073877a17f073f8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient4-readout-a-0.02.json",
+      "bytes": 395,
+      "sha256": "91bd4c1e19690ecf8b8fdd0e1dd2015040e6dfdb14b3d7a540f9f4ce6231332e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient4-readout-a0.01.json",
+      "bytes": 399,
+      "sha256": "7d46b9df0e03993a118dd93a10b0069b6a0c252841b2be29e047a5a75de65c37"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient4-readout-a0.02.json",
+      "bytes": 398,
+      "sha256": "fb1e3c8c027b40b63a5f715818c8d4f5c58e835ee82c92deeff0c52ce275e9d6"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient4-readout-a0.json",
+      "bytes": 310,
+      "sha256": "96b8672ef4ed263124b4043ef4d32029e1aab689ae5ab47e0eb38071e95fd12e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient6-a-0.02.json",
+      "bytes": 415,
+      "sha256": "1403d59a2aaebb575855271cf1bd658574f761b77647a3024335aa200a2267da"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient6-a0.01.json",
+      "bytes": 422,
+      "sha256": "71f13dec66d75156681f1210c82cb9e18c43be1497778e0d69ce9829e4c50d35"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient6-a0.02.json",
+      "bytes": 415,
+      "sha256": "2083a7a1cf6ab6027cb5fe72b9476b0ac791646c0f1661ca1f92622a541a2952"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient6-a0.json",
+      "bytes": 308,
+      "sha256": "6837f145749432993a1e6e25474e926bf4b87526af6bd455d59e6f3dc9138036"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient6-readout-a-0.02.json",
+      "bytes": 452,
+      "sha256": "34b9fd132923140c946217aa9672a81b1f17a7452bfe39d762581cdff81c3fd7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient6-readout-a0.01.json",
+      "bytes": 457,
+      "sha256": "db9e1b697fd746e922375388bfc8df2e4eb4143019f9f36fd6e198fa6b05a69e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient6-readout-a0.02.json",
+      "bytes": 450,
+      "sha256": "1e646bffff6fb32c478fb3dbf2692fe647bf06d4c3f34084b53bb2dd26f1ca89"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-4-transient6-readout-a0.json",
+      "bytes": 328,
+      "sha256": "1354a19df2c696c0c057455db7ebe3378c17128c8de11538716e9c327f43680e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-affine-ignore-a-0.02.json",
+      "bytes": 251,
+      "sha256": "a8d98547ce1de1b4c149510e0b26230a5a9ee724ba4afadc4e89547b9e2ff04f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-affine-ignore-a0.01.json",
+      "bytes": 251,
+      "sha256": "a8d98547ce1de1b4c149510e0b26230a5a9ee724ba4afadc4e89547b9e2ff04f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-affine-ignore-a0.02.json",
+      "bytes": 251,
+      "sha256": "a8d98547ce1de1b4c149510e0b26230a5a9ee724ba4afadc4e89547b9e2ff04f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-affine-ignore-a0.json",
+      "bytes": 251,
+      "sha256": "a8d98547ce1de1b4c149510e0b26230a5a9ee724ba4afadc4e89547b9e2ff04f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-constant-a-0.02.json",
+      "bytes": 250,
+      "sha256": "f134587953aa936fa6031c99bfe38d6d78100c24b8700f0b47e0d28ed571a41e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-constant-a0.01.json",
+      "bytes": 251,
+      "sha256": "1290bf1d9bb8138157022ee4fd0c8e82b954091df0e46f60d82f716d9db10a80"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-constant-a0.02.json",
+      "bytes": 251,
+      "sha256": "8a640382cfef9e53d70cc5b8d34e3d952c3095045362bdf737b0e038bd12abae"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-constant-a0.json",
+      "bytes": 250,
+      "sha256": "c8a5c530cdff60e9f04010103338415c1fd93b5fb20f2e0f5fdfc8d6fc98437f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-dependent-a-0.02.json",
+      "bytes": 250,
+      "sha256": "babc73ca13a6fe6a8a0f30703366a39c65c727d2e411dfb9fd55ce0a8e751fe9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-dependent-a0.01.json",
+      "bytes": 248,
+      "sha256": "80e46cbd3b59e5bbc63e4625528ec3f95ddfa190f673c2d0c2e9d9ac58307dc9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-dependent-a0.02.json",
+      "bytes": 251,
+      "sha256": "ffe4699f2d55a4534f48103f4881965f0cb0ffbbc90ef984c555322c4f4bd9f8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-dependent-a0.json",
+      "bytes": 250,
+      "sha256": "be4eece6944dc8ec3034edd10ce8590c6079ea237ecc469e901e7a6f45f0a35c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-ignore-a-0.02.json",
+      "bytes": 250,
+      "sha256": "f097bd89f19540c1e4ca2a0f4541100f084807bd74259fc5bcace0731bc96203"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-ignore-a0.01.json",
+      "bytes": 250,
+      "sha256": "f097bd89f19540c1e4ca2a0f4541100f084807bd74259fc5bcace0731bc96203"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-ignore-a0.02.json",
+      "bytes": 250,
+      "sha256": "f097bd89f19540c1e4ca2a0f4541100f084807bd74259fc5bcace0731bc96203"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-ignore-a0.json",
+      "bytes": 250,
+      "sha256": "f097bd89f19540c1e4ca2a0f4541100f084807bd74259fc5bcace0731bc96203"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient4-a-0.02.json",
+      "bytes": 357,
+      "sha256": "8a133fdb2e7fc13d03a36a2f6920527582d59543f7d1e97fee02147fa534523d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient4-a0.01.json",
+      "bytes": 362,
+      "sha256": "eb47cda84a1bd8444ef96b9a8b7a8964f8bb11b818d668cbd733cbe578f25c64"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient4-a0.02.json",
+      "bytes": 362,
+      "sha256": "f7147cc669acf10f691de2eda7d74f55ae82a1ddc6dbc726d8a614782fa1dd56"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient4-a0.json",
+      "bytes": 288,
+      "sha256": "fc71bf1e24f42a28f3ce17da1f361c91b99c9854e38107cdbd82ca4131b24f9b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient4-readout-a-0.02.json",
+      "bytes": 394,
+      "sha256": "5f0e6379c0baf3a15ca8a139854aaa60845ed1b4cb70a045aaa1b2dc6ff5d344"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient4-readout-a0.01.json",
+      "bytes": 397,
+      "sha256": "825529b63225eb2299aec5a8525423a6e0aa90bb3013cbf6e21188cad4412f8b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient4-readout-a0.02.json",
+      "bytes": 397,
+      "sha256": "80ecd687db19ddd84229579ea4023d7415fbf63d98471314e80d08f4fb4f801a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient4-readout-a0.json",
+      "bytes": 308,
+      "sha256": "60ca7fe7390af2b62b95ab1e5414fde00af79265209c77f4809327170bd95058"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient6-a-0.02.json",
+      "bytes": 412,
+      "sha256": "e9d6744c726f2af0fc02e036c440d7a53d81d1e3eec0d8a2bc08771fd776013b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient6-a0.01.json",
+      "bytes": 419,
+      "sha256": "1d1d10277dd03ac52204c6cf7f50a76c9fefd39448be8e9e45685f435af9bee2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient6-a0.02.json",
+      "bytes": 417,
+      "sha256": "5c99964547bdb5e38eb4e4bd33c73d1c9f054d35ee1a900bc395d2c4cba94fc6"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient6-a0.json",
+      "bytes": 306,
+      "sha256": "a947b6159e83994afc08dc984bc39558c39177aae603eeca1a63268d2a58413f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient6-readout-a-0.02.json",
+      "bytes": 449,
+      "sha256": "6154a8d273be81cbd577862713d4ee0ee4b3896216482dfb77c84a0a0d72d5e1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient6-readout-a0.01.json",
+      "bytes": 454,
+      "sha256": "2a88c7cbe1b24f7740075915c747bdeda14c5ed6b25162f6b1628436451674a7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient6-readout-a0.02.json",
+      "bytes": 452,
+      "sha256": "fcabe174efa72b4625c6d4b5c5dc4d771ced381156cf499d5410d7377316a8fd"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/checkpoint-5-transient6-readout-a0.json",
+      "bytes": 326,
+      "sha256": "a2177fac8f7e4e628ba2a5e90c559e6f9c496fd4ae536f1cd42de605099c8b42"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/initial-descriptors.npz",
+      "bytes": 351,
+      "sha256": "cf1d51a91a883910c34a615e07ed1dbb90f744d70b622a136b490536d5e55c98"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-0-affine-ignore.npz",
+      "bytes": 6573,
+      "sha256": "484944598e7c5eb0e55fe4eaa5a27fb25edb37a25cd22884c507f8f3284ff725"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-0-constant.npz",
+      "bytes": 23286,
+      "sha256": "48c05b6aca652907754e14fe9f1da78787762b20f35349e3770ca83c9cb76ad4"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-0-dependent.npz",
+      "bytes": 23271,
+      "sha256": "da2c5f3183322431e2b583b17ca9cbdaf1408ea060e13d69761a26e201258401"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-0-ignore.npz",
+      "bytes": 6576,
+      "sha256": "f35fcbe2935a23beda17bc8b642ac3f388fe2f8595e8a6d95912016fe91e1e1d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-0-transient4-readout.npz",
+      "bytes": 23181,
+      "sha256": "4e04492586017ed1a3a094f907674f5fab3f30fa81bce70031c40cb6de42134c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-0-transient4.npz",
+      "bytes": 23190,
+      "sha256": "5a0dfc7c905a1c03d2284a4aad4c83cbfe917428bd8dca68ef5735b53944b5cb"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-0-transient6-readout.npz",
+      "bytes": 23283,
+      "sha256": "30e1cf47771d4dbcb97688cfe871d251ba04ff707cfe849f1daf329b6561bcf9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-0-transient6.npz",
+      "bytes": 23260,
+      "sha256": "aea3b397431441fc587484c9c3dbb6c556165e541829eddaa44e9c7169121d56"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-1-affine-ignore.npz",
+      "bytes": 6583,
+      "sha256": "bf067ef5ab73f27c1a99b6c2adfab4faa4b37d1cecc2cc52106fa2818a214382"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-1-constant.npz",
+      "bytes": 23249,
+      "sha256": "f1ffc91b9cc711c49d53d7812e4a93e2257e1d7da549a65e6312e309de6f30b1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-1-dependent.npz",
+      "bytes": 23218,
+      "sha256": "38665fb697cd3ab73a9b363c7f633396e64eea460e4974e766c8c12d83b2a902"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-1-ignore.npz",
+      "bytes": 6581,
+      "sha256": "80b0b1b93c2897d74ce05de6e5b2f0df17de8e65187c53aec951c5bb63427ab5"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-1-transient4-readout.npz",
+      "bytes": 23168,
+      "sha256": "d49495104019b56b703b74bd47601eb5609eefcbe9242150594c73e4bce95f27"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-1-transient4.npz",
+      "bytes": 23149,
+      "sha256": "318c5df9a03c0b0f8d92837bd8626f6c1642ad8d10adefb4bd99b87e660d5584"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-1-transient6-readout.npz",
+      "bytes": 23233,
+      "sha256": "b4959d1a8543645f528e9d5c08e8c269d37c2d991403a3b8e5dd7550e054294a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-1-transient6.npz",
+      "bytes": 23270,
+      "sha256": "032f5a94e8367df02ae318b2dd4c08e8d1045570fd9374a7fc520562707fd4f8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-2-affine-ignore.npz",
+      "bytes": 6588,
+      "sha256": "6188d8fba32db844ab68cb9ebbe3ea3a23105fbb836ac60943b20bb619f3ed34"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-2-constant.npz",
+      "bytes": 23402,
+      "sha256": "43fd884c4daa8af44a54294a5be891c25f7ef15612fc5f27fcb24f5d2dc9384c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-2-dependent.npz",
+      "bytes": 23344,
+      "sha256": "2fab2710d8989218c063142802778afd1f12510aa48dced575eb54d102ecc805"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-2-ignore.npz",
+      "bytes": 6582,
+      "sha256": "47258e6788d986a5cb0436aee836573b5bc2bf7b39fa88bb9dfce749958cce23"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-2-transient4-readout.npz",
+      "bytes": 23284,
+      "sha256": "2253c12aeafaf472f7d2446cc7a20df5048adf29c6131ae99e89242460a943ce"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-2-transient4.npz",
+      "bytes": 23279,
+      "sha256": "d1b8d05f690cba91d7b7e4d02040514b978a6aa972182db0d96e77c67f250e3a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-2-transient6-readout.npz",
+      "bytes": 23335,
+      "sha256": "a67cab8c9ddc955013bfd88f4697cdd1430c77dc71360eedfd840f0954b4d1c5"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-2-transient6.npz",
+      "bytes": 23314,
+      "sha256": "27f076eb0c14f8e1c49e4982f0ec47a2d5438d9ad3aeb572ca117e342f5e76ba"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-3-affine-ignore.npz",
+      "bytes": 6548,
+      "sha256": "a4369c28fc0acb800ffbfb8b0d4218ae211918a05cc66eb7daa0f71c155e197f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-3-constant.npz",
+      "bytes": 23174,
+      "sha256": "18900cb64e5236556a362ea8b442c940b5cf84326135efc7f4ece3e1cc94be4e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-3-dependent.npz",
+      "bytes": 23174,
+      "sha256": "71f27681c737e540eedf968509518aa94b4baf6b67e0b4db421002d1fafd7042"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-3-ignore.npz",
+      "bytes": 6546,
+      "sha256": "648a12590961f36f7172a02beb9714508cecd5f3456070c9defb6903ebb80775"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-3-transient4-readout.npz",
+      "bytes": 23143,
+      "sha256": "bcb78de68af19618844b3cf4b41baf28bea48ea80ec3b223c46f51cc699fbabe"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-3-transient4.npz",
+      "bytes": 23164,
+      "sha256": "37a0061b9b9e984ba336611806949ba20402d16a8436d513a2e19359319b1ccb"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-3-transient6-readout.npz",
+      "bytes": 23179,
+      "sha256": "e42ee6c25c66e2e7e525eea3efc9ca1b7d1e7d9b3fdd45bd67de20a9f97ff81e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-3-transient6.npz",
+      "bytes": 23172,
+      "sha256": "c5edfc028436916338b1f27f0f52faa8fb2f563fd2f102ff9ecbbf4188118429"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-4-affine-ignore.npz",
+      "bytes": 6577,
+      "sha256": "6e6726376e405f5a2ade3083522f1e65e01569b7b1c227d9eb592288c88602fe"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-4-constant.npz",
+      "bytes": 23350,
+      "sha256": "6a4b650d8170dd9fd30c0db5d30a1ba776233e3bba73dee96031f39157f18333"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-4-dependent.npz",
+      "bytes": 22535,
+      "sha256": "dac1cf9811f1099deec8f580fa592823697e62d647fa725aa0df4feda4b08134"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-4-ignore.npz",
+      "bytes": 6588,
+      "sha256": "ef4842e76639a82c8f9c8aed509a70233f4abac851996356bd513a859eaaebf4"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-4-transient4-readout.npz",
+      "bytes": 23222,
+      "sha256": "155263dec22a30a63ce3bba340125956fa8afe15df0acc16afb8fd98c9a4ae78"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-4-transient4.npz",
+      "bytes": 23229,
+      "sha256": "24ff70c980b8b845a1e5c1d923433fd1fefdb53de4a539243177d2086aadda73"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-4-transient6-readout.npz",
+      "bytes": 23296,
+      "sha256": "e252eed3d63755ff2102dc555bb0552a65307ce70d242b6c5366200a8dfe084e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-4-transient6.npz",
+      "bytes": 23317,
+      "sha256": "43cf0158356582e2991814e3f222965ee458794da5e8cf2a42d7d981603cbeb9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-5-affine-ignore.npz",
+      "bytes": 6556,
+      "sha256": "3c354225e020619b13abfb9674188545826699b7f99fe6649a116c79ef0bfab0"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-5-constant.npz",
+      "bytes": 23216,
+      "sha256": "df25521e81f0dd9370b8c4f54bc0745c5678b43b8f1b92dda8646bedc4be431c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-5-dependent.npz",
+      "bytes": 23215,
+      "sha256": "e7721cec2981d5957fd9cbb878d3895a476209f350cc7014159784fb55163779"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-5-ignore.npz",
+      "bytes": 6571,
+      "sha256": "4a0b0d4d8d2ca1e9ef8e948a00c7b72a50cadd78c5c2c6d1a5c84b4dc00e04d9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-5-transient4-readout.npz",
+      "bytes": 23135,
+      "sha256": "edff0a0d9bd3e1e6f7d28e7150c63bd70547a6dc2255562549ec9ce24bd7a3ed"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-5-transient4.npz",
+      "bytes": 23144,
+      "sha256": "39f8f503551baee95728834ec87783a873930c64ce58a93210d39fa0f488338e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-5-transient6-readout.npz",
+      "bytes": 23207,
+      "sha256": "1924b40919aa8c860a61d998225a29d84860b18ad7ee5a486853d6d333bc0f87"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/prediction-5-transient6.npz",
+      "bytes": 23211,
+      "sha256": "9bb99c73d2a68fe8b3966a58af91bcf572b3e04585db0a8e8c2ae977c7cb0793"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/protocol.json",
+      "bytes": 4063,
+      "sha256": "fbae154406f0f3c38c0a4c501de55b5f9c0d813d8429feb41f92a89c4b19e5ee"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/rows.json",
+      "bytes": 306,
+      "sha256": "a916340f598c9a2a47e5b9bb84da66fca4237fff71ba55583be3c023af780587"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-initial.npz",
+      "bytes": 11496,
+      "sha256": "1fa2068a64af585619aca2232326579522d0a11751a1172012a69eb87945a183"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a-0.02-event.json",
+      "bytes": 13652,
+      "sha256": "d5144d981120fb1d86e641e39dfe5c5f8fa45e8a0e131c86eda9d80b8d205f6a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a-0.02-gap10.npz",
+      "bytes": 42450,
+      "sha256": "c298e6f041d2843a8d87cae086adade47d2996dfb32dce95aa4e5e573dce7c81"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a-0.02-gap30.npz",
+      "bytes": 42263,
+      "sha256": "5de899dd1c72ce70ae4824f65ce610939db72dedfe5fe3814b9474b46e717565"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a-0.02-geometry.npz",
+      "bytes": 4685,
+      "sha256": "80a5b7be6717e8c09025af529aad006c3f997c307847795bf7371dbd372c419d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a0-event.json",
+      "bytes": 13570,
+      "sha256": "bcbeaae20d78e06ea74846fc0d447c300236bdb48bf6a5220744a436e65d6b45"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a0-geometry.npz",
+      "bytes": 4622,
+      "sha256": "96f159d299476f4c73d099c232b440ef9af87be83144b54d422ffec847ef77d6"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a0.01-event.json",
+      "bytes": 13634,
+      "sha256": "ab1bbd9f912b0d110afbfe0d1cebaf57953c5ee32f2a569493f1f785afd9b039"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a0.01-gap10.npz",
+      "bytes": 42167,
+      "sha256": "e8eae3354145d66a489d9ca5eaae83da56fa14857e89aab2f1e3e6be1ab16481"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a0.01-gap30.npz",
+      "bytes": 41946,
+      "sha256": "c2827b54fa4e605d85967a11d7f6528a76d9b63f712f3685b56e9a8f342267f7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a0.01-geometry.npz",
+      "bytes": 4660,
+      "sha256": "775d031cbf29bc3b2e788f53b3f2abb3604eb738f30583930a92c0e10192d170"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a0.02-event.json",
+      "bytes": 13633,
+      "sha256": "5c78a16f170cc43144a50a1cce0ade331f60ca9784d79fd1f944f3cb79aded3d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a0.02-gap10.npz",
+      "bytes": 42352,
+      "sha256": "48cef56d816870e969bef6a5896f4a795dbd48a50adb435182fa66de99d3880c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a0.02-gap30.npz",
+      "bytes": 42148,
+      "sha256": "1c1f4ea2a4f178d3b29572bbe50775a9deb728898c976fd20bf61bedfecc95d9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-none-a0.02-geometry.npz",
+      "bytes": 4671,
+      "sha256": "bbb666ec6c9ec410580726763f694fd967ffbb8cc5706217b693f8108407e609"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a-0.02-event.json",
+      "bytes": 13576,
+      "sha256": "348baacd0e5ccc4afd55d5a36720df43ba3aa48cb016646820679949b8acf1e7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a-0.02-gap10.npz",
+      "bytes": 41726,
+      "sha256": "ac2a9371a94d6bc7c534fbbe943a9d91f49f5b56c9d2669f7bafc62b669a783c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a-0.02-gap30.npz",
+      "bytes": 41562,
+      "sha256": "b08fb1718ef2785d244d3960d731fb5859907526943ede44f2acca0cf83bb7b1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a-0.02-geometry.npz",
+      "bytes": 4642,
+      "sha256": "563057324cca23bc19903ae6bb6a6ed078b94c9e2a189575e32300c88d1e70a5"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a0-event.json",
+      "bytes": 13512,
+      "sha256": "9181e15a23e631546b4d4522483f0a1ed33962efbf1972f057e551ccfb75b3cf"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a0-geometry.npz",
+      "bytes": 4575,
+      "sha256": "49e0ccc7ea8f7443c09c605be7bc41bcea90b97458dbec306cbfd34875442d02"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a0.01-event.json",
+      "bytes": 13582,
+      "sha256": "989db0677f63edbbb37155f6e41c1bd302903cff1ff0723f98891771c2ade4fd"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a0.01-gap10.npz",
+      "bytes": 41437,
+      "sha256": "7b280691626c006c6967a427b349536c2c0236050b974939e5452c3ddd401fba"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a0.01-gap30.npz",
+      "bytes": 41168,
+      "sha256": "1b0e96af28bb1191331b06c62509aa9b9da1bec3befc3c8eb70fdf1e25fd80eb"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a0.01-geometry.npz",
+      "bytes": 4601,
+      "sha256": "e8f4932ea75ebf9dac78d7954c79a53a80b9a3b21dd5267b7809621cab559e11"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a0.02-event.json",
+      "bytes": 13553,
+      "sha256": "fd3e908051d66317099f5d9b3939b8f1a4448954b5d112ef2d651380b9cee060"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a0.02-gap10.npz",
+      "bytes": 41584,
+      "sha256": "563c3a651b3c900a5923ebddfd3119c91b52696ca7205d5a86b541d8eb4a8fc2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a0.02-gap30.npz",
+      "bytes": 41448,
+      "sha256": "18c3339ca8d9bf19a1c3547d89b8b1f0cfb49de448911a9a67cc930c454ec945"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16101-odd04-a0.02-geometry.npz",
+      "bytes": 4607,
+      "sha256": "e45043a28595c69954437174517208574ed2c0c66f42460df6a350495db4186a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-initial.npz",
+      "bytes": 11486,
+      "sha256": "fea957a97e514f2f66e5e9047840d0fcf7ef0f1e7117019e23d26630c22634a0"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a-0.02-event.json",
+      "bytes": 13630,
+      "sha256": "d39e6c67d75b86858f27d4a3699082eefaf01812c07b24cc257935245e6640d4"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a-0.02-gap10.npz",
+      "bytes": 42485,
+      "sha256": "9c22fa9bbf72cf452cd85a71add307a6c8266d78a4eae4102813368418362c6d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a-0.02-gap30.npz",
+      "bytes": 42155,
+      "sha256": "a4e5548c11909dfeeebffe066afd3d57f55ccaf067e4a610a96cd621d5140814"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a-0.02-geometry.npz",
+      "bytes": 4694,
+      "sha256": "0520bc7b5e5221dbca08d1c28c38faa3520ac4f6a0bb7b51933837a75cb968b0"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a0-event.json",
+      "bytes": 13583,
+      "sha256": "ffec979b00753ccc0142fb035eb08100a04d0f09f91e6684a7890c4c791f5aa5"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a0-geometry.npz",
+      "bytes": 4652,
+      "sha256": "ff30c4d1ef53a2a22f27a47b8e2e15a43c09353c79ca4ab41db6013d3099ad7e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a0.01-event.json",
+      "bytes": 13653,
+      "sha256": "94ff6231b97e3c67bc71f063009195f82c4e9defbc79e11ba4afcb3eb9d8b83a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a0.01-gap10.npz",
+      "bytes": 42218,
+      "sha256": "d234503341632d56e7b0c653ce426891929ae71447fd1eeb294802ee21732f13"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a0.01-gap30.npz",
+      "bytes": 41837,
+      "sha256": "f1b51e9c3c5776d97a23779bd4d71a4879e98aa3fa7ff4e08e8d7817830b14d1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a0.01-geometry.npz",
+      "bytes": 4674,
+      "sha256": "1214ef98a58a50eb49f80cd63f81833564e9e737a4ad0ae92432f8d52e500bde"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a0.02-event.json",
+      "bytes": 13653,
+      "sha256": "6b18511408e813f65ae6ad8e42f04dd54e0c634530c9ad9d54fbe004d0c989b3"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a0.02-gap10.npz",
+      "bytes": 42363,
+      "sha256": "3d56beaf5b72386a239b38a29ad68489c122b3e8068cf81b930491e0533284d7"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a0.02-gap30.npz",
+      "bytes": 42050,
+      "sha256": "7eda8620001cb1a80d1d73295988af76e79002f13ceb6d98a5009ef1e03d0937"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-none-a0.02-geometry.npz",
+      "bytes": 4681,
+      "sha256": "8b41d15a6f1c45824bc3c7c64f6ebef9fd1566d3b6a37c666719a653f8a2373d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a-0.02-event.json",
+      "bytes": 13608,
+      "sha256": "5a73d9372ca943c4c8147caede6b3891dbd38b35df7010a16367debc46013c45"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a-0.02-gap10.npz",
+      "bytes": 41264,
+      "sha256": "6c507c718e7198af3ae87d410351937c8acdb25413afa9189d4168b722ffe0d5"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a-0.02-gap30.npz",
+      "bytes": 40878,
+      "sha256": "a2577daf857dda918e751ac86522242b082f2e9770618401d968e213522c7bfd"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a-0.02-geometry.npz",
+      "bytes": 4614,
+      "sha256": "51a4afc4a950d51631610aa665c305d42a3eaf38826eb2b401b769d64700405e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a0-event.json",
+      "bytes": 13533,
+      "sha256": "7db4c5a4bcb556d0f02731a9a01b0f3d3911afde7383fb638e58a9257539e52b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a0-geometry.npz",
+      "bytes": 4538,
+      "sha256": "bd898e20b5d0302b5efb9fd9c6de60823c904386ce8d1c8eacd33668b6a63aff"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a0.01-event.json",
+      "bytes": 13591,
+      "sha256": "cf61296591af8be94d22f34cba30cf264b3def8bed6c4665ee5532d220bab6e3"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a0.01-gap10.npz",
+      "bytes": 41074,
+      "sha256": "ed3a5b79e41d6c4abd224f9e426634fde9cebc11db5d64902572c48af183aa48"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a0.01-gap30.npz",
+      "bytes": 40612,
+      "sha256": "1cc9355822e27ff966c77c8173565b82562a5a8c0bfd6e364075309636bfa281"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a0.01-geometry.npz",
+      "bytes": 4573,
+      "sha256": "7dda914a31a3b7401481916f84cd24720a7bb19ce332c66ef0fc44f26e0a2207"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a0.02-event.json",
+      "bytes": 13605,
+      "sha256": "1ad36309758a72b657c484e51d9105acd811d7a640f7b242779a07fe04d9ed41"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a0.02-gap10.npz",
+      "bytes": 41200,
+      "sha256": "6edd12225dc7d20b599fe082c2c73f0eede1941eb40f32c23a39e7855c56f643"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a0.02-gap30.npz",
+      "bytes": 40852,
+      "sha256": "4e641c8b9e8c3864b36ae878cc539aa6b0bedcc92418e4bfa721483d2afc5bd4"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16102-odd04-a0.02-geometry.npz",
+      "bytes": 4604,
+      "sha256": "434ca660a28f1ecaf219505e8fa1fc9878249fd5dedee62fc77fc968456fdf3c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-initial.npz",
+      "bytes": 11494,
+      "sha256": "84e8900b1ffb58a226ea3ba7b8107580b277f219946b5b57cd1571ee70799e8a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a-0.02-event.json",
+      "bytes": 13622,
+      "sha256": "07e125e7712015957921130a1ff1496bff8d65c85fbd010ecd71e9dd98f2d53e"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a-0.02-gap10.npz",
+      "bytes": 42540,
+      "sha256": "73d0347efd0518c841bb9dc4534796251ed51719c98a8761835d4ba2ebad5cc9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a-0.02-gap30.npz",
+      "bytes": 42250,
+      "sha256": "7c63ddfc988e85ab1f7524ec257c1ae4428f0992a3d4ca8d3fe7bbd86ea3cf1d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a-0.02-geometry.npz",
+      "bytes": 4691,
+      "sha256": "d14793ebb294cd0f7019fe2513049ee4b5f015eee300d9c0a3af496e2d46f8aa"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a0-event.json",
+      "bytes": 13565,
+      "sha256": "b2c4ec86ace828e698d662045abc4dcbe18eb05babae8094407793d83a6a98c3"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a0-geometry.npz",
+      "bytes": 4648,
+      "sha256": "abda75c18107b6655e7a182e03cad6e3f68e27cafd1b01ac94e93a3e13d94da2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a0.01-event.json",
+      "bytes": 13618,
+      "sha256": "9026abbff4df42671e094593b3509339e42b10b0420b283211641ddb426316b8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a0.01-gap10.npz",
+      "bytes": 42229,
+      "sha256": "e3ebfb25670c464d00728c571de210ef35c85c9bf21b0b222aca20f2a5276711"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a0.01-gap30.npz",
+      "bytes": 41865,
+      "sha256": "6f66991c56a2e61272a6309584f0e22cf5f09b6cb07999a641be14558120ee8a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a0.01-geometry.npz",
+      "bytes": 4665,
+      "sha256": "5ddc32b6f9d1482565fd1a48e37e17fca12cd8cef8803274701ed68112d9586f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a0.02-event.json",
+      "bytes": 13628,
+      "sha256": "115b60d9e8af6b5f517e30403d8a6b6515b463bf585aa6390e62d6595f1812c4"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a0.02-gap10.npz",
+      "bytes": 42326,
+      "sha256": "b85787a113fa5c19333b32b7cd2db2b09dee89a4a181695cb8af366cfeb77aa9"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a0.02-gap30.npz",
+      "bytes": 42101,
+      "sha256": "c9509eefcff0a756be75d1ca5f4436ea0cfdf65dfc73059bae89fbca9c343bd0"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-none-a0.02-geometry.npz",
+      "bytes": 4677,
+      "sha256": "e3720517023a5ef71feec260c0a8ee798c4ba380cd612af5146be601993df6b1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a-0.02-event.json",
+      "bytes": 13546,
+      "sha256": "93595e4c8912568eb6738c8f2184c9ae08dccd6e5d1260f60eff050ecc196469"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a-0.02-gap10.npz",
+      "bytes": 41481,
+      "sha256": "71c05fe00bfb458e05aa204463076815ac4e87643af523ebd624743541d12187"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a-0.02-gap30.npz",
+      "bytes": 41209,
+      "sha256": "9d11c1a53c52f818e52688e3eec0a7d0656d3b1ab19554f5d4dc93b4e5db0565"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a-0.02-geometry.npz",
+      "bytes": 4642,
+      "sha256": "a6d9308b8d1dc859ba8b0f6ca8e0ce692c81187fabf70c3f6b7dc254da4a1646"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a0-event.json",
+      "bytes": 13507,
+      "sha256": "cd344484d9cdd0384f9e250a06c77c2e15bf6781b0007a765a27861a9e8914de"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a0-geometry.npz",
+      "bytes": 4568,
+      "sha256": "6c04b6b430752fe4a01805cdd07ad33f7f0bec3997b2a6c93110d4c70297d950"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a0.01-event.json",
+      "bytes": 13562,
+      "sha256": "35223af605acfdacebfd78b35ea2245db575bfc4e6a9ecd078d6d615abec5e6c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a0.01-gap10.npz",
+      "bytes": 41257,
+      "sha256": "2aeb0fb5390869bdfe8eb6bfd4fee31e0718a98b935810a5dbe958403be2b5cc"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a0.01-gap30.npz",
+      "bytes": 40862,
+      "sha256": "4c6b3205062ed39758a3f5c09934b531d351e5339dbe50926e46848170913fda"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a0.01-geometry.npz",
+      "bytes": 4594,
+      "sha256": "74d1d276d814cf8d27d5ea51c505f5be0b5f406de15d7ba32fbbf8d32146763f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a0.02-event.json",
+      "bytes": 13540,
+      "sha256": "aa86717d037addb03c3e31caaae834775c41214afdb7e4446ec51f350b8eaf90"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a0.02-gap10.npz",
+      "bytes": 41384,
+      "sha256": "066ec8ee5ff91d42a7169cdaaa0b29896ac4ad229ffb301fef158e08cd950294"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a0.02-gap30.npz",
+      "bytes": 41072,
+      "sha256": "697c62563783135c41f204114e3233513847bab39338e9510ad6623af680115b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/s16103-odd04-a0.02-geometry.npz",
+      "bytes": 4593,
+      "sha256": "36444842b363ce7b7b68a575ffbb58afa8e58000fb9bd9987f71c7eee5a319ad"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-01/seal.json",
+      "bytes": 26711,
+      "sha256": "d3e9226da198390ee9f3b14f941d0092107c7a8de2ce3801664b374a886e06bf"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/budget.json",
+      "bytes": 2194,
+      "sha256": "43b77f4cd9ae0b8b3aa240dcad3850f8352298a4d0162f9fdd0c32f3ada6294d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/doubleN/s16101-none-a-0.02-event.json",
+      "bytes": 5410,
+      "sha256": "56d6a4cba1cd227d31a22ffba3e6e6bf5e90ae21c667755f6bb01aa59324bf5b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/doubleN/s16101-none-a-0.02-gap10.npz",
+      "bytes": 42450,
+      "sha256": "11f18907c649d77bc7db94dfb35e7f765c1605a8c255b41cda42030645e7cea8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/doubleN/s16101-none-a-0.02-geometry.npz",
+      "bytes": 2111,
+      "sha256": "fe29fb64a12e22135ce4b688d40cdf04b3512d0e39f4e5b0ba7be29cc832c41c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/doubleN/s16101-none-a0-event.json",
+      "bytes": 5324,
+      "sha256": "77642f03e833c712aec0333f93692458a9b86d6874a229979fd4f91d1edb0811"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/doubleN/s16101-none-a0-geometry.npz",
+      "bytes": 2086,
+      "sha256": "76885281c3b77c38f4caf4f29e295223cfd26f7c3659e0a23e4320f9eb8089ec"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/doubleN/s16101-none-a0.01-event.json",
+      "bytes": 5399,
+      "sha256": "b514afc34f716cf5229c51345551486befade7dce7acc436078b223cc1c23d14"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/doubleN/s16101-none-a0.01-gap10.npz",
+      "bytes": 42178,
+      "sha256": "2d0d8342dce721c483b8ce32ba6b10451c8f69e30b1a8820c996fb8a23b6ed21"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/doubleN/s16101-none-a0.01-geometry.npz",
+      "bytes": 2105,
+      "sha256": "e1aea1e87f3e925ad22603d57d6d192f883f68ee586b3ddd46c3fa478bb0fa41"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/halfdt/s16101-none-a-0.02-event.json",
+      "bytes": 5424,
+      "sha256": "1f10bfb0a8033f506080f7835aca7a93f627565398553dfe831701bdbee3076b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/halfdt/s16101-none-a-0.02-gap10.npz",
+      "bytes": 42447,
+      "sha256": "d5580b2eb6f651132007831a79bef9948de5bdae1fd1d1466c27f620c92eb2a4"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/halfdt/s16101-none-a-0.02-geometry.npz",
+      "bytes": 2115,
+      "sha256": "9ba6aeb59beecfc4937fbb61c3a06ed9932eec48827949d59fbdd649e8989001"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/halfdt/s16101-none-a0-event.json",
+      "bytes": 5360,
+      "sha256": "7d3a114b6375b6ebf3f59746d6169a52fa8e591a153a6c56bf80ac35d3627aa6"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/halfdt/s16101-none-a0-geometry.npz",
+      "bytes": 2084,
+      "sha256": "8ebbb6dafb85f39c9281d70f300d1926aa4df987e13dd98dee43d343bb904c56"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/halfdt/s16101-none-a0.01-event.json",
+      "bytes": 5421,
+      "sha256": "9302378b286c06e51b5629959f39bc3ed24fe299a112bc6353a2eeed9e87c7f3"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/halfdt/s16101-none-a0.01-gap10.npz",
+      "bytes": 42167,
+      "sha256": "94008bfe41bf655f871dd383c405d4dbf91c2baa7a8ff55bf497167f1944ead8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/halfdt/s16101-none-a0.01-geometry.npz",
+      "bytes": 2106,
+      "sha256": "0ae9e116f03f389941fb9c9f8511a23ad549ca7a416ae3269c7f8ba80e0ff87d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/protocol.json",
+      "bytes": 275,
+      "sha256": "ceae2012164b7defde589bfe6e502de885583bdb90c9f821561d9a835ae85ec3"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/fresh-refine-01/refinement.json",
+      "bytes": 1727,
+      "sha256": "ee2c72afe3dfeb1b23db66c14616d164a041be3e8650542ead99a2ccff2ed08f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/frozen-01/budget.json",
+      "bytes": 189,
+      "sha256": "4ecfd7382f8bc2b32185dc2e8b915834009fe4c417ea3e82617af68328ec7564"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/frozen-01/freeze.json",
+      "bytes": 4908,
+      "sha256": "436ebdb7120551b10d5bc4930445dcb83a3a6b48587cea7beb245be65aeafd48"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/frozen-01/models.json",
+      "bytes": 303937,
+      "sha256": "9524c674fb9247b97284fc2bd8fa8082c5dc953d989f1db3e44f68a101e9d56a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/frozen-01/protocol.json",
+      "bytes": 4067,
+      "sha256": "b7415fc67b43e18700e21ed1ae8dc5b33e5ad20acc7675b8086e4ca3d744f027"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/geometry-resolution.json",
+      "bytes": 2703,
+      "sha256": "d14e347fd96bf3f6a9b290d393dc33ea1c427d3fad5b4abc4565d4ba58491062"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/budget.json",
+      "bytes": 1405,
+      "sha256": "b5dfaa47b2deee7258a4007d844ed69130ddecb9a10881d008f7ae95fcad8e22"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/inputs.json",
+      "bytes": 597,
+      "sha256": "aa6e493e08b226e2ff2f288f79b0c25533dedf24aa083c4bf876705fc19289a1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/pilot.json",
+      "bytes": 2281,
+      "sha256": "caf7905b29950e90e4a6acd106a762479cdf1ca4bf91ae8499c2627c560c8922"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/protocol.json",
+      "bytes": 3785,
+      "sha256": "d7fadf3b56956acc6ee1173a4116a0dcebf198a4d67eab090e588369f52b68cf"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/s8101-odd04-a-0.02-event.json",
+      "bytes": 13588,
+      "sha256": "e6aeedad953f84d498a40b17fb25dbbff417362b54e9cf597067c0a5840cc35b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/s8101-odd04-a-0.02-gap10.npz",
+      "bytes": 41578,
+      "sha256": "1b71e075b1bb34fcc654e5167d8f2f5929e8fe6b08445c791927e8f1ec5ab0a2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/s8101-odd04-a-0.02-gap30.npz",
+      "bytes": 41193,
+      "sha256": "140f47bba06876e8e74dcb4c6a58e61ed8624bfa30420ceceaba8db0bfc8de59"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/s8101-odd04-a-0.02-geometry.npz",
+      "bytes": 4648,
+      "sha256": "77bda13798cb2b0e5fce4865d4afe24a6f0557524507510a490b8fc52ec80506"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/s8101-odd04-a0-event.json",
+      "bytes": 13539,
+      "sha256": "af4e61ec5fdd248f768104c274f0354a374b8d646916025aa1ef685e73b15aa8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/s8101-odd04-a0-geometry.npz",
+      "bytes": 4544,
+      "sha256": "437dc4edf2c287de1a1b54a1ab389a746dccde7d5ebe84f0403087c031a3f6d6"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/s8101-odd04-a0.02-event.json",
+      "bytes": 13599,
+      "sha256": "4a0e02644325ac8617fba9f615c57f9fe70dd07ba04e8c95b72e3673036d0344"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/s8101-odd04-a0.02-gap10.npz",
+      "bytes": 41465,
+      "sha256": "fdf8fb7d202e43e67549bbf83d8ccf3d295037bd17c422241b8c43df087ad3be"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/s8101-odd04-a0.02-gap30.npz",
+      "bytes": 41076,
+      "sha256": "f9bf13c1474eda1b3d67bead6b47a0b89be29a0e2b36efa90e253907c7e21cf4"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/pilot-01/s8101-odd04-a0.02-geometry.npz",
+      "bytes": 4607,
+      "sha256": "33165433aa9678948f6a84d8bb5f0bca24242bc4bfbdc58edb8f4823b2bef954"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/plain-fit-01/budget.json",
+      "bytes": 319,
+      "sha256": "07f861258dc893de7619c404c89e4024efb46b0670f64dc1587dcf046c60addb"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/plain-fit-01/models.json",
+      "bytes": 86308,
+      "sha256": "021973e070af0b18a196c424f37c1c6ee7ac119aaa6cf7e9f409b54e8aed2eab"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/plain-fit-01/physical.json",
+      "bytes": 36357,
+      "sha256": "ec8a30003d57b6579d022d0d3ecf0a999b9f27259a7c4cc182fc7ffa0385d846"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/plain-fit-01/protocol.json",
+      "bytes": 3990,
+      "sha256": "0a121e33a455483ff01adc03312fa710363b84f96f2f889370b84e903f1a39e2"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/plain-fit-01/scores.json",
+      "bytes": 842343,
+      "sha256": "e51714a17a2b0f57aa1b876e5c4e02eb76defc212f6831e249f50611268f758c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/budget.json",
+      "bytes": 2926,
+      "sha256": "918df1d607716ea9202c56cdf64554eba75f24eeea33ba564478002420803ca6"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/doubleN/s8101-odd04-a-0.02-event.json",
+      "bytes": 13568,
+      "sha256": "a2ed170c55f3d7111a5bde8040aeec004027ac7b3c9c47e46ea2ec66f4e1be34"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/doubleN/s8101-odd04-a-0.02-gap10.npz",
+      "bytes": 41553,
+      "sha256": "95fa7c9866a088f894c7416124ddc59e8e2cab6a5d63edcdd924f3831ab5a3ee"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/doubleN/s8101-odd04-a-0.02-gap30.npz",
+      "bytes": 41154,
+      "sha256": "48453a194d80902eea6fa5727b46f4da51bcf492ffb79914c8bf6cc7cffefb1a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/doubleN/s8101-odd04-a-0.02-geometry.npz",
+      "bytes": 4627,
+      "sha256": "d31deed7151a1c4f418a8d7736deec5cfebf074d6d8f68e496f0a1343270655d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/doubleN/s8101-odd04-a0-event.json",
+      "bytes": 13488,
+      "sha256": "4ff912ccd5cbd9cb6cfc7b487e1aa8a6154a3d5c2d7f69773164eadbacc77c8d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/doubleN/s8101-odd04-a0-geometry.npz",
+      "bytes": 4562,
+      "sha256": "8816357b3da91c5e081de90de12cee311cec49be3ecc40ac823c1b618aa43b21"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/doubleN/s8101-odd04-a0.02-event.json",
+      "bytes": 13555,
+      "sha256": "d82340ba63804b68ab2c846d44ea93c92114e4b3b917591e52f1d39b0bbbdada"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/doubleN/s8101-odd04-a0.02-gap10.npz",
+      "bytes": 41448,
+      "sha256": "e753b6a07defb067a62d3064e75a9407ddd313726af29b4ae63b1b460b42547a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/doubleN/s8101-odd04-a0.02-gap30.npz",
+      "bytes": 41097,
+      "sha256": "2cb59e777ed9311660a937f4706364ca2813370cc50a3d31258742e702858340"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/doubleN/s8101-odd04-a0.02-geometry.npz",
+      "bytes": 4607,
+      "sha256": "91612f25a1f8409d042467cbc2ee1446b5f320922b6eae5e02754190181df5f5"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/halfdt/s8101-odd04-a-0.02-event.json",
+      "bytes": 13601,
+      "sha256": "86b02dff0104c3287576ce37c25d77f581790b06bf74cccd195650416668ddb1"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/halfdt/s8101-odd04-a-0.02-gap10.npz",
+      "bytes": 41568,
+      "sha256": "5ad191f4346d65df6f6697248f4ad35ab5add777facc568602372d59ac918af0"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/halfdt/s8101-odd04-a-0.02-gap30.npz",
+      "bytes": 41189,
+      "sha256": "b8de6307d8540c810983fb621cfd6293cd650aaaedcc1be536c96fd504ab786b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/halfdt/s8101-odd04-a-0.02-geometry.npz",
+      "bytes": 4621,
+      "sha256": "3934258cae9d4e3b685dfc0d66e206676855229779fb38874e3f0899c4809f91"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/halfdt/s8101-odd04-a0-event.json",
+      "bytes": 13532,
+      "sha256": "0e0c183b4c5308301338f20410b4d571055e4f0bb65eb822065bae11edde4056"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/halfdt/s8101-odd04-a0-geometry.npz",
+      "bytes": 4547,
+      "sha256": "d9098f11c75240e6b9431d2a06e21d809693c3f99eefe2709f91602237cf016f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/halfdt/s8101-odd04-a0.02-event.json",
+      "bytes": 13609,
+      "sha256": "9b5910cd7981f2275357598ffded1f8d1200ec81f74af6091d8958986a472273"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/halfdt/s8101-odd04-a0.02-gap10.npz",
+      "bytes": 41487,
+      "sha256": "f4c1b128107a614e0bda1a04607079e505e240ad850bea1f348c64fea699b3a8"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/halfdt/s8101-odd04-a0.02-gap30.npz",
+      "bytes": 41156,
+      "sha256": "a66bf5e24b0000190888de31486a2b8b78eafa8be1a68e9a8b93e3d071ec8c18"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/halfdt/s8101-odd04-a0.02-geometry.npz",
+      "bytes": 4614,
+      "sha256": "da73a67d84678f9f7d3e8343a3218bb1f8cbebcd009a941839ba3458b9efa4a3"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/prepared-initial.npz",
+      "bytes": 11499,
+      "sha256": "e89305dc16aea9c31f9e7d1c2f1083bf95c3678e9eadd895171bfc0cea9b42fb"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/protocol.json",
+      "bytes": 3984,
+      "sha256": "175636e210d6ad7aa1a50cd4a266d6eca647dcb36e975d21341fb2198ed2a496"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/refine-01/refinement.json",
+      "bytes": 401,
+      "sha256": "5235d37db8244bed6b75678cd4cf44227ec48129dd77d7994c6658391f61a69a"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-01/budget.json",
+      "bytes": 334,
+      "sha256": "de0988dc06b1094ac5ce99da677290738dd33f31bd23bc4f7c072936a247ac0b"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-01/models.json",
+      "bytes": 183209,
+      "sha256": "c38df2283265bfc467cc16e146a2557e00155afb93858c18ce71bfcb8572ecfc"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-01/physical.json",
+      "bytes": 11576,
+      "sha256": "f7ed5f692a9ce7f882f526b0c6ff4c511c187d5cde4ba7f3ad585739ed162e75"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-01/predictions.json",
+      "bytes": 3666590,
+      "sha256": "7b2656e664fc98a7486fab7ba4c0fc7d404dc5960ab9c8ddbe80865646ac7515"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-01/protocol.json",
+      "bytes": 3992,
+      "sha256": "87883183d6affc832dde6a236f1262def3ef395ba73c8d692db14c2dccf2eb9c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-01/scores.json",
+      "bytes": 853899,
+      "sha256": "07dbd28e46477444b0b8d0ce15d7e51ee7d637424fafc9d2ef9f24052ccca352"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-02/budget.json",
+      "bytes": 325,
+      "sha256": "18a2641a1278136f193038416ec083b16d4ea369197afe29ed60d0c78e9427cc"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-02/models.json",
+      "bytes": 191865,
+      "sha256": "9f1b5aaf4d0f6ef0354feb060cd2d7c6c566c7d4867910fa8c4027fb15318d1c"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-02/physical.json",
+      "bytes": 11576,
+      "sha256": "f7ed5f692a9ce7f882f526b0c6ff4c511c187d5cde4ba7f3ad585739ed162e75"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-02/predictions.json",
+      "bytes": 3666735,
+      "sha256": "f086584efdc034b9e435d80a353a5c45a71ef4f2060e68c6ab0cdb8aa8cce8e5"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-02/protocol.json",
+      "bytes": 3992,
+      "sha256": "2a0933045a7cbe1067a816815ae12557e4bc7c4a9439636ec4a0d0dd543aa49f"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-02/scores.json",
+      "bytes": 853766,
+      "sha256": "fdc897fd137a7ebbcfa713090b895c9949daa608f2bb6e404b8a1d1969467307"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-03/budget.json",
+      "bytes": 315,
+      "sha256": "9e931a053564a90ad3b0caaf23ef5081449eb84d05e0a01b0c11389deabe12d0"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-03/models.json",
+      "bytes": 189893,
+      "sha256": "0bc453dcc4c4b7fe197e96117acdcee513e5b662d6bdc124bc91d7e9d636bcee"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-03/physical.json",
+      "bytes": 11576,
+      "sha256": "f7ed5f692a9ce7f882f526b0c6ff4c511c187d5cde4ba7f3ad585739ed162e75"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-03/predictions.json",
+      "bytes": 3666685,
+      "sha256": "46c2db2179fbb61d9e27291aacd0789cb25f19828f6848ac65f979305a865213"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-03/protocol.json",
+      "bytes": 3992,
+      "sha256": "b4da258837ce038be1e95882a9686415daf752de2a2d9d37ee4a426ca5b1537d"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/repair-fit-03/scores.json",
+      "bytes": 853942,
+      "sha256": "a3aadae32d5d0202bffe1de7e636389671d6b2e0669cbbeb1401d26219c99531"
+    },
+    {
+      "path": "work/mediated_patterns/intervention_aware_state/runtime-audit.json",
+      "bytes": 3378,
+      "sha256": "00986458f0b1e4439bfe7b3f0ed468a6fecc62d40a38f4b54efc0f8e598611fc"
+    }
+  ]
+}
