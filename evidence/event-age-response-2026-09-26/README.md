@@ -44,3 +44,10 @@ counter, with2,423 active static numbers and three temporal bases. It acquires
 only the original three centers once and adds no runtime field access. This is
 not an arbitrary-input simulator, physical mode identification or minimality
 result. No repeated-event successor was launched.
+
+Package:521 members,21,637,904 uncompressed bytes;9,640,864 compressed bytes.
+Archive SHA256 `ad2c1df40e93289094105c26ce90ccf9c036b866948eb456cd711c3e8c37c4fc`.
+The complete generated Git evidence remains below25MiB. Local `make check`
+passes311 tests and2 subtests, retaining one inherited skip and one historical
+scientific-CLI deselection. The new package's four evidence tests replay the
+frozen arithmetic without rerunning field simulations.
