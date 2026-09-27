@@ -167,3 +167,61 @@ def test_runtime_has_no_field_or_reference_import():
     assert "load_checkpoint" not in source
     assert "load(" not in source
     assert "reference(" not in source
+
+
+def test_both_forecast_seals_precede_their_reference_access(tmp_path, monkeypatch):
+    from types import SimpleNamespace
+
+    from experiments.mediated_patterns import event_age_operator_family as runner
+    from experiments.mediated_patterns import event_operator_analysis as analysis
+    from experiments.mediated_patterns import geometry_assay, geometry_evolution
+    from experiments.mediated_patterns import organization_response as org
+    from experiments.mediated_patterns import repeated_intervention_state as repeated
+    from experiments.mediated_patterns import source_receiver_relay as relay
+
+    x, t, y, _ = fixture()
+    model = om.fit(x, t, y)
+    g = gm.fit(x, np.zeros_like(x), kind="drift")
+    frozen = tmp_path / "frozen"
+    frozen.mkdir()
+    development = tmp_path / "development"
+    development.mkdir()
+    pm.save_json(development / "rows.json", [{"seed": 1}])
+    for name in ["selected", "blind"]:
+        pm.save_json(frozen / (name + ".json"), model)
+    pm.save_json(frozen / "G.json", g)
+    pm.save_json(
+        frozen / "freeze.json",
+        {"sources": {}, "models": {}, "development": str(development)},
+    )
+    monkeypatch.setattr(runner, "FRESH", [999])
+    monkeypatch.setattr(repeated, "source_hashes", dict)
+    monkeypatch.setattr(org, "isolated_components", lambda *a: None)
+    monkeypatch.setattr(relay, "prepare", lambda *a: np.zeros((2, 768)))
+    monkeypatch.setattr(geometry_assay, "initialize_written", lambda state, *a: state)
+    monkeypatch.setattr(geometry_evolution, "unforced", lambda state, *a: ([state], []))
+    monkeypatch.setattr(pm, "extract", lambda *a, **k: x[0])
+    out = tmp_path / "out"
+    out.mkdir()
+    calls = []
+
+    def later_field(state, *a):
+        assert (out / "retained-seal.json").is_file()
+        assert not (out / "snapshot-seal.json").exists()
+        calls.append("current")
+        return state
+
+    def future_response(*a):
+        assert (out / "retained-seal.json").is_file()
+        assert (out / "snapshot-seal.json").is_file()
+        calls.append("future")
+        return np.zeros((161, 2))
+
+    monkeypatch.setattr(runner, "boundary", later_field)
+    monkeypatch.setattr(runner, "response_pair", future_response)
+    budget = SimpleNamespace(begin=lambda *a: None, finish=lambda: None)
+    analysis.fresh(out, SimpleNamespace(data=frozen), budget)
+    assert calls == ["current"] * 4 + ["future"] * 12
+    assert len(list(out.glob("checkpoint-*.json"))) == 2
+    with pytest.raises(FileExistsError):
+        analysis.fresh(out, SimpleNamespace(data=frozen), budget)

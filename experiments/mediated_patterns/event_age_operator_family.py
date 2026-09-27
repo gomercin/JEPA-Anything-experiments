@@ -366,6 +366,10 @@ def main():
         ["git", "diff", "HEAD", "--", "experiments/mediated_patterns"], text=True
     ):
         raise RuntimeError("Commit scientific sources and living note before science")
+    if any(
+        p.is_symlink() for p in [ROOT, *ROOT.parents, args.output, *args.output.parents]
+    ):
+        raise ValueError("Symlink output roots forbidden before lock creation")
     ROOT.mkdir(parents=True, exist_ok=True)
     fd = os.open(ROOT / ".active", os.O_CREAT | os.O_EXCL | os.O_WRONLY)
     os.close(fd)
