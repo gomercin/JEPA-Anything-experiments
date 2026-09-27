@@ -598,3 +598,136 @@ def report(out, args, budget):
         },
     )
     budget.finish()
+
+
+def repeated(out, args, budget):
+    """Conditional exposed independent addition; no paired-event fit or field solve."""
+    from . import repeated_intervention_model as rm
+    from .present_state_transmission import digest
+    from .repeated_intervention_analysis import score as repeat_score
+    from .repeated_intervention_analysis import truth
+
+    decision = load(ROOT / "fresh-analysis-01/decision.json")
+    if not decision["repeated_allowed"]:
+        raise ValueError(
+            "Fresh single-event snapshot and retained gates must pass first"
+        )
+    budget.begin("exposed-independent-addition-diagnostic")
+    frozen = ROOT / "frozen-01"
+    model = load(frozen / "selected.json")
+    g = load(frozen / "G.json")
+    base = args.inherited / "fresh-01"
+    z0 = arrays(base / "initial-descriptors.npz")["z"]
+    cases = [
+        c
+        for c in load(base / "cases.json")
+        if c["schedule"]["name"] in ["cancel", "timing"]
+    ]
+    predictions = []
+    for k, c in enumerate(cases):
+        time = c["schedule"]["times"]
+        amps = c["schedule"]["amplitudes"]
+        # Independent single-event histories share the unforced prefix; this
+        # does not evolve the first physical conditioning through the second.
+        z = gm.rollout(g, z0[c["index"]], time)
+        r0a = om.predict(model, z[0], 0.0, 40 - time[0])
+        r1 = om.predict(model, z[0], amps[0], 40 - time[0])
+        r0b = om.predict(model, z[1], 0.0, 40 - time[1])
+        r2 = om.predict(model, z[1], amps[1], 40 - time[1])
+        raw = np.array([r0a, r1, r2, r1 + r2 - r0a])
+        # Both no-event contexts describe the same final physical baseline.
+        # Sum independently predicted contrasts on a single predicted baseline;
+        # no true R00 is supplied. Keep raw addition and its baseline disagreement.
+        centered = np.array([r0a, r1, r0a + (r2 - r0b), r1 + (r2 - r0b)])
+        save_npz(
+            out / f"prediction-{k}.npz",
+            raw=raw,
+            centered=centered,
+            baseline_disagreement=r0b - r0a,
+            components=[r0a, r1, r0b, r2],
+        )
+        predictions.append((raw, centered))
+    pm.save_json(
+        out / "seal.json",
+        {
+            "model_sha256": gm.identity(model),
+            "G_sha256": gm.identity(g),
+            "predictions": {p.name: digest(p) for p in out.glob("prediction-*.npz")},
+            "order": "All predictions saved before opening exposed repeated future responses; no fitting",
+        },
+    )
+    floors = load(args.inherited / "frozen-01/freeze.json")["floors"]["floors"]
+    all_scores = []
+    identities = {}
+    for k, (c, (raw, centered)) in enumerate(zip(cases, predictions, strict=True)):
+        y, _, _ = truth(base, c)
+        for name in c["prefixes"]:
+            p = base / (name + ".npz")
+            identities[str(p)] = digest(p)
+        for label, pred in [
+            ("raw-addition", raw),
+            ("common-baseline-addition", centered),
+            (
+                "true-single-event-addition",
+                np.array([y[0], y[1], y[2], y[1] + y[2] - y[0]]),
+            ),
+        ]:
+            rows = repeat_score(y, pred, floors)
+            all_scores.extend(
+                dict(
+                    **r,
+                    case=k,
+                    seed=c["seed"],
+                    history=c["history"],
+                    schedule=c["schedule"]["name"],
+                    model=label,
+                )
+                for r in rows
+            )
+            lhs = y[3] - pred[3]
+            rhs = (
+                rm.contrasts(y)["K12"]
+                + ((y[1] + y[2] - y[0]) - (pred[1] + pred[2] - pred[0]))
+                + ((pred[1] + pred[2] - pred[0]) - pred[3])
+            )
+            if not np.allclose(lhs, rhs, rtol=1e-12, atol=1e-21):
+                raise ValueError("Signed error decomposition mismatch")
+        comp = arrays(out / f"prediction-{k}.npz")["components"]
+        from .event_age_response import score as isolated_score
+
+        for j in [0, 1]:
+            for r in isolated_score(
+                y[[0, j + 1]],
+                comp[2 * j : 2 * j + 2],
+                load(frozen / "freeze.json")["floors"],
+            ):
+                all_scores.append(
+                    dict(
+                        **r,
+                        case=k,
+                        seed=c["seed"],
+                        history=c["history"],
+                        age=40 - c["schedule"]["times"][j],
+                        a=c["schedule"]["amplitudes"][j],
+                        schedule=c["schedule"]["name"],
+                        model=f"isolated-component-{j + 1}",
+                    )
+                )
+        save_npz(out / f"truth-{k}.npz", y=y)
+    pm.save_json(out / "scores.json", all_scores)
+    pm.save_json(out / "cases.json", cases)
+    pm.save_json(out / "source-identities.json", identities)
+    pm.save_json(
+        out / "interpretation.json",
+        {
+            "exposed_only": True,
+            "refitting": False,
+            "comparisons": [
+                "raw R10+R01−R00",
+                "independently predicted D1+D2 on one predicted baseline",
+                "evaluator true addition",
+            ],
+            "caveat": "Known-context single-event queries, not an event-updated autonomous state. K12 predicted zero by independent addition.",
+        },
+    )
+    budget.finish()

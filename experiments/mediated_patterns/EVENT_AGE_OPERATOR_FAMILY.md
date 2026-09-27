@@ -69,3 +69,11 @@ panels, pilot first, inherited120CPU/180wall seconds per section and1GiB RSS.
 Editing, fast tests and publication separate. Unique non-overwriting nonsymlink
 outputs and source revisions required. Publish all substantive new evidence,
 critical review/fixes, guarded lab merge, then only the two existing Atlas homes.
+
+If the conditional repeated diagnostic is reached, retain both literal
+R10_hat+R01_hat−R00_hat and the sum of independently predicted single-event
+contrasts on one predicted no-event baseline. The two contextual zero-amplitude
+queries describe the same physical R00 but can have different regression errors;
+record that discrepancy explicitly. The common-baseline version uses four
+response queries and no true baseline. It is ordinary independent addition,
+not autonomous event composition. Keep evaluator true addition and K12 separate.
