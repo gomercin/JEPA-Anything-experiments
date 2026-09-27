@@ -343,6 +343,7 @@ def main():
             "fresh",
             "analyze",
             "operators",
+            "diagnose",
             "repeated",
             "report",
         ],
