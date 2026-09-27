@@ -98,3 +98,12 @@ No new field panel, rank increase, descriptor, fresh access or knot search.
 Retain the pooled and polynomial failures. If this bounded family remains
 inadequate on complete-age holdouts, stop with an interpolation limit; the
 prospective age24 seeds stay untouched.
+
+The spline passes all-age grouped fitting (worst D1 6.974%) but misses full-age
+holdouts:15.494%,11.473%,18.991% at15/18/20. Ridge.001 does not repair the
+complete panel. The shared-family contract therefore stops at development;
+no fresh model is frozen, age24 is not generated, and retained/repeated stages
+are not run. A short diagnosis-stage import failed on an unmatched parenthesis
+in newly added reporting code; its FAILED receipt is retained. The syntax fix
+passes the instrument tests and does not rerun or alter any physical panel or
+fitted model. A new output directory will hold the completed diagnosis.

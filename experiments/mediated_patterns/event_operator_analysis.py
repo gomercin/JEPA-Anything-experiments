@@ -733,83 +733,169 @@ def repeated(out, args, budget):
     budget.finish()
 
 
-def diagnose(out,args,budget):
+def diagnose(out, args, budget):
     """Retain adverse held-age errors and common-support coefficient trajectories."""
     import matplotlib
-    matplotlib.use('Agg')
+
+    matplotlib.use("Agg")
     import matplotlib.pyplot as plt
+
     from .event_age_response import rms
 
-    budget.begin('adverse-interpolation-and-age-trajectory-diagnosis')
-    x,y,rows,ages,_=dataset(ROOT/'develop-01')
-    decision=load(args.data/'decision.json')
-    selected=min([c for c in decision['candidates'] if c['family']!='blind'],key=lambda c:c['worst'])
-    folder=Path(selected['path'])
-    records=[]
-    for age in [15,18,20]:
-        gates=load(folder/f'scores-{age}.json')
-        pred=arrays(folder/f'predictions-{age}.npz')
+    budget.begin("adverse-interpolation-and-age-trajectory-diagnosis")
+    _x, y, _rows, _ages, _ = dataset(ROOT / "develop-01")
+    decision = load(args.data / "decision.json")
+    selected = min(
+        [c for c in decision["candidates"] if c["family"] != "blind"],
+        key=lambda c: c["worst"],
+    )
+    folder = Path(selected["path"])
+    records = []
+    for age in [15, 18, 20]:
+        gates = load(folder / f"scores-{age}.json")
+        pred = arrays(folder / f"predictions-{age}.npz")
         for r in gates:
-            r=dict(**r,development_index=int(pred['indices'][r['index']]))
+            r = dict(**r, development_index=int(pred["indices"][r["index"]]))
             records.append(r)
-    worst=max((r for r in records if r['kind']=='D1'),key=lambda r:r['relative'])
-    pm.save_json(out/'adverse.json',worst)
-    pm.save_json(out/'all-held-age-scores.json',records)
-    idx=worst['development_index']
-    aindex=1 if worst['a']<0 else 2
-    pred=arrays(folder/f'predictions-{worst["age"]}.npz')
-    pi=int(np.flatnonzero(pred['indices']==idx)[0])
-    fig,axs=plt.subplots(2,2,figsize=(10,6),constrained_layout=True)
+    worst = max((r for r in records if r["kind"] == "D1"), key=lambda r: r["relative"])
+    pm.save_json(out / "adverse.json", worst)
+    pm.save_json(out / "all-held-age-scores.json", records)
+    idx = worst["development_index"]
+    aindex = 1 if worst["a"] < 0 else 2
+    pred = arrays(folder / f"predictions-{worst['age']}.npz")
+    pi = int(np.flatnonzero(pred["indices"] == idx)[0])
+    fig, axs = plt.subplots(2, 2, figsize=(10, 6), constrained_layout=True)
     for o in range(2):
-        axs[0,o].plot(pm.TIMES,y[idx,aindex,:,o],label='Reference R_after')
-        axs[0,o].plot(pm.TIMES,pred['y'][pi,aindex,:,o],'--',label='Held-age/group prediction')
-        axs[1,o].plot(pm.TIMES,y[idx,aindex,:,o]-y[idx,0,:,o],label='Reference D1')
-        axs[1,o].plot(pm.TIMES,pred['y'][pi,aindex,:,o]-pred['y'][pi,0,:,o],'--',label='Prediction D1')
+        axs[0, o].plot(pm.TIMES, y[idx, aindex, :, o], label="Reference R_after")
+        axs[0, o].plot(
+            pm.TIMES,
+            pred["y"][pi, aindex, :, o],
+            "--",
+            label="Held-age/group prediction",
+        )
+        axs[1, o].plot(
+            pm.TIMES, y[idx, aindex, :, o] - y[idx, 0, :, o], label="Reference D1"
+        )
+        axs[1, o].plot(
+            pm.TIMES,
+            pred["y"][pi, aindex, :, o] - pred["y"][pi, 0, :, o],
+            "--",
+            label="Prediction D1",
+        )
     for ax in axs.flat:
-        ax.ticklabel_format(axis='y',style='sci',scilimits=(0,0));ax.set_xlabel('h since diagnostic probe');ax.legend()
-    axs[0,0].set_title('Mass: large conditional response')
-    axs[0,1].set_title('Signed moment: large conditional response')
-    axs[1,0].set_title('Mass: smaller event consequence')
-    axs[1,1].set_title('Signed moment: smaller event consequence')
-    fig.suptitle(f'Worst spline holdout: seed{worst["seed"]} {worst["history"]}, age{worst["age"]}, a={worst["a"]}')
-    fig.savefig(out/'adverse-held-age.png',dpi=160);plt.close(fig)
-    op=arrays(ROOT/'operators-01/operators.npz')
-    models=[load(ROOT/'fit-01'/f'fixed-age-{a}.json') for a in AGES]
-    z=op['centers']
+        ax.ticklabel_format(axis="y", style="sci", scilimits=(0, 0))
+        ax.set_xlabel("h since diagnostic probe")
+        ax.legend()
+    axs[0, 0].set_title("Mass: large conditional response")
+    axs[0, 1].set_title("Signed moment: large conditional response")
+    axs[1, 0].set_title("Mass: smaller event consequence")
+    axs[1, 1].set_title("Signed moment: smaller event consequence")
+    fig.suptitle(
+        f"Worst spline holdout: seed{worst['seed']} {worst['history']}, age{worst['age']}, a={worst['a']}"
+    )
+    fig.savefig(out / "adverse-held-age.png", dpi=160)
+    plt.close(fig)
+    op = arrays(ROOT / "operators-01/operators.npz")
+    models = [load(ROOT / "fit-01" / f"fixed-age-{a}.json") for a in AGES]
+    z = op["centers"]
     # These weights are comparable because all fixed-age fits share the basis.
-    w=np.array([(om.matrix(z,[a]*len(z),m,'blind')@np.asarray(m['coefficients'])).reshape(len(z),3,2,m['rank']) for a,m in zip(AGES,models,strict=True)])
-    save_npz(out/'common-basis-trajectories.npz',ages=AGES,centers=z,weights=w,coefficients=op['coefficients'])
-    fig,axs=plt.subplots(2,2,figsize=(10,6),constrained_layout=True)
-    for part,label in [(1,'odd'),(2,'even')]:
-        for o,name in enumerate(['mass','moment']):
+    w = np.array(
+        [
+            (
+                om.matrix(z, [a] * len(z), m, "blind") @ np.asarray(m["coefficients"])
+            ).reshape(len(z), 3, 2, m["rank"])
+            for a, m in zip(AGES, models, strict=True)
+        ]
+    )
+    save_npz(
+        out / "common-basis-trajectories.npz",
+        ages=AGES,
+        centers=z,
+        weights=w,
+        coefficients=op["coefficients"],
+    )
+    fig, axs = plt.subplots(2, 2, figsize=(10, 6), constrained_layout=True)
+    for part, label in [(1, "odd"), (2, "even")]:
+        for o, name in enumerate(["mass", "moment"]):
             for k in range(w.shape[-1]):
-                axs[part-1,o].plot(AGES,w[:,0,part,o,k],'o-',label=f'basis{k+1}')
-            axs[part-1,o].set(title=f'{label}, {name}',xlabel='Known event age',ylabel='Normalized response-basis coefficient')
-    axs[0,0].legend();fig.suptitle('Fixed supported centers; common-basis weights, no physical-mode meaning')
-    fig.savefig(out/'coefficient-age-trajectories.png',dpi=160);plt.close(fig)
+                axs[part - 1, o].plot(
+                    AGES, w[:, 0, part, o, k], "o-", label=f"basis{k + 1}"
+                )
+            axs[part - 1, o].set(
+                title=f"{label}, {name}",
+                xlabel="Known event age",
+                ylabel="Normalized response-basis coefficient",
+            )
+    axs[0, 0].legend()
+    fig.suptitle(
+        "Fixed supported centers; common-basis weights, no physical-mode meaning"
+    )
+    fig.savefig(out / "coefficient-age-trajectories.png", dpi=160)
+    plt.close(fig)
+
     def by_sign(entries):
-        return {str(a):{str(age):{kind:dict(
-            worst_relative=max(r['relative'] for r in entries if r['a']==a and r['age']==age and r['kind']==kind),
-            max_error_rms=max(r['error_rms'] for r in entries if r['a']==a and r['age']==age and r['kind']==kind),
-            failures=sum(r['passed'] is False for r in entries if r['a']==a and r['age']==age and r['kind']==kind))
-            for kind in ['R_after','D1']} for age in [15,18,20]} for a in [-.02,.02]}
-    sy=rms((y[:,1:]-y[:,0,None]).reshape(-1,161,2),axis=(0,1))
-    pm.save_json(out/'diagnosis.json',dict(best_tested_shared=selected,
-        by_sign=by_sign(records),fixed_development_D1_scale=sy.tolist(),
-        error_over_floor=worst['error_rms']/worst['floor'],signal_over_floor=worst['magnitude']/worst['floor'],
-        response_basis='rank4 sufficient; no rank6 search',
-        stop='Both bounded shared families fail full-age holdouts; no fresh freeze, age24 generation, retained or repeated evaluation'))
+        return {
+            str(a): {
+                str(age): {
+                    kind: {
+                        "worst_relative": max(
+                            r["relative"]
+                            for r in entries
+                            if r["a"] == a and r["age"] == age and r["kind"] == kind
+                        ),
+                        "max_error_rms": max(
+                            r["error_rms"]
+                            for r in entries
+                            if r["a"] == a and r["age"] == age and r["kind"] == kind
+                        ),
+                        "failures": sum(
+                            r["passed"] is False
+                            for r in entries
+                            if r["a"] == a and r["age"] == age and r["kind"] == kind
+                        ),
+                    }
+                    for kind in ["R_after", "D1"]
+                }
+                for age in [15, 18, 20]
+            }
+            for a in [-0.02, 0.02]
+        }
+
+    sy = rms((y[:, 1:] - y[:, 0, None]).reshape(-1, 161, 2), axis=(0, 1))
+    pm.save_json(
+        out / "diagnosis.json",
+        {
+            "best_tested_shared": selected,
+            "by_sign": by_sign(records),
+            "fixed_development_D1_scale": sy.tolist(),
+            "error_over_floor": worst["error_rms"] / worst["floor"],
+            "signal_over_floor": worst["magnitude"] / worst["floor"],
+            "response_basis": "rank4 sufficient; no rank6 search",
+            "stop": "Both bounded shared families fail full-age holdouts; no fresh freeze, age24 generation, retained or repeated evaluation",
+        },
+    )
     # Static costs count candidate models even though no deployment is qualified.
-    accounting={}
-    for c in decision['candidates']:
-        m=load(Path(c['path'])/'model.json')
-        numeric={k:int(np.asarray(m[k]).size) for k in ['mean','scale','bases','scales','coefficients']}
-        accounting[c['family']]=dict(values=numeric,total=sum(numeric.values()),
-            bytes=(Path(c['path'])/'model.json').stat().st_size,
-            coefficient_multiply_adds=len(m['coefficients'])*6*m['rank'],basis_multiply_adds=4*m['rank']*161,
-            runtime_inputs='three current centers, conditioning amplitude, known age context (unused by blind features)',
-            measurement='current field scan; retained G variant not qualified in this experiment',
-            output_values=322,temporal_grid_values=161,anchors=3,amplitude_normalizer=1,
-            age_normalization=2,knots=4 if m['family']=='spline' else 0))
-    pm.save_json(out/'accounting.json',accounting)
+    accounting = {}
+    for c in decision["candidates"]:
+        m = load(Path(c["path"]) / "model.json")
+        numeric = {
+            k: int(np.asarray(m[k]).size)
+            for k in ["mean", "scale", "bases", "scales", "coefficients"]
+        }
+        accounting[c["family"]] = {
+            "values": numeric,
+            "total": sum(numeric.values()),
+            "bytes": (Path(c["path"]) / "model.json").stat().st_size,
+            "coefficient_multiply_adds": len(m["coefficients"]) * 6 * m["rank"],
+            "basis_multiply_adds": 4 * m["rank"] * 161,
+            "runtime_inputs": "three current centers, conditioning amplitude, known age context (unused by blind features)",
+            "measurement": "current field scan; retained G variant not qualified in this experiment",
+            "output_values": 322,
+            "temporal_grid_values": 161,
+            "anchors": 3,
+            "amplitude_normalizer": 1,
+            "age_normalization": 2,
+            "knots": 4 if m["family"] == "spline" else 0,
+        }
+    pm.save_json(out / "accounting.json", accounting)
     budget.finish()
