@@ -1,5 +1,7 @@
 """Grouped operator-family diagnostics. No reference access from inference code."""
 
+from pathlib import Path
+
 import numpy as np
 
 from . import event_operator_model as om
@@ -170,6 +172,276 @@ def fit(out, args, budget):
             "fixed_summaries": fixed_summaries,
             "candidates": results,
             "selected": selected,
+        },
+    )
+    budget.finish()
+
+
+def freeze(out, args, budget):
+    from .event_age_operator_family import FRESH, OLD
+    from .present_state_transmission import digest
+    from .repeated_intervention_state import source_hashes
+
+    budget.begin("freeze-contextual-contract")
+    decision = load(args.data / "decision.json")
+    if decision["status"] != "CREDIBLE":
+        raise ValueError("No credible development candidate")
+    selected = decision["selected"]
+    blind = min(
+        [c for c in decision["candidates"] if c["family"] == "blind"],
+        key=lambda c: c["worst"],
+    )
+    for label, candidate in [("selected", selected), ("blind", blind)]:
+        pm.save_json(
+            out / (label + ".json"), load(Path(candidate["path"]) / "model.json")
+        )
+    g = load(OLD / "retained-frozen-01/G.json")
+    if (
+        gm.identity(g)
+        != "a9af96ddb21bcd90e92cb8cd51fa1371c95166949fec6ffe54c0e1367dfdded9"
+    ):
+        raise ValueError("Inherited G changed")
+    pm.save_json(out / "G.json", g)
+    pm.save_json(
+        out / "freeze.json",
+        {
+            "selected": selected,
+            "blind": blind,
+            "models": {p.name: digest(p) for p in out.glob("*.json")},
+            "sources": source_hashes(),
+            "floors": load(ROOT / "refine-01/refinement.json")["floors"],
+            "fresh_seeds": FRESH,
+            "ages": [18, 24],
+            "heldout_age": 24,
+            "amplitudes": [-0.02, 0.02],
+            "probe": 90,
+            "development": str(ROOT / "develop-01"),
+            "development_rows_sha256": digest(ROOT / "develop-01/rows.json"),
+            "contract": "Snapshot first; presealed unchanged-G forecasts scored only after snapshot qualification; no outcome tuning",
+        },
+    )
+    budget.finish()
+
+
+def fresh(out, args, budget):
+    from .event_age_operator_family import FRESH, boundary, response_pair
+    from .geometry_assay import initialize_written
+    from .geometry_evolution import unforced
+    from .organization_response import isolated_components
+    from .present_state_transmission import digest
+    from .repeated_intervention_state import source_hashes
+    from .simulator import Field
+    from .source_receiver_relay import CFG, prepare
+
+    frozen = load(args.data / "freeze.json")
+    if frozen["sources"] != source_hashes():
+        raise ValueError("Frozen implementation changed")
+    if any(digest(args.data / name) != sha for name, sha in frozen["models"].items()):
+        raise ValueError("Frozen artifact changed")
+    development = load(Path(frozen["development"]) / "rows.json")
+    if set(FRESH) & {r["seed"] for r in development}:
+        raise ValueError("Fresh preparation overlap")
+    models = {
+        label: load(args.data / (label + ".json")) for label in ["selected", "blind"]
+    }
+    g = load(args.data / "G.json")
+    starts, rows, z0s, zgs = [], [], [], []
+    for seed in FRESH:
+        f = Field(CFG)
+        initial = prepare(f, isolated_components(f, seed, budget), seed, -4.0, budget)
+        save_npz(out / f"initial-{seed}.npz", state=initial)
+        for history in ["none", "odd04"]:
+            budget.begin(f"fresh-start-{seed}-{history}")
+            state50 = unforced(
+                initialize_written(initial, history, CFG), CFG, [0.0, 50.0], budget
+            )[0][-1]
+            start_index = len(starts)
+            starts.append(state50)
+            z0 = pm.extract(state50, feature_set="geometry")
+            flow = gm.Continuation(g, z0)
+            flow.advance(10)
+            flow.checkpoint(out / f"checkpoint-{seed}-{history}.json")
+            for age in [24, 18]:
+                zg = flow.advance(40 - age - flow.steps)
+                rows.append(
+                    {
+                        "seed": seed,
+                        "history": history,
+                        "age": age,
+                        "start_index": start_index,
+                    }
+                )
+                z0s.append(z0)
+                zgs.append(zg)
+            budget.finish()
+    save_npz(out / "boundary-50.npz", states=starts)
+    save_npz(out / "retained-centers.npz", z0=z0s, z=zgs)
+    pm.save_json(out / "rows.json", rows)
+    ages = np.array([r["age"] for r in rows])
+    budget.begin("seal-G-forecasts-before-any-later-field")
+    for label, model in models.items():
+        save_npz(out / f"retained-{label}.npz", y=om.predict_panel(model, zgs, ages))
+    pm.save_json(
+        out / "retained-seal.json",
+        {
+            "predictions": {p.name: digest(p) for p in out.glob("retained-*.npz")},
+            "checkpoints": {p.name: digest(p) for p in out.glob("checkpoint-*.json")},
+            "freeze_sha256": digest(args.data / "freeze.json"),
+            "order": "All t50-only G predictions persisted before generating any later field",
+        },
+    )
+    budget.finish()
+    states, x = [], []
+    for row in rows:
+        budget.begin(f"current-centers-{row['seed']}-{row['history']}-{row['age']}")
+        state = boundary(starts[row["start_index"]], row["age"], budget)
+        states.append(state)
+        x.append(pm.extract(state, feature_set="geometry"))
+        budget.finish()
+    save_npz(out / "states.npz", states=states, x=x)
+    budget.begin("seal-snapshot-forecasts-before-conditioning")
+    for label, model in models.items():
+        save_npz(out / f"snapshot-{label}.npz", y=om.predict_panel(model, x, ages))
+    pm.save_json(
+        out / "snapshot-seal.json",
+        {
+            "predictions": {p.name: digest(p) for p in out.glob("snapshot-*.npz")},
+            "current_centers_sha256": digest(out / "states.npz"),
+            "freeze_sha256": digest(args.data / "freeze.json"),
+            "order": "All snapshot predictions persisted before generating conditioning/probe futures",
+        },
+    )
+    budget.finish()
+    yy, ledger = [], []
+    for i, (row, state) in enumerate(zip(rows, states, strict=True)):
+        yy.append(
+            [
+                response_pair(out, f"reference-{i}-{a:g}", state, row["age"], a, budget)
+                for a in [0.0, -0.02, 0.02]
+            ]
+        )
+        ledger.append(
+            [str(out / f"reference-{i}-{a:g}.npz") for a in [0.0, -0.02, 0.02]]
+        )
+    save_npz(out / "targets.npz", y=yy)
+    pm.save_json(out / "references.json", ledger)
+
+
+def analyze(out, args, budget):
+    from .present_state_transmission import digest
+
+    budget.begin("frozen-fresh-scoring")
+    x, y, rows, _ages, _ = dataset(args.data)
+    frozen = load(ROOT / "frozen-01/freeze.json")
+    results = {}
+    for mode in ["snapshot", "retained"]:
+        seal = load(args.data / (mode + "-seal.json"))
+        if any(
+            digest(args.data / name) != sha for name, sha in seal["predictions"].items()
+        ):
+            raise ValueError("Prediction seal mismatch")
+        for label in ["blind", "selected"]:
+            p = arrays(args.data / f"{mode}-{label}.npz")["y"]
+            gates = scores(y, p, rows, frozen["floors"])
+            pm.save_json(out / f"{mode}-{label}-scores.json", gates)
+            results[mode + "-" + label] = {
+                str(a): summary([r for r in gates if r["age"] == a]) for a in [18, 24]
+            }
+    qualified = lambda key: all(
+        v["failed"] == 0 and v["unresolved"] == 0 for v in results[key].values()
+    )
+    pm.save_json(
+        out / "decision.json",
+        {
+            "results": results,
+            "snapshot_qualified": qualified("snapshot-selected"),
+            "retained_qualified": qualified("snapshot-selected")
+            and qualified("retained-selected"),
+            "repeated_allowed": qualified("snapshot-selected")
+            and qualified("retained-selected"),
+        },
+    )
+    zg = arrays(args.data / "retained-centers.npz")
+    err = zg["z"] - x
+    pm.save_json(
+        out / "geometry.json",
+        {
+            "max_absolute": abs(err).max(0).tolist(),
+            "max_fractional": (abs(err) / np.maximum(abs(x - zg["z0"]), 1e-15))
+            .max(0)
+            .tolist(),
+            "errors": err.tolist(),
+            "true_motion": (x - zg["z0"]).tolist(),
+            "predicted_motion": (zg["z"] - zg["z0"]).tolist(),
+            "inherited_tolerances": [5e-5, 2e-5, 2e-6],
+            "scope": "pre-event unforced centers only; old geometry failures preserved",
+        },
+    )
+    gates = load(out / "snapshot-selected-scores.json")
+    worst = max(
+        (r for r in gates if r["age"] == 24 and r["kind"] == "D1"),
+        key=lambda r: r["relative"],
+    )
+    pm.save_json(out / "adverse.json", worst)
+    budget.finish()
+
+
+def operators(out, args, budget):
+    """Evaluate adjacent per-age operators on identical nearby supported centers."""
+    budget.begin("common-support-operator-diagnostics")
+    x, _y, _rows, ages, _ = dataset(ROOT / "develop-01")
+    models = {a: load(args.data / f"fixed-age-{a}.json") for a in AGES}
+    scale = x.std(0)
+    candidate = x[ages == 18]
+    # Empirical support: intersection of coordinate ranges and nearby training
+    # examples at every age. No extrapolation claim based on a box alone.
+    supported = []
+    for z in candidate:
+        if all(
+            ((z >= x[ages == a].min(0)) & (z <= x[ages == a].max(0))).all()
+            and np.min(np.linalg.norm((x[ages == a] - z) / scale, axis=1) / np.sqrt(3))
+            <= 0.5
+            for a in AGES
+        ):
+            supported.append(z)
+    if not supported:
+        pm.save_json(
+            out / "support.json",
+            {
+                "count": 0,
+                "interpretation": "No shared supported query; no operator extrapolation",
+            },
+        )
+        budget.finish()
+        return
+    predictions = np.array(
+        [om.predict_panel(models[a], supported, [a] * len(supported)) for a in AGES]
+    )
+    save_npz(
+        out / "operators.npz",
+        centers=supported,
+        ages=AGES,
+        y=predictions,
+        coefficients=np.array([models[a]["coefficients"] for a in AGES]),
+    )
+    records = []
+    for i in range(len(AGES) - 1):
+        d = predictions[i, :, 1:] - predictions[i, :, 0, None]
+        dn = predictions[i + 1, :, 1:] - predictions[i + 1, :, 0, None]
+        records.append(
+            {
+                "ages": AGES[i : i + 2],
+                "D_change_rms": np.sqrt(np.mean((dn - d) ** 2, axis=(0, 2))).tolist(),
+                "D_rms": np.sqrt(np.mean(d * d, axis=(0, 2))).tolist(),
+            }
+        )
+    pm.save_json(
+        out / "support.json",
+        {
+            "count": len(supported),
+            "rule": "All-age coordinate-range intersection and normalized nearest-neighbor RMS <= .5",
+            "adjacent_changes": records,
+            "meaning": "Prediction-space comparison only; coefficients have no physical mode interpretation",
         },
     )
     budget.finish()
