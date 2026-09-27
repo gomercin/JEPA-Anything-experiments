@@ -492,8 +492,13 @@ def report(out, args, budget):
         plt.close(fig)
     if "candidates" in decision:
         fig, ax = plt.subplots(figsize=(9, 4), constrained_layout=True)
-        for c in decision["candidates"]:
-            if c["ridge"] == 1e-6:
+        plot_candidates = (
+            load(ROOT / "fit-01/decision.json")["candidates"] + decision["candidates"]
+        )
+        seen = set()
+        for c in plot_candidates:
+            if c["ridge"] == 1e-6 and c["family"] not in seen:
+                seen.add(c["family"])
                 vals = [
                     c["summaries"][str(a)]["by_kind"]["D1"]["worst_relative"] * 100
                     for a in [15, 18, 20]

@@ -361,7 +361,7 @@ def main():
     p.add_argument(
         "--family", choices=["blind", "polynomial", "spline"], default="polynomial"
     )
-    p.add_argument("--rank", type=int, default=4)
+    p.add_argument("--rank", type=int, choices=[4, 6], default=4)
     args = p.parse_args()
     if subprocess.check_output(
         ["git", "diff", "HEAD", "--", "experiments/mediated_patterns"], text=True
