@@ -77,3 +77,24 @@ queries describe the same physical R00 but can have different regression errors;
 record that discrepancy explicitly. The common-baseline version uses four
 response queries and no true baseline. It is ordinary independent addition,
 not autonomous event composition. Keep evaluator true addition and K12 separate.
+
+## Development diagnosis and one approximation repair
+
+The complete panel cost922.38CPU seconds; pilot14.86 and refinement49.90.
+All five fixed-age quadratic maps pass 480 grouped gates each. With the shared
+rank4 basis and selected ridge.001, worst D1 errors by age10/15/18/20/30 are
+.768%,1.283%,1.870%,1.886%,1.858%. Common-basis projection itself is adequate
+(worst D1 1.540%, R .136%); rank6 is not warranted.
+
+The age-blind pooled map fails strongly (worst grouped D1 ~581%; leave-age-out
+~252–334%). Quadratic age context improves this but remains inadequate:
+leave-age-out worst D1 is57.3% at15,43.0% at18,72.6% at20; all large R gates pass.
+Both declared ridge settings give the same pattern. This is an approximation
+limitation of the shared family, not failure of the individual center maps.
+
+Proceed with the one prospectively permitted natural-cubic family, using fixed
+knots10/15/20/30 and otherwise unchanged features, basis rank, groups and gates.
+No new field panel, rank increase, descriptor, fresh access or knot search.
+Retain the pooled and polynomial failures. If this bounded family remains
+inadequate on complete-age holdouts, stop with an interpolation limit; the
+prospective age24 seeds stay untouched.
