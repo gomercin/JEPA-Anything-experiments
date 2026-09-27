@@ -1,0 +1,34 @@
+# Every stage source revision and exact arguments; outputs are exclusive.
+# Run from the repository root with its existing NumPy/SciPy environment.
+# Inherited inputs use the existing event-age, repeated and aliasing portable indexes.
+# Default repeated evidence root: /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state
+
+# source e66b46d179e99848d7e81cc2bc2e6c597ba7a4eb
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-operator-mpl python -m experiments.mediated_patterns.event_age_operator_family --stage pilot --output work/mediated_patterns/event_age_operator_family/pilot-01
+
+# source a4c385454230baed668706b945c6a60c907f8e75
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-operator-mpl python -m experiments.mediated_patterns.event_age_operator_family --stage refine --data work/mediated_patterns/event_age_operator_family/pilot-01 --output work/mediated_patterns/event_age_operator_family/refine-01
+
+# source d5ee37a5050f741381089fb4e2a5f97e70d10d3e
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-operator-mpl python -m experiments.mediated_patterns.event_age_operator_family --stage develop --output work/mediated_patterns/event_age_operator_family/develop-01
+
+# source 423d70b706739276c9d2c04133f31803a303ffd8
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-operator-mpl python -m experiments.mediated_patterns.event_age_operator_family --stage fit --data work/mediated_patterns/event_age_operator_family/develop-01 --output work/mediated_patterns/event_age_operator_family/fit-01
+
+# source 423d70b706739276c9d2c04133f31803a303ffd8
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-operator-mpl python -m experiments.mediated_patterns.event_age_operator_family --stage operators --data work/mediated_patterns/event_age_operator_family/fit-01 --output work/mediated_patterns/event_age_operator_family/operators-01
+
+# source 423d70b706739276c9d2c04133f31803a303ffd8
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-operator-mpl python -m experiments.mediated_patterns.event_age_operator_family --stage report --data work/mediated_patterns/event_age_operator_family/fit-01 --output work/mediated_patterns/event_age_operator_family/development-report-01
+
+# source 19bf7fc89f8a0caaab7237a9e8d8e0c13b40ff3f
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-operator-mpl python -m experiments.mediated_patterns.event_age_operator_family --stage fit --family spline --data work/mediated_patterns/event_age_operator_family/develop-01 --output work/mediated_patterns/event_age_operator_family/fit-spline-01
+
+# source 951f07a4ff4396ea0b00c92bf9a19683bff2eb63
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-operator-mpl python -m experiments.mediated_patterns.event_age_operator_family --stage diagnose --data work/mediated_patterns/event_age_operator_family/fit-spline-01 --output work/mediated_patterns/event_age_operator_family/diagnosis-01
+
+# source 9452d8f80156209a8897930e28188e0da171a329
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-operator-mpl python -m experiments.mediated_patterns.event_age_operator_family --stage diagnose --data work/mediated_patterns/event_age_operator_family/fit-spline-01 --output work/mediated_patterns/event_age_operator_family/diagnosis-02
+
+# source 6b619cd01ad81a888f3b49a4e6b9e97bd4d101d9
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-operator-mpl python -m experiments.mediated_patterns.event_age_operator_family --stage report --data work/mediated_patterns/event_age_operator_family/fit-spline-01 --output work/mediated_patterns/event_age_operator_family/report-01
