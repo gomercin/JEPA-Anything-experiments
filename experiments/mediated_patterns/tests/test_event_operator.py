@@ -78,6 +78,9 @@ def test_shared_representation_and_independent_amplitude_readouts():
     ]
     assert models[0]["bases"] == models[1]["bases"]
     assert models[0]["mean"] == models[1]["mean"]
+    np.testing.assert_array_equal(
+        om.predict(models[0], x[0], 0.02, 10), om.predict(models[0], x[0], 0.02, 30)
+    )
     m = om.fit(x, t, y)
     z = x[0]
     zero = om.predict(m, z, 0, 18)

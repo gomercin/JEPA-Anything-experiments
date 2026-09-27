@@ -121,7 +121,9 @@ def fit(out, args, budget):
         pm.save_json(
             out / "decision.json",
             {
-                "status": "FIXED_AGE_LIMIT",
+                "status": "FIXED_AGE_LIMIT"
+                if any(v["failed"] for v in fixed_summaries.values())
+                else "UNRESOLVED_FIXED_AGE",
                 "ridge": fixed_ridge,
                 "by_age": fixed_summaries,
             },
