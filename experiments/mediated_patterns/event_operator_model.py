@@ -74,7 +74,10 @@ def targets(y, rep):
 
 
 def matrix(x, age, rep, family):
-    q = (np.asarray(x, float) - rep["mean"]) / rep["scale"]
+    x = np.asarray(x, float)
+    if x.ndim != 2 or x.shape[1] != 3 or np.asarray(age).shape != (len(x),):
+        raise ValueError("One known age per three-center row required")
+    q = (x - rep["mean"]) / rep["scale"]
     return np.einsum("ni,nj->nij", pm.design(q, 2), age_features(age, family)).reshape(
         len(q), -1
     )
