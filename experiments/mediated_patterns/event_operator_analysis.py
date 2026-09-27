@@ -445,3 +445,154 @@ def operators(out, args, budget):
         },
     )
     budget.finish()
+
+
+def report(out, args, budget):
+    """Small standalone scientific figures and explicit storage accounting."""
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    from .event_age_operator_family import OLD
+    from .present_state_transmission import digest
+
+    budget.begin("result-figures-and-accounting")
+    decision = load(args.data / "decision.json")
+    pm.save_json(out / "decision-copy.json", decision)
+    identities = {
+        str(p): digest(p)
+        for p in [OLD / "frozen-01/model.json", OLD / "retained-frozen-01/G.json"]
+    }
+    pm.save_json(out / "inherited-identities.json", identities)
+    if (ROOT / "operators-01/operators.npz").exists():
+        d = arrays(ROOT / "operators-01/operators.npz")
+        y = d["y"][:, 0]
+        fig, axs = plt.subplots(2, 2, figsize=(10, 6), constrained_layout=True)
+        for j, age in enumerate(AGES):
+            for o in range(2):
+                axs[0, o].plot(
+                    pm.TIMES, (y[j, 2, :, o] - y[j, 1, :, o]) / 2, label=str(age)
+                )
+                axs[1, o].plot(
+                    pm.TIMES, (y[j, 2, :, o] + y[j, 1, :, o] - 2 * y[j, 0, :, o]) / 2
+                )
+        for ax in axs.flat:
+            ax.ticklabel_format(axis="y", style="sci", scilimits=(0, 0))
+            ax.set_xlabel("h since diagnostic probe")
+        axs[0, 0].set_title("Odd component: mass")
+        axs[0, 1].set_title("Odd component: signed moment")
+        axs[1, 0].set_title("Even component: mass")
+        axs[1, 1].set_title("Even component: signed moment")
+        axs[0, 0].legend(title="Known age")
+        fig.suptitle("Different age operators queried at the same supported centers")
+        fig.savefig(out / "operator-age-curves.png", dpi=160)
+        plt.close(fig)
+    if "candidates" in decision:
+        fig, ax = plt.subplots(figsize=(9, 4), constrained_layout=True)
+        for c in decision["candidates"]:
+            if c["ridge"] == 1e-6:
+                vals = [
+                    c["summaries"][str(a)]["by_kind"]["D1"]["worst_relative"] * 100
+                    for a in [15, 18, 20]
+                ]
+                ax.plot([15, 18, 20], vals, "o-", label=c["family"])
+        ax.axhline(10, color="black", linestyle="--", label="D1 target")
+        ax.set(
+            xlabel="Entire held-out development age",
+            ylabel="Worst grouped D1 error (%)",
+            yscale="log",
+        )
+        ax.legend()
+        fig.savefig(out / "held-age-errors.png", dpi=160)
+        plt.close(fig)
+    fresh = ROOT / "fresh-01"
+    if (fresh / "targets.npz").exists():
+        x, y, rows, _ages, _ = dataset(fresh)
+        p = arrays(fresh / "snapshot-selected.npz")["y"]
+        pg = arrays(fresh / "retained-selected.npz")["y"]
+        i = next(
+            i
+            for i, r in enumerate(rows)
+            if r["seed"] == 26101 and r["history"] == "odd04" and r["age"] == 24
+        )
+        fig, axs = plt.subplots(2, 2, figsize=(10, 6), constrained_layout=True)
+        for o in range(2):
+            axs[0, o].plot(pm.TIMES, y[i, 2, :, o], label="Reference")
+            axs[0, o].plot(pm.TIMES, p[i, 2, :, o], "--", label="Current centers")
+            axs[0, o].plot(pm.TIMES, pg[i, 2, :, o], ":", label="t50 + unchanged G")
+            for j, sign in [(1, "−.02"), (2, "+.02")]:
+                axs[1, o].plot(
+                    pm.TIMES, y[i, j, :, o] - y[i, 0, :, o], label="True " + sign
+                )
+                axs[1, o].plot(
+                    pm.TIMES,
+                    p[i, j, :, o] - p[i, 0, :, o],
+                    "--",
+                    label="Predicted " + sign,
+                )
+        for ax in axs.flat:
+            ax.ticklabel_format(axis="y", style="sci", scilimits=(0, 0))
+            ax.set_xlabel("h since diagnostic probe")
+        axs[0, 0].set_title("R_after: mass")
+        axs[0, 1].set_title("R_after: signed moment")
+        axs[1, 0].set_title("D1: mass")
+        axs[1, 1].set_title("D1: signed moment")
+        axs[0, 0].legend()
+        axs[1, 0].legend()
+        fig.suptitle(
+            "Prospectively selected first written fresh preparation, unseen age24"
+        )
+        fig.savefig(out / "fresh-response.png", dpi=160)
+        plt.close(fig)
+        z = arrays(fresh / "retained-centers.npz")
+        fig, axs = plt.subplots(1, 3, figsize=(10, 3), constrained_layout=True)
+        for o, name in enumerate("ABC"):
+            axs[o].plot(x[:, o] - z["z0"][:, o], label="True displacement")
+            axs[o].plot(z["z"][:, o] - z["z0"][:, o], "--", label="G displacement")
+            axs[o].set(title=name, xlabel="Preparation/history/age row")
+            axs[o].ticklabel_format(axis="y", style="sci", scilimits=(0, 0))
+        axs[0].legend()
+        fig.savefig(out / "pre-event-geometry.png", dpi=160)
+        plt.close(fig)
+        m = load(ROOT / "frozen-01/selected.json")
+        numeric = {
+            k: int(np.asarray(m[k]).size)
+            for k in ["mean", "scale", "bases", "scales", "coefficients"]
+        }
+        pm.save_json(
+            out / "accounting.json",
+            {
+                "selected_family": m["family"],
+                "active_response_values": numeric,
+                "response_total": sum(numeric.values()),
+                "G_active": 37,
+                "amplitude_normalizer": 1,
+                "age_normalization_values": 2,
+                "age_spline_knots": 4 if m["family"] == "spline" else 0,
+                "model_bytes": (ROOT / "frozen-01/selected.json").stat().st_size,
+                "G_bytes": (ROOT / "frozen-01/G.json").stat().st_size,
+                "retained_centers": 3,
+                "counter": 1,
+                "external_context": [
+                    "conditioning amplitude",
+                    "known age at requested probe",
+                ],
+                "output_values_per_query": 322,
+                "amplitude_queries_per_triplet": 3,
+                "feature_count": len(m["coefficients"]),
+                "coefficient_columns": 6 * m["rank"],
+                "basis_products_per_query": 2,
+                "geometry_rate_evaluations_per_step": 4,
+                "initial_acquisition": "one field scan at50 for retained path; current-event field scan for snapshot",
+                "no_post_event_state": True,
+            },
+        )
+    pm.save_json(
+        out / "resource-previous.json",
+        {
+            "cpu_seconds_before_report": budget.previous,
+            "scope": "All new sequential scientific stages including failed attempts plus30-second inspection allowance",
+        },
+    )
+    budget.finish()
