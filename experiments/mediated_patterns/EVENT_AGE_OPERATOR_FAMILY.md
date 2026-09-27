@@ -253,3 +253,11 @@ errors; fifteen-state age18 failure, its old explicit-age comparator failure and
 partial exact-center repair; and the later fixed-age18 center-only snapshot and
 retained successes. This result neither erases those nor identifies minimal
 state, physical modes, unique storage, general closure or practical utility.
+
+Scientific cost is1029.16 CPU seconds (17.15 minutes), including the failed
+reporting import and30-second inspection allowance. Development remained under
+1200 seconds; the untouched fresh reserve was not spent to search for a pass.
+No new dependencies, paid compute or parallel scientific panels were used.
+Publication and fast regression checks are separate. The portable package and
+PR review record exact source revisions, output seals, model/branch hashes,
+software checks and actual merge confirmations. No automatic successor follows.
