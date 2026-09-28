@@ -193,3 +193,16 @@ def test_score_reconstruction_and_unresolved_is_not_pass():
     assert all(g["passed"] is False for g in d)
     gates = scores(y, p, rows, {"D1/whole": [1.0, 1.0], "D1/late": [1.0, 1.0]})
     assert all(g["passed"] is None for g in gates if g["kind"] == "D1")
+
+
+def test_two_atlas_densities_share_exact_coordinates():
+    x, ages, _groups, y, _truth = fixture()
+    coarse = np.isin(ages, [10, 20, 30])
+    rep = om.representation(x[coarse], y[coarse])
+    a = am.fit(x[coarse], ages[coarse], y[coarse], [10, 20, 30], rep=rep)
+    b = am.fit(x, ages, y, sorted(set(ages)), rep=rep)
+    for key in ("mean", "scale", "bases", "scales"):
+        assert a[key] == b[key]
+    for i, node in enumerate(a["nodes"]):
+        j = b["nodes"].index(node)
+        np.testing.assert_array_equal(a["coefficients"][i], b["coefficients"][j])

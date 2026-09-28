@@ -85,3 +85,11 @@ Pre-fit instrument review: at coarse held20, a naive nearest-three distance tie
 could pick10/15/18 and extrapolate. The frozen quadratic rule now requires the
 bracketing pair plus nearest third, selecting15/18/30. This pre-outcome correction
 preserves local interpolation; no scientific fit or held response score had run.
+
+For each paired coarse/refined held-age fold, freeze shared center scaling and
+rank4 bases from COARSE calibration rows only, excluding the target age and
+preparation. Fit added-node coefficients in exactly those coordinates. Thus
+refinement changes calibrated context support, not normalization or SVD axes;
+coarse and refined copies of an existing node have identical coefficients.
+Independent fixed-node qualification uses all training nodes' common coordinates.
+This comparator control was fixed before any operator fit or interpolation score.

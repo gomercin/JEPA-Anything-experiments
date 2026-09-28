@@ -59,12 +59,12 @@ def interpolate(nodes, values, age, family):
     return np.tensordot(weights, y, axes=(0, 0))
 
 
-def fit(x, ages, y, nodes, ridge=0.001):
+def fit(x, ages, y, nodes, ridge=0.001, rep=None):
     nodes = nodes_checked(nodes)
     ages = np.asarray(ages)
     if set(ages) != set(nodes):
         raise ValueError("Training ages must equal calibrated nodes; no held target")
-    rep = om.representation(x, y, rank=4)
+    rep = om.representation(x, y, rank=4) if rep is None else rep
     coefficients = []
     for age in nodes:
         tr = ages == age

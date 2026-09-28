@@ -117,7 +117,13 @@ def fit(out, args, budget):
                 test = (groups == group) & target
                 filename = f"atlas-{label}-{held}-{group}.json"
                 if args.family == "linear":
-                    model = am.fit(x[train], ages[train], y[train], calibrated)
+                    # Both densities use identical coordinates built from coarse
+                    # calibration rows only, excluding the target and preparation.
+                    base = om.training_mask(groups, ages, group, held) & np.isin(
+                        ages, am.COARSE
+                    )
+                    rep = om.representation(x[base], y[base])
+                    model = am.fit(x[train], ages[train], y[train], calibrated, rep=rep)
                     pm.save_json(out / filename, model)
                     model_path = out / filename
                 else:
@@ -135,6 +141,10 @@ def fit(out, args, budget):
                         "held_age": held,
                         "nodes": calibrated,
                         "training_indices": np.flatnonzero(train).tolist(),
+                        "representation_indices": np.flatnonzero(
+                            om.training_mask(groups, ages, group, held)
+                            & np.isin(ages, am.COARSE)
+                        ).tolist(),
                         "test_indices": np.flatnonzero(test).tolist(),
                         "model": str(model_path),
                         "model_sha256": digest(model_path),
