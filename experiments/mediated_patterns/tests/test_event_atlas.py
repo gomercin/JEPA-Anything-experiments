@@ -284,3 +284,52 @@ def test_retained_and_repeated_stages_require_snapshot_pass(tmp_path, monkeypatc
     for stage in (v.retained, v.repeated):
         with pytest.raises(ValueError, match="napshot"):
             stage(tmp_path, SimpleNamespace(), None)
+
+
+def test_retained_query_uses_t50_only_until_prediction_seal(tmp_path, monkeypatch):
+    from types import SimpleNamespace
+
+    from experiments.mediated_patterns import event_atlas_validation as v
+    from experiments.mediated_patterns import geometry_model as gm
+
+    x, ages, _groups, y, _truth = fixture()
+    model = am.fit(x, ages, y, sorted(set(ages)))
+    g = gm.fit(x, np.zeros_like(x), kind="drift")
+    monkeypatch.setattr(v, "ROOT", tmp_path)
+    for folder in ("fresh-analysis-01", "frozen-01", "fresh-01", "retained-01"):
+        (tmp_path / folder).mkdir()
+    pm.save_json(
+        tmp_path / "fresh-analysis-01/decision.json", {"snapshot_qualified": True}
+    )
+    frozen = tmp_path / "frozen-01"
+    pm.save_json(frozen / "model.json", model)
+    pm.save_json(frozen / "G.json", g)
+    pm.save_json(frozen / "freeze.json", {"family": "quadratic", "floors": {}})
+    base, out = tmp_path / "fresh-01", tmp_path / "retained-01"
+    save_npz_exclusive(base / "boundary-50.npz", states=np.ones((1, 2, 768)) * 7)
+    rows = [
+        {"seed": 1, "history": "none", "start_index": 0, "age": a} for a in (24, 25)
+    ]
+    pm.save_json(base / "rows.json", rows)
+
+    def initial_extract(state, **kwargs):
+        np.testing.assert_array_equal(state, np.ones((2, 768)) * 7)
+        return x[0]
+
+    monkeypatch.setattr(pm, "extract", initial_extract)
+
+    def evaluator(path):
+        assert path == base
+        assert (out / "seal.json").exists()
+        assert (out / "predictions.npz").exists()
+        xx = np.array([x[0], x[0]])
+        yy = am.predict_panel(model, xx, [24, 25], "quadratic")
+        return xx, yy, rows, np.array([24, 25]), np.ones(2)
+
+    monkeypatch.setattr(v, "dataset", evaluator)
+    v.retained(
+        out,
+        SimpleNamespace(data=base),
+        SimpleNamespace(begin=lambda *a: None, finish=lambda: None),
+    )
+    assert json.loads((out / "summary.json").read_text())["exposed_diagnostic"]
