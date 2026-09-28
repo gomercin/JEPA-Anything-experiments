@@ -582,3 +582,114 @@ def report(out, args, budget):
     # Compact new evaluation tables refer to old inputs by their recorded identities.
     save_npz(out / "evaluation-table.npz", x=x, y=y, ages=ages)
     budget.finish()
+
+
+def details(out, args, budget):
+    """Final numerical margins, access accounting and unambiguous sign summaries."""
+    budget.begin("final-qualified-scales-and-boundaries")
+    gates = load(ROOT / "report-01/fresh-final-scores.json")
+    signs = {}
+    for age in (24, 25):
+        for amp in (-0.02, 0.02):
+            part = [g for g in gates if g["age"] == age and g["a"] == amp]
+            signs[f"{age}/{amp}"] = {
+                kind: {
+                    "worst_relative": max(
+                        g["relative"] for g in part if g["kind"] == kind
+                    ),
+                    "max_error_rms": max(
+                        g["error_rms"] for g in part if g["kind"] == kind
+                    ),
+                    "max_error_absolute": max(
+                        g["error_max"] for g in part if g["kind"] == kind
+                    ),
+                    "failed": sum(
+                        g["passed"] is False for g in part if g["kind"] == kind
+                    ),
+                    "unresolved": sum(
+                        not g["resolved"] for g in part if g["kind"] == kind
+                    ),
+                }
+                for kind in ("R_without", "R_after", "D1")
+            }
+    pm.save_json(out / "fresh-by-sign.json", signs)
+    repeated = load(ROOT / "repeated-01/scores.json")
+    adverse = {}
+    for model in (
+        "raw-addition",
+        "common-baseline-addition",
+        "true-single-event-addition",
+    ):
+        w = max(
+            (
+                r
+                for r in repeated
+                if r["model"] == model
+                and r["schedule"] == "timing"
+                and r["kind"] == "D12"
+            ),
+            key=lambda r: r["relative"],
+        )
+        adverse[model] = dict(
+            **w,
+            error_over_floor=w["error_rms"] / w["floor"],
+            excess_over_10pct_in_floor_units=(w["error_rms"] - 0.1 * w["magnitude"])
+            / w["floor"],
+        )
+    pm.save_json(out / "repeated-adverse.json", adverse)
+    pm.save_json(
+        out / "accounting.json",
+        {
+            "calibrated_nodes": 8,
+            "coefficients_per_node": 240,
+            "coefficient_values": 1920,
+            "common_basis_values": 1288,
+            "center_scaling_values": 6,
+            "output_scaling_values": 4,
+            "active_fit_basis_scaling_values": 3218,
+            "node_context_values": 8,
+            "amplitude_normalizer_values": 1,
+            "anchors": 3,
+            "response_grid_values": 161,
+            "conditioning_inputs": ["amplitude", "known event age"],
+            "current_measurements": 3,
+            "snapshot_acquisition": "One 2x768 field snapshot scanned per alternative forecast; twelve fresh forecast cases",
+            "evolving_response_coordinates": 0,
+            "output_values_per_query": 322,
+            "output_values_per_zero_minus_plus_triplet": 966,
+            "quadratic_coefficient_query_multiply_adds": 3536,
+            "direct_three_operator_query_multiply_adds": 9414,
+            "cost_scope": "Feature construction, interpolation weights, scaling and allocations additional; counts are not a benchmark",
+            "fixed_age_active_values": 1538,
+            "coarse_atlas_active_values": 2498,
+            "prior_global_spline_active_values": 2258,
+            "retained_G": {
+                "status": "exposed diagnostic only",
+                "centers": 3,
+                "counter": 1,
+                "static_values": 37,
+                "rate_evaluations_per_step": 4,
+                "field_access": "t50 only; no event-boundary refresh",
+            },
+            "repeated_comparator_queries": 4,
+            "repeated_contexts": 2,
+            "field_reference": "Two 768-value fields; each 80-unit probe/sham pair advances 12800 steps per branch at dt=.00625; preparation and event gap additional",
+        },
+    )
+    pm.save_json(
+        out / "limits.json",
+        {
+            "outcome": "LOCAL OPERATOR ATLAS SUFFICIENT",
+            "fresh_snapshot": True,
+            "fresh_age24_fitted": False,
+            "retained_fresh_claim": False,
+            "pchip": "NOT_RUN; quadratic qualified",
+            "fourth_new_age": "NOT_RUN",
+            "fresh_repeated": "NOT_RUN",
+            "composition_correction": "NOT_RUN",
+            "repeated_threshold_margin": "Centered D12 failure remains recorded, but its excess over 10% is below the inherited empirical numerical floor",
+            "sign_table_note": "report-01/fresh-by-sign.json uses cross-sign R_without deduplication, so the positive-only baseline summary has no entries; its zero is NOT zero physical error. This file replaces that presentation with explicit per-sign maxima.",
+            "resolution_scope": "Three held development ages and one fresh age; no universal spacing law or adaptive rule validated",
+        },
+    )
+    budget.finish()

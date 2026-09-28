@@ -87,6 +87,7 @@ def main():
             "fit",
             "curvature",
             "report",
+            "details",
             "freeze",
             "fresh",
             "analyze",
@@ -125,7 +126,7 @@ def main():
         and args.data is not None
         and args.data.name == "fresh-01"
     )
-    fresh_stage |= args.stage == "report" and (ROOT / "fresh-01").is_dir()
+    fresh_stage |= args.stage in ("report", "details") and (ROOT / "fresh-01").is_dir()
     if fresh_stage and not (ROOT / "frozen-01/freeze.json").is_file():
         (ROOT / ".active").unlink()
         raise ValueError("Qualified frozen contract required before fresh-stage budget")
