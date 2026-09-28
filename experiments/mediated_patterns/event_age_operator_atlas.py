@@ -80,7 +80,19 @@ def main():
     p.add_argument(
         "--stage",
         required=True,
-        choices=["pilot", "develop", "refine", "fit", "curvature", "report"],
+        choices=[
+            "pilot",
+            "develop",
+            "refine",
+            "fit",
+            "curvature",
+            "report",
+            "freeze",
+            "fresh",
+            "analyze",
+            "retained",
+            "repeated",
+        ],
     )
     p.add_argument("--output", required=True, type=Path)
     p.add_argument("--data", type=Path)
@@ -108,7 +120,16 @@ def main():
     fd = os.open(ROOT / ".active", os.O_CREAT | os.O_EXCL | os.O_WRONLY)
     os.close(fd)
     previous = 30 + sum(load(p)["cpu_seconds"] for p in ROOT.glob("*/budget.json"))
-    budget = HistoryBudget(previous, 1260)
+    fresh_stage = args.stage in ("fresh", "analyze", "retained", "repeated") or (
+        args.stage == "refine"
+        and args.data is not None
+        and args.data.name == "fresh-01"
+    )
+    fresh_stage |= args.stage == "report" and (ROOT / "fresh-01").is_dir()
+    if fresh_stage and not (ROOT / "frozen-01/freeze.json").is_file():
+        (ROOT / ".active").unlink()
+        raise ValueError("Qualified frozen contract required before fresh-stage budget")
+    budget = HistoryBudget(previous, 1800 if fresh_stage else 1260)
     started, status = False, "FAILED"
     try:
         safe_output(args.output)
@@ -131,6 +152,10 @@ def main():
             panel(args.output, args, budget, args.stage == "pilot")
         elif args.stage == "refine":
             inherited.refine(args.output, args, budget)
+        elif args.stage in ("freeze", "fresh", "analyze", "retained", "repeated"):
+            from . import event_atlas_validation as validation
+
+            getattr(validation, args.stage)(args.output, args, budget)
         else:
             from . import event_atlas_analysis as analysis
 

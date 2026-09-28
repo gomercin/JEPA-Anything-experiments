@@ -206,3 +206,81 @@ def test_two_atlas_densities_share_exact_coordinates():
     for i, node in enumerate(a["nodes"]):
         j = b["nodes"].index(node)
         np.testing.assert_array_equal(a["coefficients"][i], b["coefficients"][j])
+
+
+def test_actual_fresh_runner_seals_before_every_future(tmp_path, monkeypatch):
+    from types import SimpleNamespace
+
+    from experiments.mediated_patterns import event_atlas_validation as v
+    from experiments.mediated_patterns import geometry_assay, geometry_evolution
+    from experiments.mediated_patterns import organization_response as org
+    from experiments.mediated_patterns import source_receiver_relay as relay
+
+    x, ages, _groups, y, _truth = fixture()
+    model = am.fit(x, ages, y, sorted(set(ages)))
+    frozen = tmp_path / "frozen"
+    frozen.mkdir()
+    pm.save_json(frozen / "model.json", model)
+    pm.save_json(
+        frozen / "freeze.json",
+        {
+            "sources": {},
+            "models": {},
+            "development_groups": [1],
+            "ages": [24, 25],
+            "family": "quadratic",
+        },
+    )
+    monkeypatch.setattr(v, "FRESH", (999,))
+    monkeypatch.setattr(v, "source_hashes", dict)
+    monkeypatch.setattr(org, "isolated_components", lambda *a: None)
+    monkeypatch.setattr(relay, "prepare", lambda *a: np.zeros((2, 768)))
+    monkeypatch.setattr(geometry_assay, "initialize_written", lambda state, *a: state)
+    monkeypatch.setattr(geometry_evolution, "unforced", lambda state, *a: ([state], []))
+    monkeypatch.setattr(pm, "extract", lambda *a, **k: x[0])
+    out = tmp_path / "out"
+    out.mkdir()
+    calls = []
+
+    def current(state, *a):
+        assert not (out / "seal.json").exists()
+        calls.append("current")
+        return state
+
+    def future(*args):
+        seal = json.loads((out / "seal.json").read_text())
+        assert all(
+            digest(out / name) == sha for name, sha in seal["predictions"].items()
+        )
+        calls.append("future")
+        return np.zeros((161, 2))
+
+    monkeypatch.setattr(v, "boundary", current)
+    monkeypatch.setattr(v, "response_pair", future)
+    v.fresh(
+        out,
+        SimpleNamespace(data=frozen),
+        SimpleNamespace(begin=lambda *a: None, finish=lambda: None),
+    )
+    assert calls == ["current"] * 4 + ["future"] * 12
+    with pytest.raises(FileExistsError):
+        v.fresh(
+            out,
+            SimpleNamespace(data=frozen),
+            SimpleNamespace(begin=lambda *a: None, finish=lambda: None),
+        )
+
+
+def test_retained_and_repeated_stages_require_snapshot_pass(tmp_path, monkeypatch):
+    from types import SimpleNamespace
+
+    from experiments.mediated_patterns import event_atlas_validation as v
+
+    monkeypatch.setattr(v, "ROOT", tmp_path)
+    (tmp_path / "fresh-analysis-01").mkdir()
+    pm.save_json(
+        tmp_path / "fresh-analysis-01/decision.json", {"snapshot_qualified": False}
+    )
+    for stage in (v.retained, v.repeated):
+        with pytest.raises(ValueError, match="napshot"):
+            stage(tmp_path, SimpleNamespace(), None)

@@ -105,3 +105,31 @@ Direct-curve interpolation agrees within4.24e-22 absolute, so this is not a
 coefficient-coordinate artifact for the linear method. The predicted curvature
 and residual at20 justify the declared local quadratic test, reusing the same
 frozen node fits. No new age, regularization, basis or physical descriptor.
+
+## Development qualification and prospective fresh freeze
+
+The local quadratic passes every held-age gate: worst D1 at15/18/20 is
+1.931%/3.222%/5.874%, versus coarse23.003%/22.953%/16.826%. All three improve
+by more than20%; all R gates pass. No PCHIP run is needed. Direct prediction
+and coefficient interpolation agree within6.36e-22 absolute. The qualified
+stencils are14/17/18,15/17/20,17/18/25 respectively. This is grouped development,
+not yet a fresh context result.
+
+Freeze the eight-node quadratic atlas with ridge.001, rank4/4, common scaling
+and bases from all COARSE-node development rows; fit each of eight node operators
+in those coordinates. No held24 outcomes have been generated. Its automatic
+stencil is18/20/25 (bracket20/25, nearest third18 under the declared tie rule).
+Fresh seeds26101–26103, none/odd04, both signs, ages24 and25. All12 triplet
+predictions will be saved before any conditioning future. Linear uses the same
+frozen nodes as a control. No further fitting or descriptor selection.
+
+Only after snapshot gates pass, perform an EXPOSED retained diagnostic on the
+same preparations using unchanged G and only saved t50 fields; no new fresh
+retained claim. Refine the worst fresh24 contrast at halfdt/doubleN under the
+frozen numerical rule. The empirical fresh bound can enlarge the reported
+resolution estimate but cannot relax the relative-error target or hide a miss.
+If the snapshot prerequisite passes, permit the requested exposed historical
+independent-addition comparison. Preserve literal R10+R01−R00 and the diagnostic
+sum of independently predicted D1/D2 on one predicted baseline, because the two
+zero-event context queries can have different regression residuals. Neither
+receives true R00. K12 stays separate; no composition fitting or new repeated panel.
