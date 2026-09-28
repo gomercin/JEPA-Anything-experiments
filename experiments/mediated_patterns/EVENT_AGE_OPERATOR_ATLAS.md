@@ -1,5 +1,28 @@
 # Local event-age operator atlas
 
+**LOCAL OPERATOR ATLAS SUFFICIENT.** Three added calibration ages make the
+context-resolution hypothesis useful: holding scaling, bases and existing-node
+coefficients identical, local quadratic interpolation passes all held ages
+15/18/20. The frozen eight-node atlas then passes all 240 distinct fresh snapshot
+gates at unseen age 24 and control age 25, on three new preparations and both
+conditioning signs. No extra physical descriptor or response-memory state is used.
+
+| Held development age | Coarse quadratic D1 | Refined quadratic D1 | Coarse → refined bracket | Refined stencil |
+|---|---:|---:|---|---|
+| 15 | 23.00% | 1.93% | 10–18 → 14–17 | 14,17,18 |
+| 18 | 22.95% | 3.22% | 15–20 → 17–20 | 15,17,20 |
+| 20 | 16.83% | 5.87% | 18–30 → 18–25 | 17,18,25 |
+
+Worst fresh age-24 R/D1 errors are **0.104% / 1.423%**. Unchanged G also passes
+an **exposed diagnostic** from the same preparations' t50 snapshots; this is
+not an independently fresh retained qualification. Historical repeated addition
+improves substantially but retains a numerically marginal D12 miss and inaccurate
+resolved K12. The primary positive claim is bounded single-event context-indexed
+interpolation, not autonomous memory or repeated closure.
+
+[Portable evidence, exact commands, figures and critical review](../../evidence/event-age-operator-atlas-2026-09-28/README.md)
+retain the linear/coarse failures, frozen models, all branches and prediction seals.
+
 Living prospective record, 2026-09-28. Base inspected: lab main
 `7275c360a3caf2ae4f82ba0a283fdc520b92af58`. No later lab continuation.
 The current Atlas roadmap and two existing question homes were consulted.
@@ -133,3 +156,174 @@ independent-addition comparison. Preserve literal R10+R01−R00 and the diagnost
 sum of independently predicted D1/D2 on one predicted baseline, because the two
 zero-event context queries can have different regression residuals. Neither
 receives true R00. K12 stays separate; no composition fitting or new repeated panel.
+
+## Qualified scope and context resolution
+
+The new panel contains 12 exposed preparation groups, 24 none/odd04 histories,
+and 72 new age/history cases. All 216 new response pairs (three conditioning
+amplitudes including zero per case) pass the inherited separated-pattern screens.
+The pilot's three pairs are reused within that count. The old five-age current
+states/targets match their published hashes and are reused read-only; no old
+reference panel is rerun. Grouped fixed-node errors at ages 14/17/25 are
+1.034%/1.700%/1.561% D1, with 480 gates per age. All eight maps qualify in the
+new common representation; older five-age claims remain grouped development only.
+
+The complete-age tests additionally exclude every descendant of the evaluated
+preparation, including from SVD and scaling. Both atlas densities use exactly
+the same coarse-training representation within each fold; shared old-node
+coefficients are bit-identical. The rank-4 common projection itself has worst
+R/D1 errors 0.136%/1.535%. No rank increase, ridge search, extra age or PCHIP fit.
+
+Linear interpolation is a retained failed candidate. Its coarse/refined D1
+errors are 83.47/8.57%, 21.47/5.43%, and 30.55/19.56% at 15/18/20; the refined
+age-20 panel retains 24 failed gates. Quadratic coarse panels retain 44/24/22
+misses respectively; refined panels have zero of 1,440 distinct gates failing
+or unresolved. The quadratic's worst errors fall by 91.6%, 86.0%, and 65.1%.
+Direct interpolation of neighboring predicted curves agrees with coefficient
+interpolation within 6.36e-22 absolute; a coordinate artifact does not explain
+these linear/quadratic results.
+
+Prediction-space curvature remains largest near 10–15. For triples
+10/14/15, 14/15/17, 15/17/18, 17/18/20, 18/20/25, and 20/25/30, maximum
+RMS second divided differences in mass are respectively
+4.319e-12, 2.520e-12, 1.883e-12, 1.311e-12, 7.731e-13, and 3.555e-13
+per age-unit squared; moment values are
+1.596e-12, 9.138e-13, 6.777e-13, 4.665e-13, 2.726e-13, and 1.238e-13.
+Each comparison uses identical supported centers (144–167 inputs per triple),
+both signs, and the declared empirical support screen. Raw slope differences,
+per-output/window and common-basis coordinates are also saved. Held-context
+curvature diagnostics use only non-target node fits. These are properties of
+fitted response curves, not identified physical modes.
+
+In this panel, three-unit bracketing intervals around 15/18 suffice even for
+linear interpolation. The seven-unit bracket at 20 does not; a quadratic using
+17/18/25 suffices. Its maximum target-to-stencil distances at 15/18/20 are
+3/3/5 units. Fresh age 24 uses bracket 20/25 and stencil 18/20/25 (maximum
+distance six), where curvature is lower. This is a finite empirical resolution
+envelope, not a universal spacing law. No power law or adaptive refinement rule
+is validated from these few intervals. The result supports sparse sampling as
+a material contributor; the old global polynomial/spline fits are not rerun or
+retroactively upgraded.
+
+## Fresh snapshot, numerical qualification and retained diagnostic
+
+The frozen runtime source/model precede any outcomes for seeds 26101–26103.
+All twelve zero/negative/positive forecast triplets at ages 24 and 25 were
+persisted and sealed before any conditioning future. Age 24 is absent from
+calibration, scaling, basis construction and candidate selection. No fresh-driven
+fit, interpolation change or repair was made.
+
+| Fresh assay | Worst R_after, negative / positive | Worst D1, negative / positive | Distinct gates |
+|---|---:|---:|---:|
+| Age 24, unseen | 0.1040% / 0.1042% | 1.4059% / 1.4226% | 120/120 pass |
+| Age 25, calibrated control | 0.1040% / 0.1042% | 0.3854% / 0.3757% | 120/120 pass |
+
+The linear control also passes this particular fresh age (worst D1 2.181%);
+it remains unqualified for the complete development envelope because age 20
+failed. The chosen quadratic was frozen from development, not selected from
+these fresh outcomes. All mass/moment and whole/late R and resolved D1 gates pass.
+
+Refinements use matched half-dt/double-N branches at development ages 14 and 25
+and the worst fresh age-24 case. Combining their conservative bounds with the
+inherited byte-identical age-20 qualification gives D1 floors:
+
+| Window | Mass | Signed moment |
+|---|---:|---:|
+| Whole | 2.3490e-13 | 3.3852e-13 |
+| Late | 2.2768e-13 | 4.4396e-13 |
+
+The fresh adverse case is 26103/odd04, +.02, whole mass: signal RMS
+4.3201e-11, residual RMS 6.1458e-13, maximum residual 1.0675e-12.
+The RMS residual is 2.62 times its bound and passes the 10% gate comfortably.
+True and predicted absolute peaks both occur at h=80 with the correct negative
+sign. Other residuals fall below their bounds; finer relative precision is then
+unresolved. Direct D1 refinement and larger absolute-Y discrepancies remain
+separate. These empirical bounds concern matched continuations from supplied
+current snapshots, not full-preparation continuum accuracy.
+
+After the snapshot pass, unchanged G was applied to only saved t50 centers on
+these now-exposed preparations. Both ages again pass all 240 gates: worst
+age-24 R/D1 is 0.1043%/1.4398%, age-25 D1 0.3986%. No event-boundary field enters
+that prediction; exact current arrays are opened only after its forecast seal.
+Maximum pre-event center errors are [1.8629e-6, 7.0001e-7, 2.6337e-7]. The
+three centers plus counter are checkpointed after ten steps. This is a useful
+exposed deployment diagnostic, **not** fresh once-measured qualification. It
+neither repairs old weak A-motion misses nor tests post-event physical geometry.
+
+## Conditional exposed repeated diagnostic
+
+No sequence outcome enters the atlas fit. Only the already exposed +.02/−.02
+cancellation prefixes at 60/80/90 and 60/75/90 are examined; no new repeated
+reference or fresh sequence is generated. Four independent single-event queries
+use G-predicted no-event centers, actual event ages and the frozen atlas.
+The old matched eight-branch arrays and floors are reused with recorded hashes.
+
+Both isolated event controls pass. In particular, the formerly troublesome
+second-only age-15 D1 now has worst error 0.4178%; second-only age-10 reaches
+0.7595%. Thus the old ~122%/100% timing miss is substantially removed.
+
+| Addition diagnostic | Schedule | Worst R11 | Worst D12 | Worst D2\|1 |
+|---|---|---:|---:|---:|
+| Literal R10+R01−R00 | 60/80/90 | 0.1357% | 7.606% | 4.816% |
+| Literal R10+R01−R00 | 60/75/90 | 0.1357% | 27.912% | 2.598% |
+| Common predicted baseline | 60/80/90 | 0.1357% | 3.173% | 1.613% |
+| Common predicted baseline | 60/75/90 | 0.1357% | 13.487% | 1.109% |
+| Evaluator true single-event addition | 60/75/90 | 0.00121% | 13.345% | 1.115% |
+
+The two zero-event context queries approximate the same physical R00 but have
+different regression errors. Literal addition retains that inconsistency.
+The declared common-baseline diagnostic sums independently predicted event
+contrasts onto one predicted baseline; it uses no true baseline or fit correction.
+It reduces ten timing D12 misses to one. At 18103/none, late moment, signal
+1.2088e-11 and error 1.6303e-12 give 13.487%, versus floor 5.0736e-13.
+The error is 3.21 times the floor, but the excess over the 10% threshold is only
+0.83 floor units. True single-event addition gives 13.345% on the same case.
+The miss stays visible; its precise threshold margin is numerically marginal.
+This is cleaner evidence of a bounded addition residual than the old isolated
+age failure, not robust certification of a broad composition-specific boundary.
+
+Independent addition predicts zero K12. Sixteen of 24 K12 gates per schedule
+are resolved and missed at essentially 100%; eight are sub-floor and unresolved.
+K12 has no acceptance gate here. Neither the large R11 success nor good D2|1
+certifies accurate nonlinear combination. No composition correction, fresh
+repeated panel, autonomous event update or successor is attempted.
+
+## Costs, failures and preserved boundaries
+
+The eight-node atlas stores 240 coefficients per node (1,920 total), 1,288 common
+basis values, six center-scaling and four output-scaling values: **3,218 active
+fit/basis/scaling values**. Eight node ages, amplitude normalizer, ridge/rank
+metadata, three anchors and 161 output times are additional. One fixed-age map
+uses 1,538 active values; the five-node atlas 2,498; the prior global spline
+2,258. Calibrated context nodes are stored information, not free compression.
+
+Each snapshot query scans one current two-field, 768-site state to extract
+three centers, then receives amplitude and known age. There is no evolving
+response state, hidden PDE solve, true baseline, seed/history feature or future
+field access in inference. Coefficient interpolation uses one reconstructed
+operator per query: about 3,536 multiply-adds, plus feature/scaling and weight
+arithmetic. Direct three-operator curve interpolation uses about 9,414. The
+materialized response has 322 values; three independent amplitude queries use
+966 output values. These are operation counts, not a hardware speed benchmark.
+The reference pair advances 12,800 steps per branch over h=80, with preparation
+and event gap additional. G adds 37 active static values, three retained centers
+and a counter, and four rate evaluations per unit step. Repeated addition uses
+four response queries and two explicit age contexts, with multiple output buffers.
+
+Scientific cost is **1,026.70 CPU seconds (17.11 minutes)** including the
+30-second inspection/analysis allowance, all simulations, refinements, fits and
+reporting. No failed simulation or fitting execution occurred. Coarse and linear
+scientific failures remain fully retained. A reporting-only sign summary used
+cross-sign baseline deduplication; `details-01/fresh-by-sign.json` supplies the
+explicit per-sign maxima, and `details-01/limits.json` records the presentation
+correction. It changes no prediction, gate or scientific conclusion.
+
+All historical artifacts and reports remain unchanged: prior snapshot and
+fixed-age18 fresh/retained successes; bounded unforced response success with
+41.8%/25.1% A-motion misses; nine-state one-event success and repeated failure;
+composition-informed eleven-state standard-timing success and complete timing
+failure; fifteen-state age failure and older explicit-age failure; event-induced
+B/C and K12 limits; finite retention, relay/selectivity negatives and adapted
+reductions. No physical-mode identification, hidden-state necessity, minimality,
+unique storage, arbitrary timing/stream closure, full absolute-Y prediction or
+practical receiver claim follows. Only the two existing Atlas homes are updated.
