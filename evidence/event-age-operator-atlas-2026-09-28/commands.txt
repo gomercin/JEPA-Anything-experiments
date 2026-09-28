@@ -1,0 +1,54 @@
+# Sequential bounded scientific stages; every protocol and budget receipt is archived.
+# Existing repository .venv supplies NumPy/SciPy/Matplotlib; no new dependencies.
+# Restore inherited packages through their existing portable indexes, not this incremental archive.
+# Default repeated input root is /private/tmp/jepa-event-age-inherited/work/mediated_patterns/repeated_intervention_state.
+
+# source a80dba3476fbba9942f8cac188d35f0ed9c220e0
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage pilot --output work/mediated_patterns/event_age_operator_atlas/pilot-01
+
+# source bc1dfd64c217c506a56c3f8b087e9f104ab7aa6f
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage develop --output work/mediated_patterns/event_age_operator_atlas/develop-01
+
+# source b780bdcf779301792c7bcffe5879d392c7756171
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage refine --data work/mediated_patterns/event_age_operator_atlas/pilot-01 --index 0 --output work/mediated_patterns/event_age_operator_atlas/refine14-01
+
+# source b780bdcf779301792c7bcffe5879d392c7756171
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage refine --data work/mediated_patterns/event_age_operator_atlas/develop-01 --index 23 --output work/mediated_patterns/event_age_operator_atlas/refine25-01
+
+# source b780bdcf779301792c7bcffe5879d392c7756171
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage fit --family linear --output work/mediated_patterns/event_age_operator_atlas/fit-linear-01
+
+# source 213ddebb37e15d6953eecb43414a9592cd136a78
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage fit --family quadratic --output work/mediated_patterns/event_age_operator_atlas/fit-quadratic-01
+
+# source 213ddebb37e15d6953eecb43414a9592cd136a78
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage curvature --output work/mediated_patterns/event_age_operator_atlas/curvature-01
+
+# source a32891d663e7753ae9c579ebbb33b390a313d487
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage freeze --data work/mediated_patterns/event_age_operator_atlas/fit-quadratic-01 --output work/mediated_patterns/event_age_operator_atlas/frozen-01
+
+# source a32891d663e7753ae9c579ebbb33b390a313d487
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage fresh --data work/mediated_patterns/event_age_operator_atlas/frozen-01 --output work/mediated_patterns/event_age_operator_atlas/fresh-01
+
+# source e2438c41e3017a7f2d1972b082f7fa6a8c09a4db
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage analyze --data work/mediated_patterns/event_age_operator_atlas/fresh-01 --output work/mediated_patterns/event_age_operator_atlas/fresh-analysis-01
+
+# source e2438c41e3017a7f2d1972b082f7fa6a8c09a4db
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage refine --data work/mediated_patterns/event_age_operator_atlas/fresh-01 --index 10 --output work/mediated_patterns/event_age_operator_atlas/refine24-01
+
+# source 3c2b29cbcab355e44340acf0bb1191e09b2be68c
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage retained --data work/mediated_patterns/event_age_operator_atlas/fresh-01 --output work/mediated_patterns/event_age_operator_atlas/retained-01
+
+# source 3c2b29cbcab355e44340acf0bb1191e09b2be68c
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage repeated --output work/mediated_patterns/event_age_operator_atlas/repeated-01
+
+# source 3c2b29cbcab355e44340acf0bb1191e09b2be68c
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage report --output work/mediated_patterns/event_age_operator_atlas/report-01
+
+# source 8ff24b67c26fccb9298cd537248cf08328784ad0
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/private/tmp/jepa-atlas-mpl python -m experiments.mediated_patterns.event_age_operator_atlas --stage details --output work/mediated_patterns/event_age_operator_atlas/details-01
+
+# Fast checks, not scientific reruns:
+make check
+python evidence/event-age-operator-atlas-2026-09-28/restore.py --fixtures --verify-only
+python -m pytest evidence/event-age-operator-atlas-2026-09-28/tests -q
