@@ -265,6 +265,14 @@ def curvature(out, args, budget):
                     "supported_inputs": len(
                         supported(x, ages, nodes[j - 1 : j + 2], model)
                     ),
+                    "max_second_divided_difference": np.max(
+                        [
+                            r["second_divided_difference"]
+                            for r in records
+                            if r["ages"] == nodes[j - 1 : j + 2]
+                        ],
+                        axis=0,
+                    ).tolist(),
                     "max_curvature": np.max(
                         [
                             r["windows"]["whole"]
@@ -417,12 +425,12 @@ def report(out, args, budget):
     for o, name in enumerate(("mass", "signed moment")):
         ax.plot(
             [r["ages"][1] for r in c],
-            [r["max_curvature"][o] for r in c],
+            [r["max_second_divided_difference"][o] for r in c],
             "o-",
             label=name,
         )
     ax.set_xlabel("Middle calibration age (unequal triple spacing)")
-    ax.set_ylabel("Maximum RMS slope difference")
+    ax.set_ylabel("Maximum RMS second divided difference")
     ax.legend()
     fig.savefig(out / "operator-curvature.png", dpi=150)
     plt.close(fig)
