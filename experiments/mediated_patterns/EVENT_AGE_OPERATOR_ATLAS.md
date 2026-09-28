@@ -93,3 +93,15 @@ refinement changes calibrated context support, not normalization or SVD axes;
 coarse and refined copies of an existing node have identical coefficients.
 Independent fixed-node qualification uses all training nodes' common coordinates.
 This comparator control was fixed before any operator fit or interpolation score.
+
+## Development: fixed nodes and linear interpolation
+
+All eight fixed-node grouped panels pass480 distinct gates each. New14/17/25
+worst D1 errors are1.034%/1.700%/1.561%; worst R remains~.158%. Rank4 projection
+passes (worst D1 1.535%, R .136%); no representation change is needed.
+Linear coarse→refined worst held15/18/20 D1 errors fall
+83.47→8.572%,21.47→5.426%,30.55→19.562%. Refined15/18 pass;20 retains24 misses.
+Direct-curve interpolation agrees within4.24e-22 absolute, so this is not a
+coefficient-coordinate artifact for the linear method. The predicted curvature
+and residual at20 justify the declared local quadratic test, reusing the same
+frozen node fits. No new age, regularization, basis or physical descriptor.
