@@ -16,6 +16,7 @@ testpaths = [
   "evidence/event-age-response-2026-09-26/tests",
   "evidence/event-state-aliasing-2026-09-27/tests",
   "evidence/event-age-operator-family-2026-09-28/tests",
+  "evidence/event-age-operator-atlas-2026-09-28/tests",
 ]
 pythonpath = [
   ".",
