@@ -108,7 +108,7 @@ def main():
     fd = os.open(ROOT / ".active", os.O_CREAT | os.O_EXCL | os.O_WRONLY)
     os.close(fd)
     previous = 30 + sum(load(p)["cpu_seconds"] for p in ROOT.glob("*/budget.json"))
-    budget = HistoryBudget(previous, 1260 if args.stage != "report" else 1800)
+    budget = HistoryBudget(previous, 1260)
     started, status = False, "FAILED"
     try:
         safe_output(args.output)

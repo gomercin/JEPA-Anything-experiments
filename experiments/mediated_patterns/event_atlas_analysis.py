@@ -176,6 +176,8 @@ def fit(out, args, budget):
         if all(
             results[f"refined-{a}"][mode]["failed"] == 0
             and results[f"refined-{a}"][mode]["unresolved"] == 0
+            and results[f"refined-{a}"][mode]["by_kind"]["D1"]["worst_relative"]
+            <= 0.8 * results[f"coarse-{a}"][mode]["by_kind"]["D1"]["worst_relative"]
             for a in (15, 18, 20)
         )
     ]
@@ -266,4 +268,179 @@ def curvature(out, args, budget):
             ],
         },
     )
+    local_records = []
+    for label in ("coarse", "refined"):
+        for held in (15, 18, 20):
+            folds = load(ROOT / "fit-linear-01" / f"{label}-{held}-folds.json")
+            for fold in folds:
+                m = load(fold["model"])
+                ns = np.asarray(m["nodes"])
+                triple = ns[am.neighbors(ns, held, "quadratic")]
+                tr = np.asarray(fold["training_indices"])
+                local_x, local_ages = x[tr], ages[tr]
+                ii = supported(local_x, local_ages, triple, m)
+                values = []
+                for i in ii:
+                    for amp in (-0.02, 0.02):
+                        p = np.array(
+                            [
+                                am.predict(m, local_x[i], amp, a)
+                                - am.predict(m, local_x[i], 0.0, a)
+                                for a in triple
+                            ]
+                        )
+                        c = (p[2] - p[1]) / (triple[2] - triple[1]) - (p[1] - p[0]) / (
+                            triple[1] - triple[0]
+                        )
+                        values.append(rms(c))
+                local_records.append(
+                    {
+                        "atlas": label,
+                        "held_age": held,
+                        "held_group": fold["held_group"],
+                        "nodes": triple.tolist(),
+                        "supported_inputs": len(ii),
+                        "max_curvature": np.max(values, axis=0).tolist()
+                        if values
+                        else None,
+                        "target_age_used": False,
+                    }
+                )
+                budget.check()
+    pm.save_json(out / "held-context-curvature.json", local_records)
+    budget.finish()
+
+
+def report(out, args, budget):
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    budget.begin("atlas-report-and-adverse-case")
+    x, y, _rows, ages, _groups = combined()
+    decisions = {}
+    table = []
+    for family in ("linear", "quadratic", "pchip"):
+        folder = ROOT / f"fit-{family}-01"
+        if not folder.exists():
+            continue
+        d = load(folder / "decision.json")
+        decisions[family] = d
+        for key, r in d.get("results", {}).items():
+            for mode in ("coefficient", "direct"):
+                table.append(
+                    {
+                        "family": family,
+                        "atlas_target": key,
+                        "mode": mode,
+                        "bracket": r["bracket"],
+                        "bracket_width": r["bracket_width"],
+                        "neighbors": r["neighbors"],
+                        "max_neighbor_distance": r["max_neighbor_distance"],
+                        "summary": r[mode],
+                    }
+                )
+    pm.save_json(out / "comparison.json", table)
+    family = list(decisions)[-1]
+    folder = ROOT / f"fit-{family}-01"
+    # Diagnostic selection AFTER all predictions/gates are saved; never a fit input.
+    records = []
+    for age in (15, 18, 20):
+        for g in load(folder / f"refined-{age}-coefficient-scores.json"):
+            records.append(dict(**g, held_age=age))
+    worst = max((g for g in records if g["kind"] == "D1"), key=lambda g: g["relative"])
+    age = worst["held_age"]
+    saved = np.load(folder / f"refined-{age}-predictions.npz", allow_pickle=False)
+    local = worst["index"]
+    i = int(saved["indices"][local])
+    pred = saved["y"][local]
+
+    save_npz(out / "adverse.npz", truth=y[i], prediction=pred, x=x[i])
+    pm.save_json(
+        out / "adverse.json",
+        dict(
+            **worst,
+            family=family,
+            global_index=i,
+            error_over_floor=worst["error_rms"] / worst["floor"],
+        ),
+    )
+    fig, axes = plt.subplots(2, 2, figsize=(10, 6), constrained_layout=True)
+    j = 1 if worst["a"] < 0 else 2
+    for o, name in enumerate(("C mass", "C signed moment")):
+        axes[0, o].plot(pm.TIMES, y[i, j, :, o], label="true R_after")
+        axes[0, o].plot(pm.TIMES, pred[j, :, o], "--", label="atlas R_after")
+        axes[1, o].plot(pm.TIMES, (y[i, j] - y[i, 0])[:, o], label="true D1")
+        axes[1, o].plot(pm.TIMES, (pred[j] - pred[0])[:, o], "--", label="atlas D1")
+        axes[0, o].set_title(name)
+        for ax in axes[:, o]:
+            ax.legend(fontsize=8)
+            ax.set_xlabel("h since final probe")
+            ax.ticklabel_format(axis="y", style="sci", scilimits=(0, 0))
+    fig.suptitle(
+        f"Adverse held age {age}: {worst['seed']} {worst['history']}, a={worst['a']:+g}"
+    )
+    fig.savefig(out / "adverse-response.png", dpi=150)
+    plt.close(fig)
+    fig, axes = plt.subplots(1, 3, figsize=(12, 4), constrained_layout=True)
+    for ax, held in zip(axes, (15, 18, 20), strict=True):
+        for family, d in decisions.items():
+            for mode, style in (("coefficient", "o-"), ("direct", "x--")):
+                vals = [
+                    d["results"][f"{atlas}-{held}"][mode]["by_kind"]["D1"][
+                        "worst_relative"
+                    ]
+                    * 100
+                    for atlas in ("coarse", "refined")
+                ]
+                ax.plot([0, 1], vals, style, label=family + "/" + mode)
+        ax.axhline(10, color="black", linestyle=":")
+        ax.set_xticks([0, 1], ["coarse", "refined"])
+        ax.set_title(f"Held age {held}")
+        ax.set_ylabel("Worst D1 relative RMS (%)")
+    axes[-1].legend(fontsize=7)
+    fig.savefig(out / "resolution-comparison.png", dpi=150)
+    plt.close(fig)
+    c = load(ROOT / "curvature-01/summary.json")["triples"]
+    fig, ax = plt.subplots(figsize=(8, 4), constrained_layout=True)
+    for o, name in enumerate(("mass", "signed moment")):
+        ax.plot(
+            [r["ages"][1] for r in c],
+            [r["max_curvature"][o] for r in c],
+            "o-",
+            label=name,
+        )
+    ax.set_xlabel("Middle calibration age (unequal triple spacing)")
+    ax.set_ylabel("Maximum RMS slope difference")
+    ax.legend()
+    fig.savefig(out / "operator-curvature.png", dpi=150)
+    plt.close(fig)
+    physical = []
+    for p in (ROOT / "develop-01").glob("reference-*.json"):
+        meta = load(p)
+        physical.append(
+            {
+                "file": str(p),
+                "age": meta["age"],
+                "amplitude": meta["a"],
+                "qualified": meta["qualified"],
+                "event": meta["event"],
+            }
+        )
+    pm.save_json(out / "physical-summary.json", physical)
+    pm.save_json(
+        out / "status.json",
+        {
+            "development": decisions[family]["status"],
+            "fresh_age24": "NOT_RUN",
+            "retained_G": "NOT_RUN",
+            "repeated": "NOT_RUN",
+            "reserved_seeds": [26101, 26102, 26103],
+            "new_ages": [14, 17, 25],
+            "preparations": 12,
+        },
+    )
+    # Compact new evaluation tables refer to old inputs by their recorded identities.
+    save_npz(out / "evaluation-table.npz", x=x, y=y, ages=ages)
     budget.finish()

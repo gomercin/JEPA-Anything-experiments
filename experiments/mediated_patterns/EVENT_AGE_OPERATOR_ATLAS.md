@@ -72,3 +72,11 @@ Pilot14 cost9.15CPU seconds, all regime screens pass. Extrapolated full-panel
 cost~700CPU seconds plus two refinements leaves the fresh reserve intact.
 Proceed with the declared12 groups and exactly14/17/25. No pilot response
 was used to select interpolation parameters or alter the node rule.
+
+Before fitting, make “material improvement” operational: the refined atlas must
+reduce worst D1 error by at least20% relative to the coarse atlas at EACH held
+age, in addition to all gates passing. Local rule parameters stay as declared;
+no response-derived knot/slope choices. Direct PCHIP, if it alone qualifies,
+would be a separately costed multi-operator implementation, not equivalent to
+coefficient PCHIP. Both remain within the single declared shape-preserving family.
+The development/report ceiling stays1260 until a qualified fresh stage is frozen.
