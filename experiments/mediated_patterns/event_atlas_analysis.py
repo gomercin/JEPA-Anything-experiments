@@ -8,7 +8,7 @@ from . import present_state_model as pm
 from .event_age_operator_atlas import ROOT
 from .event_age_operator_family import ROOT as OLD
 from .event_age_operator_family import scores
-from .event_age_response import WINDOWS, rms
+from .event_age_response import WINDOWS, arrays, rms
 from .event_operator_analysis import dataset
 from .event_state_analysis import summary
 from .hybrid_pair import save_npz_exclusive as save_npz
@@ -435,7 +435,11 @@ def report(out, args, budget):
     fig.savefig(out / "operator-curvature.png", dpi=150)
     plt.close(fig)
     physical = []
-    for p in (ROOT / "develop-01").glob("reference-*.json"):
+    for p in [
+        p
+        for folder in ("pilot-01", "develop-01", "fresh-01")
+        for p in (ROOT / folder).glob("reference-*.json")
+    ]:
         meta = load(p)
         physical.append(
             {
@@ -447,18 +451,134 @@ def report(out, args, budget):
             }
         )
     pm.save_json(out / "physical-summary.json", physical)
-    pm.save_json(
-        out / "status.json",
-        {
-            "development": decisions[family]["status"],
-            "fresh_age24": "NOT_RUN",
-            "retained_G": "NOT_RUN",
-            "repeated": "NOT_RUN",
-            "reserved_seeds": [26101, 26102, 26103],
-            "new_ages": [14, 17, 25],
-            "preparations": 12,
-        },
-    )
+    status = {
+        "development": decisions[family]["status"],
+        "fresh_age24": "NOT_RUN",
+        "retained_G": "NOT_RUN",
+        "repeated": "NOT_RUN",
+        "reserved_seeds": [26101, 26102, 26103],
+        "new_ages": [14, 17, 25],
+        "development_preparations": 12,
+    }
+    if (ROOT / "fresh-analysis-01/decision.json").exists():
+        frozen = load(ROOT / "frozen-01/freeze.json")
+        fresh = ROOT / "fresh-01"
+        fx, fy, frows, _fa, _fg = dataset(fresh)
+        fp = arrays(fresh / "prediction-quadratic.npz")["y"]
+        final_floor = {
+            k: np.maximum(
+                v, load(ROOT / "refine24-01/refinement.json")["floors"][k]
+            ).tolist()
+            for k, v in frozen["floors"].items()
+        }
+        gates = scores(fy, fp, frows, final_floor)
+        pm.save_json(out / "fresh-final-scores.json", gates)
+        pm.save_json(out / "fresh-final-floors.json", final_floor)
+        ss = summary(gates)
+        status["fresh_age24"] = (
+            "PASS"
+            if not ss["failed"] and not ss["unresolved"]
+            else "FAIL_OR_UNRESOLVED"
+        )
+        status["fresh_preparations"] = 3
+        stats = {}
+        for age in (24, 25):
+            for a in (-0.02, 0.02):
+                stats[f"{age}/{a}"] = summary(
+                    [g for g in gates if g["age"] == age and g["a"] == a]
+                )
+        pm.save_json(out / "fresh-by-sign.json", stats)
+        worst = max(
+            (g for g in gates if g["age"] == 24 and g["kind"] == "D1"),
+            key=lambda g: g["relative"],
+        )
+        pm.save_json(
+            out / "fresh-adverse.json",
+            dict(**worst, error_over_floor=worst["error_rms"] / worst["floor"]),
+        )
+        i, j = worst["index"], 1 if worst["a"] < 0 else 2
+        fig, axes = plt.subplots(2, 2, figsize=(10, 6), constrained_layout=True)
+        for o, label in enumerate(("C mass", "C signed moment")):
+            for k, kind in enumerate(("R_after", "D1")):
+                target = fy[i, j] if k == 0 else fy[i, j] - fy[i, 0]
+                prediction = fp[i, j] if k == 0 else fp[i, j] - fp[i, 0]
+                axes[k, o].plot(pm.TIMES, target[:, o], label="true")
+                axes[k, o].plot(pm.TIMES, prediction[:, o], "--", label="frozen atlas")
+                axes[k, o].set_title(label + " " + kind)
+                axes[k, o].legend(fontsize=8)
+                axes[k, o].set_xlabel("h since probe")
+                axes[k, o].ticklabel_format(axis="y", style="sci", scilimits=(0, 0))
+        fig.suptitle(
+            f"Fresh age24 adverse: {worst['seed']} {worst['history']}, a={worst['a']:+g}"
+        )
+        fig.savefig(out / "fresh-response.png", dpi=150)
+        plt.close(fig)
+        if (ROOT / "retained-01/summary.json").exists():
+            rr = load(ROOT / "retained-01/summary.json")
+            status["retained_G"] = (
+                "EXPOSED_PASS"
+                if all(
+                    not v["failed"] and not v["unresolved"]
+                    for v in rr["by_age"].values()
+                )
+                else "EXPOSED_LIMIT"
+            )
+            zz = arrays(ROOT / "retained-01/predictions.npz")
+            fig, axs = plt.subplots(1, 3, figsize=(12, 4), constrained_layout=True)
+            for o, label in enumerate("ABC"):
+                axs[o].plot((fx - zz["z0"])[:, o], label="true event-boundary motion")
+                axs[o].plot(
+                    (zz["z"] - zz["z0"])[:, o], "x--", label="G predicted motion"
+                )
+                axs[o].set_title(label + " pre-event center")
+                axs[o].set_xlabel("history/age case index")
+                axs[o].legend(fontsize=7)
+            fig.savefig(out / "retained-geometry.png", dpi=150)
+            plt.close(fig)
+    if (ROOT / "repeated-01/scores.json").exists():
+        from . import repeated_intervention_model as rm
+
+        status["repeated"] = "EXPOSED_DIAGNOSTIC"
+        rr = load(ROOT / "repeated-01/scores.json")
+        result = {}
+        for model in sorted({r["model"] for r in rr}):
+            for schedule in ("cancel", "timing"):
+                for kind in sorted({r["kind"] for r in rr if r["model"] == model}):
+                    ss = [
+                        r
+                        for r in rr
+                        if r["model"] == model
+                        and r["schedule"] == schedule
+                        and r["kind"] == kind
+                    ]
+                    result[f"{model}/{schedule}/{kind}"] = {
+                        "worst_relative": max(r["relative"] or 0.0 for r in ss),
+                        "max_error_rms": max(r["error_rms"] for r in ss),
+                        "failed": sum(
+                            r.get("pass", r.get("passed")) is False for r in ss
+                        ),
+                        "unresolved": sum(not r["resolved"] for r in ss),
+                        "count": len(ss),
+                    }
+        pm.save_json(out / "repeated-summary.json", result)
+        cases = load(ROOT / "repeated-01/cases.json")
+        idx = next(i for i, c in enumerate(cases) if c["schedule"]["name"] == "timing")
+        true = rm.contrasts(arrays(ROOT / "repeated-01" / f"truth-{idx}.npz")["y"])
+        pred = rm.contrasts(
+            arrays(ROOT / "repeated-01" / f"prediction-{idx}.npz")["centered"]
+        )
+        fig, axs = plt.subplots(4, 2, figsize=(10, 10), constrained_layout=True)
+        for k, kind in enumerate(("R11", "D12", "D2|1", "K12")):
+            for o, label in enumerate(("mass", "moment")):
+                axs[k, o].plot(pm.TIMES, true[kind][:, o], label="true")
+                axs[k, o].plot(
+                    pm.TIMES, pred[kind][:, o], "--", label="independent addition"
+                )
+                axs[k, o].set_title(kind + " " + label)
+                axs[k, o].legend(fontsize=7)
+        fig.savefig(out / "exposed-repeated.png", dpi=150)
+        plt.close(fig)
+    pm.save_json(out / "status.json", status)
     # Compact new evaluation tables refer to old inputs by their recorded identities.
     save_npz(out / "evaluation-table.npz", x=x, y=y, ages=ages)
     budget.finish()
