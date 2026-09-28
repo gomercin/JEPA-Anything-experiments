@@ -34,7 +34,7 @@ Coarse nodes10/15/18/20/30; refined10/14/15/17/18/20/25/30. At held15/18/20,
 exclude the entire target age AND evaluated preparation from coefficients,
 center scaling and response bases. Compare the same target arrays.
 Start local linear bracketing interpolation; if it fails, local quadratic from
-nearest three nodes (ties choose smaller age). If structured curvature remains,
+the bracketing pair plus closest third node (third-node ties choose smaller age). If structured curvature remains,
 one PCHIP repair uses bracket plus one adjacent node each side where available.
 No knot search, global age fit, target-age tuning or other architecture.
 Direct prediction-space interpolation is separately scored; for linear and
@@ -80,3 +80,8 @@ no response-derived knot/slope choices. Direct PCHIP, if it alone qualifies,
 would be a separately costed multi-operator implementation, not equivalent to
 coefficient PCHIP. Both remain within the single declared shape-preserving family.
 The development/report ceiling stays1260 until a qualified fresh stage is frozen.
+
+Pre-fit instrument review: at coarse held20, a naive nearest-three distance tie
+could pick10/15/18 and extrapolate. The frozen quadratic rule now requires the
+bracketing pair plus nearest third, selecting15/18/30. This pre-outcome correction
+preserves local interpolation; no scientific fit or held response score had run.

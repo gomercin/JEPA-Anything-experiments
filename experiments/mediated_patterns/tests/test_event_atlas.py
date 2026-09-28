@@ -79,6 +79,12 @@ def test_neighbor_rule_and_exact_nodes():
         17,
         18,
     ]
+    coarse = [10, 15, 18, 30]
+    assert np.asarray(coarse)[am.neighbors(coarse, 20, "quadratic")].tolist() == [
+        15,
+        18,
+        30,
+    ]
     for f in ("linear", "quadratic", "pchip"):
         np.testing.assert_array_equal(am.interpolate(nodes, np.arange(7), 17, f), 2)
     for bad in ([10, 10, 20], [20, 10, 30], [10, np.nan, 30]):

@@ -31,8 +31,10 @@ def neighbors(nodes, age, family):
     if family == "quadratic":
         if len(a) < 3:
             raise ValueError("Three nodes needed for local quadratic")
-        # Nearest three, deterministic smaller-age tie break, ordered afterward.
-        return np.sort(np.lexsort((a, abs(a - age)))[:3])
+        # Bracketing pair plus closest third; smaller-age tie break for the third.
+        pair = [right - 1, right]
+        third = next(i for i in np.lexsort((a, abs(a - age))) if i not in pair)
+        return np.sort([*pair, third])
     # Bracketing interval plus one adjacent node on either side if available.
     return np.arange(max(0, right - 2), min(len(a), right + 2))
 
