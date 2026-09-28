@@ -48,10 +48,12 @@ def interpolate(nodes, values, age, family):
     x, y = a[ii], v[ii]
     if family == "pchip":
         return PchipInterpolator(x, y, axis=0, extrapolate=False)(age)
-    weights = np.array([
-        np.prod([(age - x[k]) / (x[j] - x[k]) for k in range(len(x)) if k != j])
-        for j in range(len(x))
-    ])
+    weights = np.array(
+        [
+            np.prod([(age - x[k]) / (x[j] - x[k]) for k in range(len(x)) if k != j])
+            for j in range(len(x))
+        ]
+    )
     return np.tensordot(weights, y, axes=(0, 0))
 
 
@@ -90,7 +92,9 @@ def predict(model, centers, amplitude, age, family="linear", direct=False):
 
 
 def predict_panel(model, x, ages, family="linear", direct=False):
-    return np.array([
-        [predict(model, z, a, age, family, direct) for a in (0.0, -0.02, 0.02)]
-        for z, age in zip(x, ages, strict=True)
-    ])
+    return np.array(
+        [
+            [predict(model, z, a, age, family, direct) for a in (0.0, -0.02, 0.02)]
+            for z, age in zip(x, ages, strict=True)
+        ]
+    )

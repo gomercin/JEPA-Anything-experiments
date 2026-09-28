@@ -67,3 +67,8 @@ inspection allowance. Pilot first; development ceiling1260 leaves540(~one-third)
 for fresh. Per section120CPU/180wall seconds,1GiB RSS, serial scientific panels.
 Source revisions, commands, exclusive nonsymlink outputs and all failures are
 retained. Fast synthetic tests/publication separate. No old archive is republished.
+
+Pilot14 cost9.15CPU seconds, all regime screens pass. Extrapolated full-panel
+cost~700CPU seconds plus two refinements leaves the fresh reserve intact.
+Proceed with the declared12 groups and exactly14/17/25. No pilot response
+was used to select interpolation parameters or alter the node rule.
