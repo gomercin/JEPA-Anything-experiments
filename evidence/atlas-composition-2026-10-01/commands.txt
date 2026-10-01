@@ -1,0 +1,23 @@
+Base: current origin/main c64e7df.
+Interpreter: /Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/.venv/bin/python
+Scientific environment: OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
+All scientific stages serial; aggregate cap 1800 CPU seconds including 30-second inspection allowance.
+
+python evidence/event-age-operator-atlas-2026-09-28/restore.py --fixtures --destination /private/tmp/jepa-compose-inherited-atlas
+python evidence/repeated-intervention-state-2026-09-26/restore.py --destination /private/tmp/jepa-compose-inherited-repeat
+
+# Exposed stages on base c64e7df plus captured uncommitted new source.
+python -m experiments.mediated_patterns.atlas_composition exposed --out work/mediated_patterns/atlas_composition/exposed-01
+python -m experiments.mediated_patterns.atlas_composition pilot --out work/mediated_patterns/atlas_composition/pilot-01
+python -m experiments.mediated_patterns.atlas_composition refine --out work/mediated_patterns/atlas_composition/refine-01
+
+# Frozen source commit 901d5ecc63bb40688811d7d3a2af1ab35439fee0 before fresh access.
+python -m experiments.mediated_patterns.atlas_composition freeze --out work/mediated_patterns/atlas_composition/frozen-01
+python -m experiments.mediated_patterns.atlas_composition fresh --out work/mediated_patterns/atlas_composition/fresh-01
+python -m experiments.mediated_patterns.atlas_composition analyze --out work/mediated_patterns/atlas_composition/fresh-analysis-01
+python -m experiments.mediated_patterns.atlas_composition report --out work/mediated_patterns/atlas_composition/report-01
+
+Fresh-refine not run: no failed primary common D12, so prospective trigger did not fire.
+review-01/audit.json was produced by an additional bounded read-only Python audit, with its budget and source snapshot. It verifies seal order, all nominal passes, unchanged model identities, per-stratum maxima, geometry, K12 resolution and marginal pass headroom. No field solve/fit.
+
+Output directories are exclusive. Historical reproduction needs a clean checkout/output root and remains exposed. --atlas and --inherited accept restored roots; default locations match above. Models and numerical definitions are preserved in frozen-01/. Exact sources for each older exposed stage are retained under that stage's sources/; later stages use 901d5ec.

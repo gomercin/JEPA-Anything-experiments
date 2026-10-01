@@ -385,3 +385,99 @@ inconclusive. A failed predictor cannot establish state insufficiency. Stop afte
 this cycle with explicit critical self-review, focused checks, publication and
 merge under standing authorization; only the two existing Atlas homes may change
 if interpretation materially changes.
+
+### Composition observations, comparison and decision
+
+**Fresh panel: bounded ordinary common-baseline addition passes the inherited
+finite-reference gates. Robust threshold certification remains inconclusive at
+marginal cases.** All 768 primary scalar entries and 576 isolated-control entries
+pass, with no unresolved primary signal. These counts include shared controls;
+the independent sample is three preparation groups, six none/odd04 starts and
+24 declared schedule cases. No fresh-triggered fit or rule change occurred.
+
+| Schedule / prefix | Common R11 mass / moment | Common D12 mass / moment | Common D2 given1 mass / moment |
+|---|---:|---:|---:|
+| 60/80/90, +.02/−.02 | .0680% / .0490% | 1.352% / 1.990% | 1.120% / 1.527% |
+| 60/80/90, +.02/+.02 | .0680% / .0494% | .545% / .685% | 1.108% / 1.511% |
+| 60/75/90, +.02/−.02 | .0679% / .0491% | 4.675% / 8.441% | 1.039% / 1.065% |
+| 60/75/90, +.02/+.02 | .0681% / .0493% | .462% / .457% | 1.041% / 1.042% |
+
+Isolated first/second D1 maxima are .1216%/.7626%. Literal addition retains one
+nominal fresh adverse-cancellation D12 miss (10.152% late moment); its larger
+baseline inconsistency also raises standard reinforcing D2|1 to 9.278%.
+Evaluator true addition passes every primary entry (worst D12 8.426%). It uses
+true single-event responses only after the forecast seals and remains privileged,
+not a deployable baseline or a mathematical optimum.
+
+The cheap retained eight-branch audit reconstructs every matched R exactly.
+For D12, true-minus-common prediction is the sum of two single-event delta errors
+and true K12. The literal residual adds `r0a-r0b`. All signed identities and Gram
+cross terms are retained. At exposed 18103/none, adverse late moment, their RMSs
+are 1.465e-14, 3.035e-14, 1.613e-12 and 1.744e-12 respectively. Common residual
+is 1.630e-12; literal residual is 3.374e-12. Thus baseline inconsistency explains
+the avoidable literal increment; the remaining common residual is chiefly the
+cross-event interaction. RMSs themselves are not added as if orthogonal.
+
+The exposed adverse case was refined from its unchanged saved prepared initial,
+including none-to50 and all eight logical branches. Halfdt/doubleN/quarterdt
+common D12 late-moment errors are 13.537%/13.505%/13.494%, versus 13.487% originally.
+Direct 5x D12 changes are 3.690e-14/1.791e-14/1.971e-14; direct K12 changes are
+4.419e-14/2.448e-14/7.279e-14. The propagated matched D12 bound reaches 6.038e-13,
+larger than the unchanged inherited 5.074e-13 floor. Common excess above the
+10% target is 4.216e-13: **marginal**, despite stable nominal misses. True addition
+also remains about 13.4%. Direct cancellation convergence does not replace the
+conservative matched bound. This is exposed diagnosis, not new validation or a
+robust composition-specific failure certificate.
+
+Fresh 28102/none, adverse late moment is the worst common pass: signal
+1.2583e-11, error 1.0621e-12, maximum error 1.6445e-12. Its headroom below 10% is
+1.9620e-13, only .387 inherited floor units. All three fresh none-history late
+moment cancellation passes have headroom below 1.1 floor units (.848/.387/.907).
+The critical review therefore separates nominal finite-reference sufficiency
+from robust threshold certification, which remains **inconclusive** there.
+The prospectively declared extra fresh-refinement trigger was a failed common
+D12 with passing isolated controls; it did not fire. No outcome-driven expansion,
+floor change or additional scientific run was made to obtain a stronger answer.
+
+Common addition predicts essentially zero K12. Of 96 K12 entries, 48 resolve
+and have essentially 100% error; 48 remain sub-floor. No K12 acceptance gate was
+introduced, and resolved nonlinearity alone does not contradict the larger task
+contrasts' accuracy. True-addition residuals identify the interaction's scale,
+without identifying a missing state variable or physical storage location.
+
+All 72 computed probe/sham pairs (144 computed field branches; 192 logical
+branches before shared-prefix reuse) qualify the separated-pattern regime.
+All 24 four-query forecasts precede any corresponding future reference; the
+sealed models and source snapshots are preserved. Initial t50 acquisition scans
+one (2,768) field per history and retains only three centers. Known event timing
+and amplitudes are scheduling inputs, never seed/history features. Inference uses
+four frozen atlas queries and uninterrupted unforced G, no event-boundary reset,
+true baseline, later field or evaluator response. Static active storage is
+3,218 atlas values plus G's 37; node ages/constants, three centers/counter and
+multiple 322-value response buffers remain separately charged. There is no new
+response state or fitted composition coefficient.
+
+Physical geometry is separate: G's unforced-counterfactual maximum A/B/C errors
+are [5.617e-6,5.708e-6,1.009e-6], within inherited absolute tolerances. Its same
+unforced path differs from the actual combined-event geometry by up to
+[5.511e-4,9.226e-5,1.145e-6]; it was not an event-updated geometry predictor.
+Neither response accuracy nor these absolute checks repair historical fractional
+motion, event-induced geometry, timing, retention, relay/selectivity or reduction
+limits. All historical models/failures and exposed-data status remain intact.
+
+Scientific work cost **814.54 CPU seconds / 13.58 CPU minutes**, including the
+30-second allowance, exposed algebra, 60.15-second pilot, 315.33-second refinement,
+provenance/freeze, 405.72-second fresh panel, scoring, figures and critical audit.
+The conservative fresh projection was 640.29 seconds plus a 180-second reserve;
+the 1,800-second aggregate cap and section/RSS limits were respected. Software
+checks and publication are separate. No scientific attempt failed or was discarded.
+
+**Decision:** credit ordinary independent addition on one predicted baseline for
+its bounded fresh finite-reference sufficiency. Retain the historical nominal miss
+and inconclusive uncertainty-qualified threshold margins. Neither a robust general
+composition limit nor state insufficiency is established. No composition correction,
+hidden response state or successor is selected; stop after this cycle.
+
+[Portable incremental evidence and commands](../../evidence/atlas-composition-2026-10-01/README.md)
+and [explicit critical self-review](../../evidence/atlas-composition-2026-10-01/review.md)
+retain every forecast, comparison, branch, numerical bound, marginal pass and cost.
