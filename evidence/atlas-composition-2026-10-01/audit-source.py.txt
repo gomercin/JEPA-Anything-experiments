@@ -1,0 +1,54 @@
+# Executed as a read-only bounded here-document after report-01; archived here after execution.
+from pathlib import Path
+import json,shutil,time,subprocess
+import numpy as np
+from experiments.mediated_patterns.history_conditioned_transmission import HistoryBudget
+from experiments.mediated_patterns.present_state_transmission import load,digest
+from experiments.mediated_patterns.present_state_model import save_json
+from experiments.mediated_patterns.repeated_intervention_state import source_hashes
+root=Path('work/mediated_patterns/atlas_composition')
+out=root/'review-01';out.mkdir()
+b=HistoryBudget(previous=30+sum(load(p)['cpu_seconds'] for p in root.glob('*/budget.json')))
+b.begin('critical-scientific-audit')
+(out/'sources').mkdir()
+for p in Path('experiments/mediated_patterns').glob('*.py'):shutil.copyfile(p,out/'sources'/p.name)
+scores=load(root/'fresh-analysis-01/scores.json')
+primary=[s for s in scores if s['model']=='common' and s['kind']!='K12']
+near=[]
+for s in primary:
+ limit=.02 if s['kind'].startswith('R') else .1
+ margin=limit*s['magnitude']-s['error_rms']
+ if margin<=1.1*s['floor']:
+  near.append(dict(**s,pass_headroom=margin,headroom_over_floor=margin/s['floor']))
+f=load(root/'frozen-01/freeze.json');fresh=root/'fresh-01';seal=load(fresh/'seal.json')
+assert all(s['pass'] is True for s in primary)
+assert all(digest(root/'frozen-01'/n)==h for n,h in f['models'].items())
+assert all(digest(fresh/n)==h for n,h in seal['predictions'].items())
+order=dict(last_forecast_mtime_ns=max((fresh/n).stat().st_mtime_ns for n in seal['predictions']),
+ first_reference_mtime_ns=min(p.stat().st_mtime_ns for p in fresh.glob('reference-*.npz')),
+ seal_time_ns=seal['sealed_time_ns'])
+assert order['last_forecast_mtime_ns']<order['seal_time_ns']<order['first_reference_mtime_ns']
+k=[s for s in scores if s['model']=='common' and s['kind']=='K12']
+physical=load(root/'fresh-analysis-01/physical.json')
+summary={}
+for schedule in sorted({s['schedule'] for s in scores}):
+ summary[schedule]={}
+ for model in ['common','literal','true-addition','isolated-1','isolated-2']:
+  ss=[s for s in scores if s['schedule']==schedule and s['model']==model]
+  summary[schedule][model]={kind:{output:max(s['relative'] or 0 for s in ss if s['kind']==kind and s['output']==output) for output in ['mass','moment']} for kind in sorted({s['kind'] for s in ss})}
+summary['K12_resolved']=sum(s['resolved'] for s in k);summary['K12_unresolved']=sum(not s['resolved'] for s in k)
+summary['unforced_geometry_max']=np.max([p['unforced_max_absolute'] for p in physical],axis=0).tolist()
+summary['combined_vs_unforced_max']=np.max([p['combined_vs_unforced_max'] for p in physical],axis=0).tolist()
+summary['actual_event_motion_max']=np.max([p['actual_event_motion_max'] for p in physical],axis=0).tolist()
+save_json(out/'audit.json',dict(nominal_decision='FRESH_PANEL_PASS_BOUNDED_ORDINARY_ADDITION',
+ robust_threshold_decision='INCONCLUSIVE_AT_MARGINAL_CASES' if near else 'EMPIRICAL_BOUNDS_SUPPORT_PASS',
+ marginal_fresh_passes=near,order=order,summary=summary,
+ scope='No fresh-triggered numerical run: declared refinement trigger was a failed common D12 with passing isolated controls. All fresh common gates pass; reserve remains unused. Do not equate a nominal finite-reference pass with a robust continuum threshold certificate.',
+ stop='Cycle complete; no correction, hidden state, fresh refit or successor'))
+b.finish()
+save_json(out/'budget.json',dict(**b.receipt(),status='complete',stage='critical-review',sources=source_hashes(),
+ source_revision=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),inspection_allowance=30))
+print('near-threshold passes',len(near),[(s['seed'],s['history'],s['kind'],s['window'],s['output'],s['headroom_over_floor']) for s in near])
+print('geometry',summary['unforced_geometry_max'],summary['combined_vs_unforced_max'])
+print('K resolved/unresolved',summary['K12_resolved'],summary['K12_unresolved'])
+print('total scientific CPU',30+sum(load(p)['cpu_seconds'] for p in root.glob('*/budget.json')))

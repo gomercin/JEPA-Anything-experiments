@@ -1,0 +1,100 @@
+test	Run deterministic checks	2026-10-01T06:03:19.9787977Z ##[group]Run make check
+test	Run deterministic checks	2026-10-01T06:03:19.9788278Z ^[[36;1mmake check^[[0m
+test	Run deterministic checks	2026-10-01T06:03:19.9878534Z shell: /usr/bin/bash -e {0}
+test	Run deterministic checks	2026-10-01T06:03:19.9878802Z env:
+test	Run deterministic checks	2026-10-01T06:03:19.9879083Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+test	Run deterministic checks	2026-10-01T06:03:19.9879543Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+test	Run deterministic checks	2026-10-01T06:03:19.9880199Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+test	Run deterministic checks	2026-10-01T06:03:19.9880602Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+test	Run deterministic checks	2026-10-01T06:03:19.9881007Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+test	Run deterministic checks	2026-10-01T06:03:19.9881448Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+test	Run deterministic checks	2026-10-01T06:03:19.9881790Z ##[endgroup]
+test	Run deterministic checks	2026-10-01T06:03:20.0178940Z python3 -m json.tool recipes/synthetic-linear-dynamics/design.expected.json >/dev/null
+test	Run deterministic checks	2026-10-01T06:03:20.1170670Z python3 -m json.tool recipes/synthetic-linear-dynamics/recipe.json >/dev/null
+test	Run deterministic checks	2026-10-01T06:03:20.1502418Z python3 -m json.tool checkpoints/manifest.json >/dev/null
+test	Run deterministic checks	2026-10-01T06:03:20.1828775Z python3 -m json.tool checkpoints/manifest.schema.json >/dev/null
+test	Run deterministic checks	2026-10-01T06:03:20.2164424Z python3 -m compileall -q jepa-anything-core/src jepa-anything-skill/scripts recipes checkpoints
+test	Run deterministic checks	2026-10-01T06:03:20.2866714Z PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python3 -m pytest -p no:capture jepa-anything-core/tests -q
+test	Run deterministic checks	2026-10-01T06:03:23.0710232Z ..................................................................
+test	Run deterministic checks	2026-10-01T06:03:23.0711005Z 66 passed in 2.28s
+test	Run deterministic checks	2026-10-01T06:03:23.4508692Z PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python3 -m pytest -p no:capture jepa-anything-skill/tests -q
+test	Run deterministic checks	2026-10-01T06:03:24.7993344Z .uu................................
+test	Run deterministic checks	2026-10-01T06:03:24.7994160Z 33 passed, 2 subtests passed in 1.19s
+test	Run deterministic checks	2026-10-01T06:03:24.8173134Z PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python3 -m pytest -p no:capture experiments/coupled_oscillators/tests -q -k "not quick_cli_json_and_finite_metrics"
+test	Run deterministic checks	2026-10-01T06:03:34.4654748Z .............................................
+test	Run deterministic checks	2026-10-01T06:03:34.4655321Z 45 passed, 1 deselected in 9.32s
+test	Run deterministic checks	2026-10-01T06:03:34.9526979Z OPENBLAS_NUM_THREADS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python3 -m pytest experiments/mediated_patterns/tests -q
+test	Run deterministic checks	2026-10-01T06:03:38.3046973Z ........................................................................ [ 45%]
+test	Run deterministic checks	2026-10-01T06:03:40.1039215Z .s...................................................................... [ 91%]
+test	Run deterministic checks	2026-10-01T06:03:40.9186374Z ..............                                                           [100%]
+test	Run deterministic checks	2026-10-01T06:03:40.9187279Z =============================== warnings summary ===============================
+test	Run deterministic checks	2026-10-01T06:03:40.9188597Z experiments/mediated_patterns/tests/test_hybrid.py::test_sham_replay_preserves_hybrid_and_nonfinite_is_failure
+test	Run deterministic checks	2026-10-01T06:03:40.9190583Z   /home/runner/work/JEPA-Anything-experiments/JEPA-Anything-experiments/experiments/mediated_patterns/hybrid_pair.py:112: RuntimeWarning: invalid value encountered in matmul
+test	Run deterministic checks	2026-10-01T06:03:40.9191943Z     return np.array([self.offset + self.lift @ q, np.fft.irfft(m, n=self.c.n)])
+test	Run deterministic checks	2026-10-01T06:03:40.9192454Z
+test	Run deterministic checks	2026-10-01T06:03:40.9192782Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+test	Run deterministic checks	2026-10-01T06:03:40.9193871Z =========================== short test summary info ============================
+test	Run deterministic checks	2026-10-01T06:03:40.9194863Z SKIPPED [1] experiments/mediated_patterns/tests/test_fields.py:187: Session-local immutable evidence manifest absent in fresh checkout
+test	Run deterministic checks	2026-10-01T06:03:40.9195625Z 157 passed, 1 skipped, 1 warning in 5.77s
+test	Run deterministic checks	2026-10-01T06:03:40.9938082Z PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python3 -m pytest evidence/completed-2026-09-25/tests evidence/organization-response-2026-09-25/tests evidence/source-receiver-relay-2026-09-25/tests evidence/history-conditioned-transmission-2026-09-26/tests evidence/present-state-transmission-2026-09-26/tests evidence/geometry-evolution-2026-09-26/tests evidence/intervention-aware-state-2026-09-26/tests evidence/repeated-intervention-state-2026-09-26/tests evidence/event-age-response-2026-09-26/tests evidence/event-state-aliasing-2026-09-27/tests evidence/event-age-operator-family-2026-09-28/tests evidence/event-age-operator-atlas-2026-09-28/tests evidence/atlas-composition-2026-10-01/tests -q
+test	Run deterministic checks	2026-10-01T06:04:04.3175391Z ................................................................F.       [100%]
+test	Run deterministic checks	2026-10-01T06:04:04.3177863Z =================================== FAILURES ===================================
+test	Run deterministic checks	2026-10-01T06:04:04.3178929Z __________ test_refinement_direct_and_propagated_bounds_and_decision ___________
+test	Run deterministic checks	2026-10-01T06:04:04.3179583Z
+test	Run deterministic checks	2026-10-01T06:04:04.3180323Z data = PosixPath('/tmp/pytest-of-runner/pytest-2/composition-evidence0/work/mediated_patterns/atlas_composition')
+test	Run deterministic checks	2026-10-01T06:04:04.3181252Z
+test	Run deterministic checks	2026-10-01T06:04:04.3181638Z     def test_refinement_direct_and_propagated_bounds_and_decision(data):
+test	Run deterministic checks	2026-10-01T06:04:04.3182611Z         for stage, base in [("refine-01", "exposed-01"), ("fresh-refine-01", "fresh-01")]:
+test	Run deterministic checks	2026-10-01T06:04:04.3183261Z             if not (data / stage).exists():
+test	Run deterministic checks	2026-10-01T06:04:04.3183953Z                 continue
+test	Run deterministic checks	2026-10-01T06:04:04.3184238Z             if stage == "refine-01":
+test	Run deterministic checks	2026-10-01T06:04:04.3184551Z                 case = next(
+test	Run deterministic checks	2026-10-01T06:04:04.3184822Z                     c
+test	Run deterministic checks	2026-10-01T06:04:04.3185137Z                     for c in load(data / base / "cases.json")
+test	Run deterministic checks	2026-10-01T06:04:04.3185523Z                     if c["seed"] == 18103
+test	Run deterministic checks	2026-10-01T06:04:04.3185862Z                     and c["history"] == "none"
+test	Run deterministic checks	2026-10-01T06:04:04.3186230Z                     and c["schedule"]["name"] == "timing"
+test	Run deterministic checks	2026-10-01T06:04:04.3186577Z                 )
+test	Run deterministic checks	2026-10-01T06:04:04.3186810Z             else:
+test	Run deterministic checks	2026-10-01T06:04:04.3187119Z                 case = load(data / stage / "selection.json")["case"]
+test	Run deterministic checks	2026-10-01T06:04:04.3187514Z                 assert (
+test	Run deterministic checks	2026-10-01T06:04:04.3187831Z                     sha(data / stage / "fixed-forecast.npz")
+test	Run deterministic checks	2026-10-01T06:04:04.3188312Z                     == load(data / stage / "selection.json")["fixed_forecast_sha256"]
+test	Run deterministic checks	2026-10-01T06:04:04.3188747Z                 )
+test	Run deterministic checks	2026-10-01T06:04:04.3189021Z             y, absolute, _z = truth(data / base, case)
+test	Run deterministic checks	2026-10-01T06:04:04.3189487Z             for record in load(data / stage / "refinement.json")["records"]:
+test	Run deterministic checks	2026-10-01T06:04:04.3189962Z                 sub = data / stage / record["refinement"]
+test	Run deterministic checks	2026-10-01T06:04:04.3190380Z                 r, _aa, _zz = truth(sub, load(sub / "cases.json")[0])
+test	Run deterministic checks	2026-10-01T06:04:04.3190788Z                 sl = WINDOWS[record["window"]]
+test	Run deterministic checks	2026-10-01T06:04:04.3191255Z                 ro = 64 * np.finfo(float).eps * abs(absolute[:, :, :, 2, :2]).max((0, 1, 2))
+test	Run deterministic checks	2026-10-01T06:04:04.3191809Z                 pair = np.maximum(5 * rms((r - y)[:, sl], axis=1), ro)
+test	Run deterministic checks	2026-10-01T06:04:04.3192332Z                 np.testing.assert_array_equal(pair, record["matched_pair_bounds"])
+test	Run deterministic checks	2026-10-01T06:04:04.3192751Z >               np.testing.assert_array_equal(
+test	Run deterministic checks	2026-10-01T06:04:04.3193169Z                     abs(np.array(CONTRASTS[record["kind"]])) @ pair, record["propagated"]
+test	Run deterministic checks	2026-10-01T06:04:04.3193820Z                 )
+test	Run deterministic checks	2026-10-01T06:04:04.3194044Z E               AssertionError:
+test	Run deterministic checks	2026-10-01T06:04:04.3194303Z E               Arrays are not equal
+test	Run deterministic checks	2026-10-01T06:04:04.3194556Z E
+test	Run deterministic checks	2026-10-01T06:04:04.3194782Z E               Mismatched elements: 1 / 2 (50%)
+test	Run deterministic checks	2026-10-01T06:04:04.3195088Z E               Mismatch at index:
+test	Run deterministic checks	2026-10-01T06:04:04.3195451Z E                [1]: 2.823760990198045e-13 (ACTUAL), 2.8237609901980453e-13 (DESIRED)
+test	Run deterministic checks	2026-10-01T06:04:04.3214478Z E               Max absolute difference among violations: 5.04870979e-29
+test	Run deterministic checks	2026-10-01T06:04:04.3215192Z E               Max relative difference among violations: 1.78793808e-16
+test	Run deterministic checks	2026-10-01T06:04:04.3215805Z E                ACTUAL: array([4.553149e-13, 2.823761e-13])
+test	Run deterministic checks	2026-10-01T06:04:04.3216361Z E                DESIRED: array([4.553149e-13, 2.823761e-13])
+test	Run deterministic checks	2026-10-01T06:04:04.3216632Z
+test	Run deterministic checks	2026-10-01T06:04:04.3216916Z evidence/atlas-composition-2026-10-01/tests/test_composition_evidence.py:207: AssertionError
+test	Run deterministic checks	2026-10-01T06:04:04.3217819Z =========================== short test summary info ============================
+test	Run deterministic checks	2026-10-01T06:04:04.3218627Z FAILED evidence/atlas-composition-2026-10-01/tests/test_composition_evidence.py::test_refinement_direct_and_propagated_bounds_and_decision - AssertionError:
+test	Run deterministic checks	2026-10-01T06:04:04.3219475Z Arrays are not equal
+test	Run deterministic checks	2026-10-01T06:04:04.3219617Z
+test	Run deterministic checks	2026-10-01T06:04:04.3219714Z Mismatched elements: 1 / 2 (50%)
+test	Run deterministic checks	2026-10-01T06:04:04.3219965Z Mismatch at index:
+test	Run deterministic checks	2026-10-01T06:04:04.3220252Z  [1]: 2.823760990198045e-13 (ACTUAL), 2.8237609901980453e-13 (DESIRED)
+test	Run deterministic checks	2026-10-01T06:04:04.3220657Z Max absolute difference among violations: 5.04870979e-29
+test	Run deterministic checks	2026-10-01T06:04:04.3221039Z Max relative difference among violations: 1.78793808e-16
+test	Run deterministic checks	2026-10-01T06:04:04.3221376Z  ACTUAL: array([4.553149e-13, 2.823761e-13])
+test	Run deterministic checks	2026-10-01T06:04:04.3221679Z  DESIRED: array([4.553149e-13, 2.823761e-13])
+test	Run deterministic checks	2026-10-01T06:04:04.3221982Z 1 failed, 65 passed in 23.15s
+test	Run deterministic checks	2026-10-01T06:04:04.3971815Z make: *** [Makefile:34: test-evidence] Error 1
+test	Run deterministic checks	2026-10-01T06:04:04.3988190Z ##[error]Process completed with exit code 2.

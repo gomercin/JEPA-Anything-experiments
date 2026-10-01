@@ -325,3 +325,18 @@ and [withheld timing failure](../../evidence/repeated-intervention-state-2026-09
 show geometry, common response and small contrasts separately. No full absolute
 trace, practical switch, minimal state, arbitrary input stream or recursive
 composability follows from this restricted result.
+
+## 2026-10-01 separately frozen single-event atlas composition cycle
+
+The [later atlas cycle](EVENT_AGE_OPERATOR_ATLAS.md#2026-10-01-bounded-composition-cycle--prospective-contract)
+uses the already qualified eight-node atlas and unchanged G, without the nine/
+eleven-state models or composition-informed repair. Common-baseline independent
+addition passes all fresh primary gates on three untouched preparation groups at
+both declared timings and cancellation/reinforcing ±.02 prefixes; worst D12 is
+8.441%. Literal addition retains one 10.152% nominal miss. The exposed historical
+13.49% common D12 miss persists under matched refinement but remains numerically
+marginal; three fresh passes also have small numerical headroom. Robust threshold
+certification remains inconclusive at those margins. This earns bounded ordinary
+finite-reference sufficiency, not arbitrary-stream closure, accurate K12,
+event-updated geometry or state insufficiency. This historical report's models,
+failure and original fresh-timing interpretation are unchanged. No successor.
