@@ -97,3 +97,12 @@ one inherited session-local evidence skip and one historical scientific CLI
 deselection. Focused atlas/repeated/composition tests: 26 pass. New portable
 replays: six pass. Archive verification: 881 members. Scoped Ruff and
 `git diff --check` pass. The figures were rendered and visually inspected.
+
+Hosted first-head runs `36822622941` and `36822627087` both reached the
+checks and failed a new replay assertion: one Linux reduction differs from the
+macOS saved bound by one ULP (5.0487e-29). Both failure logs are retained (display
+control codes/trailing whitespace normalized). Replay arithmetic now permits
+64 machine epsilons of relative roundoff with zero absolute slack; artifact/model/
+forecast hashes, categorical decisions and scientific gates remain exact.
+The scientific archive SHA256 remains unchanged. Six portable checks pass locally
+after this software-only fix; hosted rechecks are assessed at the new exact head.

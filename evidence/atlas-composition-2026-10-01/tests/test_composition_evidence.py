@@ -34,6 +34,24 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def replay_equal(actual, expected):
+    """Reduction order/FMA may differ by ULPs; artifact hashes remain exact."""
+    if isinstance(expected, float):
+        np.testing.assert_allclose(
+            actual, expected, rtol=64 * np.finfo(float).eps, atol=0
+        )
+    elif isinstance(expected, dict):
+        assert actual.keys() == expected.keys()
+        for key in expected:
+            replay_equal(actual[key], expected[key])
+    elif isinstance(expected, list):
+        assert len(actual) == len(expected)
+        for a, e in zip(actual, expected, strict=True):
+            replay_equal(a, e)
+    else:
+        assert actual == expected
+
+
 def restorer():
     spec = importlib.util.spec_from_file_location(
         "composition_restore", HERE / "restore.py"
@@ -203,19 +221,30 @@ def test_refinement_direct_and_propagated_bounds_and_decision(data):
             sl = WINDOWS[record["window"]]
             ro = 64 * np.finfo(float).eps * abs(absolute[:, :, :, 2, :2]).max((0, 1, 2))
             pair = np.maximum(5 * rms((r - y)[:, sl], axis=1), ro)
-            np.testing.assert_array_equal(pair, record["matched_pair_bounds"])
-            np.testing.assert_array_equal(
-                abs(np.array(CONTRASTS[record["kind"]])) @ pair, record["propagated"]
+            np.testing.assert_allclose(
+                pair,
+                record["matched_pair_bounds"],
+                rtol=64 * np.finfo(float).eps,
+                atol=0,
             )
-            np.testing.assert_array_equal(
-                5 * rms(contrasts(r - y)[record["kind"]][sl]), record["direct"]
+            np.testing.assert_allclose(
+                abs(np.array(CONTRASTS[record["kind"]])) @ pair,
+                record["propagated"],
+                rtol=64 * np.finfo(float).eps,
+                atol=0,
+            )
+            np.testing.assert_allclose(
+                5 * rms(contrasts(r - y)[record["kind"]][sl]),
+                record["direct"],
+                rtol=64 * np.finfo(float).eps,
+                atol=0,
             )
         pred = np.load(
             data / base / f"prediction-{case['index']}-{case['schedule']['name']}.npz"
         )["common"]
         margins = numerical_margins(data, stage, data / base, case, pred)
         key = "exposed_margins" if stage == "refine-01" else "fresh_margins"
-        assert margins == load(data / "report-01/decision.json")[key]
+        replay_equal(margins, load(data / "report-01/decision.json")[key])
     d = load(data / "report-01/decision.json")
     assert d["groups"] == 3 and d["schedule_cases"] == 24
     if d["decision"] == "INCONCLUSIVE_NUMERICAL_THRESHOLD_MARGIN":
