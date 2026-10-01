@@ -327,3 +327,61 @@ B/C and K12 limits; finite retention, relay/selectivity negatives and adapted
 reductions. No physical-mode identification, hidden-state necessity, minimality,
 unique storage, arbitrary timing/stream closure, full absolute-Y prediction or
 practical receiver claim follows. Only the two existing Atlas homes are updated.
+
+## 2026-10-01 bounded composition cycle — prospective contract
+
+Question: can this frozen single-event atlas plus unchanged unforced G forecast
+the final +.02 probe after two actual conditioning events at the existing task
+tolerances? This is composition, not single-event interpolation, large-response
+accuracy or nonlinearity detection. Start from current main `c64e7df` and retain
+all historical artifacts, failures and exposure boundaries.
+
+Cheap exposed first: verify retained eight-Y response subtraction and exact signed
+residual identities on the old cancellation cases. Decompose D12 error into
+isolated delta errors, true K12 and the literal comparator's zero-context
+inconsistency; retain Gram cross terms rather than adding RMS errors. Common
+baseline is the first-event-context zero prediction, fixed before outcomes.
+Literal `r1+r2-r0a`, common `r0a+(r1-r0a)+(r2-r0b)` and evaluator true
+`R10+R01-R00` remain distinct. No true baseline enters deployable inference.
+
+Pilot: exposed 18103/none at all four schedules, serial. Refine the exposed
+18103/none 60/75/90 cancellation history from its saved prepared initial, including
+none-to50 and all matched branches, separately at half dt, double N and quarter
+dt. Compute D12 and K12 changes directly, alongside 5x per-pair refinement RMS,
+triangle propagation, arithmetic floor and larger absolute-Y changes. Keep old
+floors for gates; a threshold margin is robust only if it exceeds 1.1 times the
+maximum inherited/propagated D12 bound. The factor accounts for uncertainty in
+both error and the .1 target norm. Direct contrast convergence is supplementary,
+not a replacement acceptance floor. Numerical margins within the bound remain
+marginal/inconclusive. This is exposed diagnosis, never fresh validation.
+
+If conservative pilot projection fits, freeze exactly three untouched groups
+28101–28103, none/odd04, after provenance checks including component seed offsets.
+Schedules 60/80/90 and 60/75/90 each have cancellation (+.02,-.02) and reinforcing
+(+.02,+.02) prefixes. These are fresh preparations at declared schedules, not
+unseen timing. One center measurement at t50 per history. G propagates only the
+unforced counterfactual to each event; the atlas receives those centers, event
+amplitude and known event age. No event-boundary reset, later field, true response
+or baseline. Save every history/schedule forecast before any future reference.
+
+Score isolated-event controls, R11, D12 and D2|1 using original 2%/10% gates,
+mass/moment, whole0–80/late40–80 windows and matched numerical resolution rules.
+R00/R10/R01 also remain recorded. Report K12 separately, without acceptance gate.
+Physical geometry and regime screens stay separate. For a fresh failed common
+D12 with passing isolated controls, refine the worst adverse cancellation case
+at half dt/double N if budget permits; seal predictors unchanged and retain the
+failed base result. No fit, composition correction, hidden response state, floor
+change or response-driven panel selection.
+
+Budget 1,800 aggregate CPU seconds including failures/refinement and 30-second
+inspection allowance; serial panels, inherited 120CPU/180wall-second section and
+1GiB limits. Projection: six times full exposed pilot cost with 40% margin,
+25 seconds per fresh preparation, 60 analysis seconds, plus 180 refinement reserve.
+If this cannot fit, stop before fresh access and retain the budget limitation.
+Ordinary sufficient addition earns bounded credit and stops. Robust residual
+failure with isolated controls passing earns a bounded composition limit;
+isolated failures identify prerequisite failure. Numerical ambiguity earns
+inconclusive. A failed predictor cannot establish state insufficiency. Stop after
+this cycle with explicit critical self-review, focused checks, publication and
+merge under standing authorization; only the two existing Atlas homes may change
+if interpretation materially changes.
