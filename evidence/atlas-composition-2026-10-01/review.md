@@ -91,3 +91,9 @@ Decision: bounded ordinary addition receives finite-reference credit; numerical
 threshold robustness remains inconclusive at the specified margins. No robust
 composition-specific limit, state-insufficiency claim, correction, richer state,
 route reopening or automatic successor is earned. Stop after this cycle.
+
+Local verification completed: `make check` passes 367 tests and two subtests;
+one inherited session-local evidence skip and one historical scientific CLI
+deselection. Focused atlas/repeated/composition tests: 26 pass. New portable
+replays: six pass. Archive verification: 881 members. Scoped Ruff and
+`git diff --check` pass. The figures were rendered and visually inspected.

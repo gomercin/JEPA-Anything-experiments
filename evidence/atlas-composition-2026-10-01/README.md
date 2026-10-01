@@ -63,3 +63,12 @@ No correction, hidden response state, missing-state theorem or successor.
 - [Standard cancellation response](figures/standard-cancel.png)
 - [Adverse timing cancellation response](figures/adverse-cancel.png)
 - [Adverse timing reinforcing response](figures/adverse-reinforce.png)
+
+Archive: **881 members**, 29,125,092 uncompressed bytes; 10,785,688 compressed bytes.
+SHA256 `a4e7b76ac15f5bc68e73e75a80115cbf0fd90a1c8f539cad12afa85956c709de`.
+The [read-only critical audit source](audit-source.py.txt) preserves the final here-document.
+
+Local `make check`: **367 tests plus two subtests pass**, with one inherited
+session-local evidence skip and one historical scientific CLI deselection.
+The 26 focused atlas/repeated/composition instrument checks and six new portable
+evidence checks also pass. All 881 package members verify without simulation.

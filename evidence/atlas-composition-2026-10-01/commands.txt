@@ -21,3 +21,13 @@ Fresh-refine not run: no failed primary common D12, so prospective trigger did n
 review-01/audit.json was produced by an additional bounded read-only Python audit, with its budget and source snapshot. It verifies seal order, all nominal passes, unchanged model identities, per-stratum maxima, geometry, K12 resolution and marginal pass headroom. No field solve/fit.
 
 Output directories are exclusive. Historical reproduction needs a clean checkout/output root and remains exposed. --atlas and --inherited accept restored roots; default locations match above. Models and numerical definitions are preserved in frozen-01/. Exact sources for each older exposed stage are retained under that stage's sources/; later stages use 901d5ec.
+
+Critical here-document source: evidence/atlas-composition-2026-10-01/audit-source.py.txt
+
+Verification (no scientific panels):
+python -m pytest experiments/mediated_patterns/tests/test_event_atlas.py experiments/mediated_patterns/tests/test_repeated_intervention.py experiments/mediated_patterns/tests/test_atlas_composition.py -q
+python -m pytest evidence/atlas-composition-2026-10-01/tests -q
+python evidence/atlas-composition-2026-10-01/restore.py --verify-only
+make check PYTHON=/Users/omer.karaduman/Work/Projects/JEPA-Anything-experiments/.venv/bin/python
+
+Runtime: Python 3.14.6, NumPy 2.5.3, SciPy 1.18.1; macOS-26.7-arm64-arm-64bit-Mach-O.
